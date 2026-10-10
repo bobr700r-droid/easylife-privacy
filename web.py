@@ -19,6 +19,8 @@ LANG_NAMES = {"cs": "Čeština", "en": "English", "sk": "Slovenčina", "de": "De
 HIDDEN = {"kulturnik"}
 # Složka appky, když se nejmenuje jako id v katalogu.
 FOLDERS = {"kulturnik": "Vyrazime", "cestovnicek": "Cestovnicek/apple"}
+CONTACT = "info@luksafoto.cz"  # kontakt podpory, dokud easyforlife.eu nemá vlastní e-mail
+SUPPORT = "podpora"           # /podpora/ = Support URL pro App Store
 FAMILY_COLORS = {"cestovani": "#2563eb", "foto": "#e8731c", "domacnost": "#0f9a62", "volny-cas": "#8b46d9"}
 
 T = {
@@ -90,6 +92,59 @@ T = {
   "made": ["Malé appky pro iPhone, vyrobené v Česku.", "Small iPhone apps, made in Czechia.", "Malé aplikácie pre iPhone, vyrobené v Česku.",
            "Kleine iPhone-Apps, gemacht in Tschechien.", "Pequeñas apps para iPhone, hechas en Chequia.", "Małe aplikacje na iPhone’a, stworzone w Czechach."],
   "lang": ["Jazyk", "Language", "Jazyk", "Sprache", "Idioma", "Język"],
+  "support": ["Podpora", "Support", "Podpora", "Support", "Soporte", "Wsparcie"],
+  "support_title": ["Podpora a kontakt", "Support and contact", "Podpora a kontakt", "Support und Kontakt", "Soporte y contacto", "Wsparcie i kontakt"],
+  "support_lead": ["Něco nefunguje, máš nápad nebo dotaz k některé appce EasyLife? Napiš nám, odpovídáme obvykle do pár dní.",
+                   "Something not working, got an idea or a question about an EasyLife app? Write to us – we usually reply within a few days.",
+                   "Niečo nefunguje, máš nápad alebo otázku k niektorej aplikácii EasyLife? Napíš nám, odpovedáme zvyčajne do pár dní.",
+                   "Funktioniert etwas nicht, hast du eine Idee oder eine Frage zu einer EasyLife-App? Schreib uns – wir antworten meist innerhalb weniger Tage.",
+                   "¿Algo no funciona, tienes una idea o una pregunta sobre una app de EasyLife? Escríbenos; solemos responder en pocos días.",
+                   "Coś nie działa, masz pomysł albo pytanie o aplikację EasyLife? Napisz do nas – zwykle odpowiadamy w ciągu kilku dni."],
+  "support_mail": ["Napsat e-mail", "Send an email", "Napísať e-mail", "E-Mail schreiben", "Enviar un correo", "Napisz e-mail"],
+  "support_hint": ["Uveď prosím název appky, model iPhonu a verzi iOS. U chyby pomůže i snímek obrazovky.",
+                   "Please mention the app name, your iPhone model and iOS version. For bugs, a screenshot helps too.",
+                   "Uveď prosím názov aplikácie, model iPhonu a verziu iOS. Pri chybe pomôže aj snímka obrazovky.",
+                   "Bitte nenne den App-Namen, dein iPhone-Modell und die iOS-Version. Bei Fehlern hilft auch ein Screenshot.",
+                   "Indica el nombre de la app, tu modelo de iPhone y la versión de iOS. Si es un error, una captura de pantalla ayuda.",
+                   "Podaj nazwę aplikacji, model iPhone’a i wersję iOS. Przy błędzie pomoże też zrzut ekranu."],
+  "faq_title": ["Časté otázky", "FAQ", "Časté otázky", "Häufige Fragen", "Preguntas frecuentes", "Częste pytania"],
+  "faq": [
+    [("Potřebuju účet nebo registraci?", "Ne. Appky EasyLife fungují bez registrace a přihlašování. Jedinou výjimkou je Cestovníček, který účet používá kvůli synchronizaci s webem."),
+     ("Kde jsou moje data?", "V tvém iPhonu, a pokud appka synchronizuje, v tvém soukromém iCloudu. My k nim přístup nemáme. Podrobnosti najdeš v zásadách ochrany soukromí každé appky."),
+     ("Jak přenesu data na nový iPhone?", "Appky se synchronizací přes iCloud si data přenesou samy, když se na novém iPhonu přihlásíš stejným Apple ID. Ostatní data se přenesou se zálohou iPhonu."),
+     ("Jak svá data smažu?", "Smazáním appky se smažou data v zařízení. Data v iCloudu smažeš v Nastavení → tvoje jméno → iCloud → Spravovat úložiště."),
+     ("Jak se dostanu do beta verze?", "Některé appky jsou zatím v beta testu přes TestFlight. Napiš nám e-mail a pošleme ti pozvánku."),
+     ("Mám nápad na novou funkci", "Sem s ním! Napiš nám e-mail – nápady od uživatelů čteme všechny.")],
+    [("Do I need an account?", "No. EasyLife apps work without sign-up or login. The only exception is Cestovníček, which uses an account to sync with the web."),
+     ("Where is my data?", "On your iPhone and, if the app syncs, in your private iCloud. We have no access to it. Each app’s privacy policy has the details."),
+     ("How do I move my data to a new iPhone?", "Apps that sync via iCloud move your data automatically when you sign in with the same Apple ID. Everything else comes over with your iPhone backup."),
+     ("How do I delete my data?", "Deleting the app removes the data on your device. Data in iCloud can be deleted in Settings → your name → iCloud → Manage Storage."),
+     ("How do I join a beta?", "Some apps are still in beta testing on TestFlight. Send us an email and we’ll invite you."),
+     ("I have an idea for a feature", "Great! Send us an email – we read every suggestion.")],
+    [("Potrebujem účet alebo registráciu?", "Nie. Aplikácie EasyLife fungujú bez registrácie a prihlasovania. Jedinou výnimkou je Cestovníček, ktorý účet používa kvôli synchronizácii s webom."),
+     ("Kde sú moje dáta?", "V tvojom iPhone a ak aplikácia synchronizuje, v tvojom súkromnom iCloude. My k nim prístup nemáme. Podrobnosti nájdeš v zásadách ochrany súkromia každej aplikácie."),
+     ("Ako prenesiem dáta do nového iPhonu?", "Aplikácie so synchronizáciou cez iCloud si dáta prenesú samy, keď sa na novom iPhone prihlásiš rovnakým Apple ID. Ostatné dáta sa prenesú so zálohou iPhonu."),
+     ("Ako svoje dáta zmažem?", "Zmazaním aplikácie sa zmažú dáta v zariadení. Dáta v iCloude zmažeš v Nastaveniach → tvoje meno → iCloud → Spravovať úložisko."),
+     ("Ako sa dostanem do beta verzie?", "Niektoré aplikácie sú zatiaľ v beta teste cez TestFlight. Napíš nám e-mail a pošleme ti pozvánku."),
+     ("Mám nápad na novú funkciu", "Sem s ním! Napíš nám e-mail – nápady od používateľov čítame všetky.")],
+    [("Brauche ich ein Konto?", "Nein. EasyLife-Apps funktionieren ohne Registrierung und Login. Einzige Ausnahme ist Cestovníček, das ein Konto für die Synchronisierung mit dem Web nutzt."),
+     ("Wo sind meine Daten?", "Auf deinem iPhone und, wenn die App synchronisiert, in deiner privaten iCloud. Wir haben keinen Zugriff darauf. Details stehen in der Datenschutzerklärung jeder App."),
+     ("Wie übertrage ich meine Daten auf ein neues iPhone?", "Apps mit iCloud-Synchronisierung übernehmen deine Daten automatisch, wenn du dich mit derselben Apple-ID anmeldest. Alles andere kommt mit dem iPhone-Backup mit."),
+     ("Wie lösche ich meine Daten?", "Wenn du die App löschst, werden die Daten auf dem Gerät gelöscht. Daten in iCloud löschst du unter Einstellungen → dein Name → iCloud → Speicher verwalten."),
+     ("Wie komme ich in eine Beta?", "Einige Apps sind noch in der Beta-Phase über TestFlight. Schreib uns eine E-Mail und wir laden dich ein."),
+     ("Ich habe eine Idee für eine Funktion", "Her damit! Schreib uns eine E-Mail – wir lesen jeden Vorschlag.")],
+    [("¿Necesito una cuenta?", "No. Las apps de EasyLife funcionan sin registro ni inicio de sesión. La única excepción es Cestovníček, que usa una cuenta para sincronizarse con la web."),
+     ("¿Dónde están mis datos?", "En tu iPhone y, si la app sincroniza, en tu iCloud privado. Nosotros no tenemos acceso. La política de privacidad de cada app tiene los detalles."),
+     ("¿Cómo paso mis datos a un iPhone nuevo?", "Las apps que sincronizan por iCloud traen tus datos solas al iniciar sesión con el mismo Apple ID. El resto se transfiere con la copia de seguridad del iPhone."),
+     ("¿Cómo borro mis datos?", "Al eliminar la app se borran los datos del dispositivo. Los datos de iCloud se borran en Ajustes → tu nombre → iCloud → Gestionar almacenamiento."),
+     ("¿Cómo me apunto a una beta?", "Algunas apps están aún en fase beta en TestFlight. Escríbenos un correo y te enviaremos una invitación."),
+     ("Tengo una idea para una función", "¡Cuéntanosla! Escríbenos un correo: leemos todas las sugerencias.")],
+    [("Czy potrzebuję konta?", "Nie. Aplikacje EasyLife działają bez rejestracji i logowania. Jedynym wyjątkiem jest Cestovníček, który używa konta do synchronizacji z wersją webową."),
+     ("Gdzie są moje dane?", "Na twoim iPhonie, a jeśli aplikacja synchronizuje, w twoim prywatnym iCloud. My nie mamy do nich dostępu. Szczegóły znajdziesz w polityce prywatności każdej aplikacji."),
+     ("Jak przenieść dane na nowego iPhone’a?", "Aplikacje synchronizujące przez iCloud przeniosą dane same, gdy zalogujesz się tym samym Apple ID. Resztę przeniesie kopia zapasowa iPhone’a."),
+     ("Jak usunąć swoje dane?", "Usunięcie aplikacji kasuje dane w urządzeniu. Dane w iCloud usuniesz w Ustawieniach → twoje imię → iCloud → Zarządzaj pamięcią."),
+     ("Jak dołączyć do wersji beta?", "Niektóre aplikacje są jeszcze w fazie beta w TestFlight. Napisz do nas e-mail, a wyślemy zaproszenie."),
+     ("Mam pomysł na nową funkcję", "Śmiało! Napisz do nas e-mail – czytamy wszystkie propozycje.")]],
   "skip": ["Přejít na obsah", "Skip to content", "Prejsť na obsah", "Zum Inhalt", "Ir al contenido", "Przejdź do treści"],
 }
 
@@ -193,6 +248,8 @@ h2.sub{font:800 1.4rem var(--display);letter-spacing:-.015em;margin:34px 0 14px}
 .link-row a{text-decoration:none}.link-row a::after{content:"";position:absolute;inset:0}
 .note{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:.95rem;margin:16px 0 0}.note .ico{width:18px;height:18px;flex:none}
 .note a{color:var(--ink)}
+.faq{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 16px;margin:0 0 10px}
+.faq summary{cursor:pointer;font-weight:700;padding:14px 0;list-style-position:outside}.faq p{margin:0 0 14px;color:var(--muted)}
 @media (max-width:820px){.hero{grid-template-columns:1fr;gap:28px;padding:28px 0 44px}.collage{grid-template-columns:repeat(6,1fr);gap:10px;padding:0}}
 @media (max-width:520px){.top{flex-direction:column;align-items:flex-start;gap:10px}.app-hero{flex-direction:column;align-items:flex-start;gap:16px}.app-hero .app-icon{width:92px;height:92px}.collage{grid-template-columns:repeat(4,1fr)}.collage>*:nth-child(n+9){display:none}}
 @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
@@ -234,7 +291,7 @@ def page(lang, slug, title, desc, body, operator, relative=True):
 <nav class="langs" aria-label="{t("lang", lang)}">{langs}</nav></header>
 <main id="main">{body}</main>
 <footer><div class="row"><div><p><b>EasyLife</b> · {t("made", lang)}</p><p>{t("operator", lang)}: {esc(operator[0 if lang in ("cs", "sk") else 1])}</p></div>
-<p><a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></p></div></footer></div>
+<p><a href="{url(lang, SUPPORT)}">{t("support", lang)}</a> · <a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></p></div></footer></div>
 {FOOT_SCRIPT}</body></html>
 """
     # Relativní odkazy, aby web fungoval i na bobr700r-droid.github.io/easylife-privacy/ (než začne platit doména).
@@ -358,6 +415,17 @@ class Site:
                 f'<section><div class="sec-head"><h2>{t("how", lang)}</h2></div><div class="principles">{prin}</div></section>')
         return page(lang, None, t("title", lang), t("lead", lang), body, self.operator)
 
+    def support(self, lang):
+        i = LANGS.index(lang)
+        mail = f"mailto:{CONTACT}?subject=EasyLife"
+        faq = "".join(f'<details class="faq"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in T["faq"][i])
+        body = (f'<article class="detail"><h1>{t("support_title", lang)}</h1><p class="lead">{t("support_lead", lang)}</p>'
+                f'<p class="actions"><a class="btn" href="{mail}">{t("support_mail", lang)}</a><a class="ghost" href="{mail}">{CONTACT}</a></p>'
+                f'<p class="note">{icon("check")}<span>{t("support_hint", lang)}</span></p>'
+                f'<h2 class="sub">{t("faq_title", lang)}</h2>{faq}'
+                f'<p class="note">{icon("shield")}<span><a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></span></p></article>')
+        return page(lang, SUPPORT, f'{t("support_title", lang)} | EasyLife', t("support_lead", lang), body, self.operator)
+
     def detail(self, a, lang):
         s, c, fam = a["site"], self.color(a), self.families[a["family"]]
         fc = FAMILY_COLORS.get(a["family"], c)
@@ -408,12 +476,14 @@ class Site:
         for lang in LANGS:
             pre = "" if lang == "cs" else f"{lang}/"
             self.write(f"{pre}index.html", self.home(lang))
+            self.write(f"{pre}{SUPPORT}/index.html", self.support(lang))
+            urls.append(url(lang, SUPPORT))
             urls.append(url(lang))
             for a in self.apps:
                 self.write(f"{pre}{a['id']}/index.html", self.detail(a, lang))
                 urls.append(url(lang, a["id"]))
         # Smazat stránky appek, které z katalogu zmizely nebo jsou skryté.
-        keep = {a["id"] for a in self.apps} | set(LANGS) | {"icons", "shots"}
+        keep = {a["id"] for a in self.apps} | set(LANGS) | {"icons", "shots", SUPPORT}
         for lang in LANGS:
             base = self.out if lang == "cs" else self.out / lang
             for d in base.iterdir():
