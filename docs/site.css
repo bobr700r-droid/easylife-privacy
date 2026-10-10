@@ -152,7 +152,41 @@ background:linear-gradient(160deg,color-mix(in oklab,var(--c) 20%,var(--surface)
 .faq{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:0 20px;margin:0 0 12px;box-shadow:var(--shadow)}
 .faq summary{cursor:pointer;font:800 1.08rem var(--display);padding:18px 0}.faq p{margin:0 0 18px;color:var(--muted)}
 .page-top{position:relative;margin-top:-76px;padding:120px 0 30px;overflow:hidden;isolation:isolate}.page-top h1{position:relative;z-index:2}.page-top .lead{position:relative;z-index:2;margin-left:0}
-.ico{flex:none}
+.ico{flex:none}.solo{color:var(--muted);margin:-8px 0 16px;font-weight:600}
+/* Začni tady – EasyForLife Hub */
+.start{padding-top:0}
+.start-card{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:clamp(24px,4vw,56px);border-radius:44px;overflow:hidden;isolation:isolate;
+background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gradient(120deg,var(--blue),var(--purple),var(--pink),var(--orange),var(--green)) border-box;border:3px solid transparent;box-shadow:var(--shadow)}
+.start-card::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 85% 20%,color-mix(in oklab,var(--blue) 18%,transparent),transparent 55%),radial-gradient(circle at 10% 100%,color-mix(in oklab,var(--orange) 16%,transparent),transparent 50%)}
+.start-card h2{font:800 clamp(2.2rem,5vw,3.8rem)/1 var(--display);letter-spacing:-.04em;margin:0 0 14px}
+.start-card .lead{margin:0 0 18px;text-align:left}.start-card .kicker{margin-bottom:16px}
+.ticks{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:8px}.ticks li{display:flex;gap:10px;align-items:center;font-weight:700}
+.ticks .ico{width:24px;height:24px;padding:4px;border-radius:50%;background:var(--green);color:#fff}
+.phone{justify-self:center;width:min(330px,100%);padding:12px;border-radius:44px;background:var(--ink);box-shadow:0 40px 80px -30px rgb(37 99 235/.45),var(--shadow);transform:rotate(3deg);animation:bob 7s ease-in-out infinite;--r:3deg}
+.phone-in{border-radius:34px;background:var(--bg);padding:20px 16px 18px;min-height:380px}
+.phone-head{display:flex;align-items:center;gap:10px;margin:0 0 14px}.phone-head .app-icon{width:34px;height:34px}.phone-head b{font:800 1.15rem var(--display)}
+.phone ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.phone li{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:10px 12px}
+.phone li .app-icon{width:40px;height:40px}.phone li b{display:block;font-size:.95rem;line-height:1.2}.phone li small{color:var(--muted);font-size:.82rem;font-weight:600}
+/* Jak spolu appky spolupracují */
+.eco-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.eco{position:relative;aspect-ratio:1;width:100%;max-width:620px;justify-self:center}
+.eco svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.eco path{fill:none;stroke-linecap:round;transition:opacity .25s,stroke-width .25s}
+.eco .link{stroke:var(--purple);stroke-width:.45;opacity:.55;stroke-dasharray:1.6 1.2;animation:flow 3s linear infinite}
+.eco .feed{stroke:var(--blue);stroke-width:.25;opacity:.3;stroke-dasharray:.6 1.4;animation:flow 4s linear infinite reverse}
+@keyframes flow{to{stroke-dashoffset:-11.2}}
+.eco.focus path{opacity:.07}.eco.focus path.on{opacity:1;stroke-width:.8}
+.node{position:absolute;width:11%;transform:translate(-50%,-50%);transition:transform .3s cubic-bezier(.3,1.7,.5,1),opacity .25s;z-index:2}
+.node .app-icon{width:100%;height:auto;aspect-ratio:1}
+.node:hover,.node.on{transform:translate(-50%,-50%) scale(1.22)}.eco.focus .node:not(.on){opacity:.35}
+.node.center{left:50%;top:50%;width:22%;z-index:3}.node.center .app-icon{box-shadow:0 20px 50px -14px rgb(37 99 235/.55)}
+.eco-ex{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.eco-ex li{display:flex;align-items:center;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:14px 16px;box-shadow:var(--shadow);font-weight:600;line-height:1.4}
+.eco-ex .pair{flex:none;display:flex;align-items:center;gap:6px}.eco-ex .pair .app-icon{width:40px;height:40px}.eco-ex .pair i{font-style:normal;font-weight:800;color:var(--muted)}
+.eco-ex .hubrow{background:linear-gradient(120deg,color-mix(in oklab,var(--blue) 14%,var(--surface)),color-mix(in oklab,var(--purple) 12%,var(--surface)))}
+@media (max-width:900px){.start-card,.eco-grid{grid-template-columns:1fr}.phone{transform:none;--r:0deg}}
+
 .logo-mark{display:grid;place-items:center;background:#fff;padding:0;aspect-ratio:1}.logo-mark .logo{width:74%;height:auto;aspect-ratio:1}
 .t-hero{grid-column:1/-1;grid-row:span 1;padding-left:clamp(110px,14vw,170px);min-height:212px}.t-hero .app-icon{width:clamp(76px,10vw,124px);height:auto;aspect-ratio:1;top:50%;left:24px;transform:translateY(-50%)}
 .t-hero:hover .app-icon{transform:translateY(-50%) rotate(-10deg) scale(1.08)}.t-hero h3{font-size:clamp(1.6rem,3vw,2.4rem)}.t-hero p{font-size:1.05rem}

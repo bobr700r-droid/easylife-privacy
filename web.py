@@ -5,7 +5,9 @@ tady se jen odkazují. Obsah detailů appek je v site/apps/<id>.json (popis, fun
 webu ve slovníku T. Ikony se kopírují z <App>/…/AppIcon.appiconset do docs/icons/ (sips + cwebp),
 favicon a OG obrázek kreslí site/art.swift (jen když chybí; vynutit: python3 build.py --art).
 """
-import html, json, os, pathlib, shutil, socket, subprocess, sys
+import html, json, math, os, pathlib, shutil, socket, subprocess, sys
+sys.path.insert(0, str(pathlib.Path(__file__).parent / "site"))
+import eco  # site/eco.py – jak spolu appky spolupracují
 
 HERE = pathlib.Path(__file__).parent
 ROOT = HERE.parent                      # EasyLife aplikace/
@@ -62,6 +64,23 @@ T = {
   "count": ['{n} aplikací pro iPhone, Mac a web', '{n} apps for iPhone, Mac and web', '{n} aplikácií pre iPhone, Mac a web', '{n} Apps für iPhone, Mac und Web', '{n} apps para iPhone, Mac y web', '{n} aplikacji na iPhone’a, Maca i web'],
   "cta_apps": ["Prohlédnout appky", "Explore the apps", "Pozrieť aplikácie", "Apps entdecken", "Ver las apps", "Zobacz aplikacje"],
   "wall": ['Jedna rodina. Míň starostí.', 'One family. Fewer worries.', 'Jedna rodina. Menej starostí.', 'Eine Familie. Weniger Sorgen.', 'Una familia. Menos preocupaciones.', 'Jedna rodzina. Mniej zmartwień.'],
+  "solo": ["{a} funguje i sama – propojení je bonus.", "{a} works on its own too – connections are a bonus.", "{a} funguje aj sama – prepojenie je bonus.",
+           "{a} funktioniert auch allein – die Verbindungen sind ein Bonus.", "{a} también funciona sola; las conexiones son un extra.", "{a} działa też samodzielnie – połączenia to bonus."],
+  "start": ["Začni tady", "Start here", "Začni tu", "Starte hier", "Empieza aquí", "Zacznij tutaj"],
+  "hub_more": ["Více o Hubu", "More about Hub", "Viac o Hube", "Mehr über den Hub", "Más sobre Hub", "Więcej o Hubie"],
+  "today": ["Dnes a tento týden", "Today and this week", "Dnes a tento týždeň", "Heute und diese Woche", "Hoy y esta semana", "Dziś i w tym tygodniu"],
+  "eco_title": ["Jak spolu appky spolupracují", "How the apps work together", "Ako spolu appky spolupracujú", "Wie die Apps zusammenarbeiten", "Cómo colaboran las apps", "Jak aplikacje ze sobą współpracują"],
+  "eco_lead": ["Každá appka funguje i sama – propojení je bonus. Když jich máš víc, podají si ruku: jedna otevře druhou přesně tam, kde ji potřebuješ, a data přitom zůstávají v telefonu.",
+               "Every app works on its own – connections are a bonus. Have several and they lend each other a hand: one opens the other exactly where you need it, while your data stays on your phone.",
+               "Každá appka funguje aj sama – prepojenie je bonus. Keď ich máš viac, podajú si ruku: jedna otvorí druhú presne tam, kde ju potrebuješ, a dáta pritom zostávajú v telefóne.",
+               "Jede App funktioniert für sich – die Verbindung ist ein Bonus. Hast du mehrere, helfen sie sich: Eine öffnet die andere genau dort, wo du sie brauchst, und die Daten bleiben auf deinem iPhone.",
+               "Cada app funciona por sí sola; la conexión es un extra. Si tienes varias, se echan una mano: una abre la otra justo donde la necesitas y los datos se quedan en tu teléfono.",
+               "Każda aplikacja działa samodzielnie – połączenia to bonus. Gdy masz ich kilka, pomagają sobie: jedna otwiera drugą dokładnie tam, gdzie trzeba, a dane zostają w telefonie."],
+  "eco_hint": ["Najeď nebo klepni na appku a uvidíš, s kým spolupracuje.", "Hover or tap an app to see what it connects with.", "Prejdi alebo ťukni na appku a uvidíš, s kým spolupracuje.",
+               "Fahre über eine App oder tippe darauf, um ihre Verbindungen zu sehen.", "Pasa el ratón o toca una app para ver con cuáles se conecta.", "Najedź lub stuknij aplikację, by zobaczyć jej połączenia."],
+  "eco_hub": ["A EasyForLife Hub ukáže termíny ze všech appek na jednom místě.", "And EasyForLife Hub shows what’s coming up from all apps in one place.",
+              "A EasyForLife Hub ukáže termíny zo všetkých appiek na jednom mieste.", "Und der EasyForLife Hub zeigt Termine aus allen Apps an einem Ort.",
+              "Y EasyForLife Hub muestra lo pendiente de todas las apps en un solo lugar.", "A EasyForLife Hub pokaże terminy ze wszystkich aplikacji w jednym miejscu."],
   "support": ["Podpora", "Support", "Podpora", "Support", "Soporte", "Wsparcie"],
   "support_title": ["Podpora a kontakt", "Support and contact", "Podpora a kontakt", "Support und Kontakt", "Soporte y contacto", "Wsparcie i kontakt"],
   "support_lead": ["Něco nefunguje, máš nápad nebo dotaz k některé appce EasyForLife? Napiš nám, odpovídáme obvykle do pár dní.",
@@ -315,7 +334,41 @@ background:linear-gradient(160deg,color-mix(in oklab,var(--c) 20%,var(--surface)
 .faq{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:0 20px;margin:0 0 12px;box-shadow:var(--shadow)}
 .faq summary{cursor:pointer;font:800 1.08rem var(--display);padding:18px 0}.faq p{margin:0 0 18px;color:var(--muted)}
 .page-top{position:relative;margin-top:-76px;padding:120px 0 30px;overflow:hidden;isolation:isolate}.page-top h1{position:relative;z-index:2}.page-top .lead{position:relative;z-index:2;margin-left:0}
-.ico{flex:none}
+.ico{flex:none}.solo{color:var(--muted);margin:-8px 0 16px;font-weight:600}
+/* Začni tady – EasyForLife Hub */
+.start{padding-top:0}
+.start-card{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:clamp(24px,4vw,56px);border-radius:44px;overflow:hidden;isolation:isolate;
+background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gradient(120deg,var(--blue),var(--purple),var(--pink),var(--orange),var(--green)) border-box;border:3px solid transparent;box-shadow:var(--shadow)}
+.start-card::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 85% 20%,color-mix(in oklab,var(--blue) 18%,transparent),transparent 55%),radial-gradient(circle at 10% 100%,color-mix(in oklab,var(--orange) 16%,transparent),transparent 50%)}
+.start-card h2{font:800 clamp(2.2rem,5vw,3.8rem)/1 var(--display);letter-spacing:-.04em;margin:0 0 14px}
+.start-card .lead{margin:0 0 18px;text-align:left}.start-card .kicker{margin-bottom:16px}
+.ticks{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:8px}.ticks li{display:flex;gap:10px;align-items:center;font-weight:700}
+.ticks .ico{width:24px;height:24px;padding:4px;border-radius:50%;background:var(--green);color:#fff}
+.phone{justify-self:center;width:min(330px,100%);padding:12px;border-radius:44px;background:var(--ink);box-shadow:0 40px 80px -30px rgb(37 99 235/.45),var(--shadow);transform:rotate(3deg);animation:bob 7s ease-in-out infinite;--r:3deg}
+.phone-in{border-radius:34px;background:var(--bg);padding:20px 16px 18px;min-height:380px}
+.phone-head{display:flex;align-items:center;gap:10px;margin:0 0 14px}.phone-head .app-icon{width:34px;height:34px}.phone-head b{font:800 1.15rem var(--display)}
+.phone ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.phone li{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:10px 12px}
+.phone li .app-icon{width:40px;height:40px}.phone li b{display:block;font-size:.95rem;line-height:1.2}.phone li small{color:var(--muted);font-size:.82rem;font-weight:600}
+/* Jak spolu appky spolupracují */
+.eco-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.eco{position:relative;aspect-ratio:1;width:100%;max-width:620px;justify-self:center}
+.eco svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.eco path{fill:none;stroke-linecap:round;transition:opacity .25s,stroke-width .25s}
+.eco .link{stroke:var(--purple);stroke-width:.45;opacity:.55;stroke-dasharray:1.6 1.2;animation:flow 3s linear infinite}
+.eco .feed{stroke:var(--blue);stroke-width:.25;opacity:.3;stroke-dasharray:.6 1.4;animation:flow 4s linear infinite reverse}
+@keyframes flow{to{stroke-dashoffset:-11.2}}
+.eco.focus path{opacity:.07}.eco.focus path.on{opacity:1;stroke-width:.8}
+.node{position:absolute;width:11%;transform:translate(-50%,-50%);transition:transform .3s cubic-bezier(.3,1.7,.5,1),opacity .25s;z-index:2}
+.node .app-icon{width:100%;height:auto;aspect-ratio:1}
+.node:hover,.node.on{transform:translate(-50%,-50%) scale(1.22)}.eco.focus .node:not(.on){opacity:.35}
+.node.center{left:50%;top:50%;width:22%;z-index:3}.node.center .app-icon{box-shadow:0 20px 50px -14px rgb(37 99 235/.55)}
+.eco-ex{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.eco-ex li{display:flex;align-items:center;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:14px 16px;box-shadow:var(--shadow);font-weight:600;line-height:1.4}
+.eco-ex .pair{flex:none;display:flex;align-items:center;gap:6px}.eco-ex .pair .app-icon{width:40px;height:40px}.eco-ex .pair i{font-style:normal;font-weight:800;color:var(--muted)}
+.eco-ex .hubrow{background:linear-gradient(120deg,color-mix(in oklab,var(--blue) 14%,var(--surface)),color-mix(in oklab,var(--purple) 12%,var(--surface)))}
+@media (max-width:900px){.start-card,.eco-grid{grid-template-columns:1fr}.phone{transform:none;--r:0deg}}
+
 .logo-mark{display:grid;place-items:center;background:#fff;padding:0;aspect-ratio:1}.logo-mark .logo{width:74%;height:auto;aspect-ratio:1}
 .t-hero{grid-column:1/-1;grid-row:span 1;padding-left:clamp(110px,14vw,170px);min-height:212px}.t-hero .app-icon{width:clamp(76px,10vw,124px);height:auto;aspect-ratio:1;top:50%;left:24px;transform:translateY(-50%)}
 .t-hero:hover .app-icon{transform:translateY(-50%) rotate(-10deg) scale(1.08)}.t-hero h3{font-size:clamp(1.6rem,3vw,2.4rem)}.t-hero p{font-size:1.05rem}
@@ -372,6 +425,10 @@ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 var h=document.querySelector('[data-par]');
 if(h){var raf=0,mx=0,my=0,tick=function(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;h.style.setProperty('--mx',mx.toFixed(3));h.style.setProperty('--my',my.toFixed(3));h.style.setProperty('--sy',Math.min(scrollY,1400))})};
 addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;tick()},{passive:true});addEventListener('scroll',tick,{passive:true})}
+document.querySelectorAll('[data-eco]').forEach(function(e){var set=function(id){e.classList.toggle('focus',!!id);
+e.querySelectorAll('path').forEach(function(p){p.classList.toggle('on',!!id&&(p.dataset.a===id||p.dataset.b===id))});
+e.querySelectorAll('.node').forEach(function(n){var on=!!id&&(n.dataset.id===id||[].some.call(e.querySelectorAll('path.on'),function(p){return p.dataset.a===n.dataset.id||p.dataset.b===n.dataset.id}));n.classList.toggle('on',on)})};
+e.querySelectorAll('.node').forEach(function(n){n.addEventListener('mouseenter',function(){set(n.dataset.id)});n.addEventListener('focus',function(){set(n.dataset.id)})});e.addEventListener('mouseleave',function(){set(null)})});
 document.querySelectorAll('.tile').forEach(function(t){t.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;var r=t.getBoundingClientRect();
 t.style.setProperty('--rx',((e.clientY-r.top)/r.height-.5)*-7+'deg');t.style.setProperty('--ry',((e.clientX-r.left)/r.width-.5)*7+'deg')});
 t.addEventListener('pointerleave',function(){t.style.removeProperty('--rx');t.style.removeProperty('--ry')})})
@@ -586,6 +643,80 @@ class Site:
                 i += 1
         return out
 
+    def partners(self, a, lang):
+        """Se kterými appkami spolupracuje: eco.LINKS (oba směry), EasyForLife Hub, pak ruční odkazy z site/apps."""
+        out = {}
+        for x, y, txt in eco.LINKS:
+            other = y if x == a["id"] else x if y == a["id"] else None
+            if other in self.by_id:
+                out.setdefault(other, []).append(txt[lang])
+        if "easylife" in self.by_id:
+            if a["id"] in eco.HUB_FEEDS:
+                out.setdefault("easylife", []).append(eco.HUB_TEXT[lang].format(a=a["name"]))
+            if a["id"] == "easylife":
+                for f in eco.HUB_FEEDS:
+                    if f in self.by_id:
+                        out.setdefault(f, []).append(eco.HUB_IN[lang].format(a=self.by_id[f]["name"]))
+        for l in a["site"].get("links", []):
+            if l["app"] in self.by_id and l["app"] not in out:
+                out[l["app"]] = [l["text"][lang]]
+        return [(self.by_id[o], " ".join(txts)) for o, txts in out.items()]
+
+    def start_here(self, lang):
+        hub = self.by_id.get("easylife")
+        if not hub:
+            return ""
+        s = hub["site"]
+        desc = (s.get("description", {}).get(lang) or [hub["tagline"][lang]])[0]
+        feats = "".join(f"<li>{icon('check')}{esc(x)}</li>" for x in (s.get("features", {}).get(lang) or [])[:4])
+        rows = "".join(f'<li style="--rd:{k * 120 + 300}ms" class="rv">{self.app_icon(self.by_id[i], 40)}<span><b>{esc(ti[lang])}</b><small>{esc(when[lang])}</small></span></li>'
+                       for k, (i, ti, when) in enumerate(eco.HUB_MOCK) if i in self.by_id)
+        return (f'<section class="start"><div class="wrap"><div class="start-card rv"><div class="start-text">'
+                f'<p class="kicker"><span class="dot"></span>{t("start", lang)}</p><h2>{esc(hub["name"])}</h2><p class="lead">{esc(desc)}</p>'
+                f'<ul class="ticks">{feats}</ul><div class="actions"><a class="btn big" href="{url(lang, hub["id"])}">{t("hub_more", lang)} <span>→</span></a>{self.status(hub, lang)}</div></div>'
+                f'<div class="phone" aria-hidden="true"><div class="phone-in"><div class="phone-head">{self.app_icon(hub, 34)}<b>{t("today", lang)}</b></div><ul>{rows}</ul></div></div>'
+                f'</div></div></section>')
+
+    def eco_section(self, lang):
+        """Kruh appek s čarami propojení, uprostřed Hub; vedle příklady."""
+        ids = []
+        for x, y, _ in eco.LINKS:
+            for i in (x, y):
+                if i in self.by_id and i not in ids:
+                    ids.append(i)
+        ids += [i for i in eco.HUB_FEEDS if i in self.by_id and i not in ids]
+        ids.sort(key=lambda i: [a["id"] for a in self.apps].index(i))
+        if len(ids) < 3:
+            return ""
+        pos = {}
+        for k, i in enumerate(ids):
+            ang = -math.pi / 2 + 2 * math.pi * k / len(ids)
+            pos[i] = (50 + 41 * math.cos(ang), 50 + 41 * math.sin(ang))
+        hub = "easylife" in self.by_id
+        lines = ""
+        if hub:
+            for i in eco.HUB_FEEDS:
+                if i in pos:
+                    x, y = pos[i]
+                    lines += f'<path class="feed" data-a="{i}" data-b="easylife" d="M{x:.1f} {y:.1f} L50 50"/>'
+        for x, y, _ in eco.LINKS:
+            if x in pos and y in pos:
+                (x1, y1), (x2, y2) = pos[x], pos[y]
+                cx, cy = 50 + ((x1 + x2) / 2 - 50) * .35, 50 + ((y1 + y2) / 2 - 50) * .35
+                lines += f'<path class="link" data-a="{x}" data-b="{y}" d="M{x1:.1f} {y1:.1f} Q{cx:.1f} {cy:.1f} {x2:.1f} {y2:.1f}"/>'
+        nodes = "".join(f'<a class="node" data-id="{i}" href="{url(lang, i)}" style="left:{pos[i][0]:.1f}%;top:{pos[i][1]:.1f}%" title="{esc(self.by_id[i]["name"])}">'
+                        f'{self.app_icon(self.by_id[i], 56)}</a>' for i in ids)
+        if hub:
+            nodes += f'<a class="node center" data-id="easylife" href="{url(lang, "easylife")}" title="{esc(self.by_id["easylife"]["name"])}">{self.app_icon(self.by_id["easylife"], 96)}</a>'
+        txt = {(x, y): tx for x, y, tx in eco.LINKS}
+        ex = "".join(f'<li class="rv" style="--rd:{k * 80}ms"><span class="pair">{self.app_icon(self.by_id[x], 40)}<i>→</i>{self.app_icon(self.by_id[y], 40)}</span><span>{esc(txt[(x, y)][lang])}</span></li>'
+                     for k, (x, y) in enumerate(eco.EXAMPLES) if x in self.by_id and y in self.by_id)
+        if hub:
+            ex += f'<li class="rv hubrow"><span class="pair">{self.app_icon(self.by_id["easylife"], 40)}</span><span><b>{t("eco_hub", lang)}</b></span></li>'
+        return (f'<section id="spoluprace"><div class="wrap"><div class="sec-head rv"><h2>{t("eco_title", lang)}</h2><p>{t("eco_lead", lang)}</p></div>'
+                f'<div class="eco-grid"><div class="eco rv" data-eco><svg viewBox="0 0 100 100" aria-hidden="true">{lines}</svg>{nodes}</div>'
+                f'<div><ul class="eco-ex">{ex}</ul><p class="note">{icon("link")}<span>{t("eco_hint", lang)}</span></p></div></div></div></section>')
+
     def family_apps(self, fid):
         return [a for a in self.apps if a["family"] == fid]
 
@@ -613,6 +744,8 @@ class Site:
         for fid, f in self.families.items():
             apps = self.family_apps(fid)
             if apps:
+                if fid == "easylife" and "easylife" in self.by_id:
+                    continue
                 groups["work" if fid in WORK else "main"].append((fid, f, apps))
         fams, work = self.families_html(groups["main"], lang), self.families_html(groups["work"], lang)
         sc = [("user-x", "var(--blue)", "-2deg"), ("eye-off", "var(--pink)", "1.5deg"), ("lock", "var(--green)", "-1deg"), ("link", "var(--orange)", "2deg")]
@@ -624,8 +757,10 @@ class Site:
                 f'<div class="wrap hero-in"><p class="kicker"><span class="dot"></span>{t("count", lang).format(n=len(self.apps))}</p>'
                 f'<h1>{h}</h1><p class="lead">{t("lead", lang)}</p><ul class="pills">{pills}</ul>'
                 f'<a class="btn big" href="#apps">{t("cta_apps", lang)} <span>↓</span></a></div></section>'
-                + '<div class="mq-wrap">' + self.marquee(order, lang) + self.marquee(order[::-1], lang, "two") + "</div>" +
+                + '<div class="mq-wrap">' + self.marquee(order, lang) + self.marquee(order[::-1], lang, "two") + "</div>"
+                + self.start_here(lang) +
                 f'<section id="apps"><div class="wrap"><div class="sec-head rv"><h2>{t("apps", lang)}</h2><p>{t("apps_lead", lang)}</p></div>{fams}</div></section>'
+                + self.eco_section(lang)
                 + (f'<section id="prace"><div class="wrap"><div class="work"><div class="sec-head rv"><h2>{t("work", lang)}</h2><p>{t("work_lead", lang)}</p></div>{work}</div></div></section>' if work else "") +
                 f'<section><div class="wrap"><div class="sec-head rv"><h2>{t("how", lang)}</h2></div><div class="stickers">{prin}</div></div></section>'
                 f'<section><div class="wrap"><div class="wall rv"><div class="wall-grid" aria-hidden="true">{wall}</div>'
@@ -673,9 +808,9 @@ class Site:
         if shots:
             body += f'<h2 class="sub rv">{t("shots", lang)}</h2><div class="shots">' + "".join(
                 f'<img src="/shots/{a["id"]}/{esc(x)}" alt="" loading="lazy" width="250" height="544">' for x in shots) + "</div>"
-        links = [(self.by_id[l["app"]], l["text"][lang]) for l in s.get("links", []) if l["app"] in self.by_id]
+        links = self.partners(a, lang)
         if links:
-            body += f'<h2 class="sub rv">{t("works_with", lang)}</h2><div class="links">' + "".join(
+            body += f'<h2 class="sub rv">{t("works_with", lang)}</h2><p class="solo">{esc(t("solo", lang).format(a=a["name"]))}</p><div class="links">' + "".join(
                 f'<div class="link-row rv">{self.app_icon(o, 54)}<div><a href="{url(lang, o["id"])}"><b>{esc(o["name"])}</b></a><span>{esc(txt)}</span></div></div>'
                 for o, txt in links) + "</div>"
         body += f'<p class="note">{note}</p>'

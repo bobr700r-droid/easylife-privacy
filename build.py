@@ -1,4 +1,4 @@
-"""Generuje statické stránky se zásadami ochrany soukromí pro EasyLife aplikace (GitHub Pages)."""
+"""Generuje statické stránky se zásadami ochrany soukromí pro EasyForLife aplikace (GitHub Pages)."""
 import html, pathlib
 
 OUT = pathlib.Path(__file__).parent / "docs"
@@ -136,8 +136,8 @@ APPS = [
        ("Mapa, dohledání souřadnic míst a tipy v okolí využívají Apple MapKit. Hledaný text a souřadnice zpracovává Apple podle svých zásad. Aplikace nežádá o tvou polohu.",
         "The map, place lookups and nearby tips use Apple MapKit. Search text and coordinates are processed by Apple under its own policy. The app does not ask for your location.")),
       (("Odkazy a další aplikace", "Links and other apps"),
-       ("Odkazy na Booking, Kiwi, IDOS, 12Go, Google Maps a další služby jen otevřou prohlížeč s předvyplněným hledáním (místo a datum) – aplikace jim nic dalšího neposílá. Odkazy do jiných aplikací EasyLife (Salónky, Směnárna, Vyrovnáno, Jídelník) jim předají jen kód letiště, měnu nebo místo.",
-        "Links to Booking, Kiwi, IDOS, 12Go, Google Maps and other services simply open the browser with a pre-filled search (place and date); the app sends them nothing else. Links to other EasyLife apps (Salónky, Směnárna, Vyrovnáno, Jídelník) only pass them an airport code, a currency or a place.")),
+       ("Odkazy na Booking, Kiwi, IDOS, 12Go, Google Maps a další služby jen otevřou prohlížeč s předvyplněným hledáním (místo a datum) – aplikace jim nic dalšího neposílá. Odkazy do jiných aplikací EasyForLife (Salónky, Směnárna, Vyrovnáno, Jídelník) jim předají jen kód letiště, měnu nebo místo.",
+        "Links to Booking, Kiwi, IDOS, 12Go, Google Maps and other services simply open the browser with a pre-filled search (place and date); the app sends them nothing else. Links to other EasyForLife apps (Salónky, Směnárna, Vyrovnáno, Jídelník) only pass them an airport code, a currency or a place.")),
     ],
     common_rights=(("Tvoje práva a kontakt", "Your rights and contact"),
        ("Účet i všechny cesty smažeš v aplikaci (Účet → Smazat účet) nebo na webu; smažou se ze serveru i ze všech zařízení. Máš právo na přístup k údajům, jejich opravu, přenos (export v Účtu) a výmaz a můžeš podat stížnost u ÚOOÚ. Provozovatel: {op}. Kontakt: <a href=\"mailto:info@luksafoto.cz\">info@luksafoto.cz</a>.",
@@ -389,14 +389,14 @@ b.forEach(function(e){e.addEventListener('click',function(){show(e.dataset.for)}
 var n=(navigator.language||'cs').toLowerCase();show(location.hash==='#en'?'en':location.hash==='#cs'?'cs':(n.indexOf('cs')===0||n.indexOf('sk')===0)?'cs':'en')})();
 </script>"""
 
-def page(title, inner, color="#0b7d70", mark="E", brand="EasyLife", home="index.html"):
+def page(title, inner, color="#0b7d70", mark="E", brand="EasyForLife", home="index.html"):
     return f"""<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)}</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600&display=swap">
 <style>{CSS}:root{{--accent:{color}}}</style></head><body><div class="wrap">
 <header><a class="brand" href="{home}"><span class="mark" style="background:{color}">{mark}</span><b>{html.escape(brand)}</b></a>
 <div class="lang" role="group" aria-label="Jazyk / Language"><button type="button" data-for="cs" aria-pressed="true">ČESKY</button><button type="button" data-for="en" aria-pressed="false">ENGLISH</button></div></header>
-{inner}<footer>EasyLife · <a href="index.html">všechny aplikace / all apps</a></footer></div>{SCRIPT}</body></html>"""
+{inner}<footer>EasyForLife · <a href="index.html">všechny aplikace / all apps</a></footer></div>{SCRIPT}</body></html>"""
 
 def app_page(app):
     parts = []
@@ -416,8 +416,8 @@ def index():
         items = "".join(f'<li><a href="{a["slug"]}.html"><span class="mark" style="background:{a["color"]}">{a["mark"]}</span><span><b>{a["name"]}</b><small>{a["tagline"][i]}</small></span></a></li>' for a in APPS)
         items += "".join(f'<li><a href="{u}"><span class="mark" style="background:#555">K</span><span><b>{n}</b><small>{("Zásady na webu aplikace","Policy on the app’s website")[i]}</small></span></a></li>' for n, u in EXTERNAL)
         parts.append(f'<article data-lang="{lang}"{" hidden" if lang=="en" else ""}><h1>{("Ochrana soukromí","Privacy")[i]}</h1>'
-                     f'<p class="meta">{("Zásady ochrany soukromí aplikací EasyLife.","Privacy policies of the EasyLife apps.")[i]}</p><ul class="apps">{items}</ul></article>')
-    return page("EasyLife – soukromí", "".join(parts))
+                     f'<p class="meta">{("Zásady ochrany soukromí aplikací EasyForLife.","Privacy policies of the EasyForLife apps.")[i]}</p><ul class="apps">{items}</ul></article>')
+    return page("EasyForLife – soukromí", "".join(parts))
 
 OUT.mkdir(exist_ok=True)
 # Rozcestník zásad; úvodní stránku webu (index.html) generuje web.py z EasyLife/catalog.json.
