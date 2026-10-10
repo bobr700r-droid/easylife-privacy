@@ -135,6 +135,18 @@ LINKS = [
                              "Eine in NaviDesk geplante Route schickst du per QR-Code an Navigace.",
                              "Envía una ruta planificada en NaviDesk a Navigace en el móvil con un código QR.",
                              "Trasę zaplanowaną w NaviDesku wyślesz kodem QR do Navigace w telefonie.")),
+  ("nakupy", "vyrovnano", d("Útratu z dokončeného nákupu v Nákupech přidáš do společné skupiny ve Vyrovnáno.",
+                            "Add the total of a finished Nákupy shop to a shared group in Vyrovnáno.",
+                            "Útratu z dokončeného nákupu v Nákupoch pridáš do spoločnej skupiny vo Vyrovnáno.",
+                            "Den Betrag eines erledigten Einkaufs aus Nákupy trägst du in Vyrovnáno ein.",
+                            "Añade el importe de una compra terminada en Nákupy a un grupo de Vyrovnáno.",
+                            "Kwotę zakończonych zakupów z Nákupów dodasz do wspólnej grupy w Vyrovnáno.")),
+  ("cestovnicek", "nakupy", d("Co si vzít s sebou na cestu z Cestovníčku, přidáš rovnou do Nákupů.",
+                              "Add what to pack for your Cestovníček trip straight to Nákupy.",
+                              "Čo si vziať so sebou na cestu z Cestovníčka, pridáš rovno do Nákupov.",
+                              "Was du für die Reise aus Cestovníček brauchst, kommt direkt in Nákupy.",
+                              "Lo que necesitas para el viaje de Cestovníček va directo a Nákupy.",
+                              "To, co zabrać w podróż z Cestovníčka, dodasz prosto do Nákupów.")),
   ("mailer", "fakturant", d("Fakturu z přílohy v Maileru pošleš jako náklad do Fakturantu.",
                             "Send an invoice attachment from Mailer to Fakturant as an expense.",
                             "Faktúru z prílohy v Maileri pošleš ako náklad do Fakturantu.",
@@ -143,7 +155,7 @@ LINKS = [
                             "Fakturę z załącznika w Mailerze wyślesz jako koszt do Fakturanta.")),
 ]
 
-HUB_FEEDS = ["garaz", "predplatne", "lekarnicka", "zaruky", "darky", "mazlicek", "odecty", "salonky", "cestovnicek", "fotoplan"]
+HUB_FEEDS = ["nakupy", "garaz", "predplatne", "lekarnicka", "zaruky", "darky", "mazlicek", "odecty", "salonky", "cestovnicek", "fotoplan"]
 HUB_TEXT = d("Termíny z {a} uvidíš v EasyForLife Hubu spolu s ostatními.", "Upcoming items from {a} show up in EasyForLife Hub with everything else.",
              "Termíny z {a} uvidíš v EasyForLife Hube spolu s ostatnými.", "Termine aus {a} siehst du im EasyForLife Hub zusammen mit allem anderen.",
              "Lo pendiente de {a} aparece en EasyForLife Hub junto con todo lo demás.", "Terminy z {a} zobaczysz w EasyForLife Hub razem z resztą.")

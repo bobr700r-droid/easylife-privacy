@@ -1,0 +1,76 @@
+{
+ "status": "dev",
+ "color": "#0c8599",
+ "description": {
+  "cs": [
+   "Nákupy jsou sdílený nákupní seznam pro celou rodinu a věrnostní karty v kapse. Položky se samy řadí podle oddělení v obchodě a u pokladny ukážeš kartu jedním klepnutím.",
+   "Bez účtu – seznamy sdílíš s rodinou přes iCloud a další appky EasyForLife ti do nich umí rovnou přidat, co chybí."
+  ],
+  "en": [
+   "Nákupy is a shared shopping list for the whole family plus your loyalty cards in your pocket. Items sort themselves by store aisle, and at the checkout your card is one tap away.",
+   "No account – share lists with your family via iCloud, and other EasyForLife apps can add what’s missing straight to them."
+  ],
+  "sk": [
+   "Nákupy sú zdieľaný nákupný zoznam pre celú rodinu a vernostné karty vo vrecku. Položky sa samy zoradia podľa oddelení v obchode a pri pokladni ukážeš kartu jedným ťuknutím.",
+   "Bez účtu – zoznamy zdieľaš s rodinou cez iCloud a ďalšie appky EasyForLife ti do nich vedia rovno pridať, čo chýba."
+  ],
+  "de": [
+   "Nákupy ist eine gemeinsame Einkaufsliste für die ganze Familie plus Kundenkarten in der Tasche. Artikel sortieren sich nach Abteilungen im Laden, und an der Kasse ist deine Karte einen Tipp entfernt.",
+   "Ohne Konto – teile Listen per iCloud mit der Familie; andere EasyForLife-Apps können Fehlendes direkt hinzufügen."
+  ],
+  "es": [
+   "Nákupy es una lista de la compra compartida para toda la familia y tus tarjetas de fidelidad en el bolsillo. Los productos se ordenan por secciones de la tienda y en caja muestras la tarjeta con un toque.",
+   "Sin cuenta: comparte listas con la familia por iCloud, y otras apps EasyForLife pueden añadir lo que falta directamente."
+  ],
+  "pl": [
+   "Nákupy to wspólna lista zakupów dla całej rodziny i karty lojalnościowe w kieszeni. Produkty same układają się według działów w sklepie, a przy kasie pokażesz kartę jednym stuknięciem.",
+   "Bez konta – listy udostępniasz rodzinie przez iCloud, a inne aplikacje EasyForLife mogą od razu dopisać, czego brakuje."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Víc seznamů, řazení podle oddělení obchodu",
+   "Sdílení s rodinou přes iCloud: kdo přidal a kdo koupil",
+   "Rychlé přidávání s našeptáváním, „2 l mléko“",
+   "Věrnostní karty: naskenuješ a ukážeš u pokladny",
+   "Widgety a Siri: „Přidej mléko do Nákupů“"
+  ],
+  "en": [
+   "Multiple lists, sorted by store aisle",
+   "Family sharing via iCloud: who added and who bought",
+   "Quick add with suggestions, “2 l milk”",
+   "Loyalty cards: scan once, show at the checkout",
+   "Widgets and Siri: “Add milk to Nákupy”"
+  ],
+  "sk": [
+   "Viac zoznamov, radenie podľa oddelení obchodu",
+   "Zdieľanie s rodinou cez iCloud: kto pridal a kto kúpil",
+   "Rýchle pridávanie s našepkávaním, „2 l mlieko“",
+   "Vernostné karty: naskenuješ a ukážeš pri pokladni",
+   "Widgety a Siri: „Pridaj mlieko do Nákupov“"
+  ],
+  "de": [
+   "Mehrere Listen, sortiert nach Abteilungen",
+   "Familienfreigabe per iCloud: wer hinzugefügt und gekauft hat",
+   "Schnell hinzufügen mit Vorschlägen, „2 l Milch“",
+   "Kundenkarten: einmal scannen, an der Kasse zeigen",
+   "Widgets und Siri: „Füge Milch zu Nákupy hinzu“"
+  ],
+  "es": [
+   "Varias listas ordenadas por secciones",
+   "Compartir en familia por iCloud: quién añadió y quién compró",
+   "Añadir rápido con sugerencias, «2 l de leche»",
+   "Tarjetas de fidelidad: escanéala y muéstrala en caja",
+   "Widgets y Siri: «Añade leche a Nákupy»"
+  ],
+  "pl": [
+   "Wiele list, porządek według działów sklepu",
+   "Udostępnianie rodzinie przez iCloud: kto dodał i kto kupił",
+   "Szybkie dodawanie z podpowiedziami, „2 l mleka”",
+   "Karty lojalnościowe: zeskanuj i pokaż przy kasie",
+   "Widżety i Siri: „Dodaj mleko do Nákupów”"
+  ]
+ },
+ "icon": "~/EasyLife aplikace/Nakupy/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+ "links": []
+}

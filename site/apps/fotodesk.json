@@ -1,7 +1,7 @@
 {
  "status": "live",
  "icon": "~/Documents/fotodesk/ios/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
- "privacy": "/soukromi.html",
+ "privacy": "https://fotodesk.luksafoto.cz/soukromi",
  "description": {
   "cs": [
    "FotoDesk je firemní systém pro fotografy: poptávky, zakázky, klienti, kalendář s rezervacemi, smlouvy a faktury na jednom místě. Klientům zpřístupní online galerie s výběrem fotek.",
