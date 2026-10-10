@@ -93,8 +93,11 @@ APPS = [
              "Jídelník has no accounts, ads or analytics. Favorites, visited places, ratings and notes stay on your device. For searching, only the location you search around and your filters are sent to our server."),
     sections=[
       (("Co zůstává v zařízení", "What stays on your device"),
-       ("Oblíbené podniky, seznam „Chci zkusit“, navštívená místa, vlastní hodnocení, poznámky, nedávná místa hledání a nastavení filtrů. Nikam se neodesílají.",
-        "Favorite places, the “Want to try” list, visited places, your own ratings, notes, recent search locations and filter settings. None of this is sent anywhere.")),
+       ("Oblíbené podniky, seznam „Chci zkusit“, vyzkoušená místa, vlastní hodnocení, poznámky, vlastní podniky včetně fotek, zapsané rezervace, nedávná místa hledání a nastavení filtrů. Nikam se neodesílají.",
+        "Favorite places, the “Want to try” list, tried places, your own ratings, notes, your own places including photos, noted reservations, recent search locations and filter settings. None of this is sent anywhere.")),
+      (("Fotky a kalendář", "Photos and calendar"),
+       ("Fotku k vlastnímu podniku vybíráš systémovým výběrem; aplikace dostane jen tu jednu fotku a uloží ji v zařízení. Rezervaci do kalendáře přidáváš sám v systémovém formuláři – aplikace nemá přístup ke tvému kalendáři.",
+        "You pick a photo for your own place with the system picker; the app only receives that one photo and stores it on your device. You add a reservation to your calendar yourself in the system form – the app has no access to your calendar.")),
       (("Hledání podniků", "Searching for places"),
        ("Při hledání aplikace pošle na náš server (Fly.io, Frankfurt, EU) souřadnice středu hledání (tvoje poloha nebo zvolené místo), okruh, hledaný text, filtry a jazyk. Server se dotáže služby Google Places (Google, USA) a výsledky krátce (nejvýš 24 hodin) drží v paměti, aby se stejné dotazy neopakovaly. Nic se neukládá k žádné identitě; server si nevede historii hledání ani polohy.",
         "When you search, the app sends to our server (Fly.io, Frankfurt, EU) the coordinates of the search centre (your location or a chosen place), the radius, search text, filters and language. The server queries Google Places (Google, USA) and keeps results in memory briefly (at most 24 hours) to avoid repeating identical queries. Nothing is tied to any identity; the server keeps no search or location history.")),
