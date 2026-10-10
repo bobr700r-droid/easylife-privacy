@@ -1,7 +1,7 @@
 {
  "status": "live",
  "icon": "~/Documents/Mailer/ios/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
- "privacy": "/soukromi.html",
+ "privacy": "https://mailer.luksafoto.cz/soukromi.html",
  "description": {
   "cs": [
    "Mailer je poštovní klient pro tvoje vlastní schránky – Gmail, Seznam, Microsoft 365 a další. Běží v prohlížeči, v iPhonu i na Macu.",
