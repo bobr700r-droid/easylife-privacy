@@ -111,6 +111,37 @@ APPS = [
        ("Mapu zobrazuje Apple MapKit. Tlačítka Trasa, Google, Web nebo Volat otevřou Mapy, Google Mapy, web podniku nebo telefon.",
         "The map is provided by Apple MapKit. The Directions, Google, Website or Call buttons open Maps, Google Maps, the place's website or the phone.")),
     ]),
+  dict(slug="cestovnicek", name="Cestovníček", mark="✈", color="#1f7a8c",
+    tagline=("Plánovač cest den po dni s přesuny, ubytováním, mapou a AI.",
+             "Day-by-day trip planner with transport, stays, a map and AI."),
+    summary=("Cestovníček nemá reklamy, analytiku ani sledování. Funguje i bez účtu – cesty jsou pak jen v zařízení a ve tvém iCloudu. Volitelný účet (e-mail, jméno a heslo) slouží k synchronizaci přes náš server v EU, ke sdílení itinerářů v komunitě a k AI přes Cestovníček; data nikomu neprodáváme ani nepředáváme.",
+             "Cestovníček has no ads, analytics or tracking. It works without an account – your trips then stay on your device and in your iCloud. The optional account (e-mail, name and password) is used to sync via our server in the EU, to share itineraries in the community and for AI via Cestovníček; data is never sold or passed on."),
+    sections=[
+      (("Bez účtu", "Without an account"),
+       ("Bez účtu se cesty ukládají jen v zařízení a do tvého soukromého iCloudu (úložiště klíč–hodnota Apple), aby byly na všech tvých zařízeních se stejným Apple účtem. My k nim přístup nemáme. Když se později přihlásíš, cesty z tohoto zařízení se přidají do účtu.",
+        "Without an account, trips are stored only on your device and in your private iCloud (Apple key-value storage) so they are on all your devices with the same Apple Account. We have no access to them. If you sign in later, the trips on this device are added to your account.")),
+      (("Účet a synchronizace", "Account and sync"),
+       ("Účet na <code>cestovnicek.luksafoto.cz</code> obsahuje e-mail, volitelné jméno, heslo (uložené jen jako bezpečný otisk), zvolený jazyk a vzhled. Přihlašovací token je v Klíčence (iCloud Klíčence), aby přihlášení platilo na všech tvých zařízeních. E-maily (potvrzení účtu, obnova hesla) posíláme jen kvůli účtu.",
+        "The account at <code>cestovnicek.luksafoto.cz</code> holds your e-mail, an optional name, your password (stored only as a secure hash), and your language and appearance choices. The sign-in token is kept in the Keychain (iCloud Keychain) so you stay signed in on all your devices. We send e-mails (account confirmation, password reset) only for the account.")),
+      (("Cesty a jejich obsah", "Trips and their content"),
+       ("Cesty, které naplánuješ (destinace, termín, počet cestujících, dny, přesuny, ubytování, místa, ceny, poznámky a odkazy), se ukládají v zařízení a synchronizují na náš server (Fly.io, Frankfurt, EU), abys je měl na iPhonu, Macu i na webu. Zálohu všech dat si můžeš kdykoli stáhnout v Účtu.",
+        "The trips you plan (destination, dates, number of travellers, days, transport, stays, places, prices, notes and links) are stored on your device and synced to our server (Fly.io, Frankfurt, EU) so you have them on your iPhone, Mac and the web. You can download a backup of all your data in Account at any time.")),
+      (("Komunita", "Community"),
+       ("Svou cestu můžeš (jen s účtem) sdílet v komunitě. Sdílený itinerář je veřejný: vidí ho kdokoli v aplikaci i na webu (odkaz <code>cestovnicek.luksafoto.cz/i/…</code>) a může si ho uložit jako šablonu. Sdílí se program cesty (dny, místa, přesuny, ceny) a tvoje jméno z účtu, nebo „anonym“. Odkazy na rezervace se nesdílí nikdy, poznámky jen když to zapneš. Sdílení můžeš kdykoli zrušit. Nahlášené itineráře kontroluje provozovatel a může je skrýt nebo smazat. Prohlížení komunity žádné údaje o tobě neposílá.",
+        "With an account you can share your trip in the community. A shared itinerary is public: anyone can see it in the app and on the web (link <code>cestovnicek.luksafoto.cz/i/…</code>) and save it as a template. The trip plan (days, places, transfers, prices) is shared along with your account name, or “anonymous”. Booking links are never shared, notes only if you turn it on. You can stop sharing at any time. Reported itineraries are reviewed by the operator, who may hide or delete them. Browsing the community sends no information about you.")),
+      (("AI plánování", "AI planning")
+       ,("AI je volitelná a bez účtu funguje jen s vlastním klíčem. S vlastním klíčem k Anthropic API posílá aplikace zadání (destinace, termín, počet cestujících, měna, tvoje přání a už naplánované položky dne) přímo společnosti Anthropic (USA); klíč je jen v tvé iCloud Klíčence a my ho nevidíme. Pokud ti „AI přes Cestovníček“ zapneme, jde stejné zadání přes náš server, který ho předá Anthropic. Anthropic data zpracovává podle svých zásad a nepoužívá je k trénování modelů.",
+        "AI is optional; without an account it only works with your own key. With your own Anthropic API key, the app sends the request (destination, dates, number of travellers, currency, your wishes and items already planned for the day) directly to Anthropic (USA); the key is kept only in your iCloud Keychain and we never see it. If “AI via Cestovníček” is enabled for you, the same request goes through our server, which passes it to Anthropic. Anthropic processes the data under its own policy and does not use it to train models.")),
+      (("Mapy Apple", "Apple Maps"),
+       ("Mapa, dohledání souřadnic míst a tipy v okolí využívají Apple MapKit. Hledaný text a souřadnice zpracovává Apple podle svých zásad. Aplikace nežádá o tvou polohu.",
+        "The map, place lookups and nearby tips use Apple MapKit. Search text and coordinates are processed by Apple under its own policy. The app does not ask for your location.")),
+      (("Odkazy a další aplikace", "Links and other apps"),
+       ("Odkazy na Booking, Kiwi, IDOS, 12Go, Google Maps a další služby jen otevřou prohlížeč s předvyplněným hledáním (místo a datum) – aplikace jim nic dalšího neposílá. Odkazy do jiných aplikací EasyLife (Salónky, Směnárna, Vyrovnáno, Jídelník) jim předají jen kód letiště, měnu nebo místo.",
+        "Links to Booking, Kiwi, IDOS, 12Go, Google Maps and other services simply open the browser with a pre-filled search (place and date); the app sends them nothing else. Links to other EasyLife apps (Salónky, Směnárna, Vyrovnáno, Jídelník) only pass them an airport code, a currency or a place.")),
+    ],
+    common_rights=(("Tvoje práva a kontakt", "Your rights and contact"),
+       ("Účet i všechny cesty smažeš v aplikaci (Účet → Smazat účet) nebo na webu; smažou se ze serveru i ze všech zařízení. Máš právo na přístup k údajům, jejich opravu, přenos (export v Účtu) a výmaz a můžeš podat stížnost u ÚOOÚ. Provozovatel: {op}. Kontakt: <a href=\"mailto:info@luksafoto.cz\">info@luksafoto.cz</a>.",
+        "You can delete your account and all trips in the app (Account → Delete account) or on the web; they are removed from the server and all devices. You have the right to access, correct, export (download in Account) and erase your data, and you may complain to the Czech data protection authority (ÚOOÚ). Operator: {op}. Contact: <a href=\"mailto:info@luksafoto.cz\">info@luksafoto.cz</a>."))),
   dict(slug="fototip", name="FotoTip", mark="◎", color="#6351e8",
     tagline=("Návody a tipy pro fotografy: expozice, světlo, kompozice, pózy a fotografické kalkulačky.",
              "Guides and tips for photographers: exposure, light, composition, poses and photo calculators."),
@@ -348,7 +379,8 @@ def app_page(app):
         h1 = ("Zásady ochrany soukromí", "Privacy Policy")[i]
         upd = ("Platné od ", "Effective ")[i] + UPDATED[i]
         body = "".join(f"<h2>{t[i]}</h2><p>{x[i]}</p>" for t, x in app["sections"])
-        body += "".join(f"<h2>{t[i]}</h2><p>{x[i].format(op=OPERATOR[i])}</p>" for t, x in COMMON)
+        common = [app["common_rights"] if t[0] == "Tvoje práva a kontakt" and "common_rights" in app else (t, x) for t, x in COMMON]
+        body += "".join(f"<h2>{t[i]}</h2><p>{x[i].format(op=OPERATOR[i])}</p>" for t, x in common)
         parts.append(f'<article data-lang="{lang}"{" hidden" if lang=="en" else ""}><h1>{h1}</h1><p class="meta">{app["name"]} · {upd}</p>'
                      f'<div class="summary">{app["summary"][i]}</div>{body}</article>')
     return page(f"{app['name']} – soukromí", "".join(parts), app["color"], app["mark"], app["name"])
