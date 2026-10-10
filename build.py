@@ -86,6 +86,25 @@ APPS = [
        ("Vyhledávání letišť a salonků používá Apple MapKit. Oznámení (připomínky vstupů, změny letu) doručuje Apple.",
         "Airport and lounge search uses Apple MapKit. Notifications (entry reminders, flight changes) are delivered by Apple.")),
     ]),
+  dict(slug="jidelnik", name="Jídelník", mark="🍽", color="#e85d2e",
+    tagline=("Hledání restaurací v okolí i kdekoli jinde podle hodnocení, kuchyně a služeb.",
+             "Find restaurants nearby or anywhere by rating, cuisine and services."),
+    summary=("Jídelník nemá účty, reklamy ani analytiku. Oblíbené podniky, navštívená místa, hodnocení a poznámky zůstávají v zařízení. Kvůli hledání se na náš server posílá jen místo, kde hledáš, a zvolené filtry.",
+             "Jídelník has no accounts, ads or analytics. Favorites, visited places, ratings and notes stay on your device. For searching, only the location you search around and your filters are sent to our server."),
+    sections=[
+      (("Co zůstává v zařízení", "What stays on your device"),
+       ("Oblíbené podniky, seznam „Chci zkusit“, navštívená místa, vlastní hodnocení, poznámky, nedávná místa hledání a nastavení filtrů. Nikam se neodesílají.",
+        "Favorite places, the “Want to try” list, visited places, your own ratings, notes, recent search locations and filter settings. None of this is sent anywhere.")),
+      (("Hledání podniků", "Searching for places"),
+       ("Při hledání aplikace pošle na náš server (Fly.io, Frankfurt, EU) souřadnice středu hledání (tvoje poloha nebo zvolené místo), okruh, hledaný text, filtry a jazyk. Server se dotáže služby Google Places (Google, USA) a výsledky krátce (nejvýš 24 hodin) drží v paměti, aby se stejné dotazy neopakovaly. Nic se neukládá k žádné identitě; server si nevede historii hledání ani polohy.",
+        "When you search, the app sends to our server (Fly.io, Frankfurt, EU) the coordinates of the search centre (your location or a chosen place), the radius, search text, filters and language. The server queries Google Places (Google, USA) and keeps results in memory briefly (at most 24 hours) to avoid repeating identical queries. Nothing is tied to any identity; the server keeps no search or location history.")),
+      (("Poloha", "Location"),
+       ("Poloha se zjišťuje jen při používání aplikace a jen na hledání podniků v okolí. Místo ní můžeš zadat libovolnou adresu; našeptávání adres zajišťuje Apple MapKit.",
+        "Location is read only while you use the app and only to find nearby places. You can enter any address instead; address suggestions are provided by Apple MapKit.")),
+      (("Mapy a navigace", "Maps and directions"),
+       ("Mapu zobrazuje Apple MapKit. Tlačítka Trasa, Google, Web nebo Volat otevřou Mapy, Google Mapy, web podniku nebo telefon.",
+        "The map is provided by Apple MapKit. The Directions, Google, Website or Call buttons open Maps, Google Maps, the place's website or the phone.")),
+    ]),
 ]
 
 EXTERNAL = [("Kulturník", "https://vyrazime.luksafoto.cz/soukromi")]
