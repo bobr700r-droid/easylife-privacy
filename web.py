@@ -20,7 +20,7 @@ LANG_NAMES = {"cs": "Čeština", "en": "English", "sk": "Slovenčina", "de": "De
 # Appky, které na webu zatím nemají být (Kulturník zatím k veřejnosti nemíří).
 HIDDEN = {"kulturnik"}
 # Složka appky, když se nejmenuje jako id v katalogu.
-FOLDERS = {"kulturnik": "Vyrazime", "easylife": "EasyLifeHub", "cestovnicek": "Cestovnicek/apple"}
+FOLDERS = {"kulturnik": "Vyrazime", "easylife": "EasyForLifeHub", "cestovnicek": "Cestovnicek/apple"}
 CONTACT = "info@luksafoto.cz"  # kontakt podpory, dokud easyforlife.eu nemá vlastní e-mail
 SUPPORT = "podpora"           # /podpora/ = Support URL pro App Store
 FAMILY_COLORS = {"easylife": "#2563eb", "cestovani": "#2563eb", "foto": "#e8731c", "domacnost": "#0f9a62", "volny-cas": "#8b46d9",
