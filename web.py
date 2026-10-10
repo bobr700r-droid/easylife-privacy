@@ -92,6 +92,12 @@ T = {
   "made": ["Malé appky pro iPhone, vyrobené v Česku.", "Small iPhone apps, made in Czechia.", "Malé aplikácie pre iPhone, vyrobené v Česku.",
            "Kleine iPhone-Apps, gemacht in Tschechien.", "Pequeñas apps para iPhone, hechas en Chequia.", "Małe aplikacje na iPhone’a, stworzone w Czechach."],
   "lang": ["Jazyk", "Language", "Jazyk", "Sprache", "Idioma", "Język"],
+  "hero_hl": ["zjednoduší život", "life easier", "zjednodušia život", "leichter", "más fácil", "ułatwiają życie"],
+  "count": ["{n} appek pro iPhone a pořád přibývají", "{n} iPhone apps and counting", "{n} aplikácií pre iPhone a stále pribúdajú",
+            "{n} iPhone-Apps und es werden mehr", "{n} apps para iPhone y contando", "{n} aplikacji na iPhone’a i wciąż przybywa"],
+  "cta_apps": ["Prohlédnout appky", "Explore the apps", "Pozrieť aplikácie", "Apps entdecken", "Ver las apps", "Zobacz aplikacje"],
+  "wall": ["Jedna rodina. Žádné účty. Žádné reklamy.", "One family. No accounts. No ads.", "Jedna rodina. Žiadne účty. Žiadne reklamy.",
+           "Eine Familie. Keine Konten. Keine Werbung.", "Una familia. Sin cuentas. Sin anuncios.", "Jedna rodzina. Bez kont. Bez reklam."],
   "support": ["Podpora", "Support", "Podpora", "Support", "Soporte", "Wsparcie"],
   "support_title": ["Podpora a kontakt", "Support and contact", "Podpora a kontakt", "Support und Kontakt", "Soporte y contacto", "Wsparcie i kontakt"],
   "support_lead": ["Něco nefunguje, máš nápad nebo dotaz k některé appce EasyLife? Napiš nám, odpovídáme obvykle do pár dní.",
@@ -180,99 +186,207 @@ LOGO = ('<svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y=
         '<rect x="17" y="17" width="13" height="13" rx="6.5" fill="#8b46d9"/></svg>')
 
 CSS = """
-:root{--bg:#f7f6f2;--surface:#fff;--surface2:#efede7;--ink:#17191c;--muted:#5f6670;--line:#e2dfd7;--accent:#2563eb;--shadow:0 1px 2px rgb(20 20 30/.05),0 8px 24px -12px rgb(20 20 30/.18);
---font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,sans-serif;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#111214;--surface:#1b1c20;--surface2:#24252a;--ink:#eceef1;--muted:#a1a7b0;--line:#2e3036;--shadow:0 1px 2px rgb(0 0 0/.3),0 10px 30px -14px rgb(0 0 0/.6);color-scheme:dark}}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--font);-webkit-font-smoothing:antialiased}
+:root{--bg:#fbfaf6;--surface:#fff;--surface2:#f1efe9;--ink:#141518;--muted:#5c636d;--line:#e6e2d9;--shadow:0 2px 4px rgb(20 20 30/.05),0 18px 40px -18px rgb(20 20 30/.28);
+--font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--display:"Bricolage Grotesque",-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,sans-serif;
+--blue:#2563eb;--orange:#f0761f;--green:#10a36a;--purple:#8b46d9;--pink:#e8457a;--yellow:#f5b829;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0d0e11;--surface:#17181c;--surface2:#212228;--ink:#f1f2f4;--muted:#a3a9b3;--line:#2a2c33;--shadow:0 2px 4px rgb(0 0 0/.3),0 20px 44px -18px rgb(0 0 0/.7);color-scheme:dark}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}img{max-width:100%;display:block}
-.wrap{max-width:72rem;margin:0 auto;padding:0 20px}
-.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:12px;background:var(--surface);padding:8px 14px;border-radius:10px;z-index:9}
-.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 1.2rem/1 var(--display);letter-spacing:-.01em}
-.logo{width:30px;height:30px}
-.langs{display:flex;flex-wrap:wrap;gap:2px;font-size:.78rem;font-weight:600;letter-spacing:.04em}
-.langs a{padding:5px 8px;border-radius:8px;text-decoration:none;color:var(--muted)}
-.langs a:hover{color:var(--ink);background:var(--surface2)}.langs a[aria-current]{color:var(--ink);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:56px 0 72px}
-h1{font:800 clamp(2.3rem,5.6vw,3.9rem)/1.04 var(--display);letter-spacing:-.035em;margin:0 0 20px;text-wrap:balance}
-.lead{font-size:clamp(1.08rem,1.6vw,1.25rem);color:var(--muted);max-width:36rem;margin:0 0 26px}
-.pills{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
-.pills li{display:flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 10px;font-weight:600;font-size:.92rem}
-.pills .ico{width:17px;height:17px;color:#0f9a62}
-.collage{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:12px}
-.collage img,.collage span{width:100%;height:auto;aspect-ratio:1;border-radius:23%;box-shadow:var(--shadow)}
-.collage>*:nth-child(odd){transform:translateY(14px) rotate(-3deg)}.collage>*:nth-child(3n){transform:rotate(4deg)}
-section{padding:8px 0 48px}
-.sec-head{margin:0 0 22px}.sec-head h2{font:800 clamp(1.7rem,3.4vw,2.3rem)/1.1 var(--display);letter-spacing:-.025em;margin:0 0 6px}.sec-head p{margin:0;color:var(--muted)}
-.family{margin:0 0 36px}
-.fam-title{display:flex;align-items:center;gap:10px;font:700 1.2rem var(--display);margin:0 0 14px}
-.fam-title .ico{width:34px;height:34px;padding:7px;border-radius:10px;color:#fff;background:var(--fc)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
-.card{position:relative;display:flex;flex-direction:column;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow);transition:transform .15s ease}
-.card:hover{transform:translateY(-2px)}
-.card-top{display:flex;gap:14px;align-items:flex-start}
-.app-icon{flex:none;width:60px;height:60px;border-radius:23%;box-shadow:0 0 0 1px rgb(0 0 0/.06)}
-.mark{display:grid;place-items:center;color:#fff;font:800 1.5rem var(--display);background:linear-gradient(145deg,var(--c),color-mix(in srgb,var(--c) 70%,#000))}
-.card h3{font:700 1.1rem/1.25 var(--display);margin:2px 0 4px}.card h3 a{text-decoration:none}
-.card h3 a::after{content:"";position:absolute;inset:0;border-radius:20px}
-.card p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.45}
-.actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:auto}
-.btn{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:7px 16px;font-weight:700;font-size:.9rem;text-decoration:none;background:var(--c,var(--accent));color:#fff}
-.btn:hover{filter:brightness(1.08)}
-.chip{display:inline-flex;align-items:center;border-radius:999px;padding:6px 13px;font-weight:600;font-size:.85rem;background:var(--surface2);color:var(--muted)}
-.ghost{font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;padding:6px 6px}.ghost:hover{color:var(--ink);text-decoration:underline}
-.principles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.principle{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
-.principle .ico{width:40px;height:40px;padding:9px;border-radius:12px;background:var(--surface2)}
-.principle h3{font:700 1.05rem var(--display);margin:14px 0 6px}.principle p{margin:0;color:var(--muted);font-size:.95rem}
-footer{border-top:1px solid var(--line);margin-top:24px;padding:28px 0 44px;color:var(--muted);font-size:.9rem}
-footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px}footer p{margin:0 0 6px}footer a{color:var(--ink)}
-.back{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;margin:8px 0 0}.back:hover{color:var(--ink)}.back .ico{width:18px;height:18px}
-.detail{max-width:50rem;padding:28px 0 32px}
-.app-hero{display:flex;gap:24px;align-items:center;margin:0 0 30px}
-.app-hero .app-icon{width:118px;height:118px;box-shadow:var(--shadow)}.app-hero .mark{font-size:3rem}
-.app-hero h1{font-size:clamp(2.1rem,5vw,3.1rem);margin:0 0 6px}
-.app-hero .tag{font-size:1.15rem;color:var(--muted);margin:0 0 14px}
-.fam-chip{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:var(--c);margin:0 0 8px;text-decoration:none}.fam-chip .ico{width:16px;height:16px}
-.desc p{font-size:1.1rem;margin:0 0 14px}
-h2.sub{font:800 1.4rem var(--display);letter-spacing:-.015em;margin:34px 0 14px}
-.features{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
-.features li{display:flex;gap:10px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
-.features .ico{flex:none;width:22px;height:22px;padding:3px;border-radius:50%;background:var(--c);color:#fff;margin-top:1px}
-.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px}
-.shots img{flex:none;width:230px;height:auto;border-radius:22px;border:1px solid var(--line);scroll-snap-align:start}
-.links{display:grid;gap:10px}
-.link-row{position:relative;display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
-.link-row .app-icon{width:48px;height:48px}.link-row b{display:block}.link-row span{color:var(--muted);font-size:.95rem}
+.wrap{max-width:76rem;margin:0 auto;padding:0 20px;position:relative}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:12px;background:var(--surface);padding:8px 14px;border-radius:10px;z-index:99}
+/* hlavička */
+.top{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding:18px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1.35rem/1 var(--display);letter-spacing:-.02em}
+.logo{width:34px;height:34px;transition:transform .5s cubic-bezier(.3,1.6,.5,1)}.brand:hover .logo{transform:rotate(90deg)}
+.nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.nav>a{font-weight:700;font-size:.92rem;text-decoration:none;padding:7px 12px;border-radius:999px}.nav>a:hover{background:var(--surface2)}
+.langs{display:flex;gap:2px;font-size:.74rem;font-weight:700;letter-spacing:.04em;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px}
+.langs a{padding:5px 8px;border-radius:999px;text-decoration:none;color:var(--muted)}
+.langs a:hover{color:var(--ink)}.langs a[aria-current]{color:#fff;background:var(--ink)}
+@media (prefers-color-scheme:dark){.langs a[aria-current]{color:var(--bg)}}
+/* barevné skvrny v pozadí */
+.blobs{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.blobs i{position:absolute;width:46vmax;height:46vmax;border-radius:50%;filter:blur(70px);opacity:.32;animation:drift 22s ease-in-out infinite alternate}
+.blobs i:nth-child(1){background:var(--b1,var(--blue));left:-14vmax;top:-18vmax}
+.blobs i:nth-child(2){background:var(--b2,var(--orange));right:-16vmax;top:-6vmax;animation-delay:-7s;animation-duration:26s}
+.blobs i:nth-child(3){background:var(--b3,var(--purple));left:28%;bottom:-30vmax;animation-delay:-13s;animation-duration:30s}
+@media (prefers-color-scheme:dark){.blobs i{opacity:.22}}
+@keyframes drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(6vmax,4vmax) scale(1.12)}100%{transform:translate(-4vmax,7vmax) scale(.94)}}
+/* hero s létajícími ikonami */
+.hero{position:relative;min-height:min(94vh,900px);display:grid;place-items:center;margin-top:-76px;padding:120px 0 90px;overflow:hidden;isolation:isolate}
+.fly-layer{position:absolute;inset:80px 0 0;z-index:1}
+.fly{position:absolute;left:var(--x);top:var(--y);width:calc(var(--s) * var(--k,1));transform:translate3d(calc(var(--mx,0) * var(--d) * -46px),calc(var(--my,0) * var(--d) * -46px + var(--sy,0) * var(--d) * -.35px),0);will-change:transform}
+.pop{display:block;animation:pop .9s cubic-bezier(.2,1.5,.4,1) both;animation-delay:calc(var(--i) * 70ms + .1s)}
+.fly img,.fly .mark{width:100%;height:auto;aspect-ratio:1;border-radius:23%;box-shadow:var(--shadow);animation:bob var(--t,7s) ease-in-out var(--del,0s) infinite;transform:rotate(var(--r));transition:filter .2s}
+.fly a{display:block;border-radius:23%;transition:transform .35s cubic-bezier(.3,1.7,.5,1)}.fly a:hover{transform:scale(1.15) rotate(-6deg)}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-16px) rotate(calc(var(--r) + 5deg))}}
+@keyframes pop{0%{opacity:0;transform:scale(.2) rotate(-40deg)}100%{opacity:1;transform:none}}
+.hero-in{position:relative;z-index:2;text-align:center;max-width:52rem;pointer-events:none}.hero-in a,.hero-in li{pointer-events:auto}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;margin:0 0 22px;box-shadow:var(--shadow)}
+.kicker .dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 var(--green);animation:ping 2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgb(16 163 106/.6)}80%,100%{box-shadow:0 0 0 10px rgb(16 163 106/0)}}
+h1{font:800 clamp(2.6rem,7.4vw,6rem)/.98 var(--display);letter-spacing:-.045em;margin:0 0 22px;text-wrap:balance}
+.hl{background:linear-gradient(100deg,var(--blue),var(--purple),var(--pink),var(--orange),var(--green),var(--blue));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 9s linear infinite;padding-right:.04em}
+@keyframes shine{to{background-position:300% 0}}
+.lead{font-size:clamp(1.08rem,1.7vw,1.32rem);color:var(--muted);max-width:40rem;margin:0 auto 26px;text-wrap:pretty}
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:0;margin:0 0 30px;list-style:none}
+.pills li{display:flex;align-items:center;gap:8px;border-radius:999px;padding:9px 16px 9px 12px;font-weight:800;font-size:.95rem;color:#fff;background:var(--pc);box-shadow:0 10px 24px -12px var(--pc);transform:rotate(var(--pr));transition:transform .3s cubic-bezier(.3,1.7,.5,1)}
+.pills li:hover{transform:rotate(0) scale(1.06)}.pills .ico{width:18px;height:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:9px 18px;font-weight:800;font-size:.95rem;text-decoration:none;background:var(--c,var(--ink));color:#fff;transition:transform .25s cubic-bezier(.3,1.7,.5,1),box-shadow .25s}
+.btn:hover{transform:translateY(-2px) scale(1.03)}
+.btn.big{padding:15px 28px;font-size:1.08rem;background:var(--ink);color:var(--bg);box-shadow:0 14px 30px -14px rgb(0 0 0/.5)}
+.btn.big span{display:inline-block;animation:nudge 1.6s ease-in-out infinite}@keyframes nudge{50%{transform:translateY(4px)}}
+/* běžící pás */
+.mq-wrap{overflow:hidden;padding:30px 0 10px;margin:-30px 0 0}
+.marquee{position:relative;z-index:3;background:var(--ink);color:var(--bg);transform:rotate(-3deg);margin:20px -20px 60px;padding:16px 0;overflow:hidden;box-shadow:var(--shadow)}
+.marquee.two{transform:rotate(2.4deg);background:var(--yellow);color:#141518;margin-top:-70px;z-index:2}
+.mq{display:flex;width:max-content;animation:mq 46s linear infinite}.marquee.two .mq{animation-direction:reverse;animation-duration:54s}
+.marquee:hover .mq{animation-play-state:paused}
+.mq a{display:flex;align-items:center;gap:12px;padding:0 26px;text-decoration:none;font:800 clamp(1.3rem,2.6vw,2rem)/1 var(--display);letter-spacing:-.02em;white-space:nowrap}
+.mq a img,.mq a .mark{width:46px;height:46px;border-radius:23%;font-size:1.2rem}
+.mq a::after{content:"✦";margin-left:26px;opacity:.5;font-size:.8em}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sekce a rodiny */
+section{position:relative;padding:20px 0 70px}
+.sec-head{margin:0 0 28px}.sec-head h2{font:800 clamp(2.2rem,5.4vw,4.2rem)/1 var(--display);letter-spacing:-.04em;margin:0 0 10px}.sec-head p{margin:0;color:var(--muted);font-size:1.12rem}
+.family{margin:0 0 54px;scroll-margin-top:20px}
+.fam-title{display:flex;align-items:center;gap:14px;font:800 clamp(1.6rem,3.4vw,2.4rem)/1 var(--display);letter-spacing:-.03em;margin:0 0 18px}
+.fam-title .ico{width:52px;height:52px;padding:12px;border-radius:16px;color:#fff;background:var(--fc);transform:rotate(-8deg);box-shadow:0 12px 24px -12px var(--fc)}
+.fam-title small{font:800 .85rem var(--font);letter-spacing:0;background:var(--surface2);color:var(--muted);border-radius:999px;padding:4px 10px}
+/* bento dlaždice */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:212px;grid-auto-flow:dense;gap:16px}
+.tile{--lift:0px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:20px;border-radius:30px;overflow:hidden;isolation:isolate;
+background:linear-gradient(155deg,color-mix(in oklab,var(--c) 26%,var(--surface)),color-mix(in oklab,var(--c) 7%,var(--surface)) 70%);border:1px solid color-mix(in oklab,var(--c) 22%,var(--line));
+box-shadow:var(--shadow);transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--lift));transition:transform .25s ease,box-shadow .25s}
+.tile:hover{--lift:-6px}
+@media (prefers-color-scheme:dark){.tile{background:linear-gradient(155deg,color-mix(in oklab,var(--c) 40%,var(--surface)),color-mix(in oklab,var(--c) 12%,var(--surface)) 75%)}.tile .ghost-icon{opacity:.22}}
+.tile .app-icon{position:absolute;top:18px;left:18px;width:64px;height:64px;transition:transform .45s cubic-bezier(.3,1.7,.5,1)}
+.tile:hover .app-icon{transform:rotate(-10deg) scale(1.12)}
+.tile .ghost-icon{position:absolute;right:-18%;bottom:-22%;width:70%;max-width:340px;aspect-ratio:1;border-radius:23%;opacity:.16;transform:rotate(18deg);z-index:-1;filter:saturate(1.3);transition:transform .8s ease}
+.tile:hover .ghost-icon{transform:rotate(8deg) scale(1.06)}
+.tile h3{font:800 1.3rem/1.1 var(--display);letter-spacing:-.02em;margin:0}.tile h3 a{text-decoration:none}
+.tile h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.tile p{margin:0;color:var(--muted);font-size:.93rem;line-height:1.38;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tile .status{position:absolute;top:18px;right:18px}
+.tile .priv{position:relative;z-index:2;align-self:flex-start;font-size:.8rem;font-weight:700;color:var(--muted);text-decoration:none;margin-top:2px}.tile .priv:hover{color:var(--ink);text-decoration:underline}
+.t-big{grid-column:span 2;grid-row:span 2;padding:28px}
+.t-big .app-icon{width:132px;height:132px;top:28px;left:28px}
+.t-big h3{font-size:clamp(1.8rem,3vw,2.6rem)}.t-big p{font-size:1.08rem;-webkit-line-clamp:3}
+.t-wide{grid-column:span 2}.t-wide .ghost-icon{width:44%;right:-6%;bottom:-40%}
+.chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 11px;font-weight:800;font-size:.76rem;background:var(--surface);color:var(--ink);box-shadow:0 2px 8px -4px rgb(0 0 0/.3)}
+.chip.tf::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
+.chip.soon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--yellow)}
+.ghost{font-size:.9rem;font-weight:700;color:var(--muted);text-decoration:none;padding:6px 6px}.ghost:hover{color:var(--ink);text-decoration:underline}
+.app-icon{flex:none;border-radius:23%;box-shadow:0 6px 16px -8px rgb(0 0 0/.45)}
+.mark{display:grid;place-items:center;color:#fff;font:800 1.8rem var(--display);background:linear-gradient(145deg,var(--c),color-mix(in srgb,var(--c) 65%,#000))}
+.t-big .mark{font-size:3.6rem}
+/* principy jako samolepky */
+.stickers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.sticker{padding:26px 22px;border-radius:28px;color:#fff;background:var(--sc);transform:rotate(var(--sr));box-shadow:0 20px 40px -22px var(--sc);transition:transform .35s cubic-bezier(.3,1.7,.5,1)}
+.sticker:hover{transform:rotate(0) scale(1.03)}
+.sticker .ico{width:46px;height:46px;padding:10px;border-radius:14px;background:rgb(255 255 255/.2)}
+.sticker h3{font:800 1.45rem/1.1 var(--display);letter-spacing:-.02em;margin:16px 0 8px}.sticker p{margin:0;opacity:.92;font-size:.98rem}
+/* zeď ikon */
+.wall{position:relative;height:440px;overflow:hidden;border-radius:40px;margin:0 0 30px;background:#0d0e11;isolation:isolate}
+.wall-grid{position:absolute;left:50%;top:50%;width:170%;display:grid;grid-template-columns:repeat(12,1fr);gap:18px;transform:translate(-50%,-50%) rotate(-14deg);animation:wall 40s linear infinite}
+.wall-grid img,.wall-grid .mark{width:100%;height:auto;aspect-ratio:1;border-radius:23%;opacity:.9}
+@keyframes wall{from{transform:translate(-50%,-38%) rotate(-14deg)}to{transform:translate(-50%,-62%) rotate(-14deg)}}
+.wall::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgb(13 14 17/.82) 0%,rgb(13 14 17/.55) 45%,rgb(13 14 17/.1) 100%);z-index:1}
+.wall-text{position:absolute;inset:0;z-index:2;display:grid;place-items:center;text-align:center;padding:20px}
+.wall-text h2{font:800 clamp(2rem,5.6vw,4.4rem)/1 var(--display);letter-spacing:-.04em;color:#fff;margin:0;max-width:16ch;text-wrap:balance}
+/* odhalení při scrollu */
+.js .rv{opacity:0;transform:translateY(34px) scale(.98);transition:opacity .7s ease,transform .8s cubic-bezier(.2,1,.3,1);transition-delay:var(--rd,0s)}
+.js .rv.in{opacity:1;transform:none}
+.js .tile.rv.in{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--lift))}
+.js .sticker.rv.in{transform:rotate(var(--sr))}.js .sticker.rv.in:hover{transform:rotate(0) scale(1.03)}
+/* patička */
+footer{position:relative;margin-top:30px;padding:40px 0 50px;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 30px}footer p{margin:0 0 6px}footer a{color:var(--ink);font-weight:700}
+footer .brand{margin:0 0 10px}
+/* detail appky */
+.app-top{position:relative;margin-top:-76px;padding:110px 0 70px;overflow:hidden;isolation:isolate}
+.app-top .blobs i{opacity:.4}.app-top .blobs i:nth-child(1),.app-top .blobs i:nth-child(3){background:var(--c)}
+.back{position:relative;z-index:3;display:inline-flex;align-items:center;gap:6px;color:var(--ink);text-decoration:none;font-weight:800;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 10px;margin:0 0 28px}
+.back:hover{transform:translateX(-3px)}.back .ico{width:18px;height:18px}
+.app-head{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.app-head h1{font-size:clamp(3rem,9vw,7rem);margin:6px 0 12px}
+.app-head .tag{font-size:clamp(1.15rem,2vw,1.5rem);color:var(--muted);margin:0 0 22px;max-width:30rem}
+.hero-icon{justify-self:center;width:min(300px,70vw)}
+.hero-icon .app-icon{width:100%;height:auto;aspect-ratio:1;border-radius:23%;box-shadow:0 40px 80px -30px var(--c),var(--shadow);animation:bob 6s ease-in-out infinite;--r:-6deg}
+.hero-icon .mark{font-size:7rem}
+.fam-chip{display:inline-flex;align-items:center;gap:7px;font-size:.9rem;font-weight:800;color:#fff;background:var(--fc);border-radius:999px;padding:6px 13px 6px 10px;text-decoration:none}.fam-chip .ico{width:17px;height:17px}
+.actions{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.detail{max-width:56rem;padding:10px 0 30px}
+.desc p{font:600 clamp(1.25rem,2.3vw,1.6rem)/1.4 var(--display);letter-spacing:-.01em;margin:0 0 18px;text-wrap:pretty}
+.desc p+p{font:400 1.1rem/1.55 var(--font);color:var(--muted);letter-spacing:0}
+h2.sub{font:800 clamp(1.7rem,3.4vw,2.5rem)/1.05 var(--display);letter-spacing:-.035em;margin:52px 0 20px}
+.features{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;counter-reset:f}
+.features li{grid-column:span 2;position:relative;counter-increment:f;padding:22px 20px 20px;border-radius:24px;font-weight:700;font-size:1.05rem;line-height:1.35;
+background:linear-gradient(160deg,color-mix(in oklab,var(--c) 20%,var(--surface)),var(--surface));border:1px solid color-mix(in oklab,var(--c) 20%,var(--line));box-shadow:var(--shadow)}
+.features li:nth-child(1),.features li:nth-child(2){grid-column:span 3}
+.features li::before{content:counter(f,decimal-leading-zero);display:block;font:800 2.2rem/1 var(--display);color:var(--c);margin:0 0 12px;letter-spacing:-.04em}
+.shots{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 4px 26px}
+.shots img{flex:none;width:250px;height:auto;border-radius:34px;border:7px solid var(--ink);scroll-snap-align:start;box-shadow:var(--shadow)}
+.shots img:nth-child(odd){transform:rotate(-2deg)}.shots img:nth-child(even){transform:rotate(2deg) translateY(12px)}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.link-row{position:relative;display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:14px 16px;box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.3,1.7,.5,1)}
+.link-row:hover{transform:translateY(-3px) rotate(-.6deg)}
+.link-row .app-icon{width:54px;height:54px}.link-row b{display:block;font:800 1.1rem var(--display)}.link-row span{color:var(--muted);font-size:.95rem}
 .link-row a{text-decoration:none}.link-row a::after{content:"";position:absolute;inset:0}
-.note{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:.95rem;margin:16px 0 0}.note .ico{width:18px;height:18px;flex:none}
-.note a{color:var(--ink)}
-.faq{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 16px;margin:0 0 10px}
-.faq summary{cursor:pointer;font-weight:700;padding:14px 0;list-style-position:outside}.faq p{margin:0 0 14px;color:var(--muted)}
-@media (max-width:820px){.hero{grid-template-columns:1fr;gap:28px;padding:28px 0 44px}.collage{grid-template-columns:repeat(6,1fr);gap:10px;padding:0}}
-@media (max-width:520px){.top{flex-direction:column;align-items:flex-start;gap:10px}.app-hero{flex-direction:column;align-items:flex-start;gap:16px}.app-hero .app-icon{width:92px;height:92px}.collage{grid-template-columns:repeat(4,1fr)}.collage>*:nth-child(n+9){display:none}}
-@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+.note{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:.95rem;margin:18px 0 0}.note .ico{width:18px;height:18px;flex:none}
+.note a{color:var(--ink);font-weight:700}
+.faq{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:0 20px;margin:0 0 12px;box-shadow:var(--shadow)}
+.faq summary{cursor:pointer;font:800 1.08rem var(--display);padding:18px 0}.faq p{margin:0 0 18px;color:var(--muted)}
+.page-top{position:relative;margin-top:-76px;padding:120px 0 30px;overflow:hidden;isolation:isolate}.page-top h1{position:relative;z-index:2}.page-top .lead{position:relative;z-index:2;margin-left:0}
+.ico{flex:none}.chip .short{display:none}
+html{overflow-x:hidden}
+.fly-layer.small .fly{--k:.8}
+.hero::after,.app-top::after,.page-top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(rgb(0 0 0/0),var(--bg));z-index:0;pointer-events:none}
+@media (max-width:980px){.bento{grid-template-columns:repeat(2,1fr)}.stickers{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:820px){.app-head{grid-template-columns:1fr}.hero-icon{grid-row:1;justify-self:start;width:150px}.features li,.features li:nth-child(-n+2){grid-column:span 6}
+.fly{--k:.56}.fly.side,.fly-layer.small{display:none}.hero{padding:210px 0 170px;min-height:0}.wall{height:340px}}
+@media (max-width:560px){.bento{grid-auto-rows:196px;gap:12px}.t-big{grid-row:span 1;padding:18px}.t-big .app-icon{width:72px;height:72px;top:16px;left:16px}.t-big h3{font-size:1.6rem}.t-big p{-webkit-line-clamp:2;font-size:.95rem}
+.tile:not(.t-big) .chip .long{display:none}.tile:not(.t-big) .chip .short{display:inline}.tile{padding:16px;border-radius:24px}
+.tile .app-icon{width:52px;height:52px;top:14px;left:14px}.tile .status{top:14px;right:12px}.tile h3{font-size:1.1rem}.tile p{font-size:.86rem}
+.stickers{grid-template-columns:1fr}.nav>a{display:none}.marquee{margin-bottom:56px}.marquee.two{margin-top:-80px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 """
 
 def head_script(lang, slug):
     """Výběr jazyka: uložená volba, jinak jazyk prohlížeče. Přesměrovává jen z výchozí (české) verze."""
-    if lang != "cs":
-        return ""
-    return ("<script>(function(){var L=" + json.dumps(LANGS) + ",s,p=" + json.dumps(slug or "") + ";"
-            "try{s=localStorage.getItem('lang')}catch(e){}"
-            "if(!s){var n=navigator.languages||[navigator.language||'cs'];s='en';"
-            "for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(L.indexOf(c)>=0){s=c;break}}}"
-            "if(s!=='cs'&&L.indexOf(s)>0)location.replace((p?'../':'')+s+'/'+(p?p+'/':'')+location.hash)})()</script>")
+    js = "document.documentElement.className+=' js';"
+    if lang == "cs":
+        js += ("(function(){var L=" + json.dumps(LANGS) + ",s,p=" + json.dumps(slug or "") + ";"
+               "try{s=localStorage.getItem('lang')}catch(e){}"
+               "if(!s){var n=navigator.languages||[navigator.language||'cs'];s='en';"
+               "for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(L.indexOf(c)>=0){s=c;break}}}"
+               "if(s!=='cs'&&L.indexOf(s)>0)location.replace((p?'../':'')+s+'/'+(p?p+'/':'')+location.hash)})();")
+    return f"<script>{js}</script>"
 
-FOOT_SCRIPT = ("<script>document.querySelectorAll('.langs a').forEach(function(a){a.addEventListener('click',function(){"
-               "try{localStorage.setItem('lang',a.hreflang)}catch(e){}})})</script>")
+FOOT_SCRIPT = """<script>
+document.querySelectorAll('.langs a').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('lang',a.hreflang)}catch(e){}})});
+(function(){
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});els.forEach(function(el){io.observe(el)})}
+else els.forEach(function(el){el.classList.add('in')});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var h=document.querySelector('[data-par]');
+if(h){var raf=0,mx=0,my=0,tick=function(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;h.style.setProperty('--mx',mx.toFixed(3));h.style.setProperty('--my',my.toFixed(3));h.style.setProperty('--sy',Math.min(scrollY,1400))})};
+addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;tick()},{passive:true});addEventListener('scroll',tick,{passive:true})}
+document.querySelectorAll('.tile').forEach(function(t){t.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;var r=t.getBoundingClientRect();
+t.style.setProperty('--rx',((e.clientY-r.top)/r.height-.5)*-7+'deg');t.style.setProperty('--ry',((e.clientX-r.left)/r.width-.5)*7+'deg')});
+t.addEventListener('pointerleave',function(){t.style.removeProperty('--rx');t.style.removeProperty('--ry')})})
+})();
+</script>"""
 
 def page(lang, slug, title, desc, body, operator, relative=True):
     alts = "".join(f'<link rel="alternate" hreflang="{l}" href="{BASE}{url(l, slug)}">' for l in LANGS)
     alts += f'<link rel="alternate" hreflang="x-default" href="{BASE}{url("cs", slug)}">'
     langs = "".join(f'<a href="{url(l, slug)}" hreflang="{l}" lang="{l}" title="{LANG_NAMES[l]}"'
                     f'{" aria-current=\"true\"" if l == lang else ""}>{l.upper()}</a>' for l in LANGS)
+    pol = f'/soukromi.html{"" if lang in ("cs", "sk") else "#en"}'
     doc = f"""<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 {head_script(lang, slug)}<title>{esc(title)}</title>
@@ -284,14 +398,18 @@ def page(lang, slug, title, desc, body, operator, relative=True):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.png" sizes="64x64" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfaf6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0d0e11" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;display=swap">
 <link rel="stylesheet" href="/site.css"></head>
 <body><a class="skip" href="#main">{t("skip", lang)}</a>
 <div class="wrap"><header class="top"><a class="brand" href="{url(lang)}">{LOGO}EasyLife</a>
-<nav class="langs" aria-label="{t("lang", lang)}">{langs}</nav></header>
+<nav class="nav"><a href="{url(lang)}#apps">{t("apps", lang)}</a><a href="{url(lang, SUPPORT)}">{t("support", lang)}</a>
+<span class="langs" aria-label="{t("lang", lang)}">{langs}</span></nav></header></div>
 <main id="main">{body}</main>
-<footer><div class="row"><div><p><b>EasyLife</b> · {t("made", lang)}</p><p>{t("operator", lang)}: {esc(operator[0 if lang in ("cs", "sk") else 1])}</p></div>
-<p><a href="{url(lang, SUPPORT)}">{t("support", lang)}</a> · <a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></p></div></footer></div>
+<footer><div class="wrap row"><div><a class="brand" href="{url(lang)}">{LOGO}EasyLife</a><p>{t("made", lang)}</p>
+<p>{t("operator", lang)}: {esc(operator[0 if lang in ("cs", "sk") else 1])}</p></div>
+<p><a href="{url(lang, SUPPORT)}">{t("support", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a></p></div></footer>
 {FOOT_SCRIPT}</body></html>
 """
     # Relativní odkazy, aby web fungoval i na bobr700r-droid.github.io/easylife-privacy/ (než začne platit doména).
@@ -299,6 +417,15 @@ def page(lang, slug, title, desc, body, operator, relative=True):
         r = "../" * ((lang != "cs") + (slug is not None)) or "./"
         doc = doc.replace('href="/', f'href="{r}').replace('src="/', f'src="{r}')
     return doc
+
+# Rozmístění létajících ikon v hero: x, y, velikost, natočení, hloubka (parallax), side = na mobilu skrýt
+FLY = [(3, 9, 128, -12, 1.4, 0), (79, 7, 150, 10, 1.6, 0), (15, 60, 92, 10, .8, 1), (21, 80, 118, -6, 1.2, 0),
+       (88, 40, 96, -14, .9, 1), (72, 68, 128, 8, 1.3, 1), (88, 83, 76, -4, .6, 0), (30, 3, 64, 14, .5, 0),
+       (62, 2, 78, -10, .7, 0), (6, 86, 62, 12, .4, 0), (56, 87, 68, -8, .6, 0), (39, 91, 54, 6, .4, 0),
+       (95, 18, 56, -6, .4, 1), (2, 38, 70, 6, .5, 1), (46, 0, 46, -4, .3, 0)]
+# Na detailu appky jen kolem velké ikony vpravo.
+FLY_DETAIL = [(60, 6, 96, -12, 1.2, 1), (92, 12, 80, 10, 1.4, 1), (56, 66, 84, 8, .9, 1), (91, 70, 104, -8, 1.3, 1),
+              (76, 86, 62, 12, .6, 1), (74, -4, 58, -6, .5, 1)]
 
 class Site:
     def __init__(self, out, privacy_apps, external, operator):
@@ -338,7 +465,7 @@ class Site:
         for a in self.apps:
             src, dst = self.icon_source(a["id"]), d / f"{a['id']}.webp"
             if src and (not dst.exists() or src.stat().st_mtime > dst.stat().st_mtime):
-                subprocess.run(["sips", "-Z", "240", str(src), "--out", str(tmp)], check=True, capture_output=True)
+                subprocess.run(["sips", "-Z", "440", str(src), "--out", str(tmp)], check=True, capture_output=True)
                 subprocess.run(["cwebp", "-quiet", "-q", "86", str(tmp), "-o", str(dst)], check=True)
         tmp.unlink(missing_ok=True)
 
@@ -386,44 +513,92 @@ class Site:
             href += "#en"
         return f'<a class="{cls}" href="{href}">{t("privacy", lang)}</a>'
 
-    def card(self, a, lang):
-        return (f'<article class="card"><div class="card-top">{self.app_icon(a)}<div><h3><a href="{url(lang, a["id"])}">{esc(a["name"])}</a></h3>'
-                f'<p>{esc(a["tagline"][lang])}</p></div></div><div class="actions">{self.cta(a, lang)}{self.privacy_link(a, lang)}</div></article>')
+    def has_icon(self, a):
+        return (self.out / "icons" / f"{a['id']}.webp").exists()
+
+    def icon_first(self):
+        return [a for a in self.apps if self.has_icon(a)] + [a for a in self.apps if not self.has_icon(a)]
+
+    def status(self, a, lang):
+        if a.get("store"):
+            return f'<a class="btn" style="--c:{self.color(a)}" href="{esc(a["store"])}">{t("get", lang)}</a>'
+        tf = a["site"].get("status") == "testflight"
+        return (f'<span class="chip {"tf" if tf else "soon"}"><span class="long">{t("testflight" if tf else "soon", lang)}</span>'
+                f'<span class="short">{"Beta" if tf else t("soon", lang)}</span></span>')
+
+    def tile(self, a, lang, size, k):
+        big = '<img class="ghost-icon" src="/icons/{}.webp" alt="" loading="lazy">'.format(a["id"]) if self.has_icon(a) and size != "t-n" else ""
+        return (f'<article class="tile {size} rv" style="--c:{self.color(a)};--rd:{k * 60}ms">{big}{self.app_icon(a, 132 if size == "t-big" else 64)}'
+                f'<div class="status">{self.status(a, lang)}</div>'
+                f'<h3><a href="{url(lang, a["id"])}">{esc(a["name"])}</a></h3><p>{esc(a["tagline"][lang])}</p>{self.privacy_link(a, lang, "priv")}</article>')
+
+    def bento(self, apps, lang, featured=True):
+        """Velikosti dlaždic tak, aby 4sloupcová mřížka vyšla bez děr: první velká, zbytek doplnit širokými."""
+        sizes = ["t-big" if featured and i == 0 else "t-n" for i in range(len(apps))]
+        need = -sum({"t-big": 4, "t-wide": 2, "t-n": 1}[s] for s in sizes) % 4
+        normals = [i for i, s in enumerate(sizes) if s == "t-n"]
+        if need == 3 and normals:
+            sizes[normals[-1]] = "t-big"
+        else:
+            for i in normals[::-1][:need]:
+                sizes[i] = "t-wide"
+        return '<div class="bento">' + "".join(self.tile(a, lang, s, k) for k, (a, s) in enumerate(zip(apps, sizes))) + "</div>"
 
     def family_apps(self, fid):
         return [a for a in self.apps if a["family"] == fid]
 
+    def fly_icons(self, apps, layout=FLY):
+        out = ""
+        for i, (a, (x, y, s, r, d, side)) in enumerate(zip(apps, layout)):
+            st = f"--x:{x}%;--y:{y}%;--s:{s}px;--r:{r}deg;--d:{d};--t:{6 + (i * 7) % 5}s;--del:-{(i * 13) % 7}s;--i:{i}"
+            out += (f'<span class="fly{" side" if side else ""}" style="{st}"><span class="pop"><a href="{{u}}{a["id"]}/" tabindex="-1" title="{esc(a["name"])}">'
+                    f'{self.app_icon(a, s).replace(" loading=\"lazy\"", "")}</a></span></span>')
+        return out
+
+    def marquee(self, apps, lang, cls=""):
+        items = "".join(f'<a href="{url(lang, a["id"])}" tabindex="-1">{self.app_icon(a, 46)}{esc(a["name"])}</a>' for a in apps)
+        return f'<div class="marquee {cls}" aria-hidden="true"><div class="mq">{items}{items}</div></div>'
+
     # --- stránky ---
     def home(self, lang):
         i = LANGS.index(lang)
-        checks = [("user-x", 0), ("eye-off", 1), ("lock", 2)]
-        pills = "".join(f'<li>{icon(n)}{t("pills", lang)[k]}</li>' for n, k in checks)
-        with_icon = [a for a in self.apps if (self.out / "icons" / f"{a['id']}.webp").exists()]
-        collage = "".join(self.app_icon(a, 96).replace(' loading="lazy"', "") for a in (with_icon + [a for a in self.apps if a not in with_icon])[:12])
+        pc = [("user-x", "var(--blue)", "-3deg"), ("eye-off", "var(--pink)", "2deg"), ("lock", "var(--green)", "-1.5deg")]
+        pills = "".join(f'<li style="--pc:{c};--pr:{r}">{icon(n)}{t("pills", lang)[k]}</li>' for k, (n, c, r) in enumerate(pc))
+        h = t("hero", lang).replace(t("hero_hl", lang), f'<span class="hl">{t("hero_hl", lang)}</span>')
+        fly = self.fly_icons(self.icon_first()).replace("{u}", url(lang))
         fams = ""
         for fid, f in self.families.items():
             apps = self.family_apps(fid)
             if not apps:
                 continue
-            fams += (f'<div class="family" id="{fid}"><h3 class="fam-title" style="--fc:{FAMILY_COLORS.get(fid, "#555")}">{icon(fid)}{esc(f["name"][lang])}</h3>'
-                     f'<div class="grid">{"".join(self.card(a, lang) for a in apps)}</div></div>')
-        prin = "".join(f'<div class="principle">{icon(n)}<h3>{esc(h)}</h3><p>{esc(p)}</p></div>'
-                       for n, (h, p) in zip(("user-x", "eye-off", "lock", "link"), T["principles"][i]))
-        body = (f'<div class="hero"><div><h1>{t("hero", lang)}</h1><p class="lead">{t("lead", lang)}</p><ul class="pills">{pills}</ul></div>'
-                f'<div class="collage" aria-hidden="true">{collage}</div></div>'
-                f'<section id="apps"><div class="sec-head"><h2>{t("apps", lang)}</h2><p>{t("apps_lead", lang)}</p></div>{fams}</section>'
-                f'<section><div class="sec-head"><h2>{t("how", lang)}</h2></div><div class="principles">{prin}</div></section>')
+            fams += (f'<div class="family" id="{fid}"><h3 class="fam-title rv" style="--fc:{FAMILY_COLORS.get(fid, "#555")}">{icon(fid)}{esc(f["name"][lang])}<small>{len(apps)}</small></h3>'
+                     f'{self.bento(apps, lang)}</div>')
+        sc = [("user-x", "var(--blue)", "-2deg"), ("eye-off", "var(--pink)", "1.5deg"), ("lock", "var(--green)", "-1deg"), ("link", "var(--orange)", "2deg")]
+        prin = "".join(f'<div class="sticker rv" style="--sc:{c};--sr:{r};--rd:{k * 90}ms">{icon(n)}<h3>{esc(hd)}</h3><p>{esc(p)}</p></div>'
+                       for k, ((n, c, r), (hd, p)) in enumerate(zip(sc, T["principles"][i])))
+        order = self.icon_first()
+        wall = "".join(self.app_icon(a, 120) for a in (order * 7)[:96])
+        body = (f'<section class="hero" data-par><div class="blobs"><i></i><i></i><i></i></div><div class="fly-layer" aria-hidden="true">{fly}</div>'
+                f'<div class="wrap hero-in"><p class="kicker"><span class="dot"></span>{t("count", lang).format(n=len(self.apps))}</p>'
+                f'<h1>{h}</h1><p class="lead">{t("lead", lang)}</p><ul class="pills">{pills}</ul>'
+                f'<a class="btn big" href="#apps">{t("cta_apps", lang)} <span>↓</span></a></div></section>'
+                + '<div class="mq-wrap">' + self.marquee(order, lang) + self.marquee(order[::-1], lang, "two") + "</div>" +
+                f'<section id="apps"><div class="wrap"><div class="sec-head rv"><h2>{t("apps", lang)}</h2><p>{t("apps_lead", lang)}</p></div>{fams}</div></section>'
+                f'<section><div class="wrap"><div class="sec-head rv"><h2>{t("how", lang)}</h2></div><div class="stickers">{prin}</div></div></section>'
+                f'<section><div class="wrap"><div class="wall rv"><div class="wall-grid" aria-hidden="true">{wall}</div>'
+                f'<div class="wall-text"><h2>{t("wall", lang)}</h2></div></div></div></section>')
         return page(lang, None, t("title", lang), t("lead", lang), body, self.operator)
 
     def support(self, lang):
         i = LANGS.index(lang)
         mail = f"mailto:{CONTACT}?subject=EasyLife"
-        faq = "".join(f'<details class="faq"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in T["faq"][i])
-        body = (f'<article class="detail"><h1>{t("support_title", lang)}</h1><p class="lead">{t("support_lead", lang)}</p>'
-                f'<p class="actions"><a class="btn" href="{mail}">{t("support_mail", lang)}</a><a class="ghost" href="{mail}">{CONTACT}</a></p>'
-                f'<p class="note">{icon("check")}<span>{t("support_hint", lang)}</span></p>'
-                f'<h2 class="sub">{t("faq_title", lang)}</h2>{faq}'
-                f'<p class="note">{icon("shield")}<span><a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></span></p></article>')
+        faq = "".join(f'<details class="faq rv"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in T["faq"][i])
+        body = (f'<section class="page-top"><div class="blobs"><i></i><i></i><i></i></div><div class="wrap"><div class="detail">'
+                f'<h1>{t("support_title", lang)}</h1><p class="lead">{t("support_lead", lang)}</p>'
+                f'<p class="actions"><a class="btn big" href="{mail}">{t("support_mail", lang)} <span>→</span></a><a class="ghost" href="{mail}">{CONTACT}</a></p>'
+                f'<p class="note">{icon("check")}<span>{t("support_hint", lang)}</span></p></div></div></section>'
+                f'<div class="wrap"><div class="detail"><h2 class="sub">{t("faq_title", lang)}</h2>{faq}'
+                f'<p class="note">{icon("shield")}<span><a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></span></p></div></div>')
         return page(lang, SUPPORT, f'{t("support_title", lang)} | EasyLife', t("support_lead", lang), body, self.operator)
 
     def detail(self, a, lang):
@@ -432,33 +607,38 @@ class Site:
         desc = "".join(f"<p>{esc(p)}</p>" for p in (s.get("description", {}).get(lang) or []))
         feats = s.get("features", {}).get(lang) or []
         web = f'<a class="ghost" href="{esc(s["web"])}">{esc(s["web"].split("//")[-1].rstrip("/"))} ↗</a>' if s.get("web") else ""
-        body = f'<a class="back" href="{url(lang)}#{a["family"]}">{icon("arrow-left")}{t("back", lang)}</a><article class="detail" style="--c:{c}">'
-        body += (f'<div class="app-hero">{self.app_icon(a, 118).replace(" loading=\"lazy\"", "")}<div>'
-                 f'<a class="fam-chip" style="--c:{fc}" href="{url(lang)}#{a["family"]}">{icon(a["family"])}{esc(fam["name"][lang])}</a>'
-                 f'<h1>{esc(a["name"])}</h1><p class="tag">{esc(a["tagline"][lang])}</p><div class="actions">{self.cta(a, lang)}{web}</div></div></div>')
-        body += f'<div class="desc">{desc}</div>'
-        if feats:
-            body += f'<h2 class="sub">{t("features", lang)}</h2><ul class="features">' + "".join(f"<li>{icon('check')}<span>{esc(x)}</span></li>" for x in feats) + "</ul>"
-        shots = a.get("shots") or []
-        if shots:
-            body += f'<h2 class="sub">{t("shots", lang)}</h2><div class="shots">' + "".join(
-                f'<img src="/shots/{a["id"]}/{esc(x)}" alt="" loading="lazy" width="230" height="500">' for x in shots) + "</div>"
-        links = [(self.by_id[l["app"]], l["text"][lang]) for l in s.get("links", []) if l["app"] in self.by_id]
-        if links:
-            body += f'<h2 class="sub">{t("works_with", lang)}</h2><div class="links">' + "".join(
-                f'<div class="link-row">{self.app_icon(o, 48)}<div><a href="{url(lang, o["id"])}"><b>{esc(o["name"])}</b></a><span>{esc(txt)}</span></div></div>'
-                for o, txt in links) + "</div>"
+        others = [o for o in self.family_apps(a["family"]) if o["id"] != a["id"]]
+        flyers = [o for o in others + [o for o in self.icon_first() if o not in others and o is not a] if self.has_icon(o)]
+        fly = self.fly_icons(flyers[:6], FLY_DETAIL).replace("{u}", "/" if lang == "cs" else f"/{lang}/")
         p = self.privacy_link(a, lang, "")
         note = (f'{icon("shield")}<span>{p.replace(">" + t("privacy", lang) + "<", ">" + t("policy", lang) + t("policy_lang", lang) + "<")}</span>'
                 if p else f'{icon("shield")}<span>{t("policy_soon", lang)}</span>')
+        body = (f'<section class="app-top" style="--c:{c}" data-par><div class="blobs"><i></i><i></i><i></i></div>'
+                f'<div class="fly-layer small" aria-hidden="true">{fly}</div><div class="wrap">'
+                f'<a class="back" href="{url(lang)}#{a["family"]}">{icon("arrow-left")}{t("back", lang)}</a>'
+                f'<div class="app-head"><div><a class="fam-chip" style="--fc:{fc}" href="{url(lang)}#{a["family"]}">{icon(a["family"])}{esc(fam["name"][lang])}</a>'
+                f'<h1>{esc(a["name"])}</h1><p class="tag">{esc(a["tagline"][lang])}</p><div class="actions">{self.status(a, lang)}{web}</div></div>'
+                f'<div class="hero-icon">{self.app_icon(a, 300).replace(" loading=\"lazy\"", "")}</div></div></div></section>')
+        body += f'<div class="wrap" style="--c:{c}"><article class="detail"><div class="desc rv">{desc}</div>'
+        if feats:
+            body += f'<h2 class="sub rv">{t("features", lang)}</h2><ul class="features">' + "".join(
+                f'<li class="rv" style="--rd:{k * 70}ms">{esc(x)}</li>' for k, x in enumerate(feats)) + "</ul>"
+        shots = a.get("shots") or []
+        if shots:
+            body += f'<h2 class="sub rv">{t("shots", lang)}</h2><div class="shots">' + "".join(
+                f'<img src="/shots/{a["id"]}/{esc(x)}" alt="" loading="lazy" width="250" height="544">' for x in shots) + "</div>"
+        links = [(self.by_id[l["app"]], l["text"][lang]) for l in s.get("links", []) if l["app"] in self.by_id]
+        if links:
+            body += f'<h2 class="sub rv">{t("works_with", lang)}</h2><div class="links">' + "".join(
+                f'<div class="link-row rv">{self.app_icon(o, 54)}<div><a href="{url(lang, o["id"])}"><b>{esc(o["name"])}</b></a><span>{esc(txt)}</span></div></div>'
+                for o, txt in links) + "</div>"
         body += f'<p class="note">{note}</p>'
         if not a.get("store"):
             body += f'<p class="note">{icon("check")}<span>{t("tf_note" if s.get("status") == "testflight" else "dev_note", lang)}</span></p>'
-        body += "</article>"
-        others = [o for o in self.family_apps(a["family"]) if o["id"] != a["id"]]
+        body += "</article></div>"
         if others:
-            body += (f'<section><div class="sec-head"><h2>{t("family_more", lang).format(f=esc(fam["name"][lang]))}</h2></div>'
-                     f'<div class="grid">{"".join(self.card(o, lang) for o in others)}</div></section>')
+            body += (f'<section><div class="wrap"><div class="sec-head rv"><h2>{t("family_more", lang).format(f=esc(fam["name"][lang]))}</h2></div>'
+                     f'{self.bento(others, lang, featured=len(others) > 2)}</div></section>')
         title = f'{a["name"]} – {a["tagline"][lang].rstrip(".")} | EasyLife'
         return page(lang, a["id"], title, a["tagline"][lang], body, self.operator)
 
