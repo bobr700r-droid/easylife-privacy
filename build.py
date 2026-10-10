@@ -317,6 +317,28 @@ APPS = [
        ("Aplikace nenahrazuje veterináře. Navržené intervaly a checklist pro cestování jsou jen orientační.",
         "The app does not replace a vet. Suggested intervals and the travel checklist are for guidance only.")),
     ]),
+  dict(slug="darky", name="Dárky", mark="🎁", color="#e8445a",
+    tagline=("Narozeniny, jmeniny a nápady na dárky: připomínky, rozpočet, Vánoce a seznamy přání.",
+             "Birthdays, name days and gift ideas: reminders, budget, Christmas and wish lists."),
+    summary=("Dárky nemají vlastní server, účty, reklamy ani analytiku. Lidé, oslavy, nápady a rozpočet jsou jen v tvém zařízení a v tvém soukromém iCloudu. Seznam přání vidí jen ti, komu pošleš odkaz. My k datům přístup nemáme.",
+             "Dárky has no server of its own, no accounts, ads or analytics. People, occasions, gift ideas and budgets live only on your device and in your private iCloud. A wish list is visible only to people you send the link to. We have no access to the data."),
+    sections=[
+      (("Co aplikace ukládá", "What the app stores"),
+       ("Lidi, které obdarováváš (jméno, oslovení, vztah, narozeniny, jmeniny, výročí, velikosti oblečení, bot a prstenu, co mají rádi, co nechtějí, alergie, poznámky, volitelně fotka), nápady a dárky (název, odkaz, obchod, cena, fotka, stav, příležitost), rozpočty a tvé seznamy přání. Pro widget a rozšíření Sdílet se v zařízení ukládá kopie nejbližších oslav a jmen lidí.",
+        "People you give gifts to (name, nickname, relationship, birthday, name day, anniversaries, clothing, shoe and ring sizes, likes, dislikes, allergies, notes, optionally a photo), gift ideas and gifts (title, link, shop, price, photo, status, occasion), budgets and your wish lists. A copy of upcoming occasions and people’s names is stored on the device for the widget and the Share extension.")),
+      (("Kontakty", "Contacts"),
+       ("Lidi můžeš přidat z Kontaktů. Při výběru konkrétních kontaktů aplikace nepotřebuje přístup k celému adresáři; hromadný import „všichni s narozeninami“ žádá o oprávnění. Načte se jen jméno, přezdívka, narozeniny, výročí a malá fotka – zpracování probíhá jen v zařízení a nic se neposílá nám ani nikomu dalšímu.",
+        "You can add people from Contacts. When you pick specific contacts, the app does not need access to your whole address book; the bulk import “everyone with a birthday” asks for permission. Only the name, nickname, birthday, anniversaries and a small photo are read; processing happens on-device and nothing is sent to us or anyone else.")),
+      (("iCloud a sdílené seznamy přání", "iCloud and shared wish lists"),
+       ("Pokud je zapnutá synchronizace, data se ukládají do tvého soukromého iCloudu (Apple CloudKit). Když seznam přání sdílíš odkazem, každý, kdo odkaz má, vidí jeho položky (název, poznámku, odkaz, cenu, obrázek) a může si přání zarezervovat; ostatní pak vidí jméno, které si rezervující zadal. Vlastník seznamu rezervace v aplikaci nevidí. Sdílení můžeš kdykoli zastavit. Synchronizaci lze vypnout; aplikace pak funguje jen v zařízení.",
+        "If sync is on, data is stored in your private iCloud (Apple CloudKit). When you share a wish list by link, anyone with the link can see its items (title, note, link, price, picture) and reserve a wish; others then see the name the person entered. The list owner does not see reservations in the app. You can stop sharing at any time. Sync can be turned off so the app works on-device only.")),
+      (("Odkazy na e-shopy", "Shop links"),
+       ("Když k nápadu vložíš odkaz, aplikace stáhne z dané stránky přímo z tvého zařízení název, obrázek a cenu. Stránka tak vidí běžný požadavek z tvého zařízení (IP adresu), stejně jako při otevření v prohlížeči. Nic dalšího se neodesílá.",
+        "When you add a link to an idea, the app downloads the page title, picture and price directly from your device. The shop therefore sees an ordinary request from your device (IP address), just like opening it in a browser. Nothing else is sent.")),
+      (("Kamera, fotky, oznámení, Siri a widget", "Camera, photos, notifications, Siri and widget"),
+       ("Kamera a fotky slouží jen k vyfocení dárku nebo přidání fotky člověka. Připomínky oslav plánuje aplikace přímo v zařízení. Příkazy pro Siri a Zkratky zpracovává Apple podle svých zásad. Widget čte jen kopii nejbližších oslav v zařízení.",
+        "The camera and photos are only used to photograph a gift or add a person’s photo. Occasion reminders are scheduled on-device. Siri and Shortcuts requests are processed by Apple under its own policy. The widget only reads an on-device copy of upcoming occasions.")),
+    ]),
 ]
 
 EXTERNAL = [("Kulturník", "https://vyrazime.luksafoto.cz/soukromi")]
