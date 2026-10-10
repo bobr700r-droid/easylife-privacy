@@ -1,0 +1,88 @@
+{
+ "status": "live",
+ "icon": "~/Documents/Fakturant/ios/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+ "privacy": "/soukromi.html",
+ "description": {
+  "cs": [
+   "Fakturant je jednoduchá fakturace pro živnostníky a malé firmy: faktury, zálohovky, dobropisy, číselné řady a QR platby.",
+   "Kromě toho eviduje náklady, banku a daně. Běží na webu a v iPhonu, s vlastním účtem."
+  ],
+  "en": [
+   "Fakturant is simple invoicing for freelancers and small businesses: invoices, advance invoices, credit notes, numbering series and QR payments.",
+   "It also tracks expenses, bank payments and taxes. Runs on the web and iPhone, with your own account."
+  ],
+  "sk": [
+   "Fakturant je jednoduchá fakturácia pre živnostníkov a malé firmy: faktúry, zálohové faktúry, dobropisy, číselné rady a QR platby.",
+   "Okrem toho eviduje náklady, banku a dane. Beží na webe aj v iPhone, s vlastným účtom."
+  ],
+  "de": [
+   "Fakturant ist einfache Rechnungsstellung für Selbstständige und kleine Firmen: Rechnungen, Abschlagsrechnungen, Gutschriften, Nummernkreise und QR-Zahlungen.",
+   "Dazu erfasst er Ausgaben, Bankbewegungen und Steuern. Läuft im Web und auf dem iPhone, mit eigenem Konto."
+  ],
+  "es": [
+   "Fakturant es facturación sencilla para autónomos y pequeñas empresas: facturas, anticipos, notas de crédito, series de numeración y pagos QR.",
+   "Además lleva gastos, banco e impuestos. Funciona en la web y en el iPhone, con tu propia cuenta."
+  ],
+  "pl": [
+   "Fakturant to proste fakturowanie dla jednoosobowych firm i małych przedsiębiorstw: faktury, zaliczki, korekty, serie numeracji i płatności QR.",
+   "Dodatkowo prowadzi koszty, bank i podatki. Działa w przeglądarce i na iPhonie, z własnym kontem."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Faktury, zálohovky, dobropisy i pravidelné faktury",
+   "PDF s QR platbou, e-mail a upomínky",
+   "Odběratelé z ARES, faktury v eurech",
+   "Náklady z vyfoceného dokladu, banka a daně",
+   "Více firem a uživatelé s oprávněními"
+  ],
+  "en": [
+   "Invoices, advance and recurring invoices, credit notes",
+   "PDF with QR payment, email and reminders",
+   "Customers from the Czech business register, EUR invoices",
+   "Expenses from receipt photos, bank and taxes",
+   "Multiple companies and user permissions"
+  ],
+  "sk": [
+   "Faktúry, zálohové faktúry, dobropisy aj pravidelné faktúry",
+   "PDF s QR platbou, e-mail a upomienky",
+   "Odberatelia z ARES, faktúry v eurách",
+   "Náklady z odfoteného dokladu, banka a dane",
+   "Viac firiem a používatelia s oprávneniami"
+  ],
+  "de": [
+   "Rechnungen, Abschlags-, Dauerrechnungen und Gutschriften",
+   "PDF mit QR-Zahlung, E-Mail und Mahnungen",
+   "Kunden aus dem tschechischen Register, Rechnungen in EUR",
+   "Ausgaben per Belegfoto, Bank und Steuern",
+   "Mehrere Firmen und Benutzerrechte"
+  ],
+  "es": [
+   "Facturas, anticipos, recurrentes y notas de crédito",
+   "PDF con pago QR, correo y recordatorios",
+   "Clientes del registro mercantil checo, facturas en EUR",
+   "Gastos desde foto del ticket, banco e impuestos",
+   "Varias empresas y permisos de usuario"
+  ],
+  "pl": [
+   "Faktury, zaliczki, cykliczne i korekty",
+   "PDF z płatnością QR, e-mail i przypomnienia",
+   "Kontrahenci z czeskiego rejestru, faktury w EUR",
+   "Koszty ze zdjęcia dokumentu, bank i podatki",
+   "Wiele firm i uprawnienia użytkowników"
+  ]
+ },
+ "links": [
+  {
+   "app": "mailer",
+   "text": {
+    "cs": "Pošta ze všech schránek na jednom místě.",
+    "en": "Email from all your inboxes in one place.",
+    "sk": "Pošta zo všetkých schránok na jednom mieste.",
+    "de": "E-Mails aus allen Postfächern an einem Ort.",
+    "es": "El correo de todos tus buzones en un solo lugar.",
+    "pl": "Poczta ze wszystkich skrzynek w jednym miejscu."
+   }
+  }
+ ]
+}

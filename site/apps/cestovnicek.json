@@ -10,27 +10,27 @@
  "description": {
   "cs": [
    "Cestovníček naplánuje cestu den po dni: přesuny, ubytování, místa k vidění i rozpočet. Umělá inteligence ti umí navrhnout celou cestu nebo doplnit jeden den.",
-   "Na rozdíl od ostatních appek EasyLife používá účet, aby se plány synchronizovaly mezi iPhonem, iPadem, Macem a webem."
+   "Na rozdíl od ostatních appek EasyForLife používá účet, aby se plány synchronizovaly mezi iPhonem, iPadem, Macem a webem."
   ],
   "en": [
    "Cestovníček plans your trip day by day: transport, accommodation, places to see and budget. AI can suggest a whole trip or fill in a single day.",
-   "Unlike the other EasyLife apps it uses an account, so your plans sync between iPhone, iPad, Mac and the web."
+   "Unlike the other EasyForLife apps it uses an account, so your plans sync between iPhone, iPad, Mac and the web."
   ],
   "sk": [
    "Cestovníček naplánuje cestu deň po dni: presuny, ubytovanie, miesta na videnie aj rozpočet. Umelá inteligencia ti vie navrhnúť celú cestu alebo doplniť jeden deň.",
-   "Na rozdiel od ostatných aplikácií EasyLife používa účet, aby sa plány synchronizovali medzi iPhonom, iPadom, Macom a webom."
+   "Na rozdiel od ostatných aplikácií EasyForLife používa účet, aby sa plány synchronizovali medzi iPhonom, iPadom, Macom a webom."
   ],
   "de": [
    "Cestovníček plant deine Reise Tag für Tag: Anreise, Unterkunft, Sehenswürdigkeiten und Budget. Die KI schlägt eine ganze Reise vor oder füllt einen einzelnen Tag.",
-   "Anders als die anderen EasyLife-Apps nutzt sie ein Konto, damit deine Pläne zwischen iPhone, iPad, Mac und Web synchron bleiben."
+   "Anders als die anderen EasyForLife-Apps nutzt sie ein Konto, damit deine Pläne zwischen iPhone, iPad, Mac und Web synchron bleiben."
   ],
   "es": [
    "Cestovníček planifica tu viaje día a día: trayectos, alojamiento, lugares que ver y presupuesto. La IA puede proponer un viaje completo o completar un solo día.",
-   "A diferencia de las demás apps de EasyLife, usa una cuenta para sincronizar tus planes entre iPhone, iPad, Mac y la web."
+   "A diferencia de las demás apps de EasyForLife, usa una cuenta para sincronizar tus planes entre iPhone, iPad, Mac y la web."
   ],
   "pl": [
    "Cestovníček zaplanuje podróż dzień po dniu: dojazdy, noclegi, miejsca do zobaczenia i budżet. Sztuczna inteligencja zaproponuje całą podróż albo uzupełni jeden dzień.",
-   "W przeciwieństwie do innych aplikacji EasyLife korzysta z konta, by plany synchronizowały się między iPhone’em, iPadem, Makiem i siecią."
+   "W przeciwieństwie do innych aplikacji EasyForLife korzysta z konta, by plany synchronizowały się między iPhone’em, iPadem, Makiem i siecią."
   ]
  },
  "features": {
@@ -77,5 +77,6 @@
    "iPhone, iPad, Mac i web"
   ]
  },
- "links": []
+ "links": [],
+ "account": "required"
 }

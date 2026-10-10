@@ -1,0 +1,88 @@
+{
+ "status": "live",
+ "icon": "~/Documents/fotodesk/ios/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+ "privacy": "/soukromi.html",
+ "description": {
+  "cs": [
+   "FotoDesk je firemní systém pro fotografy: poptávky, zakázky, klienti, kalendář s rezervacemi, smlouvy a faktury na jednom místě. Klientům zpřístupní online galerie s výběrem fotek.",
+   "Placená služba pro firmy s tarify; registrace na webu."
+  ],
+  "en": [
+   "FotoDesk is business software for photographers: leads, jobs, clients, a booking calendar, contracts and invoices in one place. Clients get online galleries to pick their photos.",
+   "A paid service for businesses with subscription plans; sign up on the web."
+  ],
+  "sk": [
+   "FotoDesk je firemný systém pre fotografov: dopyty, zákazky, klienti, kalendár s rezerváciami, zmluvy a faktúry na jednom mieste. Klientom sprístupní online galérie s výberom fotiek.",
+   "Platená služba pre firmy s tarifmi; registrácia na webe."
+  ],
+  "de": [
+   "FotoDesk ist Business-Software für Fotografen: Anfragen, Aufträge, Kunden, Buchungskalender, Verträge und Rechnungen an einem Ort. Kunden bekommen Online-Galerien zur Bildauswahl.",
+   "Kostenpflichtiger Dienst für Unternehmen mit Tarifen; Registrierung im Web."
+  ],
+  "es": [
+   "FotoDesk es software de gestión para fotógrafos: solicitudes, encargos, clientes, calendario de reservas, contratos y facturas en un solo lugar. Los clientes reciben galerías online para elegir sus fotos.",
+   "Servicio de pago para empresas con planes; registro en la web."
+  ],
+  "pl": [
+   "FotoDesk to system dla firm fotograficznych: zapytania, zlecenia, klienci, kalendarz rezerwacji, umowy i faktury w jednym miejscu. Klienci dostają galerie online do wyboru zdjęć.",
+   "Płatna usługa dla firm z planami taryfowymi; rejestracja w przeglądarce."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Veřejný rezervační formulář a kalendář",
+   "Smlouvy s elektronickým podpisem",
+   "Klientské galerie s vodoznakem a výběrem",
+   "Faktury s QR platbou, náklady a odhad daně",
+   "Automatické e-maily a připomínky"
+  ],
+  "en": [
+   "Public booking form and calendar",
+   "Contracts with electronic signatures",
+   "Client galleries with watermarks and selection",
+   "Invoices with QR payment, expenses and tax estimate",
+   "Automatic emails and reminders"
+  ],
+  "sk": [
+   "Verejný rezervačný formulár a kalendár",
+   "Zmluvy s elektronickým podpisom",
+   "Klientske galérie s vodoznakom a výberom",
+   "Faktúry s QR platbou, náklady a odhad dane",
+   "Automatické e-maily a pripomienky"
+  ],
+  "de": [
+   "Öffentliches Buchungsformular und Kalender",
+   "Verträge mit elektronischer Unterschrift",
+   "Kundengalerien mit Wasserzeichen und Auswahl",
+   "Rechnungen mit QR-Zahlung, Ausgaben, Steuerprognose",
+   "Automatische E-Mails und Erinnerungen"
+  ],
+  "es": [
+   "Formulario público de reservas y calendario",
+   "Contratos con firma electrónica",
+   "Galerías de clientes con marca de agua y selección",
+   "Facturas con pago QR, gastos y estimación de impuestos",
+   "Correos y recordatorios automáticos"
+  ],
+  "pl": [
+   "Publiczny formularz rezerwacji i kalendarz",
+   "Umowy z podpisem elektronicznym",
+   "Galerie klientów ze znakiem wodnym i wyborem",
+   "Faktury z płatnością QR, koszty i prognoza podatku",
+   "Automatyczne e-maile i przypomnienia"
+  ]
+ },
+ "links": [
+  {
+   "app": "fotoplan",
+   "text": {
+    "cs": "Naplánuje focení podle slunce a počasí.",
+    "en": "Plans shoots around the sun and the weather.",
+    "sk": "Naplánuje fotenie podľa slnka a počasia.",
+    "de": "Plant Shootings nach Sonne und Wetter.",
+    "es": "Planifica sesiones según el sol y el tiempo.",
+    "pl": "Zaplanuje sesję według słońca i pogody."
+   }
+  }
+ ]
+}

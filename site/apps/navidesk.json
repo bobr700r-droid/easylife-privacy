@@ -1,0 +1,89 @@
+{
+ "status": "live",
+ "account": "optional",
+ "icon": "~/Documents/NaviDesk/img/app-512.png",
+ "privacy": "https://navi.luksafoto.cz/soukromi.html",
+ "description": {
+  "cs": [
+   "NaviDesk je plánovač motorkářských tras pro počítač s velkým monitorem. Trasu si vytvaruješ myší, naplánuješ noclehy a QR kódem ji pošleš do Navigace v iPhonu.",
+   "Plánovač se otevře i bez přihlášení; účet slouží k šifrované synchronizaci tras a jízd."
+  ],
+  "en": [
+   "NaviDesk is a motorbike route planner for your computer’s big screen. Shape the route with your mouse, plan overnight stops and send it to Navigace on your iPhone with a QR code.",
+   "The planner opens without signing in; an account adds encrypted sync of routes and rides."
+  ],
+  "sk": [
+   "NaviDesk je plánovač motorkárskych trás pre počítač s veľkým monitorom. Trasu si vytvaruješ myšou, naplánuješ nocľahy a QR kódom ju pošleš do Navigace v iPhone.",
+   "Plánovač sa otvorí aj bez prihlásenia; účet slúži na šifrovanú synchronizáciu trás a jázd."
+  ],
+  "de": [
+   "NaviDesk ist ein Motorrad-Routenplaner für den großen Bildschirm. Forme die Route mit der Maus, plane Übernachtungen und schick sie per QR-Code an Navigace auf dem iPhone.",
+   "Der Planer öffnet sich ohne Anmeldung; ein Konto bietet verschlüsselte Synchronisierung von Routen und Fahrten."
+  ],
+  "es": [
+   "NaviDesk es un planificador de rutas en moto para la pantalla grande del ordenador. Da forma a la ruta con el ratón, planifica dónde dormir y envíala a Navigace en tu iPhone con un código QR.",
+   "El planificador se abre sin iniciar sesión; la cuenta añade sincronización cifrada de rutas y viajes."
+  ],
+  "pl": [
+   "NaviDesk to planer tras motocyklowych na duży ekran komputera. Kształtujesz trasę myszą, planujesz noclegi i wysyłasz ją kodem QR do Navigace w iPhonie.",
+   "Planer otwiera się bez logowania; konto daje szyfrowaną synchronizację tras i przejazdów."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Tvarování trasy tažením myší, režim Klikatá",
+   "Generátor okruhů: „3 hodiny zatáček odsud“",
+   "Itinerář po dnech s noclehy a náklady",
+   "Počasí v čase průjezdu a výškový profil",
+   "Roadbook k tisku a export do kalendáře"
+  ],
+  "en": [
+   "Shape routes by dragging, with a Twisty mode",
+   "Loop generator: “3 hours of bends from here”",
+   "Day-by-day itinerary with stays and costs",
+   "Weather at your arrival time and elevation profile",
+   "Printable roadbook and calendar export"
+  ],
+  "sk": [
+   "Tvarovanie trasy ťahaním myšou, režim Kľukatá",
+   "Generátor okruhov: „3 hodiny zákrut odtiaľto“",
+   "Itinerár po dňoch s nocľahmi a nákladmi",
+   "Počasie v čase prejazdu a výškový profil",
+   "Roadbook na tlač a export do kalendára"
+  ],
+  "de": [
+   "Routen per Maus formen, Modus „Kurvig“",
+   "Rundtour-Generator: „3 Stunden Kurven ab hier“",
+   "Tagesplan mit Übernachtungen und Kosten",
+   "Wetter zur Durchfahrtszeit und Höhenprofil",
+   "Roadbook zum Drucken und Kalenderexport"
+  ],
+  "es": [
+   "Da forma a la ruta arrastrando, modo Curvas",
+   "Generador de circuitos: «3 horas de curvas desde aquí»",
+   "Itinerario por días con alojamiento y gastos",
+   "Tiempo a la hora de paso y perfil de altitud",
+   "Roadbook imprimible y exportación al calendario"
+  ],
+  "pl": [
+   "Kształtowanie trasy myszą, tryb Kręta",
+   "Generator pętli: „3 godziny zakrętów stąd”",
+   "Plan dzień po dniu z noclegami i kosztami",
+   "Pogoda w czasie przejazdu i profil wysokości",
+   "Roadbook do druku i eksport do kalendarza"
+  ]
+ },
+ "links": [
+  {
+   "app": "navigace",
+   "text": {
+    "cs": "Naplánovanou trasu odjedeš s offline navigací v iPhonu.",
+    "en": "Ride your planned route with offline navigation on your iPhone.",
+    "sk": "Naplánovanú trasu odjazdíš s offline navigáciou v iPhone.",
+    "de": "Fahr die geplante Route mit Offline-Navigation auf dem iPhone.",
+    "es": "Recorre la ruta planificada con navegación sin conexión en el iPhone.",
+    "pl": "Przejedź zaplanowaną trasę z nawigacją offline w iPhonie."
+   }
+  }
+ ]
+}

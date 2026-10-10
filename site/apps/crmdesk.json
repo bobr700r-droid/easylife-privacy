@@ -1,0 +1,76 @@
+{
+ "status": "live",
+ "icon": "~/CRMDesk/ios/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+ "privacy": "https://crmdesk.luksafoto.cz/gdpr.html",
+ "description": {
+  "cs": [
+   "CRMDesk je univerzální CRM pro firmy z libovolného oboru: firmy, kontakty, obchody, úkoly a nabídky. Při registraci si vybereš šablonu oboru a ta rovnou nastaví fáze obchodu i pole.",
+   "Placená služba pro firmy s tarify Start, Business a Pro a se zkušební dobou; registrace na webu."
+  ],
+  "en": [
+   "CRMDesk is a universal CRM for businesses in any field: companies, contacts, deals, tasks and quotes. When you sign up you pick an industry template that sets up deal stages and fields for you.",
+   "A paid service for businesses with Start, Business and Pro plans and a free trial; sign up on the web."
+  ],
+  "sk": [
+   "CRMDesk je univerzálne CRM pre firmy z ľubovoľného odboru: firmy, kontakty, obchody, úlohy a ponuky. Pri registrácii si vyberieš šablónu odboru a tá rovno nastaví fázy obchodu aj polia.",
+   "Platená služba pre firmy s tarifmi Start, Business a Pro a so skúšobnou dobou; registrácia na webe."
+  ],
+  "de": [
+   "CRMDesk ist ein universelles CRM für Firmen jeder Branche: Unternehmen, Kontakte, Deals, Aufgaben und Angebote. Bei der Registrierung wählst du eine Branchenvorlage, die Phasen und Felder gleich einrichtet.",
+   "Kostenpflichtiger Dienst für Unternehmen mit den Tarifen Start, Business und Pro und Testphase; Registrierung im Web."
+  ],
+  "es": [
+   "CRMDesk es un CRM universal para empresas de cualquier sector: empresas, contactos, oportunidades, tareas y presupuestos. Al registrarte eliges una plantilla de sector que configura fases y campos.",
+   "Servicio de pago para empresas con planes Start, Business y Pro y periodo de prueba; registro en la web."
+  ],
+  "pl": [
+   "CRMDesk to uniwersalny CRM dla firm z każdej branży: firmy, kontakty, szanse sprzedaży, zadania i oferty. Przy rejestracji wybierasz szablon branży, który od razu ustawia etapy i pola.",
+   "Płatna usługa dla firm z planami Start, Business i Pro oraz okresem próbnym; rejestracja w przeglądarce."
+  ]
+ },
+ "features": {
+  "cs": [
+   "37 šablon oborů a vlastní pole",
+   "Obchodní procesy s nástěnkou",
+   "Produkty a nabídky s tiskem do PDF",
+   "Kalendář, reporty a import z Excelu",
+   "iPhone: skener vizitek a identifikace volajícího"
+  ],
+  "en": [
+   "37 industry templates and custom fields",
+   "Sales pipelines on a drag-and-drop board",
+   "Products and quotes with PDF export",
+   "Calendar, reports and Excel import",
+   "iPhone: business card scanner and caller ID"
+  ],
+  "sk": [
+   "37 šablón odborov a vlastné polia",
+   "Obchodné procesy s nástenkou",
+   "Produkty a ponuky s tlačou do PDF",
+   "Kalendár, reporty a import z Excelu",
+   "iPhone: skener vizitiek a identifikácia volajúceho"
+  ],
+  "de": [
+   "37 Branchenvorlagen und eigene Felder",
+   "Vertriebsprozesse auf einem Board",
+   "Produkte und Angebote als PDF",
+   "Kalender, Berichte und Excel-Import",
+   "iPhone: Visitenkartenscanner und Anrufer-ID"
+  ],
+  "es": [
+   "37 plantillas de sector y campos propios",
+   "Embudos de venta en un tablero",
+   "Productos y presupuestos en PDF",
+   "Calendario, informes e importación de Excel",
+   "iPhone: escáner de tarjetas e identificación de llamadas"
+  ],
+  "pl": [
+   "37 szablonów branżowych i własne pola",
+   "Lejki sprzedaży na tablicy",
+   "Produkty i oferty z eksportem do PDF",
+   "Kalendarz, raporty i import z Excela",
+   "iPhone: skaner wizytówek i identyfikacja dzwoniącego"
+  ]
+ },
+ "links": []
+}

@@ -1,0 +1,88 @@
+{
+ "status": "live",
+ "icon": "~/Documents/Mailer/ios/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+ "privacy": "/soukromi.html",
+ "description": {
+  "cs": [
+   "Mailer je poštovní klient pro tvoje vlastní schránky – Gmail, Seznam, Microsoft 365 a další. Běží v prohlížeči, v iPhonu i na Macu.",
+   "Pošta zůstává u tvého poskytovatele, Mailer ji jen přehledně zobrazuje, třídí a hlídá."
+  ],
+  "en": [
+   "Mailer is an email client for your own inboxes – Gmail, Seznam, Microsoft 365 and more. It runs in the browser, on iPhone and on Mac.",
+   "Your mail stays with your provider; Mailer just shows, sorts and watches over it."
+  ],
+  "sk": [
+   "Mailer je poštový klient pre tvoje vlastné schránky – Gmail, Seznam, Microsoft 365 a ďalšie. Beží v prehliadači, v iPhone aj na Macu.",
+   "Pošta zostáva u tvojho poskytovateľa, Mailer ju len prehľadne zobrazuje, triedi a stráži."
+  ],
+  "de": [
+   "Mailer ist ein E-Mail-Programm für deine eigenen Postfächer – Gmail, Seznam, Microsoft 365 und mehr. Er läuft im Browser, auf dem iPhone und auf dem Mac.",
+   "Deine Mails bleiben bei deinem Anbieter; Mailer zeigt, sortiert und überwacht sie nur."
+  ],
+  "es": [
+   "Mailer es un cliente de correo para tus propios buzones: Gmail, Seznam, Microsoft 365 y más. Funciona en el navegador, en el iPhone y en el Mac.",
+   "Tu correo se queda en tu proveedor; Mailer solo lo muestra, ordena y vigila."
+  ],
+  "pl": [
+   "Mailer to klient poczty dla twoich własnych skrzynek – Gmail, Seznam, Microsoft 365 i inne. Działa w przeglądarce, na iPhonie i na Macu.",
+   "Poczta zostaje u twojego dostawcy; Mailer tylko ją przejrzyście wyświetla, porządkuje i pilnuje."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Více schránek a rychlé nastavení hostingů",
+   "Pravidla třídění, štítky a šablony odpovědí",
+   "Odeslat později a odhlášení newsletterů",
+   "Varování před podvodnými e-maily",
+   "Databáze všech příloh a knihovna souborů"
+  ],
+  "en": [
+   "Multiple inboxes and quick setup for common hosts",
+   "Sorting rules, labels and reply templates",
+   "Send later and one-click newsletter unsubscribe",
+   "Warnings about phishing emails",
+   "All attachments in one searchable library"
+  ],
+  "sk": [
+   "Viac schránok a rýchle nastavenie hostingov",
+   "Pravidlá triedenia, štítky a šablóny odpovedí",
+   "Odoslať neskôr a odhlásenie newsletterov",
+   "Varovanie pred podvodnými e-mailmi",
+   "Databáza všetkých príloh a knižnica súborov"
+  ],
+  "de": [
+   "Mehrere Postfächer und schnelle Einrichtung",
+   "Sortierregeln, Labels und Antwortvorlagen",
+   "Später senden und Newsletter abmelden",
+   "Warnungen vor Phishing-Mails",
+   "Alle Anhänge in einer Bibliothek"
+  ],
+  "es": [
+   "Varios buzones y configuración rápida",
+   "Reglas, etiquetas y plantillas de respuesta",
+   "Enviar más tarde y baja de boletines",
+   "Avisos de correos fraudulentos",
+   "Todos los adjuntos en una biblioteca"
+  ],
+  "pl": [
+   "Wiele skrzynek i szybka konfiguracja",
+   "Reguły, etykiety i szablony odpowiedzi",
+   "Wyślij później i wypisanie z newsletterów",
+   "Ostrzeżenia przed oszustwami",
+   "Wszystkie załączniki w jednej bibliotece"
+  ]
+ },
+ "links": [
+  {
+   "app": "fakturant",
+   "text": {
+    "cs": "Faktury a náklady pro živnostníky.",
+    "en": "Invoices and expenses for freelancers.",
+    "sk": "Faktúry a náklady pre živnostníkov.",
+    "de": "Rechnungen und Ausgaben für Selbstständige.",
+    "es": "Facturas y gastos para autónomos.",
+    "pl": "Faktury i koszty dla przedsiębiorców."
+   }
+  }
+ ]
+}

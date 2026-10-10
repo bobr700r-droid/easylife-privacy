@@ -1,0 +1,76 @@
+{
+ "status": "live",
+ "icon": "~/Documents/Fitko/iOS/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+ "privacy": "https://fitko.luksafoto.cz/soukromi.html",
+ "description": {
+  "cs": [
+   "Fitko je fitness aplikace na tréninky, kalendář a historii výkonů, propojená s Apple Watch. Trenér si může připojit svěřence, přidělovat jim plány a sledovat jejich výsledky.",
+   "Jde používat bez účtu; přihlášení přes Apple nebo e-mail přidá web a spolupráci s trenérem."
+  ],
+  "en": [
+   "Fitko is a fitness app for workouts, a training calendar and your performance history, connected to Apple Watch. Coaches can add clients, assign plans and follow their results.",
+   "You can use it without an account; signing in with Apple or email adds the web app and coaching."
+  ],
+  "sk": [
+   "Fitko je fitness aplikácia na tréningy, kalendár a históriu výkonov, prepojená s Apple Watch. Tréner si môže pripojiť zverencov, prideľovať im plány a sledovať ich výsledky.",
+   "Dá sa používať bez účtu; prihlásenie cez Apple alebo e-mail pridá web a spoluprácu s trénerom."
+  ],
+  "de": [
+   "Fitko ist eine Fitness-App für Workouts, Trainingskalender und Leistungsverlauf, verbunden mit der Apple Watch. Trainer können Kunden hinzufügen, Pläne zuweisen und Ergebnisse verfolgen.",
+   "Sie funktioniert ohne Konto; die Anmeldung mit Apple oder E-Mail bringt die Web-App und das Coaching dazu."
+  ],
+  "es": [
+   "Fitko es una app de fitness para entrenamientos, calendario e historial de rendimiento, conectada con el Apple Watch. Los entrenadores pueden añadir clientes, asignar planes y seguir sus resultados.",
+   "Se puede usar sin cuenta; iniciar sesión con Apple o correo añade la web y el trabajo con entrenador."
+  ],
+  "pl": [
+   "Fitko to aplikacja fitness do treningów, kalendarza i historii wyników, połączona z Apple Watch. Trener może dodać podopiecznych, przydzielać plany i śledzić ich wyniki.",
+   "Działa bez konta; logowanie przez Apple lub e-mail dodaje wersję webową i współpracę z trenerem."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Tréninky se sériemi, vahami a pauzami",
+   "Hodinky: odpočet pauzy a počítání opakování",
+   "Trenér a svěřenec: plány a komentáře",
+   "Jídelníček, recepty a nákupní seznam",
+   "Rekordy, úspěchy a synchronizace přes iCloud"
+  ],
+  "en": [
+   "Workouts with sets, weights and rest timers",
+   "Watch: rest countdown and rep counting",
+   "Coach and client: plans and comments",
+   "Meal plans, recipes and shopping lists",
+   "Records, achievements and iCloud sync"
+  ],
+  "sk": [
+   "Tréningy so sériami, váhami a pauzami",
+   "Hodinky: odpočet pauzy a počítanie opakovaní",
+   "Tréner a zverenec: plány a komentáre",
+   "Jedálniček, recepty a nákupný zoznam",
+   "Rekordy, úspechy a synchronizácia cez iCloud"
+  ],
+  "de": [
+   "Workouts mit Sätzen, Gewichten und Pausen",
+   "Watch: Pausen-Countdown und Wiederholungszähler",
+   "Trainer und Kunde: Pläne und Kommentare",
+   "Ernährungsplan, Rezepte und Einkaufsliste",
+   "Rekorde, Erfolge und iCloud-Sync"
+  ],
+  "es": [
+   "Entrenamientos con series, pesos y descansos",
+   "Watch: cuenta atrás y conteo de repeticiones",
+   "Entrenador y cliente: planes y comentarios",
+   "Menús, recetas y lista de la compra",
+   "Récords, logros y sincronización con iCloud"
+  ],
+  "pl": [
+   "Treningi z seriami, ciężarami i przerwami",
+   "Zegarek: odliczanie przerwy i liczenie powtórzeń",
+   "Trener i podopieczny: plany i komentarze",
+   "Jadłospis, przepisy i lista zakupów",
+   "Rekordy, osiągnięcia i synchronizacja iCloud"
+  ]
+ },
+ "links": []
+}

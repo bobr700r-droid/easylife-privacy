@@ -1,0 +1,88 @@
+{
+ "status": "dev",
+ "icon": "~/Documents/Navigace/App/Navigace/Assets.xcassets/AppIcon.appiconset/icon.png",
+ "privacy": "https://navi.luksafoto.cz/soukromi.html",
+ "description": {
+  "cs": [
+   "Navigace je offline navigace pro motorkáře i řidiče, včetně jízdy v terénu. Mapa, plánování trasy, hlasové pokyny i hledání fungují bez internetu.",
+   "Funguje bez účtu; s volitelným účtem NaviDesk se ti trasy a jízdy synchronizují s počítačem."
+  ],
+  "en": [
+   "Navigace is offline navigation for bikers and drivers, including off-road riding. The map, route planning, voice guidance and search all work without internet.",
+   "It works without an account; with an optional NaviDesk account your routes and rides sync with your computer."
+  ],
+  "sk": [
+   "Navigace je offline navigácia pre motorkárov aj vodičov, vrátane jazdy v teréne. Mapa, plánovanie trasy, hlasové pokyny aj hľadanie fungujú bez internetu.",
+   "Funguje bez účtu; s voliteľným účtom NaviDesk sa ti trasy a jazdy synchronizujú s počítačom."
+  ],
+  "de": [
+   "Navigace ist eine Offline-Navigation für Motorrad- und Autofahrer, auch fürs Gelände. Karte, Routenplanung, Sprachansagen und Suche funktionieren ohne Internet.",
+   "Sie funktioniert ohne Konto; mit einem optionalen NaviDesk-Konto werden Routen und Fahrten mit deinem Computer synchronisiert."
+  ],
+  "es": [
+   "Navigace es una navegación sin conexión para motoristas y conductores, también fuera de carretera. El mapa, la planificación, las indicaciones por voz y la búsqueda funcionan sin internet.",
+   "Funciona sin cuenta; con una cuenta opcional de NaviDesk tus rutas y viajes se sincronizan con el ordenador."
+  ],
+  "pl": [
+   "Navigace to nawigacja offline dla motocyklistów i kierowców, także w terenie. Mapa, planowanie trasy, komunikaty głosowe i wyszukiwanie działają bez internetu.",
+   "Działa bez konta; z opcjonalnym kontem NaviDesk trasy i przejazdy synchronizują się z komputerem."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Offline mapa Evropy upravená pro motorku",
+   "Trasy rychlá, vyvážená, zatáčky i offroad",
+   "Hlasová navigace, rychlost a limity",
+   "Kniha jízd, tankování a servis",
+   "Skupinová jízda, detekce nehody a SOS"
+  ],
+  "en": [
+   "Offline map of Europe tuned for motorbikes",
+   "Fast, balanced, twisty and off-road routes",
+   "Voice guidance, speed and speed limits",
+   "Ride log, fuel and service records",
+   "Group rides, crash detection and SOS"
+  ],
+  "sk": [
+   "Offline mapa Európy upravená pre motorku",
+   "Trasy rýchla, vyvážená, zákruty aj offroad",
+   "Hlasová navigácia, rýchlosť a limity",
+   "Kniha jázd, tankovanie a servis",
+   "Skupinová jazda, detekcia nehody a SOS"
+  ],
+  "de": [
+   "Offline-Europakarte, optimiert fürs Motorrad",
+   "Schnelle, ausgewogene, kurvige und Offroad-Routen",
+   "Sprachnavigation, Tempo und Tempolimits",
+   "Fahrtenbuch, Tanken und Service",
+   "Gruppenfahrten, Unfallerkennung und SOS"
+  ],
+  "es": [
+   "Mapa de Europa sin conexión pensada para moto",
+   "Rutas rápidas, equilibradas, con curvas y off-road",
+   "Navegación por voz, velocidad y límites",
+   "Diario de viajes, repostajes y mantenimiento",
+   "Rutas en grupo, detección de accidentes y SOS"
+  ],
+  "pl": [
+   "Mapa Europy offline dopasowana do motocykla",
+   "Trasy szybkie, zrównoważone, kręte i offroad",
+   "Nawigacja głosowa, prędkość i ograniczenia",
+   "Dziennik jazd, tankowania i serwis",
+   "Jazda w grupie, wykrywanie wypadku i SOS"
+  ]
+ },
+ "links": [
+  {
+   "app": "navidesk",
+   "text": {
+    "cs": "Na počítači naplánuješ trasu a QR kódem ji pošleš do telefonu.",
+    "en": "Plan a route on your computer and send it to your phone with a QR code.",
+    "sk": "Na počítači naplánuješ trasu a QR kódom ju pošleš do telefónu.",
+    "de": "Plane die Route am Computer und schick sie per QR-Code aufs iPhone.",
+    "es": "Planifica la ruta en el ordenador y envíala al móvil con un código QR.",
+    "pl": "Zaplanuj trasę na komputerze i wyślij ją na telefon kodem QR."
+   }
+  }
+ ]
+}

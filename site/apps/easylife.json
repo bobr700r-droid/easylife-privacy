@@ -1,0 +1,74 @@
+{
+ "status": "dev",
+ "description": {
+  "cs": [
+   "EasyForLife Hub ukáže na jednom místě, co tě dnes a tento týden čeká ze všech EasyForLife appek: STK, platby předplatných, léky, narozeniny, konce záruk nebo sledovaný let. Klepnutím otevřeš konkrétní věc v dané appce.",
+   "Funguje bez účtu a bez serveru – appky mu předávají přehled jen přímo v telefonu."
+  ],
+  "en": [
+   "EasyForLife Hub shows what’s ahead today and this week from all your EasyForLife apps in one place: car inspections, subscription payments, medication, birthdays, warranty ends or a tracked flight. Tap to open the item in its app.",
+   "No account, no server – the apps share their overview with it only on your phone."
+  ],
+  "sk": [
+   "EasyForLife Hub ukáže na jednom mieste, čo ťa dnes a tento týždeň čaká zo všetkých EasyForLife appiek: STK, platby predplatného, lieky, narodeniny, koniec záruk alebo sledovaný let. Ťuknutím otvoríš konkrétnu vec v danej aplikácii.",
+   "Funguje bez účtu a bez servera – aplikácie mu odovzdávajú prehľad len priamo v telefóne."
+  ],
+  "de": [
+   "EasyForLife Hub zeigt an einem Ort, was heute und diese Woche aus all deinen EasyForLife-Apps ansteht: TÜV, Abo-Zahlungen, Medikamente, Geburtstage, Garantieenden oder ein verfolgter Flug. Ein Tipp öffnet den Eintrag in der jeweiligen App.",
+   "Ohne Konto, ohne Server – die Apps teilen ihre Übersicht nur auf deinem iPhone."
+  ],
+  "es": [
+   "EasyForLife Hub muestra en un solo lugar lo que te espera hoy y esta semana en todas tus apps EasyForLife: ITV, pagos de suscripciones, medicamentos, cumpleaños, fin de garantías o un vuelo. Toca para abrirlo en su app.",
+   "Sin cuenta ni servidor: las apps le pasan su resumen solo dentro de tu teléfono."
+  ],
+  "pl": [
+   "EasyForLife Hub pokazuje w jednym miejscu, co cię czeka dziś i w tym tygodniu ze wszystkich aplikacji EasyForLife: przeglądy, płatności subskrypcji, leki, urodziny, koniec gwarancji czy śledzony lot. Stuknięcie otwiera daną rzecz w jej aplikacji.",
+   "Bez konta i bez serwera – aplikacje przekazują mu przegląd tylko w telefonie."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Dnes a tento týden ze všech appek",
+   "Klepnutím rovnou do dané appky",
+   "Moje appky po rodinách a rychlé akce",
+   "Widgety na plochu i zamčenou obrazovku",
+   "Siri: „Co mě dnes čeká?“"
+  ],
+  "en": [
+   "Today and this week from all your apps",
+   "Tap to jump straight into the app",
+   "My apps by family, plus quick actions",
+   "Home and Lock Screen widgets",
+   "Siri: “What’s ahead today?”"
+  ],
+  "sk": [
+   "Dnes a tento týždeň zo všetkých appiek",
+   "Ťuknutím rovno do danej aplikácie",
+   "Moje appky po rodinách a rýchle akcie",
+   "Widgety na plochu aj zamknutú obrazovku",
+   "Siri: „Čo ma dnes čaká?“"
+  ],
+  "de": [
+   "Heute und diese Woche aus allen Apps",
+   "Ein Tipp führt direkt in die App",
+   "Meine Apps nach Familien und Schnellaktionen",
+   "Widgets für Home- und Sperrbildschirm",
+   "Siri: „Was steht heute an?“"
+  ],
+  "es": [
+   "Hoy y esta semana de todas tus apps",
+   "Un toque te lleva directo a la app",
+   "Mis apps por familias y acciones rápidas",
+   "Widgets de inicio y pantalla bloqueada",
+   "Siri: «¿Qué me espera hoy?»"
+  ],
+  "pl": [
+   "Dziś i w tym tygodniu ze wszystkich aplikacji",
+   "Stuknięcie przenosi prosto do aplikacji",
+   "Moje aplikacje według rodzin i szybkie akcje",
+   "Widżety na ekran główny i blokady",
+   "Siri: „Co mnie dziś czeka?”"
+  ]
+ },
+ "links": []
+}

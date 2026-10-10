@@ -1,4 +1,4 @@
-"""Generuje web EasyLife (easyforlife.eu) z EasyLife/catalog.json a site/apps/<id>.json.
+"""Generuje web EasyForLife (easyforlife.eu) z EasyLife/catalog.json a site/apps/<id>.json.
 
 Volá se z build.py: web.build(OUT, APPS, EXTERNAL, OPERATOR). Stránky soukromí (/<slug>.html) generuje build.py,
 tady se jen odkazují. Obsah detailů appek je v site/apps/<id>.json (popis, funkce, propojení, stav), texty
@@ -18,57 +18,23 @@ LANG_NAMES = {"cs": "Čeština", "en": "English", "sk": "Slovenčina", "de": "De
 # Appky, které na webu zatím nemají být (Kulturník zatím k veřejnosti nemíří).
 HIDDEN = {"kulturnik"}
 # Složka appky, když se nejmenuje jako id v katalogu.
-FOLDERS = {"kulturnik": "Vyrazime", "cestovnicek": "Cestovnicek/apple"}
+FOLDERS = {"kulturnik": "Vyrazime", "easylife": "EasyLifeHub", "cestovnicek": "Cestovnicek/apple"}
 CONTACT = "info@luksafoto.cz"  # kontakt podpory, dokud easyforlife.eu nemá vlastní e-mail
 SUPPORT = "podpora"           # /podpora/ = Support URL pro App Store
-FAMILY_COLORS = {"cestovani": "#2563eb", "foto": "#e8731c", "domacnost": "#0f9a62", "volny-cas": "#8b46d9"}
+FAMILY_COLORS = {"easylife": "#2563eb", "cestovani": "#2563eb", "foto": "#e8731c", "domacnost": "#0f9a62", "volny-cas": "#8b46d9",
+                 "navigace": "#0e9aa7", "zdravi": "#e8457a", "kancelar": "#6366f1", "firmy": "#d9480f"}
+WORK = ["kancelar", "firmy"]  # rodiny v sekci „Pro práci“ (tmavý blok na konci)
+PLATFORMS = {"iOS": "iPhone", "watchOS": "Apple Watch", "macOS": "Mac", "web": "Web", "CarPlay": "CarPlay"}
 
 T = {
-  "title": ["EasyLife – malé appky, které zjednodušují život", "EasyLife – small apps that make life easier",
-            "EasyLife – malé appky, ktoré zjednodušujú život", "EasyLife – kleine Apps, die das Leben leichter machen",
-            "EasyLife – pequeñas apps que facilitan la vida", "EasyLife – małe aplikacje, które ułatwiają życie"],
-  "hero": ["Malé appky, které ti zjednoduší život", "Small apps that make life easier",
-           "Malé appky, ktoré ti zjednodušia život", "Kleine Apps, die dir das Leben leichter machen",
-           "Pequeñas apps que te hacen la vida más fácil", "Małe aplikacje, które ułatwiają życie"],
-  "lead": ["EasyLife je rodina malých aplikací pro iPhone. Každá dělá jednu věc pořádně – bez registrace, bez reklam a tvoje data zůstávají u tebe.",
-           "EasyLife is a family of small iPhone apps. Each one does one thing well – no sign-up, no ads, and your data stays with you.",
-           "EasyLife je rodina malých aplikácií pre iPhone. Každá robí jednu vec poriadne – bez registrácie, bez reklám a tvoje dáta zostávajú u teba.",
-           "EasyLife ist eine Familie kleiner iPhone-Apps. Jede macht eine Sache richtig gut – ohne Registrierung, ohne Werbung, und deine Daten bleiben bei dir.",
-           "EasyLife es una familia de pequeñas apps para iPhone. Cada una hace una cosa bien: sin registro, sin anuncios y tus datos se quedan contigo.",
-           "EasyLife to rodzina małych aplikacji na iPhone’a. Każda robi jedną rzecz porządnie – bez rejestracji, bez reklam, a twoje dane zostają u ciebie."],
-  "pills": [["Bez registrace", "Bez reklam", "Data zůstávají u tebe"], ["No sign-up", "No ads", "Your data stays with you"],
-            ["Bez registrácie", "Bez reklám", "Dáta zostávajú u teba"], ["Ohne Registrierung", "Ohne Werbung", "Deine Daten bleiben bei dir"],
-            ["Sin registro", "Sin anuncios", "Tus datos se quedan contigo"], ["Bez rejestracji", "Bez reklam", "Dane zostają u ciebie"]],
+  "title": ['EasyForLife – appky, které ulehčují život', 'EasyForLife – apps that make life easier', 'EasyForLife – appky, ktoré uľahčujú život', 'EasyForLife – Apps, die das Leben leichter machen', 'EasyForLife – apps que facilitan la vida', 'EasyForLife – aplikacje, które ułatwiają życie'],
+  "hero": ['Appky, které ti ulehčí život', 'Apps that make life easier', 'Appky, ktoré ti uľahčia život', 'Apps, die dir das Leben leichter machen', 'Apps que te hacen la vida más fácil', 'Aplikacje, które ułatwiają życie'],
+  "lead": ['EasyForLife je rodina aplikací pro iPhone, Mac a web. Malé appky pro každý den bez registrace a bez reklam – a vedle nich navigace, zdraví, kancelář a profesionální nástroje pro firmy.', 'EasyForLife is a family of apps for iPhone, Mac and the web. Small everyday apps with no sign-up and no ads – plus navigation, health, office tools and professional software for businesses.', 'EasyForLife je rodina aplikácií pre iPhone, Mac a web. Malé appky na každý deň bez registrácie a bez reklám – a vedľa nich navigácia, zdravie, kancelária a profesionálne nástroje pre firmy.', 'EasyForLife ist eine Familie von Apps für iPhone, Mac und Web. Kleine Alltags-Apps ohne Registrierung und ohne Werbung – dazu Navigation, Gesundheit, Büro und Profi-Tools für Unternehmen.', 'EasyForLife es una familia de apps para iPhone, Mac y web. Pequeñas apps para el día a día sin registro ni anuncios, y junto a ellas navegación, salud, oficina y herramientas profesionales para empresas.', 'EasyForLife to rodzina aplikacji na iPhone’a, Maca i przeglądarkę. Małe aplikacje na co dzień bez rejestracji i reklam – a obok nich nawigacja, zdrowie, biuro i profesjonalne narzędzia dla firm.'],
+  "pills": [['Bez reklam a sledování', 'Malé appky bez registrace', 'iPhone, Mac i web'], ['No ads, no tracking', 'Small apps, no sign-up', 'iPhone, Mac and web'], ['Bez reklám a sledovania', 'Malé appky bez registrácie', 'iPhone, Mac aj web'], ['Ohne Werbung und Tracking', 'Kleine Apps ohne Konto', 'iPhone, Mac und Web'], ['Sin anuncios ni rastreo', 'Apps pequeñas sin registro', 'iPhone, Mac y web'], ['Bez reklam i śledzenia', 'Małe aplikacje bez rejestracji', 'iPhone, Mac i web']],
   "apps": ["Aplikace", "Apps", "Aplikácie", "Apps", "Apps", "Aplikacje"],
-  "apps_lead": ["Seřazené do rodin. Appky z jedné rodiny se navzájem doplňují.", "Grouped into families. Apps in the same family complement each other.",
-                "Zoradené do rodín. Aplikácie z jednej rodiny sa navzájom dopĺňajú.", "In Familien sortiert. Apps einer Familie ergänzen sich gegenseitig.",
-                "Agrupadas en familias. Las apps de una misma familia se complementan.", "Pogrupowane w rodziny. Aplikacje z jednej rodziny uzupełniają się nawzajem."],
+  "apps_lead": ['Malé appky pro každý den, navigace a zdraví. Appky z jedné rodiny se navzájem doplňují.', 'Small everyday apps, navigation and health. Apps in the same family complement each other.', 'Malé appky na každý deň, navigácia a zdravie. Aplikácie z jednej rodiny sa navzájom dopĺňajú.', 'Kleine Alltags-Apps, Navigation und Gesundheit. Apps einer Familie ergänzen sich gegenseitig.', 'Pequeñas apps para el día a día, navegación y salud. Las apps de una misma familia se complementan.', 'Małe aplikacje na co dzień, nawigacja i zdrowie. Aplikacje z jednej rodziny uzupełniają się nawzajem.'],
   "how": ["Jak to děláme", "How we build them", "Ako to robíme", "Unsere Prinzipien", "Cómo las hacemos", "Jak je tworzymy"],
-  "principles": [
-    [("Žádné účty", "Stáhneš a používáš. Žádné přihlašování, žádné e-maily, žádná hesla."),
-     ("Žádné reklamy ani sledování", "Appky neobsahují reklamy ani analytiku a nikomu neprodávají, co v nich děláš."),
-     ("Tvoje data jsou tvoje", "Všechno je v telefonu, případně v tvém soukromém iCloudu. My k tomu přístup nemáme."),
-     ("Samostatné, ale propojené", "Každá appka funguje sama. Když máš víc appek z jedné rodiny, umí si podat ruku.")],
-    [("No accounts", "Download and go. No logins, no emails, no passwords."),
-     ("No ads, no tracking", "The apps contain no ads or analytics and never sell what you do in them."),
-     ("Your data is yours", "Everything stays on your phone or in your private iCloud. We have no access to it."),
-     ("Independent, yet connected", "Every app works on its own. Use several from one family and they work hand in hand.")],
-    [("Žiadne účty", "Stiahneš a používaš. Žiadne prihlasovanie, e-maily ani heslá."),
-     ("Žiadne reklamy ani sledovanie", "Aplikácie neobsahujú reklamy ani analytiku a nikomu nepredávajú, čo v nich robíš."),
-     ("Tvoje dáta sú tvoje", "Všetko je v telefóne, prípadne v tvojom súkromnom iCloude. My k tomu prístup nemáme."),
-     ("Samostatné, ale prepojené", "Každá aplikácia funguje sama. Keď máš viac aplikácií z jednej rodiny, vedia si podať ruku.")],
-    [("Keine Konten", "Laden und loslegen. Kein Login, keine E-Mails, keine Passwörter."),
-     ("Keine Werbung, kein Tracking", "Die Apps enthalten weder Werbung noch Analyse-Tools und verkaufen nicht, was du darin tust."),
-     ("Deine Daten gehören dir", "Alles bleibt auf deinem iPhone oder in deiner privaten iCloud. Wir haben keinen Zugriff darauf."),
-     ("Eigenständig und doch verbunden", "Jede App funktioniert für sich. Nutzt du mehrere aus einer Familie, arbeiten sie Hand in Hand.")],
-    [("Sin cuentas", "Descarga y listo. Sin inicios de sesión, sin correos, sin contraseñas."),
-     ("Sin anuncios ni rastreo", "Las apps no tienen anuncios ni analítica y nunca venden lo que haces en ellas."),
-     ("Tus datos son tuyos", "Todo se queda en tu teléfono o en tu iCloud privado. Nosotros no tenemos acceso."),
-     ("Independientes, pero conectadas", "Cada app funciona por sí sola. Si usas varias de una misma familia, se echan una mano.")],
-    [("Bez kont", "Pobierasz i korzystasz. Bez logowania, e-maili i haseł."),
-     ("Bez reklam i śledzenia", "Aplikacje nie mają reklam ani analityki i nikomu nie sprzedają tego, co w nich robisz."),
-     ("Twoje dane są twoje", "Wszystko zostaje w telefonie lub w twoim prywatnym iCloud. My nie mamy do tego dostępu."),
-     ("Niezależne, ale połączone", "Każda aplikacja działa samodzielnie. Jeśli używasz kilku z jednej rodziny, współpracują ze sobą.")]],
+  "principles": [[('Účet jen tam, kde dává smysl', 'Malé appky stáhneš a používáš bez registrace. Účet chtějí jen služby, které synchronizují s webem nebo slouží firmám.'), ('Žádné reklamy ani sledování', 'Appky neobsahují reklamy ani reklamní sledování a nikomu neprodávají, co v nich děláš.'), ('Tvoje data jsou tvoje', 'Malé appky drží data v telefonu, případně v tvém soukromém iCloudu. Služby s účtem data nikomu neprodávají ani nesdílejí pro reklamu.'), ('Samostatné, ale propojené', 'Každá appka funguje sama. Když máš víc appek z jedné rodiny, umí si podat ruku.')], [('Accounts only where they make sense', 'Small apps work right away with no sign-up. Only services that sync with the web or serve businesses need an account.'), ('No ads, no tracking', 'The apps contain no ads or ad tracking and never sell what you do in them.'), ('Your data is yours', 'Small apps keep data on your phone or in your private iCloud. Services with accounts never sell your data or share it for advertising.'), ('Independent, yet connected', 'Every app works on its own. Use several from one family and they work hand in hand.')], [('Účet len tam, kde dáva zmysel', 'Malé appky stiahneš a používaš bez registrácie. Účet chcú len služby, ktoré synchronizujú s webom alebo slúžia firmám.'), ('Žiadne reklamy ani sledovanie', 'Aplikácie neobsahujú reklamy ani reklamné sledovanie a nikomu nepredávajú, čo v nich robíš.'), ('Tvoje dáta sú tvoje', 'Malé appky držia dáta v telefóne, prípadne v tvojom súkromnom iCloude. Služby s účtom dáta nikomu nepredávajú ani nezdieľajú na reklamu.'), ('Samostatné, ale prepojené', 'Každá aplikácia funguje sama. Keď máš viac aplikácií z jednej rodiny, vedia si podať ruku.')], [('Konto nur, wo es sinnvoll ist', 'Kleine Apps funktionieren sofort ohne Registrierung. Ein Konto brauchen nur Dienste mit Web-Synchronisierung oder für Unternehmen.'), ('Keine Werbung, kein Tracking', 'Die Apps enthalten weder Werbung noch Werbe-Tracking und verkaufen nicht, was du darin tust.'), ('Deine Daten gehören dir', 'Kleine Apps speichern Daten auf deinem iPhone oder in deiner privaten iCloud. Dienste mit Konto verkaufen deine Daten nie und teilen sie nicht für Werbung.'), ('Eigenständig und doch verbunden', 'Jede App funktioniert für sich. Nutzt du mehrere aus einer Familie, arbeiten sie Hand in Hand.')], [('Cuenta solo cuando tiene sentido', 'Las apps pequeñas funcionan sin registro. Solo piden cuenta los servicios que se sincronizan con la web o están pensados para empresas.'), ('Sin anuncios ni rastreo', 'Las apps no tienen anuncios ni rastreo publicitario y nunca venden lo que haces en ellas.'), ('Tus datos son tuyos', 'Las apps pequeñas guardan los datos en tu teléfono o en tu iCloud privado. Los servicios con cuenta nunca venden tus datos ni los comparten para publicidad.'), ('Independientes, pero conectadas', 'Cada app funciona por sí sola. Si usas varias de una misma familia, se echan una mano.')], [('Konto tylko tam, gdzie ma sens', 'Małe aplikacje działają od razu bez rejestracji. Konta wymagają tylko usługi synchronizowane z przeglądarką lub przeznaczone dla firm.'), ('Bez reklam i śledzenia', 'Aplikacje nie mają reklam ani śledzenia reklamowego i nikomu nie sprzedają tego, co w nich robisz.'), ('Twoje dane są twoje', 'Małe aplikacje trzymają dane w telefonie lub w twoim prywatnym iCloud. Usługi z kontem nigdy nie sprzedają danych ani nie udostępniają ich do reklam.'), ('Niezależne, ale połączone', 'Każda aplikacja działa samodzielnie. Jeśli używasz kilku z jednej rodziny, współpracują ze sobą.')]],
   "get": ["Získat", "Get", "Získať", "Laden", "Obtener", "Pobierz"],
   "soon": ["Brzy", "Coming soon", "Čoskoro", "Bald verfügbar", "Próximamente", "Wkrótce"],
   "testflight": ["Beta na TestFlightu", "Beta on TestFlight", "Beta na TestFlighte", "Beta über TestFlight", "Beta en TestFlight", "Beta w TestFlight"],
@@ -92,20 +58,18 @@ T = {
   "made": ["Malé appky pro iPhone, vyrobené v Česku.", "Small iPhone apps, made in Czechia.", "Malé aplikácie pre iPhone, vyrobené v Česku.",
            "Kleine iPhone-Apps, gemacht in Tschechien.", "Pequeñas apps para iPhone, hechas en Chequia.", "Małe aplikacje na iPhone’a, stworzone w Czechach."],
   "lang": ["Jazyk", "Language", "Jazyk", "Sprache", "Idioma", "Język"],
-  "hero_hl": ["zjednoduší život", "life easier", "zjednodušia život", "leichter", "más fácil", "ułatwiają życie"],
-  "count": ["{n} appek pro iPhone a pořád přibývají", "{n} iPhone apps and counting", "{n} aplikácií pre iPhone a stále pribúdajú",
-            "{n} iPhone-Apps und es werden mehr", "{n} apps para iPhone y contando", "{n} aplikacji na iPhone’a i wciąż przybywa"],
+  "hero_hl": ['ulehčí život', 'life easier', 'uľahčia život', 'leichter', 'más fácil', 'ułatwiają życie'],
+  "count": ['{n} aplikací pro iPhone, Mac a web', '{n} apps for iPhone, Mac and web', '{n} aplikácií pre iPhone, Mac a web', '{n} Apps für iPhone, Mac und Web', '{n} apps para iPhone, Mac y web', '{n} aplikacji na iPhone’a, Maca i web'],
   "cta_apps": ["Prohlédnout appky", "Explore the apps", "Pozrieť aplikácie", "Apps entdecken", "Ver las apps", "Zobacz aplikacje"],
-  "wall": ["Jedna rodina. Žádné účty. Žádné reklamy.", "One family. No accounts. No ads.", "Jedna rodina. Žiadne účty. Žiadne reklamy.",
-           "Eine Familie. Keine Konten. Keine Werbung.", "Una familia. Sin cuentas. Sin anuncios.", "Jedna rodzina. Bez kont. Bez reklam."],
+  "wall": ['Jedna rodina. Míň starostí.', 'One family. Fewer worries.', 'Jedna rodina. Menej starostí.', 'Eine Familie. Weniger Sorgen.', 'Una familia. Menos preocupaciones.', 'Jedna rodzina. Mniej zmartwień.'],
   "support": ["Podpora", "Support", "Podpora", "Support", "Soporte", "Wsparcie"],
   "support_title": ["Podpora a kontakt", "Support and contact", "Podpora a kontakt", "Support und Kontakt", "Soporte y contacto", "Wsparcie i kontakt"],
-  "support_lead": ["Něco nefunguje, máš nápad nebo dotaz k některé appce EasyLife? Napiš nám, odpovídáme obvykle do pár dní.",
-                   "Something not working, got an idea or a question about an EasyLife app? Write to us – we usually reply within a few days.",
-                   "Niečo nefunguje, máš nápad alebo otázku k niektorej aplikácii EasyLife? Napíš nám, odpovedáme zvyčajne do pár dní.",
-                   "Funktioniert etwas nicht, hast du eine Idee oder eine Frage zu einer EasyLife-App? Schreib uns – wir antworten meist innerhalb weniger Tage.",
-                   "¿Algo no funciona, tienes una idea o una pregunta sobre una app de EasyLife? Escríbenos; solemos responder en pocos días.",
-                   "Coś nie działa, masz pomysł albo pytanie o aplikację EasyLife? Napisz do nas – zwykle odpowiadamy w ciągu kilku dni."],
+  "support_lead": ["Něco nefunguje, máš nápad nebo dotaz k některé appce EasyForLife? Napiš nám, odpovídáme obvykle do pár dní.",
+                   "Something not working, got an idea or a question about an EasyForLife app? Write to us – we usually reply within a few days.",
+                   "Niečo nefunguje, máš nápad alebo otázku k niektorej aplikácii EasyForLife? Napíš nám, odpovedáme zvyčajne do pár dní.",
+                   "Funktioniert etwas nicht, hast du eine Idee oder eine Frage zu einer EasyForLife-App? Schreib uns – wir antworten meist innerhalb weniger Tage.",
+                   "¿Algo no funciona, tienes una idea o una pregunta sobre una app de EasyForLife? Escríbenos; solemos responder en pocos días.",
+                   "Coś nie działa, masz pomysł albo pytanie o aplikację EasyForLife? Napisz do nas – zwykle odpowiadamy w ciągu kilku dni."],
   "support_mail": ["Napsat e-mail", "Send an email", "Napísať e-mail", "E-Mail schreiben", "Enviar un correo", "Napisz e-mail"],
   "support_hint": ["Uveď prosím název appky, model iPhonu a verzi iOS. U chyby pomůže i snímek obrazovky.",
                    "Please mention the app name, your iPhone model and iOS version. For bugs, a screenshot helps too.",
@@ -115,43 +79,48 @@ T = {
                    "Podaj nazwę aplikacji, model iPhone’a i wersję iOS. Przy błędzie pomoże też zrzut ekranu."],
   "faq_title": ["Časté otázky", "FAQ", "Časté otázky", "Häufige Fragen", "Preguntas frecuentes", "Częste pytania"],
   "faq": [
-    [("Potřebuju účet nebo registraci?", "Ne. Appky EasyLife fungují bez registrace a přihlašování. Jedinou výjimkou je Cestovníček, který účet používá kvůli synchronizaci s webem."),
+    [('Potřebuju účet nebo registraci?', 'Malé appky pro každý den ne. Účet potřebují jen služby s webovou verzí a nástroje pro firmy – u každé appky to uvidíš na štítku „S účtem“ nebo „Účet volitelný“.'),
      ("Kde jsou moje data?", "V tvém iPhonu, a pokud appka synchronizuje, v tvém soukromém iCloudu. My k nim přístup nemáme. Podrobnosti najdeš v zásadách ochrany soukromí každé appky."),
      ("Jak přenesu data na nový iPhone?", "Appky se synchronizací přes iCloud si data přenesou samy, když se na novém iPhonu přihlásíš stejným Apple ID. Ostatní data se přenesou se zálohou iPhonu."),
      ("Jak svá data smažu?", "Smazáním appky se smažou data v zařízení. Data v iCloudu smažeš v Nastavení → tvoje jméno → iCloud → Spravovat úložiště."),
      ("Jak se dostanu do beta verze?", "Některé appky jsou zatím v beta testu přes TestFlight. Napiš nám e-mail a pošleme ti pozvánku."),
      ("Mám nápad na novou funkci", "Sem s ním! Napiš nám e-mail – nápady od uživatelů čteme všechny.")],
-    [("Do I need an account?", "No. EasyLife apps work without sign-up or login. The only exception is Cestovníček, which uses an account to sync with the web."),
+    [('Do I need an account?', 'Not for the small everyday apps. Only services with a web version and business tools need an account – each app shows an “Account” or “Account optional” label.'),
      ("Where is my data?", "On your iPhone and, if the app syncs, in your private iCloud. We have no access to it. Each app’s privacy policy has the details."),
      ("How do I move my data to a new iPhone?", "Apps that sync via iCloud move your data automatically when you sign in with the same Apple ID. Everything else comes over with your iPhone backup."),
      ("How do I delete my data?", "Deleting the app removes the data on your device. Data in iCloud can be deleted in Settings → your name → iCloud → Manage Storage."),
      ("How do I join a beta?", "Some apps are still in beta testing on TestFlight. Send us an email and we’ll invite you."),
      ("I have an idea for a feature", "Great! Send us an email – we read every suggestion.")],
-    [("Potrebujem účet alebo registráciu?", "Nie. Aplikácie EasyLife fungujú bez registrácie a prihlasovania. Jedinou výnimkou je Cestovníček, ktorý účet používa kvôli synchronizácii s webom."),
+    [('Potrebujem účet alebo registráciu?', 'Malé appky na každý deň nie. Účet potrebujú len služby s webovou verziou a nástroje pre firmy – pri každej aplikácii to uvidíš na štítku „S účtom“ alebo „Účet voliteľný“.'),
      ("Kde sú moje dáta?", "V tvojom iPhone a ak aplikácia synchronizuje, v tvojom súkromnom iCloude. My k nim prístup nemáme. Podrobnosti nájdeš v zásadách ochrany súkromia každej aplikácie."),
      ("Ako prenesiem dáta do nového iPhonu?", "Aplikácie so synchronizáciou cez iCloud si dáta prenesú samy, keď sa na novom iPhone prihlásiš rovnakým Apple ID. Ostatné dáta sa prenesú so zálohou iPhonu."),
      ("Ako svoje dáta zmažem?", "Zmazaním aplikácie sa zmažú dáta v zariadení. Dáta v iCloude zmažeš v Nastaveniach → tvoje meno → iCloud → Spravovať úložisko."),
      ("Ako sa dostanem do beta verzie?", "Niektoré aplikácie sú zatiaľ v beta teste cez TestFlight. Napíš nám e-mail a pošleme ti pozvánku."),
      ("Mám nápad na novú funkciu", "Sem s ním! Napíš nám e-mail – nápady od používateľov čítame všetky.")],
-    [("Brauche ich ein Konto?", "Nein. EasyLife-Apps funktionieren ohne Registrierung und Login. Einzige Ausnahme ist Cestovníček, das ein Konto für die Synchronisierung mit dem Web nutzt."),
+    [('Brauche ich ein Konto?', 'Für die kleinen Alltags-Apps nicht. Ein Konto brauchen nur Dienste mit Web-Version und Business-Tools – jede App zeigt das mit „Mit Konto“ oder „Konto optional“.'),
      ("Wo sind meine Daten?", "Auf deinem iPhone und, wenn die App synchronisiert, in deiner privaten iCloud. Wir haben keinen Zugriff darauf. Details stehen in der Datenschutzerklärung jeder App."),
      ("Wie übertrage ich meine Daten auf ein neues iPhone?", "Apps mit iCloud-Synchronisierung übernehmen deine Daten automatisch, wenn du dich mit derselben Apple-ID anmeldest. Alles andere kommt mit dem iPhone-Backup mit."),
      ("Wie lösche ich meine Daten?", "Wenn du die App löschst, werden die Daten auf dem Gerät gelöscht. Daten in iCloud löschst du unter Einstellungen → dein Name → iCloud → Speicher verwalten."),
      ("Wie komme ich in eine Beta?", "Einige Apps sind noch in der Beta-Phase über TestFlight. Schreib uns eine E-Mail und wir laden dich ein."),
      ("Ich habe eine Idee für eine Funktion", "Her damit! Schreib uns eine E-Mail – wir lesen jeden Vorschlag.")],
-    [("¿Necesito una cuenta?", "No. Las apps de EasyLife funcionan sin registro ni inicio de sesión. La única excepción es Cestovníček, que usa una cuenta para sincronizarse con la web."),
+    [('¿Necesito una cuenta?', 'Para las apps pequeñas del día a día, no. Solo los servicios con versión web y las herramientas para empresas necesitan cuenta; cada app lo indica con «Con cuenta» o «Cuenta opcional».'),
      ("¿Dónde están mis datos?", "En tu iPhone y, si la app sincroniza, en tu iCloud privado. Nosotros no tenemos acceso. La política de privacidad de cada app tiene los detalles."),
      ("¿Cómo paso mis datos a un iPhone nuevo?", "Las apps que sincronizan por iCloud traen tus datos solas al iniciar sesión con el mismo Apple ID. El resto se transfiere con la copia de seguridad del iPhone."),
      ("¿Cómo borro mis datos?", "Al eliminar la app se borran los datos del dispositivo. Los datos de iCloud se borran en Ajustes → tu nombre → iCloud → Gestionar almacenamiento."),
      ("¿Cómo me apunto a una beta?", "Algunas apps están aún en fase beta en TestFlight. Escríbenos un correo y te enviaremos una invitación."),
      ("Tengo una idea para una función", "¡Cuéntanosla! Escríbenos un correo: leemos todas las sugerencias.")],
-    [("Czy potrzebuję konta?", "Nie. Aplikacje EasyLife działają bez rejestracji i logowania. Jedynym wyjątkiem jest Cestovníček, który używa konta do synchronizacji z wersją webową."),
+    [('Czy potrzebuję konta?', 'Do małych aplikacji na co dzień nie. Konta wymagają tylko usługi z wersją webową i narzędzia dla firm – każda aplikacja ma etykietę „Z kontem” lub „Konto opcjonalne”.'),
      ("Gdzie są moje dane?", "Na twoim iPhonie, a jeśli aplikacja synchronizuje, w twoim prywatnym iCloud. My nie mamy do nich dostępu. Szczegóły znajdziesz w polityce prywatności każdej aplikacji."),
      ("Jak przenieść dane na nowego iPhone’a?", "Aplikacje synchronizujące przez iCloud przeniosą dane same, gdy zalogujesz się tym samym Apple ID. Resztę przeniesie kopia zapasowa iPhone’a."),
      ("Jak usunąć swoje dane?", "Usunięcie aplikacji kasuje dane w urządzeniu. Dane w iCloud usuniesz w Ustawieniach → twoje imię → iCloud → Zarządzaj pamięcią."),
      ("Jak dołączyć do wersji beta?", "Niektóre aplikacje są jeszcze w fazie beta w TestFlight. Napisz do nas e-mail, a wyślemy zaproszenie."),
      ("Mam pomysł na nową funkcję", "Śmiało! Napisz do nas e-mail – czytamy wszystkie propozycje.")]],
-  "skip": ["Přejít na obsah", "Skip to content", "Prejsť na obsah", "Zum Inhalt", "Ir al contenido", "Przejdź do treści"],
+  "skip": ["Přejít na obsah", "Skip to content", "Prejsť na obsah", "Zum Inhalt", "Ir al contenido", "Przejdź do treści"],  "work": ['Pro práci', 'For work', 'Pre prácu', 'Für die Arbeit', 'Para el trabajo', 'Do pracy'],
+  "work_lead": ['Kancelář a profesionální nástroje pro firmy: faktury, e-maily, zakázky a klienti. Na webu i v telefonu, s vlastním účtem.', 'Office tools and professional software for businesses: invoices, email, jobs and clients. On the web and on your phone, with your own account.', 'Kancelária a profesionálne nástroje pre firmy: faktúry, e-maily, zákazky a klienti. Na webe aj v telefóne, s vlastným účtom.', 'Büro-Tools und Profi-Software für Unternehmen: Rechnungen, E-Mails, Aufträge und Kunden. Im Web und auf dem iPhone, mit eigenem Konto.', 'Herramientas de oficina y software profesional para empresas: facturas, correo, encargos y clientes. En la web y en el móvil, con tu propia cuenta.', 'Narzędzia biurowe i profesjonalne oprogramowanie dla firm: faktury, poczta, zlecenia i klienci. W przeglądarce i w telefonie, z własnym kontem.'],
+  "acc_req": ['S účtem', 'Account', 'S účtom', 'Mit Konto', 'Con cuenta', 'Z kontem'],
+  "acc_opt": ['Účet volitelný', 'Account optional', 'Účet voliteľný', 'Konto optional', 'Cuenta opcional', 'Konto opcjonalne'],
+  "open_web": ['Otevřít web', 'Open web app', 'Otvoriť web', 'Web-App öffnen', 'Abrir la web', 'Otwórz w przeglądarce'],
+  "platforms": ['Platformy', 'Platforms', 'Platformy', 'Plattformen', 'Plataformas', 'Platformy']
 }
 
 def t(key, lang):
@@ -175,11 +144,17 @@ ICONS = {  # 24×24, stroke = currentColor
   "link": '<path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/>',
   "check": '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
   "arrow-left": '<path d="M19 12H5M11 18l-6-6 6-6"/>',
+  "navigace": '<path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/>',
+  "zdravi": '<path d="M12 20s-7.5-4.6-9-9.4C2 7.3 4.2 4.5 7.3 4.5c1.9 0 3.4 1 4.7 2.7 1.3-1.7 2.8-2.7 4.7-2.7 3.1 0 5.3 2.8 4.3 6.1-1.5 4.8-9 9.4-9 9.4z"/><path d="M6.5 12h2.5l1.5-2.5 2 5 1.5-2.5h3.5"/>',
+  "kancelar": '<path d="M3 13.5 5.5 5h13l2.5 8.5V19a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13.5h5l1 2.5h6l1-2.5h5"/>',
+  "firmy": '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/>',
+  "easylife": '<rect x="3" y="3" width="8" height="8" rx="2.5"/><rect x="13" y="3" width="8" height="8" rx="2.5"/><rect x="3" y="13" width="8" height="8" rx="2.5"/><circle cx="17" cy="17" r="4"/>',
+  "globe": '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.8 3.5 5.8 3.5 9s-1 6.2-3.5 9c-2.5-2.8-3.5-5.8-3.5-9s1-6.2 3.5-9z"/>',
   "shield": '<path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/>',
 }
 
 def icon(name, cls="ico"):
-    return f'<svg class="{cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>'
+    return f'<svg class="{cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS.get(name, ICONS["easylife"])}</svg>'
 
 LOGO = ('<svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="13" height="13" rx="4" fill="#2563eb"/>'
         '<rect x="17" y="2" width="13" height="13" rx="4" fill="#e8731c"/><rect x="2" y="17" width="13" height="13" rx="4" fill="#0f9a62"/>'
@@ -340,14 +315,36 @@ background:linear-gradient(160deg,color-mix(in oklab,var(--c) 20%,var(--surface)
 .faq{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:0 20px;margin:0 0 12px;box-shadow:var(--shadow)}
 .faq summary{cursor:pointer;font:800 1.08rem var(--display);padding:18px 0}.faq p{margin:0 0 18px;color:var(--muted)}
 .page-top{position:relative;margin-top:-76px;padding:120px 0 30px;overflow:hidden;isolation:isolate}.page-top h1{position:relative;z-index:2}.page-top .lead{position:relative;z-index:2;margin-left:0}
-.ico{flex:none}.chip .short{display:none}
+.ico{flex:none}
+.logo-mark{display:grid;place-items:center;background:#fff;padding:0;aspect-ratio:1}.logo-mark .logo{width:74%;height:auto;aspect-ratio:1}
+.t-hero{grid-column:1/-1;grid-row:span 1;padding-left:clamp(110px,14vw,170px);min-height:212px}.t-hero .app-icon{width:clamp(76px,10vw,124px);height:auto;aspect-ratio:1;top:50%;left:24px;transform:translateY(-50%)}
+.t-hero:hover .app-icon{transform:translateY(-50%) rotate(-10deg) scale(1.08)}.t-hero h3{font-size:clamp(1.6rem,3vw,2.4rem)}.t-hero p{font-size:1.05rem}
+.fam-duo{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}.bento.two{grid-template-columns:repeat(2,1fr)}
+.t-tall{grid-row:span 2}.t-tall .app-icon{width:96px;height:96px}.t-tall h3{font-size:1.6rem}.t-tall p{-webkit-line-clamp:4}
+@media (max-width:980px){.fam-duo{grid-template-columns:1fr}}
+@media (max-width:560px){.bento{grid-auto-rows:auto}.bento .tile{min-height:196px;padding-top:80px}.bento .t-big,.bento .t-tall{padding-top:100px}
+.bento .t-hero{padding:100px 16px 16px;min-height:0}.t-hero .app-icon{top:16px;left:16px;transform:none;width:72px}.t-hero:hover .app-icon{transform:rotate(-10deg) scale(1.08)}
+.t-tall{grid-row:span 1}.t-tall .app-icon{width:52px;height:52px}.t-tall h3{font-size:1.1rem}.t-tall p{-webkit-line-clamp:2}}
+.tile-foot{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:2px}.tile-foot .priv{margin:0}
+.webl{display:inline-flex;align-items:center;gap:5px;font-size:.8rem;font-weight:800;color:var(--ink);text-decoration:none}.webl:hover{text-decoration:underline}.webl .ico,.btn .ico{width:16px;height:16px}
+.chip.acc{background:color-mix(in oklab,var(--c,var(--blue)) 18%,var(--surface));font-size:.72rem;padding:3px 9px;box-shadow:none}
+.chip.acc::before{content:"";width:12px;height:12px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21a8 8 0 0 1 16 0'/%3E%3C/svg%3E") center/contain no-repeat}
+.app-head .chip.acc{font-size:.85rem;padding:6px 12px}
+.plats{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}.plats span{font-size:.8rem;font-weight:800;letter-spacing:.02em;border:1.5px solid var(--line);border-radius:8px;padding:3px 9px;color:var(--muted)}
+/* Pro práci: tmavý blok s mřížkou */
+.work{--bg:#0d0e11;--surface:#181a20;--surface2:#23252d;--ink:#f1f2f4;--muted:#a3a9b3;--line:#2c2f38;color:var(--ink);background:#0d0e11;border-radius:44px;padding:56px clamp(18px,4vw,48px) 20px;position:relative;overflow:hidden;isolation:isolate;
+background-image:linear-gradient(rgb(255 255 255/.045) 1px,transparent 1px),linear-gradient(90deg,rgb(255 255 255/.045) 1px,transparent 1px);background-size:44px 44px}
+.work::before{content:"";position:absolute;width:60%;aspect-ratio:1;right:-20%;top:-30%;border-radius:50%;background:radial-gradient(circle,#6366f1 0%,transparent 65%);opacity:.35;z-index:-1}
+.work::after{content:"";position:absolute;width:50%;aspect-ratio:1;left:-15%;bottom:-25%;border-radius:50%;background:radial-gradient(circle,#d9480f 0%,transparent 65%);opacity:.25;z-index:-1}
+.work .sec-head h2{background:linear-gradient(90deg,#fff,#a5b4fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.work .tile{background:linear-gradient(155deg,color-mix(in oklab,var(--c) 34%,#181a20),#14161b 75%)}.chip .short{display:none}
 html{overflow-x:hidden}
 .fly-layer.small .fly{--k:.8}
 .hero::after,.app-top::after,.page-top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(rgb(0 0 0/0),var(--bg));z-index:0;pointer-events:none}
 @media (max-width:980px){.bento{grid-template-columns:repeat(2,1fr)}.stickers{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:820px){.app-head{grid-template-columns:1fr}.hero-icon{grid-row:1;justify-self:start;width:150px}.features li,.features li:nth-child(-n+2){grid-column:span 6}
 .fly{--k:.56}.fly.side,.fly-layer.small{display:none}.hero{padding:210px 0 170px;min-height:0}.wall{height:340px}}
-@media (max-width:560px){.bento{grid-auto-rows:196px;gap:12px}.t-big{grid-row:span 1;padding:18px}.t-big .app-icon{width:72px;height:72px;top:16px;left:16px}.t-big h3{font-size:1.6rem}.t-big p{-webkit-line-clamp:2;font-size:.95rem}
+@media (max-width:560px){.bento{grid-auto-rows:auto;gap:12px}.t-big{grid-row:span 1;padding:18px}.t-big .app-icon{width:72px;height:72px;top:16px;left:16px}.t-big h3{font-size:1.6rem}.t-big p{-webkit-line-clamp:2;font-size:.95rem}
 .tile:not(.t-big) .chip .long{display:none}.tile:not(.t-big) .chip .short{display:inline}.tile{padding:16px;border-radius:24px}
 .tile .app-icon{width:52px;height:52px;top:14px;left:14px}.tile .status{top:14px;right:12px}.tile h3{font-size:1.1rem}.tile p{font-size:.86rem}
 .stickers{grid-template-columns:1fr}.nav>a{display:none}.marquee{margin-bottom:56px}.marquee.two{margin-top:-80px}}
@@ -392,7 +389,7 @@ def page(lang, slug, title, desc, body, operator, relative=True):
 {head_script(lang, slug)}<title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{BASE}{url(lang, slug)}">{alts}
-<meta property="og:type" content="website"><meta property="og:site_name" content="EasyLife"><meta property="og:title" content="{esc(title)}">
+<meta property="og:type" content="website"><meta property="og:site_name" content="EasyForLife"><meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{BASE}{url(lang, slug)}">
 <meta property="og:image" content="{BASE}/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -403,11 +400,11 @@ def page(lang, slug, title, desc, body, operator, relative=True):
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;display=swap">
 <link rel="stylesheet" href="/site.css"></head>
 <body><a class="skip" href="#main">{t("skip", lang)}</a>
-<div class="wrap"><header class="top"><a class="brand" href="{url(lang)}">{LOGO}EasyLife</a>
+<div class="wrap"><header class="top"><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a>
 <nav class="nav"><a href="{url(lang)}#apps">{t("apps", lang)}</a><a href="{url(lang, SUPPORT)}">{t("support", lang)}</a>
 <span class="langs" aria-label="{t("lang", lang)}">{langs}</span></nav></header></div>
 <main id="main">{body}</main>
-<footer><div class="wrap row"><div><a class="brand" href="{url(lang)}">{LOGO}EasyLife</a><p>{t("made", lang)}</p>
+<footer><div class="wrap row"><div><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a><p>{t("made", lang)}</p>
 <p>{t("operator", lang)}: {esc(operator[0 if lang in ("cs", "sk") else 1])}</p></div>
 <p><a href="{url(lang, SUPPORT)}">{t("support", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a></p></div></footer>
 {FOOT_SCRIPT}</body></html>
@@ -440,10 +437,16 @@ class Site:
         for a in self.apps:
             f = CONTENT / f"{a['id']}.json"
             a["site"] = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+            if a["site"].get("account"):  # ověřený stav z repa appky má přednost před katalogem
+                a["account"] = a["site"]["account"]
         self.by_id = {a["id"]: a for a in self.apps}
 
     # --- obrázky ---
     def icon_source(self, app_id):
+        given = self.by_id[app_id]["site"].get("icon") if app_id in self.by_id else None
+        if given:
+            path = pathlib.Path(given).expanduser()
+            return path if path.exists() else None
         folder = ROOT / FOLDERS.get(app_id, "")
         if app_id not in FOLDERS:
             folder = next((d for d in ROOT.iterdir() if d.is_dir() and d.name.lower() == app_id), None)
@@ -496,6 +499,8 @@ class Site:
         return a["site"].get("color") or self.colors.get(a["id"]) or FAMILY_COLORS.get(a["family"], "#2563eb")
 
     def app_icon(self, a, size=60):
+        if a["id"] == "easylife" and not self.has_icon(a):  # EasyForLife Hub: ikona = logo
+            return f'<span class="app-icon logo-mark" aria-hidden="true">{LOGO}</span>'
         if (self.out / "icons" / f"{a['id']}.webp").exists():
             return f'<img class="app-icon" src="/icons/{a["id"]}.webp" width="{size}" height="{size}" alt="" loading="lazy">'
         return f'<span class="app-icon mark" style="--c:{self.color(a)}" aria-hidden="true">{esc(a["name"][0])}</span>'
@@ -506,7 +511,7 @@ class Site:
         return f'<span class="chip">{t("testflight" if a["site"].get("status") == "testflight" else "soon", lang)}</span>'
 
     def privacy_link(self, a, lang, cls="ghost"):
-        href = self.privacy.get(a["id"]) or self.external.get(a["name"])
+        href = self.privacy.get(a["id"]) or self.external.get(a["name"]) or a["site"].get("privacy")
         if not href:
             return ""
         if href.startswith("/") and lang not in ("cs", "sk"):
@@ -522,15 +527,30 @@ class Site:
     def status(self, a, lang):
         if a.get("store"):
             return f'<a class="btn" style="--c:{self.color(a)}" href="{esc(a["store"])}">{t("get", lang)}</a>'
-        tf = a["site"].get("status") == "testflight"
+        st = a["site"].get("status")
+        if st == "live":  # běžící webová služba – stav neukazujeme, akce je „Otevřít web“
+            return ""
+        tf = st == "testflight"
         return (f'<span class="chip {"tf" if tf else "soon"}"><span class="long">{t("testflight" if tf else "soon", lang)}</span>'
                 f'<span class="short">{"Beta" if tf else t("soon", lang)}</span></span>')
+
+    def account(self, a, lang):
+        acc = a.get("account") or "none"
+        if acc == "none":
+            return ""
+        return f'<span class="chip acc {acc}">{t("acc_req" if acc == "required" else "acc_opt", lang)}</span>'
+
+    def web_btn(self, a, lang, cls="btn"):
+        if not a.get("web") or a["web"].rstrip("/") == BASE:
+            return ""
+        return f'<a class="{cls}" style="--c:{self.color(a)}" href="{esc(a["web"])}">{icon("globe")}{t("open_web", lang)}</a>'
 
     def tile(self, a, lang, size, k):
         big = '<img class="ghost-icon" src="/icons/{}.webp" alt="" loading="lazy">'.format(a["id"]) if self.has_icon(a) and size != "t-n" else ""
         return (f'<article class="tile {size} rv" style="--c:{self.color(a)};--rd:{k * 60}ms">{big}{self.app_icon(a, 132 if size == "t-big" else 64)}'
                 f'<div class="status">{self.status(a, lang)}</div>'
-                f'<h3><a href="{url(lang, a["id"])}">{esc(a["name"])}</a></h3><p>{esc(a["tagline"][lang])}</p>{self.privacy_link(a, lang, "priv")}</article>')
+                f'<h3><a href="{url(lang, a["id"])}">{esc(a["name"])}</a></h3><p>{esc(a["tagline"][lang])}</p>'
+                f'<div class="tile-foot">{self.account(a, lang)}{self.web_btn(a, lang, "webl")}{self.privacy_link(a, lang, "priv")}</div></article>')
 
     def bento(self, apps, lang, featured=True):
         """Velikosti dlaždic tak, aby 4sloupcová mřížka vyšla bez děr: první velká, zbytek doplnit širokými."""
@@ -543,6 +563,28 @@ class Site:
             for i in normals[::-1][:need]:
                 sizes[i] = "t-wide"
         return '<div class="bento">' + "".join(self.tile(a, lang, s, k) for k, (a, s) in enumerate(zip(apps, sizes))) + "</div>"
+
+    def families_html(self, fams, lang):
+        """Rodiny pod sebou; sousední malé rodiny (1–2 appky) vedle sebe, ať v mřížce nejsou díry."""
+        def one(fid, f, apps, duo=False):
+            grid = self.bento(apps, lang) if not duo else (
+                '<div class="bento two">' + "".join(self.tile(a, lang, "t-big" if len(apps) == 1 else "t-tall", k) for k, a in enumerate(apps)) + "</div>")
+            return (f'<div class="family" id="{fid}"><h3 class="fam-title rv" style="--fc:{FAMILY_COLORS.get(fid, "#555")}">{icon(fid)}{esc(f["name"][lang])}'
+                    f'<small>{len(apps)}</small></h3>{grid}</div>')
+        out, i = "", 0
+        while i < len(fams):
+            if i + 1 < len(fams) and len(fams[i][2]) <= 2 and len(fams[i + 1][2]) <= 2:
+                out += f'<div class="fam-duo">{one(*fams[i], duo=True)}{one(*fams[i + 1], duo=True)}</div>'
+                i += 2
+            elif len(fams[i][2]) == 1:  # samotná appka v rodině (EasyForLife Hub) – dlaždice přes celou šířku
+                fid, f, apps = fams[i]
+                out += (f'<div class="family" id="{fid}"><h3 class="fam-title rv" style="--fc:{FAMILY_COLORS.get(fid, "#555")}">{icon(fid)}{esc(f["name"][lang])}</h3>'
+                        f'<div class="bento">{self.tile(apps[0], lang, "t-hero", 0)}</div></div>')
+                i += 1
+            else:
+                out += one(*fams[i])
+                i += 1
+        return out
 
     def family_apps(self, fid):
         return [a for a in self.apps if a["family"] == fid]
@@ -562,17 +604,17 @@ class Site:
     # --- stránky ---
     def home(self, lang):
         i = LANGS.index(lang)
-        pc = [("user-x", "var(--blue)", "-3deg"), ("eye-off", "var(--pink)", "2deg"), ("lock", "var(--green)", "-1.5deg")]
+        pc = [("eye-off", "var(--pink)", "-3deg"), ("user-x", "var(--blue)", "2deg"), ("globe", "var(--green)", "-1.5deg")]
         pills = "".join(f'<li style="--pc:{c};--pr:{r}">{icon(n)}{t("pills", lang)[k]}</li>' for k, (n, c, r) in enumerate(pc))
         h = t("hero", lang).replace(t("hero_hl", lang), f'<span class="hl">{t("hero_hl", lang)}</span>')
         fly = self.fly_icons(self.icon_first()).replace("{u}", url(lang))
         fams = ""
+        groups = {"main": [], "work": []}
         for fid, f in self.families.items():
             apps = self.family_apps(fid)
-            if not apps:
-                continue
-            fams += (f'<div class="family" id="{fid}"><h3 class="fam-title rv" style="--fc:{FAMILY_COLORS.get(fid, "#555")}">{icon(fid)}{esc(f["name"][lang])}<small>{len(apps)}</small></h3>'
-                     f'{self.bento(apps, lang)}</div>')
+            if apps:
+                groups["work" if fid in WORK else "main"].append((fid, f, apps))
+        fams, work = self.families_html(groups["main"], lang), self.families_html(groups["work"], lang)
         sc = [("user-x", "var(--blue)", "-2deg"), ("eye-off", "var(--pink)", "1.5deg"), ("lock", "var(--green)", "-1deg"), ("link", "var(--orange)", "2deg")]
         prin = "".join(f'<div class="sticker rv" style="--sc:{c};--sr:{r};--rd:{k * 90}ms">{icon(n)}<h3>{esc(hd)}</h3><p>{esc(p)}</p></div>'
                        for k, ((n, c, r), (hd, p)) in enumerate(zip(sc, T["principles"][i])))
@@ -584,6 +626,7 @@ class Site:
                 f'<a class="btn big" href="#apps">{t("cta_apps", lang)} <span>↓</span></a></div></section>'
                 + '<div class="mq-wrap">' + self.marquee(order, lang) + self.marquee(order[::-1], lang, "two") + "</div>" +
                 f'<section id="apps"><div class="wrap"><div class="sec-head rv"><h2>{t("apps", lang)}</h2><p>{t("apps_lead", lang)}</p></div>{fams}</div></section>'
+                + (f'<section id="prace"><div class="wrap"><div class="work"><div class="sec-head rv"><h2>{t("work", lang)}</h2><p>{t("work_lead", lang)}</p></div>{work}</div></div></section>' if work else "") +
                 f'<section><div class="wrap"><div class="sec-head rv"><h2>{t("how", lang)}</h2></div><div class="stickers">{prin}</div></div></section>'
                 f'<section><div class="wrap"><div class="wall rv"><div class="wall-grid" aria-hidden="true">{wall}</div>'
                 f'<div class="wall-text"><h2>{t("wall", lang)}</h2></div></div></div></section>')
@@ -591,7 +634,7 @@ class Site:
 
     def support(self, lang):
         i = LANGS.index(lang)
-        mail = f"mailto:{CONTACT}?subject=EasyLife"
+        mail = f"mailto:{CONTACT}?subject=EasyForLife"
         faq = "".join(f'<details class="faq rv"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in T["faq"][i])
         body = (f'<section class="page-top"><div class="blobs"><i></i><i></i><i></i></div><div class="wrap"><div class="detail">'
                 f'<h1>{t("support_title", lang)}</h1><p class="lead">{t("support_lead", lang)}</p>'
@@ -599,7 +642,7 @@ class Site:
                 f'<p class="note">{icon("check")}<span>{t("support_hint", lang)}</span></p></div></div></section>'
                 f'<div class="wrap"><div class="detail"><h2 class="sub">{t("faq_title", lang)}</h2>{faq}'
                 f'<p class="note">{icon("shield")}<span><a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></span></p></div></div>')
-        return page(lang, SUPPORT, f'{t("support_title", lang)} | EasyLife', t("support_lead", lang), body, self.operator)
+        return page(lang, SUPPORT, f'{t("support_title", lang)} | EasyForLife', t("support_lead", lang), body, self.operator)
 
     def detail(self, a, lang):
         s, c, fam = a["site"], self.color(a), self.families[a["family"]]
@@ -608,6 +651,9 @@ class Site:
         feats = s.get("features", {}).get(lang) or []
         web = f'<a class="ghost" href="{esc(s["web"])}">{esc(s["web"].split("//")[-1].rstrip("/"))} ↗</a>' if s.get("web") else ""
         others = [o for o in self.family_apps(a["family"]) if o["id"] != a["id"]]
+        plats = ('<p class="plats">' + "".join(f'<span>{PLATFORMS.get(x, x)}</span>' for x in a["platforms"]) + "</p>") if a.get("platforms") else ""
+        if a.get("web") and s.get("web") == a.get("web"):
+            web = ""
         flyers = [o for o in others + [o for o in self.icon_first() if o not in others and o is not a] if self.has_icon(o)]
         fly = self.fly_icons(flyers[:6], FLY_DETAIL).replace("{u}", "/" if lang == "cs" else f"/{lang}/")
         p = self.privacy_link(a, lang, "")
@@ -617,7 +663,7 @@ class Site:
                 f'<div class="fly-layer small" aria-hidden="true">{fly}</div><div class="wrap">'
                 f'<a class="back" href="{url(lang)}#{a["family"]}">{icon("arrow-left")}{t("back", lang)}</a>'
                 f'<div class="app-head"><div><a class="fam-chip" style="--fc:{fc}" href="{url(lang)}#{a["family"]}">{icon(a["family"])}{esc(fam["name"][lang])}</a>'
-                f'<h1>{esc(a["name"])}</h1><p class="tag">{esc(a["tagline"][lang])}</p><div class="actions">{self.status(a, lang)}{web}</div></div>'
+                f'<h1>{esc(a["name"])}</h1><p class="tag">{esc(a["tagline"][lang])}</p><div class="actions">{self.web_btn(a, lang)}{self.status(a, lang)}{self.account(a, lang)}{web}</div>{plats}</div>'
                 f'<div class="hero-icon">{self.app_icon(a, 300).replace(" loading=\"lazy\"", "")}</div></div></div></section>')
         body += f'<div class="wrap" style="--c:{c}"><article class="detail"><div class="desc rv">{desc}</div>'
         if feats:
@@ -639,7 +685,7 @@ class Site:
         if others:
             body += (f'<section><div class="wrap"><div class="sec-head rv"><h2>{t("family_more", lang).format(f=esc(fam["name"][lang]))}</h2></div>'
                      f'{self.bento(others, lang, featured=len(others) > 2)}</div></section>')
-        title = f'{a["name"]} – {a["tagline"][lang].rstrip(".")} | EasyLife'
+        title = f'{a["name"]} – {a["tagline"][lang].rstrip(".")} | EasyForLife'
         return page(lang, a["id"], title, a["tagline"][lang], body, self.operator)
 
     def write(self, rel, text):
@@ -685,7 +731,7 @@ class Site:
             print(f"web: {DOMAIN} ještě nemíří na GitHub Pages – docs/CNAME se nezapisuje")
         nf = ('<div class="detail"><h1>Stránka nenalezena</h1><p class="lead">Tahle stránka neexistuje. · This page doesn’t exist.</p>'
               f'<p><a class="btn" href="/">{t("back", "cs")} · {t("back", "en")}</a></p></div>')
-        self.write("404.html", page("cs", None, "404 – EasyLife", "EasyLife", nf, self.operator, relative=False).replace(head_script("cs", None), ""))
+        self.write("404.html", page("cs", None, "404 – EasyForLife", "EasyForLife", nf, self.operator, relative=False).replace(head_script("cs", None), ""))
         return [a["id"] for a in self.apps]
 
 def build(out, privacy_apps, external, operator):
