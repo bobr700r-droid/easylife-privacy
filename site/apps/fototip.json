@@ -1,0 +1,80 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "FotoTip je kapesní encyklopedie focení, která funguje i bez internetu. Najdeš v ní návody od expozice po noční oblohu, odpovědi na časté otázky, pózy pro portréty a rady k technice."
+  ],
+  "en": [
+   "FotoTip is a pocket photography encyclopedia that works offline. It has guides from exposure to the night sky, answers to common questions, portrait poses and gear advice."
+  ],
+  "sk": [
+   "FotoTip je vreckový sprievodca fotením, ktorý funguje aj bez internetu. Nájdeš v ňom návody od expozície po nočnú oblohu, odpovede na časté otázky, pózy na portréty a rady k technike."
+  ],
+  "de": [
+   "FotoTip ist ein Foto-Lexikon für die Hosentasche, das auch offline funktioniert. Mit Anleitungen von Belichtung bis Nachthimmel, Antworten auf häufige Fragen, Porträtposen und Technik-Tipps."
+  ],
+  "es": [
+   "FotoTip es una enciclopedia de fotografía de bolsillo que funciona sin conexión. Incluye guías desde la exposición hasta el cielo nocturno, respuestas a preguntas frecuentes, poses de retrato y consejos de equipo."
+  ],
+  "pl": [
+   "FotoTip to kieszonkowa encyklopedia fotografii, która działa bez internetu. Znajdziesz w niej poradniki od ekspozycji po nocne niebo, odpowiedzi na częste pytania, pozy do portretów i porady sprzętowe."
+  ]
+ },
+ "features": {
+  "cs": [
+   "116 návodů a 220 otázek a odpovědí",
+   "32 póz s kresbami a režim „Ukázat modelu“",
+   "Šest kalkulaček včetně ND filtru a hloubky ostrosti",
+   "Databáze 52 fotoaparátů a 109 objektivů",
+   "Taháky nastavení, kontrolní seznamy a slovníček"
+  ],
+  "en": [
+   "116 guides and 220 questions and answers",
+   "32 illustrated poses with a “Show the model” mode",
+   "Six calculators, incl. ND filter and depth of field",
+   "Database of 52 cameras and 109 lenses",
+   "Settings cheat sheets, checklists and a glossary"
+  ],
+  "sk": [
+   "116 návodov a 220 otázok a odpovedí",
+   "32 póz s kresbami a režim „Ukázať modelu“",
+   "Šesť kalkulačiek vrátane ND filtra a hĺbky ostrosti",
+   "Databáza 52 fotoaparátov a 109 objektívov",
+   "Ťaháky nastavení, kontrolné zoznamy a slovník"
+  ],
+  "de": [
+   "116 Anleitungen und 220 Fragen und Antworten",
+   "32 gezeichnete Posen mit „Dem Model zeigen“",
+   "Sechs Rechner, u. a. ND-Filter und Schärfentiefe",
+   "Datenbank mit 52 Kameras und 109 Objektiven",
+   "Spickzettel, Checklisten und Glossar"
+  ],
+  "es": [
+   "116 guías y 220 preguntas y respuestas",
+   "32 poses ilustradas con modo «Mostrar al modelo»",
+   "Seis calculadoras, como filtro ND y profundidad de campo",
+   "Base de datos de 52 cámaras y 109 objetivos",
+   "Chuletas de ajustes, listas de control y glosario"
+  ],
+  "pl": [
+   "116 poradników oraz 220 pytań i odpowiedzi",
+   "32 rysunkowe pozy z trybem „Pokaż modelce”",
+   "Sześć kalkulatorów, m.in. filtr ND i głębia ostrości",
+   "Baza 52 aparatów i 109 obiektywów",
+   "Ściągawki ustawień, listy kontrolne i słowniczek"
+  ]
+ },
+ "links": [
+  {
+   "app": "fotoplan",
+   "text": {
+    "cs": "Naplánuje, kdy bude na focení nejlepší světlo.",
+    "en": "Plans when the light will be best for your shoot.",
+    "sk": "Naplánuje, kedy bude na fotenie najlepšie svetlo.",
+    "de": "Plant, wann das Licht für dein Shooting am besten ist.",
+    "es": "Planifica cuándo habrá la mejor luz para tu sesión.",
+    "pl": "Zaplanuje, kiedy będzie najlepsze światło do zdjęć."
+   }
+  }
+ ]
+}

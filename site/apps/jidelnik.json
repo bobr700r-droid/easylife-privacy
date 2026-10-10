@@ -1,0 +1,80 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Jídelník najde nejlepší restaurace v okolí nebo kdekoli podle adresy a seřadí je podle chytře váženého hodnocení. Pomůže vybrat, kam jít, a zapamatuje si místa, která chceš zkusit."
+  ],
+  "en": [
+   "Jídelník finds the best restaurants nearby or anywhere by address and ranks them by a smartly weighted rating. It helps you decide where to go and remembers the places you want to try."
+  ],
+  "sk": [
+   "Jídelník nájde najlepšie reštaurácie v okolí alebo kdekoľvek podľa adresy a zoradí ich podľa šikovne váženého hodnotenia. Pomôže vybrať, kam ísť, a zapamätá si miesta, ktoré chceš vyskúšať."
+  ],
+  "de": [
+   "Jídelník findet die besten Restaurants in der Nähe oder an jeder Adresse und sortiert sie nach einer klug gewichteten Bewertung. Die App hilft bei der Wahl und merkt sich Lokale, die du ausprobieren willst."
+  ],
+  "es": [
+   "Jídelník encuentra los mejores restaurantes cerca o en cualquier dirección y los ordena con una valoración ponderada de forma inteligente. Te ayuda a elegir y recuerda los sitios que quieres probar."
+  ],
+  "pl": [
+   "Jídelník znajdzie najlepsze restauracje w pobliżu lub pod dowolnym adresem i uszereguje je według sprytnie ważonej oceny. Pomoże wybrać, dokąd iść, i zapamięta miejsca, które chcesz odwiedzić."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Hledání podle kuchyně, okruhu, otevírací doby a ceny",
+   "Filtry služeb: rozvoz, zahrádka, pes, bezbariérovost",
+   "Mapa a detail s fotkami a recenzemi",
+   "Seznamy Oblíbené, Chci zkusit a Navštívené",
+   "Kostka „Vyber za mě“, rezervace a widgety"
+  ],
+  "en": [
+   "Search by cuisine, radius, opening hours and price",
+   "Service filters: delivery, terrace, dogs, accessibility",
+   "Map and details with photos and reviews",
+   "Favourites, Want to try and Visited lists",
+   "“Pick for me” dice, reservations and widgets"
+  ],
+  "sk": [
+   "Hľadanie podľa kuchyne, okruhu, otváracích hodín a ceny",
+   "Filtre služieb: rozvoz, terasa, pes, bezbariérovosť",
+   "Mapa a detail s fotkami a recenziami",
+   "Zoznamy Obľúbené, Chcem skúsiť a Navštívené",
+   "Kocka „Vyber za mňa“, rezervácie a widgety"
+  ],
+  "de": [
+   "Suche nach Küche, Umkreis, Öffnungszeiten und Preis",
+   "Filter: Lieferung, Terrasse, Hunde, Barrierefreiheit",
+   "Karte und Details mit Fotos und Bewertungen",
+   "Listen Favoriten, Ausprobieren und Besucht",
+   "Würfel „Wähl für mich“, Reservierungen und Widgets"
+  ],
+  "es": [
+   "Búsqueda por cocina, radio, horario y precio",
+   "Filtros: a domicilio, terraza, perros, accesibilidad",
+   "Mapa y ficha con fotos y reseñas",
+   "Listas Favoritos, Quiero probar y Visitados",
+   "Dado «Elige por mí», reservas y widgets"
+  ],
+  "pl": [
+   "Szukanie według kuchni, promienia, godzin i ceny",
+   "Filtry: dowóz, ogródek, pies, dostępność",
+   "Mapa i szczegóły ze zdjęciami i opiniami",
+   "Listy Ulubione, Chcę spróbować i Odwiedzone",
+   "Kostka „Wybierz za mnie”, rezerwacje i widżety"
+  ]
+ },
+ "links": [
+  {
+   "app": "salonky",
+   "text": {
+    "cs": "Na letišti ukáže tvůj let a salonky, kam máš přístup.",
+    "en": "At the airport it shows your flight and the lounges you can use.",
+    "sk": "Na letisku ukáže tvoj let a salóniky, kam máš prístup.",
+    "de": "Zeigt am Flughafen deinen Flug und die Lounges, die du nutzen kannst.",
+    "es": "En el aeropuerto muestra tu vuelo y las salas a las que tienes acceso.",
+    "pl": "Na lotnisku pokaże twój lot i saloniki, do których masz dostęp."
+   }
+  }
+ ]
+}

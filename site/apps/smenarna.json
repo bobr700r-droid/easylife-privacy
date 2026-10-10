@@ -1,0 +1,80 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Směnárna převádí měny podle kurzů České národní banky a kalkulačku má přímo v převodníku. Pomůže spočítat hotovost a zapisovat útraty z cest v jakékoli měně."
+  ],
+  "en": [
+   "Směnárna converts currencies using Czech National Bank rates, with a calculator built right into the converter. It helps you count cash and track trip expenses in any currency."
+  ],
+  "sk": [
+   "Směnárna prevádza meny podľa kurzov Českej národnej banky a kalkulačku má priamo v prevodníku. Pomôže spočítať hotovosť a zapisovať výdavky z ciest v akejkoľvek mene."
+  ],
+  "de": [
+   "Směnárna rechnet Währungen mit den Kursen der Tschechischen Nationalbank um – mit Taschenrechner direkt im Umrechner. Sie hilft beim Zählen von Bargeld und beim Erfassen von Reiseausgaben in jeder Währung."
+  ],
+  "es": [
+   "Směnárna convierte divisas con los tipos del Banco Nacional Checo y tiene la calculadora integrada en el conversor. Te ayuda a contar efectivo y anotar gastos de viaje en cualquier moneda."
+  ],
+  "pl": [
+   "Směnárna przelicza waluty według kursów Czeskiego Banku Narodowego, z kalkulatorem wbudowanym w przelicznik. Pomoże policzyć gotówkę i zapisywać wydatki z podróży w dowolnej walucie."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Převodník s vestavěnou kalkulačkou",
+   "Mincovník na spočítání bankovek a mincí",
+   "Výdaje z cest a rozpočet",
+   "Grafy kurzů a upozornění na kurz",
+   "Widgety, Apple Watch a Siri"
+  ],
+  "en": [
+   "Converter with a built-in calculator",
+   "Cash counter for notes and coins",
+   "Trip expenses and budget",
+   "Rate charts and rate alerts",
+   "Widgets, Apple Watch and Siri"
+  ],
+  "sk": [
+   "Prevodník so vstavanou kalkulačkou",
+   "Mincovník na spočítanie bankoviek a mincí",
+   "Výdavky z ciest a rozpočet",
+   "Grafy kurzov a upozornenia na kurz",
+   "Widgety, Apple Watch a Siri"
+  ],
+  "de": [
+   "Umrechner mit eingebautem Taschenrechner",
+   "Bargeldzähler für Scheine und Münzen",
+   "Reiseausgaben und Budget",
+   "Kurscharts und Kursalarme",
+   "Widgets, Apple Watch und Siri"
+  ],
+  "es": [
+   "Conversor con calculadora integrada",
+   "Contador de billetes y monedas",
+   "Gastos de viaje y presupuesto",
+   "Gráficos y alertas de tipo de cambio",
+   "Widgets, Apple Watch y Siri"
+  ],
+  "pl": [
+   "Przelicznik z wbudowanym kalkulatorem",
+   "Licznik banknotów i monet",
+   "Wydatki z podróży i budżet",
+   "Wykresy i alerty kursowe",
+   "Widżety, Apple Watch i Siri"
+  ]
+ },
+ "links": [
+  {
+   "app": "vyrovnano",
+   "text": {
+    "cs": "Když cestuješ s přáteli, rozpočítá společné útraty.",
+    "en": "Travelling with friends? It splits the shared costs.",
+    "sk": "Keď cestuješ s priateľmi, rozpočíta spoločné výdavky.",
+    "de": "Mit Freunden unterwegs? Sie teilt die gemeinsamen Kosten auf.",
+    "es": "¿Viajas con amigos? Reparte los gastos comunes.",
+    "pl": "Podróżujesz ze znajomymi? Rozliczy wspólne wydatki."
+   }
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "status": "testflight",
+ "color": "#b8682f",
+ "description": {
+  "cs": [
+   "Mazlíček je zdravotní karta tvého zvířete v telefonu: očkování, veterina, léky i krmení. Péči můžeš sdílet s celou rodinou."
+  ],
+  "en": [
+   "Mazlíček is your pet’s health record in your phone: vaccinations, vet visits, medication and feeding. You can share the care with the whole family."
+  ],
+  "sk": [
+   "Mazlíček je zdravotná karta tvojho zvieraťa v telefóne: očkovanie, veterina, lieky aj kŕmenie. Starostlivosť môžeš zdieľať s celou rodinou."
+  ],
+  "de": [
+   "Mazlíček ist der Gesundheitspass deines Haustiers im iPhone: Impfungen, Tierarzt, Medikamente und Futter. Die Pflege kannst du mit der ganzen Familie teilen."
+  ],
+  "es": [
+   "Mazlíček es la cartilla de salud de tu mascota en el teléfono: vacunas, veterinario, medicamentos y comida. Puedes compartir los cuidados con toda la familia."
+  ],
+  "pl": [
+   "Mazlíček to książeczka zdrowia twojego zwierzaka w telefonie: szczepienia, weterynarz, leki i karmienie. Opieką możesz dzielić się z całą rodziną."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Připomínky očkování a odčervení",
+   "Návštěvy veteriny a zprávy",
+   "Graf váhy a zásoba krmiva",
+   "Deník procházek a péče",
+   "Sdílení s rodinou"
+  ],
+  "en": [
+   "Vaccination and deworming reminders",
+   "Vet visits and reports",
+   "Weight chart and food supply",
+   "Walk and care diary",
+   "Sharing with the family"
+  ],
+  "sk": [
+   "Pripomienky očkovania a odčervenia",
+   "Návštevy veteriny a správy",
+   "Graf váhy a zásoba krmiva",
+   "Denník prechádzok a starostlivosti",
+   "Zdieľanie s rodinou"
+  ],
+  "de": [
+   "Erinnerungen an Impfungen und Entwurmung",
+   "Tierarztbesuche und Befunde",
+   "Gewichtskurve und Futtervorrat",
+   "Tagebuch für Spaziergänge und Pflege",
+   "Mit der Familie teilen"
+  ],
+  "es": [
+   "Recordatorios de vacunas y desparasitación",
+   "Visitas al veterinario e informes",
+   "Gráfico de peso y reserva de comida",
+   "Diario de paseos y cuidados",
+   "Compartir con la familia"
+  ],
+  "pl": [
+   "Przypomnienia o szczepieniach i odrobaczaniu",
+   "Wizyty u weterynarza i wyniki",
+   "Wykres wagi i zapas karmy",
+   "Dziennik spacerów i opieki",
+   "Udostępnianie rodzinie"
+  ]
+ },
+ "links": [
+  {
+   "app": "lekarnicka",
+   "text": {
+    "cs": "Pohlídá léky a jejich expiraci pro celou rodinu.",
+    "en": "Tracks medication and expiry dates for the whole family.",
+    "sk": "Postráži lieky a ich expiráciu pre celú rodinu.",
+    "de": "Behält Medikamente und Ablaufdaten für die ganze Familie im Blick.",
+    "es": "Controla medicamentos y caducidades de toda la familia.",
+    "pl": "Przypilnuje leków i dat ważności dla całej rodziny."
+   }
+  }
+ ]
+}

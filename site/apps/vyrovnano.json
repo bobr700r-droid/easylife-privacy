@@ -1,0 +1,68 @@
+{
+ "status": "dev",
+ "description": {
+  "cs": [
+   "Vyrovnáno hlídá společné výdaje ve skupině – na chatě, na dovolené nebo ve spolubydlení. Spočítá, kdo komu kolik dluží, a navrhne co nejméně plateb."
+  ],
+  "en": [
+   "Vyrovnáno keeps track of shared expenses in a group – at the cabin, on holiday or between flatmates. It works out who owes whom and suggests as few payments as possible."
+  ],
+  "sk": [
+   "Vyrovnáno stráži spoločné výdavky v skupine – na chate, na dovolenke alebo v spolubývaní. Spočíta, kto komu koľko dlhuje, a navrhne čo najmenej platieb."
+  ],
+  "de": [
+   "Vyrovnáno behält gemeinsame Ausgaben in der Gruppe im Blick – auf der Hütte, im Urlaub oder in der WG. Die App rechnet aus, wer wem was schuldet, und schlägt möglichst wenige Zahlungen vor."
+  ],
+  "es": [
+   "Vyrovnáno lleva las cuentas de los gastos compartidos en grupo: en la casa rural, de vacaciones o entre compañeros de piso. Calcula quién debe a quién y propone el menor número de pagos posible."
+  ],
+  "pl": [
+   "Vyrovnáno pilnuje wspólnych wydatków w grupie – na działce, na wakacjach albo we wspólnym mieszkaniu. Policzy, kto komu ile jest winien, i zaproponuje jak najmniej przelewów."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Skupiny sdílené s přáteli přes iCloud",
+   "Různé způsoby dělení i cizí měny",
+   "Vyfocená účtenka rozdělená po položkách",
+   "Vyrovnání přes QR Platbu",
+   "Statistiky, widget bilance a Siri"
+  ],
+  "en": [
+   "Groups shared with friends via iCloud",
+   "Flexible splitting and foreign currencies",
+   "Snap a receipt and split it by item",
+   "Settle up with QR payments",
+   "Stats, a balance widget and Siri"
+  ],
+  "sk": [
+   "Skupiny zdieľané s priateľmi cez iCloud",
+   "Rôzne spôsoby delenia aj cudzie meny",
+   "Odfotený bloček rozdelený po položkách",
+   "Vyrovnanie cez QR platbu",
+   "Štatistiky, widget bilancie a Siri"
+  ],
+  "de": [
+   "Gruppen über iCloud mit Freunden teilen",
+   "Flexible Aufteilung und Fremdwährungen",
+   "Beleg fotografieren und nach Posten teilen",
+   "Ausgleich per QR-Zahlung",
+   "Statistiken, Saldo-Widget und Siri"
+  ],
+  "es": [
+   "Grupos compartidos con amigos por iCloud",
+   "Repartos flexibles y monedas extranjeras",
+   "Foto del ticket repartida por artículos",
+   "Liquidación con pago QR",
+   "Estadísticas, widget de saldo y Siri"
+  ],
+  "pl": [
+   "Grupy udostępniane znajomym przez iCloud",
+   "Różne sposoby podziału i obce waluty",
+   "Zdjęcie paragonu podzielone na pozycje",
+   "Rozliczenie przez płatność QR",
+   "Statystyki, widżet salda i Siri"
+  ]
+ },
+ "links": []
+}

@@ -1,0 +1,81 @@
+{
+ "status": "dev",
+ "color": "#1f6fe5",
+ "description": {
+  "cs": [
+   "Garážka drží všechno o autě nebo motorce na jednom místě: STK, pojištění, servis i tankování. Připomene termíny a ukáže, kolik tě vozidlo doopravdy stojí."
+  ],
+  "en": [
+   "Garážka keeps everything about your car or motorbike in one place: inspections, insurance, servicing and fuel. It reminds you of deadlines and shows what the vehicle really costs you."
+  ],
+  "sk": [
+   "Garážka drží všetko o aute alebo motorke na jednom mieste: STK, poistenie, servis aj tankovanie. Pripomenie termíny a ukáže, koľko ťa vozidlo naozaj stojí."
+  ],
+  "de": [
+   "Garážka bündelt alles rund um Auto oder Motorrad: TÜV, Versicherung, Service und Tanken. Die App erinnert an Termine und zeigt, was dich das Fahrzeug wirklich kostet."
+  ],
+  "es": [
+   "Garážka reúne todo sobre tu coche o moto: ITV, seguro, mantenimiento y combustible. Te recuerda los plazos y muestra cuánto te cuesta realmente el vehículo."
+  ],
+  "pl": [
+   "Garážka trzyma wszystko o samochodzie lub motocyklu w jednym miejscu: przeglądy, ubezpieczenie, serwis i tankowanie. Przypomni o terminach i pokaże, ile naprawdę kosztuje cię pojazd."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Připomínky STK, pojistky a servisu",
+   "Tankování, spotřeba a náklady na kilometr",
+   "Servisní knížka s fotkami faktur",
+   "Volitelná kniha jízd",
+   "Grafy, export do PDF a CSV, widget a Siri"
+  ],
+  "en": [
+   "Reminders for inspections, insurance and service",
+   "Fuel log, consumption and cost per km",
+   "Service book with invoice photos",
+   "Optional trip logbook",
+   "Charts, PDF and CSV export, widget and Siri"
+  ],
+  "sk": [
+   "Pripomienky STK, poistky a servisu",
+   "Tankovanie, spotreba a náklady na kilometer",
+   "Servisná knižka s fotkami faktúr",
+   "Voliteľná kniha jázd",
+   "Grafy, export do PDF a CSV, widget a Siri"
+  ],
+  "de": [
+   "Erinnerungen an TÜV, Versicherung und Service",
+   "Tankbuch, Verbrauch und Kosten pro km",
+   "Serviceheft mit Rechnungsfotos",
+   "Optionales Fahrtenbuch",
+   "Diagramme, PDF- und CSV-Export, Widget und Siri"
+  ],
+  "es": [
+   "Recordatorios de ITV, seguro y mantenimiento",
+   "Repostajes, consumo y coste por km",
+   "Libro de mantenimiento con fotos de facturas",
+   "Registro de trayectos opcional",
+   "Gráficos, exportación PDF y CSV, widget y Siri"
+  ],
+  "pl": [
+   "Przypomnienia o przeglądzie, polisie i serwisie",
+   "Tankowania, spalanie i koszt na kilometr",
+   "Książka serwisowa ze zdjęciami faktur",
+   "Opcjonalna ewidencja przebiegu",
+   "Wykresy, eksport PDF i CSV, widżet i Siri"
+  ]
+ },
+ "links": [
+  {
+   "app": "zaruky",
+   "text": {
+    "cs": "Uschová doklady k autu a hlídá jejich platnost.",
+    "en": "Stores your car documents and watches their validity.",
+    "sk": "Uschová doklady k autu a stráži ich platnosť.",
+    "de": "Bewahrt Fahrzeugdokumente auf und überwacht ihre Gültigkeit.",
+    "es": "Guarda los documentos del coche y vigila su validez.",
+    "pl": "Przechowa dokumenty auta i przypilnuje ich ważności."
+   }
+  }
+ ]
+}

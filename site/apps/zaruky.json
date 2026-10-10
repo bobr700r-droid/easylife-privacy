@@ -1,0 +1,92 @@
+{
+ "status": "dev",
+ "color": "#0e8a8a",
+ "description": {
+  "cs": [
+   "Záruky a doklady drží účtenky, záruční listy, osobní doklady a revize na jednom místě. Včas ti připomenou konec záruky nebo platnosti dokladu."
+  ],
+  "en": [
+   "Záruky a doklady keeps receipts, warranties, personal documents and inspections in one place, and reminds you before a warranty or document expires."
+  ],
+  "sk": [
+   "Záruky a doklady držia bločky, záručné listy, osobné doklady a revízie na jednom mieste. Včas ti pripomenú koniec záruky alebo platnosti dokladu."
+  ],
+  "de": [
+   "Záruky a doklady bündelt Belege, Garantien, Ausweise und Wartungstermine an einem Ort und erinnert dich rechtzeitig, bevor eine Garantie oder ein Dokument abläuft."
+  ],
+  "es": [
+   "Záruky a doklady reúne tickets, garantías, documentos personales y revisiones en un solo lugar, y te avisa antes de que caduque una garantía o un documento."
+  ],
+  "pl": [
+   "Záruky a doklady trzyma paragony, gwarancje, dokumenty osobiste i przeglądy w jednym miejscu i przypomni, zanim wygaśnie gwarancja lub dokument."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Naskenovaná účtenka s vyčtenými údaji",
+   "Hlídání platnosti občanky, pasu a řidičáku",
+   "Reklamace se 30denní lhůtou",
+   "Připomínky revizí kotle, komína a dalších",
+   "Čísla dokladů zamčená za Face ID"
+  ],
+  "en": [
+   "Scan receipts and extract the details",
+   "Expiry tracking for ID, passport and licence",
+   "Warranty claims with deadline tracking",
+   "Reminders for boiler, chimney and other checks",
+   "Document numbers locked behind Face ID"
+  ],
+  "sk": [
+   "Naskenovaný bloček s vyčítanými údajmi",
+   "Stráženie platnosti občianky, pasu a vodičáku",
+   "Reklamácie s 30-dňovou lehotou",
+   "Pripomienky revízií kotla, komína a ďalších",
+   "Čísla dokladov zamknuté za Face ID"
+  ],
+  "de": [
+   "Belege scannen, Daten werden ausgelesen",
+   "Ablaufdaten von Ausweis, Pass und Führerschein",
+   "Reklamationen mit Fristen im Blick",
+   "Erinnerungen für Heizungs- und Kaminwartung",
+   "Dokumentnummern per Face ID geschützt"
+  ],
+  "es": [
+   "Escanea tickets y extrae los datos",
+   "Caducidad de DNI, pasaporte y carné de conducir",
+   "Reclamaciones con control de plazos",
+   "Recordatorios de revisiones de caldera, chimenea…",
+   "Números de documentos protegidos con Face ID"
+  ],
+  "pl": [
+   "Skanowanie paragonów z odczytem danych",
+   "Ważność dowodu, paszportu i prawa jazdy",
+   "Reklamacje z pilnowaniem terminu",
+   "Przypomnienia o przeglądach kotła, komina i innych",
+   "Numery dokumentów chronione Face ID"
+  ]
+ },
+ "links": [
+  {
+   "app": "garaz",
+   "text": {
+    "cs": "Hlídá STK, pojištění a servis auta.",
+    "en": "Tracks your car’s inspections, insurance and service.",
+    "sk": "Stráži STK, poistenie a servis auta.",
+    "de": "Behält TÜV, Versicherung und Service im Blick.",
+    "es": "Controla la ITV, el seguro y el mantenimiento del coche.",
+    "pl": "Pilnuje przeglądu, ubezpieczenia i serwisu auta."
+   }
+  },
+  {
+   "app": "predplatne",
+   "text": {
+    "cs": "Pohlídá pravidelné platby a předplatná.",
+    "en": "Keeps an eye on recurring payments and subscriptions.",
+    "sk": "Postráži pravidelné platby a predplatné.",
+    "de": "Behält wiederkehrende Zahlungen und Abos im Blick.",
+    "es": "Vigila pagos recurrentes y suscripciones.",
+    "pl": "Przypilnuje stałych płatności i subskrypcji."
+   }
+  }
+ ]
+}

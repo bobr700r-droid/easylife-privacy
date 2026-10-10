@@ -1,0 +1,69 @@
+{
+ "status": "testflight",
+ "color": "#d08a00",
+ "description": {
+  "cs": [
+   "Odečty zapisují stavy elektřiny, plynu, vody a tepla a ukazují spotřebu v grafech. Podle tvé smlouvy odhadnou, jestli při vyúčtování dostaneš přeplatek, nebo budeš doplácet."
+  ],
+  "en": [
+   "Odečty records your electricity, gas, water and heating meter readings and charts your consumption. Based on your contract it estimates whether your next bill will bring a refund or an extra payment."
+  ],
+  "sk": [
+   "Odečty zapisujú stavy elektriny, plynu, vody a tepla a ukazujú spotrebu v grafoch. Podľa tvojej zmluvy odhadnú, či pri vyúčtovaní dostaneš preplatok, alebo budeš doplácať."
+  ],
+  "de": [
+   "Odečty erfasst Zählerstände für Strom, Gas, Wasser und Wärme und zeigt den Verbrauch in Diagrammen. Anhand deines Vertrags schätzt die App, ob dir bei der Abrechnung eine Rückzahlung oder Nachzahlung droht."
+  ],
+  "es": [
+   "Odečty registra las lecturas de luz, gas, agua y calefacción y muestra el consumo en gráficos. Según tu contrato, estima si en la próxima factura te devolverán dinero o tendrás que pagar más."
+  ],
+  "pl": [
+   "Odečty zapisuje odczyty prądu, gazu, wody i ciepła i pokazuje zużycie na wykresach. Na podstawie umowy oszacuje, czy przy rozliczeniu dostaniesz zwrot, czy dopłacisz."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Odečet vyfocením měřidla",
+   "Grafy spotřeby a srovnání s loňskem",
+   "Odhad vyúčtování a doporučená záloha",
+   "Upozornění na neobvyklou spotřebu",
+   "Připomínky odečtu a konce fixace"
+  ],
+  "en": [
+   "Read meters by taking a photo",
+   "Consumption charts and year-on-year comparison",
+   "Bill estimate and suggested advance payment",
+   "Alerts for unusual consumption",
+   "Reminders for readings and fixed-price end"
+  ],
+  "sk": [
+   "Odpočet odfotením meradla",
+   "Grafy spotreby a porovnanie s minulým rokom",
+   "Odhad vyúčtovania a odporúčaná záloha",
+   "Upozornenia na neobvyklú spotrebu",
+   "Pripomienky odpočtu a konca fixácie"
+  ],
+  "de": [
+   "Zählerstand per Foto erfassen",
+   "Verbrauchsdiagramme und Vorjahresvergleich",
+   "Abrechnungsprognose und empfohlener Abschlag",
+   "Hinweise auf ungewöhnlichen Verbrauch",
+   "Erinnerungen an Ablesung und Preisbindungsende"
+  ],
+  "es": [
+   "Lectura del contador con una foto",
+   "Gráficos de consumo y comparación anual",
+   "Estimación de factura y pago a cuenta sugerido",
+   "Avisos de consumo inusual",
+   "Recordatorios de lectura y fin de tarifa fija"
+  ],
+  "pl": [
+   "Odczyt licznika przez zdjęcie",
+   "Wykresy zużycia i porównanie z poprzednim rokiem",
+   "Prognoza rozliczenia i sugerowana zaliczka",
+   "Alerty o nietypowym zużyciu",
+   "Przypomnienia o odczycie i końcu stałej ceny"
+  ]
+ },
+ "links": []
+}

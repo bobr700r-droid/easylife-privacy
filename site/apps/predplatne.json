@@ -1,0 +1,91 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Předplatné hlídá všechna předplatná a pravidelné platby – od Netflixu a Spotify po mobilní tarif nebo posilovnu. Připomene platbu i konec zkušební doby a ukáže, kolik za ně ročně utratíš."
+  ],
+  "en": [
+   "Předplatné tracks all your subscriptions and recurring payments – from Netflix and Spotify to your phone plan or gym. It reminds you before payments and trial ends and shows what you spend per year."
+  ],
+  "sk": [
+   "Predplatné stráži všetky predplatné a pravidelné platby – od Netflixu a Spotify po mobilný paušál alebo posilňovňu. Pripomenie platbu aj koniec skúšobnej doby a ukáže, koľko za ne ročne minieš."
+  ],
+  "de": [
+   "Předplatné behält alle Abos und regelmäßigen Zahlungen im Blick – von Netflix und Spotify bis zum Handyvertrag oder Fitnessstudio. Die App erinnert vor Zahlungen und Testende und zeigt, was du im Jahr ausgibst."
+  ],
+  "es": [
+   "Předplatné controla todas tus suscripciones y pagos recurrentes, desde Netflix y Spotify hasta la tarifa móvil o el gimnasio. Te avisa antes de cada pago y del fin de la prueba y muestra cuánto gastas al año."
+  ],
+  "pl": [
+   "Předplatné pilnuje wszystkich subskrypcji i stałych płatności – od Netflixa i Spotify po abonament komórkowy czy siłownię. Przypomni o płatności i końcu okresu próbnego i pokaże, ile wydajesz rocznie."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Rychlé přidání z ~40 předvoleb služeb",
+   "Připomínka platby, zkušební doby a výpovědi",
+   "Kalendář plateb",
+   "Souhrn za měsíc a rok a „Kolik ušetřím, když zruším“",
+   "Widget, Siri a cizí měny podle kurzu ČNB"
+  ],
+  "en": [
+   "Quick add from ~40 service presets",
+   "Reminders for payments, trials and notice periods",
+   "Payment calendar",
+   "Monthly and yearly totals with “What if I cancel”",
+   "Widget, Siri and foreign currencies"
+  ],
+  "sk": [
+   "Rýchle pridanie z ~40 predvolieb služieb",
+   "Pripomienka platby, skúšobnej doby a výpovede",
+   "Kalendár platieb",
+   "Súhrn za mesiac a rok a „Koľko ušetrím, keď zruším“",
+   "Widget, Siri a cudzie meny"
+  ],
+  "de": [
+   "Schnell hinzufügen aus ~40 Vorlagen",
+   "Erinnerung an Zahlung, Testphase und Kündigungsfrist",
+   "Zahlungskalender",
+   "Monats- und Jahressumme mit „Was spare ich?“",
+   "Widget, Siri und Fremdwährungen"
+  ],
+  "es": [
+   "Alta rápida con ~40 servicios predefinidos",
+   "Avisos de pago, fin de prueba y preaviso",
+   "Calendario de pagos",
+   "Totales mensuales y anuales con «¿Y si cancelo?»",
+   "Widget, Siri y monedas extranjeras"
+  ],
+  "pl": [
+   "Szybkie dodanie z ~40 gotowych usług",
+   "Przypomnienia o płatności, okresie próbnym i wypowiedzeniu",
+   "Kalendarz płatności",
+   "Podsumowanie miesięczne i roczne z „Ile zaoszczędzę?”",
+   "Widżet, Siri i obce waluty"
+  ]
+ },
+ "links": [
+  {
+   "app": "zaruky",
+   "text": {
+    "cs": "Uschová smlouvy, účtenky a záruční listy.",
+    "en": "Stores contracts, receipts and warranties.",
+    "sk": "Uschová zmluvy, bločky a záručné listy.",
+    "de": "Bewahrt Verträge, Belege und Garantien auf.",
+    "es": "Guarda contratos, tickets y garantías.",
+    "pl": "Przechowa umowy, paragony i gwarancje."
+   }
+  },
+  {
+   "app": "garaz",
+   "text": {
+    "cs": "Pohlídá výdaje a termíny kolem auta.",
+    "en": "Keeps track of car costs and deadlines.",
+    "sk": "Postráži výdavky a termíny okolo auta.",
+    "de": "Behält Autokosten und Termine im Blick.",
+    "es": "Controla gastos y plazos del coche.",
+    "pl": "Przypilnuje kosztów i terminów związanych z autem."
+   }
+  }
+ ]
+}

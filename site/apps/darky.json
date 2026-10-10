@@ -1,0 +1,69 @@
+{
+ "status": "dev",
+ "color": "#d63c7a",
+ "description": {
+  "cs": [
+   "S Dárečky nezapomeneš na narozeniny, jmeniny ani výročí blízkých. Nápady na dárky si zapisuješ celý rok a máš přehled o rozpočtu."
+  ],
+  "en": [
+   "With Dárečky you’ll never forget a birthday, name day or anniversary again. Jot down gift ideas all year round and keep an eye on your budget."
+  ],
+  "sk": [
+   "S Dárečkami nezabudneš na narodeniny, meniny ani výročie blízkych. Nápady na darčeky si zapisuješ celý rok a máš prehľad o rozpočte."
+  ],
+  "de": [
+   "Mit Dárečky vergisst du keinen Geburtstag, Namenstag oder Jahrestag mehr. Notiere Geschenkideen das ganze Jahr und behalte dein Budget im Blick."
+  ],
+  "es": [
+   "Con Dárečky no volverás a olvidar un cumpleaños, santo o aniversario. Apunta ideas de regalo todo el año y controla tu presupuesto."
+  ],
+  "pl": [
+   "Z Dárečky nie zapomnisz o urodzinach, imieninach ani rocznicach bliskich. Zapisujesz pomysły na prezenty przez cały rok i pilnujesz budżetu."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Připomínky narozenin, jmenin a výročí",
+   "Nápady na dárky během celého roku",
+   "Rozpočet na Vánoce i na každého člověka",
+   "Sdílené seznamy přání s rezervací „kupuju já“",
+   "Uložení nápadu přímo ze Safari"
+  ],
+  "en": [
+   "Birthday, name day and anniversary reminders",
+   "Gift ideas collected all year",
+   "Budget for Christmas and for each person",
+   "Shared wish lists with “I’ll buy it” reservations",
+   "Save ideas straight from Safari"
+  ],
+  "sk": [
+   "Pripomienky narodenín, menín a výročí",
+   "Nápady na darčeky počas celého roka",
+   "Rozpočet na Vianoce aj na každého človeka",
+   "Zdieľané zoznamy želaní s rezerváciou „kupujem ja“",
+   "Uloženie nápadu priamo zo Safari"
+  ],
+  "de": [
+   "Erinnerungen an Geburts-, Namens- und Jahrestage",
+   "Geschenkideen das ganze Jahr sammeln",
+   "Budget für Weihnachten und pro Person",
+   "Geteilte Wunschlisten mit „Ich kaufe es“",
+   "Ideen direkt aus Safari speichern"
+  ],
+  "es": [
+   "Recordatorios de cumpleaños, santos y aniversarios",
+   "Ideas de regalo todo el año",
+   "Presupuesto para Navidad y para cada persona",
+   "Listas de deseos compartidas con «Lo compro yo»",
+   "Guarda ideas directamente desde Safari"
+  ],
+  "pl": [
+   "Przypomnienia o urodzinach, imieninach i rocznicach",
+   "Pomysły na prezenty przez cały rok",
+   "Budżet na święta i na każdą osobę",
+   "Wspólne listy życzeń z rezerwacją „ja kupuję”",
+   "Zapis pomysłu prosto z Safari"
+  ]
+ },
+ "links": []
+}

@@ -1,0 +1,69 @@
+{
+ "status": "testflight",
+ "color": "#d9354a",
+ "description": {
+  "cs": [
+   "Lékárnička je domácí lékárna pro celou rodinu v telefonu. Připomene, kdy si vzít lék, hlídá zásoby i data expirace. Lékaře ani lékárníka nenahrazuje."
+  ],
+  "en": [
+   "Lékárnička is the family medicine cabinet in your phone. It reminds you when to take your medication and tracks supplies and expiry dates. It does not replace a doctor or pharmacist."
+  ],
+  "sk": [
+   "Lékárnička je domáca lekárnička pre celú rodinu v telefóne. Pripomenie, kedy si vziať liek, a stráži zásoby aj dátumy expirácie. Lekára ani lekárnika nenahrádza."
+  ],
+  "de": [
+   "Lékárnička ist die Hausapotheke für die ganze Familie im iPhone. Sie erinnert an die Einnahme, behält Vorrat und Ablaufdaten im Blick und ersetzt keinen Arzt oder Apotheker."
+  ],
+  "es": [
+   "Lékárnička es el botiquín familiar en tu teléfono. Te recuerda cuándo tomar cada medicamento y controla existencias y caducidades. No sustituye a un médico ni a un farmacéutico."
+  ],
+  "pl": [
+   "Lékárnička to domowa apteczka całej rodziny w telefonie. Przypomni o przyjęciu leku i pilnuje zapasów oraz dat ważności. Nie zastępuje lekarza ani farmaceuty."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Připomínky dávek s tlačítkem „Vzato“",
+   "Léky pro každého člena rodiny",
+   "Zásoby a nákupní seznam",
+   "Upozornění na expiraci",
+   "Rychlé přidání vyfocením krabičky"
+  ],
+  "en": [
+   "Dose reminders with a “Taken” button",
+   "Medication for every family member",
+   "Supplies and a shopping list",
+   "Expiry alerts",
+   "Quick add by photographing the box"
+  ],
+  "sk": [
+   "Pripomienky dávok s tlačidlom „Vzaté“",
+   "Lieky pre každého člena rodiny",
+   "Zásoby a nákupný zoznam",
+   "Upozornenia na expiráciu",
+   "Rýchle pridanie odfotením krabičky"
+  ],
+  "de": [
+   "Einnahme-Erinnerungen mit „Genommen“",
+   "Medikamente für jedes Familienmitglied",
+   "Vorrat und Einkaufsliste",
+   "Hinweise auf Ablaufdaten",
+   "Schnell hinzufügen per Foto der Packung"
+  ],
+  "es": [
+   "Recordatorios de dosis con botón «Tomado»",
+   "Medicamentos para cada miembro de la familia",
+   "Existencias y lista de compra",
+   "Avisos de caducidad",
+   "Alta rápida con una foto de la caja"
+  ],
+  "pl": [
+   "Przypomnienia o dawkach z przyciskiem „Wzięte”",
+   "Leki dla każdego członka rodziny",
+   "Zapasy i lista zakupów",
+   "Alerty o dacie ważności",
+   "Szybkie dodanie przez zdjęcie opakowania"
+  ]
+ },
+ "links": []
+}

@@ -1,0 +1,80 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "FotoPlán je plánovač focení: ukáže, kdy a kde bude slunce a měsíc, kdy začíná zlatá a modrá hodinka a jestli bude hezký západ slunce. Všechno pro aktuální polohu i uložená místa."
+  ],
+  "en": [
+   "FotoPlán is a photo planner: it shows when and where the sun and moon will be, when golden and blue hour start and whether the sunset will be worth it – for your current location or saved places."
+  ],
+  "sk": [
+   "FotoPlán je plánovač fotenia: ukáže, kedy a kde bude slnko a mesiac, kedy začína zlatá a modrá hodinka a či bude pekný západ slnka. Všetko pre aktuálnu polohu aj uložené miesta."
+  ],
+  "de": [
+   "FotoPlán ist ein Fotoplaner: Er zeigt, wann und wo Sonne und Mond stehen, wann die goldene und blaue Stunde beginnt und ob sich der Sonnenuntergang lohnt – für deinen Standort und gespeicherte Orte."
+  ],
+  "es": [
+   "FotoPlán es un planificador de fotografía: muestra cuándo y dónde estarán el sol y la luna, cuándo empiezan la hora dorada y la azul y si habrá una buena puesta de sol, en tu ubicación o en tus lugares guardados."
+  ],
+  "pl": [
+   "FotoPlán to planer fotografii: pokaże, kiedy i gdzie będzie słońce i księżyc, kiedy zaczyna się złota i niebieska godzina i czy zachód słońca będzie ładny – dla bieżącej lokalizacji i zapisanych miejsc."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Časová osa dne se zlatou a modrou hodinkou",
+   "Dráha slunce a měsíce přímo v kameře",
+   "Fáze měsíce a kalendář úplňků",
+   "Předpověď oblačnosti a skóre západu slunce",
+   "Widgety a Apple Watch s odpočtem"
+  ],
+  "en": [
+   "Day timeline with golden and blue hour",
+   "Sun and moon paths in the live camera",
+   "Moon phases and full-moon calendar",
+   "Cloud forecast and sunset score",
+   "Widgets and Apple Watch countdown"
+  ],
+  "sk": [
+   "Časová os dňa so zlatou a modrou hodinkou",
+   "Dráha slnka a mesiaca priamo v kamere",
+   "Fázy mesiaca a kalendár splnov",
+   "Predpoveď oblačnosti a skóre západu slnka",
+   "Widgety a Apple Watch s odpočtom"
+  ],
+  "de": [
+   "Tageszeitleiste mit goldener und blauer Stunde",
+   "Sonnen- und Mondbahn im Kamerabild",
+   "Mondphasen und Vollmondkalender",
+   "Bewölkungsprognose und Sonnenuntergangs-Score",
+   "Widgets und Apple-Watch-Countdown"
+  ],
+  "es": [
+   "Línea del día con hora dorada y azul",
+   "Trayectoria del sol y la luna en la cámara",
+   "Fases lunares y calendario de lunas llenas",
+   "Previsión de nubes y puntuación del atardecer",
+   "Widgets y cuenta atrás en Apple Watch"
+  ],
+  "pl": [
+   "Oś dnia ze złotą i niebieską godziną",
+   "Tor słońca i księżyca w aparacie",
+   "Fazy księżyca i kalendarz pełni",
+   "Prognoza zachmurzenia i ocena zachodu słońca",
+   "Widżety i odliczanie na Apple Watch"
+  ]
+ },
+ "links": [
+  {
+   "app": "fototip",
+   "text": {
+    "cs": "Poradí, jak danou scénu nafotit a nastavit foťák.",
+    "en": "Explains how to shoot the scene and set up your camera.",
+    "sk": "Poradí, ako danú scénu nafotiť a nastaviť fotoaparát.",
+    "de": "Erklärt, wie du die Szene fotografierst und die Kamera einstellst.",
+    "es": "Explica cómo fotografiar la escena y configurar la cámara.",
+    "pl": "Podpowie, jak sfotografować scenę i ustawić aparat."
+   }
+  }
+ ]
+}

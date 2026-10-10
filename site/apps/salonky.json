@@ -1,0 +1,80 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Salónky hlídají tvoje karty do letištních salonků a kolik vstupů ti ještě zbývá. Načtou let z palubenky a dají vědět, když se změní gate, let má zpoždění nebo přistál."
+  ],
+  "en": [
+   "Salónky keeps track of your airport lounge cards and how many visits you have left. It reads your flight from a boarding pass and tells you when the gate changes, the flight is delayed or it has landed."
+  ],
+  "sk": [
+   "Salónky strážia tvoje karty do letiskových salónikov a koľko vstupov ti ešte zostáva. Načítajú let z palubného lístka a dajú vedieť, keď sa zmení gate, let mešká alebo pristál."
+  ],
+  "de": [
+   "Salónky behält deine Lounge-Karten und die verbleibenden Besuche im Blick. Die App liest deinen Flug aus der Bordkarte und meldet sich, wenn sich das Gate ändert, der Flug Verspätung hat oder gelandet ist."
+  ],
+  "es": [
+   "Salónky controla tus tarjetas de salas VIP y cuántas visitas te quedan. Lee tu vuelo de la tarjeta de embarque y te avisa si cambia la puerta, hay retraso o el vuelo ha aterrizado."
+  ],
+  "pl": [
+   "Salónky pilnuje twoich kart do saloników lotniskowych i tego, ile wejść ci zostało. Odczyta lot z karty pokładowej i powiadomi, gdy zmieni się gate, lot się opóźni lub wyląduje."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Karty do salonků se zbývajícími vstupy",
+   "Zápis návštěv salonků",
+   "Let načtený z palubenky (fotka i PDF)",
+   "Upozornění na gate, zpoždění a přílet",
+   "Stav letu na zamčené obrazovce a widget"
+  ],
+  "en": [
+   "Lounge cards with remaining visits",
+   "A log of your lounge visits",
+   "Flights read from boarding passes (photo or PDF)",
+   "Alerts for gate changes, delays and arrival",
+   "Live flight status on the Lock Screen and a widget"
+  ],
+  "sk": [
+   "Karty do salónikov so zostávajúcimi vstupmi",
+   "Zápis návštev salónikov",
+   "Let načítaný z palubného lístka (fotka aj PDF)",
+   "Upozornenia na gate, meškanie a prílet",
+   "Stav letu na zamknutej obrazovke a widget"
+  ],
+  "de": [
+   "Lounge-Karten mit verbleibenden Besuchen",
+   "Protokoll deiner Lounge-Besuche",
+   "Flug aus der Bordkarte (Foto oder PDF)",
+   "Hinweise zu Gate, Verspätung und Ankunft",
+   "Live-Flugstatus auf dem Sperrbildschirm und Widget"
+  ],
+  "es": [
+   "Tarjetas de salas VIP con visitas restantes",
+   "Registro de tus visitas a salas",
+   "Vuelos leídos de la tarjeta de embarque (foto o PDF)",
+   "Avisos de puerta, retrasos y llegada",
+   "Estado del vuelo en la pantalla bloqueada y widget"
+  ],
+  "pl": [
+   "Karty do saloników z pozostałymi wejściami",
+   "Zapis wizyt w salonikach",
+   "Lot odczytany z karty pokładowej (zdjęcie lub PDF)",
+   "Alerty o zmianie gate’u, opóźnieniu i przylocie",
+   "Status lotu na ekranie blokady i widżet"
+  ]
+ },
+ "links": [
+  {
+   "app": "jidelnik",
+   "text": {
+    "cs": "Najde, kde se dobře najíst na letišti nebo v cíli cesty.",
+    "en": "Finds a good place to eat at the airport or at your destination.",
+    "sk": "Nájde, kde sa dobre najesť na letisku alebo v cieli cesty.",
+    "de": "Findet gutes Essen am Flughafen oder am Reiseziel.",
+    "es": "Encuentra dónde comer bien en el aeropuerto o en tu destino.",
+    "pl": "Znajdzie, gdzie dobrze zjeść na lotnisku lub w miejscu docelowym."
+   }
+  }
+ ]
+}

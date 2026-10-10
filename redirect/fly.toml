@@ -1,0 +1,26 @@
+# easyforlife.cz → https://easyforlife.eu (301, zachová cestu). Nasazení: fly deploy --ha=false
+app = "easyforlife-redirect"
+primary_region = "fra"
+
+[env]
+  REDIRECT_TO = "https://easyforlife.eu"
+
+[http_service]
+  internal_port = 8080
+  # http:// přesměrujeme rovnou na https://easyforlife.eu (jeden skok), proto bez force_https
+  force_https = false
+  auto_stop_machines = "suspend"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "10s"
+    method = "GET"
+    path = "/healthz"
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1
