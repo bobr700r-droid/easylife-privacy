@@ -105,6 +105,22 @@ APPS = [
        ("Mapu zobrazuje Apple MapKit. Tlačítka Trasa, Google, Web nebo Volat otevřou Mapy, Google Mapy, web podniku nebo telefon.",
         "The map is provided by Apple MapKit. The Directions, Google, Website or Call buttons open Maps, Google Maps, the place's website or the phone.")),
     ]),
+  dict(slug="fototip", name="FotoTip", mark="◎", color="#6351e8",
+    tagline=("Návody a tipy pro fotografy: expozice, světlo, kompozice, pózy a fotografické kalkulačky.",
+             "Guides and tips for photographers: exposure, light, composition, poses and photo calculators."),
+    summary=("FotoTip nesbírá žádné osobní údaje. Nemá účty, reklamy ani analytiku a funguje celý offline – všechny návody jsou přímo v aplikaci.",
+             "FotoTip collects no personal data. There are no accounts, ads or analytics, and it works fully offline – all guides are built into the app."),
+    sections=[
+      (("Co aplikace ukládá", "What the app stores"),
+       ("Přečtené návody, oblíbené položky, zaškrtnuté body v kontrolních seznamech, hodnoty v kalkulačkách a nastavení vzhledu. Jen v zařízení; smazáním aplikace se smažou.",
+        "Read guides, favourites, ticked items in checklists, calculator values and the appearance setting. Only on your device; deleted with the app.")),
+      (("Síť", "Network"),
+       ("Aplikace se nepřipojuje k žádnému serveru. Výjimkou je jen odkaz na tuto stránku, který otevře prohlížeč.",
+        "The app does not connect to any server. The only exception is the link to this page, which opens your browser.")),
+      (("Sdílení", "Sharing"),
+       ("Když návod sdílíš, použije se systémový panel sdílení iOS a text dostane jen ten, komu ho pošleš.",
+        "When you share a guide, the iOS share sheet is used and only the recipient you choose gets the text.")),
+    ]),
 ]
 
 EXTERNAL = [("Kulturník", "https://vyrazime.luksafoto.cz/soukromi")]
