@@ -152,6 +152,34 @@ APPS = [
        ("Pokud použiješ Siri nebo Zkratky, hlasové pokyny zpracovává Apple podle svých zásad.",
         "If you use Siri or Shortcuts, voice requests are processed by Apple under its own policy.")),
     ]),
+  dict(slug="garaz", name="Garáž", mark="🚗", color="#1f6fe5",
+    tagline=("Vozidla, termíny s připomínkami, náklady, spotřeba a servisní knížka.",
+             "Vehicles, reminders for due dates, costs, fuel consumption and a service log."),
+    summary=("Garáž nemá vlastní server, účty, reklamy ani analytiku. Vozidla, náklady a termíny jsou v tvém zařízení a v tvém soukromém iCloudu.",
+             "Garáž has no server of its own, no accounts, ads or analytics. Your vehicles, costs and due dates live on your device and in your private iCloud."),
+    sections=[
+      (("Co aplikace ukládá", "What the app stores"),
+       ("Vozidla, která zapíšeš (název, SPZ, VIN, palivo, rok výroby, stav tachometru, fotka), termíny (STK, pojištění, dálniční známky, servis…), náklady včetně tankování a nabíjení, servisní záznamy s fotkami faktur, volitelně knihu jízd (trasa, kilometry, účel) a nastavení.",
+        "Vehicles you enter (name, licence plate, VIN, fuel, year, odometer, photo), due dates (inspection, insurance, vignettes, service…), costs including fuelling and charging, service records with invoice photos, optionally a trip log (route, kilometres, purpose) and settings.")),
+      (("iCloud a widget", "iCloud and widget"),
+       ("Data se synchronizují mezi tvými zařízeními přes tvůj soukromý iCloud (Apple CloudKit). My k nim přístup nemáme. Widget „Co mě čeká“ čte jen kopii nejbližších termínů uloženou v zařízení.",
+        "Data syncs between your devices via your private iCloud (Apple CloudKit). We have no access to it. The “Coming up” widget only reads an on-device copy of the nearest due dates.")),
+      (("Kamera a fotky", "Camera and photos"),
+       ("Kamera a knihovna fotek slouží jen k vyfocení vozidla, faktur a účtenek (skener dokumentů běží v zařízení). Fotky se ukládají k záznamu v aplikaci a do tvého iCloudu.",
+        "The camera and photo library are used only to take pictures of your vehicle, invoices and receipts (the document scanner runs on-device). Photos are stored with the record in the app and in your iCloud.")),
+      (("Oznámení", "Notifications"),
+       ("Připomínky termínů plánuje aplikace přímo v zařízení. Nikam se neodesílají.",
+        "Reminders for due dates are scheduled on-device. Nothing is sent anywhere.")),
+      (("Export", "Export"),
+       ("Export do CSV a PDF vytvoří soubor v zařízení; dál ho pošleš jen ty přes systémové sdílení.",
+        "CSV and PDF export creates a file on your device; it only goes further when you send it via the share sheet.")),
+      (("Volitelné propojení s vlastním serverem", "Optional connection to your own server"),
+       ("Aplikace umí volitelně synchronizovat vozidla, náklady a termíny s osobním serverem Mainhub, který si provozuje sám uživatel, a zobrazit z něj souhrn knihy jízd. Ve výchozím stavu je volba skrytá a vypnutá. Po propojení (QR kód z vlastního serveru) se data posílají jen na adresu toho serveru; přístupový token je uložený v Klíčence zařízení. Kamera slouží i k naskenování tohoto QR kódu.",
+        "The app can optionally sync vehicles, costs and due dates with a personal Mainhub server run by the user themselves and show a trip-log summary from it. This option is hidden and off by default. Once connected (via a QR code from your own server) data is sent only to that server's address; the access token is stored in the device Keychain. The camera is also used to scan that QR code.")),
+      (("Siri a Zkratky", "Siri and Shortcuts"),
+       ("Pokud použiješ Siri nebo Zkratky (např. „Zapiš tankování“), hlasové pokyny zpracovává Apple podle svých zásad.",
+        "If you use Siri or Shortcuts (e.g. “Log fuel”), voice requests are processed by Apple under its own policy.")),
+    ]),
 ]
 
 EXTERNAL = [("Kulturník", "https://vyrazime.luksafoto.cz/soukromi")]
@@ -229,8 +257,12 @@ def index():
     return page("EasyLife – soukromí", "".join(parts))
 
 OUT.mkdir(exist_ok=True)
-(OUT / "index.html").write_text(index(), encoding="utf-8")
+# Rozcestník zásad; úvodní stránku webu (index.html) generuje web.py z EasyLife/catalog.json.
+(OUT / "soukromi.html").write_text(index(), encoding="utf-8")
 for app in APPS:
     (OUT / f"{app['slug']}.html").write_text(app_page(app), encoding="utf-8")
 (OUT / ".nojekyll").write_text("")
 print("ok", [a["slug"] for a in APPS])
+
+import web  # web easyforlife.eu – úvod a detaily appek z catalog.json, viz web.py
+web.build(OUT, APPS, EXTERNAL, OPERATOR)
