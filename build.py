@@ -264,6 +264,28 @@ APPS = [
        ("Aplikace nenahrazuje lékaře ani lékárníka a nedává rady k dávkování. Jen připomíná to, co si uživatel sám zadá.",
         "The app does not replace a doctor or pharmacist and gives no dosing advice. It only reminds you of what you enter yourself.")),
     ]),
+  dict(slug="mazlicek", name="Mazlíček", mark="🐾", color="#e8590c",
+    tagline=("Zdraví, krmení a deník mazlíčka: očkování, parazité, veterina, léky, váha a cestování.",
+             "Your pet’s health, feeding and journal: vaccinations, parasites, vet visits, medications, weight and travel."),
+    summary=("Mazlíček nemá vlastní server, účty, reklamy ani analytiku. Údaje o tvých zvířatech jsou jen v tvém zařízení a v tvém soukromém iCloudu; sdíleného mazlíčka vidí jen lidé, které pozveš. My k datům přístup nemáme.",
+             "Mazlíček has no server of its own, no accounts, ads or analytics. Your pets’ data lives only on your device and in your private iCloud; a shared pet is visible only to people you invite. We have no access to the data."),
+    sections=[
+      (("Co aplikace ukládá", "What the app stores"),
+       ("Profily zvířat (jméno, druh, plemeno, narození, pohlaví, číslo čipu a pasu, alergie, kontakt na veterináře, pojištění, fotka), očkování a jiná péče, návštěvy veterináře se zprávami a fotkami dokumentů, léky a záznamy podání, váha, krmivo a zásoby, deník (procházky, stříhání, koupání…), plánované cesty a tvé jméno pro zobrazení u záznamů. Pro widget se v zařízení ukládá kopie nejbližších termínů.",
+        "Pet profiles (name, species, breed, birth date, sex, microchip and passport numbers, allergies, vet contact, insurance, photo), vaccinations and other care, vet visits with reports and document photos, medications and dose records, weight, food and supplies, a journal (walks, grooming, baths…), planned trips and your display name shown on entries. A copy of upcoming items is stored on the device for the widget.")),
+      (("iCloud a sdílení s rodinou", "iCloud and family sharing"),
+       ("Pokud je zapnutá synchronizace, data se ukládají do tvého soukromého iCloudu (Apple CloudKit). Když mazlíčka sdílíš, všichni pozvaní mohou číst a upravovat všechny jeho údaje včetně fotek a dokumentů a vidí iCloud jméno ostatních účastníků. Sdílení můžeš kdykoli zastavit. Synchronizaci lze vypnout; aplikace pak funguje jen v zařízení.",
+        "If sync is on, data is stored in your private iCloud (Apple CloudKit). When you share a pet, everyone invited can read and edit all of its data including photos and documents, and can see the other participants’ iCloud names. You can stop sharing at any time. Sync can be turned off so the app works on-device only.")),
+      (("Kamera a fotky", "Camera and photos"),
+       ("Kamera, skener dokumentů a výběr fotek slouží jen k vyfocení mazlíčka a dokumentů od veterináře. Fotky se zmenší a uloží u záznamu; nikam jinam se neodesílají.",
+        "The camera, document scanner and photo picker are only used to photograph your pet and vet documents. Photos are downscaled and stored with the entry; they are not sent anywhere else.")),
+      (("Oznámení, Siri, widget a PDF", "Notifications, Siri, widget and PDF"),
+       ("Připomínky očkování, léků, krmení a zásob plánuje aplikace přímo v zařízení. Příkazy pro Siri a Zkratky zpracovává Apple podle svých zásad. Zdravotní kartu v PDF vytvoří aplikace v zařízení a dostane ji jen ten, komu ji sám pošleš.",
+        "Vaccination, medication, feeding and supply reminders are scheduled on-device. Siri and Shortcuts requests are processed by Apple under its own policy. The PDF health card is created on-device and only reaches whoever you send it to.")),
+      (("Veterinární upozornění", "Veterinary disclaimer"),
+       ("Aplikace nenahrazuje veterináře. Navržené intervaly a checklist pro cestování jsou jen orientační.",
+        "The app does not replace a vet. Suggested intervals and the travel checklist are for guidance only.")),
+    ]),
 ]
 
 EXTERNAL = [("Kulturník", "https://vyrazime.luksafoto.cz/soukromi")]
