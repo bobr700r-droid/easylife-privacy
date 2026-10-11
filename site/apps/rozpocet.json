@@ -1,0 +1,76 @@
+{
+ "status": "dev",
+ "color": "#2f9e44",
+ "icon": "~/EasyLife aplikace/Rozpocet/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+ "description": {
+  "cs": [
+   "Rozpočet je jednoduchý přehled příjmů a výdajů domácnosti – výdaj zapíšeš za tři vteřiny a hned vidíš, kolik ti tento měsíc zbývá.",
+   "Bez banky a bez účtu, data jen v iPhonu a ve tvém iCloudu."
+  ],
+  "en": [
+   "Rozpočet is a simple overview of household income and spending – log an expense in three seconds and instantly see how much you have left this month.",
+   "No bank connection and no account; your data stays on your iPhone and in your iCloud."
+  ],
+  "sk": [
+   "Rozpočet je jednoduchý prehľad príjmov a výdavkov domácnosti – výdavok zapíšeš za tri sekundy a hneď vidíš, koľko ti tento mesiac zostáva.",
+   "Bez banky a bez účtu, dáta len v iPhone a v tvojom iCloude."
+  ],
+  "de": [
+   "Rozpočet ist ein einfacher Überblick über Einnahmen und Ausgaben im Haushalt – eine Ausgabe erfasst du in drei Sekunden und siehst sofort, was dir diesen Monat bleibt.",
+   "Ohne Bankanbindung und ohne Konto; deine Daten bleiben auf dem iPhone und in deiner iCloud."
+  ],
+  "es": [
+   "Rozpočet es un resumen sencillo de ingresos y gastos del hogar: anota un gasto en tres segundos y ve al instante cuánto te queda este mes.",
+   "Sin conexión al banco ni cuenta; tus datos se quedan en el iPhone y en tu iCloud."
+  ],
+  "pl": [
+   "Rozpočet to prosty przegląd przychodów i wydatków domowych – wydatek zapiszesz w trzy sekundy i od razu widzisz, ile zostało w tym miesiącu.",
+   "Bez banku i bez konta, dane tylko w iPhonie i w twoim iCloud."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Rychlé zadání výdaje i přes Siri a widget „Zbývá tento měsíc“",
+   "Kategorie s měsíčními limity a upozornění při přečerpání",
+   "Import CSV výpisu z banky s automatickými kategoriemi",
+   "Sdílený rozpočet domácnosti přes iCloud",
+   "Cíle spoření, opakované platby a fixní náklady z Předplatného a Odečtů"
+  ],
+  "en": [
+   "Quick expense entry, Siri and a “Left this month” widget",
+   "Categories with monthly limits and overspend alerts",
+   "CSV bank statement import with automatic categories",
+   "Shared household budget via iCloud",
+   "Savings goals, recurring payments and fixed costs from Předplatné and Odečty"
+  ],
+  "sk": [
+   "Rýchle zadanie výdavku aj cez Siri a widget „Zostáva tento mesiac“",
+   "Kategórie s mesačnými limitmi a upozornenie pri prečerpaní",
+   "Import CSV výpisu z banky s automatickými kategóriami",
+   "Zdieľaný rozpočet domácnosti cez iCloud",
+   "Ciele sporenia, opakované platby a fixné náklady z Předplatného a Odečtů"
+  ],
+  "de": [
+   "Ausgaben schnell erfassen, Siri und Widget „Rest diesen Monat“",
+   "Kategorien mit Monatslimits und Warnung bei Überschreitung",
+   "CSV-Kontoauszug-Import mit automatischen Kategorien",
+   "Gemeinsames Haushaltsbudget per iCloud",
+   "Sparziele, wiederkehrende Zahlungen und Fixkosten aus Předplatné und Odečty"
+  ],
+  "es": [
+   "Anota gastos rápido, con Siri y widget «Te queda este mes»",
+   "Categorías con límites mensuales y avisos al pasarte",
+   "Importación de extractos CSV con categorías automáticas",
+   "Presupuesto del hogar compartido por iCloud",
+   "Metas de ahorro, pagos recurrentes y gastos fijos de Předplatné y Odečty"
+  ],
+  "pl": [
+   "Szybkie wpisywanie wydatków, Siri i widżet „Zostało w tym miesiącu”",
+   "Kategorie z limitami miesięcznymi i alerty o przekroczeniu",
+   "Import wyciągu CSV z automatycznymi kategoriami",
+   "Wspólny budżet domowy przez iCloud",
+   "Cele oszczędnościowe, płatności cykliczne i koszty stałe z Předplatného i Odečtů"
+  ]
+ },
+ "links": []
+}

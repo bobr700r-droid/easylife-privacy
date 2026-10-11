@@ -165,6 +165,21 @@ LINKS = [
                           "Ein in Kuchařka gekochtes Gericht trägst du ins Ernährungstagebuch von Fitko ein.",
                           "Registra en el diario de Fitko lo que cocinaste con Kuchařka.",
                           "Ugotowane danie z Kuchařki zapiszesz w dzienniku jedzenia w Fitku.")),
+  ("predplatne", "rozpocet", d("Platby z Předplatného uvidíš v Rozpočtu mezi fixními náklady.", "Payments from Předplatné show up in Rozpočet as fixed costs.",
+                               "Platby z Předplatného uvidíš v Rozpočte medzi fixnými nákladmi.", "Zahlungen aus Předplatné erscheinen in Rozpočet als Fixkosten.",
+                               "Los pagos de Předplatné aparecen en Rozpočet como gastos fijos.", "Płatności z Předplatného zobaczysz w Rozpočcie jako koszty stałe.")),
+  ("odecty", "rozpocet", d("Zálohy na energie z Odečtů uvidíš v Rozpočtu mezi fixními náklady.", "Energy advance payments from Odečty show up in Rozpočet as fixed costs.",
+                           "Zálohy na energie z Odečtů uvidíš v Rozpočte medzi fixnými nákladmi.", "Energie-Abschläge aus Odečty erscheinen in Rozpočet als Fixkosten.",
+                           "Los pagos a cuenta de energía de Odečty aparecen en Rozpočet como gastos fijos.", "Zaliczki na energię z Odečtů zobaczysz w Rozpočcie jako koszty stałe.")),
+  ("garaz", "rozpocet", d("Náklady na auto z Garážky uvidíš v Rozpočtu.", "Car costs from Garážka show up in Rozpočet.",
+                          "Náklady na auto z Garážky uvidíš v Rozpočte.", "Autokosten aus Garážka erscheinen in Rozpočet.",
+                          "Los gastos del coche de Garážka aparecen en Rozpočet.", "Koszty auta z Garážki zobaczysz w Rozpočcie.")),
+  ("vyrovnano", "rozpocet", d("Tvůj podíl ze společných výdajů ve Vyrovnáno uvidíš v Rozpočtu.", "Your share of shared expenses in Vyrovnáno shows up in Rozpočet.",
+                              "Tvoj podiel zo spoločných výdavkov vo Vyrovnáno uvidíš v Rozpočte.", "Dein Anteil an gemeinsamen Ausgaben aus Vyrovnáno erscheint in Rozpočet.",
+                              "Tu parte de los gastos compartidos de Vyrovnáno aparece en Rozpočet.", "Twój udział we wspólnych wydatkach z Vyrovnáno zobaczysz w Rozpočcie.")),
+  ("rozpocet", "smenarna", d("Kurz pro platbu v cizí měně z Rozpočtu otevřeš ve Směnárně.", "Open the rate for a foreign-currency payment from Rozpočet in Směnárna.",
+                             "Kurz pre platbu v cudzej mene z Rozpočtu otvoríš v Směnárne.", "Den Kurs für eine Zahlung in Fremdwährung aus Rozpočet öffnest du in Směnárna.",
+                             "Abre en Směnárna el tipo de cambio de un pago en divisa de Rozpočet.", "Kurs dla płatności w obcej walucie z Rozpočtu otworzysz w Směnárně.")),
   ("mailer", "fakturant", d("Fakturu z přílohy v Maileru pošleš jako náklad do Fakturantu.",
                             "Send an invoice attachment from Mailer to Fakturant as an expense.",
                             "Faktúru z prílohy v Maileri pošleš ako náklad do Fakturantu.",
@@ -173,7 +188,7 @@ LINKS = [
                             "Fakturę z załącznika w Mailerze wyślesz jako koszt do Fakturanta.")),
 ]
 
-HUB_FEEDS = ["kucharka", "nakupy", "garaz", "predplatne", "lekarnicka", "zaruky", "darky", "mazlicek", "odecty", "salonky", "cestovnicek", "fotoplan"]
+HUB_FEEDS = ["rozpocet", "kucharka", "nakupy", "garaz", "predplatne", "lekarnicka", "zaruky", "darky", "mazlicek", "odecty", "salonky", "cestovnicek", "fotoplan"]
 HUB_TEXT = d("Termíny z {a} uvidíš v EasyForLife Hubu spolu s ostatními.", "Upcoming items from {a} show up in EasyForLife Hub with everything else.",
              "Termíny z {a} uvidíš v EasyForLife Hube spolu s ostatnými.", "Termine aus {a} siehst du im EasyForLife Hub zusammen mit allem anderen.",
              "Lo pendiente de {a} aparece en EasyForLife Hub junto con todo lo demás.", "Terminy z {a} zobaczysz w EasyForLife Hub razem z resztą.")
