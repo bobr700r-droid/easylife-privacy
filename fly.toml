@@ -1,14 +1,10 @@
-# easyforlife.cz → https://easyforlife.eu (301, zachová cestu). Nasazení: fly deploy --ha=false
+# Web EasyForLife: easyforlife.cz (cs) a easyforlife.eu (en + další jazyky). Nasazení: ./deploy.sh
 app = "easyforlife-redirect"
 primary_region = "fra"
 
-[env]
-  REDIRECT_TO = "https://easyforlife.eu"
-
 [http_service]
   internal_port = 8080
-  # http:// přesměrujeme rovnou na https://easyforlife.eu (jeden skok), proto bez force_https
-  force_https = false
+  force_https = true
   auto_stop_machines = "suspend"
   auto_start_machines = true
   min_machines_running = 0

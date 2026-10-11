@@ -1,4 +1,9 @@
-"""Generuje web EasyForLife (easyforlife.eu) z EasyLife/catalog.json a site/apps/<id>.json.
+"""Generuje web EasyForLife z EasyLife/catalog.json a site/apps/<id>.json.
+
+Dvě verze: easyforlife.cz = čeština, easyforlife.eu = angličtina (kořen) a další jazyky (/sk/, /de/, /es/, /pl/).
+Dokud .eu nemíří na Fly (EU_LIVE), běží všechny jazyky na .cz pod /<lang>/. Výstup: dist/cz a dist/eu
+(servíruje Fly app easyforlife-redirect, server/server.js podle hostu). docs/ (GitHub Pages) drží jen
+zásady soukromí /<slug>.html a obrázky; ostatní stránky tam jen přesměrují na novou adresu.
 
 Volá se z build.py: web.build(OUT, APPS, EXTERNAL, OPERATOR). Stránky soukromí (/<slug>.html) generuje build.py,
 tady se jen odkazují. Obsah detailů appek je v site/apps/<id>.json (popis, funkce, propojení, stav), texty
@@ -13,16 +18,26 @@ HERE = pathlib.Path(__file__).parent
 ROOT = HERE.parent                      # EasyLife aplikace/
 CATALOG = ROOT / "EasyLife" / "catalog.json"
 CONTENT = HERE / "site" / "apps"
-DOMAIN = "easyforlife.eu"
-BASE = f"https://{DOMAIN}"
+CZ, EU = "https://easyforlife.cz", "https://easyforlife.eu"
+FLY_IPV4 = "66.241.124.47"  # Fly app easyforlife-redirect
+DIST = HERE / "dist"
+
+def _eu_live():
+    """easyforlife.eu běží, když míří na Fly app (nebo EU_LIVE=1/0 v prostředí)."""
+    if os.environ.get("EU_LIVE") in ("0", "1"):
+        return os.environ["EU_LIVE"] == "1"
+    try:
+        return FLY_IPV4 in {i[4][0] for i in socket.getaddrinfo("easyforlife.eu", 443, socket.AF_INET)}
+    except OSError:
+        return False
+EU_LIVE = _eu_live()
 LANGS = ["cs", "en", "sk", "de", "es", "pl"]
 LANG_NAMES = {"cs": "Čeština", "en": "English", "sk": "Slovenčina", "de": "Deutsch", "es": "Español", "pl": "Polski"}
-# Appky, které na webu zatím nemají být (Kulturník zatím k veřejnosti nemíří).
-HIDDEN = {"kulturnik"}
+# Appky, které na webu nemají být vůbec. Omezení na jazyky bere web z pole `locales` v katalogu (Kulturník jen cs).
+HIDDEN = set()
 # Složka appky, když se nejmenuje jako id v katalogu.
 FOLDERS = {"kulturnik": "Vyrazime", "easylife": "EasyForLifeHub", "cestovnicek": "Cestovnicek/apple"}
 CONTACT = "info@luksafoto.cz"  # kontakt podpory, dokud easyforlife.eu nemá vlastní e-mail
-SUPPORT = "podpora"           # /podpora/ = Support URL pro App Store
 FAMILY_COLORS = {"easylife": "#2563eb", "cestovani": "#2563eb", "foto": "#e8731c", "domacnost": "#0f9a62", "volny-cas": "#8b46d9",
                  "navigace": "#0e9aa7", "zdravi": "#e8457a", "kancelar": "#6366f1", "firmy": "#d9480f"}
 WORK = ["kancelar", "firmy"]  # rodiny v sekci „Pro práci“ (tmavý blok na konci)
@@ -64,6 +79,9 @@ T = {
   "count": ['{n} aplikací pro iPhone, Mac a web', '{n} apps for iPhone, Mac and web', '{n} aplikácií pre iPhone, Mac a web', '{n} Apps für iPhone, Mac und Web', '{n} apps para iPhone, Mac y web', '{n} aplikacji na iPhone’a, Maca i web'],
   "cta_apps": ["Prohlédnout appky", "Explore the apps", "Pozrieť aplikácie", "Apps entdecken", "Ver las apps", "Zobacz aplikacje"],
   "wall": ['Jedna rodina. Míň starostí.', 'One family. Fewer worries.', 'Jedna rodina. Menej starostí.', 'Eine Familie. Weniger Sorgen.', 'Una familia. Menos preocupaciones.', 'Jedna rodzina. Mniej zmartwień.'],
+  "nf": ["Tahle stránka neexistuje. Možná se přestěhovala – zkus úvodní stránku.", "This page doesn’t exist. It may have moved – try the home page.",
+         "Táto stránka neexistuje. Možno sa presťahovala – skús úvodnú stránku.", "Diese Seite gibt es nicht. Vielleicht ist sie umgezogen – versuch die Startseite.",
+         "Esta página no existe. Puede que se haya movido: prueba la página de inicio.", "Ta strona nie istnieje. Może została przeniesiona – spróbuj strony głównej."],
   "solo": ["{a} funguje i sama – propojení je bonus.", "{a} works on its own too – connections are a bonus.", "{a} funguje aj sama – prepojenie je bonus.",
            "{a} funktioniert auch allein – die Verbindungen sind ein Bonus.", "{a} también funciona sola; las conexiones son un extra.", "{a} działa też samodzielnie – połączenia to bonus."],
   "start": ["Začni tady", "Start here", "Začni tu", "Starte hier", "Empieza aquí", "Zacznij tutaj"],
@@ -148,9 +166,30 @@ def t(key, lang):
 def esc(s):
     return html.escape(s, quote=True)
 
+def site_of(lang):
+    """Na kterém webu jazyk běží: cz (čeština, dokud .eu neběží i ostatní), nebo eu."""
+    return "cz" if lang == "cs" or not EU_LIVE else "eu"
+
+def prefix(lang):
+    return "" if lang == "cs" or (EU_LIVE and lang == "en") else f"/{lang}"
+
+def host(lang):
+    return CZ if site_of(lang) == "cz" else EU
+
+def sup(lang):
+    """Adresa podpory: /podpora/ (cs, sk), jinak /support/ – Support URL pro App Store."""
+    return "podpora" if lang in ("cs", "sk") else "support"
+
 def url(lang, slug=None):
-    p = "" if lang == "cs" else f"/{lang}"
+    """Cesta v rámci webu daného jazyka."""
+    p = prefix(lang)
     return f"{p}/{slug}/" if slug else f"{p}/"
+
+def full(lang, slug=None):
+    return host(lang) + url(lang, slug)
+
+def _sl(slug, lang):
+    return slug.get(lang) if isinstance(slug, dict) else slug
 
 ICONS = {  # 24×24, stroke = currentColor
   "cestovani": '<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>',
@@ -404,15 +443,15 @@ html{overflow-x:hidden}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 """
 
-def head_script(lang, slug):
-    """Výběr jazyka: uložená volba, jinak jazyk prohlížeče. Přesměrovává jen z výchozí (české) verze."""
+def head_script(lang, targets=None):
+    """Výběr jazyka: uložená volba, jinak jazyk prohlížeče. Přesměrovává jen z české verze (targets: jazyk → adresa)."""
     js = "document.documentElement.className+=' js';"
-    if lang == "cs":
-        js += ("(function(){var L=" + json.dumps(LANGS) + ",s,p=" + json.dumps(slug or "") + ";"
+    if lang == "cs" and targets:
+        js += ("(function(){var M=" + json.dumps(targets) + ",s;"
                "try{s=localStorage.getItem('lang')}catch(e){}"
                "if(!s){var n=navigator.languages||[navigator.language||'cs'];s='en';"
-               "for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(L.indexOf(c)>=0){s=c;break}}}"
-               "if(s!=='cs'&&L.indexOf(s)>0)location.replace((p?'../':'')+s+'/'+(p?p+'/':'')+location.hash)})();")
+               "for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(M[c]){s=c;break}}}"
+               "if(s!=='cs'&&M[s])location.replace(M[s]+location.hash)})();")
     return f"<script>{js}</script>"
 
 FOOT_SCRIPT = """<script>
@@ -435,19 +474,25 @@ t.addEventListener('pointerleave',function(){t.style.removeProperty('--rx');t.st
 })();
 </script>"""
 
-def page(lang, slug, title, desc, body, operator, relative=True):
-    alts = "".join(f'<link rel="alternate" hreflang="{l}" href="{BASE}{url(l, slug)}">' for l in LANGS)
-    alts += f'<link rel="alternate" hreflang="x-default" href="{BASE}{url("cs", slug)}">'
-    langs = "".join(f'<a href="{url(l, slug)}" hreflang="{l}" lang="{l}" title="{LANG_NAMES[l]}"'
-                    f'{" aria-current=\"true\"" if l == lang else ""}>{l.upper()}</a>' for l in LANGS)
+def page(lang, slug, title, desc, body, operator, relative=True, langs=None):
+    """slug: None (úvod), řetězec, nebo slovník jazyk → slug; langs: jazyky, ve kterých stránka existuje."""
+    langs = langs or LANGS
+    here = lambda l: url(l, _sl(slug, l)) if site_of(l) == site_of(lang) else full(l, _sl(slug, l))
+    alts = "".join(f'<link rel="alternate" hreflang="{l}" href="{full(l, _sl(slug, l))}">' for l in langs)
+    xd = "en" if "en" in langs else langs[0]
+    alts += f'<link rel="alternate" hreflang="x-default" href="{full(xd, _sl(slug, xd))}">'
+    targets = {l: here(l) for l in langs}
+    BASE = host(lang)
+    switch = "".join(f'<a href="{here(l)}" hreflang="{l}" lang="{l}" title="{LANG_NAMES[l]}"'
+                     f'{" aria-current=\"true\"" if l == lang else ""}>{l.upper()}</a>' for l in langs)
     pol = f'/soukromi.html{"" if lang in ("cs", "sk") else "#en"}'
     doc = f"""<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-{head_script(lang, slug)}<title>{esc(title)}</title>
+{head_script(lang, targets)}<title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{BASE}{url(lang, slug)}">{alts}
+<link rel="canonical" href="{full(lang, _sl(slug, lang))}">{alts}
 <meta property="og:type" content="website"><meta property="og:site_name" content="EasyForLife"><meta property="og:title" content="{esc(title)}">
-<meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{BASE}{url(lang, slug)}">
+<meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{full(lang, _sl(slug, lang))}">
 <meta property="og:image" content="{BASE}/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.png" sizes="64x64" type="image/png">
@@ -458,17 +503,18 @@ def page(lang, slug, title, desc, body, operator, relative=True):
 <link rel="stylesheet" href="/site.css"></head>
 <body><a class="skip" href="#main">{t("skip", lang)}</a>
 <div class="wrap"><header class="top"><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a>
-<nav class="nav"><a href="{url(lang)}#apps">{t("apps", lang)}</a><a href="{url(lang, SUPPORT)}">{t("support", lang)}</a>
-<span class="langs" aria-label="{t("lang", lang)}">{langs}</span></nav></header></div>
+<nav class="nav"><a href="{url(lang)}#apps">{t("apps", lang)}</a><a href="{url(lang, sup(lang))}">{t("support", lang)}</a>
+<span class="langs" aria-label="{t("lang", lang)}">{switch}</span></nav></header></div>
 <main id="main">{body}</main>
 <footer><div class="wrap row"><div><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a><p>{t("made", lang)}</p>
 <p>{t("operator", lang)}: {esc(operator[0 if lang in ("cs", "sk") else 1])}</p></div>
-<p><a href="{url(lang, SUPPORT)}">{t("support", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a></p></div></footer>
+<p><a href="{url(lang, sup(lang))}">{t("support", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a></p></div></footer>
 {FOOT_SCRIPT}</body></html>
 """
-    # Relativní odkazy, aby web fungoval i na bobr700r-droid.github.io/easylife-privacy/ (než začne platit doména).
+    # Relativní odkazy – web jde otevřít i ze složky (náhled) a z libovolného hostu.
     if relative:
-        r = "../" * ((lang != "cs") + (slug is not None)) or "./"
+        path = url(lang, _sl(slug, lang)).strip("/")
+        r = "../" * (path.count("/") + 1 if path else 0) or "./"
         doc = doc.replace('href="/', f'href="{r}').replace('src="/', f'src="{r}')
     return doc
 
@@ -490,12 +536,18 @@ class Site:
         self.privacy = {a["slug"]: f"/{a['slug']}.html" for a in privacy_apps}
         self.colors = {a["slug"]: a["color"] for a in privacy_apps}
         self.external = {n: u for n, u in external}
-        self.apps = [a for a in self.cat["apps"] if a["id"] not in HIDDEN]
-        for a in self.apps:
+        self.all_apps = [a for a in self.cat["apps"] if a["id"] not in HIDDEN]
+        self.apps = self.all_apps
+        for a in self.all_apps:
             f = CONTENT / f"{a['id']}.json"
             a["site"] = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
             if a["site"].get("account"):  # ověřený stav z repa appky má přednost před katalogem
                 a["account"] = a["site"]["account"]
+        self.by_id = {a["id"]: a for a in self.apps}
+
+    def use(self, lang):
+        """Appky viditelné v daném jazyce (pole `locales` v katalogu, např. Kulturník jen cs)."""
+        self.apps = [a for a in self.all_apps if lang in (a.get("locales") or LANGS)]
         self.by_id = {a["id"]: a for a in self.apps}
 
     # --- obrázky ---
@@ -598,7 +650,7 @@ class Site:
         return f'<span class="chip acc {acc}">{t("acc_req" if acc == "required" else "acc_opt", lang)}</span>'
 
     def web_btn(self, a, lang, cls="btn"):
-        if not a.get("web") or a["web"].rstrip("/") == BASE:
+        if not a.get("web") or a["web"].rstrip("/") in (CZ, EU):
             return ""
         return f'<a class="{cls}" style="--c:{self.color(a)}" href="{esc(a["web"])}">{icon("globe")}{t("open_web", lang)}</a>'
 
@@ -777,7 +829,7 @@ class Site:
                 f'<p class="note">{icon("check")}<span>{t("support_hint", lang)}</span></p></div></div></section>'
                 f'<div class="wrap"><div class="detail"><h2 class="sub">{t("faq_title", lang)}</h2>{faq}'
                 f'<p class="note">{icon("shield")}<span><a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></span></p></div></div>')
-        return page(lang, SUPPORT, f'{t("support_title", lang)} | EasyForLife', t("support_lead", lang), body, self.operator)
+        return page(lang, {l: sup(l) for l in LANGS}, f'{t("support_title", lang)} | EasyForLife', t("support_lead", lang), body, self.operator)
 
     def detail(self, a, lang):
         s, c, fam = a["site"], self.color(a), self.families[a["family"]]
@@ -821,53 +873,79 @@ class Site:
             body += (f'<section><div class="wrap"><div class="sec-head rv"><h2>{t("family_more", lang).format(f=esc(fam["name"][lang]))}</h2></div>'
                      f'{self.bento(others, lang, featured=len(others) > 2)}</div></section>')
         title = f'{a["name"]} – {a["tagline"][lang].rstrip(".")} | EasyForLife'
-        return page(lang, a["id"], title, a["tagline"][lang], body, self.operator)
+        return page(lang, a["id"], title, a["tagline"].get(lang, ""), body, self.operator, langs=[l for l in LANGS if l in (a.get("locales") or LANGS)])
 
-    def write(self, rel, text):
-        p = self.out / rel
+    def write(self, rel, text, root=None):
+        p = (root or self.out) / rel
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(text, encoding="utf-8")
 
     def build(self, force_art=False):
+        # obrázky a styl do docs/ (sdílené), odtud se kopírují do obou webů
+        self.apps, self.by_id = self.all_apps, {a["id"]: a for a in self.all_apps}
         self.copy_icons()
         self.copy_shots()
         self.art(force_art)
         (self.out / "site.css").write_text(CSS.strip() + "\n", encoding="utf-8")
-        urls = []
+        shutil.rmtree(DIST, ignore_errors=True)
+        urls = {"cz": [], "eu": []}
+        stubs = {}  # stará adresa v docs/ (GitHub Pages) → nová
         for lang in LANGS:
-            pre = "" if lang == "cs" else f"{lang}/"
-            self.write(f"{pre}index.html", self.home(lang))
-            self.write(f"{pre}{SUPPORT}/index.html", self.support(lang))
-            urls.append(url(lang, SUPPORT))
-            urls.append(url(lang))
+            self.use(lang)
+            root = DIST / site_of(lang)
+            pre = prefix(lang).lstrip("/")
+            pre = pre + "/" if pre else ""
+            old = "" if lang == "cs" else f"{lang}/"
+            self.write(f"{pre}index.html", self.home(lang), root)
+            self.write(f"{pre}{sup(lang)}/index.html", self.support(lang), root)
+            urls[site_of(lang)] += [full(lang), full(lang, sup(lang))]
+            stubs[f"{old}index.html"] = full(lang)
+            stubs[f"{old}podpora/index.html"] = full(lang, sup(lang))
             for a in self.apps:
-                self.write(f"{pre}{a['id']}/index.html", self.detail(a, lang))
-                urls.append(url(lang, a["id"]))
-        # Smazat stránky appek, které z katalogu zmizely nebo jsou skryté.
-        keep = {a["id"] for a in self.apps} | set(LANGS) | {"icons", "shots", SUPPORT}
-        for lang in LANGS:
-            base = self.out if lang == "cs" else self.out / lang
-            for d in base.iterdir():
-                if d.is_dir() and d.name not in keep and (d / "index.html").exists():
-                    shutil.rmtree(d)
-        urls += [p for p in self.privacy.values()]
-        self.write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-                   + "".join(f"<url><loc>{BASE}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
-        self.write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
-        # CNAME až když DNS domény míří na GitHub Pages – jinak by staré github.io adresy zásad (App Store Connect)
-        # přesměrovaly na doménu, která ještě nefunguje.
-        try:
-            ips = {i[4][0] for i in socket.getaddrinfo(DOMAIN, 443, socket.AF_INET)}
-        except OSError:
-            ips = set()
-        if ips and all(ip.startswith("185.199.") for ip in ips):
-            self.write("CNAME", DOMAIN + "\n")
-        elif not (self.out / "CNAME").exists():
-            print(f"web: {DOMAIN} ještě nemíří na GitHub Pages – docs/CNAME se nezapisuje")
-        nf = ('<div class="detail"><h1>Stránka nenalezena</h1><p class="lead">Tahle stránka neexistuje. · This page doesn’t exist.</p>'
-              f'<p><a class="btn" href="/">{t("back", "cs")} · {t("back", "en")}</a></p></div>')
-        self.write("404.html", page("cs", None, "404 – EasyForLife", "EasyForLife", nf, self.operator, relative=False).replace(head_script("cs", None), ""))
-        return [a["id"] for a in self.apps]
+                self.write(f"{pre}{a['id']}/index.html", self.detail(a, lang), root)
+                urls[site_of(lang)].append(full(lang, a["id"]))
+                stubs[f"{old}{a['id']}/index.html"] = full(lang, a["id"])
+        assets = ["site.css", "og.png", "favicon.svg", "favicon.png", "apple-touch-icon.png", "soukromi.html"]
+        assets += [p.lstrip("/") for p in self.privacy.values()]
+        routes = {"hosts": {}, "redirects": []}
+        for site in ("cz", "eu"):
+            root = DIST / site
+            if not root.exists():
+                continue
+            base = CZ if site == "cz" else EU
+            routes["hosts"][base.split("//")[1]] = site
+            for f in assets:
+                if (self.out / f).exists():
+                    shutil.copy2(self.out / f, root / f)
+            for d in ("icons", "shots"):
+                if (self.out / d).exists():
+                    shutil.copytree(self.out / d, root / d)
+            urls[site] += [base + p for p in self.privacy.values()]
+            self.write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                       + "".join(f"<url><loc>{u}</loc></url>\n" for u in urls[site]) + "</urlset>\n", root)
+            self.write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n", root)
+            l404 = "cs" if site == "cz" else "en"
+            self.use(l404)
+            nf = (f'<section class="page-top"><div class="wrap"><div class="detail"><h1>404</h1><p class="lead">{t("nf", l404)}</p>'
+                  f'<p><a class="btn big" href="/">{t("back", l404)} <span>→</span></a></p></div></div></section>')
+            self.write("404.html", page(l404, None, "404 – EasyForLife", "EasyForLife", nf, self.operator, relative=False).replace(head_script(l404, None), ""), root)
+        if EU_LIVE:  # staré adresy jazyků na .cz → .eu
+            routes["redirects"] += [{"host": "easyforlife.cz", "prefix": f"/{l}/", "to": EU + prefix(l) + "/"} for l in LANGS if l != "cs"]
+        else:  # .eu zatím bez vlastního webu → anglická verze na .cz
+            routes["redirects"].append({"host": "easyforlife.eu", "prefix": "/", "to": CZ + "/en/", "files_to": CZ + "/"})
+        (DIST / "routes.json").write_text(json.dumps(routes, indent=1) + "\n", encoding="utf-8")
+        # docs/ (GitHub Pages): jen zásady soukromí a obrázky, ostatní stránky přesměrují na novou adresu
+        for d in list(self.out.iterdir()):
+            if d.is_dir() and d.name not in ("icons", "shots"):
+                shutil.rmtree(d)
+        for f in ("sitemap.xml", "robots.txt", "CNAME"):
+            (self.out / f).unlink(missing_ok=True)
+        for rel, target in stubs.items():
+            self.write(rel, f'<!doctype html><meta charset="utf-8"><title>EasyForLife</title><link rel="canonical" href="{target}">'
+                            f'<meta http-equiv="refresh" content="0;url={target}"><script>location.replace({json.dumps(target)}+location.hash)</script>'
+                            f'<a href="{target}">{target}</a>\n')
+        self.write("404.html", (self.out / "index.html").read_text(encoding="utf-8"))
+        return {k: len(v) for k, v in urls.items()} | {"eu_live": EU_LIVE}
 
 def build(out, privacy_apps, external, operator):
     if not CATALOG.exists():

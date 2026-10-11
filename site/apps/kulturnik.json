@@ -1,0 +1,19 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Kulturník ukáže program kin, divadel a akcí na jednom místě. Vybereš film a hned vidíš, kde a kdy ho hrají, s odkazem na nákup vstupenek.",
+   "Města a kina si nastavíš sám; v záložce Akce najdeš divadla, koncerty a festivaly. Zatím jen pro Česko."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Program kin na příští dny podle tvých měst",
+   "Detail filmu a odkaz na vstupenky",
+   "Divadla, koncerty a festivaly v záložce Akce",
+   "Filtr podle dne a kategorie",
+   "Najíst se před představením s Jídelníkem"
+  ]
+ },
+ "links": []
+}

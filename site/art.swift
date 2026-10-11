@@ -60,7 +60,7 @@ render(1200, 630, "og.png") { r in
     text("EasyForLife", size: 80, weight: .heavy, color: color(0x17191C), at: CGPoint(x: 66, y: 280), kern: -3)
     text("Appky, které ulehčují život.", size: 30, weight: .semibold, color: color(0x17191C), at: CGPoint(x: 72, y: 228))
     text("Apps that make life easier.", size: 26, weight: .regular, color: color(0x5F6670), at: CGPoint(x: 72, y: 188))
-    text("easyforlife.eu", size: 26, weight: .bold, color: color(0x2563EB), at: CGPoint(x: 72, y: 76))
+    text("easyforlife.cz · easyforlife.eu", size: 26, weight: .bold, color: color(0x2563EB), at: CGPoint(x: 72, y: 76))
 }
 
 // apple-touch-icon (iOS si roh zakulatí sám) a favicon.png
