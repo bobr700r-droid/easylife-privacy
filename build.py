@@ -20,7 +20,7 @@ APPS = [
        ("Jen nastavení (vzhled, ranní souhrn, osobní server) a to, že jsi viděl úvodní obrazovku. Smazáním aplikace se smaže.",
         "Only settings (appearance, morning summary, personal server) and whether you have seen the welcome screen. Deleted with the app.")),
       (("Ranní souhrn", "Morning summary"),
-       ("Když si v Nastavení zapneš Ranní souhrn, hub jednou denně v zvolený čas ukáže oznámení s tím, co tě čeká. Text se skládá a plánuje přímo v telefonu jako místní oznámení – nic se neodesílá. Léky a doklady v něm jsou jen obecně, bez názvů, protože oznámení je vidět i na zamčené obrazovce.",
+       ("Když si v Nastavení zapneš Ranní souhrn, hub jednou denně ve zvolený čas ukáže oznámení s tím, co tě čeká. Text se skládá a plánuje přímo v telefonu jako místní oznámení – nic se neodesílá. Léky a doklady v něm jsou jen obecně, bez názvů, protože oznámení je vidět i na zamčené obrazovce.",
         "If you turn on the Morning summary in Settings, the hub shows a notification once a day at the chosen time with what's ahead. The text is put together and scheduled on the phone as a local notification – nothing is sent. Medicines and documents appear only in general terms, without names, because notifications are visible on the Lock Screen.")),
       (("Widgety a Siri", "Widgets and Siri"),
        ("Widgety čtou stejné přehledy přímo v zařízení. Pokud použiješ Siri nebo Zkratky („Co mě dnes čeká?“), hlasové pokyny zpracovává Apple podle svých zásad.",
