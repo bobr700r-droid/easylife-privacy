@@ -10,7 +10,7 @@ tady se jen odkazují. Obsah detailů appek je v site/apps/<id>.json (popis, fun
 webu ve slovníku T. Ikony se kopírují z <App>/…/AppIcon.appiconset do docs/icons/ (sips + cwebp),
 favicon a OG obrázek kreslí site/art.swift (jen když chybí; vynutit: python3 build.py --art).
 """
-import html, json, math, os, pathlib, shutil, socket, subprocess, sys
+import html, json, math, os, pathlib, shutil, socket, subprocess, sys, zlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent / "site"))
 import eco  # site/eco.py – jak spolu appky spolupracují
 
@@ -500,7 +500,7 @@ def page(lang, slug, title, desc, body, operator, relative=True, langs=None):
 <meta name="theme-color" content="#fbfaf6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0d0e11" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;display=swap">
-<link rel="stylesheet" href="/site.css"></head>
+<link rel="stylesheet" href="/site.css?v={zlib.crc32(CSS.encode()):x}"></head>
 <body><a class="skip" href="#main">{t("skip", lang)}</a>
 <div class="wrap"><header class="top"><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a>
 <nav class="nav"><a href="{url(lang)}#apps">{t("apps", lang)}</a><a href="{url(lang, sup(lang))}">{t("support", lang)}</a>
@@ -611,7 +611,7 @@ class Site:
         if a["id"] == "easylife" and not self.has_icon(a):  # EasyForLife Hub: ikona = logo
             return f'<span class="app-icon logo-mark" aria-hidden="true">{LOGO}</span>'
         if (self.out / "icons" / f"{a['id']}.webp").exists():
-            return f'<img class="app-icon" src="/icons/{a["id"]}.webp" width="{size}" height="{size}" alt="" loading="lazy">'
+            return f'<img class="app-icon" src="{self.icon_url(a)}" width="{size}" height="{size}" alt="" loading="lazy">'
         return f'<span class="app-icon mark" style="--c:{self.color(a)}" aria-hidden="true">{esc(a["name"][0])}</span>'
 
     def cta(self, a, lang):
@@ -626,6 +626,10 @@ class Site:
         if href.startswith("/") and lang not in ("cs", "sk"):
             href += "#en"
         return f'<a class="{cls}" href="{href}">{t("privacy", lang)}</a>'
+
+    def icon_url(self, a):
+        """Adresa ikony s verzí podle času souboru, ať se nová ikona neschová v cache prohlížeče."""
+        return f'/icons/{a["id"]}.webp?v={int((self.out / "icons" / f"{a['id']}.webp").stat().st_mtime)}'
 
     def has_icon(self, a):
         return (self.out / "icons" / f"{a['id']}.webp").exists()
@@ -655,7 +659,7 @@ class Site:
         return f'<a class="{cls}" style="--c:{self.color(a)}" href="{esc(a["web"])}">{icon("globe")}{t("open_web", lang)}</a>'
 
     def tile(self, a, lang, size, k):
-        big = '<img class="ghost-icon" src="/icons/{}.webp" alt="" loading="lazy">'.format(a["id"]) if self.has_icon(a) and size != "t-n" else ""
+        big = f'<img class="ghost-icon" src="{self.icon_url(a)}" alt="" loading="lazy">' if self.has_icon(a) and size != "t-n" else ""
         return (f'<article class="tile {size} rv" style="--c:{self.color(a)};--rd:{k * 60}ms">{big}{self.app_icon(a, 132 if size == "t-big" else 64)}'
                 f'<div class="status">{self.status(a, lang)}</div>'
                 f'<h3><a href="{url(lang, a["id"])}">{esc(a["name"])}</a></h3><p>{esc(a["tagline"][lang])}</p>'
@@ -770,7 +774,8 @@ class Site:
                 f'<div><ul class="eco-ex">{ex}</ul><p class="note">{icon("link")}<span>{t("eco_hint", lang)}</span></p></div></div></div></section>')
 
     def family_apps(self, fid):
-        return [a for a in self.apps if a["family"] == fid]
+        """Appky rodiny; appka se může ukázat i v další rodině (`also_families` v site/apps, např. FotoDesk i ve Foto)."""
+        return [a for a in self.apps if a["family"] == fid or fid in a["site"].get("also_families", [])]
 
     def fly_icons(self, apps, layout=FLY):
         out = ""
