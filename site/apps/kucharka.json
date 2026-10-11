@@ -1,5 +1,5 @@
 {
- "status": "dev",
+ "status": "testflight",
  "color": "#c92a2a",
  "description": {
   "cs": [
@@ -29,46 +29,46 @@
  },
  "features": {
   "cs": [
-   "Recepty z webu i ze Safari přes Sdílet, z fotky nebo ručně",
-   "Přepočet porcí a režim vaření s časovači",
-   "Plán vaření na týden a nákup naráz",
-   "Co uvařit z toho, co mám doma",
-   "Rodinná kuchařka sdílená přes iCloud"
+   "Recepty z webu, Safari, fotky, PDF i skeneru stránek",
+   "„Co mě čeká“: dnešní jídla a týden s kaloriemi a makry",
+   "Kalorické tabulky a čárové kódy (USDA, Open Food Facts)",
+   "Rodinná nástěnka: návrhy, hlasování, kdo jí doma",
+   "Plán vaření na týden a nákup naráz do Nákupů"
   ],
   "en": [
-   "Recipes from the web or Safari via Share, from photos or typed in",
-   "Serving scaling and cooking mode with timers",
-   "Weekly meal plan and one shopping run",
-   "What to cook with what you have at home",
-   "Family cookbook shared via iCloud"
+   "Recipes from the web, Safari, photos, PDFs and page scans",
+   "“What’s next”: today’s meals and the week with calories and macros",
+   "Nutrition tables and barcodes (USDA, Open Food Facts)",
+   "Family board: suggestions, voting, who’s eating at home",
+   "Weekly meal plan and one shopping run in Nákupy"
   ],
   "sk": [
-   "Recepty z webu aj zo Safari cez Zdieľať, z fotky alebo ručne",
-   "Prepočet porcií a režim varenia s časovačmi",
-   "Plán varenia na týždeň a nákup naraz",
-   "Čo uvariť z toho, čo mám doma",
-   "Rodinná kuchárka zdieľaná cez iCloud"
+   "Recepty z webu, Safari, fotky, PDF aj skenera stránok",
+   "„Čo ma čaká“: dnešné jedlá a týždeň s kalóriami a makrami",
+   "Kalorické tabuľky a čiarové kódy (USDA, Open Food Facts)",
+   "Rodinná nástenka: návrhy, hlasovanie, kto je doma",
+   "Plán varenia na týždeň a nákup naraz do Nákupov"
   ],
   "de": [
-   "Rezepte aus dem Web und aus Safari über Teilen, vom Foto oder getippt",
-   "Portionen umrechnen und Kochmodus mit Timern",
-   "Wochenplan und Einkauf in einem Rutsch",
-   "Was koche ich aus dem, was zu Hause ist",
-   "Familienkochbuch per iCloud geteilt"
+   "Rezepte aus Web, Safari, Fotos, PDFs und Seitenscans",
+   "„Was steht an“: heutige Mahlzeiten und die Woche mit Kalorien und Makros",
+   "Nährwerttabellen und Barcodes (USDA, Open Food Facts)",
+   "Familienpinnwand: Vorschläge, Abstimmung, wer zu Hause isst",
+   "Wochenplan und Einkauf in einem Rutsch in Nákupy"
   ],
   "es": [
-   "Recetas de la web o de Safari con Compartir, de fotos o a mano",
-   "Ajuste de raciones y modo cocina con temporizadores",
-   "Plan semanal y compra de una vez",
-   "Qué cocinar con lo que tienes en casa",
-   "Recetario familiar compartido por iCloud"
+   "Recetas de la web, Safari, fotos, PDF y escáner de páginas",
+   "«Lo próximo»: las comidas de hoy y la semana con calorías y macros",
+   "Tablas nutricionales y códigos de barras (USDA, Open Food Facts)",
+   "Tablón familiar: propuestas, votaciones, quién come en casa",
+   "Plan semanal y compra de una vez en Nákupy"
   ],
   "pl": [
-   "Przepisy ze stron i z Safari przez Udostępnij, ze zdjęć lub ręcznie",
-   "Przeliczanie porcji i tryb gotowania z minutnikami",
-   "Plan na tydzień i zakupy za jednym razem",
-   "Co ugotować z tego, co mam w domu",
-   "Rodzinna książka kucharska w iCloud"
+   "Przepisy ze stron, Safari, zdjęć, PDF i skanera stron",
+   "„Co mnie czeka”: dzisiejsze posiłki i tydzień z kaloriami i makro",
+   "Tabele kalorii i kody kreskowe (USDA, Open Food Facts)",
+   "Rodzinna tablica: propozycje, głosowanie, kto je w domu",
+   "Plan na tydzień i zakupy za jednym razem w Nákupach"
   ]
  },
  "links": []
