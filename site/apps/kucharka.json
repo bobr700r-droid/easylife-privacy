@@ -1,6 +1,6 @@
 {
  "status": "dev",
- "color": "#e8590c",
+ "color": "#c92a2a",
  "description": {
   "cs": [
    "Kuchařka je místo pro rodinné recepty a plán vaření na celý týden. Recept uložíš z webu, z fotky kuchařky nebo ho napíšeš sám a při vaření tě provede krok za krokem.",
@@ -29,45 +29,45 @@
  },
  "features": {
   "cs": [
-   "Recepty z webu, z fotky i ruční zápis",
+   "Recepty z webu i ze Safari přes Sdílet, z fotky nebo ručně",
    "Přepočet porcí a režim vaření s časovači",
    "Plán vaření na týden a nákup naráz",
-   "„Co uvařit z toho, co mám“",
+   "Co uvařit z toho, co mám doma",
    "Rodinná kuchařka sdílená přes iCloud"
   ],
   "en": [
-   "Recipes from the web, from photos or typed in",
+   "Recipes from the web or Safari via Share, from photos or typed in",
    "Serving scaling and cooking mode with timers",
    "Weekly meal plan and one shopping run",
-   "“What can I cook with what I have”",
+   "What to cook with what you have at home",
    "Family cookbook shared via iCloud"
   ],
   "sk": [
-   "Recepty z webu, z fotky aj ručný zápis",
+   "Recepty z webu aj zo Safari cez Zdieľať, z fotky alebo ručne",
    "Prepočet porcií a režim varenia s časovačmi",
    "Plán varenia na týždeň a nákup naraz",
-   "„Čo uvariť z toho, čo mám“",
+   "Čo uvariť z toho, čo mám doma",
    "Rodinná kuchárka zdieľaná cez iCloud"
   ],
   "de": [
-   "Rezepte aus dem Web, vom Foto oder selbst getippt",
+   "Rezepte aus dem Web und aus Safari über Teilen, vom Foto oder getippt",
    "Portionen umrechnen und Kochmodus mit Timern",
    "Wochenplan und Einkauf in einem Rutsch",
-   "„Was koche ich aus dem, was da ist“",
+   "Was koche ich aus dem, was zu Hause ist",
    "Familienkochbuch per iCloud geteilt"
   ],
   "es": [
-   "Recetas de la web, de fotos o escritas a mano",
+   "Recetas de la web o de Safari con Compartir, de fotos o a mano",
    "Ajuste de raciones y modo cocina con temporizadores",
    "Plan semanal y compra de una vez",
-   "«Qué cocino con lo que tengo»",
+   "Qué cocinar con lo que tienes en casa",
    "Recetario familiar compartido por iCloud"
   ],
   "pl": [
-   "Przepisy ze stron, ze zdjęć lub wpisane ręcznie",
+   "Przepisy ze stron i z Safari przez Udostępnij, ze zdjęć lub ręcznie",
    "Przeliczanie porcji i tryb gotowania z minutnikami",
    "Plan na tydzień i zakupy za jednym razem",
-   "„Co ugotować z tego, co mam”",
+   "Co ugotować z tego, co mam w domu",
    "Rodzinna książka kucharska w iCloud"
   ]
  },
