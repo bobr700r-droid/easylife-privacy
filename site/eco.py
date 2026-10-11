@@ -201,6 +201,24 @@ LINKS = [
   ("kucharka", "jidelnik", d("Když se ti nechce vařit, Jídelník najde podnik, kde jídlo z Kuchařky vaří.", "Not in the mood to cook? Jídelník finds a place that serves the dish from Kuchařka.",
                              "Keď sa ti nechce variť, Jídelník nájde podnik, kde jedlo z Kuchárky varia.", "Keine Lust zu kochen? Jídelník findet ein Lokal mit dem Gericht aus Kuchařka.",
                              "¿Sin ganas de cocinar? Jídelník encuentra dónde sirven el plato de Kuchařka.", "Nie chce ci się gotować? Jídelník znajdzie lokal z daniem z Kuchařki.")),
+  ("rodinka", "karticky", d("Kartičku pojištěnce nebo očkovací průkaz dítěte z Rodinky otevřeš v Kartičkách.", "Open your child's insurance or vaccination card from Rodinka in Kartičky.",
+                           "Kartičku poistenca alebo očkovací preukaz dieťaťa z Rodinky otvoríš v Kartičkách.", "Versicherten- oder Impfkarte des Kindes aus Rodinka öffnest du in Kartičky.",
+                           "Abre la tarjeta sanitaria o la cartilla de vacunas del niño de Rodinka en Kartičky.", "Kartę ubezpieczenia lub szczepień dziecka z Rodinki otworzysz w Kartičkách.")),
+  ("rodinka", "lekarnicka", d("Léky dítěte z Rodinky máš přehledně v Lékárničce.", "Your child's medicines from Rodinka are in Lékárnička.",
+                              "Lieky dieťaťa z Rodinky máš prehľadne v Lékárničke.", "Die Medikamente des Kindes aus Rodinka hast du in Lékárnička.",
+                              "Los medicamentos del niño de Rodinka están en Lékárnička.", "Leki dziecka z Rodinki masz w Lékárničce.")),
+  ("rodinka", "darky", d("Narozeniny dětí z Rodinky pohlídají Dárečky.", "Dárečky keeps track of the kids' birthdays from Rodinka.",
+                         "Narodeniny detí z Rodinky postrážia Dárečky.", "Dárečky behält die Geburtstage der Kinder aus Rodinka im Blick.",
+                         "Dárečky vigila los cumpleaños de los niños de Rodinka.", "Dárečky przypilnują urodzin dzieci z Rodinki.")),
+  ("rodinka", "nakupy", d("Pomůcky do školy a na kroužky z Rodinky přidáš do Nákupů.", "Add school and activity supplies from Rodinka to Nákupy.",
+                          "Pomôcky do školy a na krúžky z Rodinky pridáš do Nákupov.", "Schul- und Kursbedarf aus Rodinka kommt in Nákupy.",
+                          "Añade el material escolar y de extraescolares de Rodinka a Nákupy.", "Przybory do szkoły i na zajęcia z Rodinki dodasz do Nákupów.")),
+  ("rodinka", "rozpocet", d("Poplatky za kroužky z Rodinky zapíšeš do Rozpočtu.", "Log activity fees from Rodinka in Rozpočet.",
+                            "Poplatky za krúžky z Rodinky zapíšeš do Rozpočtu.", "Kursgebühren aus Rodinka trägst du in Rozpočet ein.",
+                            "Anota en Rozpočet las cuotas de extraescolares de Rodinka.", "Opłaty za zajęcia z Rodinki zapiszesz w Rozpočcie.")),
+  ("rodinka", "navigace", d("Na kroužek z Rodinky tě dovede Navigace.", "Navigace takes you to the activity from Rodinka.",
+                            "Na krúžok z Rodinky ťa dovedie Navigace.", "Navigace bringt dich zum Kurs aus Rodinka.",
+                            "Navigace te lleva a la extraescolar de Rodinka.", "Navigace zaprowadzi cię na zajęcia z Rodinki.")),
   ("mailer", "fakturant", d("Fakturu z přílohy v Maileru pošleš jako náklad do Fakturantu.",
                             "Send an invoice attachment from Mailer to Fakturant as an expense.",
                             "Faktúru z prílohy v Maileri pošleš ako náklad do Fakturantu.",
@@ -209,7 +227,7 @@ LINKS = [
                             "Fakturę z załącznika w Mailerze wyślesz jako koszt do Fakturanta.")),
 ]
 
-HUB_FEEDS = ["karticky", "rozpocet", "kucharka", "nakupy", "garaz", "predplatne", "lekarnicka", "zaruky", "darky", "mazlicek", "odecty", "salonky", "cestovnicek", "fotoplan"]
+HUB_FEEDS = ["rodinka", "karticky", "rozpocet", "kucharka", "nakupy", "garaz", "predplatne", "lekarnicka", "zaruky", "darky", "mazlicek", "odecty", "salonky", "cestovnicek", "fotoplan"]
 HUB_TEXT = d("Termíny z {a} uvidíš v EasyForLife Hubu spolu s ostatními.", "Upcoming items from {a} show up in EasyForLife Hub with everything else.",
              "Termíny z {a} uvidíš v EasyForLife Hube spolu s ostatnými.", "Termine aus {a} siehst du im EasyForLife Hub zusammen mit allem anderen.",
              "Lo pendiente de {a} aparece en EasyForLife Hub junto con todo lo demás.", "Terminy z {a} zobaczysz w EasyForLife Hub razem z resztą.")

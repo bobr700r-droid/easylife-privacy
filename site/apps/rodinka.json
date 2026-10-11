@@ -1,0 +1,75 @@
+{
+ "status": "dev",
+ "color": "#d6334a",
+ "description": {
+  "cs": [
+   "Rodinka pohlídá, kdo dnes vozí a vyzvedává děti, kdy jsou kroužky, prázdniny a platby.",
+   "Sdílíte ji s druhým rodičem přes iCloud – bez registrace a bez serveru."
+  ],
+  "en": [
+   "Rodinka keeps track of who drops off and picks up the kids today, and when activities, holidays and payments are due.",
+   "Share it with the other parent via iCloud – no sign-up, no server."
+  ],
+  "sk": [
+   "Rodinka postráži, kto dnes vozí a vyzdvihuje deti, kedy sú krúžky, prázdniny a platby.",
+   "Zdieľate ju s druhým rodičom cez iCloud – bez registrácie a bez servera."
+  ],
+  "de": [
+   "Rodinka behält im Blick, wer die Kinder heute bringt und abholt und wann Kurse, Ferien und Zahlungen anstehen.",
+   "Ihr teilt sie mit dem anderen Elternteil per iCloud – ohne Registrierung und ohne Server."
+  ],
+  "es": [
+   "Rodinka controla quién lleva y recoge hoy a los niños y cuándo hay extraescolares, vacaciones y pagos.",
+   "La compartís con el otro progenitor por iCloud, sin registro ni servidor."
+  ],
+  "pl": [
+   "Rodinka pilnuje, kto dziś zawozi i odbiera dzieci oraz kiedy są zajęcia, ferie i płatności.",
+   "Dzielicie ją z drugim rodzicem przez iCloud – bez rejestracji i bez serwera."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Rozvrh školy a kroužků a kdo veze a vyzvedne, i změna na jeden den",
+   "Poplatky a termíny plateb s připomínkou",
+   "České prázdniny podle okresu, třídní schůzky a akce",
+   "Očkování – orientační kalendář a vlastní záznamy",
+   "Domácí povinnosti s body a odměnami, kapesné a spoření"
+  ],
+  "en": [
+   "School and activity timetable, who drops off and picks up, one-day changes",
+   "Fees and payment dates with reminders",
+   "Czech school holidays by district, parent meetings and events",
+   "Vaccinations – indicative schedule and your own records",
+   "Chores with points and rewards, pocket money and savings"
+  ],
+  "sk": [
+   "Rozvrh školy a krúžkov a kto vezie a vyzdvihne, aj zmena na jeden deň",
+   "Poplatky a termíny platieb s pripomienkou",
+   "České prázdniny podľa okresu, triedne schôdzky a akcie",
+   "Očkovanie – orientačný kalendár a vlastné záznamy",
+   "Domáce povinnosti s bodmi a odmenami, vreckové a sporenie"
+  ],
+  "de": [
+   "Stundenplan für Schule und Kurse, wer bringt und abholt, auch für einen Tag",
+   "Gebühren und Zahlungstermine mit Erinnerung",
+   "Tschechische Ferien nach Bezirk, Elternabende und Termine",
+   "Impfungen – Orientierungskalender und eigene Einträge",
+   "Aufgaben mit Punkten und Belohnungen, Taschengeld und Sparen"
+  ],
+  "es": [
+   "Horario de clases y extraescolares, quién lleva y recoge, cambios de un día",
+   "Cuotas y fechas de pago con recordatorio",
+   "Vacaciones escolares checas por distrito, reuniones y eventos",
+   "Vacunas: calendario orientativo y registros propios",
+   "Tareas con puntos y premios, paga y ahorro"
+  ],
+  "pl": [
+   "Plan lekcji i zajęć, kto zawozi i odbiera, zmiany na jeden dzień",
+   "Opłaty i terminy płatności z przypomnieniem",
+   "Czeskie ferie według powiatu, wywiadówki i wydarzenia",
+   "Szczepienia – orientacyjny kalendarz i własne wpisy",
+   "Obowiązki domowe z punktami i nagrodami, kieszonkowe i oszczędzanie"
+  ]
+ },
+ "links": []
+}
