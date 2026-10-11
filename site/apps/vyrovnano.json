@@ -1,5 +1,5 @@
 {
- "status": "dev",
+ "status": "testflight",
  "description": {
   "cs": [
    "Vyrovnáno hlídá společné výdaje ve skupině – na chatě, na dovolené nebo ve spolubydlení. Spočítá, kdo komu kolik dluží, a navrhne co nejméně plateb."
