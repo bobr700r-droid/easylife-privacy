@@ -926,6 +926,8 @@ class Site:
             for d in ("icons", "shots"):
                 if (self.out / d).exists():
                     shutil.copytree(self.out / d, root / d)
+            # Živý katalog pro appky (stahují si ho, aby nová propojení fungovala bez nového buildu)
+            shutil.copy2(CATALOG, root / "catalog.json")
             urls[site] += [base + p for p in self.privacy.values()]
             self.write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                        + "".join(f"<url><loc>{u}</loc></url>\n" for u in urls[site]) + "</urlset>\n", root)

@@ -1,0 +1,75 @@
+{
+ "status": "dev",
+ "color": "#e8590c",
+ "description": {
+  "cs": [
+   "Kuchařka je místo pro rodinné recepty a plán vaření na celý týden. Recept uložíš z webu, z fotky kuchařky nebo ho napíšeš sám a při vaření tě provede krok za krokem.",
+   "Bez účtu – rodinnou kuchařku sdílíš přes iCloud a suroviny na celý týden pošleš jedním klepnutím do Nákupů."
+  ],
+  "en": [
+   "Kuchařka is home for your family recipes and a weekly cooking plan. Save a recipe from the web, from a photo of a cookbook or type it yourself, and it guides you step by step while you cook.",
+   "No account – share a family cookbook via iCloud and send the whole week’s ingredients to Nákupy with one tap."
+  ],
+  "sk": [
+   "Kuchařka je miesto pre rodinné recepty a plán varenia na celý týždeň. Recept uložíš z webu, z fotky kuchárky alebo ho napíšeš sám a pri varení ťa prevedie krok za krokom.",
+   "Bez účtu – rodinnú kuchárku zdieľaš cez iCloud a suroviny na celý týždeň pošleš jedným ťuknutím do Nákupov."
+  ],
+  "de": [
+   "Kuchařka ist der Ort für Familienrezepte und den Kochplan der Woche. Speichere Rezepte aus dem Web, vom Foto eines Kochbuchs oder tippe sie selbst ein – beim Kochen führt dich die App Schritt für Schritt.",
+   "Ohne Konto – teile ein Familienkochbuch per iCloud und schick die Zutaten der Woche mit einem Tipp an Nákupy."
+  ],
+  "es": [
+   "Kuchařka es el lugar para las recetas familiares y el plan de cocina de la semana. Guarda recetas de la web, de una foto de un libro o escríbelas tú, y la app te guía paso a paso mientras cocinas.",
+   "Sin cuenta: comparte un recetario familiar por iCloud y envía los ingredientes de toda la semana a Nákupy con un toque."
+  ],
+  "pl": [
+   "Kuchařka to miejsce na rodzinne przepisy i plan gotowania na cały tydzień. Zapiszesz przepis ze strony, ze zdjęcia książki kucharskiej albo wpiszesz sam, a przy gotowaniu aplikacja poprowadzi cię krok po kroku.",
+   "Bez konta – rodzinną książkę kucharską udostępnisz przez iCloud, a składniki na cały tydzień wyślesz jednym stuknięciem do Nákupów."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Recepty z webu, z fotky i ruční zápis",
+   "Přepočet porcí a režim vaření s časovači",
+   "Plán vaření na týden a nákup naráz",
+   "„Co uvařit z toho, co mám“",
+   "Rodinná kuchařka sdílená přes iCloud"
+  ],
+  "en": [
+   "Recipes from the web, from photos or typed in",
+   "Serving scaling and cooking mode with timers",
+   "Weekly meal plan and one shopping run",
+   "“What can I cook with what I have”",
+   "Family cookbook shared via iCloud"
+  ],
+  "sk": [
+   "Recepty z webu, z fotky aj ručný zápis",
+   "Prepočet porcií a režim varenia s časovačmi",
+   "Plán varenia na týždeň a nákup naraz",
+   "„Čo uvariť z toho, čo mám“",
+   "Rodinná kuchárka zdieľaná cez iCloud"
+  ],
+  "de": [
+   "Rezepte aus dem Web, vom Foto oder selbst getippt",
+   "Portionen umrechnen und Kochmodus mit Timern",
+   "Wochenplan und Einkauf in einem Rutsch",
+   "„Was koche ich aus dem, was da ist“",
+   "Familienkochbuch per iCloud geteilt"
+  ],
+  "es": [
+   "Recetas de la web, de fotos o escritas a mano",
+   "Ajuste de raciones y modo cocina con temporizadores",
+   "Plan semanal y compra de una vez",
+   "«Qué cocino con lo que tengo»",
+   "Recetario familiar compartido por iCloud"
+  ],
+  "pl": [
+   "Przepisy ze stron, ze zdjęć lub wpisane ręcznie",
+   "Przeliczanie porcji i tryb gotowania z minutnikami",
+   "Plan na tydzień i zakupy za jednym razem",
+   "„Co ugotować z tego, co mam”",
+   "Rodzinna książka kucharska w iCloud"
+  ]
+ },
+ "links": []
+}

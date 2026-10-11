@@ -153,6 +153,18 @@ LINKS = [
   ("kulturnik", "navigace", d("Do kina nebo divadla z Kulturníku tě dovede Navigace.", "Navigace takes you to the cinema or theatre from Kulturník.",
                               "Do kina alebo divadla z Kulturníka ťa dovedie Navigace.", "Navigace bringt dich ins Kino oder Theater aus Kulturník.",
                               "Navigace te lleva al cine o al teatro de Kulturník.", "Navigace zaprowadzi cię do kina lub teatru z Kulturníka.")),
+  ("kucharka", "nakupy", d("Suroviny z receptů a týdenního plánu v Kuchařce pošleš jedním klepnutím do Nákupů.",
+                           "Send ingredients from Kuchařka recipes and the weekly plan to Nákupy with one tap.",
+                           "Suroviny z receptov a týždenného plánu v Kuchárke pošleš jedným ťuknutím do Nákupov.",
+                           "Zutaten aus Rezepten und Wochenplan in Kuchařka schickst du mit einem Tipp an Nákupy.",
+                           "Envía los ingredientes de las recetas y el plan semanal de Kuchařka a Nákupy con un toque.",
+                           "Składniki z przepisów i planu tygodnia w Kuchařce wyślesz jednym stuknięciem do Nákupów.")),
+  ("kucharka", "fitko", d("Uvařené jídlo z Kuchařky zapíšeš do jídelníčku ve Fitku.",
+                          "Log a meal you cooked in Kuchařka to your Fitko food diary.",
+                          "Uvarené jedlo z Kuchárky zapíšeš do jedálnička vo Fitku.",
+                          "Ein in Kuchařka gekochtes Gericht trägst du ins Ernährungstagebuch von Fitko ein.",
+                          "Registra en el diario de Fitko lo que cocinaste con Kuchařka.",
+                          "Ugotowane danie z Kuchařki zapiszesz w dzienniku jedzenia w Fitku.")),
   ("mailer", "fakturant", d("Fakturu z přílohy v Maileru pošleš jako náklad do Fakturantu.",
                             "Send an invoice attachment from Mailer to Fakturant as an expense.",
                             "Faktúru z prílohy v Maileri pošleš ako náklad do Fakturantu.",
@@ -161,7 +173,7 @@ LINKS = [
                             "Fakturę z załącznika w Mailerze wyślesz jako koszt do Fakturanta.")),
 ]
 
-HUB_FEEDS = ["nakupy", "garaz", "predplatne", "lekarnicka", "zaruky", "darky", "mazlicek", "odecty", "salonky", "cestovnicek", "fotoplan"]
+HUB_FEEDS = ["kucharka", "nakupy", "garaz", "predplatne", "lekarnicka", "zaruky", "darky", "mazlicek", "odecty", "salonky", "cestovnicek", "fotoplan"]
 HUB_TEXT = d("Termíny z {a} uvidíš v EasyForLife Hubu spolu s ostatními.", "Upcoming items from {a} show up in EasyForLife Hub with everything else.",
              "Termíny z {a} uvidíš v EasyForLife Hube spolu s ostatnými.", "Termine aus {a} siehst du im EasyForLife Hub zusammen mit allem anderen.",
              "Lo pendiente de {a} aparece en EasyForLife Hub junto con todo lo demás.", "Terminy z {a} zobaczysz w EasyForLife Hub razem z resztą.")

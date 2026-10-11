@@ -1,19 +1,25 @@
 // Statický web EasyForLife: easyforlife.cz (čeština) a easyforlife.eu (angličtina + další jazyky).
 // Kořen webu podle hostu z dist/routes.json, www → bez www, přesměrování starých adres, gzip, 404 podle webu.
-const http = require("http"), fs = require("fs"), path = require("path"), zlib = require("zlib");
+const http = require("http"), fs = require("fs"), path = require("path"), zlib = require("zlib"), crypto = require("crypto");
 const DIST = path.join(__dirname, "dist");
 const routes = JSON.parse(fs.readFileSync(path.join(DIST, "routes.json"), "utf8"));
 const TYPES = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8",
-  ".json": "application/json", ".xml": "application/xml", ".txt": "text/plain; charset=utf-8", ".svg": "image/svg+xml",
+  ".json": "application/json; charset=utf-8", ".xml": "application/xml", ".txt": "text/plain; charset=utf-8", ".svg": "image/svg+xml",
   ".png": "image/png", ".webp": "image/webp", ".jpg": "image/jpeg", ".ico": "image/x-icon" };
 const COMPRESS = new Set([".html", ".css", ".js", ".json", ".xml", ".txt", ".svg"]);
 
+// Soubory s vlastní politikou: živý katalog appek (CORS, hodina cache).
+const SPECIAL = { "catalog.json": { "access-control-allow-origin": "*", "cache-control": "public, max-age=3600" } };
+
 function send(req, res, file, status = 200) {
   const ext = path.extname(file);
+  let body = fs.readFileSync(file);
+  const etag = 'W/"' + crypto.createHash("sha1").update(body).digest("base64url").slice(0, 20) + '"';
   const headers = { "content-type": TYPES[ext] || "application/octet-stream",
     "cache-control": ext === ".html" || ext === ".xml" ? "public, max-age=300" : "public, max-age=86400",
-    "x-content-type-options": "nosniff", "referrer-policy": "strict-origin-when-cross-origin", vary: "accept-encoding" };
-  let body = fs.readFileSync(file);
+    "x-content-type-options": "nosniff", "referrer-policy": "strict-origin-when-cross-origin", vary: "accept-encoding", etag,
+    ...(SPECIAL[path.basename(file)] || {}) };
+  if (status === 200 && req.headers["if-none-match"] === etag) { res.writeHead(304, headers); return res.end(); }
   if (COMPRESS.has(ext) && /\bgzip\b/.test(req.headers["accept-encoding"] || "")) { body = zlib.gzipSync(body); headers["content-encoding"] = "gzip"; }
   res.writeHead(status, headers);
   res.end(req.method === "HEAD" ? undefined : body);
