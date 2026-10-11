@@ -1,0 +1,75 @@
+{
+ "status": "dev",
+ "color": "#4f46e5",
+ "description": {
+  "cs": [
+   "Všechno, co ukazuješ u přepážky nebo na recepci – občanky, pasy, řidičáky, permanentky, členské karty i vstupenky celé rodiny – na jednom místě a pod Face ID.",
+   "Kartičky ohlídají konec platnosti a kód ukážou přes celou obrazovku s plným jasem."
+  ],
+  "en": [
+   "Everything you show at a counter or reception – ID cards, passports, driving licences, passes, membership cards and tickets for the whole family – in one place, locked with Face ID.",
+   "Kartičky keeps an eye on expiry dates and shows codes full screen at full brightness."
+  ],
+  "sk": [
+   "Všetko, čo ukazuješ pri priehradke alebo na recepcii – občianky, pasy, vodičáky, permanentky, členské karty aj vstupenky celej rodiny – na jednom mieste a pod Face ID.",
+   "Kartičky postrážia koniec platnosti a kód ukážu cez celú obrazovku s plným jasom."
+  ],
+  "de": [
+   "Alles, was du am Schalter oder an der Rezeption zeigst – Ausweise, Pässe, Führerscheine, Dauerkarten, Mitgliedskarten und Tickets der ganzen Familie – an einem Ort und mit Face ID geschützt.",
+   "Kartičky behält Ablaufdaten im Blick und zeigt Codes im Vollbild mit voller Helligkeit."
+  ],
+  "es": [
+   "Todo lo que enseñas en una ventanilla o recepción – DNI, pasaportes, carnés de conducir, bonos, tarjetas de socio y entradas de toda la familia – en un solo lugar y protegido con Face ID.",
+   "Kartičky vigila las caducidades y muestra los códigos a pantalla completa con el brillo al máximo."
+  ],
+  "pl": [
+   "Wszystko, co pokazujesz w okienku lub na recepcji – dowody, paszporty, prawa jazdy, karnety, karty członkowskie i bilety całej rodziny – w jednym miejscu i pod Face ID.",
+   "Kartičky pilnują dat ważności i pokazują kod na pełnym ekranie z pełną jasnością."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Doklady celé rodiny s fotkami obou stran a upozorněním na konec platnosti",
+   "Permanentky časové i na vstupy, odepsání jedním klepnutím nebo z Fitka",
+   "Kód přes celou obrazovku s plným jasem a widgety",
+   "Sdílení s rodinou přes iCloud, šifrovaně, bez registrace",
+   "Kontrola dokladů před cestou: pas, řidičák, zelená karta"
+  ],
+  "en": [
+   "Family documents with photos of both sides and expiry alerts",
+   "Time and entry passes, one-tap check-in or from Fitko",
+   "Full-screen codes at full brightness, plus widgets",
+   "Encrypted family sharing via iCloud, no sign-up",
+   "Pre-trip document check: passport, licence, green card"
+  ],
+  "sk": [
+   "Doklady celej rodiny s fotkami oboch strán a upozornením na koniec platnosti",
+   "Permanentky časové aj na vstupy, odpísanie jedným ťuknutím alebo z Fitka",
+   "Kód cez celú obrazovku s plným jasom a widgety",
+   "Zdieľanie s rodinou cez iCloud, šifrovane, bez registrácie",
+   "Kontrola dokladov pred cestou: pas, vodičák, zelená karta"
+  ],
+  "de": [
+   "Familiendokumente mit Fotos beider Seiten und Ablaufwarnung",
+   "Zeit- und Punktekarten, Einlass mit einem Tipp oder aus Fitko",
+   "Codes im Vollbild mit voller Helligkeit und Widgets",
+   "Verschlüsselte Familienfreigabe per iCloud, ohne Konto",
+   "Dokumentencheck vor der Reise: Pass, Führerschein, Grüne Karte"
+  ],
+  "es": [
+   "Documentos de la familia con fotos por ambas caras y aviso de caducidad",
+   "Bonos por tiempo o por entradas, con un toque o desde Fitko",
+   "Códigos a pantalla completa con brillo máximo y widgets",
+   "Compartir en familia por iCloud, cifrado y sin registro",
+   "Revisión de documentos antes de viajar: pasaporte, carné, carta verde"
+  ],
+  "pl": [
+   "Dokumenty całej rodziny ze zdjęciami obu stron i alertem o ważności",
+   "Karnety czasowe i na wejścia, odpis jednym stuknięciem lub z Fitka",
+   "Kod na pełnym ekranie z pełną jasnością i widżety",
+   "Szyfrowane udostępnianie rodzinie przez iCloud, bez rejestracji",
+   "Kontrola dokumentów przed podróżą: paszport, prawo jazdy, zielona karta"
+  ]
+ },
+ "links": []
+}

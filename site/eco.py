@@ -180,6 +180,24 @@ LINKS = [
   ("rozpocet", "smenarna", d("Kurz pro platbu v cizí měně z Rozpočtu otevřeš ve Směnárně.", "Open the rate for a foreign-currency payment from Rozpočet in Směnárna.",
                              "Kurz pre platbu v cudzej mene z Rozpočtu otvoríš v Směnárne.", "Den Kurs für eine Zahlung in Fremdwährung aus Rozpočet öffnest du in Směnárna.",
                              "Abre en Směnárna el tipo de cambio de un pago en divisa de Rozpočet.", "Kurs dla płatności w obcej walucie z Rozpočtu otworzysz w Směnárně.")),
+  ("fitko", "karticky", d("Vstup do posilovny z Fitka odepíšeš z permanentky v Kartičkách.", "Fitko records a gym visit on your Kartičky pass.",
+                          "Vstup do posilňovne z Fitka odpíšeš z permanentky v Kartičkách.", "Fitko bucht den Studiobesuch von deiner Karte in Kartičky ab.",
+                          "Fitko descuenta la visita al gimnasio de tu bono en Kartičky.", "Fitko odpisze wejście na siłownię z karnetu w Kartičkách.")),
+  ("cestovnicek", "karticky", d("Před cestou z Cestovníčku zkontrolují Kartičky pas, řidičák a zelenou kartu.", "Before a Cestovníček trip, Kartičky checks your passport, licence and green card.",
+                                "Pred cestou z Cestovníčka skontrolujú Kartičky pas, vodičák a zelenú kartu.", "Vor einer Reise aus Cestovníček prüft Kartičky Pass, Führerschein und Grüne Karte.",
+                                "Antes de un viaje de Cestovníček, Kartičky revisa pasaporte, carné y carta verde.", "Przed podróżą z Cestovníčka Kartičky sprawdzą paszport, prawo jazdy i zieloną kartę.")),
+  ("nakupy", "karticky", d("Věrnostní karty z Nákupů máš po ruce i v Kartičkách.", "Loyalty cards from Nákupy are also at hand in Kartičky.",
+                           "Vernostné karty z Nákupov máš poruke aj v Kartičkách.", "Kundenkarten aus Nákupy hast du auch in Kartičky griffbereit.",
+                           "Las tarjetas de fidelidad de Nákupy también están a mano en Kartičky.", "Karty lojalnościowe z Nákupów masz pod ręką także w Kartičkách.")),
+  ("garaz", "karticky", d("Doklady k autu z Garážky otevřeš v Kartičkách.", "Open your car documents from Garážka in Kartičky.",
+                          "Doklady k autu z Garážky otvoríš v Kartičkách.", "Fahrzeugdokumente aus Garážka öffnest du in Kartičky.",
+                          "Abre los documentos del coche de Garážka en Kartičky.", "Dokumenty auta z Garážki otworzysz w Kartičkách.")),
+  ("darky", "karticky", d("Vstupenku jako dárek z Dárečků uložíš do Kartiček.", "Save a ticket gift from Dárečky to Kartičky.",
+                          "Vstupenku ako darček z Dárečkov uložíš do Kartičiek.", "Ein Ticket als Geschenk aus Dárečky speicherst du in Kartičky.",
+                          "Guarda en Kartičky una entrada regalada desde Dárečky.", "Bilet jako prezent z Dárečků zapiszesz w Kartičkách.")),
+  ("kulturnik", "karticky", d("Vstupenky do kina a divadla z Kulturníku uložíš do Kartiček.", "Save cinema and theatre tickets from Kulturník to Kartičky.",
+                              "Vstupenky do kina a divadla z Kulturníka uložíš do Kartičiek.", "Kino- und Theatertickets aus Kulturník speicherst du in Kartičky.",
+                              "Guarda en Kartičky las entradas de cine y teatro de Kulturník.", "Bilety do kina i teatru z Kulturníka zapiszesz w Kartičkách.")),
   ("mailer", "fakturant", d("Fakturu z přílohy v Maileru pošleš jako náklad do Fakturantu.",
                             "Send an invoice attachment from Mailer to Fakturant as an expense.",
                             "Faktúru z prílohy v Maileri pošleš ako náklad do Fakturantu.",
@@ -188,7 +206,7 @@ LINKS = [
                             "Fakturę z załącznika w Mailerze wyślesz jako koszt do Fakturanta.")),
 ]
 
-HUB_FEEDS = ["rozpocet", "kucharka", "nakupy", "garaz", "predplatne", "lekarnicka", "zaruky", "darky", "mazlicek", "odecty", "salonky", "cestovnicek", "fotoplan"]
+HUB_FEEDS = ["karticky", "rozpocet", "kucharka", "nakupy", "garaz", "predplatne", "lekarnicka", "zaruky", "darky", "mazlicek", "odecty", "salonky", "cestovnicek", "fotoplan"]
 HUB_TEXT = d("Termíny z {a} uvidíš v EasyForLife Hubu spolu s ostatními.", "Upcoming items from {a} show up in EasyForLife Hub with everything else.",
              "Termíny z {a} uvidíš v EasyForLife Hube spolu s ostatnými.", "Termine aus {a} siehst du im EasyForLife Hub zusammen mit allem anderen.",
              "Lo pendiente de {a} aparece en EasyForLife Hub junto con todo lo demás.", "Terminy z {a} zobaczysz w EasyForLife Hub razem z resztą.")
