@@ -2,7 +2,7 @@
 import html, pathlib
 
 OUT = pathlib.Path(__file__).parent / "docs"
-UPDATED = ("10. října 2026", "October 10, 2026")
+UPDATED = ("13. října 2026", "October 13, 2026")
 OPERATOR = ("Lukáš Ochrana, IČ 76420515, Rápošov 9, 284 01 Kutná Hora",
             "Lukáš Ochrana, Company ID 76420515, Rápošov 9, 284 01 Kutná Hora, Czech Republic")
 
@@ -760,9 +760,34 @@ APPS = [
        ("Záznam smažeš přímo v aplikaci. Smazáním aplikace zmizí data ze zařízení; data v iCloudu odstraníš v Nastavení iPhonu → [tvé jméno] → iCloud → Spravovat úložiště → Studium.",
         "Delete a record right in the app. Deleting the app removes data from the device; remove iCloud data in iPhone Settings → [your name] → iCloud → Manage Storage → Studium.")),
     ]),
+  dict(slug="kulturnik", name="Kulturník", mark="K", color="#7b3cf2",
+    tagline=("Program kin, divadel a akcí v Česku na jednom místě.",
+             "Cinema, theatre and event listings in Czechia in one place."),
+    summary=("Kulturník nemá účty, reklamy ani analytiku. Města, kina, oblíbené a uložené akce zůstávají v telefonu. Na náš server jde jen to, co je potřeba pro program, a pozvánky, které sám vytvoříš.",
+             "Kulturník has no accounts, ads or analytics. Cities, cinemas, favourites and saved events stay on your phone. Our server only receives what is needed for the listings and the invitations you create yourself."),
+    sections=[
+      (("Co zůstává jen v telefonu", "What stays on your phone"),
+       ("Vybraná města a kina, oblíbená kina, stažený program, „Moje akce“ (uložená promítání a akce, cena vstupenek, připomínky) a doporučení „Dnes by tě mohlo bavit“, která se počítají jen v telefonu. Smazáním aplikace se smažou. Widget čte oblíbená kina ze sdíleného úložiště aplikace v zařízení.",
+        "Selected cities and cinemas, favourite cinemas, downloaded listings, “My events” (saved screenings and events, ticket prices, reminders) and the “You might enjoy today” suggestions, which are computed on the phone only. They are deleted with the app. The widget reads favourite cinemas from the app's shared storage on the device.")),
+      (("Co aplikace posílá na server", "What the app sends to the server"),
+       ("Program načítá ze serveru Kulturníku (<code>vyrazime.luksafoto.cz</code>, Fly.io, Frankfurt), který sjednocuje veřejné zdroje programu. Posílá jen označení vybraných kin a měst. Server neukládá, kdo se ptal; provozovatel hostingu může krátkodobě vést technické záznamy včetně IP adresy kvůli bezpečnosti.",
+        "Listings are loaded from the Kulturník server (<code>vyrazime.luksafoto.cz</code>, Fly.io, Frankfurt), which combines public listing sources. The app only sends the IDs of the selected cinemas and cities. The server does not store who asked; the hosting provider may briefly keep technical logs including the IP address for security.")),
+      (("Pozvánky přátelům", "Invitations to friends"),
+       ("Když klepneš na „Vytvořit pozvánku“, pošle se na server název akce, čas, místo, odkaz na vstupenky a jméno, které vyplníš. Přátelé na odkazu napíšou své jméno a odpověď (Můžu / Možná / Nemůžu). Kdo má odkaz, vidí pozvánku i odpovědi. Pozvánka se smaže 3 dny po akci, dřív ji zrušíš v aplikaci.",
+        "When you tap “Create invitation”, the event title, time, place, ticket link and the name you enter are sent to the server. Friends enter their name and answer (Yes / Maybe / No) on the link. Anyone with the link can see the invitation and replies. It is deleted 3 days after the event; you can cancel it earlier in the app.")),
+      (("Poloha, kalendář a upozornění", "Location, calendar and notifications"),
+       ("Poloha (jen při používání) slouží k výběru nejbližšího města a k výpočtu, kdy vyrazit MHD (čas cesty počítají Apple Mapy); do našeho serveru se neposílá. Přidání do kalendáře probíhá přes systémový formulář – aplikace kalendář nečte. Připomínky jsou místní upozornění v telefonu.",
+        "Location (while using only) is used to pick the nearest city and to work out when to leave by public transport (travel time is calculated by Apple Maps); it is not sent to our server. Adding to the calendar uses the system form – the app does not read your calendar. Reminders are local notifications on the phone.")),
+      (("AI asistent „Zeptej se“", "AI assistant “Ask”"),
+       ("Pokud funkci používáš (v Nastavení jde vypnout), aplikace pošle otázku a vybraná města na náš server a ten ji předá službě Claude společnosti Anthropic, která odpověď dohledá na veřejných webech. Kvůli dennímu limitu se posílá náhodný identifikátor zařízení. Do otázky nepiš osobní údaje.",
+        "If you use it (it can be turned off in Settings), the app sends your question and selected cities to our server, which passes it to Anthropic's Claude service to look up the answer on public websites. A random device identifier is sent for the daily limit. Please don't include personal data in questions.")),
+      (("Vstupenky a ostatní appky", "Tickets and other apps"),
+       ("Nákup vstupenky probíhá na webu kina nebo pořadatele podle jejich podmínek. Tlačítka Navigovat, Kde se najíst, Uložit vstupenku do Kartiček, Zapsat do Rozpočtu, Připravit se ve Fitku a Darovat jen otevřou jinou aplikaci s názvem, datem, místem a případně cenou. Aplikace občas stahuje veřejný seznam aplikací EasyForLife z <code>easyforlife.cz</code>.",
+        "Tickets are bought on the cinema's or organiser's website under their terms. The Navigate, Where to eat, Save ticket to Kartičky, Add to Rozpočet, Get ready in Fitko and Gift buttons only open another app with the title, date, place and possibly price. The app occasionally downloads the public list of EasyForLife apps from <code>easyforlife.cz</code>.")),
+    ]),
 ]
 
-EXTERNAL = [("Kulturník", "https://vyrazime.luksafoto.cz/soukromi")]
+EXTERNAL = []
 
 COMMON = [
   (("Sdílení dat", "Data sharing"),
