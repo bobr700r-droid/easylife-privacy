@@ -177,11 +177,14 @@ background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gra
 .eco{position:relative;aspect-ratio:1;width:100%;max-width:620px;justify-self:center}
 .eco svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .eco path{fill:none;stroke-linecap:round;transition:opacity .25s,stroke-width .25s}
-.eco .link{stroke:var(--purple);stroke-width:.45;opacity:.55;stroke-dasharray:1.6 1.2;animation:flow 3s linear infinite}
-.eco .feed{stroke:var(--blue);stroke-width:.25;opacity:.3;stroke-dasharray:.6 1.4;animation:flow 4s linear infinite reverse}
+.eco .fam{stroke:var(--fc);stroke-width:9.5;opacity:.16}
+.eco .link{stroke:var(--purple);stroke-width:.4;opacity:.3;stroke-dasharray:1.6 1.2;animation:flow 3s linear infinite}.eco .link.in{opacity:.5}
+.eco .feed{stroke:var(--blue);stroke-width:.2;opacity:.14;stroke-dasharray:.6 1.4;animation:flow 4s linear infinite reverse}
+.fam-lbl{position:absolute;transform:translate(-50%,-50%);font-size:clamp(.6rem,1.6vw,.78rem);font-weight:800;color:var(--fc);white-space:nowrap;pointer-events:none;transition:opacity .25s;z-index:1}
+.eco.focus .fam-lbl{opacity:.2}.eco.focus path.fam{opacity:.08}
 @keyframes flow{to{stroke-dashoffset:-11.2}}
 .eco.focus path{opacity:.07}.eco.focus path.on{opacity:1;stroke-width:.8}
-.node{position:absolute;width:11%;transform:translate(-50%,-50%);transition:transform .3s cubic-bezier(.3,1.7,.5,1),opacity .25s;z-index:2}
+.node{position:absolute;width:var(--nw,11%);transform:translate(-50%,-50%);transition:transform .3s cubic-bezier(.3,1.7,.5,1),opacity .25s;z-index:2}
 .node .app-icon{width:100%;height:auto;aspect-ratio:1}
 .node:hover,.node.on{transform:translate(-50%,-50%) scale(1.22)}.eco.focus .node:not(.on){opacity:.35}
 .node.center{left:50%;top:50%;width:22%;z-index:3}.node.center .app-icon{box-shadow:0 20px 50px -14px rgb(37 99 235/.55)}

@@ -181,17 +181,17 @@ def t(key, lang):
     return T[key][LANGS.index(lang)]
 
 COPYRIGHT = "© 2026 Lukáš Ochrana"
-VERSION = "1.3"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
+VERSION = "1.4"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
 # Podmínky užití – licence (13. 10. 2026), ve všech 6 jazycích (sk/de/es/pl a zdravotní sekce doplněny při auditu Lékárničky).
 TERMS = {
-  "cs": ("Podmínky užití", "Licence a autorská práva k aplikacím EasyForLife.", [
+  "cs": ("Podmínky užití", "Souhlas, licence, odpovědnost a autorská práva k aplikacím EasyForLife.", [
     ("Autorská práva", "Aplikace EasyForLife, jejich zdrojový kód, grafika, texty a názvy jsou autorským dílem. Autorská práva k nim i jejich názvy náleží Lukáši Ochranovi."),
     ("Licence", "Stažením aplikace získáváte nevýhradní a nepřenosnou licenci užívat ji pro svou osobní potřebu na zařízeních, která vlastníte nebo ovládáte, v rozsahu podmínek App Store (Standard EULA společnosti Apple)."),
     ("Co není dovoleno", "Bez předchozího písemného souhlasu autora není dovoleno aplikace ani jejich části kopírovat, upravovat, překládat, zpětně analyzovat (reverse engineering), dekompilovat, dále šířit, pronajímat ani jinak zpřístupňovat třetím osobám – vždy v mezích, které připouští české právo a právo EU (výjimky, které zákon výslovně dovoluje, zůstávají zachovány)."),
     ("Práva spotřebitele", "Tyto podmínky neomezují práva, která vám jako spotřebiteli náleží podle českého práva a práva EU a která nelze smluvně vyloučit."),
     ("Kontakt", "Dotazy k licenci posílejte na " + CONTACT + ". Všechna práva, která nejsou výslovně udělena, zůstávají vyhrazena."),
   ]),
-  "en": ("Terms of Use", "Licence and copyright of EasyForLife apps.", [
+  "en": ("Terms of Use", "Acceptance, licence, liability and copyright of EasyForLife apps.", [
     ("Copyright", "EasyForLife apps, including their source code, graphics, texts and names, are works protected by copyright. The copyright and the app names belong to Lukáš Ochrana."),
     ("Licence", "By downloading an app you receive a non-exclusive, non-transferable licence to use it for your personal purposes on devices you own or control, within the App Store terms (Apple's Standard EULA)."),
     ("What is not permitted", "Without the author's prior written consent you may not copy, modify, translate, reverse engineer, decompile, redistribute, rent or otherwise make available the apps or any part of them to third parties – always to the extent permitted by Czech and EU law (exceptions expressly allowed by law remain unaffected)."),
@@ -210,36 +210,96 @@ HEALTH_TERMS = {
   "pl": ("Aplikacje zdrowotne nie są poradą medyczną", "Lékárnička (Apteczka), Pohodička, Fitko i inne aplikacje EasyForLife o tematyce zdrowotnej nie są wyrobem medycznym i nie zastępują lekarza, farmaceuty ani innego specjalisty. Nie udzielają porad medycznych ani zaleceń dotyczących leczenia czy dawkowania – jedynie zapisują wpisy i przypominają o tym, co użytkownik sam wprowadził. Za wprowadzone dane i decyzje o leczeniu odpowiada użytkownik; zawsze stosuj się do zaleceń lekarza i ulotki. W nagłym wypadku dzwoń pod 112."),
 }
 
-TERMS["sk"] = ("Podmienky používania", "Licencia a autorské práva k aplikáciám EasyForLife.", [
+TERMS["sk"] = ("Podmienky používania", "Súhlas, licencia, zodpovednosť a autorské práva k aplikáciám EasyForLife.", [
     ("Autorské práva", "Aplikácie EasyForLife, ich zdrojový kód, grafika, texty a názvy sú autorským dielom. Autorské práva k nim aj ich názvy patria Lukášovi Ochranovi."),
     ("Licencia", "Stiahnutím aplikácie získavate nevýhradnú a neprenosnú licenciu používať ju pre svoju osobnú potrebu na zariadeniach, ktoré vlastníte alebo ovládate, v rozsahu podmienok App Store (Standard EULA spoločnosti Apple)."),
     ("Čo nie je dovolené", "Bez predchádzajúceho písomného súhlasu autora nie je dovolené aplikácie ani ich časti kopírovať, upravovať, prekladať, spätne analyzovať (reverse engineering), dekompilovať, ďalej šíriť, prenajímať ani inak sprístupňovať tretím osobám – vždy v medziach, ktoré pripúšťa české právo a právo EÚ (výnimky, ktoré zákon výslovne dovoľuje, zostávajú zachované)."),
     ("Práva spotrebiteľa", "Tieto podmienky neobmedzujú práva, ktoré vám ako spotrebiteľovi patria podľa českého práva a práva EÚ a ktoré nemožno zmluvne vylúčiť."),
     ("Kontakt", "Otázky k licencii posielajte na " + CONTACT + ". Všetky práva, ktoré nie sú výslovne udelené, zostávajú vyhradené."),
 ])
-TERMS["de"] = ("Nutzungsbedingungen", "Lizenz und Urheberrecht der EasyForLife-Apps.", [
+TERMS["de"] = ("Nutzungsbedingungen", "Zustimmung, Lizenz, Haftung und Urheberrecht der EasyForLife-Apps.", [
     ("Urheberrecht", "Die EasyForLife-Apps einschließlich Quellcode, Grafiken, Texten und Namen sind urheberrechtlich geschützte Werke. Das Urheberrecht und die App-Namen gehören Lukáš Ochrana."),
     ("Lizenz", "Mit dem Herunterladen einer App erhalten Sie eine nicht ausschließliche, nicht übertragbare Lizenz, sie für persönliche Zwecke auf Geräten zu nutzen, die Sie besitzen oder kontrollieren, im Rahmen der App-Store-Bedingungen (Standard-EULA von Apple)."),
     ("Was nicht erlaubt ist", "Ohne vorherige schriftliche Zustimmung des Autors dürfen die Apps oder Teile davon nicht kopiert, verändert, übersetzt, zurückentwickelt (Reverse Engineering), dekompiliert, weiterverbreitet, vermietet oder Dritten auf andere Weise zugänglich gemacht werden – stets im Rahmen des tschechischen und des EU-Rechts (gesetzlich ausdrücklich erlaubte Ausnahmen bleiben unberührt)."),
     ("Verbraucherrechte", "Diese Bedingungen schränken keine Rechte ein, die Ihnen als Verbraucher nach tschechischem und EU-Recht zustehen und vertraglich nicht ausgeschlossen werden können."),
     ("Kontakt", "Fragen zur Lizenz senden Sie bitte an " + CONTACT + ". Alle nicht ausdrücklich gewährten Rechte bleiben vorbehalten."),
 ])
-TERMS["es"] = ("Condiciones de uso", "Licencia y derechos de autor de las apps de EasyForLife.", [
+TERMS["es"] = ("Condiciones de uso", "Aceptación, licencia, responsabilidad y derechos de autor de las apps de EasyForLife.", [
     ("Derechos de autor", "Las apps de EasyForLife, incluidos su código fuente, gráficos, textos y nombres, son obras protegidas por derechos de autor. Los derechos de autor y los nombres de las apps pertenecen a Lukáš Ochrana."),
     ("Licencia", "Al descargar una app obtienes una licencia no exclusiva e intransferible para usarla con fines personales en dispositivos que posees o controlas, dentro de las condiciones del App Store (EULA estándar de Apple)."),
     ("Lo que no está permitido", "Sin el consentimiento previo por escrito del autor no se permite copiar, modificar, traducir, aplicar ingeniería inversa, descompilar, redistribuir, alquilar ni poner a disposición de terceros las apps o partes de ellas, siempre dentro de lo que permite el derecho checo y de la UE (se mantienen las excepciones expresamente permitidas por la ley)."),
     ("Derechos del consumidor", "Estas condiciones no limitan los derechos que te corresponden como consumidor según el derecho checo y de la UE y que no pueden excluirse por contrato."),
     ("Contacto", "Envía tus preguntas sobre la licencia a " + CONTACT + ". Se reservan todos los derechos no concedidos expresamente."),
 ])
-TERMS["pl"] = ("Warunki korzystania", "Licencja i prawa autorskie do aplikacji EasyForLife.", [
+TERMS["pl"] = ("Warunki korzystania", "Akceptacja, licencja, odpowiedzialność i prawa autorskie do aplikacji EasyForLife.", [
     ("Prawa autorskie", "Aplikacje EasyForLife, w tym ich kod źródłowy, grafika, teksty i nazwy, są utworami chronionymi prawem autorskim. Prawa autorskie i nazwy aplikacji należą do Lukáša Ochrany."),
     ("Licencja", "Pobierając aplikację, otrzymujesz niewyłączną i niezbywalną licencję na korzystanie z niej do celów osobistych na urządzeniach, które posiadasz lub kontrolujesz, w zakresie warunków App Store (Standard EULA firmy Apple)."),
     ("Czego nie wolno", "Bez uprzedniej pisemnej zgody autora nie wolno kopiować, modyfikować, tłumaczyć, poddawać inżynierii wstecznej, dekompilować, dalej rozpowszechniać, wynajmować ani w inny sposób udostępniać aplikacji lub ich części osobom trzecim – zawsze w granicach dopuszczalnych przez prawo czeskie i prawo UE (wyjątki wyraźnie dozwolone przez prawo pozostają nienaruszone)."),
     ("Prawa konsumenta", "Niniejsze warunki nie ograniczają praw przysługujących Ci jako konsumentowi na mocy prawa czeskiego i prawa UE, których nie można wyłączyć umową."),
     ("Kontakt", "Pytania dotyczące licencji wysyłaj na " + CONTACT + ". Wszelkie prawa, które nie zostały wyraźnie przyznane, są zastrzeżone."),
 ])
+# Vyloučení odpovědnosti (BACKLOG §5, 13. 10. 2026) – v mezích českého a unijního práva; vkládá se před „Práva spotřebitele“.
+LIABILITY_TERMS = {
+  "cs": [
+    ("Souhlas s podmínkami", "Instalací nebo používáním kterékoli aplikace EasyForLife (včetně webu a doprovodných služeb) vyjadřujete souhlas s těmito podmínkami a se zásadami ochrany soukromí příslušné aplikace. Pokud nesouhlasíte, aplikaci nepoužívejte a odinstalujte ji."),
+    ("Bez záruky", "Aplikace se poskytují „tak, jak jsou“ a „jak jsou dostupné“. Autor neručí za to, že budou bez chyb, nepřetržitě dostupné, kompatibilní s každým zařízením ani že výpočty, odhady, připomínky, kurzy, ceny, trasy, termíny či jiné výstupy budou úplné a přesné. Výstupy aplikací mají informativní povahu; důležitá rozhodnutí (finanční, právní, zdravotní, cestovní, technická) si vždy ověřte u oficiálního zdroje nebo odborníka."),
+    ("Omezení odpovědnosti", "V nejširším rozsahu, který připouští český právní řád a právo EU, autor neodpovídá za žádnou přímou ani nepřímou škodu, ušlý zisk, ztrátu dat, zmeškaný termín, pokutu, sankci ani jinou újmu vzniklou používáním nebo nemožností používat aplikace, a to ani v případě, že na možnost takové škody byl upozorněn. Případná odpovědnost autora je v každém případě omezena částkou, kterou jste za danou aplikaci zaplatili v posledních 12 měsících. Omezení se nevztahuje na újmu na zdraví ani na škodu způsobenou úmyslně nebo z hrubé nedbalosti (§ 2898 občanského zákoníku)."),
+    ("Data a zálohy", "Data ukládáte na svém zařízení a ve svém iCloudu (případně na vlastním serveru). Za jejich zálohování odpovídáte sami; doporučujeme mít zapnutou zálohu iCloudu a pravidelně používat export, který aplikace nabízejí. Autor neodpovídá za ztrátu dat způsobenou zařízením, iCloudem, aktualizací systému či smazáním."),
+    ("Služby třetích stran", "Některé funkce využívají služby třetích stran (např. Apple iCloud, mapy, kurzy ČNB, veřejné jízdní řády, Google Places, obchody a weby partnerů). Jejich dostupnost, obsah a podmínky autor neovlivňuje a neodpovídá za ně; jejich používání se řídí podmínkami daného poskytovatele."),
+    ("Změny a ukončení", "Autor může aplikace kdykoli měnit, přidávat a odebírat funkce nebo jejich poskytování ukončit. Tyto podmínky může přiměřeně aktualizovat; platná verze je vždy zveřejněna na této stránce a pokračováním v používání vyjadřujete souhlas s ní. Zakoupená práva podle podmínek App Store tím nejsou dotčena."),
+    ("Rozhodné právo", "Tyto podmínky se řídí právem České republiky. Spotřebitel z jiného státu EU tím neztrácí ochranu kogentních ustanovení práva státu svého bydliště. K mimosoudnímu řešení spotřebitelských sporů je příslušná Česká obchodní inspekce (adr.coi.cz)."),
+  ],
+  "en": [
+    ("Acceptance", "By installing or using any EasyForLife app (including the website and related services) you agree to these terms and to the app's privacy policy. If you do not agree, do not use the app and uninstall it."),
+    ("No warranty", "The apps are provided “as is” and “as available”. The author does not warrant that they will be error-free, always available or compatible with every device, or that calculations, estimates, reminders, exchange rates, prices, routes, dates or other outputs will be complete and accurate. App outputs are for information only; always check important decisions (financial, legal, health, travel, technical) with an official source or a professional."),
+    ("Limitation of liability", "To the fullest extent permitted by Czech and EU law, the author is not liable for any direct or indirect damage, lost profit, loss of data, missed deadline, fine, penalty or other harm arising from the use of or inability to use the apps, even if advised of the possibility of such damage. In any case, the author's liability is limited to the amount you paid for the app in the last 12 months. This limitation does not apply to personal injury or to damage caused intentionally or by gross negligence."),
+    ("Data and backups", "You store your data on your device and in your iCloud (or on your own server). You are responsible for backing it up; we recommend keeping iCloud Backup on and regularly using the export the apps offer. The author is not liable for loss of data caused by the device, iCloud, a system update or deletion."),
+    ("Third-party services", "Some features rely on third-party services (e.g. Apple iCloud, maps, Czech National Bank rates, public timetables, Google Places, partner shops and websites). The author does not control and is not responsible for their availability, content or terms; their use is governed by the provider's terms."),
+    ("Changes and termination", "The author may change the apps, add or remove features or discontinue them at any time, and may reasonably update these terms; the current version is always published on this page and continued use means you accept it. Rights acquired under the App Store terms are not affected."),
+    ("Governing law", "These terms are governed by the law of the Czech Republic. Consumers from another EU country keep the protection of the mandatory provisions of the law of their country of residence. Out-of-court consumer disputes are handled by the Czech Trade Inspection Authority (adr.coi.cz)."),
+  ],
+  "sk": [
+    ("Súhlas s podmienkami", "Inštaláciou alebo používaním ktorejkoľvek aplikácie EasyForLife (vrátane webu a sprievodných služieb) vyjadrujete súhlas s týmito podmienkami a so zásadami ochrany súkromia príslušnej aplikácie. Ak nesúhlasíte, aplikáciu nepoužívajte a odinštalujte ju."),
+    ("Bez záruky", "Aplikácie sa poskytujú „tak, ako sú“ a „ako sú dostupné“. Autor neručí za to, že budú bez chýb, nepretržite dostupné, kompatibilné s každým zariadením ani že výpočty, odhady, pripomienky, kurzy, ceny, trasy, termíny či iné výstupy budú úplné a presné. Výstupy aplikácií majú informatívnu povahu; dôležité rozhodnutia (finančné, právne, zdravotné, cestovné, technické) si vždy overte v oficiálnom zdroji alebo u odborníka."),
+    ("Obmedzenie zodpovednosti", "V najširšom rozsahu, ktorý pripúšťa české právo a právo EÚ, autor nezodpovedá za žiadnu priamu ani nepriamu škodu, ušlý zisk, stratu dát, zmeškaný termín, pokutu, sankciu ani inú ujmu vzniknutú používaním alebo nemožnosťou používať aplikácie, a to ani v prípade, že na možnosť takej škody bol upozornený. Prípadná zodpovednosť autora je v každom prípade obmedzená sumou, ktorú ste za danú aplikáciu zaplatili za posledných 12 mesiacov. Obmedzenie sa nevzťahuje na ujmu na zdraví ani na škodu spôsobenú úmyselne alebo z hrubej nedbanlivosti."),
+    ("Dáta a zálohy", "Dáta ukladáte vo svojom zariadení a vo svojom iCloude (prípadne na vlastnom serveri). Za ich zálohovanie zodpovedáte sami; odporúčame mať zapnutú zálohu iCloudu a pravidelne používať export, ktorý aplikácie ponúkajú. Autor nezodpovedá za stratu dát spôsobenú zariadením, iCloudom, aktualizáciou systému či zmazaním."),
+    ("Služby tretích strán", "Niektoré funkcie využívajú služby tretích strán (napr. Apple iCloud, mapy, kurzy ČNB, verejné cestovné poriadky, Google Places, obchody a weby partnerov). Ich dostupnosť, obsah a podmienky autor neovplyvňuje a nezodpovedá za ne; ich používanie sa riadi podmienkami daného poskytovateľa."),
+    ("Zmeny a ukončenie", "Autor môže aplikácie kedykoľvek meniť, pridávať a odoberať funkcie alebo ich poskytovanie ukončiť. Tieto podmienky môže primerane aktualizovať; platná verzia je vždy zverejnená na tejto stránke a pokračovaním v používaní s ňou vyjadrujete súhlas. Zakúpené práva podľa podmienok App Store tým nie sú dotknuté."),
+    ("Rozhodné právo", "Tieto podmienky sa riadia právom Českej republiky. Spotrebiteľ z iného štátu EÚ tým nestráca ochranu kogentných ustanovení práva štátu svojho bydliska. Na mimosúdne riešenie spotrebiteľských sporov je príslušná Česká obchodná inšpekcia (adr.coi.cz)."),
+  ],
+  "de": [
+    ("Zustimmung", "Mit der Installation oder Nutzung einer EasyForLife-App (einschließlich Website und zugehöriger Dienste) stimmen Sie diesen Bedingungen und der Datenschutzerklärung der jeweiligen App zu. Wenn Sie nicht zustimmen, nutzen Sie die App nicht und deinstallieren Sie sie."),
+    ("Keine Gewähr", "Die Apps werden „wie besehen“ und „wie verfügbar“ bereitgestellt. Der Autor übernimmt keine Gewähr dafür, dass sie fehlerfrei, ständig verfügbar oder mit jedem Gerät kompatibel sind oder dass Berechnungen, Schätzungen, Erinnerungen, Kurse, Preise, Routen, Termine oder andere Ergebnisse vollständig und richtig sind. Die Ergebnisse dienen nur zur Information; prüfen Sie wichtige Entscheidungen (finanziell, rechtlich, gesundheitlich, Reisen, technisch) immer bei einer offiziellen Quelle oder einer Fachperson."),
+    ("Haftungsbeschränkung", "Soweit nach tschechischem und EU-Recht zulässig, haftet der Autor nicht für direkte oder indirekte Schäden, entgangenen Gewinn, Datenverlust, versäumte Fristen, Bußgelder, Sanktionen oder sonstige Nachteile aus der Nutzung oder Nichtnutzbarkeit der Apps, auch wenn er auf die Möglichkeit solcher Schäden hingewiesen wurde. Die Haftung ist in jedem Fall auf den Betrag begrenzt, den Sie in den letzten 12 Monaten für die App bezahlt haben. Dies gilt nicht für Personenschäden sowie für vorsätzlich oder grob fahrlässig verursachte Schäden."),
+    ("Daten und Backups", "Ihre Daten speichern Sie auf Ihrem Gerät und in Ihrer iCloud (oder auf Ihrem eigenen Server). Für Backups sind Sie selbst verantwortlich; wir empfehlen, das iCloud-Backup eingeschaltet zu lassen und regelmäßig den Export der Apps zu nutzen. Der Autor haftet nicht für Datenverlust durch Gerät, iCloud, Systemupdates oder Löschen."),
+    ("Dienste Dritter", "Einige Funktionen nutzen Dienste Dritter (z. B. Apple iCloud, Karten, Kurse der Tschechischen Nationalbank, öffentliche Fahrpläne, Google Places, Shops und Websites von Partnern). Der Autor hat keinen Einfluss auf deren Verfügbarkeit, Inhalte und Bedingungen und ist dafür nicht verantwortlich; es gelten die Bedingungen des jeweiligen Anbieters."),
+    ("Änderungen und Einstellung", "Der Autor kann die Apps jederzeit ändern, Funktionen hinzufügen oder entfernen oder sie einstellen und diese Bedingungen angemessen aktualisieren; die gültige Fassung steht immer auf dieser Seite, und mit der weiteren Nutzung stimmen Sie ihr zu. Nach den App-Store-Bedingungen erworbene Rechte bleiben unberührt."),
+    ("Anwendbares Recht", "Es gilt das Recht der Tschechischen Republik. Verbraucher aus einem anderen EU-Staat behalten den Schutz der zwingenden Vorschriften ihres Wohnsitzstaates. Für die außergerichtliche Beilegung von Verbraucherstreitigkeiten ist die Tschechische Handelsinspektion zuständig (adr.coi.cz)."),
+  ],
+  "es": [
+    ("Aceptación", "Al instalar o usar cualquier app de EasyForLife (incluidos el sitio web y los servicios relacionados) aceptas estas condiciones y la política de privacidad de la app. Si no estás de acuerdo, no uses la app y desinstálala."),
+    ("Sin garantía", "Las apps se ofrecen «tal cual» y «según disponibilidad». El autor no garantiza que estén libres de errores, siempre disponibles o sean compatibles con todos los dispositivos, ni que los cálculos, estimaciones, recordatorios, tipos de cambio, precios, rutas, fechas u otros resultados sean completos y exactos. Los resultados son solo informativos; comprueba siempre las decisiones importantes (financieras, legales, de salud, de viaje, técnicas) con una fuente oficial o un profesional."),
+    ("Limitación de responsabilidad", "En la máxima medida permitida por el derecho checo y de la UE, el autor no responde de ningún daño directo o indirecto, lucro cesante, pérdida de datos, plazo incumplido, multa, sanción u otro perjuicio derivado del uso o de la imposibilidad de usar las apps, incluso si se le advirtió de esa posibilidad. En todo caso, su responsabilidad se limita al importe que pagaste por la app en los últimos 12 meses. Esta limitación no se aplica a daños personales ni a daños causados con dolo o negligencia grave."),
+    ("Datos y copias de seguridad", "Guardas tus datos en tu dispositivo y en tu iCloud (o en tu propio servidor). Eres responsable de sus copias de seguridad; te recomendamos mantener activada la copia de iCloud y usar con regularidad la exportación que ofrecen las apps. El autor no responde de la pérdida de datos causada por el dispositivo, iCloud, una actualización del sistema o un borrado."),
+    ("Servicios de terceros", "Algunas funciones usan servicios de terceros (p. ej. Apple iCloud, mapas, tipos del Banco Nacional Checo, horarios públicos, Google Places, tiendas y webs de socios). El autor no controla ni responde de su disponibilidad, contenido o condiciones; su uso se rige por las condiciones de cada proveedor."),
+    ("Cambios y cese", "El autor puede cambiar las apps, añadir o quitar funciones o dejar de ofrecerlas en cualquier momento, y actualizar razonablemente estas condiciones; la versión vigente está siempre en esta página y seguir usando las apps implica aceptarla. Los derechos adquiridos según las condiciones del App Store no se ven afectados."),
+    ("Ley aplicable", "Estas condiciones se rigen por el derecho de la República Checa. Los consumidores de otro país de la UE conservan la protección de las normas imperativas de su país de residencia. Los litigios de consumo extrajudiciales corresponden a la Inspección Comercial Checa (adr.coi.cz)."),
+  ],
+  "pl": [
+    ("Akceptacja", "Instalując lub używając dowolnej aplikacji EasyForLife (w tym strony internetowej i usług towarzyszących), akceptujesz niniejsze warunki oraz politykę prywatności danej aplikacji. Jeśli się nie zgadzasz, nie używaj aplikacji i odinstaluj ją."),
+    ("Brak gwarancji", "Aplikacje są udostępniane „w stanie, w jakim są” i „w miarę dostępności”. Autor nie gwarantuje, że będą wolne od błędów, stale dostępne lub zgodne z każdym urządzeniem ani że obliczenia, szacunki, przypomnienia, kursy, ceny, trasy, terminy czy inne wyniki będą kompletne i dokładne. Wyniki mają charakter informacyjny; ważne decyzje (finansowe, prawne, zdrowotne, podróżne, techniczne) zawsze sprawdzaj w oficjalnym źródle lub u specjalisty."),
+    ("Ograniczenie odpowiedzialności", "W najszerszym zakresie dopuszczalnym przez prawo czeskie i prawo UE autor nie ponosi odpowiedzialności za żadne bezpośrednie ani pośrednie szkody, utracone korzyści, utratę danych, przegapione terminy, grzywny, kary ani inne szkody wynikające z korzystania lub niemożności korzystania z aplikacji, nawet jeśli został poinformowany o możliwości ich wystąpienia. W każdym przypadku odpowiedzialność autora jest ograniczona do kwoty zapłaconej za aplikację w ostatnich 12 miesiącach. Ograniczenie nie dotyczy szkód na zdrowiu ani szkód wyrządzonych umyślnie lub z rażącego niedbalstwa."),
+    ("Dane i kopie zapasowe", "Dane przechowujesz na swoim urządzeniu i w swoim iCloud (lub na własnym serwerze). Za ich kopie zapasowe odpowiadasz sam; zalecamy włączoną kopię iCloud i regularne korzystanie z eksportu oferowanego przez aplikacje. Autor nie odpowiada za utratę danych spowodowaną urządzeniem, iCloud, aktualizacją systemu lub usunięciem."),
+    ("Usługi stron trzecich", "Niektóre funkcje korzystają z usług stron trzecich (np. Apple iCloud, mapy, kursy Czeskiego Banku Narodowego, publiczne rozkłady jazdy, Google Places, sklepy i strony partnerów). Autor nie ma wpływu na ich dostępność, treść ani warunki i nie ponosi za nie odpowiedzialności; korzystanie z nich podlega warunkom danego dostawcy."),
+    ("Zmiany i zakończenie", "Autor może w każdej chwili zmieniać aplikacje, dodawać lub usuwać funkcje albo zakończyć ich udostępnianie oraz w rozsądnym zakresie aktualizować niniejsze warunki; obowiązująca wersja jest zawsze opublikowana na tej stronie, a dalsze korzystanie oznacza jej akceptację. Prawa nabyte zgodnie z warunkami App Store pozostają nienaruszone."),
+    ("Prawo właściwe", "Niniejsze warunki podlegają prawu Republiki Czeskiej. Konsument z innego państwa UE zachowuje ochronę bezwzględnie obowiązujących przepisów państwa swojego zamieszkania. Pozasądowe spory konsumenckie rozpatruje Czeska Inspekcja Handlowa (adr.coi.cz)."),
+  ],
+}
 for _l, _h in HEALTH_TERMS.items():
     TERMS[_l][2].insert(3, _h)
+for _l, _p in LIABILITY_TERMS.items():  # souhlas na začátek, odpovědnost za zdravotní upozornění, rozhodné právo před kontakt
+    _t = TERMS[_l][2]
+    TERMS[_l] = TERMS[_l][:2] + ([_p[0]] + _t[:4] + _p[1:6] + [_t[4], _p[6], _t[5]],)
 
 def terms_slug(lang):
     """Adresa podmínek: /podminky/ (cs, sk), jinak /terms/ – odkaz z appek: https://easyforlife.cz/podminky/"""
@@ -480,11 +540,14 @@ background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gra
 .eco{position:relative;aspect-ratio:1;width:100%;max-width:620px;justify-self:center}
 .eco svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .eco path{fill:none;stroke-linecap:round;transition:opacity .25s,stroke-width .25s}
-.eco .link{stroke:var(--purple);stroke-width:.45;opacity:.55;stroke-dasharray:1.6 1.2;animation:flow 3s linear infinite}
-.eco .feed{stroke:var(--blue);stroke-width:.25;opacity:.3;stroke-dasharray:.6 1.4;animation:flow 4s linear infinite reverse}
+.eco .fam{stroke:var(--fc);stroke-width:9.5;opacity:.16}
+.eco .link{stroke:var(--purple);stroke-width:.4;opacity:.3;stroke-dasharray:1.6 1.2;animation:flow 3s linear infinite}.eco .link.in{opacity:.5}
+.eco .feed{stroke:var(--blue);stroke-width:.2;opacity:.14;stroke-dasharray:.6 1.4;animation:flow 4s linear infinite reverse}
+.fam-lbl{position:absolute;transform:translate(-50%,-50%);font-size:clamp(.6rem,1.6vw,.78rem);font-weight:800;color:var(--fc);white-space:nowrap;pointer-events:none;transition:opacity .25s;z-index:1}
+.eco.focus .fam-lbl{opacity:.2}.eco.focus path.fam{opacity:.08}
 @keyframes flow{to{stroke-dashoffset:-11.2}}
 .eco.focus path{opacity:.07}.eco.focus path.on{opacity:1;stroke-width:.8}
-.node{position:absolute;width:11%;transform:translate(-50%,-50%);transition:transform .3s cubic-bezier(.3,1.7,.5,1),opacity .25s;z-index:2}
+.node{position:absolute;width:var(--nw,11%);transform:translate(-50%,-50%);transition:transform .3s cubic-bezier(.3,1.7,.5,1),opacity .25s;z-index:2}
 .node .app-icon{width:100%;height:auto;aspect-ratio:1}
 .node:hover,.node.on{transform:translate(-50%,-50%) scale(1.22)}.eco.focus .node:not(.on){opacity:.35}
 .node.center{left:50%;top:50%;width:22%;z-index:3}.node.center .app-icon{box-shadow:0 20px 50px -14px rgb(37 99 235/.55)}
@@ -829,15 +892,39 @@ class Site:
                 if i in self.by_id and i not in ids:
                     ids.append(i)
         ids += [i for i in eco.HUB_FEEDS if i in self.by_id and i not in ids]
-        ids.sort(key=lambda i: [a["id"] for a in self.apps].index(i))
+        order = [a["id"] for a in self.apps]
+        famord = list(self.families)
+        fam_of = lambda i: self.by_id[i]["family"] if self.by_id[i]["family"] in famord else famord[-1]
+        ids.sort(key=lambda i: (famord.index(fam_of(i)), order.index(i)))
         if len(ids) < 3:
             return ""
-        pos = {}
-        for k, i in enumerate(ids):
-            ang = -math.pi / 2 + 2 * math.pi * k / len(ids)
-            pos[i] = (50 + 41 * math.cos(ang), 50 + 41 * math.sin(ang))
+        # Seskupení podle rodin (BACKLOG §6): rodina = oblouk, mezi rodinami mezera jednoho místa.
+        groups = []
+        for i in ids:
+            if not groups or groups[-1][0] != fam_of(i):
+                groups.append((fam_of(i), []))
+            groups[-1][1].append(i)
+        slots = len(ids) + len(groups)
+        pos, arcs, k = {}, "", 0
+        ang = lambda k: -math.pi / 2 + 2 * math.pi * k / slots
+        pt = lambda k, r: (50 + r * math.cos(ang(k)), 50 + r * math.sin(ang(k)))
+        labels = ""
+        for fid, members in groups:
+            k0 = k
+            for i in members:
+                pos[i] = pt(k, 41)
+                k += 1
+            k1 = k - 1
+            c = FAMILY_COLORS.get(fid, "#2563eb")
+            (sx, sy), (ex, ey) = pt(k0 - .42, 41), pt(k1 + .42, 41)
+            big = 1 if (k1 - k0 + .84) / slots > .5 else 0
+            arcs += f'<path class="fam" style="--fc:{c}" d="M{sx:.1f} {sy:.1f} A41 41 0 {big} 1 {ex:.1f} {ey:.1f}"/>'
+            lx, ly = pt((k0 + k1) / 2, 28)
+            name = self.families[fid]["name"][lang] if fid in self.families else fid
+            labels += f'<span class="fam-lbl" style="left:{lx:.1f}%;top:{ly:.1f}%;--fc:{c}">{esc(name)}</span>'
+            k += 1
         hub = "easylife" in self.by_id
-        lines = ""
+        lines = arcs
         if hub:
             for i in eco.HUB_FEEDS:
                 if i in pos:
@@ -846,8 +933,10 @@ class Site:
         for x, y, _ in eco.LINKS:
             if x in pos and y in pos:
                 (x1, y1), (x2, y2) = pos[x], pos[y]
-                cx, cy = 50 + ((x1 + x2) / 2 - 50) * .35, 50 + ((y1 + y2) / 2 - 50) * .35
-                lines += f'<path class="link" data-a="{x}" data-b="{y}" d="M{x1:.1f} {y1:.1f} Q{cx:.1f} {cy:.1f} {x2:.1f} {y2:.1f}"/>'
+                same = fam_of(x) == fam_of(y)
+                f = 1.12 if same else .35  # uvnitř rodiny oblouček ven, mezi rodinami přes střed
+                cx, cy = 50 + ((x1 + x2) / 2 - 50) * f, 50 + ((y1 + y2) / 2 - 50) * f
+                lines += f'<path class="link{" in" if same else ""}" data-a="{x}" data-b="{y}" d="M{x1:.1f} {y1:.1f} Q{cx:.1f} {cy:.1f} {x2:.1f} {y2:.1f}"/>'
         nodes = "".join(f'<a class="node" data-id="{i}" href="{url(lang, i)}" style="left:{pos[i][0]:.1f}%;top:{pos[i][1]:.1f}%" title="{esc(self.by_id[i]["name"])}">'
                         f'{self.app_icon(self.by_id[i], 56)}</a>' for i in ids)
         if hub:
@@ -858,7 +947,7 @@ class Site:
         if hub:
             ex += f'<li class="rv hubrow"><span class="pair">{self.app_icon(self.by_id["easylife"], 40)}</span><span><b>{t("eco_hub", lang)}</b></span></li>'
         return (f'<section id="spoluprace"><div class="wrap"><div class="sec-head rv"><h2>{t("eco_title", lang)}</h2><p>{t("eco_lead", lang)}</p></div>'
-                f'<div class="eco-grid"><div class="eco rv" data-eco><svg viewBox="0 0 100 100" aria-hidden="true">{lines}</svg>{nodes}</div>'
+                f'<div class="eco-grid"><div class="eco rv" data-eco style="--nw:{min(11, 2 * math.pi * 41 / slots * .82):.1f}%"><svg viewBox="0 0 100 100" aria-hidden="true">{lines}</svg>{labels}{nodes}</div>'
                 f'<div><ul class="eco-ex">{ex}</ul><p class="note">{icon("link")}<span>{t("eco_hint", lang)}</span></p></div></div></div></section>')
 
     def family_apps(self, fid):
