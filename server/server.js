@@ -1,6 +1,6 @@
 // Statický web EasyForLife: easyforlife.cz (čeština) a easyforlife.eu (angličtina + další jazyky).
 // Kořen webu podle hostu z dist/routes.json, www → bez www, přesměrování starých adres, gzip, 404 podle webu.
-const http = require("http"), fs = require("fs"), path = require("path"), zlib = require("zlib"), crypto = require("crypto");
+const http = require("http"), https = require("https"), fs = require("fs"), path = require("path"), zlib = require("zlib"), crypto = require("crypto");
 const DIST = path.join(__dirname, "dist");
 const routes = JSON.parse(fs.readFileSync(path.join(DIST, "routes.json"), "utf8"));
 const TYPES = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8",
@@ -24,6 +24,26 @@ function send(req, res, file, status = 200) {
   res.writeHead(status, headers);
   res.end(req.method === "HEAD" ? undefined : body);
 }
+// Malé servery za cestou (vlastní Fly app, bez nové domény): easyforlife.cz/darecky/… → Dárečky (oslavy).
+const UPSTREAMS = { "/darecky": process.env.DARECKY_URL || "https://darecky.fly.dev" };
+const HOP = new Set(["connection", "keep-alive", "transfer-encoding", "upgrade", "proxy-connection", "te", "trailer", "host"]);
+function proxy(req, res, upstream) {
+  const target = new URL(req.url, upstream);
+  const headers = {};
+  for (const [k, v] of Object.entries(req.headers)) if (!HOP.has(k) && !k.startsWith("fly-") && !k.startsWith("x-efl-")) headers[k] = v;
+  headers["x-forwarded-host"] = req.headers.host || "";
+  headers["x-efl-client-ip"] = req.headers["fly-client-ip"] || req.socket.remoteAddress || "";
+  if (process.env.PROXY_SECRET) headers["x-efl-proxy"] = process.env.PROXY_SECRET;
+  const up = (target.protocol === "http:" ? http : https).request(target, { method: req.method, headers, timeout: 30000 }, (r) => {
+    const out = {};
+    for (const [k, v] of Object.entries(r.headers)) if (!HOP.has(k)) out[k] = v;
+    res.writeHead(r.statusCode, out);
+    r.pipe(res);
+  });
+  up.on("timeout", () => up.destroy(new Error("timeout")));
+  up.on("error", () => { if (!res.headersSent) { res.writeHead(502, { "content-type": "text/plain" }); } res.end("Bad gateway"); });
+  req.pipe(up);
+}
 const redirect = (res, to, code = 301) => { res.writeHead(code, { location: to, "cache-control": "public, max-age=3600" }); res.end(); };
 
 http.createServer((req, res) => {
@@ -31,6 +51,9 @@ http.createServer((req, res) => {
   const url = new URL(req.url, "http://x");
   if (url.pathname === "/healthz") { res.writeHead(200); return res.end("ok"); }
   if (host.startsWith("www.")) return redirect(res, `https://${host.slice(4)}${req.url}`);
+  for (const [prefix, upstream] of Object.entries(UPSTREAMS)) {
+    if (url.pathname === prefix || url.pathname.startsWith(prefix + "/")) return proxy(req, res, upstream);
+  }
   for (const r of routes.redirects) {
     if (r.host === host && url.pathname.startsWith(r.prefix)) {
       const rest = url.pathname.slice(r.prefix.length);
