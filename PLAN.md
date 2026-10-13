@@ -15,7 +15,7 @@ Soubor zřízen 13. 10. 2026 před archivací vlákna **b8375cf3** (Build EasyLi
 - (2026-10-13) **Web 1.2** nasazen: Studium 1.2 – sekce „Přednášky s AI“ (mikrofon, přepis řeči a OCR tabule jen v zařízení, nic se neposílá ven, zvuk se nesynchronizuje), žebříček, kalendář; Kariéra – mikrofon a trénink nahlas (přepis v zařízení, nahrávka se hned maže), sken smlouvy OCR v zařízení, motivační dopis přes Apple Intelligence. Změny Cestovníčku v build.py (cizí vlákno) zůstaly necommitnuté.
 - (2026-10-13) **Web 1.6**: detaily Studium/Pohodička/Kariérník/Dům a zahrada, Schema.org + hreflang v sitemap, Co je nového + RSS, 404 s hledáním, palec na podpoře.
 ## Otevřené zadání uživatele
-- [ ] 10. 10. 20:41: _(13. 10. trvá – čeká jen na vyjádření uživatele, technicky hotové)_ „web je strašný, má být svěží, moderní, trochu bláznivý, ikony z appek, různě velké, rozlétané dlaždice, animace“ – přepracováno (rozložení karet opraveno 11. 10.), **ověřit s uživatelem spokojenost** a dolaďovat.
+- [x] 10. 10. 20:41: _(13. 10. uživatel schválil – předáno přes Vedení projektů)_ „web je strašný, má být svěží, moderní, trochu bláznivý, ikony z appek, různě velké, rozlétané dlaždice, animace“ – přepracováno (rozložení karet opraveno 11. 10.), **ověřit s uživatelem spokojenost** a dolaďovat.
 - [x] 11. 10. 6:54: **FotoDesk jinou ikonu** _(13. 10. ověřeno: ikona z appky FotoDesk, family foto + alsoFamilies v katalogu, na webu ve Foto)_, předat příslušným sessions a zařadit FotoDesk do kategorie **Foto** v katalogu/webu – ověřit v `catalog.json` a na webu.
 - [x] BACKLOG §6: _(Web 1.4, kolečko podle rodin)_ **kolečko propojení appek** zjednodušit (seskupit podle rodin, ať není přeplácané).
 - [x] BACKLOG §5: _(Web 1.4: /podminky/ + /terms/, 6 jazyků; živě 13. 10.)_ publikovat **Podmínky užití + zásady** pro všechny appky (souhlas při prvním spuštění; maximální vyloučení odpovědnosti v mezích českého/EU práva) na easyforlife.cz.
@@ -26,7 +26,7 @@ Soubor zřízen 13. 10. 2026 před archivací vlákna **b8375cf3** (Build EasyLi
 - [x] Mainhub / Hub: _(/easylife/ živě)_ přehled `EasyForLife Hub` ve webu.
 - [x] (13. 10., schválený návrh Vedení #250) _(Web 1.6: JSON-LD v detailu appky, sitemap s xhtml:link)_ Schema.org SoftwareApplication na stránkách appek a hreflang alternates i v sitemap.xml (hreflang v hlavičkách stránek už je, schema ne).
 - [x] (13. 10., schválený návrh Vedení #251) _(Web 1.6: /novinky/ + /news/ a rss.xml ze `site/news.json` – při nové verzi appky doplnit)_ Stránka „Novinky / Co je nového“ (changelog appek z katalogu) a RSS.
-- [ ] (13. 10., schválený návrh Vedení #252) _(BLOKOVÁNO: Mailer nemá veřejný endpoint pro odběr s dvojím souhlasem – nejdřív v Mailer serveru, pak formulář na webu)_ Registrace na seznam čekatelů/newsletter pro appky „Brzy“ přes Mailer (jen s dvojím souhlasem).
+- [ ] (13. 10., schválený návrh Vedení #252) _(BLOK: čeká na Mailer veřejný endpoint s double opt-in; pak formulář na webu)_ Registrace na seznam čekatelů/newsletter pro appky „Brzy“ přes Mailer (jen s dvojím souhlasem).
 - [x] (13. 10., schválený návrh Vedení #253) _(Web 1.6: 404 s hledáním appek; palec na /podpora/ → POST /api/feedback, anonymně do logu: `fly logs | grep feedback`)_ Vlastní 404 s hledáním v katalogu (404 dnes jen text + odkaz) a měření spokojenosti na stránkách podpory (palec nahoru/dolů).
 
 ## Rozhodnutí a pravidla
