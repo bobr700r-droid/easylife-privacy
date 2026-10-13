@@ -8,7 +8,7 @@
   ],
   "en": [
    "Svatebníček is a separate project under the EasyForLife brand: wedding planning for the couple, witnesses, parents and vendors – in the iPhone app and on the web at svatebnicek.eu.",
-   "Guests install nothing: they get a private link to the wedding website where they RSVP, choose their menu and reserve a gift. Data is stored on the Svatebníček server, not in iCloud."
+   "Guests install nothing: they get a private link to the wedding website where they confirm attendance, choose their menu and reserve a gift. Data is stored on the Svatebníček server, not in iCloud."
   ],
   "sk": [
    "Svatebníček je samostatný projekt pod značkou EasyForLife: plánovanie svadby pre snúbencov, svedkov, rodičov aj dodávateľov – v appke pre iPhone aj na webe.",
@@ -29,46 +29,64 @@
  },
  "features": {
   "cs": [
-   "Checklist podle měsíců, harmonogram dne, rozpočet se zálohami a doplatky",
-   "Hosté po domácnostech, RSVP, menu, dieta, ubytování a doprava",
-   "Svatební dary s tajnou rezervací – snoubenci nevidí, kdo co koupil",
-   "Sdílení s partnerem, pomocníky a dodavateli (i fotograf z FotoDesku)",
-   "Vše funguje i jen na webu, bez appky"
+   "Pro snoubence: oba máte plný přístup a změny vidíte hned – v telefonu i na webu",
+   "Hosty zvete po rodinách: jedna pozvánka (odkaz nebo QR kód) pro celou rodinu, každý potvrdí účast sám za sebe – menu, alergie, ubytování, doprava",
+   "Zasedací pořádek tažením, hlídání kapacity a „kdo spolu nesedí“, PDF a tabulka pro restauraci",
+   "Svatební dary s tajnou rezervací – kdo co daroval, uvidíte až po označení „dostali jsme“",
+   "Rozpočet se zálohami a doplatky, propojený s dodavateli; rozdělení nákladů přes Vyrovnáno",
+   "Checklist o 36 krocích po měsících, odpočet, widget a odpočet na zamčené obrazovce",
+   "Harmonogram dne pro fotografa a dodavatele (odkaz, kalendář, PDF), propojení s FotoDeskem",
+   "Odkaz pro každou roli: partner, svědci a rodiče, rodiny hostů, dodavatelé, svatební web – vše funguje i jen na webu"
   ],
   "en": [
-   "Checklist by month, day timeline, budget with deposits and balances",
-   "Guests by household, RSVP, menu, diet, accommodation and transport",
-   "Wedding gifts with secret reservations – the couple can’t see who bought what",
-   "Share with your partner, helpers and vendors (including a FotoDesk photographer)",
-   "Everything also works on the web, no app required"
+   "For the couple: you both have full access and see changes instantly – on your phones and on the web",
+   "Invite guests as families: one invitation (link or QR code) per family, everyone confirms for themselves – menu, allergies, accommodation, transport",
+   "Drag-and-drop seating plan with capacity and “who shouldn’t sit together”, PDF and spreadsheet for the venue",
+   "Wedding gifts with secret reservations – you see who gave what only after marking it received",
+   "Budget with deposits and final payments, linked to vendors; split costs via Vyrovnáno",
+   "36-step checklist by month, countdown, widget and Lock Screen countdown",
+   "Day timeline for your photographer and vendors (link, calendar, PDF), FotoDesk integration",
+   "A link for every role: partner, witnesses and parents, guest families, vendors, wedding website – everything works on the web too"
   ],
   "sk": [
-   "Checklist podľa mesiacov, harmonogram dňa, rozpočet so zálohami a doplatkami",
-   "Hostia po domácnostiach, RSVP, menu, diéta, ubytovanie a doprava",
-   "Svadobné dary s tajnou rezerváciou – snúbenci nevidia, kto čo kúpil",
-   "Zdieľanie s partnerom, pomocníkmi a dodávateľmi",
-   "Všetko funguje aj len na webe, bez appky"
+   "Pre snúbencov: obaja máte plný prístup a zmeny vidíte hneď – v telefóne aj na webe",
+   "Hostí pozývate po rodinách: jedna pozvánka (odkaz alebo QR kód) pre celú rodinu, každý potvrdí účasť sám za seba – menu, alergie, ubytovanie, doprava",
+   "Zasadací poriadok presúvaním, stráženie kapacity a „kto spolu nesedí“, PDF a tabuľka pre reštauráciu",
+   "Svadobné dary s tajnou rezerváciou – kto čo daroval, uvidíte až po označení „dostali sme“",
+   "Rozpočet so zálohami a doplatkami, prepojený s dodávateľmi; rozdelenie nákladov cez Vyrovnáno",
+   "Checklist s 36 krokmi po mesiacoch, odpočet, widget a odpočet na zamknutej obrazovke",
+   "Harmonogram dňa pre fotografa a dodávateľov (odkaz, kalendár, PDF), prepojenie s FotoDeskom",
+   "Odkaz pre každú rolu: partner, svedkovia a rodičia, rodiny hostí, dodávatelia, svadobný web – všetko funguje aj len na webe"
   ],
   "de": [
-   "Checkliste nach Monaten, Tagesablauf, Budget mit Anzahlungen und Restzahlungen",
-   "Gäste nach Haushalten, Zusagen, Menü, Ernährung, Unterkunft und Anreise",
-   "Hochzeitsgeschenke mit geheimer Reservierung – das Paar sieht nicht, wer was gekauft hat",
-   "Teilen mit Partner, Helfern und Dienstleistern",
-   "Alles funktioniert auch nur im Web, ohne App"
+   "Für das Brautpaar: ihr habt beide vollen Zugriff und seht Änderungen sofort – auf dem Handy und im Web",
+   "Gäste als Familien einladen: eine Einladung (Link oder QR-Code) pro Familie, jeder sagt für sich selbst zu – Menü, Allergien, Unterkunft, Anreise",
+   "Sitzordnung per Drag & Drop mit Kapazität und „wer nicht zusammen sitzt“, PDF und Tabelle für das Restaurant",
+   "Hochzeitsgeschenke mit geheimer Reservierung – wer was geschenkt hat, seht ihr erst nach „erhalten“",
+   "Budget mit Anzahlungen und Restzahlungen, verknüpft mit Dienstleistern; Kosten teilen über Vyrovnáno",
+   "Checkliste mit 36 Schritten nach Monaten, Countdown, Widget und Countdown auf dem Sperrbildschirm",
+   "Tagesablauf für Fotograf und Dienstleister (Link, Kalender, PDF), FotoDesk-Anbindung",
+   "Ein Link für jede Rolle: Partner, Trauzeugen und Eltern, Gästefamilien, Dienstleister, Hochzeitswebsite – alles auch nur im Web"
   ],
   "es": [
-   "Lista de tareas por meses, horario del día, presupuesto con anticipos y pagos pendientes",
-   "Invitados por hogar, confirmación, menú, dieta, alojamiento y transporte",
-   "Regalos de boda con reserva secreta: la pareja no ve quién compró qué",
-   "Compartir con la pareja, ayudantes y proveedores",
-   "Todo funciona también solo en la web, sin app"
+   "Para la pareja: los dos tenéis acceso completo y veis los cambios al instante, en el móvil y en la web",
+   "Invitad por familias: una invitación (enlace o código QR) por familia y cada uno confirma por sí mismo: menú, alergias, alojamiento, transporte",
+   "Distribución de mesas arrastrando, control de capacidad y «quién no se sienta junto», PDF y hoja para el restaurante",
+   "Regalos con reserva secreta: veis quién regaló qué solo al marcarlo como recibido",
+   "Presupuesto con anticipos y pagos pendientes, vinculado a proveedores; reparto de gastos con Vyrovnáno",
+   "Lista de 36 pasos por meses, cuenta atrás, widget y cuenta atrás en la pantalla bloqueada",
+   "Horario del día para fotógrafo y proveedores (enlace, calendario, PDF), integración con FotoDesk",
+   "Un enlace para cada rol: pareja, testigos y padres, familias invitadas, proveedores, web de la boda; todo funciona también en la web"
   ],
   "pl": [
-   "Lista zadań według miesięcy, harmonogram dnia, budżet z zaliczkami i dopłatami",
-   "Goście według gospodarstw, potwierdzenia, menu, dieta, nocleg i dojazd",
-   "Prezenty ślubne z tajną rezerwacją – para nie widzi, kto co kupił",
-   "Udostępnianie partnerowi, pomocnikom i usługodawcom",
-   "Wszystko działa też tylko w przeglądarce, bez aplikacji"
+   "Dla narzeczonych: oboje macie pełny dostęp i widzicie zmiany od razu – w telefonie i w przeglądarce",
+   "Zapraszacie gości rodzinami: jedno zaproszenie (link lub kod QR) na rodzinę, każdy potwierdza obecność za siebie – menu, alergie, nocleg, dojazd",
+   "Plan stołów przeciąganiem, pilnowanie miejsc i „kto nie siedzi razem”, PDF i tabela dla restauracji",
+   "Prezenty z tajną rezerwacją – kto co dał, zobaczycie dopiero po oznaczeniu „dostaliśmy”",
+   "Budżet z zaliczkami i dopłatami, połączony z usługodawcami; podział kosztów przez Vyrovnáno",
+   "Lista 36 kroków według miesięcy, odliczanie, widżet i odliczanie na ekranie blokady",
+   "Harmonogram dnia dla fotografa i usługodawców (link, kalendarz, PDF), integracja z FotoDeskiem",
+   "Link dla każdej roli: partner, świadkowie i rodzice, rodziny gości, usługodawcy, strona ślubu – wszystko działa też w przeglądarce"
   ]
  },
  "links": []
