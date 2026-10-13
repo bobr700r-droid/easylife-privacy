@@ -1,7 +1,7 @@
 {
  "status": "live",
  "icon": "~/Documents/Fakturant/ios/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
- "privacy": "https://faktury.luksafoto.cz/soukromi.html",
+ "privacy": "https://fakturant.easyforlife.cz/soukromi.html",
  "description": {
   "cs": [
    "Fakturant je jednoduchá fakturace pro živnostníky a malé firmy: faktury, zálohovky, dobropisy, číselné řady a QR platby.",

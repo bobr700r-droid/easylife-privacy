@@ -1,7 +1,7 @@
 {
  "status": "live",
  "icon": "~/CRMDesk/ios/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
- "privacy": "https://crmdesk.luksafoto.cz/gdpr.html",
+ "privacy": "https://crmdesk.cz/gdpr.html",
  "description": {
   "cs": [
    "CRMDesk je univerzální CRM pro firmy z libovolného oboru: firmy, kontakty, obchody, úkoly a nabídky. Při registraci si vybereš šablonu oboru a ta rovnou nastaví fáze obchodu i pole.",

@@ -2,7 +2,7 @@
  "status": "live",
  "account": "optional",
  "icon": "~/Documents/NaviDesk/img/app-512.png",
- "privacy": "https://navi.luksafoto.cz/soukromi.html",
+ "privacy": "https://navidesk.eu/soukromi.html",
  "description": {
   "cs": [
    "NaviDesk je plánovač motorkářských tras pro počítač s velkým monitorem. Trasu si vytvaruješ myší, naplánuješ noclehy a QR kódem ji pošleš do Navigace v iPhonu.",
