@@ -181,7 +181,7 @@ def t(key, lang):
     return T[key][LANGS.index(lang)]
 
 COPYRIGHT = "© 2026 Lukáš Ochrana"
-VERSION = "1.4"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
+VERSION = "1.4.1"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
 # Podmínky užití – licence (13. 10. 2026), ve všech 6 jazycích (sk/de/es/pl a zdravotní sekce doplněny při auditu Lékárničky).
 TERMS = {
   "cs": ("Podmínky užití", "Souhlas, licence, odpovědnost a autorská práva k aplikacím EasyForLife.", [
