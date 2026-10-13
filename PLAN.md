@@ -19,6 +19,10 @@ Soubor zřízen 13. 10. 2026 před archivací vlákna **b8375cf3** (Build EasyLi
 - [ ] Stránky soukromí a detail pro Salónky (6 jazyků), Kulturník (zatím nepublikovat).
 - [ ] DNS: easyforlife.eu a ostatní domény zadává uživatel u Forpsi ručně; vždy se souhlasem.
 - [ ] Mainhub / Hub: přehled `EasyForLife Hub` ve webu.
+- [ ] (13. 10., schválený návrh Vedení #250) Schema.org SoftwareApplication na stránkách appek a hreflang alternates i v sitemap.xml (hreflang v hlavičkách stránek už je, schema ne).
+- [ ] (13. 10., schválený návrh Vedení #251) Stránka „Novinky / Co je nového“ (changelog appek z katalogu) a RSS.
+- [ ] (13. 10., schválený návrh Vedení #252) Registrace na seznam čekatelů/newsletter pro appky „Brzy“ přes Mailer (jen s dvojím souhlasem).
+- [ ] (13. 10., schválený návrh Vedení #253) Vlastní 404 s hledáním v katalogu (404 dnes jen text + odkaz) a měření spokojenosti na stránkách podpory (palec nahoru/dolů).
 
 ## Rozhodnutí a pravidla
 - Statický web bez frameworků; generuje se z `catalog.json` (jediný zdroj pravdy) – ostatní vlákna sem přidávají zásady soukromí, jejich formát a sekce neupravovat; před commitem `git pull`.
