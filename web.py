@@ -154,6 +154,22 @@ T = {
      ("Jak dołączyć do wersji beta?", "Niektóre aplikacje są jeszcze w fazie beta w TestFlight. Napisz do nas e-mail, a wyślemy zaproszenie."),
      ("Mam pomysł na nową funkcję", "Śmiało! Napisz do nas e-mail – czytamy wszystkie propozycje.")]],
   "skip": ["Přejít na obsah", "Skip to content", "Prejsť na obsah", "Zum Inhalt", "Ir al contenido", "Przejdź do treści"],  "work": ['Pro práci', 'For work', 'Pre prácu', 'Für die Arbeit', 'Para el trabajo', 'Do pracy'],
+  "projects": ["Další projekty", "Other projects", "Ďalšie projekty", "Weitere Projekte", "Otros proyectos", "Inne projekty"],
+  "projects_lead": ["Samostatné projekty pod značkou EasyForLife – s vlastním webem, vlastním obchodním modelem a vlastními zásadami. Do rodinného předplatného EasyForLife nepatří.",
+                    "Separate projects under the EasyForLife brand – with their own website, their own business model and their own policies. They are not part of the EasyForLife family subscription.",
+                    "Samostatné projekty pod značkou EasyForLife – s vlastným webom, vlastným obchodným modelom a vlastnými zásadami. Do rodinného predplatného EasyForLife nepatria.",
+                    "Eigenständige Projekte unter der Marke EasyForLife – mit eigener Website, eigenem Geschäftsmodell und eigenen Richtlinien. Sie gehören nicht zum EasyForLife-Familienabo.",
+                    "Proyectos independientes bajo la marca EasyForLife, con su propia web, su propio modelo de negocio y sus propias políticas. No forman parte de la suscripción familiar de EasyForLife.",
+                    "Osobne projekty pod marką EasyForLife – z własną stroną, własnym modelem biznesowym i własnymi zasadami. Nie należą do rodzinnej subskrypcji EasyForLife."],
+  "separate": ["Samostatný projekt", "Separate project", "Samostatný projekt", "Eigenständiges Projekt", "Proyecto independiente", "Osobny projekt"],
+  "one_time": ["Jednorázový nákup plné verze, ne předplatné. Během testování je vše zdarma.",
+               "One-time purchase of the full version, not a subscription. Everything is free during testing.",
+               "Jednorazový nákup plnej verzie, nie predplatné. Počas testovania je všetko zadarmo.",
+               "Einmalkauf der Vollversion, kein Abo. Während der Testphase ist alles kostenlos.",
+               "Compra única de la versión completa, sin suscripción. Durante las pruebas todo es gratis.",
+               "Jednorazowy zakup pełnej wersji, bez subskrypcji. W trakcie testów wszystko jest bezpłatne."],
+  "own_terms": ["Vlastní zásady soukromí a podmínky má na svém webu", "It has its own privacy policy and terms on its website", "Vlastné zásady súkromia a podmienky má na svojom webe",
+                "Eigene Datenschutzerklärung und Bedingungen auf der eigenen Website", "Tiene su propia política de privacidad y condiciones en su web", "Własna polityka prywatności i warunki na jej stronie"],
   "work_lead": ['Kancelář a profesionální nástroje pro firmy: faktury, e-maily, zakázky a klienti. Na webu i v telefonu, s vlastním účtem.', 'Office tools and professional software for businesses: invoices, email, jobs and clients. On the web and on your phone, with your own account.', 'Kancelária a profesionálne nástroje pre firmy: faktúry, e-maily, zákazky a klienti. Na webe aj v telefóne, s vlastným účtom.', 'Büro-Tools und Profi-Software für Unternehmen: Rechnungen, E-Mails, Aufträge und Kunden. Im Web und auf dem iPhone, mit eigenem Konto.', 'Herramientas de oficina y software profesional para empresas: facturas, correo, encargos y clientes. En la web y en el móvil, con tu propia cuenta.', 'Narzędzia biurowe i profesjonalne oprogramowanie dla firm: faktury, poczta, zlecenia i klienci. W przeglądarce i w telefonie, z własnym kontem.'],
   "acc_req": ['S účtem', 'Account', 'S účtom', 'Mit Konto', 'Con cuenta', 'Z kontem'],
   "acc_opt": ['Účet volitelný', 'Account optional', 'Účet voliteľný', 'Konto optional', 'Cuenta opcional', 'Konto opcjonalne'],
@@ -378,6 +394,7 @@ box-shadow:var(--shadow);transform:perspective(900px) rotateX(var(--rx,0deg)) ro
 .t-wide{grid-column:span 2}.t-wide .ghost-icon{width:44%;right:-6%;bottom:-40%}
 .chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 11px;font-weight:800;font-size:.76rem;background:var(--surface);color:var(--ink);box-shadow:0 2px 8px -4px rgb(0 0 0/.3)}
 .chip.tf::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
+.chip.sep{background:color-mix(in srgb,var(--c,#b4536b) 16%,var(--surface))}
 .chip.soon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--yellow)}
 .ghost{font-size:.9rem;font-weight:700;color:var(--muted);text-decoration:none;padding:6px 6px}.ghost:hover{color:var(--ink);text-decoration:underline}
 .app-icon{flex:none;border-radius:23%;box-shadow:0 6px 16px -8px rgb(0 0 0/.45)}
@@ -686,7 +703,7 @@ class Site:
         return f'<span class="chip">{t("testflight" if a["site"].get("status") == "testflight" else "soon", lang)}</span>'
 
     def privacy_link(self, a, lang, cls="ghost"):
-        href = self.privacy.get(a["id"]) or self.external.get(a["name"]) or a["site"].get("privacy")
+        href = self.privacy.get(a["id"]) or self.external.get(a["name"]) or a["site"].get("privacy") or self.own_url(a, "privacy", lang)
         if not href:
             return ""
         if href.startswith("/") and lang not in ("cs", "sk"):
@@ -719,17 +736,21 @@ class Site:
             return ""
         return f'<span class="chip acc {acc}">{t("acc_req" if acc == "required" else "acc_opt", lang)}</span>'
 
+    def sep_chip(self, a, lang):
+        return f'<span class="chip sep">{t("separate", lang)}</span>' if a.get("separate") else ""
+
     def web_btn(self, a, lang, cls="btn"):
-        if not a.get("web") or a["web"].rstrip("/") in (CZ, EU):
+        w = self.own_url(a, "web", lang)
+        if not w or w.rstrip("/") in (CZ, EU):
             return ""
-        return f'<a class="{cls}" style="--c:{self.color(a)}" href="{esc(a["web"])}">{icon("globe")}{t("open_web", lang)}</a>'
+        return f'<a class="{cls}" style="--c:{self.color(a)}" href="{esc(w)}">{icon("globe")}{t("open_web", lang)}</a>'
 
     def tile(self, a, lang, size, k):
         big = f'<img class="ghost-icon" src="{self.icon_url(a)}" alt="" loading="lazy">' if self.has_icon(a) and size != "t-n" else ""
         return (f'<article class="tile {size} rv" style="--c:{self.color(a)};--rd:{k * 60}ms">{big}'
                 f'<div class="tile-top">{self.app_icon(a, 132 if size == "t-big" else 64)}<div class="status">{self.status(a, lang)}</div></div>'
                 f'<div class="tile-body"><h3><a href="{url(lang, a["id"])}">{esc(a["name"])}</a></h3><p>{esc(a["tagline"][lang])}</p>'
-                f'<div class="tile-foot">{self.account(a, lang)}{self.web_btn(a, lang, "webl")}{self.privacy_link(a, lang, "priv")}</div></div></article>')
+                f'<div class="tile-foot">{self.sep_chip(a, lang)}{self.account(a, lang)}{self.web_btn(a, lang, "webl")}{self.privacy_link(a, lang, "priv")}</div></div></article>')
 
     def bento(self, apps, lang, featured=True):
         """Velikosti dlaždic tak, aby 4sloupcová mřížka vyšla bez děr: první velká, zbytek doplnit širokými."""
@@ -841,7 +862,29 @@ class Site:
 
     def family_apps(self, fid):
         """Appky rodiny; appka se může ukázat i v další rodině (`also_families` v site/apps, např. FotoDesk i ve Foto)."""
-        return [a for a in self.apps if a["family"] == fid or fid in a["site"].get("also_families", [])]
+        return [a for a in self.apps if not a.get("separate") and (a["family"] == fid or fid in a["site"].get("also_families", []))]
+
+    def own_url(self, a, key, lang):
+        """Vlastní web / zásady samostatného projektu: `web`/`privacy` česky a slovensky, `webEn`/`privacyEn` jinak."""
+        return a.get(key) if lang in ("cs", "sk") else (a.get(key + "En") or a.get(key))
+
+    def projects(self, lang):
+        """Samostatné projekty (`separate` v katalogu, např. Svatebníček) – mimo rodiny a rodinné předplatné."""
+        apps = [a for a in self.apps if a.get("separate")]
+        if not apps:
+            return ""
+        cards = "".join(self.tile(a, lang, "t-hero", k) for k, a in enumerate(apps))
+        return (f'<section id="projekty"><div class="wrap"><div class="sec-head rv"><h2>{t("projects", lang)}</h2><p>{t("projects_lead", lang)}</p></div>'
+                f'<div class="bento">{cards}</div></div></section>')
+
+    def separate_note(self, a, lang):
+        if not a.get("separate"):
+            return ""
+        web, priv = self.own_url(a, "web", lang), self.own_url(a, "privacy", lang)
+        txt = t("one_time", lang) if a.get("pricing") == "oneTime" else ""
+        links = (f' <a href="{esc(web)}">{esc(web.split("//")[-1])}</a>' if web else "") + (f' · <a href="{esc(priv)}">{t("privacy", lang)}</a>' if priv else "")
+        return f'<p class="note">{icon("link")}<span><b>{t("separate", lang)}.</b> {txt} {t("own_terms", lang)}:{links}</span></p>'
+
 
     def fly_icons(self, apps, layout=FLY):
         out = ""
@@ -877,12 +920,13 @@ class Site:
         order = self.icon_first()
         wall = "".join(self.app_icon(a, 120) for a in (order * 7)[:96])
         body = (f'<section class="hero" data-par><div class="blobs"><i></i><i></i><i></i></div><div class="fly-layer" aria-hidden="true">{fly}</div>'
-                f'<div class="wrap hero-in"><p class="kicker"><span class="dot"></span>{t("count", lang).format(n=len(self.apps))}</p>'
+                f'<div class="wrap hero-in"><p class="kicker"><span class="dot"></span>{t("count", lang).format(n=len([a for a in self.apps if not a.get("separate")]))}</p>'
                 f'<h1>{h}</h1><p class="lead">{t("lead", lang)}</p><ul class="pills">{pills}</ul>'
                 f'<a class="btn big" href="#apps">{t("cta_apps", lang)} <span>↓</span></a></div></section>'
                 + '<div class="mq-wrap">' + self.marquee(order, lang) + self.marquee(order[::-1], lang, "two") + "</div>"
                 + self.start_here(lang) +
                 f'<section id="apps"><div class="wrap"><div class="sec-head rv"><h2>{t("apps", lang)}</h2><p>{t("apps_lead", lang)}</p></div>{fams}</div></section>'
+                + self.projects(lang)
                 + self.eco_section(lang)
                 + (f'<section id="prace"><div class="wrap"><div class="work"><div class="sec-head rv"><h2>{t("work", lang)}</h2><p>{t("work_lead", lang)}</p></div>{work}</div></div></section>' if work else "") +
                 f'<section><div class="wrap"><div class="sec-head rv"><h2>{t("how", lang)}</h2></div><div class="stickers">{prin}</div></div></section>'
@@ -914,10 +958,12 @@ class Site:
     def detail(self, a, lang):
         s, c, fam = a["site"], self.color(a), self.families[a["family"]]
         fc = FAMILY_COLORS.get(a["family"], c)
+        anchor = "projekty" if a.get("separate") else a["family"]
+        fam_name = t("projects", lang) if a.get("separate") else esc(fam["name"][lang])
         desc = "".join(f"<p>{esc(p)}</p>" for p in (s.get("description", {}).get(lang) or []))
         feats = s.get("features", {}).get(lang) or []
         web = f'<a class="ghost" href="{esc(s["web"])}">{esc(s["web"].split("//")[-1].rstrip("/"))} ↗</a>' if s.get("web") else ""
-        others = [o for o in self.family_apps(a["family"]) if o["id"] != a["id"]]
+        others = [] if a.get("separate") else [o for o in self.family_apps(a["family"]) if o["id"] != a["id"]]
         plats = ('<p class="plats">' + "".join(f'<span>{PLATFORMS.get(x, x)}</span>' for x in a["platforms"]) + "</p>") if a.get("platforms") else ""
         if a.get("web") and s.get("web") == a.get("web"):
             web = ""
@@ -928,9 +974,9 @@ class Site:
                 if p else f'{icon("shield")}<span>{t("policy_soon", lang)}</span>')
         body = (f'<section class="app-top" style="--c:{c}" data-par><div class="blobs"><i></i><i></i><i></i></div>'
                 f'<div class="fly-layer small" aria-hidden="true">{fly}</div><div class="wrap">'
-                f'<a class="back" href="{url(lang)}#{a["family"]}">{icon("arrow-left")}{t("back", lang)}</a>'
-                f'<div class="app-head"><div><a class="fam-chip" style="--fc:{fc}" href="{url(lang)}#{a["family"]}">{icon(a["family"])}{esc(fam["name"][lang])}</a>'
-                f'<h1>{esc(a["name"])}</h1><p class="tag">{esc(a["tagline"][lang])}</p><div class="actions">{self.web_btn(a, lang)}{self.status(a, lang)}{self.account(a, lang)}{web}</div>{plats}</div>'
+                f'<a class="back" href="{url(lang)}#{anchor}">{icon("arrow-left")}{t("back", lang)}</a>'
+                f'<div class="app-head"><div><a class="fam-chip" style="--fc:{fc}" href="{url(lang)}#{anchor}">{icon(a["family"])}{fam_name}</a>'
+                f'<h1>{esc(a["name"])}</h1><p class="tag">{esc(a["tagline"][lang])}</p><div class="actions">{self.web_btn(a, lang)}{self.status(a, lang)}{self.sep_chip(a, lang)}{self.account(a, lang)}{web}</div>{plats}</div>'
                 f'<div class="hero-icon">{self.app_icon(a, 300).replace(" loading=\"lazy\"", "")}</div></div></div></section>')
         body += f'<div class="wrap" style="--c:{c}"><article class="detail"><div class="desc rv">{desc}</div>'
         if feats:
@@ -945,7 +991,7 @@ class Site:
             body += f'<h2 class="sub rv">{t("works_with", lang)}</h2><p class="solo">{esc(t("solo", lang).format(a=a["name"]))}</p><div class="links">' + "".join(
                 f'<div class="link-row rv">{self.app_icon(o, 54)}<div><a href="{url(lang, o["id"])}"><b>{esc(o["name"])}</b></a><span>{esc(txt)}</span></div></div>'
                 for o, txt in links) + "</div>"
-        body += f'<p class="note">{note}</p>'
+        body += f'<p class="note">{note}</p>' + self.separate_note(a, lang)
         if not a.get("store"):
             body += f'<p class="note">{icon("check")}<span>{t("tf_note" if s.get("status") == "testflight" else "dev_note", lang)}</span></p>'
         body += "</article></div>"

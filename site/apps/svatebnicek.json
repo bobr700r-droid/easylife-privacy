@@ -1,0 +1,75 @@
+{
+ "status": "testflight",
+ "color": "#b4536b",
+ "description": {
+  "cs": [
+   "Svatebníček je samostatný projekt pod značkou EasyForLife: plánování svatby pro snoubence, svědky, rodiče i dodavatele – v appce pro iPhone i na webu mujsvatebnicek.cz.",
+   "Hosté nic neinstalují: dostanou tajný odkaz na svatební web, kde potvrdí účast, vyberou menu a zarezervují dar. Data jsou na serveru Svatebníčku, ne v iCloudu."
+  ],
+  "en": [
+   "Svatebníček is a separate project under the EasyForLife brand: wedding planning for the couple, witnesses, parents and vendors – in the iPhone app and on the web at svatebnicek.eu.",
+   "Guests install nothing: they get a private link to the wedding website where they RSVP, choose their menu and reserve a gift. Data is stored on the Svatebníček server, not in iCloud."
+  ],
+  "sk": [
+   "Svatebníček je samostatný projekt pod značkou EasyForLife: plánovanie svadby pre snúbencov, svedkov, rodičov aj dodávateľov – v appke pre iPhone aj na webe.",
+   "Hostia nič neinštalujú: dostanú tajný odkaz na svadobný web, kde potvrdia účasť, vyberú menu a zarezervujú dar. Dáta sú na serveri Svatebníčka, nie v iCloude."
+  ],
+  "de": [
+   "Svatebníček ist ein eigenständiges Projekt unter der Marke EasyForLife: Hochzeitsplanung für Brautpaar, Trauzeugen, Eltern und Dienstleister – in der iPhone-App und im Web.",
+   "Gäste installieren nichts: Sie erhalten einen privaten Link zur Hochzeitswebsite, sagen zu, wählen ihr Menü und reservieren ein Geschenk. Die Daten liegen auf dem Svatebníček-Server, nicht in iCloud."
+  ],
+  "es": [
+   "Svatebníček es un proyecto independiente bajo la marca EasyForLife: planificación de bodas para la pareja, testigos, padres y proveedores, en la app para iPhone y en la web.",
+   "Los invitados no instalan nada: reciben un enlace privado a la web de la boda, donde confirman asistencia, eligen menú y reservan un regalo. Los datos están en el servidor de Svatebníček, no en iCloud."
+  ],
+  "pl": [
+   "Svatebníček to osobny projekt pod marką EasyForLife: planowanie ślubu dla narzeczonych, świadków, rodziców i usługodawców – w aplikacji na iPhone’a i w przeglądarce.",
+   "Goście niczego nie instalują: dostają prywatny link do strony ślubu, gdzie potwierdzają obecność, wybierają menu i rezerwują prezent. Dane są na serwerze Svatebníčka, nie w iCloud."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Checklist podle měsíců, harmonogram dne, rozpočet se zálohami a doplatky",
+   "Hosté po domácnostech, RSVP, menu, dieta, ubytování a doprava",
+   "Svatební dary s tajnou rezervací – snoubenci nevidí, kdo co koupil",
+   "Sdílení s partnerem, pomocníky a dodavateli (i fotograf z FotoDesku)",
+   "Vše funguje i jen na webu, bez appky"
+  ],
+  "en": [
+   "Checklist by month, day timeline, budget with deposits and balances",
+   "Guests by household, RSVP, menu, diet, accommodation and transport",
+   "Wedding gifts with secret reservations – the couple can’t see who bought what",
+   "Share with your partner, helpers and vendors (including a FotoDesk photographer)",
+   "Everything also works on the web, no app required"
+  ],
+  "sk": [
+   "Checklist podľa mesiacov, harmonogram dňa, rozpočet so zálohami a doplatkami",
+   "Hostia po domácnostiach, RSVP, menu, diéta, ubytovanie a doprava",
+   "Svadobné dary s tajnou rezerváciou – snúbenci nevidia, kto čo kúpil",
+   "Zdieľanie s partnerom, pomocníkmi a dodávateľmi",
+   "Všetko funguje aj len na webe, bez appky"
+  ],
+  "de": [
+   "Checkliste nach Monaten, Tagesablauf, Budget mit Anzahlungen und Restzahlungen",
+   "Gäste nach Haushalten, Zusagen, Menü, Ernährung, Unterkunft und Anreise",
+   "Hochzeitsgeschenke mit geheimer Reservierung – das Paar sieht nicht, wer was gekauft hat",
+   "Teilen mit Partner, Helfern und Dienstleistern",
+   "Alles funktioniert auch nur im Web, ohne App"
+  ],
+  "es": [
+   "Lista de tareas por meses, horario del día, presupuesto con anticipos y pagos pendientes",
+   "Invitados por hogar, confirmación, menú, dieta, alojamiento y transporte",
+   "Regalos de boda con reserva secreta: la pareja no ve quién compró qué",
+   "Compartir con la pareja, ayudantes y proveedores",
+   "Todo funciona también solo en la web, sin app"
+  ],
+  "pl": [
+   "Lista zadań według miesięcy, harmonogram dnia, budżet z zaliczkami i dopłatami",
+   "Goście według gospodarstw, potwierdzenia, menu, dieta, nocleg i dojazd",
+   "Prezenty ślubne z tajną rezerwacją – para nie widzi, kto co kupił",
+   "Udostępnianie partnerowi, pomocnikom i usługodawcom",
+   "Wszystko działa też tylko w przeglądarce, bez aplikacji"
+  ]
+ },
+ "links": []
+}

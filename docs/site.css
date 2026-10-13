@@ -92,6 +92,7 @@ box-shadow:var(--shadow);transform:perspective(900px) rotateX(var(--rx,0deg)) ro
 .t-wide{grid-column:span 2}.t-wide .ghost-icon{width:44%;right:-6%;bottom:-40%}
 .chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 11px;font-weight:800;font-size:.76rem;background:var(--surface);color:var(--ink);box-shadow:0 2px 8px -4px rgb(0 0 0/.3)}
 .chip.tf::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
+.chip.sep{background:color-mix(in srgb,var(--c,#b4536b) 16%,var(--surface))}
 .chip.soon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--yellow)}
 .ghost{font-size:.9rem;font-weight:700;color:var(--muted);text-decoration:none;padding:6px 6px}.ghost:hover{color:var(--ink);text-decoration:underline}
 .app-icon{flex:none;border-radius:23%;box-shadow:0 6px 16px -8px rgb(0 0 0/.45)}

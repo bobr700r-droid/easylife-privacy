@@ -9,13 +9,14 @@ Soubor zřízen 13. 10. 2026 před archivací vlákna **b8375cf3** (Build EasyLi
 - Původní zadání 10. 10.: hlavní doména .eu, .cz 301 na .eu; později uživatel rozhodl **.cz česky a .eu anglicky** (viz README) – `EU_LIVE` přepíná podle DNS.
 
 - (2026-10-13) Podmínky užití – licence: /podminky/ (cs, sk), /terms/ (ostatní), © 2026 Lukáš Ochrana v patičce (web.py). Čeká na nasazení (deploy.sh – build.py má cizí necommitnuté změny, deploy počká na jejich commit). Plné podmínky (vyloučení odpovědnosti, BACKLOG §5) zatím ne.
+- (2026-10-13) **Svatebníček jako samostatný projekt** (zadání uživatele 13. 10.): sekce „Další projekty“ (`#projekty`) na úvodu všech jazyků, štítek „Samostatný projekt“, nepočítá se do počtu appek ani do rodin; detail `/svatebnicek/` s poznámkou o jednorázovém nákupu (během testování zdarma) a odkazy na vlastní web/zásady (cs/sk mujsvatebnicek.cz, ostatní svatebnicek.eu). Řídí se příznakem `separate` v catalog.json (`web.py`: `projects`, `separate_note`, `own_url`), obsah `site/apps/svatebnicek.json`, stav TestFlight. Svatebníček zatím nemá stránku podmínek – odkazuje se na jeho web.
 ## Otevřené zadání uživatele
 - [ ] 10. 10. 20:41: „web je strašný, má být svěží, moderní, trochu bláznivý, ikony z appek, různě velké, rozlétané dlaždice, animace“ – přepracováno (rozložení karet opraveno 11. 10.), **ověřit s uživatelem spokojenost** a dolaďovat.
 - [ ] 11. 10. 6:54: **FotoDesk jinou ikonu**, předat příslušným sessions a zařadit FotoDesk do kategorie **Foto** v katalogu/webu – ověřit v `catalog.json` a na webu.
 - [ ] BACKLOG §6: **kolečko propojení appek** zjednodušit (seskupit podle rodin, ať není přeplácané).
 - [ ] BACKLOG §5: publikovat **Podmínky užití + zásady** pro všechny appky (souhlas při prvním spuštění; maximální vyloučení odpovědnosti v mezích českého/EU práva) na easyforlife.cz.
 - [ ] Rozpočet: štítek „Brzy“ → TestFlight (po ASC); ASC Privacy URL `https://easyforlife.cz/rozpocet.html` + Support URL.
-- [ ] Nové appky do katalogu a na web: Rodinka, Kuchařka, Kartičky, Rozpočet, Dům a zahrada, Studium, Svatebníček (vlastní domény mujsvatebnicek.cz / svatebnicek.eu), Pohodička, Kariéra – stránky soukromí v `APPS` v `build.py`, detaily `site/apps/<id>.json`.
+- [ ] Nové appky do katalogu a na web: Rodinka, Kuchařka, Kartičky, Rozpočet, Dům a zahrada, Studium, ~~Svatebníček~~ (hotovo 13. 10. jako samostatný projekt), Pohodička, Kariéra – stránky soukromí v `APPS` v `build.py`, detaily `site/apps/<id>.json`.
 - [ ] Stránky soukromí a detail pro Salónky (6 jazyků), Kulturník (zatím nepublikovat).
 - [ ] DNS: easyforlife.eu a ostatní domény zadává uživatel u Forpsi ručně; vždy se souhlasem.
 - [ ] Mainhub / Hub: přehled `EasyForLife Hub` ve webu.
