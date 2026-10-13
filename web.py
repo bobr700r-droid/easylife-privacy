@@ -165,7 +165,7 @@ def t(key, lang):
     return T[key][LANGS.index(lang)]
 
 COPYRIGHT = "© 2026 Lukáš Ochrana"
-# Podmínky užití – licence (13. 10. 2026). Česky pro cs/sk, jinak anglicky.
+# Podmínky užití – licence (13. 10. 2026), ve všech 6 jazycích (sk/de/es/pl a zdravotní sekce doplněny při auditu Lékárničky).
 TERMS = {
   "cs": ("Podmínky užití", "Licence a autorská práva k aplikacím EasyForLife.", [
     ("Autorská práva", "Aplikace EasyForLife, jejich zdrojový kód, grafika, texty a názvy jsou autorským dílem. Autorská práva k nim i jejich názvy náleží Lukáši Ochranovi."),
@@ -182,6 +182,47 @@ TERMS = {
     ("Contact", "Send questions about the licence to " + CONTACT + ". All rights not expressly granted are reserved."),
   ]),
 }
+
+# Zdravotní upozornění (13. 10. 2026, audit Lékárničky) – sekce v podmínkách ve všech 6 jazycích.
+HEALTH_TERMS = {
+  "cs": ("Zdravotní aplikace nejsou lékařská rada", "Lékárnička, Pohodička, Fitko a další aplikace EasyForLife se zdravotní tematikou nejsou zdravotnickým prostředkem a nenahrazují lékaře, lékárníka ani jiného odborníka. Nedávají lékařské rady ani doporučení k léčbě či dávkování – jen ukládají záznamy a připomínají to, co si uživatel sám zadá. Za zadané údaje a rozhodnutí o léčbě odpovídá uživatel; vždy se řiďte pokyny lékaře a příbalovým letákem. V naléhavém případě volejte 112."),
+  "en": ("Health apps are not medical advice", "Lékárnička (Medicine Cabinet), Pohodička, Fitko and other EasyForLife apps related to health are not medical devices and do not replace a doctor, pharmacist or other professional. They give no medical advice or recommendations on treatment or dosage – they only store records and remind you of what you entered yourself. You are responsible for the data you enter and for decisions about treatment; always follow your doctor's instructions and the package leaflet. In an emergency, call 112."),
+  "sk": ("Zdravotné aplikácie nie sú lekárska rada", "Lékárnička, Pohodička, Fitko a ďalšie aplikácie EasyForLife so zdravotnou tematikou nie sú zdravotníckou pomôckou a nenahrádzajú lekára, lekárnika ani iného odborníka. Nedávajú lekárske rady ani odporúčania k liečbe či dávkovaniu – iba ukladajú záznamy a pripomínajú to, čo si používateľ sám zadá. Za zadané údaje a rozhodnutia o liečbe zodpovedá používateľ; vždy sa riaďte pokynmi lekára a príbalovým letákom. V naliehavom prípade volajte 112."),
+  "de": ("Gesundheits-Apps sind keine ärztliche Beratung", "Lékárnička (Hausapotheke), Pohodička, Fitko und andere EasyForLife-Apps mit Gesundheitsbezug sind keine Medizinprodukte und ersetzen weder Arzt noch Apotheker oder andere Fachleute. Sie geben keine medizinischen Ratschläge oder Empfehlungen zu Behandlung oder Dosierung – sie speichern nur Einträge und erinnern an das, was Sie selbst eingegeben haben. Für die eingegebenen Daten und Behandlungsentscheidungen sind Sie verantwortlich; folgen Sie stets den Anweisungen Ihres Arztes und der Packungsbeilage. Im Notfall wählen Sie 112."),
+  "es": ("Las apps de salud no son consejo médico", "Lékárnička (Botiquín), Pohodička, Fitko y otras apps de EasyForLife relacionadas con la salud no son productos sanitarios y no sustituyen a un médico, farmacéutico u otro profesional. No dan consejos médicos ni recomendaciones de tratamiento o dosis: solo guardan registros y recuerdan lo que el usuario ha introducido. El usuario es responsable de los datos introducidos y de las decisiones sobre su tratamiento; siga siempre las indicaciones de su médico y el prospecto. En caso de emergencia, llame al 112."),
+  "pl": ("Aplikacje zdrowotne nie są poradą medyczną", "Lékárnička (Apteczka), Pohodička, Fitko i inne aplikacje EasyForLife o tematyce zdrowotnej nie są wyrobem medycznym i nie zastępują lekarza, farmaceuty ani innego specjalisty. Nie udzielają porad medycznych ani zaleceń dotyczących leczenia czy dawkowania – jedynie zapisują wpisy i przypominają o tym, co użytkownik sam wprowadził. Za wprowadzone dane i decyzje o leczeniu odpowiada użytkownik; zawsze stosuj się do zaleceń lekarza i ulotki. W nagłym wypadku dzwoń pod 112."),
+}
+
+TERMS["sk"] = ("Podmienky používania", "Licencia a autorské práva k aplikáciám EasyForLife.", [
+    ("Autorské práva", "Aplikácie EasyForLife, ich zdrojový kód, grafika, texty a názvy sú autorským dielom. Autorské práva k nim aj ich názvy patria Lukášovi Ochranovi."),
+    ("Licencia", "Stiahnutím aplikácie získavate nevýhradnú a neprenosnú licenciu používať ju pre svoju osobnú potrebu na zariadeniach, ktoré vlastníte alebo ovládate, v rozsahu podmienok App Store (Standard EULA spoločnosti Apple)."),
+    ("Čo nie je dovolené", "Bez predchádzajúceho písomného súhlasu autora nie je dovolené aplikácie ani ich časti kopírovať, upravovať, prekladať, spätne analyzovať (reverse engineering), dekompilovať, ďalej šíriť, prenajímať ani inak sprístupňovať tretím osobám – vždy v medziach, ktoré pripúšťa české právo a právo EÚ (výnimky, ktoré zákon výslovne dovoľuje, zostávajú zachované)."),
+    ("Práva spotrebiteľa", "Tieto podmienky neobmedzujú práva, ktoré vám ako spotrebiteľovi patria podľa českého práva a práva EÚ a ktoré nemožno zmluvne vylúčiť."),
+    ("Kontakt", "Otázky k licencii posielajte na " + CONTACT + ". Všetky práva, ktoré nie sú výslovne udelené, zostávajú vyhradené."),
+])
+TERMS["de"] = ("Nutzungsbedingungen", "Lizenz und Urheberrecht der EasyForLife-Apps.", [
+    ("Urheberrecht", "Die EasyForLife-Apps einschließlich Quellcode, Grafiken, Texten und Namen sind urheberrechtlich geschützte Werke. Das Urheberrecht und die App-Namen gehören Lukáš Ochrana."),
+    ("Lizenz", "Mit dem Herunterladen einer App erhalten Sie eine nicht ausschließliche, nicht übertragbare Lizenz, sie für persönliche Zwecke auf Geräten zu nutzen, die Sie besitzen oder kontrollieren, im Rahmen der App-Store-Bedingungen (Standard-EULA von Apple)."),
+    ("Was nicht erlaubt ist", "Ohne vorherige schriftliche Zustimmung des Autors dürfen die Apps oder Teile davon nicht kopiert, verändert, übersetzt, zurückentwickelt (Reverse Engineering), dekompiliert, weiterverbreitet, vermietet oder Dritten auf andere Weise zugänglich gemacht werden – stets im Rahmen des tschechischen und des EU-Rechts (gesetzlich ausdrücklich erlaubte Ausnahmen bleiben unberührt)."),
+    ("Verbraucherrechte", "Diese Bedingungen schränken keine Rechte ein, die Ihnen als Verbraucher nach tschechischem und EU-Recht zustehen und vertraglich nicht ausgeschlossen werden können."),
+    ("Kontakt", "Fragen zur Lizenz senden Sie bitte an " + CONTACT + ". Alle nicht ausdrücklich gewährten Rechte bleiben vorbehalten."),
+])
+TERMS["es"] = ("Condiciones de uso", "Licencia y derechos de autor de las apps de EasyForLife.", [
+    ("Derechos de autor", "Las apps de EasyForLife, incluidos su código fuente, gráficos, textos y nombres, son obras protegidas por derechos de autor. Los derechos de autor y los nombres de las apps pertenecen a Lukáš Ochrana."),
+    ("Licencia", "Al descargar una app obtienes una licencia no exclusiva e intransferible para usarla con fines personales en dispositivos que posees o controlas, dentro de las condiciones del App Store (EULA estándar de Apple)."),
+    ("Lo que no está permitido", "Sin el consentimiento previo por escrito del autor no se permite copiar, modificar, traducir, aplicar ingeniería inversa, descompilar, redistribuir, alquilar ni poner a disposición de terceros las apps o partes de ellas, siempre dentro de lo que permite el derecho checo y de la UE (se mantienen las excepciones expresamente permitidas por la ley)."),
+    ("Derechos del consumidor", "Estas condiciones no limitan los derechos que te corresponden como consumidor según el derecho checo y de la UE y que no pueden excluirse por contrato."),
+    ("Contacto", "Envía tus preguntas sobre la licencia a " + CONTACT + ". Se reservan todos los derechos no concedidos expresamente."),
+])
+TERMS["pl"] = ("Warunki korzystania", "Licencja i prawa autorskie do aplikacji EasyForLife.", [
+    ("Prawa autorskie", "Aplikacje EasyForLife, w tym ich kod źródłowy, grafika, teksty i nazwy, są utworami chronionymi prawem autorskim. Prawa autorskie i nazwy aplikacji należą do Lukáša Ochrany."),
+    ("Licencja", "Pobierając aplikację, otrzymujesz niewyłączną i niezbywalną licencję na korzystanie z niej do celów osobistych na urządzeniach, które posiadasz lub kontrolujesz, w zakresie warunków App Store (Standard EULA firmy Apple)."),
+    ("Czego nie wolno", "Bez uprzedniej pisemnej zgody autora nie wolno kopiować, modyfikować, tłumaczyć, poddawać inżynierii wstecznej, dekompilować, dalej rozpowszechniać, wynajmować ani w inny sposób udostępniać aplikacji lub ich części osobom trzecim – zawsze w granicach dopuszczalnych przez prawo czeskie i prawo UE (wyjątki wyraźnie dozwolone przez prawo pozostają nienaruszone)."),
+    ("Prawa konsumenta", "Niniejsze warunki nie ograniczają praw przysługujących Ci jako konsumentowi na mocy prawa czeskiego i prawa UE, których nie można wyłączyć umową."),
+    ("Kontakt", "Pytania dotyczące licencji wysyłaj na " + CONTACT + ". Wszelkie prawa, które nie zostały wyraźnie przyznane, są zastrzeżone."),
+])
+for _l, _h in HEALTH_TERMS.items():
+    TERMS[_l][2].insert(3, _h)
 
 def terms_slug(lang):
     """Adresa podmínek: /podminky/ (cs, sk), jinak /terms/ – odkaz z appek: https://easyforlife.cz/podminky/"""
@@ -532,7 +573,7 @@ def page(lang, slug, title, desc, body, operator, relative=True, langs=None):
 <main id="main">{body}</main>
 <footer><div class="wrap row"><div><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a><p>{t("made", lang)}</p>
 <p>{t("operator", lang)}: {esc(operator[0 if lang in ("cs", "sk") else 1])}</p></div>
-<p><a href="{url(lang, sup(lang))}">{t("support", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a> · <a href="{url(lang, terms_slug(lang))}">{TERMS["cs" if lang in ("cs", "sk") else "en"][0]}</a></p>
+<p><a href="{url(lang, sup(lang))}">{t("support", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a> · <a href="{url(lang, terms_slug(lang))}">{TERMS[lang][0]}</a></p>
 <p>{COPYRIGHT}</p></div></footer>
 {FOOT_SCRIPT}</body></html>
 """
@@ -862,7 +903,7 @@ class Site:
         return page(lang, {l: sup(l) for l in LANGS}, f'{t("support_title", lang)} | EasyForLife', t("support_lead", lang), body, self.operator)
 
     def terms(self, lang):
-        title, lead, parts = TERMS["cs" if lang in ("cs", "sk") else "en"]
+        title, lead, parts = TERMS[lang]
         secs = "".join(f'<h2 class="sub">{esc(h)}</h2><p>{esc(x)}</p>' for h, x in parts)
         body = (f'<section class="page-top"><div class="blobs"><i></i><i></i><i></i></div><div class="wrap"><div class="detail">'
                 f'<h1>{esc(title)}</h1><p class="lead">{esc(lead)}</p></div></div></section>'
