@@ -181,6 +181,7 @@ def t(key, lang):
     return T[key][LANGS.index(lang)]
 
 COPYRIGHT = "© 2026 Lukáš Ochrana"
+VERSION = "1.1"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
 # Podmínky užití – licence (13. 10. 2026), ve všech 6 jazycích (sk/de/es/pl a zdravotní sekce doplněny při auditu Lékárničky).
 TERMS = {
   "cs": ("Podmínky užití", "Licence a autorská práva k aplikacím EasyForLife.", [
@@ -571,7 +572,7 @@ def page(lang, slug, title, desc, body, operator, relative=True, langs=None):
     doc = f"""<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 {head_script(lang, targets)}<title>{esc(title)}</title>
-<meta name="description" content="{esc(desc)}">
+<meta name="description" content="{esc(desc)}"><meta name="version" content="{VERSION}">
 <link rel="canonical" href="{full(lang, _sl(slug, lang))}">{alts}
 <meta property="og:type" content="website"><meta property="og:site_name" content="EasyForLife"><meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{full(lang, _sl(slug, lang))}">
@@ -882,7 +883,9 @@ class Site:
             return ""
         web, priv = self.own_url(a, "web", lang), self.own_url(a, "privacy", lang)
         txt = t("one_time", lang) if a.get("pricing") == "oneTime" else ""
-        links = (f' <a href="{esc(web)}">{esc(web.split("//")[-1])}</a>' if web else "") + (f' · <a href="{esc(priv)}">{t("privacy", lang)}</a>' if priv else "")
+        terms = self.own_url(a, "terms", lang)
+        links = (f' <a href="{esc(web)}">{esc(web.split("//")[-1])}</a>' if web else "") + (f' · <a href="{esc(priv)}">{t("privacy", lang)}</a>' if priv else "") \
+            + (f' · <a href="{esc(terms)}">{TERMS[lang][0]}</a>' if terms else "")
         return f'<p class="note">{icon("link")}<span><b>{t("separate", lang)}.</b> {txt} {t("own_terms", lang)}:{links}</span></p>'
 
 
