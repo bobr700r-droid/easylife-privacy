@@ -1082,8 +1082,9 @@ class Site:
         feats = s.get("features", {}).get(lang) or []
         web = f'<a class="ghost" href="{esc(s["web"])}">{esc(s["web"].split("//")[-1].rstrip("/"))} ↗</a>' if s.get("web") else ""
         others = [] if a.get("separate") else [o for o in self.family_apps(a["family"]) if o["id"] != a["id"]]
-        plats = ('<p class="plats">' + "".join(f'<span>{PLATFORMS.get(x, x)}</span>' for x in a["platforms"])
-                 + (f'<span class="soon">{t("android_soon", lang)}</span>' if "iOS" in a["platforms"] else "") + "</p>") if a.get("platforms") else ""
+        pl = a.get("platforms") or ["iOS"]  # bez platforms = appka do telefonu
+        plats = ('<p class="plats">' + "".join(f'<span>{PLATFORMS.get(x, x)}</span>' for x in pl)
+                 + (f'<span class="soon">{t("android_soon", lang)}</span>' if "iOS" in pl else "") + "</p>")
         if a.get("web") and s.get("web") == a.get("web"):
             web = ""
         flyers = [o for o in others + [o for o in self.icon_first() if o not in others and o is not a] if self.has_icon(o)]
