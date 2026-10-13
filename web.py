@@ -10,7 +10,7 @@ tady se jen odkazují. Obsah detailů appek je v site/apps/<id>.json (popis, fun
 webu ve slovníku T. Ikony se kopírují z <App>/…/AppIcon.appiconset do docs/icons/ (sips + cwebp),
 favicon a OG obrázek kreslí site/art.swift (jen když chybí; vynutit: python3 build.py --art).
 """
-import html, json, math, os, pathlib, shutil, socket, subprocess, sys, zlib
+import datetime, email.utils, html, json, math, os, pathlib, shutil, socket, subprocess, sys, zlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent / "site"))
 import eco  # site/eco.py – jak spolu appky spolupracují
 
@@ -18,6 +18,7 @@ HERE = pathlib.Path(__file__).parent
 ROOT = HERE.parent                      # EasyLife aplikace/
 CATALOG = ROOT / "EasyLife" / "catalog.json"
 CONTENT = HERE / "site" / "apps"
+NEWS = HERE / "site" / "news.json"  # Co je nového – ručně doplňovat při každé nové verzi appky
 CZ, EU = "https://easyforlife.cz", "https://easyforlife.eu"
 FLY_IPV4 = "66.241.124.47"  # Fly app easyforlife-redirect
 DIST = HERE / "dist"
@@ -120,6 +121,19 @@ T = {
                    "Bitte nenne den App-Namen, dein Smartphone-Modell und die Systemversion (iOS/Android). Bei Fehlern hilft auch ein Screenshot.",
                    "Indica el nombre de la app, tu modelo de móvil y la versión del sistema (iOS/Android). Si es un error, una captura de pantalla ayuda.",
                    "Podaj nazwę aplikacji, model telefonu i wersję systemu (iOS/Android). Przy błędzie pomoże też zrzut ekranu."],
+  "news_title": ["Co je nového", "What’s new", "Čo je nové", "Neuigkeiten", "Novedades", "Co nowego"],
+  "news_lead": ["Nové verze appek EasyForLife – co přibylo a co jsme vylepšili.", "New versions of EasyForLife apps – what’s been added and improved.",
+                "Nové verzie appiek EasyForLife – čo pribudlo a čo sme vylepšili.", "Neue Versionen der EasyForLife-Apps – was neu und besser ist.",
+                "Nuevas versiones de las apps EasyForLife: qué hay de nuevo y qué hemos mejorado.", "Nowe wersje aplikacji EasyForLife – co dodaliśmy i ulepszyliśmy."],
+  "news_rss": ["Odebírat přes RSS", "Subscribe via RSS", "Odoberať cez RSS", "Per RSS abonnieren", "Suscribirse por RSS", "Subskrybuj przez RSS"],
+  "nf_search": ["Hledat aplikaci…", "Search apps…", "Hľadať aplikáciu…", "App suchen…", "Buscar app…", "Szukaj aplikacji…"],
+  "nf_none": ["Nic jsme nenašli – zkus jiné slovo.", "Nothing found – try another word.", "Nič sme nenašli – skús iné slovo.",
+              "Nichts gefunden – versuch ein anderes Wort.", "No hemos encontrado nada, prueba otra palabra.", "Nic nie znaleźliśmy – spróbuj innego słowa."],
+  "fb_q": ["Pomohla vám tahle stránka?", "Was this page helpful?", "Pomohla vám táto stránka?", "War diese Seite hilfreich?", "¿Te ha ayudado esta página?", "Czy ta strona pomogła?"],
+  "fb_yes": ["Ano", "Yes", "Áno", "Ja", "Sí", "Tak"],
+  "fb_no": ["Ne", "No", "Nie", "Nein", "No", "Nie"],
+  "fb_thanks": ["Díky! Když něco chybí, napište nám.", "Thanks! If something’s missing, write to us.", "Vďaka! Ak niečo chýba, napíšte nám.",
+                "Danke! Wenn etwas fehlt, schreib uns.", "¡Gracias! Si falta algo, escríbenos.", "Dzięki! Jeśli czegoś brakuje, napisz do nas."],
   "faq_title": ["Časté otázky", "FAQ", "Časté otázky", "Häufige Fragen", "Preguntas frecuentes", "Częste pytania"],
   "faq": [
     [('Potřebuju účet nebo registraci?', 'Malé appky pro každý den ne. Účet potřebují jen služby s webovou verzí a nástroje pro firmy – u každé appky to uvidíš na štítku „S účtem“ nebo „Účet volitelný“.'),
@@ -186,7 +200,7 @@ def t(key, lang):
     return T[key][LANGS.index(lang)]
 
 COPYRIGHT = "© 2026 Lukáš Ochrana"
-VERSION = "1.4.1"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
+VERSION = "1.6.0"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
 # Podmínky užití – licence (13. 10. 2026), ve všech 6 jazycích (sk/de/es/pl a zdravotní sekce doplněny při auditu Lékárničky).
 TERMS = {
   "cs": ("Podmínky užití", "Souhlas, licence, odpovědnost a autorská práva k aplikacím EasyForLife.", [
@@ -309,6 +323,10 @@ for _l, _p in LIABILITY_TERMS.items():  # souhlas na začátek, odpovědnost za 
 def terms_slug(lang):
     """Adresa podmínek: /podminky/ (cs, sk), jinak /terms/ – odkaz z appek: https://easyforlife.cz/podminky/"""
     return "podminky" if lang in ("cs", "sk") else "terms"
+
+def news_slug(lang):
+    """Novinky: /novinky/ (cs, sk), jinak /news/; RSS je v téže složce (rss.xml)."""
+    return "novinky" if lang in ("cs", "sk") else "news"
 
 def esc(s):
     return html.escape(s, quote=True)
@@ -522,6 +540,11 @@ background:linear-gradient(160deg,color-mix(in oklab,var(--c) 20%,var(--surface)
 .note{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:.95rem;margin:18px 0 0}.note .ico{width:18px;height:18px;flex:none}
 .note a{color:var(--ink);font-weight:700}
 .faq{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:0 20px;margin:0 0 12px;box-shadow:var(--shadow)}
+.nf-q{width:100%;max-width:520px;font:inherit;font-size:1.05rem;padding:14px 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.nf-res{margin:16px 0}[hidden]{display:none!important}
+.fb{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:28px 0 0;padding:16px 18px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}
+.fb button{font:inherit;font-weight:700;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer}
+.fb button.on{background:var(--ink);color:var(--bg)}.fb button:disabled{cursor:default}.fb-ok{color:var(--muted)}
 .faq summary{cursor:pointer;font:800 1.08rem var(--display);padding:18px 0}.faq p{margin:0 0 18px;color:var(--muted)}
 .page-top{position:relative;margin-top:-76px;padding:120px 0 30px;overflow:hidden;isolation:isolate}.page-top h1{position:relative;z-index:2}.page-top .lead{position:relative;z-index:2;margin-left:0}
 .ico{flex:none}.solo{color:var(--muted);margin:-8px 0 16px;font-weight:600}
@@ -647,6 +670,7 @@ def page(lang, slug, title, desc, body, operator, relative=True, langs=None):
 {head_script(lang, targets)}<title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}"><meta name="version" content="{VERSION}">
 <link rel="canonical" href="{full(lang, _sl(slug, lang))}">{alts}
+<link rel="alternate" type="application/rss+xml" title="EasyForLife – {t("news_title", lang)}" href="{full(lang, news_slug(lang))}rss.xml">
 <meta property="og:type" content="website"><meta property="og:site_name" content="EasyForLife"><meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{full(lang, _sl(slug, lang))}">
 <meta property="og:image" content="{BASE}/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -664,7 +688,7 @@ def page(lang, slug, title, desc, body, operator, relative=True, langs=None):
 <main id="main">{body}</main>
 <footer><div class="wrap row"><div><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a><p>{t("made", lang)}</p>
 <p>{t("operator", lang)}: {esc(operator[0 if lang in ("cs", "sk") else 1])}</p></div>
-<p><a href="{url(lang, sup(lang))}">{t("support", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a> · <a href="{url(lang, terms_slug(lang))}">{TERMS[lang][0]}</a></p>
+<p><a href="{url(lang, sup(lang))}">{t("support", lang)}</a> · <a href="{url(lang, news_slug(lang))}">{t("news_title", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a> · <a href="{url(lang, terms_slug(lang))}">{TERMS[lang][0]}</a></p>
 <p>{COPYRIGHT}</p></div></footer>
 {FOOT_SCRIPT}</body></html>
 """
@@ -1061,7 +1085,8 @@ class Site:
                 f'<p class="actions"><a class="btn big" href="{mail}">{t("support_mail", lang)} <span>→</span></a><a class="ghost" href="{mail}">{CONTACT}</a></p>'
                 f'<p class="note">{icon("check")}<span>{t("support_hint", lang)}</span></p></div></div></section>'
                 f'<div class="wrap"><div class="detail"><h2 class="sub">{t("faq_title", lang)}</h2>{faq}'
-                f'<p class="note">{icon("shield")}<span><a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></span></p></div></div>')
+                f'<p class="note">{icon("shield")}<span><a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></span></p>'
+                f'{self.feedback(lang, "support")}</div></div>')
         return page(lang, {l: sup(l) for l in LANGS}, f'{t("support_title", lang)} | EasyForLife', t("support_lead", lang), body, self.operator)
 
     def terms(self, lang):
@@ -1072,6 +1097,75 @@ class Site:
                 f'<div class="wrap"><div class="detail">{secs}<p class="note">{icon("shield")}<span>{esc(COPYRIGHT)} · '
                 f'<a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></span></p></div></div>')
         return page(lang, {l: terms_slug(l) for l in LANGS}, f"{title} | EasyForLife", lead, body, self.operator)
+
+    def feedback(self, lang, key):
+        """Palec nahoru/dolů – anonymně (stránka, jazyk, hlas), bez cookies a bez IP; počty vidí provozovatel v logu serveru."""
+        return (f'<div class="fb" data-fb="{key}" data-lang="{lang}"><b>{t("fb_q", lang)}</b>'
+                f'<button type="button" data-v="1">👍 {t("fb_yes", lang)}</button><button type="button" data-v="-1">👎 {t("fb_no", lang)}</button>'
+                f'<span class="fb-ok" hidden>{t("fb_thanks", lang)}</span></div>'
+                '<script>document.querySelectorAll("[data-fb]").forEach(function(f){f.querySelectorAll("button").forEach(function(b){b.addEventListener("click",function(){'
+                'try{fetch("/api/feedback",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({p:f.dataset.fb,l:f.dataset.lang,v:+b.dataset.v}),keepalive:true})}catch(e){}'
+                'f.querySelectorAll("button").forEach(function(x){x.disabled=true});b.classList.add("on");f.querySelector(".fb-ok").hidden=false})})})</script>')
+
+    def news_items(self, lang):
+        items = json.loads(NEWS.read_text(encoding="utf-8")) if NEWS.exists() else []
+        out = []
+        for n in sorted(items, key=lambda n: n["date"], reverse=True):
+            a = self.by_id.get(n["app"])
+            if a:
+                out.append((n, a, n["text"].get(lang) or n["text"]["en"]))
+        return out
+
+    def news(self, lang):
+        rows = ""
+        for n, a, txt in self.news_items(lang):
+            y, m, d = n["date"].split("-")
+            rows += (f'<div class="link-row rv">{self.app_icon(a, 54)}<div><a href="{url(lang, a["id"])}"><b>{esc(a["name"])} {esc(n.get("version", ""))}</b></a>'
+                     f'<span><time datetime="{n["date"]}">{int(d)}. {int(m)}. {y}</time> · {esc(txt)}</span></div></div>')
+        body = (f'<section class="page-top"><div class="blobs"><i></i><i></i><i></i></div><div class="wrap"><div class="detail">'
+                f'<h1>{t("news_title", lang)}</h1><p class="lead">{t("news_lead", lang)}</p>'
+                f'<p class="actions"><a class="ghost" href="{url(lang, news_slug(lang))}rss.xml">{t("news_rss", lang)}</a></p></div></div></section>'
+                f'<div class="wrap"><div class="detail"><div class="links">{rows}</div></div></div>')
+        return page(lang, {l: news_slug(l) for l in LANGS}, f'{t("news_title", lang)} | EasyForLife', t("news_lead", lang), body, self.operator)
+
+    def rss(self, lang):
+        x = lambda v: html.escape(v, quote=False)
+        items = ""
+        for n, a, txt in self.news_items(lang)[:50]:
+            d = datetime.date.fromisoformat(n["date"])
+            items += (f'<item><title>{x(a["name"] + " " + n.get("version", ""))}</title><link>{full(lang, a["id"])}</link>'
+                      f'<guid isPermaLink="false">{n["date"]}-{n["app"]}-{x(n.get("version", ""))}</guid>'
+                      f'<pubDate>{email.utils.format_datetime(datetime.datetime.combine(d, datetime.time(12), datetime.timezone.utc))}</pubDate>'
+                      f'<description>{x(txt)}</description></item>\n')
+        return (f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>EasyForLife – {x(t("news_title", lang))}</title>'
+                f'<link>{full(lang, news_slug(lang))}</link><description>{x(t("news_lead", lang))}</description><language>{lang}</language>\n{items}</channel></rss>\n')
+
+    def schema(self, a, lang):
+        """Schema.org SoftwareApplication pro vyhledávače."""
+        pl = a.get("platforms") or ["iOS"]
+        d = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": a["name"], "description": a["tagline"].get(lang, ""),
+             "url": full(lang, a["id"]), "applicationCategory": "LifestyleApplication" if not a.get("separate") else "BusinessApplication",
+             "operatingSystem": ", ".join(PLATFORMS.get(x, x) for x in pl).replace("iPhone", "iOS"), "inLanguage": lang,
+             "author": {"@type": "Person", "name": "Lukáš Ochrana"}, "publisher": {"@type": "Organization", "name": "EasyForLife", "url": host(lang) + "/"}}
+        if self.has_icon(a):
+            d["image"] = host(lang) + self.icon_url(a)
+        if a.get("store"):
+            d["downloadUrl"] = a["store"]
+        return '<script type="application/ld+json">' + json.dumps(d, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+    def not_found(self, lang):
+        data = [{"n": a["name"], "t": a["tagline"].get(lang, ""), "u": url(lang, a["id"]), "i": self.app_icon(a, 54)} for a in self.apps]
+        return (f'<section class="page-top"><div class="wrap"><div class="detail"><h1>404</h1><p class="lead">{t("nf", lang)}</p>'
+                f'<p><input class="nf-q" type="search" placeholder="{t("nf_search", lang)}" aria-label="{t("nf_search", lang)}" autocomplete="off"></p>'
+                f'<div class="links nf-res"></div><p class="note nf-none" hidden>{t("nf_none", lang)}</p>'
+                f'<p class="actions"><a class="btn big" href="{url(lang)}">{t("back", lang)} <span>→</span></a><a class="ghost" href="{url(lang, sup(lang))}">{t("support", lang)}</a></p>'
+                '</div></div></section><script>(function(){var A=' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + """,
+q=document.querySelector(".nf-q"),r=document.querySelector(".nf-res"),no=document.querySelector(".nf-none"),
+f=function(s){return s.toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"")},
+e=function(s){return s.replace(/[&<>"]/g,function(c){return"&#"+c.charCodeAt(0)+";"})},
+go=function(){var v=f(q.value.trim());var m=v?A.filter(function(a){return f(a.n+" "+a.t).indexOf(v)>=0}).slice(0,8):[];
+r.innerHTML=m.map(function(a){return '<div class="link-row">'+a.i+'<div><a href="'+a.u+'"><b>'+e(a.n)+'</b></a><span>'+e(a.t)+'</span></div></div>'}).join("");no.hidden=!v||m.length>0};
+var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||"";q.value=w.replace(/\\.html?$/,"").replace(/[-_]/g," ");q.addEventListener("input",go);go()})();</script>""")
 
     def detail(self, a, lang):
         s, c, fam = a["site"], self.color(a), self.families[a["family"]]
@@ -1114,7 +1208,7 @@ class Site:
         body += f'<p class="note">{note}</p>' + self.separate_note(a, lang)
         if not a.get("store"):
             body += f'<p class="note">{icon("check")}<span>{t("tf_note" if s.get("status") == "testflight" else "dev_note", lang)}</span></p>'
-        body += "</article></div>"
+        body += "</article></div>" + self.schema(a, lang)
         if others:
             body += (f'<section><div class="wrap"><div class="sec-head rv"><h2>{t("family_more", lang).format(f=esc(fam["name"][lang]))}</h2></div>'
                      f'{self.bento(others, lang, featured=len(others) > 2)}</div></section>')
@@ -1145,12 +1239,15 @@ class Site:
             self.write(f"{pre}index.html", self.home(lang), root)
             self.write(f"{pre}{sup(lang)}/index.html", self.support(lang), root)
             self.write(f"{pre}{terms_slug(lang)}/index.html", self.terms(lang), root)
-            urls[site_of(lang)] += [full(lang), full(lang, sup(lang)), full(lang, terms_slug(lang))]
+            self.write(f"{pre}{news_slug(lang)}/index.html", self.news(lang), root)
+            self.write(f"{pre}{news_slug(lang)}/rss.xml", self.rss(lang), root)
+            urls[site_of(lang)] += [(lang, None, LANGS), (lang, {l: sup(l) for l in LANGS}, LANGS),
+                                    (lang, {l: terms_slug(l) for l in LANGS}, LANGS), (lang, {l: news_slug(l) for l in LANGS}, LANGS)]
             stubs[f"{old}index.html"] = full(lang)
             stubs[f"{old}podpora/index.html"] = full(lang, sup(lang))
             for a in self.apps:
                 self.write(f"{pre}{a['id']}/index.html", self.detail(a, lang), root)
-                urls[site_of(lang)].append(full(lang, a["id"]))
+                urls[site_of(lang)].append((lang, a["id"], [l for l in LANGS if l in (a.get("locales") or LANGS)]))
                 stubs[f"{old}{a['id']}/index.html"] = full(lang, a["id"])
         assets = ["site.css", "og.png", "favicon.svg", "favicon.png", "apple-touch-icon.png", "soukromi.html"]
         assets += [p.lstrip("/") for p in self.privacy.values()]
@@ -1170,13 +1267,20 @@ class Site:
             # Živý katalog pro appky (stahují si ho, aby nová propojení fungovala bez nového buildu)
             shutil.copy2(CATALOG, root / "catalog.json")
             urls[site] += [base + p for p in self.privacy.values()]
-            self.write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-                       + "".join(f"<url><loc>{u}</loc></url>\n" for u in urls[site]) + "</urlset>\n", root)
+            def entry(u):
+                if isinstance(u, str):
+                    return f"<url><loc>{u}</loc></url>\n"
+                lang, slug, langs = u
+                alts = "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{full(l, _sl(slug, l))}"/>' for l in langs)
+                xd = "en" if "en" in langs else langs[0]
+                alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{full(xd, _sl(slug, xd))}"/>'
+                return f"<url><loc>{full(lang, _sl(slug, lang))}</loc>{alts}</url>\n"
+            self.write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+                       + "".join(entry(u) for u in urls[site]) + "</urlset>\n", root)
             self.write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n", root)
             l404 = "cs" if site == "cz" else "en"
             self.use(l404)
-            nf = (f'<section class="page-top"><div class="wrap"><div class="detail"><h1>404</h1><p class="lead">{t("nf", l404)}</p>'
-                  f'<p><a class="btn big" href="/">{t("back", l404)} <span>→</span></a></p></div></div></section>')
+            nf = self.not_found(l404)
             self.write("404.html", page(l404, None, "404 – EasyForLife", "EasyForLife", nf, self.operator, relative=False).replace(head_script(l404, None), ""), root)
         if EU_LIVE:  # staré adresy jazyků na .cz → .eu
             routes["redirects"] += [{"host": "easyforlife.cz", "prefix": f"/{l}/", "to": EU + prefix(l) + "/"} for l in LANGS if l != "cs"]

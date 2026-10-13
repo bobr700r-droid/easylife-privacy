@@ -1,0 +1,69 @@
+{
+ "status": "testflight",
+ "color": "#4263eb",
+ "description": {
+  "cs": [
+   "Pohodička ukáže na jednom místě spánek, pohyb, vodu a kávu – a jak se ti daří tento týden.",
+   "Data zůstávají v telefonu, nic se neposílá na server."
+  ],
+  "en": [
+   "Pohodička shows sleep, activity, water and coffee in one place – and how your week is going.",
+   "Your data stays on your phone; nothing is sent to a server."
+  ],
+  "sk": [
+   "Pohodička ukáže na jednom mieste spánok, pohyb, vodu a kávu – a ako sa ti darí tento týždeň.",
+   "Dáta zostávajú v telefóne, nič sa neposiela na server."
+  ],
+  "de": [
+   "Pohodička zeigt Schlaf, Bewegung, Wasser und Kaffee an einem Ort – und wie deine Woche läuft.",
+   "Die Daten bleiben auf dem Telefon, nichts geht an einen Server."
+  ],
+  "es": [
+   "Pohodička muestra sueño, actividad, agua y café en un solo lugar, y cómo va tu semana.",
+   "Los datos se quedan en tu teléfono; nada se envía a un servidor."
+  ],
+  "pl": [
+   "Pohodička pokazuje w jednym miejscu sen, ruch, wodę i kawę – i jak mija twój tydzień.",
+   "Dane zostają w telefonie, nic nie trafia na serwer."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Přehled spánku a pohybu z dat o zdraví",
+   "Pitný režim a káva jedním klepnutím",
+   "Týdenní souhrn a trendy",
+   "Hodinky a widgety"
+  ],
+  "en": [
+   "Sleep and activity overview from health data",
+   "Water and coffee with one tap",
+   "Weekly summary and trends",
+   "Watch and widgets"
+  ],
+  "sk": [
+   "Prehľad spánku a pohybu z dát o zdraví",
+   "Pitný režim a káva jedným ťuknutím",
+   "Týždenný súhrn a trendy",
+   "Hodinky a widgety"
+  ],
+  "de": [
+   "Schlaf und Bewegung aus Gesundheitsdaten",
+   "Wasser und Kaffee mit einem Tippen",
+   "Wochenübersicht und Trends",
+   "Uhr und Widgets"
+  ],
+  "es": [
+   "Sueño y actividad a partir de datos de salud",
+   "Agua y café con un toque",
+   "Resumen semanal y tendencias",
+   "Reloj y widgets"
+  ],
+  "pl": [
+   "Sen i ruch z danych o zdrowiu",
+   "Woda i kawa jednym dotknięciem",
+   "Podsumowanie tygodnia i trendy",
+   "Zegarek i widżety"
+  ]
+ },
+ "links": []
+}

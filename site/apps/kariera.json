@@ -1,0 +1,75 @@
+{
+ "status": "testflight",
+ "color": "#0b7285",
+ "description": {
+  "cs": [
+   "Kariérník provede hledáním práce od životopisu po podpis smlouvy.",
+   "Když už práci máš, pohlídá dovolenou a přesčasy."
+  ],
+  "en": [
+   "Kariérník guides your job search from CV to signed contract.",
+   "Once you have the job, it tracks holidays and overtime."
+  ],
+  "sk": [
+   "Kariérník prevedie hľadaním práce od životopisu po podpis zmluvy.",
+   "Keď už prácu máš, postráži dovolenku a nadčasy."
+  ],
+  "de": [
+   "Kariérník begleitet die Jobsuche vom Lebenslauf bis zum Vertrag.",
+   "Hast du den Job, behält er Urlaub und Überstunden im Blick."
+  ],
+  "es": [
+   "Kariérník te acompaña en la búsqueda de empleo, del currículum al contrato.",
+   "Cuando ya tienes trabajo, controla vacaciones y horas extra."
+  ],
+  "pl": [
+   "Kariérník prowadzi przez szukanie pracy od CV po podpisanie umowy.",
+   "Gdy masz już pracę, pilnuje urlopu i nadgodzin."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Životopis a export do PDF",
+   "Žádosti o práci na nástěnce podle stavu",
+   "Příprava na pohovor a trénink nahlas",
+   "Kalkulačka mzdy a kontrola smlouvy",
+   "Dovolená a přesčasy"
+  ],
+  "en": [
+   "CV with PDF export",
+   "Job applications on a board by stage",
+   "Interview prep and practising out loud",
+   "Salary calculator and contract check",
+   "Holidays and overtime"
+  ],
+  "sk": [
+   "Životopis a export do PDF",
+   "Žiadosti o prácu na nástenke podľa stavu",
+   "Príprava na pohovor a tréning nahlas",
+   "Kalkulačka mzdy a kontrola zmluvy",
+   "Dovolenka a nadčasy"
+  ],
+  "de": [
+   "Lebenslauf mit PDF-Export",
+   "Bewerbungen auf einem Board nach Status",
+   "Vorstellungsgespräch üben, auch laut",
+   "Gehaltsrechner und Vertragscheck",
+   "Urlaub und Überstunden"
+  ],
+  "es": [
+   "Currículum con exportación a PDF",
+   "Candidaturas en un tablero por estado",
+   "Preparación de entrevistas y práctica en voz alta",
+   "Calculadora de salario y revisión del contrato",
+   "Vacaciones y horas extra"
+  ],
+  "pl": [
+   "CV z eksportem do PDF",
+   "Aplikacje o pracę na tablicy według etapu",
+   "Przygotowanie do rozmowy i trening na głos",
+   "Kalkulator wynagrodzenia i sprawdzenie umowy",
+   "Urlop i nadgodziny"
+  ]
+ },
+ "links": []
+}

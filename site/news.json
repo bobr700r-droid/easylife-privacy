@@ -1,0 +1,65 @@
+[
+ {"date": "2026-10-13", "app": "lekarnicka", "version": "1.2", "text": {
+  "cs": "Hodinky, cestovní lékárnička, export do PDF a sdílení s rodinou.",
+  "en": "Watch app, travel kit, PDF export and family sharing.",
+  "sk": "Hodinky, cestovná lekárnička, export do PDF a zdieľanie s rodinou.",
+  "de": "Uhr-App, Reiseapotheke, PDF-Export und Teilen mit der Familie.",
+  "es": "App para el reloj, botiquín de viaje, exportación a PDF y uso compartido en familia.",
+  "pl": "Aplikacja na zegarek, apteczka podróżna, eksport do PDF i udostępnianie rodzinie."}},
+ {"date": "2026-10-13", "app": "studium", "version": "1.3", "text": {
+  "cs": "Třídní nástěnka – sdílená jen s pozvanými spolužáky.",
+  "en": "Class board – shared only with the classmates you invite.",
+  "sk": "Triedna nástenka – zdieľaná len s pozvanými spolužiakmi.",
+  "de": "Klassen-Pinnwand – nur mit eingeladenen Mitschülern geteilt.",
+  "es": "Tablón de clase, compartido solo con los compañeros que invites.",
+  "pl": "Tablica klasy – udostępniana tylko zaproszonym kolegom."}},
+ {"date": "2026-10-13", "app": "rodinka", "version": "1.3", "text": {
+  "cs": "Aplikace pro hodinky a výběr okresu pro prázdniny.",
+  "en": "Watch app and district picker for school holidays.",
+  "sk": "Aplikácia pre hodinky a výber okresu pre prázdniny.",
+  "de": "Uhr-App und Bezirksauswahl für die Ferien.",
+  "es": "App para el reloj y selección de distrito para las vacaciones.",
+  "pl": "Aplikacja na zegarek i wybór powiatu dla ferii."}},
+ {"date": "2026-10-13", "app": "kariera", "version": "1.2", "text": {
+  "cs": "Nový název Kariérník, nástěnka žádostí, kalkulačka mzdy a trénink pohovoru nahlas.",
+  "en": "New name Kariérník, application board, salary calculator and interview practice out loud.",
+  "sk": "Nový názov Kariérník, nástenka žiadostí, kalkulačka mzdy a tréning pohovoru nahlas.",
+  "de": "Neuer Name Kariérník, Bewerbungs-Board, Gehaltsrechner und Interviewtraining.",
+  "es": "Nuevo nombre Kariérník, tablero de candidaturas, calculadora de salario y práctica de entrevistas.",
+  "pl": "Nowa nazwa Kariérník, tablica aplikacji, kalkulator wynagrodzenia i trening rozmowy."}},
+ {"date": "2026-10-13", "app": "zaruky", "version": "1.1", "text": {
+  "cs": "Záloha do ZIP, reklamace e-mailem a hromadné skenování dokladů.",
+  "en": "ZIP backup, warranty claims by e-mail and batch receipt scanning.",
+  "sk": "Záloha do ZIP, reklamácie e-mailom a hromadné skenovanie dokladov.",
+  "de": "ZIP-Backup, Reklamation per E-Mail und Belege im Stapel scannen.",
+  "es": "Copia en ZIP, reclamaciones por correo y escaneo de tiques por lotes.",
+  "pl": "Kopia ZIP, reklamacje e-mailem i skanowanie wielu paragonów naraz."}},
+ {"date": "2026-10-13", "app": "jidelnik", "version": "1.1", "text": {
+  "cs": "Deník jídel, sdílení a hlasování, kam vyrazit.",
+  "en": "Food diary, sharing and voting on where to eat.",
+  "sk": "Denník jedál, zdieľanie a hlasovanie, kam vyraziť.",
+  "de": "Essenstagebuch, Teilen und Abstimmen, wohin es geht.",
+  "es": "Diario de comidas, compartir y votar adónde ir.",
+  "pl": "Dziennik jedzenia, udostępnianie i głosowanie, dokąd iść."}},
+ {"date": "2026-10-13", "app": "fototip", "version": "1.1", "text": {
+  "cs": "Aplikace pro hodinky, kvíz a tipy v hledání.",
+  "en": "Watch app, quiz and tips in search.",
+  "sk": "Aplikácia pre hodinky, kvíz a tipy vo vyhľadávaní.",
+  "de": "Uhr-App, Quiz und Tipps in der Suche.",
+  "es": "App para el reloj, cuestionario y consejos en la búsqueda.",
+  "pl": "Aplikacja na zegarek, quiz i porady w wyszukiwaniu."}},
+ {"date": "2026-10-13", "app": "mazlicek", "version": "1.1", "text": {
+  "cs": "Hlídání mazlíčka přes QR kód, plakát pro ztracené zvíře a album.",
+  "en": "Pet-sitter QR code, lost-pet poster and photo album.",
+  "sk": "Stráženie miláčika cez QR kód, plagát pre stratené zviera a album.",
+  "de": "Tiersitter-QR-Code, Vermisst-Plakat und Fotoalbum.",
+  "es": "Código QR para cuidadores, cartel de mascota perdida y álbum.",
+  "pl": "Kod QR dla opiekuna, plakat zaginionego zwierzaka i album."}},
+ {"date": "2026-10-13", "app": "smenarna", "version": "0.4", "text": {
+  "cs": "Nástroje na cesty a kurzy ČNB i bez připojení.",
+  "en": "Travel tools and Czech National Bank rates, even offline.",
+  "sk": "Nástroje na cesty a kurzy ČNB aj bez pripojenia.",
+  "de": "Reisewerkzeuge und Kurse der Tschechischen Nationalbank, auch offline.",
+  "es": "Herramientas de viaje y tipos del Banco Nacional Checo, también sin conexión.",
+  "pl": "Narzędzia podróżne i kursy Czeskiego Banku Narodowego, także offline."}}
+]

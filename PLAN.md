@@ -13,20 +13,21 @@ Soubor zřízen 13. 10. 2026 před archivací vlákna **b8375cf3** (Build EasyLi
 - (2026-10-13) **Web 1.3**: Cestovníček – zásady (příprava na cestu, offline balíček, Sdílet → Cestovníček, Kartičky jen název+platnost, seznam appek a zápis výdajů), barva #1f6f5c (§21); Jídelník 1.1 (deník návštěv, sdílení seznamu, hlasování; sloučena větev `jidelnik-soukromi-1-1`); Vyrovnáno (poloha, zámek, připomínky, Živá aktivita, #28b87a); katalog: Lékárnička akce `travel` = `lekarnicka://cesta?od={from}&do={to}&zdroj={src}`.
 - (2026-10-13) **Web 1.1** (`VERSION` ve web.py, `<meta name="version">`): Rozpočet – sekce „Sken účtenky“ (jen v telefonu, nikam se neposílá); Garážka – tankování z Navigace nasazeno; Svatebníček – podmínky užití na mujsvatebnicek.cz/podminky a svatebnicek.eu/terms, v katalogu `terms`/`termsEn`, odkaz v poznámce samostatného projektu.
 - (2026-10-13) **Web 1.2** nasazen: Studium 1.2 – sekce „Přednášky s AI“ (mikrofon, přepis řeči a OCR tabule jen v zařízení, nic se neposílá ven, zvuk se nesynchronizuje), žebříček, kalendář; Kariéra – mikrofon a trénink nahlas (přepis v zařízení, nahrávka se hned maže), sken smlouvy OCR v zařízení, motivační dopis přes Apple Intelligence. Změny Cestovníčku v build.py (cizí vlákno) zůstaly necommitnuté.
+- (2026-10-13) **Web 1.6**: detaily Studium/Pohodička/Kariérník/Dům a zahrada, Schema.org + hreflang v sitemap, Co je nového + RSS, 404 s hledáním, palec na podpoře.
 ## Otevřené zadání uživatele
-- [ ] 10. 10. 20:41: „web je strašný, má být svěží, moderní, trochu bláznivý, ikony z appek, různě velké, rozlétané dlaždice, animace“ – přepracováno (rozložení karet opraveno 11. 10.), **ověřit s uživatelem spokojenost** a dolaďovat.
-- [ ] 11. 10. 6:54: **FotoDesk jinou ikonu**, předat příslušným sessions a zařadit FotoDesk do kategorie **Foto** v katalogu/webu – ověřit v `catalog.json` a na webu.
-- [ ] BACKLOG §6: **kolečko propojení appek** zjednodušit (seskupit podle rodin, ať není přeplácané).
-- [ ] BACKLOG §5: publikovat **Podmínky užití + zásady** pro všechny appky (souhlas při prvním spuštění; maximální vyloučení odpovědnosti v mezích českého/EU práva) na easyforlife.cz.
-- [ ] Rozpočet: štítek „Brzy“ → TestFlight (po ASC); ASC Privacy URL `https://easyforlife.cz/rozpocet.html` + Support URL.
-- [ ] Nové appky do katalogu a na web: Rodinka, Kuchařka, Kartičky, Rozpočet, Dům a zahrada, Studium, ~~Svatebníček~~ (hotovo 13. 10. jako samostatný projekt), Pohodička, Kariéra – stránky soukromí v `APPS` v `build.py`, detaily `site/apps/<id>.json`.
-- [ ] Stránky soukromí a detail pro Salónky (6 jazyků), Kulturník (zatím nepublikovat).
-- [ ] DNS: easyforlife.eu a ostatní domény zadává uživatel u Forpsi ručně; vždy se souhlasem.
-- [ ] Mainhub / Hub: přehled `EasyForLife Hub` ve webu.
-- [ ] (13. 10., schválený návrh Vedení #250) Schema.org SoftwareApplication na stránkách appek a hreflang alternates i v sitemap.xml (hreflang v hlavičkách stránek už je, schema ne).
-- [ ] (13. 10., schválený návrh Vedení #251) Stránka „Novinky / Co je nového“ (changelog appek z katalogu) a RSS.
-- [ ] (13. 10., schválený návrh Vedení #252) Registrace na seznam čekatelů/newsletter pro appky „Brzy“ přes Mailer (jen s dvojím souhlasem).
-- [ ] (13. 10., schválený návrh Vedení #253) Vlastní 404 s hledáním v katalogu (404 dnes jen text + odkaz) a měření spokojenosti na stránkách podpory (palec nahoru/dolů).
+- [ ] 10. 10. 20:41: _(13. 10. trvá – čeká jen na vyjádření uživatele, technicky hotové)_ „web je strašný, má být svěží, moderní, trochu bláznivý, ikony z appek, různě velké, rozlétané dlaždice, animace“ – přepracováno (rozložení karet opraveno 11. 10.), **ověřit s uživatelem spokojenost** a dolaďovat.
+- [x] 11. 10. 6:54: **FotoDesk jinou ikonu** _(13. 10. ověřeno: ikona z appky FotoDesk, family foto + alsoFamilies v katalogu, na webu ve Foto)_, předat příslušným sessions a zařadit FotoDesk do kategorie **Foto** v katalogu/webu – ověřit v `catalog.json` a na webu.
+- [x] BACKLOG §6: _(Web 1.4, kolečko podle rodin)_ **kolečko propojení appek** zjednodušit (seskupit podle rodin, ať není přeplácané).
+- [x] BACKLOG §5: _(Web 1.4: /podminky/ + /terms/, 6 jazyků; živě 13. 10.)_ publikovat **Podmínky užití + zásady** pro všechny appky (souhlas při prvním spuštění; maximální vyloučení odpovědnosti v mezích českého/EU práva) na easyforlife.cz.
+- [x] Rozpočet: štítek _(status testflight; /rozpocet.html živě)_ „Brzy“ → TestFlight (po ASC); ASC Privacy URL `https://easyforlife.cz/rozpocet.html` + Support URL.
+- [x] Nové appky do katalogu _(13. 10. doplněny detaily studium/pohoda/kariera/dumazahrada – dřív ukazovaly „Brzy“)_ a na web: Rodinka, Kuchařka, Kartičky, Rozpočet, Dům a zahrada, Studium, ~~Svatebníček~~ (hotovo 13. 10. jako samostatný projekt), Pohodička, Kariéra – stránky soukromí v `APPS` v `build.py`, detaily `site/apps/<id>.json`.
+- [x] Stránky soukromí a detail pro Salónky _(živě; Kulturník zveřejněn 13. 10. – veřejná appka ČR)_ (6 jazyků), Kulturník (zatím nepublikovat).
+- [x] DNS: _(easyforlife.eu živě 200; další domény jen se souhlasem uživatele)_ easyforlife.eu a ostatní domény zadává uživatel u Forpsi ručně; vždy se souhlasem.
+- [x] Mainhub / Hub: _(/easylife/ živě)_ přehled `EasyForLife Hub` ve webu.
+- [x] (13. 10., schválený návrh Vedení #250) _(Web 1.6: JSON-LD v detailu appky, sitemap s xhtml:link)_ Schema.org SoftwareApplication na stránkách appek a hreflang alternates i v sitemap.xml (hreflang v hlavičkách stránek už je, schema ne).
+- [x] (13. 10., schválený návrh Vedení #251) _(Web 1.6: /novinky/ + /news/ a rss.xml ze `site/news.json` – při nové verzi appky doplnit)_ Stránka „Novinky / Co je nového“ (changelog appek z katalogu) a RSS.
+- [ ] (13. 10., schválený návrh Vedení #252) _(BLOKOVÁNO: Mailer nemá veřejný endpoint pro odběr s dvojím souhlasem – nejdřív v Mailer serveru, pak formulář na webu)_ Registrace na seznam čekatelů/newsletter pro appky „Brzy“ přes Mailer (jen s dvojím souhlasem).
+- [x] (13. 10., schválený návrh Vedení #253) _(Web 1.6: 404 s hledáním appek; palec na /podpora/ → POST /api/feedback, anonymně do logu: `fly logs | grep feedback`)_ Vlastní 404 s hledáním v katalogu (404 dnes jen text + odkaz) a měření spokojenosti na stránkách podpory (palec nahoru/dolů).
 
 ## Rozhodnutí a pravidla
 - Statický web bez frameworků; generuje se z `catalog.json` (jediný zdroj pravdy) – ostatní vlákna sem přidávají zásady soukromí, jejich formát a sekce neupravovat; před commitem `git pull`.

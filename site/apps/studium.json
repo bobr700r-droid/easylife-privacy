@@ -1,0 +1,75 @@
+{
+ "status": "testflight",
+ "color": "#5f3dc4",
+ "description": {
+  "cs": [
+   "Studium drží pohromadě rozvrh, úkoly, zkoušky a známky – ve škole i na vysoké.",
+   "Třídu nebo skupinu sdílíš přes iCloud jen s pozvanými spolužáky."
+  ],
+  "en": [
+   "Studium keeps your timetable, homework, exams and grades together – at school or university.",
+   "Share a class or study group via iCloud only with the classmates you invite."
+  ],
+  "sk": [
+   "Studium drží pokope rozvrh, úlohy, skúšky a známky – v škole aj na vysokej.",
+   "Triedu alebo skupinu zdieľaš cez iCloud len s pozvanými spolužiakmi."
+  ],
+  "de": [
+   "Studium hält Stundenplan, Hausaufgaben, Prüfungen und Noten zusammen – in Schule und Studium.",
+   "Klasse oder Lerngruppe teilst du per iCloud nur mit eingeladenen Mitschülern."
+  ],
+  "es": [
+   "Studium reúne horario, deberes, exámenes y notas, en el colegio o en la universidad.",
+   "Comparte la clase o el grupo por iCloud solo con los compañeros que invites."
+  ],
+  "pl": [
+   "Studium trzyma razem plan lekcji, zadania, egzaminy i oceny – w szkole i na studiach.",
+   "Klasę lub grupę udostępniasz przez iCloud tylko zaproszonym kolegom."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Rozvrh hodin a dnešní přehled",
+   "Úkoly a zkoušky s připomínkou",
+   "Známky a průměry po předmětech",
+   "Kartičky na učení s opakováním",
+   "Třídní nástěnka pro pozvané spolužáky"
+  ],
+  "en": [
+   "Timetable and today at a glance",
+   "Homework and exams with reminders",
+   "Grades and averages by subject",
+   "Flashcards with spaced repetition",
+   "Class board for invited classmates"
+  ],
+  "sk": [
+   "Rozvrh hodín a dnešný prehľad",
+   "Úlohy a skúšky s pripomienkou",
+   "Známky a priemery po predmetoch",
+   "Kartičky na učenie s opakovaním",
+   "Triedna nástenka pre pozvaných spolužiakov"
+  ],
+  "de": [
+   "Stundenplan und Tagesübersicht",
+   "Hausaufgaben und Prüfungen mit Erinnerung",
+   "Noten und Durchschnitte nach Fach",
+   "Lernkarten mit Wiederholung",
+   "Klassen-Pinnwand für eingeladene Mitschüler"
+  ],
+  "es": [
+   "Horario y resumen del día",
+   "Deberes y exámenes con recordatorio",
+   "Notas y medias por asignatura",
+   "Tarjetas de estudio con repaso",
+   "Tablón de clase para compañeros invitados"
+  ],
+  "pl": [
+   "Plan lekcji i przegląd dnia",
+   "Zadania i egzaminy z przypomnieniem",
+   "Oceny i średnie z przedmiotów",
+   "Fiszki z powtórkami",
+   "Tablica klasy dla zaproszonych kolegów"
+  ]
+ },
+ "links": []
+}

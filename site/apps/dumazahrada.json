@@ -1,0 +1,75 @@
+{
+ "status": "testflight",
+ "color": "#3a7d2c",
+ "description": {
+  "cs": [
+   "Dům a zahrada připomene zalévání, hnojení, sezónní práce i údržbu domu.",
+   "Domácnost sdílíš přes iCloud s rodinou – bez registrace a bez serveru."
+  ],
+  "en": [
+   "Dům a zahrada reminds you about watering, feeding, seasonal jobs and home maintenance.",
+   "Share your household with family via iCloud – no sign-up, no server."
+  ],
+  "sk": [
+   "Dům a zahrada pripomenie polievanie, hnojenie, sezónne práce aj údržbu domu.",
+   "Domácnosť zdieľaš cez iCloud s rodinou – bez registrácie a bez servera."
+  ],
+  "de": [
+   "Dům a zahrada erinnert an Gießen, Düngen, saisonale Arbeiten und Hauswartung.",
+   "Den Haushalt teilst du per iCloud mit der Familie – ohne Registrierung, ohne Server."
+  ],
+  "es": [
+   "Dům a zahrada te recuerda regar, abonar, las tareas de temporada y el mantenimiento de la casa.",
+   "Comparte el hogar con tu familia por iCloud, sin registro ni servidor."
+  ],
+  "pl": [
+   "Dům a zahrada przypomina o podlewaniu, nawożeniu, pracach sezonowych i konserwacji domu.",
+   "Dom udostępniasz rodzinie przez iCloud – bez rejestracji i bez serwera."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Pokojové rostliny a zahrada s připomínkami",
+   "Sezónní kalendář prací",
+   "Údržba domu, revize a spotřebiče",
+   "Projekty pro kutily",
+   "Sdílení s rodinou a hodinky"
+  ],
+  "en": [
+   "House plants and garden with reminders",
+   "Seasonal job calendar",
+   "Home maintenance, inspections and appliances",
+   "DIY projects",
+   "Family sharing and watch"
+  ],
+  "sk": [
+   "Izbové rastliny a záhrada s pripomienkami",
+   "Sezónny kalendár prác",
+   "Údržba domu, revízie a spotrebiče",
+   "Projekty pre kutilov",
+   "Zdieľanie s rodinou a hodinky"
+  ],
+  "de": [
+   "Zimmerpflanzen und Garten mit Erinnerungen",
+   "Saisonaler Arbeitskalender",
+   "Hauswartung, Prüfungen und Geräte",
+   "Heimwerkerprojekte",
+   "Teilen mit der Familie und Uhr"
+  ],
+  "es": [
+   "Plantas de interior y jardín con recordatorios",
+   "Calendario de tareas de temporada",
+   "Mantenimiento, revisiones y electrodomésticos",
+   "Proyectos de bricolaje",
+   "Compartir en familia y reloj"
+  ],
+  "pl": [
+   "Rośliny domowe i ogród z przypomnieniami",
+   "Sezonowy kalendarz prac",
+   "Konserwacja domu, przeglądy i urządzenia",
+   "Projekty dla majsterkowiczów",
+   "Udostępnianie rodzinie i zegarek"
+  ]
+ },
+ "links": []
+}

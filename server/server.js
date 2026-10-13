@@ -44,12 +44,30 @@ function proxy(req, res, upstream) {
   up.on("error", () => { if (!res.headersSent) { res.writeHead(502, { "content-type": "text/plain" }); } res.end("Bad gateway"); });
   req.pipe(up);
 }
+// Palec nahoru/dolů ze stránek podpory: anonymně (stránka, jazyk, hlas), bez IP a cookies – jen řádek do logu (fly logs | grep feedback).
+const VOTES = {};
+function feedback(req, res) {
+  let b = "";
+  req.on("data", (c) => { b += c; if (b.length > 512) req.destroy(); });
+  req.on("end", () => {
+    try {
+      const { p, l, v } = JSON.parse(b);
+      if (/^[a-z0-9-]{1,40}$/.test(p) && /^[a-z]{2}$/.test(l) && (v === 1 || v === -1)) {
+        const k = `${p}/${l}`, c = (VOTES[k] ||= { up: 0, down: 0 });
+        c[v > 0 ? "up" : "down"]++;
+        console.log("feedback", JSON.stringify({ page: p, lang: l, vote: v, total: c }));
+      }
+    } catch {}
+    res.writeHead(204); res.end();
+  });
+}
 const redirect = (res, to, code = 301) => { res.writeHead(code, { location: to, "cache-control": "public, max-age=3600" }); res.end(); };
 
 http.createServer((req, res) => {
   const host = (req.headers.host || "").split(":")[0].toLowerCase();
   const url = new URL(req.url, "http://x");
   if (url.pathname === "/healthz") { res.writeHead(200); return res.end("ok"); }
+  if (url.pathname === "/api/feedback" && req.method === "POST") return feedback(req, res);
   if (host.startsWith("www.")) return redirect(res, `https://${host.slice(4)}${req.url}`);
   for (const [prefix, upstream] of Object.entries(UPSTREAMS)) {
     if (url.pathname === prefix || url.pathname.startsWith(prefix + "/")) return proxy(req, res, upstream);
