@@ -1,76 +1,83 @@
 {
- "status": "dev",
+ "status": "testflight",
  "color": "#2f9e44",
  "icon": "~/EasyLife aplikace/Rozpocet/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
  "description": {
   "cs": [
-   "Rozpočet je jednoduchý přehled příjmů a výdajů domácnosti – výdaj zapíšeš za tři vteřiny a hned vidíš, kolik ti tento měsíc zbývá.",
-   "Bez banky a bez účtu, data jen v iPhonu a ve tvém iCloudu."
+   "Rozpočet ukáže, kolik tě doopravdy stojí život – bydlení, energie, předplatná, auto i běžná útrata dohromady ze všech appek EasyForLife. Výdaj zapíšeš za tři vteřiny a hned vidíš, kolik ti tento měsíc zbývá.",
+   "Osobní a firemní výdaje držíš odděleně – firemní pošleš rovnou do Fakturantu. Bez banky a bez účtu, data jen v iPhonu a ve tvém iCloudu."
   ],
   "en": [
-   "Rozpočet is a simple overview of household income and spending – log an expense in three seconds and instantly see how much you have left this month.",
-   "No bank connection and no account; your data stays on your iPhone and in your iCloud."
+   "Rozpočet shows what your life really costs – housing, energy, subscriptions, your car and everyday spending, combined from all EasyForLife apps. Log an expense in three seconds and see how much you have left this month.",
+   "Keep personal and business spending apart – business expenses go straight to Fakturant. No bank connection and no account; your data stays on your iPhone and in your iCloud."
   ],
   "sk": [
-   "Rozpočet je jednoduchý prehľad príjmov a výdavkov domácnosti – výdavok zapíšeš za tri sekundy a hneď vidíš, koľko ti tento mesiac zostáva.",
-   "Bez banky a bez účtu, dáta len v iPhone a v tvojom iCloude."
+   "Rozpočet ukáže, koľko ťa naozaj stojí život – bývanie, energie, predplatné, auto aj bežná útrata dohromady zo všetkých appiek EasyForLife. Výdavok zapíšeš za tri sekundy a hneď vidíš, koľko ti tento mesiac zostáva.",
+   "Osobné a firemné výdavky držíš oddelene – firemné pošleš rovno do Fakturantu. Bez banky a bez účtu, dáta len v iPhone a v tvojom iCloude."
   ],
   "de": [
-   "Rozpočet ist ein einfacher Überblick über Einnahmen und Ausgaben im Haushalt – eine Ausgabe erfasst du in drei Sekunden und siehst sofort, was dir diesen Monat bleibt.",
-   "Ohne Bankanbindung und ohne Konto; deine Daten bleiben auf dem iPhone und in deiner iCloud."
+   "Rozpočet zeigt, was dich dein Leben wirklich kostet – Wohnen, Energie, Abos, Auto und Alltagsausgaben, zusammengeführt aus allen EasyForLife-Apps. Eine Ausgabe erfasst du in drei Sekunden und siehst sofort, was dir diesen Monat bleibt.",
+   "Private und geschäftliche Ausgaben bleiben getrennt – geschäftliche gehen direkt an Fakturant. Ohne Bankanbindung und ohne Konto; deine Daten bleiben auf dem iPhone und in deiner iCloud."
   ],
   "es": [
-   "Rozpočet es un resumen sencillo de ingresos y gastos del hogar: anota un gasto en tres segundos y ve al instante cuánto te queda este mes.",
-   "Sin conexión al banco ni cuenta; tus datos se quedan en el iPhone y en tu iCloud."
+   "Rozpočet muestra lo que de verdad te cuesta la vida: vivienda, energía, suscripciones, coche y gasto diario, sumados de todas las apps EasyForLife. Anota un gasto en tres segundos y ve cuánto te queda este mes.",
+   "Separa gastos personales y de empresa; los de empresa van directos a Fakturant. Sin banco ni cuenta; tus datos se quedan en el iPhone y en tu iCloud."
   ],
   "pl": [
-   "Rozpočet to prosty przegląd przychodów i wydatków domowych – wydatek zapiszesz w trzy sekundy i od razu widzisz, ile zostało w tym miesiącu.",
-   "Bez banku i bez konta, dane tylko w iPhonie i w twoim iCloud."
+   "Rozpočet pokazuje, ile naprawdę kosztuje cię życie – mieszkanie, energia, subskrypcje, auto i codzienne wydatki zebrane ze wszystkich aplikacji EasyForLife. Wydatek zapiszesz w trzy sekundy i od razu widzisz, ile zostało w tym miesiącu.",
+   "Wydatki prywatne i firmowe trzymasz osobno – firmowe trafiają prosto do Fakturanta. Bez banku i bez konta, dane tylko w iPhonie i w twoim iCloud."
   ]
  },
  "features": {
   "cs": [
-   "Rychlé zadání výdaje i přes Siri a widget „Zbývá tento měsíc“",
-   "Kategorie s měsíčními limity a upozornění při přečerpání",
-   "Import CSV výpisu z banky s automatickými kategoriemi",
+   "Životní náklady: kolik tě stojí život měsíčně ze všech appek",
+   "Rychlé zadání výdaje, Siri a widget „Zbývá tento měsíc“",
+   "Kategorie s limity a import CSV výpisu z banky",
    "Sdílený rozpočet domácnosti přes iCloud",
-   "Cíle spoření, opakované platby a fixní náklady z Předplatného a Odečtů"
+   "Osobní i firemní výdaje – firemní jdou do Fakturantu"
   ],
   "en": [
+   "Cost of living: what your life costs each month, from all apps",
    "Quick expense entry, Siri and a “Left this month” widget",
-   "Categories with monthly limits and overspend alerts",
-   "CSV bank statement import with automatic categories",
+   "Category limits and CSV bank statement import",
    "Shared household budget via iCloud",
-   "Savings goals, recurring payments and fixed costs from Předplatné and Odečty"
+   "Personal and business spending – business goes to Fakturant"
   ],
   "sk": [
-   "Rýchle zadanie výdavku aj cez Siri a widget „Zostáva tento mesiac“",
-   "Kategórie s mesačnými limitmi a upozornenie pri prečerpaní",
-   "Import CSV výpisu z banky s automatickými kategóriami",
+   "Životné náklady: koľko ťa stojí život mesačne zo všetkých appiek",
+   "Rýchle zadanie výdavku, Siri a widget „Zostáva tento mesiac“",
+   "Kategórie s limitmi a import CSV výpisu z banky",
    "Zdieľaný rozpočet domácnosti cez iCloud",
-   "Ciele sporenia, opakované platby a fixné náklady z Předplatného a Odečtů"
+   "Osobné aj firemné výdavky – firemné idú do Fakturantu"
   ],
   "de": [
+   "Lebenshaltungskosten: was dein Leben im Monat kostet, aus allen Apps",
    "Ausgaben schnell erfassen, Siri und Widget „Rest diesen Monat“",
-   "Kategorien mit Monatslimits und Warnung bei Überschreitung",
-   "CSV-Kontoauszug-Import mit automatischen Kategorien",
+   "Kategorielimits und CSV-Kontoauszug-Import",
    "Gemeinsames Haushaltsbudget per iCloud",
-   "Sparziele, wiederkehrende Zahlungen und Fixkosten aus Předplatné und Odečty"
+   "Privat und geschäftlich – Geschäftliches geht an Fakturant"
   ],
   "es": [
-   "Anota gastos rápido, con Siri y widget «Te queda este mes»",
-   "Categorías con límites mensuales y avisos al pasarte",
-   "Importación de extractos CSV con categorías automáticas",
+   "Coste de vida: lo que te cuesta vivir al mes, de todas las apps",
+   "Gastos rápidos, Siri y widget «Te queda este mes»",
+   "Límites por categoría e importación de extractos CSV",
    "Presupuesto del hogar compartido por iCloud",
-   "Metas de ahorro, pagos recurrentes y gastos fijos de Předplatné y Odečty"
+   "Gastos personales y de empresa: los de empresa van a Fakturant"
   ],
   "pl": [
-   "Szybkie wpisywanie wydatków, Siri i widżet „Zostało w tym miesiącu”",
-   "Kategorie z limitami miesięcznymi i alerty o przekroczeniu",
-   "Import wyciągu CSV z automatycznymi kategoriami",
+   "Koszty życia: ile kosztuje cię życie miesięcznie, ze wszystkich aplikacji",
+   "Szybkie wydatki, Siri i widżet „Zostało w tym miesiącu”",
+   "Limity kategorii i import wyciągu CSV",
    "Wspólny budżet domowy przez iCloud",
-   "Cele oszczędnościowe, płatności cykliczne i koszty stałe z Předplatného i Odečtů"
+   "Wydatki prywatne i firmowe – firmowe trafiają do Fakturanta"
   ]
  },
- "links": []
+ "links": [],
+ "screenshots": [
+  "Rozpocet/design/screens/living-light.png",
+  "Rozpocet/design/screens/overview-light.png",
+  "Rozpocet/design/screens/plan-light.png",
+  "Rozpocet/design/screens/goals-light.png",
+  "Rozpocet/design/screens/import-light.png"
+ ]
 }
