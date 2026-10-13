@@ -159,6 +159,12 @@ background:linear-gradient(160deg,color-mix(in oklab,var(--c) 20%,var(--surface)
 .fb{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:28px 0 0;padding:16px 18px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}
 .fb button{font:inherit;font-weight:700;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer}
 .fb button.on{background:var(--ink);color:var(--bg)}.fb button:disabled{cursor:default}.fb-ok{color:var(--muted)}
+.nl{margin:28px 0 0;padding:24px;border:1px solid var(--line);border-radius:24px;background:var(--surface);box-shadow:var(--shadow)}
+.nl h2,.nl h3{margin:0 0 6px;font:800 1.5rem var(--display)}.nl>p{margin:0 0 16px;color:var(--muted)}
+.nl-row{display:flex;flex-wrap:wrap;gap:10px}.nl-row input{flex:1 1 220px;min-width:0;font:inherit;padding:12px 18px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.nl-row button{font:inherit;font-weight:800;border:0;border-radius:999px;padding:12px 22px;background:var(--ink);color:var(--bg);cursor:pointer}.nl-row button:disabled{opacity:.6;cursor:default}
+.nl label{display:flex;gap:10px;align-items:flex-start;margin:12px 0 0;font-size:.92rem;color:var(--muted)}.nl label input{margin-top:3px;flex:none;accent-color:var(--ink)}
+.nl label a{color:var(--ink);font-weight:700}.nl .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.nl-msg{margin:12px 0 0;font-weight:700}
 .faq summary{cursor:pointer;font:800 1.08rem var(--display);padding:18px 0}.faq p{margin:0 0 18px;color:var(--muted)}
 .page-top{position:relative;margin-top:-76px;padding:120px 0 30px;overflow:hidden;isolation:isolate}.page-top h1{position:relative;z-index:2}.page-top .lead{position:relative;z-index:2;margin-left:0}
 .ico{flex:none}.solo{color:var(--muted);margin:-8px 0 16px;font-weight:600}

@@ -868,7 +868,7 @@ SCRIPT = """<script>
 (function(){var b=document.querySelectorAll('.lang button'),a=document.querySelectorAll('[data-lang]');
 function show(l){a.forEach(function(e){e.hidden=e.dataset.lang!==l});b.forEach(function(e){e.setAttribute('aria-pressed',String(e.dataset.for===l))});document.documentElement.lang=l}
 b.forEach(function(e){e.addEventListener('click',function(){show(e.dataset.for)})});
-var n=(navigator.language||'cs').toLowerCase();show(location.hash==='#en'?'en':location.hash==='#cs'?'cs':(n.indexOf('cs')===0||n.indexOf('sk')===0)?'cs':'en')})();
+var n=(navigator.language||'cs').toLowerCase();var h=location.hash;show(h.indexOf('#en')===0?'en':h==='#cs'||h==='#newsletter'?'cs':(n.indexOf('cs')===0||n.indexOf('sk')===0)?'cs':'en');var t=h.length>3&&document.getElementById(h.slice(1));if(t)t.scrollIntoView()})();
 </script>"""
 
 def page(title, inner, color="#0b7d70", mark="E", brand="EasyForLife", home="index.html"):
@@ -892,13 +892,25 @@ def app_page(app):
                      f'<div class="summary">{app["summary"][i]}</div>{body}</article>')
     return page(f"{app['name']} – soukromí", "".join(parts), app["color"], app["mark"], app["name"])
 
+# Odběr novinek „Dejte mi vědět“ na webu (formulář → Mailer, double opt-in, viz ~/Documents/Mailer/docs/newsletter-optin.md).
+NEWSLETTER = [
+    ("Odběr novinek (Dejte mi vědět)", "News updates (Keep me posted)"),
+    ("Na webu easyforlife.cz / easyforlife.eu se můžeš přihlásit k odběru novinek – obecně, nebo k jedné appce (např. až vyjde pro Android). Správcem je {op}. Zpracování provádí náš e-mailový server Mailer (<code>mailer.easyforlife.cz</code>, Fly.io, Frankfurt, EU) na základě tvého souhlasu (čl. 6 odst. 1 písm. a GDPR).",
+     "On easyforlife.cz / easyforlife.eu you can subscribe to news – in general or about one app (e.g. when it comes to Android). The controller is {op}. Processing is done by our e-mail server Mailer (<code>mailer.easyforlife.cz</code>, Fly.io, Frankfurt, EU) based on your consent (Art. 6(1)(a) GDPR)."),
+    ("Ukládáme jen e-mailovou adresu, zvolené téma (appku), jazyk, čas přihlášení a potvrzení, znění souhlasu a otisk (hash) IP adresy jako doklad souhlasu – ne samotnou IP. Odběr začne až po potvrzení odkazem z e-mailu (dvojí souhlas); nepotvrzené přihlášky mažeme po 7 dnech. Formulář nepoužívá cookies ani sledování a adresu nikomu nepředáváme ani neprodáváme.",
+     "We store only your e-mail address, the chosen topic (app), language, the time of sign-up and confirmation, the consent text and a hash of your IP address as proof of consent – not the IP itself. The subscription starts only after you confirm via the link in the e-mail (double opt-in); unconfirmed sign-ups are deleted after 7 days. The form uses no cookies or tracking, and we never share or sell your address."),
+    ("Odhlásit se můžeš kdykoli odkazem „Odhlásit“ v každém e-mailu (funguje i tlačítko odhlášení v poštovní aplikaci) nebo e-mailem na info@luksafoto.cz. Odhlášením se adresa ze seznamu smaže.",
+     "You can unsubscribe at any time via the “Unsubscribe” link in every e-mail (your mail app’s unsubscribe button works too) or by writing to info@luksafoto.cz. Unsubscribing deletes your address from the list."),
+]
+
 def index():
     parts = []
     for i, lang in enumerate(("cs", "en")):
         items = "".join(f'<li><a href="{a["slug"]}.html"><span class="mark" style="background:{a["color"]}">{a["mark"]}</span><span><b>{a["name"]}</b><small>{a["tagline"][i]}</small></span></a></li>' for a in APPS)
         items += "".join(f'<li><a href="{u}"><span class="mark" style="background:#555">K</span><span><b>{n}</b><small>{("Zásady na webu aplikace","Policy on the app’s website")[i]}</small></span></a></li>' for n, u in EXTERNAL)
         parts.append(f'<article data-lang="{lang}"{" hidden" if lang=="en" else ""}><h1>{("Ochrana soukromí","Privacy")[i]}</h1>'
-                     f'<p class="meta">{("Zásady ochrany soukromí aplikací EasyForLife.","Privacy policies of the EasyForLife apps.")[i]}</p><ul class="apps">{items}</ul></article>')
+                     f'<p class="meta">{("Zásady ochrany soukromí aplikací EasyForLife.","Privacy policies of the EasyForLife apps.")[i]}</p><ul class="apps">{items}</ul>'
+                     f'<h2 id="{("newsletter", "en-newsletter")[i]}">{NEWSLETTER[0][i]}</h2>' + "".join(f"<p>{x[i].format(op=OPERATOR[i])}</p>" for x in NEWSLETTER[1:]) + '</article>')
     return page("EasyForLife – soukromí", "".join(parts))
 
 OUT.mkdir(exist_ok=True)

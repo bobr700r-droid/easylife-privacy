@@ -134,6 +134,35 @@ T = {
   "fb_no": ["Ne", "No", "Nie", "Nein", "No", "Nie"],
   "fb_thanks": ["Díky! Když něco chybí, napište nám.", "Thanks! If something’s missing, write to us.", "Vďaka! Ak niečo chýba, napíšte nám.",
                 "Danke! Wenn etwas fehlt, schreib uns.", "¡Gracias! Si falta algo, escríbenos.", "Dzięki! Jeśli czegoś brakuje, napisz do nas."],
+  "nl_title": ["Dejte mi vědět", "Keep me posted", "Dajte mi vedieť", "Halte mich auf dem Laufenden", "Avísame", "Dajcie mi znać"],
+  "nl_lead": ["Napíšeme ti jen, když vyjde nová appka nebo velká novinka. Žádný spam, odhlásit se jde jedním klepnutím.",
+              "We’ll only write when a new app or a big update comes out. No spam, unsubscribe with one tap.",
+              "Napíšeme ti, len keď vyjde nová appka alebo veľká novinka. Žiadny spam, odhlásiť sa dá jedným ťuknutím.",
+              "Wir schreiben nur, wenn eine neue App oder ein großes Update erscheint. Kein Spam, Abmelden mit einem Tipp.",
+              "Solo te escribiremos cuando salga una app nueva o una gran novedad. Sin spam, te das de baja con un toque.",
+              "Napiszemy tylko, gdy pojawi się nowa aplikacja lub duża nowość. Bez spamu, wypisanie jednym stuknięciem."],
+  "nl_lead_app": ["Dáme ti vědět o novinkách v appce {a}. Žádný spam, odhlásit se jde jedním klepnutím.",
+                  "We’ll let you know about news in {a}. No spam, unsubscribe with one tap.",
+                  "Dáme ti vedieť o novinkách v appke {a}. Žiadny spam, odhlásiť sa dá jedným ťuknutím.",
+                  "Wir informieren dich über Neues in {a}. Kein Spam, Abmelden mit einem Tipp.",
+                  "Te avisaremos de las novedades de {a}. Sin spam, te das de baja con un toque.",
+                  "Damy znać o nowościach w {a}. Bez spamu, wypisanie jednym stuknięciem."],
+  "nl_email": ["tvuj@email.cz", "you@example.com", "tvoj@email.sk", "du@beispiel.de", "tu@ejemplo.es", "ty@przyklad.pl"],
+  "nl_btn": ["Odebírat", "Subscribe", "Odoberať", "Abonnieren", "Suscribirme", "Zapisz mnie"],
+  "nl_android": ["Dát vědět, až bude pro Android", "Tell me when it’s on Android", "Dať vedieť, keď bude pre Android",
+                 "Benachrichtigen, wenn es für Android erscheint", "Avísame cuando esté en Android", "Daj znać, gdy będzie na Androida"],
+  "nl_android_all": ["Hlavně appky pro Android", "Mainly Android apps", "Hlavne appky pre Android", "Vor allem Android-Apps", "Sobre todo apps para Android", "Głównie aplikacje na Androida"],
+  "nl_consent": ["Souhlasím se zasíláním e-mailů od EasyForLife a se <a href=\"{p}\">zpracováním e-mailové adresy</a>. Souhlas můžu kdykoli odvolat.",
+                 "I agree to receive e-mails from EasyForLife and to the <a href=\"{p}\">processing of my e-mail address</a>. I can withdraw consent at any time.",
+                 "Súhlasím so zasielaním e-mailov od EasyForLife a so <a href=\"{p}\">spracovaním e-mailovej adresy</a>. Súhlas môžem kedykoľvek odvolať.",
+                 "Ich willige ein, E-Mails von EasyForLife zu erhalten, und in die <a href=\"{p}\">Verarbeitung meiner E-Mail-Adresse</a>. Ich kann die Einwilligung jederzeit widerrufen.",
+                 "Acepto recibir correos de EasyForLife y el <a href=\"{p}\">tratamiento de mi correo electrónico</a>. Puedo retirar el consentimiento en cualquier momento.",
+                 "Zgadzam się na otrzymywanie e-maili od EasyForLife i <a href=\"{p}\">przetwarzanie mojego adresu e-mail</a>. Mogę w każdej chwili wycofać zgodę."],
+  "nl_ok": ["Hotovo! Zkontroluj schránku a potvrď odběr odkazem v e-mailu.", "Done! Check your inbox and confirm with the link in the e-mail.",
+            "Hotovo! Skontroluj schránku a potvrď odber odkazom v e-maile.", "Fertig! Schau in dein Postfach und bestätige über den Link in der E-Mail.",
+            "¡Listo! Revisa tu correo y confirma con el enlace del mensaje.", "Gotowe! Sprawdź skrzynkę i potwierdź linkiem w e-mailu."],
+  "nl_err": ["Nepovedlo se – zkontroluj adresu a zkus to znovu.", "That didn’t work – check the address and try again.", "Nepodarilo sa – skontroluj adresu a skús to znova.",
+             "Das hat nicht geklappt – prüfe die Adresse und versuch es erneut.", "No ha funcionado: revisa la dirección e inténtalo de nuevo.", "Nie udało się – sprawdź adres i spróbuj ponownie."],
   "faq_title": ["Časté otázky", "FAQ", "Časté otázky", "Häufige Fragen", "Preguntas frecuentes", "Częste pytania"],
   "faq": [
     [('Potřebuju účet nebo registraci?', 'Malé appky pro každý den ne. Účet potřebují jen služby s webovou verzí a nástroje pro firmy – u každé appky to uvidíš na štítku „S účtem“ nebo „Účet volitelný“.'),
@@ -199,6 +228,12 @@ T = {
 def t(key, lang):
     return T[key][LANGS.index(lang)]
 
+MAILER_NL = "https://mailer.easyforlife.cz/newsletter/subscribe"
+NL_SCRIPT = """<script>document.querySelectorAll("form.nl:not([data-on])").forEach(function(f){f.dataset.on=1;f.addEventListener("submit",function(e){e.preventDefault();
+var m=f.querySelector(".nl-msg"),b=f.querySelector("button"),a=f.querySelector("[data-android]"),d={email:f.email.value.trim(),lang:f.lang.value,website:f.website.value};
+var tp=a&&a.checked?a.dataset.android:f.topic.value;if(tp)d.topic=tp;b.disabled=true;
+fetch(f.action,{method:"POST",credentials:"omit",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)}).then(function(r){return r.json().then(function(j){return r.ok&&j.ok})})
+.catch(function(){return false}).then(function(ok){m.hidden=false;m.textContent=ok?f.dataset.ok:f.dataset.err;if(ok)f.querySelector(".nl-row").hidden=true;else b.disabled=false})})})</script>"""
 COPYRIGHT = "© 2026 Lukáš Ochrana"
 VERSION = "1.6.0"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
 # Podmínky užití – licence (13. 10. 2026), ve všech 6 jazycích (sk/de/es/pl a zdravotní sekce doplněny při auditu Lékárničky).
@@ -545,6 +580,12 @@ background:linear-gradient(160deg,color-mix(in oklab,var(--c) 20%,var(--surface)
 .fb{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:28px 0 0;padding:16px 18px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}
 .fb button{font:inherit;font-weight:700;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer}
 .fb button.on{background:var(--ink);color:var(--bg)}.fb button:disabled{cursor:default}.fb-ok{color:var(--muted)}
+.nl{margin:28px 0 0;padding:24px;border:1px solid var(--line);border-radius:24px;background:var(--surface);box-shadow:var(--shadow)}
+.nl h2,.nl h3{margin:0 0 6px;font:800 1.5rem var(--display)}.nl>p{margin:0 0 16px;color:var(--muted)}
+.nl-row{display:flex;flex-wrap:wrap;gap:10px}.nl-row input{flex:1 1 220px;min-width:0;font:inherit;padding:12px 18px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.nl-row button{font:inherit;font-weight:800;border:0;border-radius:999px;padding:12px 22px;background:var(--ink);color:var(--bg);cursor:pointer}.nl-row button:disabled{opacity:.6;cursor:default}
+.nl label{display:flex;gap:10px;align-items:flex-start;margin:12px 0 0;font-size:.92rem;color:var(--muted)}.nl label input{margin-top:3px;flex:none;accent-color:var(--ink)}
+.nl label a{color:var(--ink);font-weight:700}.nl .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.nl-msg{margin:12px 0 0;font-weight:700}
 .faq summary{cursor:pointer;font:800 1.08rem var(--display);padding:18px 0}.faq p{margin:0 0 18px;color:var(--muted)}
 .page-top{position:relative;margin-top:-76px;padding:120px 0 30px;overflow:hidden;isolation:isolate}.page-top h1{position:relative;z-index:2}.page-top .lead{position:relative;z-index:2;margin-left:0}
 .ico{flex:none}.solo{color:var(--muted);margin:-8px 0 16px;font-weight:600}
@@ -1071,6 +1112,7 @@ class Site:
                 + self.projects(lang)
                 + self.eco_section(lang)
                 + (f'<section id="prace"><div class="wrap"><div class="work"><div class="sec-head rv"><h2>{t("work", lang)}</h2><p>{t("work_lead", lang)}</p></div>{work}</div></div></section>' if work else "") +
+                f'<section><div class="wrap"><div class="detail">{self.newsletter(lang, android=True)}</div></div></section>'
                 f'<section><div class="wrap"><div class="sec-head rv"><h2>{t("how", lang)}</h2></div><div class="stickers">{prin}</div></div></section>'
                 f'<section><div class="wrap"><div class="wall rv"><div class="wall-grid" aria-hidden="true">{wall}</div>'
                 f'<div class="wall-text"><h2>{t("wall", lang)}</h2></div></div></div></section>')
@@ -1097,6 +1139,24 @@ class Site:
                 f'<div class="wrap"><div class="detail">{secs}<p class="note">{icon("shield")}<span>{esc(COPYRIGHT)} · '
                 f'<a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></span></p></div></div>')
         return page(lang, {l: terms_slug(l) for l in LANGS}, f"{title} | EasyForLife", lead, body, self.operator)
+
+    def newsletter(self, lang, a=None, android=False):
+        """„Dejte mi vědět“ – double opt-in přes Mailer (mailer.easyforlife.cz, docs/newsletter-optin.md). Bez JS se odešle jako obyčejný formulář.
+        topic: bez appky obecné novinky; u appky její id, se zaškrtnutým Androidem <id>-android (obecně „android“)."""
+        topic = a["id"] if a else ""
+        pol = f'/soukromi.html#{"newsletter" if lang in ("cs", "sk") else "en-newsletter"}'
+        lead = t("nl_lead_app", lang).format(a=esc(a["name"])) if a else t("nl_lead", lang)
+        andr = (f'<label><input type="checkbox" data-android="{(topic + "-android") if a else "android"}"{" checked" if a else ""}> '
+                f'{t("nl_android" if a else "nl_android_all", lang)}</label>') if android else ""
+        h = "h2 class=\"sub\"" if a else "h2"
+        return (f'<form class="nl rv" id="novinky" action="{MAILER_NL}" method="post" data-ok="{esc(t("nl_ok", lang))}" data-err="{esc(t("nl_err", lang))}">'
+                f'<{h}>{t("nl_title", lang)}</h2><p>{lead}</p>'
+                f'<input type="hidden" name="topic" value="{topic}"><input type="hidden" name="lang" value="{"cs" if lang in ("cs", "sk") else "en"}">'
+                f'<div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>'
+                f'<div class="nl-row"><input type="email" name="email" required autocomplete="email" placeholder="{t("nl_email", lang)}" aria-label="E-mail">'
+                f'<button type="submit">{t("nl_btn", lang)}</button></div>{andr}'
+                f'<label><input type="checkbox" required> <span>{t("nl_consent", lang).format(p=pol)}</span></label>'
+                f'<p class="nl-msg" role="status" hidden></p></form>' + NL_SCRIPT)
 
     def feedback(self, lang, key):
         """Palec nahoru/dolů – anonymně (stránka, jazyk, hlas), bez cookies a bez IP; počty vidí provozovatel v logu serveru."""
@@ -1206,6 +1266,8 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
                 f'<div class="link-row rv">{self.app_icon(o, 54)}<div><a href="{url(lang, o["id"])}"><b>{esc(o["name"])}</b></a><span>{esc(txt)}</span></div></div>'
                 for o, txt in links) + "</div>"
         body += f'<p class="note">{note}</p>' + self.separate_note(a, lang)
+        if not a.get("separate"):
+            body += self.newsletter(lang, a, android="iOS" in pl)
         if not a.get("store"):
             body += f'<p class="note">{icon("check")}<span>{t("tf_note" if s.get("status") == "testflight" else "dev_note", lang)}</span></p>'
         body += "</article></div>" + self.schema(a, lang)

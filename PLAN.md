@@ -26,7 +26,7 @@ Soubor zřízen 13. 10. 2026 před archivací vlákna **b8375cf3** (Build EasyLi
 - [x] Mainhub / Hub: _(/easylife/ živě)_ přehled `EasyForLife Hub` ve webu.
 - [x] (13. 10., schválený návrh Vedení #250) _(Web 1.6: JSON-LD v detailu appky, sitemap s xhtml:link)_ Schema.org SoftwareApplication na stránkách appek a hreflang alternates i v sitemap.xml (hreflang v hlavičkách stránek už je, schema ne).
 - [x] (13. 10., schválený návrh Vedení #251) _(Web 1.6: /novinky/ + /news/ a rss.xml ze `site/news.json` – při nové verzi appky doplnit)_ Stránka „Novinky / Co je nového“ (changelog appek z katalogu) a RSS.
-- [ ] (13. 10., schválený návrh Vedení #252) _(BLOK: čeká na Mailer veřejný endpoint s double opt-in; pak formulář na webu)_ Registrace na seznam čekatelů/newsletter pro appky „Brzy“ přes Mailer (jen s dvojím souhlasem).
+- [x] (13. 10., schválený návrh Vedení #252) _(hotovo 13. 10.: formulář „Dejte mi vědět“ na úvodu a u appek, volba Android, Mailer double opt-in, zásady soukromi.html#newsletter)_ Registrace na seznam čekatelů/newsletter pro appky „Brzy“ přes Mailer (jen s dvojím souhlasem).
 - [x] (13. 10., schválený návrh Vedení #253) _(Web 1.6: 404 s hledáním appek; palec na /podpora/ → POST /api/feedback, anonymně do logu: `fly logs | grep feedback`)_ Vlastní 404 s hledáním v katalogu (404 dnes jen text + odkaz) a měření spokojenosti na stránkách podpory (palec nahoru/dolů).
 
 ## Rozhodnutí a pravidla
