@@ -164,6 +164,29 @@ T = {
 def t(key, lang):
     return T[key][LANGS.index(lang)]
 
+COPYRIGHT = "© 2026 Lukáš Ochrana"
+# Podmínky užití – licence (13. 10. 2026). Česky pro cs/sk, jinak anglicky.
+TERMS = {
+  "cs": ("Podmínky užití", "Licence a autorská práva k aplikacím EasyForLife.", [
+    ("Autorská práva", "Aplikace EasyForLife, jejich zdrojový kód, grafika, texty a názvy jsou autorským dílem. Autorská práva k nim i jejich názvy náleží Lukáši Ochranovi."),
+    ("Licence", "Stažením aplikace získáváte nevýhradní a nepřenosnou licenci užívat ji pro svou osobní potřebu na zařízeních, která vlastníte nebo ovládáte, v rozsahu podmínek App Store (Standard EULA společnosti Apple)."),
+    ("Co není dovoleno", "Bez předchozího písemného souhlasu autora není dovoleno aplikace ani jejich části kopírovat, upravovat, překládat, zpětně analyzovat (reverse engineering), dekompilovat, dále šířit, pronajímat ani jinak zpřístupňovat třetím osobám – vždy v mezích, které připouští české právo a právo EU (výjimky, které zákon výslovně dovoluje, zůstávají zachovány)."),
+    ("Práva spotřebitele", "Tyto podmínky neomezují práva, která vám jako spotřebiteli náleží podle českého práva a práva EU a která nelze smluvně vyloučit."),
+    ("Kontakt", "Dotazy k licenci posílejte na " + CONTACT + ". Všechna práva, která nejsou výslovně udělena, zůstávají vyhrazena."),
+  ]),
+  "en": ("Terms of Use", "Licence and copyright of EasyForLife apps.", [
+    ("Copyright", "EasyForLife apps, including their source code, graphics, texts and names, are works protected by copyright. The copyright and the app names belong to Lukáš Ochrana."),
+    ("Licence", "By downloading an app you receive a non-exclusive, non-transferable licence to use it for your personal purposes on devices you own or control, within the App Store terms (Apple's Standard EULA)."),
+    ("What is not permitted", "Without the author's prior written consent you may not copy, modify, translate, reverse engineer, decompile, redistribute, rent or otherwise make available the apps or any part of them to third parties – always to the extent permitted by Czech and EU law (exceptions expressly allowed by law remain unaffected)."),
+    ("Consumer rights", "These terms do not limit any rights you have as a consumer under Czech and EU law that cannot be excluded by contract."),
+    ("Contact", "Send questions about the licence to " + CONTACT + ". All rights not expressly granted are reserved."),
+  ]),
+}
+
+def terms_slug(lang):
+    """Adresa podmínek: /podminky/ (cs, sk), jinak /terms/ – odkaz z appek: https://easyforlife.cz/podminky/"""
+    return "podminky" if lang in ("cs", "sk") else "terms"
+
 def esc(s):
     return html.escape(s, quote=True)
 
@@ -509,7 +532,8 @@ def page(lang, slug, title, desc, body, operator, relative=True, langs=None):
 <main id="main">{body}</main>
 <footer><div class="wrap row"><div><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a><p>{t("made", lang)}</p>
 <p>{t("operator", lang)}: {esc(operator[0 if lang in ("cs", "sk") else 1])}</p></div>
-<p><a href="{url(lang, sup(lang))}">{t("support", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a></p></div></footer>
+<p><a href="{url(lang, sup(lang))}">{t("support", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a> · <a href="{url(lang, terms_slug(lang))}">{TERMS["cs" if lang in ("cs", "sk") else "en"][0]}</a></p>
+<p>{COPYRIGHT}</p></div></footer>
 {FOOT_SCRIPT}</body></html>
 """
     # Relativní odkazy – web jde otevřít i ze složky (náhled) a z libovolného hostu.
@@ -837,6 +861,15 @@ class Site:
                 f'<p class="note">{icon("shield")}<span><a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></span></p></div></div>')
         return page(lang, {l: sup(l) for l in LANGS}, f'{t("support_title", lang)} | EasyForLife', t("support_lead", lang), body, self.operator)
 
+    def terms(self, lang):
+        title, lead, parts = TERMS["cs" if lang in ("cs", "sk") else "en"]
+        secs = "".join(f'<h2 class="sub">{esc(h)}</h2><p>{esc(x)}</p>' for h, x in parts)
+        body = (f'<section class="page-top"><div class="blobs"><i></i><i></i><i></i></div><div class="wrap"><div class="detail">'
+                f'<h1>{esc(title)}</h1><p class="lead">{esc(lead)}</p></div></div></section>'
+                f'<div class="wrap"><div class="detail">{secs}<p class="note">{icon("shield")}<span>{esc(COPYRIGHT)} · '
+                f'<a href="/soukromi.html{"" if lang in ("cs", "sk") else "#en"}">{t("policy", lang)}</a></span></p></div></div>')
+        return page(lang, {l: terms_slug(l) for l in LANGS}, f"{title} | EasyForLife", lead, body, self.operator)
+
     def detail(self, a, lang):
         s, c, fam = a["site"], self.color(a), self.families[a["family"]]
         fc = FAMILY_COLORS.get(a["family"], c)
@@ -904,7 +937,8 @@ class Site:
             old = "" if lang == "cs" else f"{lang}/"
             self.write(f"{pre}index.html", self.home(lang), root)
             self.write(f"{pre}{sup(lang)}/index.html", self.support(lang), root)
-            urls[site_of(lang)] += [full(lang), full(lang, sup(lang))]
+            self.write(f"{pre}{terms_slug(lang)}/index.html", self.terms(lang), root)
+            urls[site_of(lang)] += [full(lang), full(lang, sup(lang)), full(lang, terms_slug(lang))]
             stubs[f"{old}index.html"] = full(lang)
             stubs[f"{old}podpora/index.html"] = full(lang, sup(lang))
             for a in self.apps:
