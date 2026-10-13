@@ -8,6 +8,7 @@ Soubor zřízen 13. 10. 2026 před archivací vlákna **b8375cf3** (Build EasyLi
 - Web hotový a nasazený na Fly (app `easyforlife-redirect`, `server/server.js` vybírá web podle hostu): **easyforlife.cz** česky, **easyforlife.eu** anglicky (+ `/sk/ /de/ /es/ /pl/`); 6 jazyků, světlý/tmavý režim, favicon a OG obrázek (`site/art.swift`, `python3 build.py --art`), detail appky `/<slug>/`, zásady soukromí `/<slug>.html` (URL v ASC nesmí se rozbít, i staré `bobr700r-droid.github.io/easylife-privacy/<slug>.html`), živý katalog `https://easyforlife.cz/catalog.json` pro appky, stránka podpory `/podpora/`.
 - Původní zadání 10. 10.: hlavní doména .eu, .cz 301 na .eu; později uživatel rozhodl **.cz česky a .eu anglicky** (viz README) – `EU_LIVE` přepíná podle DNS.
 
+- (2026-10-13) Podmínky užití – licence: /podminky/ (cs, sk), /terms/ (ostatní), © 2026 Lukáš Ochrana v patičce (web.py). Čeká na nasazení (deploy.sh – build.py má cizí necommitnuté změny, deploy počká na jejich commit). Plné podmínky (vyloučení odpovědnosti, BACKLOG §5) zatím ne.
 ## Otevřené zadání uživatele
 - [ ] 10. 10. 20:41: „web je strašný, má být svěží, moderní, trochu bláznivý, ikony z appek, různě velké, rozlétané dlaždice, animace“ – přepracováno (rozložení karet opraveno 11. 10.), **ověřit s uživatelem spokojenost** a dolaďovat.
 - [ ] 11. 10. 6:54: **FotoDesk jinou ikonu**, předat příslušným sessions a zařadit FotoDesk do kategorie **Foto** v katalogu/webu – ověřit v `catalog.json` a na webu.
