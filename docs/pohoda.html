@@ -30,5 +30,5 @@ ul.apps small{display:block;color:var(--muted)}
 (function(){var b=document.querySelectorAll('.lang button'),a=document.querySelectorAll('[data-lang]');
 function show(l){a.forEach(function(e){e.hidden=e.dataset.lang!==l});b.forEach(function(e){e.setAttribute('aria-pressed',String(e.dataset.for===l))});document.documentElement.lang=l}
 b.forEach(function(e){e.addEventListener('click',function(){show(e.dataset.for)})});
-var n=(navigator.language||'cs').toLowerCase();show(location.hash==='#en'?'en':location.hash==='#cs'?'cs':(n.indexOf('cs')===0||n.indexOf('sk')===0)?'cs':'en')})();
+var n=(navigator.language||'cs').toLowerCase();var h=location.hash;show(h.indexOf('#en')===0?'en':h==='#cs'||h==='#newsletter'?'cs':(n.indexOf('cs')===0||n.indexOf('sk')===0)?'cs':'en');var t=h.length>3&&document.getElementById(h.slice(1));if(t)t.scrollIntoView()})();
 </script></body></html>

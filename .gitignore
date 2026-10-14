@@ -1,2 +1,25 @@
 __pycache__/
 dist/
+# Doplněno 14. 10. 2026
+build/
+DerivedData/
+.build/
+*.xcarchive
+*.ipa
+node_modules/
+.gradle/
+local.properties
+.env*
+*.p8
+*.p12
+*.mobileprovision
+*.keystore
+*.jks
+*.sqlite*
+*.db
+*.db-*
+.DS_Store
+xcuserdata/
+*HESLO*
+*.key
+DerivedData*/
