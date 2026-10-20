@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Komandér</title>
+    <link>https://easyforlife.cz/komander/</link>
+    <description>Aktualizace Komandéru</description>
+    <language>cs</language>
+    <item>
+      <title>Komandér 0.2.0</title>
+      <pubDate>Tue, 20 Oct 2026 20:15:19 +0200</pubDate>
+      <sparkle:version>202610201931</sparkle:version>
+      <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<h3>Komandér 0.2.0</h3>
+<ul>
+<li>Aktualizace přímo v appce – Komandér si sám zkontroluje novou verzi (menu Komandér → Zkontrolovat aktualizace…).</li>
+<li>Ke stažení z easyforlife.cz/komander, podepsaný a ověřený Applem.</li>
+<li>Ostré systémové písmo a okamžité přepínání světlého a tmavého vzhledu.</li>
+<li>Finder aliasy z Plochy se otevírají přímo v panelu, chráněná složka ukáže, jak povolit přístup.</li>
+</ul>]]></description>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.2.0.zip" sparkle:edSignature="RSMek+zi3S+BHzZCKWFAAxxvyT6yrfpW0tlqOBAEEOoP9KMnlyDv+IZ4adlaO8RwjIRu3xt0OwhOKdquIlPoAQ==" length="4963544" type="application/zip"/>
+    </item>
+  </channel>
+</rss>
