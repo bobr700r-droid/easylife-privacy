@@ -1,0 +1,73 @@
+{
+ "status": "dev",
+ "description": {
+  "cs": [
+   "Obkreslovátko promítne obrázek přes živou kameru na papír pod telefonem, takže ho dítě (i dospělý) snadno obkreslí tužkou. Stačí vybrat fotku nebo předlohu, nastavit průhlednost a kreslit.",
+   "Funguje bez internetu, bez účtu a bez reklam – obraz z kamery se nikam neukládá a obrázky zůstávají jen v zařízení."
+  ],
+  "en": [
+   "Obkreslovátko (Trace & Draw) projects a picture through the live camera onto the paper under your phone, so kids (and grown-ups) can easily trace it with a pencil. Pick a photo or a template, set the opacity and draw.",
+   "It works offline, with no account and no ads – the camera image is never stored and your pictures stay on the device."
+  ],
+  "sk": [
+   "Obkresľovačka premietne obrázok cez živú kameru na papier pod telefónom, takže ho dieťa (aj dospelý) ľahko obkreslí ceruzkou. Stačí vybrať fotku alebo predlohu, nastaviť priehľadnosť a kresliť.",
+   "Funguje bez internetu, bez účtu a bez reklám – obraz z kamery sa nikam neukladá a obrázky zostávajú len v zariadení."
+  ],
+  "de": [
+   "Durchpausen projiziert ein Bild über die Live-Kamera auf das Papier unter dem Handy, sodass Kinder (und Erwachsene) es leicht mit dem Bleistift nachzeichnen. Foto oder Vorlage wählen, Transparenz einstellen und los.",
+   "Funktioniert offline, ohne Konto und ohne Werbung – das Kamerabild wird nie gespeichert und die Bilder bleiben auf dem Gerät."
+  ],
+  "es": [
+   "Calquito proyecta una imagen con la cámara en directo sobre el papel bajo el móvil, para que niños (y mayores) la calquen fácilmente con un lápiz. Elige una foto o una plantilla, ajusta la transparencia y a dibujar.",
+   "Funciona sin internet, sin cuenta y sin anuncios: la imagen de la cámara nunca se guarda y tus imágenes se quedan en el dispositivo."
+  ],
+  "pl": [
+   "Odrysowanka wyświetla obrazek przez podgląd aparatu na kartce pod telefonem, więc dziecko (i dorosły) łatwo odrysuje go ołówkiem. Wybierz zdjęcie lub wzór, ustaw przezroczystość i rysuj.",
+   "Działa bez internetu, bez konta i bez reklam – obraz z aparatu nigdy nie jest zapisywany, a obrazki zostają tylko w urządzeniu."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Obrázek z Fotek, Souborů, schránky nebo z 24 předloh",
+   "Průhlednost, mřížka, zrcadlení, černobíle, kresba a obrysy",
+   "Kalibrace na A6–A3 a plátna ve skutečné velikosti",
+   "Režim AR: obrázek „přilepený“ na stole",
+   "Svítilna, zámek obrazovky a galerie oblíbených"
+  ],
+  "en": [
+   "Pictures from Photos, Files, the clipboard or 24 templates",
+   "Opacity, grid, mirroring, black & white, sketch and outlines",
+   "Real-size calibration for A6–A3 paper and canvases",
+   "AR mode: the picture “stuck” to the table",
+   "Torch, screen lock and a gallery of favourites"
+  ],
+  "sk": [
+   "Obrázok z Fotiek, Súborov, schránky alebo z 24 predlôh",
+   "Priehľadnosť, mriežka, zrkadlenie, čiernobielo, kresba a obrysy",
+   "Kalibrácia na A6–A3 a plátna v skutočnej veľkosti",
+   "Režim AR: obrázok „prilepený“ na stole",
+   "Baterka, zámok obrazovky a galéria obľúbených"
+  ],
+  "de": [
+   "Bilder aus Fotos, Dateien, der Zwischenablage oder 24 Vorlagen",
+   "Transparenz, Raster, Spiegeln, Schwarzweiß, Skizze und Konturen",
+   "Kalibrierung in Originalgröße für A6–A3 und Leinwände",
+   "AR-Modus: das Bild „klebt“ auf dem Tisch",
+   "Taschenlampe, Bildschirmsperre und Favoriten-Galerie"
+  ],
+  "es": [
+   "Imágenes de Fotos, Archivos, el portapapeles o 24 plantillas",
+   "Transparencia, cuadrícula, espejo, blanco y negro, boceto y contornos",
+   "Calibración a tamaño real para A6–A3 y lienzos",
+   "Modo AR: la imagen «pegada» a la mesa",
+   "Linterna, bloqueo de pantalla y galería de favoritos"
+  ],
+  "pl": [
+   "Obrazki ze Zdjęć, Plików, schowka lub 24 wzorów",
+   "Przezroczystość, siatka, lustro, czarno-białe, szkic i kontury",
+   "Kalibracja w rzeczywistym rozmiarze dla A6–A3 i płócien",
+   "Tryb AR: obrazek „przyklejony” do stołu",
+   "Latarka, blokada ekranu i galeria ulubionych"
+  ]
+ }
+}

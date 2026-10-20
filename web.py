@@ -43,7 +43,7 @@ CONTACT = "info@luksafoto.cz"  # kontakt podpory, dokud easyforlife.eu nemá vla
 FAMILY_COLORS = {"easylife": "#2563eb", "cestovani": "#2563eb", "foto": "#e8731c", "domacnost": "#0f9a62", "volny-cas": "#8b46d9",
                  "navigace": "#0e9aa7", "zdravi": "#e8457a", "kancelar": "#6366f1", "firmy": "#d9480f"}
 WORK = ["kancelar", "firmy"]  # rodiny v sekci „Pro práci“ (tmavý blok na konci)
-PLATFORMS = {"iOS": "iPhone", "watchOS": "Apple Watch", "macOS": "Mac", "web": "Web", "CarPlay": "CarPlay"}
+PLATFORMS = {"iOS": "iPhone", "watchOS": "Apple Watch", "macOS": "Mac", "web": "Web", "CarPlay": "CarPlay", "iPadOS": "iPad"}
 
 T = {
   "title": ['EasyForLife – appky, které ulehčují život', 'EasyForLife – apps that make life easier', 'EasyForLife – appky, ktoré uľahčujú život', 'EasyForLife – Apps, die das Leben leichter machen', 'EasyForLife – apps que facilitan la vida', 'EasyForLife – aplikacje, które ułatwiają życie'],
