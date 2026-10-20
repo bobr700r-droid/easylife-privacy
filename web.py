@@ -22,6 +22,7 @@ NEWS = HERE / "site" / "news.json"  # Co je nového – ručně doplňovat při 
 CZ, EU = "https://easyforlife.cz", "https://easyforlife.eu"
 FLY_IPV4 = "66.241.124.47"  # Fly app easyforlife-redirect
 DIST = HERE / "dist"
+KOMANDER = HERE / "site" / "downloads" / "komander"  # Komandér pro Mac mimo App Store: .dmg, .zip a appcast.xml z Komander/tools/release.sh
 
 def _eu_live():
     """easyforlife.eu běží, když míří na Fly app (nebo EU_LIVE=1/0 v prostředí)."""
@@ -1167,6 +1168,45 @@ class Site:
                 f'{self.feedback(lang, "support")}</div></div>')
         return page(lang, {l: sup(l) for l in LANGS}, f'{t("support_title", lang)} | EasyForLife', t("support_lead", lang), body, self.operator)
 
+    def komander(self):
+        """Stránka ke stažení Komandéru (jen česky): verze z appcastu, .dmg z site/downloads/komander/ (Komander/tools/release.sh)."""
+        lang = "cs"
+        appcast = KOMANDER / "appcast.xml"
+        text = appcast.read_text(encoding="utf-8") if appcast.exists() else ""
+        ver = text.split("<sparkle:shortVersionString>")[1].split("<")[0] if "<sparkle:shortVersionString>" in text else ""
+        dmg = KOMANDER / f"Komander-{ver}.dmg"
+        notes = KOMANDER / "zmeny.html"
+        feats = "".join(f'<li>{icon("check")}{esc(x)}</li>' for x in (
+            "Dva panely, F-klávesy jako v Total Commanderu, Tab přepíná panel",
+            "Fronta kopírování s rychlostí, odhadem času a pauzou",
+            "Nic se nemaže trvale – vše jde do Koše a ⌘Z to vrátí",
+            "Mezerník = rychlý náhled, záložky, oblíbené složky, příkazový řádek",
+            "Aktualizace přicházejí samy přímo v appce"))
+        if ver and dmg.exists():
+            mb = dmg.stat().st_size / 1_000_000
+            get = (f'<p class="actions"><a class="btn big" href="/komander/{dmg.name}" download>Stáhnout Komandér {esc(ver)} <span>↓</span></a>'
+                   f'<a class="ghost" href="#zmeny">Co je nového</a></p>'
+                   f'<p class="note">{icon("shield")}<span>Pro macOS 15 a novější · {f"{mb:.1f}".replace(".", ",")} MB · podepsáno a ověřeno Applem (Developer ID)</span></p>')
+        else:
+            get = f'<p class="note">{icon("check")}<span>Ke stažení brzy – Komandér se právě podepisuje a ověřuje u Applu.</span></p>'
+        steps = "".join(f"<li>{esc(x)}</li>" for x in (
+            "Stáhněte .dmg a otevřete ho.",
+            "Přetáhněte Komandér do složky Aplikace.",
+            "Při prvním spuštění povolte v Nastavení systému → Soukromí a zabezpečení → Plný přístup k disku – Komandér pak uvidí celý disk jako Finder.",
+            "Nové verze si Komandér stáhne sám (menu Komandér → Zkontrolovat aktualizace…)."))
+        body = (f'<section class="page-top"><div class="blobs"><i></i><i></i><i></i></div><div class="wrap"><div class="detail">'
+                f'<p><img src="/komander/icon.png" alt="" width="96" height="96" style="border-radius:22%"></p>'
+                f'<h1>Komandér</h1><p class="lead">Dvoupanelový správce souborů pro Mac – rychlý jako Total Commander, s klávesnicí na prvním místě '
+                f'a vzhledem, který k macOS patří.</p>{get}</div></div></section>'
+                f'<div class="wrap"><div class="detail"><ul class="ticks">{feats}</ul>'
+                f'<h2 class="sub">Instalace</h2><ol>{steps}</ol>'
+                + (f'<h2 class="sub" id="zmeny">Co je nového</h2>{notes.read_text(encoding="utf-8")}' if notes.exists() else "")
+                + f'<p class="note">{icon("shield")}<span>Komandér je mimo App Store, protože správce souborů potřebuje přístup k celému disku. '
+                  f'<a href="/soukromi.html">{t("policy", lang)}</a></span></p></div></div>')
+        return page(lang, "komander", "Komandér – správce souborů pro Mac | EasyForLife",
+                    "Dvoupanelový správce souborů pro Mac s F-klávesami, frontou kopírování a automatickými aktualizacemi.",
+                    body, self.operator, langs=["cs"])
+
     def terms(self, lang):
         title, lead, parts = TERMS[lang]
         secs = "".join(f'<h2 class="sub">{esc(h)}</h2><p>{esc(x)}</p>' for h, x in parts)
@@ -1339,6 +1379,9 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
             self.write(f"{pre}{terms_slug(lang)}/index.html", self.terms(lang), root)
             self.write(f"{pre}{news_slug(lang)}/index.html", self.news(lang), root)
             self.write(f"{pre}{news_slug(lang)}/rss.xml", self.rss(lang), root)
+            if lang == "cs":
+                self.write("komander/index.html", self.komander(), root)
+                urls[site_of(lang)].append((lang, "komander", ["cs"]))
             urls[site_of(lang)] += [(lang, None, LANGS), (lang, {l: sup(l) for l in LANGS}, LANGS),
                                     (lang, {l: terms_slug(l) for l in LANGS}, LANGS), (lang, {l: news_slug(l) for l in LANGS}, LANGS)]
             stubs[f"{old}index.html"] = full(lang)
@@ -1362,6 +1405,8 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
             for d in ("icons", "shots"):
                 if (self.out / d).exists():
                     shutil.copytree(self.out / d, root / d)
+            if site == "cz" and KOMANDER.exists():  # .dmg, .zip, appcast.xml, ikona → easyforlife.cz/komander/
+                shutil.copytree(KOMANDER, root / "komander", dirs_exist_ok=True)
             # Živý katalog pro appky (stahují si ho, aby nová propojení fungovala bez nového buildu)
             shutil.copy2(CATALOG, root / "catalog.json")
             urls[site] += [base + p for p in self.privacy.values()]

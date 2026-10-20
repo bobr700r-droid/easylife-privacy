@@ -5,7 +5,8 @@ const DIST = path.join(__dirname, "dist");
 const routes = JSON.parse(fs.readFileSync(path.join(DIST, "routes.json"), "utf8"));
 const TYPES = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8", ".xml": "application/xml", ".txt": "text/plain; charset=utf-8", ".svg": "image/svg+xml",
-  ".png": "image/png", ".webp": "image/webp", ".jpg": "image/jpeg", ".ico": "image/x-icon" };
+  ".png": "image/png", ".webp": "image/webp", ".jpg": "image/jpeg", ".ico": "image/x-icon",
+  ".dmg": "application/x-apple-diskimage", ".zip": "application/zip" };
 const COMPRESS = new Set([".html", ".css", ".js", ".json", ".xml", ".txt", ".svg"]);
 
 // Soubory s vlastní politikou: živý katalog appek (CORS, hodina cache).
