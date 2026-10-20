@@ -39,3 +39,6 @@ Soubor zřízen 13. 10. 2026 před archivací vlákna **b8375cf3** (Build EasyLi
 ## Jak pokračovat
 - `cd "/Users/lukasochrana/EasyLife aplikace/Privacy" && python3 build.py` (docs + dist), `./deploy.sh` (build + `fly deploy`), katalog sync `EasyLife/sync-catalog.sh`.
 - Push do GitHubu přes čistý worktree jen se svými soubory.
+
+## Nasazení (jediný způsob)
+Server se nasazuje **jen** příkazem `scripts/deploy.sh` (spouští uživatel, ne Claude Code). Skript přes `~/EasyLife aplikace/tools/deploy-guard.sh` ověří, že HEAD == origin/main (po `git fetch`) a pracovní kopie je čistá, teprve pak spustí `fly deploy` a nakonec ověří healthz. Nikdy ne holé `fly deploy` – nasazení z lokálního main přepsalo 15. 10. nepushnuté změny. Před nasazením: commit + `git push`.
