@@ -1,8 +1,7 @@
-<h3>Komandér 0.3.0</h3>
+<h3>Komandér 0.5.0</h3>
 <ul>
-<li>Archivy jako v Total Commanderu: Enter otevře ZIP, RAR, 7z nebo tar.gz jako složku, mezerník ukáže soubor z archivu, F5 rozbalí vybrané do druhého panelu.</li>
-<li>Zabalit (⌥F5): ZIP – i s heslem (AES-256), 7z, tar.gz, tar.xz; volba komprese, bez smetí z Macu. Rozbalit (⌥F9) i do vlastní složky.</li>
-<li>Balení i rozbalování běží ve frontě s pauzou a zrušením, při shodě názvů se Komandér zeptá, ⌘Z vše vrátí.</li>
-<li>Velikost složek se počítá sama na pozadí (lze vypnout v Nastavení), ⌘I ukáže podrobné informace, stavový řádek údaje o položce pod kurzorem.</li>
-<li>Označování: výraznější označené řádky, ⇧klik a ⇧šipky jako ve Finderu, tažení myší přes řádky, výběr podle masky (Num+ / Num−).</li>
+<li><b>Server jako panel – SFTP, FTP a FTPS (⌃⌘K):</b> panel se připojí k serveru a prochází se jako složka (Enter, ⌫, drobečky, řazení, rychlý filtr). Název serveru je v záložce, ⌃⇧⌘K nebo „..“ v kořeni odpojí.</li>
+<li><b>Kopírování oběma směry (F5):</b> ze serveru do druhého panelu i z disku na server, celé složky, ve frontě s průběhem, rychlostí, pauzou a zrušením. Při shodě názvů se Komandér zeptá (přepsat, starší, ponechat obojí, přeskočit). Soubor se píše pod dočasným jménem a přejmenuje se až celý; po přerušení se rozpracovaný soubor při dalším kopírování naváže. Stažené ⌘Z vrátí do Koše.</li>
+<li><b>Na serveru:</b> F7 nová složka, ⇧F6 přejmenovat, F8 smazat (na serveru není Koš – jen po potvrzení, nejde vrátit), Enter na souboru otevře staženou kopii.</li>
+<li><b>Přihlášení:</b> SFTP přes ssh z macOS – klíče, ssh-agent, ~/.ssh/config a known_hosts (nový server se zapamatuje, změněný klíč se odmítne). Heslo volitelně do Klíčenky, uložené servery bez hesel v seznamu dialogu. FTPS = šifrované FTP (TLS), pasivní i aktivní režim.</li>
 </ul>
