@@ -6,13 +6,22 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.7.2</title>
-      <pubDate>Wed, 21 Oct 2026 19:02:05 +0200</pubDate>
-      <sparkle:version>202610211859</sparkle:version>
-      <sparkle:shortVersionString>0.7.2</sparkle:shortVersionString>
+      <title>Komandér 0.8.0</title>
+      <pubDate>Wed, 21 Oct 2026 21:12:46 +0200</pubDate>
+      <sparkle:version>202610212109</sparkle:version>
+      <sparkle:shortVersionString>0.8.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<p>Opravy a vylepšení.</p>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.7.2.zip" sparkle:edSignature="Ox6qWtWCyGxgLPDThLW1ltcbdNQHsjUonYBWgFTcI0OT4Y0k2lWPShNTz3bxEhDqwrCWF18xKyJOph7xZjWXBA==" length="7565679" type="application/zip"/>
+      <description><![CDATA[<h3>Komandér 0.8.0</h3>
+<ul>
+<li><b>Hromadné přejmenování (⌘M, ⌃M, ⇧F6 nad výběrem):</b> maska jména <code>[N]</code>, <code>[N1-5]</code>, <code>[N-3]</code>, čítač <code>[C]</code> s nastavením od, krok a počet číslic, přípona <code>[E]</code>, nadřazená složka <code>[P]</code> a datum <code>[Y][M][D][h][m][s]</code>.</li>
+<li><b>Datum pořízení fotky:</b> datum v masce může brát místo data změny datum pořízení z EXIF (JPEG, HEIC, RAW). Soubory bez EXIF dostanou datum změny.</li>
+<li><b>Hledat a nahradit</b> i regulárním výrazem (<code>$1</code> = skupina), rozlišování velikosti písmen, převod na malá, VELKÁ, První velké nebo Každé Slovo Velké a <b>odstranění diakritiky</b> (Žluťoučký → Zlutoucky).</li>
+<li><b>Živý náhled</b> starého a nového jména. Kolize jsou zvýrazněné červeně: dvě položky na stejné jméno, jméno, které už ve složce je, a neplatné znaky (/, dvojtečka, řídicí znaky, mezera na kraji). Volba „Jen kolize“ ukáže jen řádky, které je potřeba opravit.</li>
+<li><b>Fronta operací:</b> přejmenování běží jako úloha s průběhem a jde zrušit. Přes dočasná jména funguje i prohození dvou názvů nebo změna jen velikosti písmen. <b>⌘Z vrátí celou dávku</b> najednou.</li>
+<li><b>Předvolby:</b> masky si uložíte pod vlastním názvem. Připravené jsou tři: fotky podle data pořízení, složka + číslo a názvy pro web.</li>
+<li><b>Na serveru:</b> hromadné přejmenování funguje i na panelu SFTP, FTP a FTPS, včetně kontroly kolizí a ⌘Z (dokud je server v panelu připojený).</li>
+</ul>]]></description>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.8.0.zip" sparkle:edSignature="/I/dQYgOrejGBMNtmFXXLMXxVERIRsdPGLQ4JZ2XZzncM3qweE83EH3y39/sQvyfZx53vJFjIaYGZ3n40usfAg==" length="7681411" type="application/zip"/>
     </item>
   </channel>
 </rss>
