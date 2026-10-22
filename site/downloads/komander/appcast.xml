@@ -6,13 +6,18 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.9.0</title>
-      <pubDate>Wed, 21 Oct 2026 23:09:51 +0200</pubDate>
-      <sparkle:version>202610212307</sparkle:version>
-      <sparkle:shortVersionString>0.9.0</sparkle:shortVersionString>
+      <title>Komandér 0.9.1</title>
+      <pubDate>Thu, 22 Oct 2026 19:48:23 +0200</pubDate>
+      <sparkle:version>202610221945</sparkle:version>
+      <sparkle:shortVersionString>0.9.1</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<p>Opravy a vylepšení.</p>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.9.0.zip" sparkle:edSignature="k4V2uCoEOiyKZ43ysX67+/D/T+XYfMv5OeNjwHPzUSzIJI3MQ23X7fE5T5kZQ6tdHuTOC+rMfj35nptyEUy3DA==" length="8085607" type="application/zip"/>
+      <description><![CDATA[<h3>Komandér 0.9.1</h3>
+<ul>
+<li><b>Dlouhé názvy na jeden řádek:</b> název se zkrátí třemi tečkami uprostřed, takže přípona zůstane vidět. Celý název ukáže bublina po najetí myší.</li>
+<li><b>Přetažení do Koše:</b> soubory jde přetáhnout myší z panelu rovnou do Koše v Docku, do Finderu i do jiných appek. Když táhnete označený soubor, přetáhnou se všechny označené. Přesun do Koše vrátí ⌘Z.</li>
+<li><b>Šířka sloupců:</b> na rozhraní záhlaví sloupců se kurzor změní na ↔ a zůstane tak i během tažení.</li>
+</ul>]]></description>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.9.1.zip" sparkle:edSignature="CHk8au71XlaJx+sob07TfWQtPr2UArdHsLsuHczvbFRFhZUBXtN0mpyVJCvLcVS0HuDzTjZGhNPDTWDCOh84Cg==" length="8093079" type="application/zip"/>
     </item>
   </channel>
 </rss>
