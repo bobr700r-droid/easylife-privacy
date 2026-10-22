@@ -6,18 +6,17 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.9.4</title>
-      <pubDate>Thu, 22 Oct 2026 21:04:20 +0200</pubDate>
-      <sparkle:version>202610222101</sparkle:version>
-      <sparkle:shortVersionString>0.9.4</sparkle:shortVersionString>
+      <title>Komandér 0.9.5</title>
+      <pubDate>Thu, 22 Oct 2026 21:18:41 +0200</pubDate>
+      <sparkle:version>202610222116</sparkle:version>
+      <sparkle:shortVersionString>0.9.5</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.9.4</h3>
+      <description><![CDATA[<h3>Komandér 0.9.5</h3>
 <ul>
-<li><b>Analýza disku je 3–5× rychlejší:</b> domovská složka s 1,9 milionu souborů za 6–7 s místo 32–42 s, celý disk za 12–13 s místo víc než minuty. Složky se čtou hromadně a několika vlákny najednou.</li>
-<li><b>Prázdné a cloudové složky se přeskočí hned:</b> složky bez obsahu a soubory iCloudu, které jsou jen online, se vůbec neotevírají a nic se nestahuje.</li>
-<li><b>Přesnější velikosti:</b> nečitelná složka (bez oprávnění) už nezanoří ostatní složky pod sebe, systémové balíčky v AssetsV2 se nepočítají dvakrát a soubor s víc pevnými odkazy se počítá vždy u stejné složky.</li>
+<li><b>Celý disk sedí s obsazeným místem:</b> co sken nesmí nebo nemůže přečíst (chráněná data appek a systému, rejstřík Spotlightu, systémové svazky, uvolnitelné místo), je v grafu jako šedý dílek „Skryté a systémové místo“ – součet tak odpovídá obsazenému místu disku jako v DaisyDisku.</li>
+<li><b>Upozornění na chráněné složky:</b> bez Úplného přístupu k disku Komandér nevidí data jiných appek (třeba nahrávky obrazovky, Poštu nebo Zprávy). Pod grafem je tlačítko, které otevře správné místo v Nastavení.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.9.4.zip" sparkle:edSignature="Y5yJpMDUzmNayTWEcgg+1BHAgVz+crHTb89QVb2q9dfEOz2sM4NyEL5FtOiPNkUsJDCaeABwFA/7ajlSSDYWCQ==" length="8128102" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.9.5.zip" sparkle:edSignature="Mx5+tw6atS6s6RwQwCYg+XPUsOJi9Tqru3CTZwj8J9/fnDv+/mFew6ErFd/lI0fUBMT2gNYIW1bKbDpqM1K5CA==" length="8141709" type="application/zip"/>
     </item>
   </channel>
 </rss>
