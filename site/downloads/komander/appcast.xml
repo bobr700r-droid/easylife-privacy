@@ -6,19 +6,18 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.12.0</title>
-      <pubDate>Wed, 28 Oct 2026 19:30:02 +0100</pubDate>
-      <sparkle:version>202610281925</sparkle:version>
-      <sparkle:shortVersionString>0.12.0</sparkle:shortVersionString>
+      <title>Komandér 0.12.1</title>
+      <pubDate>Wed, 28 Oct 2026 19:48:44 +0100</pubDate>
+      <sparkle:version>202610281946</sparkle:version>
+      <sparkle:shortVersionString>0.12.1</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.12.0</h3>
+      <description><![CDATA[<h3>Komandér 0.12.1</h3>
 <ul>
-<li><b>Filtr v každém panelu:</b> vedle cesty je pole Filtrovat – napište kus názvu a panel ukáže jen odpovídající složky a soubory (bez ohledu na velká písmena a diakritiku, *.jpg funguje jako maska). Esc filtr zruší.</li>
-<li><b>Řazení podle druhu souboru:</b> obrázky, video, dokumenty, archivy… pohromadě. Pravý klik na záhlaví sloupců → Řadit podle → Druhu, menu Zobrazení nebo ⌃⌥⌘5. Přibyl sloupec Druh.</li>
-<li><b>Čitelné záhlaví sloupců:</b> nadpisy Přípona a Velikost se už nepřekrývají – úzký sloupec se rozšíří a nadpis nepřeteče do sousedního.</li>
-<li><b>Rychlejší NAS:</b> na síťovém disku se negenerují miniatury fotek (u RAW souborů by se stahovaly celé po síti a brzdily i otevírání složek) – místo nich barevná ikona druhu souboru.</li>
+<li><b>Je vidět, že Komandér pracuje:</b> mazání, přejmenování, změna atributů, vrácení kroku, příprava příloh nebo stahování z cloudu ukazují dole v okně štítek s kolečkem a popisem. Pomalé načítání složky ukáže „Načítám složku…“ přímo v panelu.</li>
+<li><b>Mazání na NASu dvakrát rychlejší a s průběhem:</b> trvalé mazání ukazuje počet smazaných souborů a dá se zastavit. Síťový disk maže každý soubor zvlášť, takže tisíce fotek pořád chvíli trvají – teď ale víte, kolik už je hotovo.</li>
+<li><b>Přejmenování na pozadí:</b> přejmenování na pomalém síťovém disku už nezastaví okno.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.12.0.zip" sparkle:edSignature="BzIjcXZS0MqgK3GeOThKzxCqTCTxDDScKnN0IsUmT1M1ASqta8vl6O6Zfb+rVrNO8dW8Cb5+u9lKPT4jicC3DA==" length="8709990" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.12.1.zip" sparkle:edSignature="ru01VutWbM8icFoxNpXaXP9wIDW1KtNGAIn/Ttfz6iqRlK/r+B6dMeiLBcpGANJvHFAZwMB39p5pXz2BMuL4Bg==" length="8766753" type="application/zip"/>
     </item>
   </channel>
 </rss>
