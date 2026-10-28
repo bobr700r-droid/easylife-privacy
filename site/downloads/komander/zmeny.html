@@ -3,3 +3,9 @@
 <li><b>Výběr panelu kliknutím kamkoli:</b> levý nebo pravý panel se aktivuje kliknutím kamkoli do něj – i do prázdného místa pod soubory, do záhlaví, adresního nebo stavového řádku. Dřív bylo potřeba kliknout přímo na soubor nebo složku.</li>
 <li><b>Mazání na NASu:</b> síťový disk (SMB) nemá Koš, takže „Do Koše“ dřív skončilo chybou. Teď se Komandér zeptá, jestli položky smazat trvale (jako Finder). Výchozí tlačítko je Zrušit a smazání nejde vrátit.</li>
 </ul>
+<h3>Komandér 0.11.1</h3>
+<ul>
+<li><b>Velikosti složek jen na jednom disku:</b> automatické velikosti složek v panelu už nepřecházejí do připojených svazků – síťového disku (NAS v /Volumes), iPhonu připojeného k Xcode ani systémových svazků. Panel u „/“ nebo domovské složky tak na pozadí neprochází celý NAS a zbytečně nezatěžuje Mac (sdílí disk i procesor s Analýzou disku).</li>
+<li><b>Analýza disku – Skenovat znovu:</b> procenta průběhu se berou jen z hlavičky uloženého skenu; dřív se kvůli nim souběžně se skenem načítal celý uložený strom (u celého disku miliony položek navíc v paměti).</li>
+<li><b>Analýza disku – přepnutí během skenu:</b> když během skenu vyberete jinou složku nebo disk, rozběhnutý sken se zastaví. Dřív běžel dál a jeho výsledek se uložil pod nově vybranou složku.</li>
+</ul>
