@@ -6,16 +6,17 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.11.4</title>
-      <pubDate>Wed, 28 Oct 2026 18:40:06 +0100</pubDate>
-      <sparkle:version>202610281837</sparkle:version>
-      <sparkle:shortVersionString>0.11.4</sparkle:shortVersionString>
+      <title>Komandér 0.11.5</title>
+      <pubDate>Wed, 28 Oct 2026 18:48:43 +0100</pubDate>
+      <sparkle:version>202610281846</sparkle:version>
+      <sparkle:shortVersionString>0.11.5</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.11.4</h3>
+      <description><![CDATA[<h3>Komandér 0.11.5</h3>
 <ul>
-<li><b>Už nezamrzá kvůli NASu:</b> když síťový disk chvíli neodpovídá, Komandér dřív po pár kliknutích přestal reagovat úplně. Čtení složek, velikostí, náhledu a našeptávače cesty teď běží odděleně a panel po 12 sekundách ohlásí „Složka neodpovídá“ – zbytek appky jede dál.</li>
+<li><b>Oprava pádu při spuštění:</b> od verze 0.11.3 Komandér občas spadl hned po otevření okna. Příčinou bylo sledování polohy panelů pro „aktivaci kliknutím kamkoli“ – to teď funguje jinak a okno se při startu už nezacyklí.</li>
+<li><b>Už nezamrzá kvůli NASu</b> (z 0.11.4): když síťový disk chvíli neodpovídá, panel po 12 sekundách ohlásí „Složka neodpovídá“ a zbytek appky jede dál.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.11.4.zip" sparkle:edSignature="52EAlMwCtY5IIGoWqjq6d4e0U3xGTwUE0ylc+wWS1maWwRAkwUUtOyjwXmnDheRcZoFdv4nMXR06p1GrcloRAA==" length="8681643" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.11.5.zip" sparkle:edSignature="LnwfytpNL4JhZsF37ZlMaPApYhmSMA+CVfgP/Z8k1JeEHG/A113yXP63N98uvRN2Njhc4/08UWXLhiTEZIGPDg==" length="8682575" type="application/zip"/>
     </item>
   </channel>
 </rss>
