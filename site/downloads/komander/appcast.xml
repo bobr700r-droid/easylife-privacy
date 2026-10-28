@@ -6,18 +6,17 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.11.0</title>
-      <pubDate>Tue, 27 Oct 2026 10:18:15 +0100</pubDate>
-      <sparkle:version>202610271014</sparkle:version>
-      <sparkle:shortVersionString>0.11.0</sparkle:shortVersionString>
+      <title>Komandér 0.11.3</title>
+      <pubDate>Wed, 28 Oct 2026 15:14:12 +0100</pubDate>
+      <sparkle:version>202610281511</sparkle:version>
+      <sparkle:shortVersionString>0.11.3</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.11.0</h3>
+      <description><![CDATA[<h3>Komandér 0.11.3</h3>
 <ul>
-<li><b>Síťový disk a NAS:</b> Nástroje → Připojit síťový disk (⇧⌘K) nebo + u nové sekce Síť v bočním panelu. Komandér sám najde NAS a sdílené Macy v síti, načte jejich sdílené složky a vybranou připojí přes SMB (umí i AFP a NFS). Heslo se uloží do Klíčenky, disk zůstane v bočním panelu: klik ho připojí a otevře, tečka ukazuje stav (připojeno, připojuji, chyba s důvodem), ⏏ odpojí. Pravým klikem zapnete Připojit při spuštění.</li>
-<li><b>Oblíbené složky snadno:</b> složku přetáhněte z panelu nebo z Finderu do Oblíbených, nebo na ní dejte pravý klik → Přidat do oblíbených, případně ⌘D pro složku panelu. Pořadí změníte tažením, dvojklik přejmenuje, pravý klik odebere. Oblíbená složka na NASu se po kliku sama připojí a otevře.</li>
-<li>Boční panel si pamatuje sbalené sekce.</li>
+<li><b>Výběr panelu kliknutím kamkoli:</b> levý nebo pravý panel se aktivuje kliknutím kamkoli do něj – i do prázdného místa pod soubory, do záhlaví, adresního nebo stavového řádku. Dřív bylo potřeba kliknout přímo na soubor nebo složku.</li>
+<li><b>Mazání na NASu:</b> síťový disk (SMB) nemá Koš, takže „Do Koše“ dřív skončilo chybou. Teď se Komandér zeptá, jestli položky smazat trvale (jako Finder). Výchozí tlačítko je Zrušit a smazání nejde vrátit.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.11.0.zip" sparkle:edSignature="n1Pa5nMNu/PFUFGemdDU+FdcbO9R1CZ1cxGyuxlpvmQJwv0NV3PkjYeQE23G+CpYKZcNbAVeMUUc8oXU4ATfDA==" length="8652813" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.11.3.zip" sparkle:edSignature="7c8wE5RKY0uYgbLV8UK+z72Zpt7iYAjSfnkOVxSD1RyBlp8Uo+0tXbvvyiMwvlj63A5UI7jw3yQlngHcYxapCA==" length="8673615" type="application/zip"/>
     </item>
   </channel>
 </rss>
