@@ -6,17 +6,16 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.11.3</title>
-      <pubDate>Wed, 28 Oct 2026 15:14:12 +0100</pubDate>
-      <sparkle:version>202610281511</sparkle:version>
-      <sparkle:shortVersionString>0.11.3</sparkle:shortVersionString>
+      <title>Komandér 0.11.4</title>
+      <pubDate>Wed, 28 Oct 2026 18:40:06 +0100</pubDate>
+      <sparkle:version>202610281837</sparkle:version>
+      <sparkle:shortVersionString>0.11.4</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.11.3</h3>
+      <description><![CDATA[<h3>Komandér 0.11.4</h3>
 <ul>
-<li><b>Výběr panelu kliknutím kamkoli:</b> levý nebo pravý panel se aktivuje kliknutím kamkoli do něj – i do prázdného místa pod soubory, do záhlaví, adresního nebo stavového řádku. Dřív bylo potřeba kliknout přímo na soubor nebo složku.</li>
-<li><b>Mazání na NASu:</b> síťový disk (SMB) nemá Koš, takže „Do Koše“ dřív skončilo chybou. Teď se Komandér zeptá, jestli položky smazat trvale (jako Finder). Výchozí tlačítko je Zrušit a smazání nejde vrátit.</li>
+<li><b>Už nezamrzá kvůli NASu:</b> když síťový disk chvíli neodpovídá, Komandér dřív po pár kliknutích přestal reagovat úplně. Čtení složek, velikostí, náhledu a našeptávače cesty teď běží odděleně a panel po 12 sekundách ohlásí „Složka neodpovídá“ – zbytek appky jede dál.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.11.3.zip" sparkle:edSignature="7c8wE5RKY0uYgbLV8UK+z72Zpt7iYAjSfnkOVxSD1RyBlp8Uo+0tXbvvyiMwvlj63A5UI7jw3yQlngHcYxapCA==" length="8673615" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.11.4.zip" sparkle:edSignature="52EAlMwCtY5IIGoWqjq6d4e0U3xGTwUE0ylc+wWS1maWwRAkwUUtOyjwXmnDheRcZoFdv4nMXR06p1GrcloRAA==" length="8681643" type="application/zip"/>
     </item>
   </channel>
 </rss>
