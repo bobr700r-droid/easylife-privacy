@@ -6,18 +6,17 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.12.1</title>
-      <pubDate>Wed, 28 Oct 2026 19:48:44 +0100</pubDate>
-      <sparkle:version>202610281946</sparkle:version>
-      <sparkle:shortVersionString>0.12.1</sparkle:shortVersionString>
+      <title>Komandér 0.13.0</title>
+      <pubDate>Wed, 28 Oct 2026 20:26:16 +0100</pubDate>
+      <sparkle:version>202610282023</sparkle:version>
+      <sparkle:shortVersionString>0.13.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.12.1</h3>
+      <description><![CDATA[<h3>Komandér 0.13.0</h3>
 <ul>
-<li><b>Je vidět, že Komandér pracuje:</b> mazání, přejmenování, změna atributů, vrácení kroku, příprava příloh nebo stahování z cloudu ukazují dole v okně štítek s kolečkem a popisem. Pomalé načítání složky ukáže „Načítám složku…“ přímo v panelu.</li>
-<li><b>Mazání na NASu dvakrát rychlejší a s průběhem:</b> trvalé mazání ukazuje počet smazaných souborů a dá se zastavit. Síťový disk maže každý soubor zvlášť, takže tisíce fotek pořád chvíli trvají – teď ale víte, kolik už je hotovo.</li>
-<li><b>Přejmenování na pozadí:</b> přejmenování na pomalém síťovém disku už nezastaví okno.</li>
+<li><b>Rychlé mazání přímo na NASu:</b> přes síť se maže soubor po souboru a tisíce fotek trvají i hodinu. Při mazání na NASu teď dialog nabídne <i>Nastavit rychlé mazání</i> – zadáte přístup SSH k NASu (heslo se uloží do Klíčenky) a Komandér pak velké složky smaže přímo na NASu, obvykle za pár sekund.</li>
+<li><b>Bezpečně:</b> před smazáním Komandér na NASu najde stejnou složku a ověří, že má stejný obsah jako na Macu. Když nesedí, nesmaže nic. Smazání přes síť zůstává jako druhá volba.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.12.1.zip" sparkle:edSignature="ru01VutWbM8icFoxNpXaXP9wIDW1KtNGAIn/Ttfz6iqRlK/r+B6dMeiLBcpGANJvHFAZwMB39p5pXz2BMuL4Bg==" length="8766753" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.13.0.zip" sparkle:edSignature="tff7Bcf93KN6wRvLLHfnUooNkk6a9Lup8YVLbn5ReaacNIFvrxRTXvyA0kD52hmDzaepOHxm7tnLmkpZgqLUAA==" length="8881342" type="application/zip"/>
     </item>
   </channel>
 </rss>
