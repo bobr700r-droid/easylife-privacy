@@ -6,17 +6,17 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.11.5</title>
-      <pubDate>Wed, 28 Oct 2026 18:48:43 +0100</pubDate>
-      <sparkle:version>202610281846</sparkle:version>
-      <sparkle:shortVersionString>0.11.5</sparkle:shortVersionString>
+      <title>Komandér 0.11.6</title>
+      <pubDate>Wed, 28 Oct 2026 19:05:00 +0100</pubDate>
+      <sparkle:version>202610281902</sparkle:version>
+      <sparkle:shortVersionString>0.11.6</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.11.5</h3>
+      <description><![CDATA[<h3>Komandér 0.11.6</h3>
 <ul>
-<li><b>Oprava pádu při spuštění:</b> od verze 0.11.3 Komandér občas spadl hned po otevření okna. Příčinou bylo sledování polohy panelů pro „aktivaci kliknutím kamkoli“ – to teď funguje jinak a okno se při startu už nezacyklí.</li>
-<li><b>Už nezamrzá kvůli NASu</b> (z 0.11.4): když síťový disk chvíli neodpovídá, panel po 12 sekundách ohlásí „Složka neodpovídá“ a zbytek appky jede dál.</li>
+<li><b>Velké složky na NASu se otevřou hned:</b> složky s tisíci fotkami na síťovém disku se dřív četly přes minutu a hlásily „Složka neodpovídá“. Komandér si u každého souboru zbytečně stahoval doplňkové údaje Finderu – na síťovém disku je už nečte, takže 9 000 souborů se načte za pár sekund.</li>
+<li><b>Volné místo na NASu:</b> stavový řádek na síťovém disku ukazoval „volno 0 kB“, teď ukazuje skutečné volné místo.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.11.5.zip" sparkle:edSignature="LnwfytpNL4JhZsF37ZlMaPApYhmSMA+CVfgP/Z8k1JeEHG/A113yXP63N98uvRN2Njhc4/08UWXLhiTEZIGPDg==" length="8682575" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.11.6.zip" sparkle:edSignature="EoZ4ODaPSlfA3lPwEmYVW6xok5brYwRE5bPCdqqXOeG/r+G8vVyH/JwNvbvkShH6kuU/YWv/VTR4Gxru4faLDQ==" length="8684147" type="application/zip"/>
     </item>
   </channel>
 </rss>
