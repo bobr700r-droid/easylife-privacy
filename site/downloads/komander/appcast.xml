@@ -6,17 +6,19 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.11.6</title>
-      <pubDate>Wed, 28 Oct 2026 19:05:00 +0100</pubDate>
-      <sparkle:version>202610281902</sparkle:version>
-      <sparkle:shortVersionString>0.11.6</sparkle:shortVersionString>
+      <title>Komandér 0.12.0</title>
+      <pubDate>Wed, 28 Oct 2026 19:30:02 +0100</pubDate>
+      <sparkle:version>202610281925</sparkle:version>
+      <sparkle:shortVersionString>0.12.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.11.6</h3>
+      <description><![CDATA[<h3>Komandér 0.12.0</h3>
 <ul>
-<li><b>Velké složky na NASu se otevřou hned:</b> složky s tisíci fotkami na síťovém disku se dřív četly přes minutu a hlásily „Složka neodpovídá“. Komandér si u každého souboru zbytečně stahoval doplňkové údaje Finderu – na síťovém disku je už nečte, takže 9 000 souborů se načte za pár sekund.</li>
-<li><b>Volné místo na NASu:</b> stavový řádek na síťovém disku ukazoval „volno 0 kB“, teď ukazuje skutečné volné místo.</li>
+<li><b>Filtr v každém panelu:</b> vedle cesty je pole Filtrovat – napište kus názvu a panel ukáže jen odpovídající složky a soubory (bez ohledu na velká písmena a diakritiku, *.jpg funguje jako maska). Esc filtr zruší.</li>
+<li><b>Řazení podle druhu souboru:</b> obrázky, video, dokumenty, archivy… pohromadě. Pravý klik na záhlaví sloupců → Řadit podle → Druhu, menu Zobrazení nebo ⌃⌥⌘5. Přibyl sloupec Druh.</li>
+<li><b>Čitelné záhlaví sloupců:</b> nadpisy Přípona a Velikost se už nepřekrývají – úzký sloupec se rozšíří a nadpis nepřeteče do sousedního.</li>
+<li><b>Rychlejší NAS:</b> na síťovém disku se negenerují miniatury fotek (u RAW souborů by se stahovaly celé po síti a brzdily i otevírání složek) – místo nich barevná ikona druhu souboru.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.11.6.zip" sparkle:edSignature="EoZ4ODaPSlfA3lPwEmYVW6xok5brYwRE5bPCdqqXOeG/r+G8vVyH/JwNvbvkShH6kuU/YWv/VTR4Gxru4faLDQ==" length="8684147" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.12.0.zip" sparkle:edSignature="BzIjcXZS0MqgK3GeOThKzxCqTCTxDDScKnN0IsUmT1M1ASqta8vl6O6Zfb+rVrNO8dW8Cb5+u9lKPT4jicC3DA==" length="8709990" type="application/zip"/>
     </item>
   </channel>
 </rss>
