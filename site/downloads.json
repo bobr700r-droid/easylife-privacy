@@ -1,5 +1,5 @@
 {
- "_info": "Stránka Ke stažení (/ke-stazeni/, /en/download/): appky mimo App Store a TestFlight. Soubory jsou v GitHub Releases veřejných rep bobr700r-droid/<repo> (stálý odkaz releases/latest/download/<file>.dmg); version/size/min/arch zapisuje tools/mac-instalacka/sparkle-vydani.sh (repo easylife-vedeni). Komandér má vlastní stránku /komander/ a appcast na webu (Komander/tools/release.sh). platform: mac | windows; updates: sparkle | vlastni; ext: přípona souboru (výchozí dmg, pro Windows např. exe nebo zip); u Windows min = verze Windows (\"10\"), arch x64 | arm64.",
+ "_info": "Stránka Ke stažení (/ke-stazeni/, /en/download/): appky mimo App Store a TestFlight. Soubory jsou v GitHub Releases veřejných rep bobr700r-droid/<repo> (stálý odkaz releases/latest/download/<file>.dmg); version/size/min/arch zapisuje tools/mac-instalacka/sparkle-vydani.sh (repo easylife-vedeni). Komandér má vlastní stránku /komander/ a appcast na webu (Komander/tools/release.sh). platform: mac | windows; updates: sparkle | vlastni; ext: přípona souboru (výchozí dmg, pro Windows např. exe nebo zip); u Windows min = verze Windows (\"10\"), arch x64 | arm64. Počítadlo stažení a aktuální verzi/velikost bere build z GitHub API (releases repa; installer = <file>.<ext>, aktualizace = updatePrefix nebo <file>.zip); pageLangs = jazyky, ve kterých existuje stránka page (jinak odkaz na českou).",
  "apps": [
   {
    "id": "komander",
@@ -10,7 +10,10 @@
    "desc": {
     "cs": "Dvoupanelový správce souborů – rychlý jako Total Commander, s frontou kopírování, F-klávesami a rychlým mazáním přímo na NASu.",
     "en": "A dual-pane file manager – as fast as Total Commander, with a copy queue, F-keys and fast deletes right on your NAS."
-   }
+   },
+   "pageLangs": [
+    "cs"
+   ]
   },
   {
    "id": "fotoarchiv",
@@ -135,6 +138,37 @@
    "desc": {
     "cs": "Kalendář, Připomínky a Poznámky propojené podle kategorií – kolize, plánování dovolené podle svátků a rychlé zadání větou.",
     "en": "Calendar, Reminders and Notes linked by category – clashes, holiday planning around public holidays and quick entry in plain words."
+   }
+  },
+  {
+   "id": "herna",
+   "name": "Herna",
+   "platform": "windows",
+   "repo": "herna-releases",
+   "file": "Herna-setup",
+   "ext": "exe",
+   "updatePrefix": "Herna-update-",
+   "page": "/herna/",
+   "pageLangs": [
+    "cs"
+   ],
+   "updates": "vlastni",
+   "version": "1.8.8",
+   "date": "2026-10-29",
+   "size": 83145864,
+   "min": "10",
+   "arch": "x64",
+   "desc": {
+    "cs": "Konzolový launcher pro Windows: všechny hry ze Steamu, Epicu a Xboxu na jednom místě, ovládané herním ovladačem.",
+    "en": "A console-style launcher for Windows: all your Steam, Epic and Xbox games in one place, controlled with a gamepad."
+   },
+   "req": {
+    "cs": "Windows 10/11 64bit, doporučený ovladač Xbox nebo PlayStation",
+    "en": "Windows 10/11 64-bit, an Xbox or PlayStation controller recommended"
+   },
+   "smartscreen": {
+    "cs": "Pokud Windows zobrazí upozornění, klikni na Další informace → Přesto spustit.",
+    "en": "If Windows shows a warning, click More info → Run anyway."
    }
   }
  ]

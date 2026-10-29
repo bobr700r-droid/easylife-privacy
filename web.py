@@ -23,6 +23,7 @@ CZ, EU = "https://easyforlife.cz", "https://easyforlife.eu"
 FLY_IPV4 = "66.241.124.47"  # Fly app easyforlife-redirect
 DIST = HERE / "dist"
 DOWNLOADS = HERE / "site" / "downloads.json"  # Ke stažení: appky mimo App Store a TestFlight (soubory v GitHub Releases, viz _info)
+HERNA_LEGAL = HERE / "site" / "legal" / "herna.json"  # podmínky a zásady Herny beze změn z konzole-launcher/renderer/legal.js
 DL_ICONS = HERE / "site" / "downloads" / "icons"  # ikony appek ke stažení (256 px PNG) → /dl/<id>.png
 KOMANDER = HERE / "site" / "downloads" / "komander"  # Komandér pro Mac mimo App Store: .dmg, .zip a appcast.xml z Komander/tools/release.sh
 
@@ -237,6 +238,7 @@ T = {
               "Apps für Mac und Windows, die es nicht im App Store oder bei TestFlight gibt. Lade sie direkt hier – signiert, geprüft und mit automatischen Updates.",
               "Apps para Mac y Windows que no están en la App Store ni en TestFlight. Descárgalas aquí mismo: firmadas, verificadas y con actualizaciones automáticas.",
               "Aplikacje na Maca i Windows, których nie ma w App Store ani w TestFlight. Pobierzesz je tutaj – podpisane, sprawdzone i z automatycznymi aktualizacjami."],
+  "dl_count": ["Staženo {n}×", "Downloaded {n}×", "Stiahnuté {n}×", "{n}× heruntergeladen", "Descargada {n} veces", "Pobrano {n}×"],
   "dl_btn": ["Stáhnout", "Download", "Stiahnuť", "Laden", "Descargar", "Pobierz"],
   "dl_more": ["Více o appce", "About the app", "Viac o aplikácii", "Mehr zur App", "Más sobre la app", "Więcej o aplikacji"],
   "dl_win_soon": ["Windows – připravujeme", "Windows – coming soon", "Windows – pripravujeme", "Windows – in Vorbereitung", "Windows – en preparación", "Windows – w przygotowaniu"],
@@ -280,7 +282,7 @@ var tp=a&&a.checked?a.dataset.android:f.topic.value;if(tp)d.topic=tp;b.disabled=
 fetch(f.action,{method:"POST",credentials:"omit",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)}).then(function(r){return r.json().then(function(j){return r.ok&&j.ok})})
 .catch(function(){return false}).then(function(ok){m.hidden=false;m.textContent=ok?f.dataset.ok:f.dataset.err;if(ok)f.querySelector(".nl-row").hidden=true;else b.disabled=false})})})</script>"""
 COPYRIGHT = "© 2026 Lukáš Ochrana"
-VERSION = "1.8.0"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
+VERSION = "1.9.0"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
 # Podmínky užití – licence (13. 10. 2026), ve všech 6 jazycích (sk/de/es/pl a zdravotní sekce doplněny při auditu Lékárničky).
 TERMS = {
   "cs": ("Podmínky užití", "Souhlas, licence, odpovědnost a autorská práva k aplikacím EasyForLife.", [
@@ -439,6 +441,43 @@ for _l, _p in LIABILITY_TERMS.items():  # souhlas na začátek, zvláštní upoz
 def terms_slug(lang):
     """Adresa podmínek: /podminky/ (cs, sk), jinak /terms/ – odkaz z appek: https://easyforlife.cz/podminky/"""
     return "podminky" if lang in ("cs", "sk") else "terms"
+
+_GH = {}
+def gh_release(repo, asset, upd):
+    """Poslední vydání z GitHub API při buildu: verze (tag bez v), velikost instalačky, součet stažení instalačky (a aktualizací)
+    přes všechna vydání. Bez sítě nebo nad limitem (60/h bez GITHUB_TOKEN) vrátí {} a platí údaje z downloads.json."""
+    if repo not in _GH:
+        import urllib.request
+        req = urllib.request.Request(f"https://api.github.com/repos/bobr700r-droid/{repo}/releases?per_page=100", headers={"Accept": "application/vnd.github+json"})
+        if os.environ.get("GITHUB_TOKEN"):
+            req.add_header("Authorization", f'Bearer {os.environ["GITHUB_TOKEN"]}')
+        try:
+            _GH[repo] = json.load(urllib.request.urlopen(req, timeout=15))
+        except Exception as e:
+            print("web: GitHub API", repo, e)
+            _GH[repo] = []
+    rel = [r for r in _GH[repo] if not r.get("draft") and not r.get("prerelease")]
+    if not rel:
+        return {}
+    out = {"downloads": sum(x["download_count"] for r in rel for x in r["assets"] if x["name"] == asset),
+           "updatesDownloaded": sum(x["download_count"] for r in rel for x in r["assets"] if x["name"].startswith(upd))}
+    last = max(rel, key=lambda r: r["published_at"] or "")
+    out["version"] = last["tag_name"].lstrip("v")
+    out["date"] = (last["published_at"] or "")[:10]
+    size = next((x["size"] for x in last["assets"] if x["name"] == asset), None)
+    if size:
+        out["size"] = size
+    return out
+
+# Počítadlo stažení: obnoví čísla z GitHub API v prohlížeči (cache 1 h v localStorage, limit API 60/h na IP)
+DL_SCRIPT = """<script>(function(){var els=document.querySelectorAll('[data-gh]');if(!els.length||!window.fetch)return;var repos={};
+els.forEach(function(e){repos[e.dataset.gh]=1});Object.keys(repos).forEach(function(r){var k='gh:'+r,c=null;
+try{c=JSON.parse(localStorage.getItem(k)||'null')}catch(e){}
+var use=function(d){document.querySelectorAll('[data-gh="'+r+'"]').forEach(function(e){var n=0;d.forEach(function(x){x.assets.forEach(function(a){if(a.name===e.dataset.asset)n+=a.download_count})});
+e.textContent=e.dataset.fmt.replace('{n}',n.toLocaleString(e.dataset.lang==='cs'?'cs-CZ':e.dataset.lang))})};
+if(c&&Date.now()-c.t<36e5)return use(c.d);
+fetch('https://api.github.com/repos/bobr700r-droid/'+r+'/releases?per_page=100').then(function(x){return x.ok?x.json():null}).then(function(d){if(!d)return;
+d=d.map(function(x){return{assets:x.assets.map(function(a){return{name:a.name,download_count:a.download_count}})}});try{localStorage.setItem(k,JSON.stringify({t:Date.now(),d:d}))}catch(e){}use(d)}).catch(function(){})})})();</script>"""
 
 def dl_slug(lang):
     """Ke stažení: /ke-stazeni/ (cs, sk), jinak /download/."""
@@ -688,6 +727,7 @@ background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gra
 .dl-head h3{font:800 1.35rem/1.1 var(--display);letter-spacing:-.02em;margin:0}.dl-ver{margin:4px 0 0;font-weight:800;color:var(--muted);font-size:.9rem}
 .dl-desc{margin:0;line-height:1.5}.dl-req{margin:0;font-weight:700;font-size:.92rem}.dl-facts{margin:0;color:var(--muted);font-size:.86rem;font-weight:600}
 .dl-upd{display:flex;align-items:center;gap:6px;margin:0;font-size:.86rem;font-weight:700;color:var(--green)}.dl-upd .ico{width:16px;height:16px}
+.dl-count{white-space:nowrap}.legal ul{padding-left:1.2em;line-height:1.55}.legal p{line-height:1.6}
 .dl-act{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:auto 0 0;padding-top:6px}
 .dl-beta{margin:40px 0 20px;padding:28px;border-radius:32px;background:linear-gradient(120deg,color-mix(in oklab,var(--blue) 14%,var(--surface)),color-mix(in oklab,var(--purple) 12%,var(--surface)));border:1px solid var(--line)}
 .dl-beta h2{font:800 clamp(1.4rem,3vw,2rem)/1.1 var(--display);letter-spacing:-.03em;margin:0 0 10px}.dl-beta p{max-width:46rem;line-height:1.55}
@@ -1265,36 +1305,64 @@ class Site:
                     "Dvoupanelový správce souborů pro Mac s F-klávesami, frontou kopírování a automatickými aktualizacemi.",
                     body, self.operator, langs=["cs"])
 
+    def dl_apps(self):
+        """Položky ze site/downloads.json doplněné o živé údaje: Komandér z appcastu na webu, ostatní z GitHub API (verze, velikost, stažení)."""
+        if getattr(self, "_dl", None) is None:
+            d = json.loads(DOWNLOADS.read_text(encoding="utf-8"))
+            for a in d["apps"]:
+                if a["id"] == "komander":  # verze a .dmg z appcastu Komandéru (Komander/tools/release.sh)
+                    text = (KOMANDER / "appcast.xml").read_text(encoding="utf-8") if (KOMANDER / "appcast.xml").exists() else ""
+                    ver = text.split("<sparkle:shortVersionString>")[1].split("<")[0] if "<sparkle:shortVersionString>" in text else ""
+                    dmg = KOMANDER / f"Komander-{ver}.dmg"
+                    a["ok"] = bool(ver and dmg.exists())
+                    if a["ok"]:
+                        a.update(version=ver, size=dmg.stat().st_size, min="15.0", arch="universal", href=f"/komander/{dmg.name}", icon="/komander/icon.png")
+                    continue
+                a["ok"] = True
+                a["asset"] = f'{a["file"]}.{a.get("ext", "dmg")}'
+                a["href"] = f'https://github.com/bobr700r-droid/{a["repo"]}/releases/latest/download/{a["asset"]}'
+                a["icon"] = f'/dl/{a["id"]}.png'
+                a.update(gh_release(a["repo"], a["asset"], a.get("updatePrefix") or f'{a["file"]}.zip'))
+            self._dl = d["apps"]
+        return self._dl
+
+    def dl_count(self, a, lang, cls="dl-count"):
+        """„Staženo 1 234×“ – instalačky ze všech vydání; v prohlížeči se číslo obnoví z GitHub API (DL_SCRIPT)."""
+        if a.get("downloads") is None:
+            return ""
+        n = f'{a["downloads"]:,}'.replace(",", " " if lang != "en" else ",")
+        return (f'<span class="{cls}" data-gh="{esc(a["repo"])}" data-asset="{esc(a["asset"])}" data-fmt="{esc(t("dl_count", lang))}" data-lang="{lang}">'
+                f'{esc(t("dl_count", lang).format(n=n))}</span>')
+
+    def dl_facts(self, a, lang):
+        mb = lambda n: (f"{n / 1_000_000:.0f}" if n >= 20_000_000 else f"{n / 1_000_000:.1f}").replace(".", "," if lang != "en" else ".") + " MB"
+        if a["platform"] == "windows":  # min např. "10" → Windows 10+, arch x64 / arm64
+            return [f'Windows {a["min"]}+', a.get("arch", "x64"), mb(a["size"])]
+        return [f'macOS {a["min"].removesuffix(".0")}+', t("dl_uni" if a.get("arch") == "universal" else "dl_arm", lang), mb(a["size"])]
+
     def downloads(self, lang):
-        """Ke stažení: appky mimo App Store a TestFlight ze site/downloads.json (Mac a Windows), Komandér z appcastu na webu."""
-        d = json.loads(DOWNLOADS.read_text(encoding="utf-8"))
+        """Ke stažení: appky mimo App Store a TestFlight ze site/downloads.json (Mac a Windows)."""
         tx = lambda m: m.get(lang) or m.get("cs" if lang == "sk" else "en") or m.get("en", "")
-        mb = lambda n: (f"{n / 1_000_000:.0f}" if n >= 20_000_000 else f"{n / 1_000_000:.1f}").replace(".", "," if lang in ("cs", "sk", "de", "es", "pl") else ".") + " MB"
         def card(a, k):
-            ap = dict(a)
-            if a["id"] == "komander":  # verze a .dmg z appcastu Komandéru (Komander/tools/release.sh)
-                text = (KOMANDER / "appcast.xml").read_text(encoding="utf-8") if (KOMANDER / "appcast.xml").exists() else ""
-                ver = text.split("<sparkle:shortVersionString>")[1].split("<")[0] if "<sparkle:shortVersionString>" in text else ""
-                dmg = KOMANDER / f"Komander-{ver}.dmg"
-                if not (ver and dmg.exists()):
-                    return ""
-                ap.update(version=ver, size=dmg.stat().st_size, min="15.0", arch="universal", href=f"/komander/{dmg.name}", icon="/komander/icon.png")
-            else:
-                ap["href"] = f'https://github.com/bobr700r-droid/{a["repo"]}/releases/latest/download/{a["file"]}.{a.get("ext", "dmg")}'
-                ap["icon"] = f'/dl/{a["id"]}.png'
-            if a["platform"] == "windows":  # min např. "10" → Windows 10+, arch x64 / arm64
-                facts = [f'Windows {ap["min"]}+', ap.get("arch", "x64"), mb(ap["size"])]
-            else:
-                facts = [f'macOS {ap["min"].removesuffix(".0")}+', t("dl_uni" if ap.get("arch") == "universal" else "dl_arm", lang), mb(ap["size"])]
+            if not a["ok"]:
+                return ""
+            facts = " · ".join(esc(x) for x in self.dl_facts(a, lang))
+            cnt = self.dl_count(a, lang)
             req = f'<p class="dl-req">{t("dl_req", lang)}: {esc(tx(a["req"]))}</p>' if a.get("req") else ""
             upd = f'<p class="dl-upd">{icon("check")}<span>{t("dl_upd", lang)}</span></p>' if a.get("updates") else ""
-            more = f'<a class="ghost" href="{url(lang, a["page"].strip("/"))}">{t("dl_more", lang)}</a>' if a.get("page") else ""
-            return (f'<article class="dl-card rv" style="--rd:{k * 60}ms"><div class="dl-head"><img src="{ap["icon"]}" alt="" width="72" height="72" loading="lazy">'
-                    f'<div><h3>{esc(a["name"])}</h3><p class="dl-ver">{esc(ap["version"])}</p></div></div>'
-                    f'<p class="dl-desc">{esc(tx(a["desc"]))}</p>{req}<p class="dl-facts">{" · ".join(esc(x) for x in facts)}</p>{upd}'
-                    f'<p class="dl-act"><a class="btn" href="{esc(ap["href"])}" download>{t("dl_btn", lang)} <span>↓</span></a>{more}</p></article>')
-        mac = "".join(card(a, k) for k, a in enumerate(x for x in d["apps"] if x["platform"] == "mac"))
-        win = "".join(card(a, k) for k, a in enumerate(x for x in d["apps"] if x["platform"] == "windows"))
+            ss = f'<p class="dl-req">{esc(tx(a["smartscreen"]))}</p>' if a.get("smartscreen") else ""
+            more = ""
+            if a.get("page"):
+                pl = a.get("pageLangs") or LANGS
+                href = url(lang, a["page"].strip("/")) if lang in pl else full(pl[0], a["page"].strip("/"))
+                more = f'<a class="ghost" href="{href}">{t("dl_more", lang)}</a>'
+            return (f'<article class="dl-card rv" style="--rd:{k * 60}ms"><div class="dl-head"><img src="{a["icon"]}" alt="" width="72" height="72" loading="lazy">'
+                    f'<div><h3>{esc(a["name"])}</h3><p class="dl-ver">{esc(a["version"])}</p></div></div>'
+                    f'<p class="dl-desc">{esc(tx(a["desc"]))}</p>{req}<p class="dl-facts">{facts}{" · " + cnt if cnt else ""}</p>{upd}{ss}'
+                    f'<p class="dl-act"><a class="btn" href="{esc(a["href"])}" download>{t("dl_btn", lang)} <span>↓</span></a>{more}</p></article>')
+        apps = self.dl_apps()
+        mac = "".join(card(a, k) for k, a in enumerate(x for x in apps if x["platform"] == "mac"))
+        win = "".join(card(a, k) for k, a in enumerate(x for x in apps if x["platform"] == "windows"))
         if not win:
             win = (f'<article class="dl-card soon rv"><div class="dl-head"><div><h3>{t("dl_win_soon", lang)}</h3></div></div>'
                    f'<p class="dl-desc">{t("dl_win_lead", lang)}</p></article>')
@@ -1302,14 +1370,68 @@ class Site:
         mail = f"mailto:{CONTACT}?subject=EasyForLife%20%E2%80%93%20testov%C3%A1n%C3%AD"
         body = (f'<section class="page-top"><div class="blobs"><i></i><i></i><i></i></div><div class="wrap"><div class="detail">'
                 f'<h1>{t("dl_title", lang)}</h1><p class="lead">{t("dl_lead", lang)}</p></div></div></section>'
-                f'<div class="wrap"><h2 class="sub rv">Mac</h2><div class="dl-grid">{mac}</div>'
+                f'<div class="wrap"><h2 class="sub rv">Windows</h2><div class="dl-grid">{win}</div>'
+                f'<h2 class="sub rv">Mac</h2><div class="dl-grid">{mac}</div>'
                 f'<p class="note">{icon("shield")}<span>{t("dl_sign", lang)}</span></p>'
                 f'<div class="detail"><h2 class="sub rv">{t("dl_install", lang)}</h2><ol>{steps}</ol></div>'
-                f'<h2 class="sub rv">Windows</h2><div class="dl-grid">{win}</div>'
                 f'<div class="dl-beta rv"><h2>{t("dl_beta_t", lang)}</h2><p>{t("dl_beta", lang)}</p>'
-                f'<p class="actions"><a class="btn big" href="{mail}">{t("dl_beta_btn", lang)} <span>→</span></a><a class="ghost" href="{mail}">{CONTACT}</a></p></div></div>')
+                f'<p class="actions"><a class="btn big" href="{mail}">{t("dl_beta_btn", lang)} <span>→</span></a><a class="ghost" href="{mail}">{CONTACT}</a></p></div></div>'
+                + DL_SCRIPT)
         return page(lang, {l: dl_slug(l) for l in LANGS}, f'{t("dl_title", lang)} – Mac {"a" if lang in ("cs", "sk") else "&"} Windows | EasyForLife',
                     t("dl_lead", lang), body, self.operator)
+
+    def herna(self, sub=None):
+        """Herna (Windows, jen česky): /herna/, /herna/podminky/, /herna/soukromi/ – právní texty beze změn ze site/legal/herna.json."""
+        lang = "cs"
+        a = next(x for x in self.dl_apps() if x["id"] == "herna")
+        legal = json.loads(HERNA_LEGAL.read_text(encoding="utf-8"))
+        top = '<section class="page-top"><div class="blobs"><i></i><i></i><i></i></div><div class="wrap"><div class="detail">'
+        if sub:  # podmínky / soukromí: řádky beze změn – nadpisy „1. …“, odrážky „• …“, ostatní odstavce
+            lines = [x for x in legal["terms" if sub == "podminky" else "privacy"].split("\n")]
+            out, ul = [], []
+            for x in lines[2:]:
+                if x.startswith("• "):
+                    ul.append(f"<li>{esc(x[2:])}</li>"); continue
+                if ul:
+                    out.append(f'<ul>{"".join(ul)}</ul>'); ul = []
+                if not x.strip():
+                    continue
+                out.append(f'<h2 class="sub">{esc(x)}</h2>' if x[:1].isdigit() and ". " in x[:4] else f"<p>{esc(x)}</p>")
+            if ul:
+                out.append(f'<ul>{"".join(ul)}</ul>')
+            h1 = "Podmínky užití aplikace Herna" if sub == "podminky" else "Zásady ochrany soukromí aplikace Herna"  # = první řádek textu (velkými písmeny)
+            body = (f'{top}<p><a class="ghost" href="/herna/">← Herna</a></p><h1>{h1}</h1><p class="lead">{esc(lines[1])}</p></div></div></section>'
+                    f'<div class="wrap"><div class="detail legal">{"".join(out)}<p class="note">{icon("shield")}<span>{esc(COPYRIGHT)}</span></p></div></div>')
+            return page(lang, f"herna/{sub}", f"{h1} | EasyForLife", h1, body, self.operator, langs=["cs"])
+        facts = " · ".join(esc(x) for x in self.dl_facts(a, lang))
+        date = datetime.date.fromisoformat(a["date"]).strftime("%-d. %-m. %Y") if a.get("date") else ""
+        feats = "".join(f'<li>{icon("check")}{esc(x)}</li>' for x in (
+            "Hry ze Steamu, Epic Games, Xboxu a Game Passu na jedné obrazovce",
+            "Ovládání ovladačem Xbox nebo PlayStation, spuštění jedním tlačítkem",
+            "Oblíbené hry, profily pro celou rodinu s rodičovským zámkem, klidový režim",
+            "Statistiky hraní a zálohy uložených pozic",
+            "Obchod se srovnáním cen napříč obchody, hlídání slev a seznam „Chci koupit“",
+            "U her ukáže češtinu – oficiální i komunitní",
+            "Zdarma a sama se aktualizuje"))
+        body = (f'{top}<p><img src="{a["icon"]}" alt="" width="112" height="112" style="border-radius:22%;filter:drop-shadow(0 12px 22px rgb(0 0 0/.25))"></p>'
+                f'<h1>Herna</h1><p class="lead">{esc(a["desc"]["cs"])}</p>'
+                f'<p class="actions"><a class="btn big" href="{esc(a["href"])}" download>Stáhnout Hernu {esc(a["version"])} <span>↓</span></a>'
+                f'<a class="ghost" href="https://github.com/bobr700r-droid/{a["repo"]}/releases/latest">Stránka vydání</a></p>'
+                f'<p class="note">{icon("shield")}<span>{facts}{" · verze " + esc(a["version"]) + " (" + date + ")" if date else ""}'
+                f'{" · " + self.dl_count(a, lang) if a.get("downloads") is not None else ""}</span></p>'
+                f'<p class="note">{icon("check")}<span>{esc(a["smartscreen"]["cs"])}</span></p></div></div></section>'
+                f'<div class="wrap"><div class="detail"><p class="lead">Herna udělá z počítače u televize herní konzoli. Hry ze Steamu, Epic Games, Xboxu a Game Passu najdeš '
+                f'na jedné obrazovce. Ovládáš ji ovladačem Xbox nebo PlayStation a spouštíš jedním tlačítkem. Umí oblíbené hry, profily pro celou rodinu s rodičovským zámkem, '
+                f'klidový režim, statistiky hraní a zálohy uložených pozic. Má obchod se srovnáním cen napříč obchody, hlídáním slev a seznamem „Chci koupit“. U her ukáže '
+                f'češtinu, oficiální i komunitní. Je zdarma a sama se aktualizuje.</p>'
+                f'<ul class="ticks">{feats}</ul>'
+                f'<h2 class="sub">Požadavky</h2><ul><li>Windows 10 nebo 11, 64bit</li><li>Doporučený ovladač Xbox nebo PlayStation</li></ul>'
+                f'<h2 class="sub">Instalace</h2><ol><li>Stáhni Herna-setup.exe a spusť ho.</li><li>{esc(a["smartscreen"]["cs"])}</li>'
+                f'<li>Nové verze si Herna stáhne a nainstaluje sama (lze vypnout v Nastavení → Systém).</li></ol>'
+                f'<p class="note">{icon("shield")}<span><a href="/herna/podminky/">Podmínky užití</a> · <a href="/herna/soukromi/">Zásady ochrany soukromí</a> · '
+                f'Autor: Lukáš Ochrana · {esc(COPYRIGHT)}</span></p>'
+                f'<p class="note"><span>{esc(legal["disclaimer"])}</span></p></div></div>' + DL_SCRIPT)
+        return page(lang, "herna", "Herna – konzolový launcher pro Windows | EasyForLife", a["desc"]["cs"], body, self.operator, langs=["cs"])
 
     def terms(self, lang):
         title, lead, parts = TERMS[lang]
@@ -1489,6 +1611,9 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
             if lang == "cs":
                 self.write("komander/index.html", self.komander(), root)
                 urls[site_of(lang)].append((lang, "komander", ["cs"]))
+                for sub in (None, "podminky", "soukromi"):  # Herna (Windows): /herna/, /herna/podminky/, /herna/soukromi/
+                    self.write(f'herna/{sub + "/" if sub else ""}index.html', self.herna(sub), root)
+                    urls[site_of(lang)].append((lang, f'herna/{sub}' if sub else "herna", ["cs"]))
             urls[site_of(lang)] += [(lang, None, LANGS), (lang, {l: sup(l) for l in LANGS}, LANGS),
                                     (lang, {l: terms_slug(l) for l in LANGS}, LANGS), (lang, {l: news_slug(l) for l in LANGS}, LANGS),
                                     (lang, {l: dl_slug(l) for l in LANGS}, LANGS)]
