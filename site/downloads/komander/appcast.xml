@@ -6,17 +6,21 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.13.0</title>
-      <pubDate>Wed, 28 Oct 2026 20:26:16 +0100</pubDate>
-      <sparkle:version>202610282023</sparkle:version>
-      <sparkle:shortVersionString>0.13.0</sparkle:shortVersionString>
+      <title>Komandér 0.14.0</title>
+      <pubDate>Thu, 29 Oct 2026 23:26:01 +0100</pubDate>
+      <sparkle:version>202610292323</sparkle:version>
+      <sparkle:shortVersionString>0.14.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.13.0</h3>
+      <description><![CDATA[<h3>Komandér 0.14.0</h3>
 <ul>
-<li><b>Rychlé mazání přímo na NASu:</b> přes síť se maže soubor po souboru a tisíce fotek trvají i hodinu. Při mazání na NASu teď dialog nabídne <i>Nastavit rychlé mazání</i> – zadáte přístup SSH k NASu (heslo se uloží do Klíčenky) a Komandér pak velké složky smaže přímo na NASu, obvykle za pár sekund.</li>
-<li><b>Bezpečně:</b> před smazáním Komandér na NASu najde stejnou složku a ověří, že má stejný obsah jako na Macu. Když nesedí, nesmaže nic. Smazání přes síť zůstává jako druhá volba.</li>
+<li><b>Zamčené soubory:</b> fotky chráněné ve fotoaparátu (Chránit / Protect) mají atribut „jen pro čtení“ a přesun nebo smazání u nich končil chybou „Operation not permitted“. Komandér je teď pozná předem a jednou se zeptá: <i>Odemknout a pokračovat</i> (u cíle zámek zase vrátí), <i>Přeskočit</i>, nebo <i>Zrušit</i>. Platí pro přesun, Koš, trvalé mazání i přejmenování.</li>
+<li><b>Zámek v panelu:</b> zamčené soubory mají za názvem malý zámek, v Informacích (⌘I) je přepínač <i>Zamčeno</i>, ⌥⌘L zamkne nebo odemkne výběr i celé složky s obsahem (s průběhem, jde vrátit ⌘Z) a ⇧⌥⌘L najde všechny zamčené soubory ve složce.</li>
+<li><b>Srozumitelné chyby:</b> místo „Operation not permitted“ fronta řekne proč – zamčený soubor, chybí oprávnění na NASu, macOS nedovolil přístup (s tlačítkem do Nastavení), soubor je otevřený – a nabídne <i>Zkusit znovu</i>, u zamčených <i>Odemknout a zkusit znovu</i>.</li>
+<li><b>Kopie zamčených souborů</b> už nekončí chybou a nenechávají na disku skryté rozpracované soubory.</li>
+<li><b>Přesun mezi sdíleními přímo na NASu:</b> F5 / F6 z jedné sdílené složky NASu do jiné (např. usbshare1-2 → homes) neposílá data přes Mac, ale provede se na NASu přes SSH. Zapnout nebo vypnout jde v Nastavení → Obecné → Síťové disky.</li>
+<li><b>Plynulejší posun velkých složek na NASu:</b> štítky souborů se čtou na pozadí jen pro řádky, které jsou vidět – posun už nečeká na síť.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.13.0.zip" sparkle:edSignature="tff7Bcf93KN6wRvLLHfnUooNkk6a9Lup8YVLbn5ReaacNIFvrxRTXvyA0kD52hmDzaepOHxm7tnLmkpZgqLUAA==" length="8881342" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.14.0.zip" sparkle:edSignature="liJb54eJBxk5oJOjXOj58H2+/DHWtW569vf6YIX+EIeyMKOLwIpaBQrMknyYsf3pGZLDAKGNOvek4BTsOG/BDw==" length="9091431" type="application/zip"/>
     </item>
   </channel>
 </rss>
