@@ -1,0 +1,73 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Lumen – Strážce lucerny je akční roguelite střílečka. Se Strážcem a jeho lucernou procházíš Mlžný les: vybíráš cestu po mapě, sbíráš perky a výbavu a porážíš bossy. Každý běh je jiný.",
+   "Hra funguje celá offline – bez účtu, bez reklam a bez nákupů. Postup se ukládá jen v zařízení."
+  ],
+  "en": [
+   "Lumen – Lantern Warden is an action roguelite shooter. With the Warden and the lantern you make your way through the Misty Forest: choose your path on the map, collect perks and gear and defeat the bosses. Every run is different.",
+   "The game works entirely offline – no account, no ads and no purchases. Progress is stored only on the device."
+  ],
+  "sk": [
+   "Lumen – Strážca lampáša je akčná roguelite strieľačka. So Strážcom a jeho lampášom prechádzaš Hmlistý les: vyberáš cestu po mape, zbieraš perky a výbavu a porážaš bossov. Každý beh je iný.",
+   "Hra funguje celá offline – bez účtu, bez reklám a bez nákupov. Postup sa ukladá len v zariadení."
+  ],
+  "de": [
+   "Lumen – Laternenwächter ist ein Action-Roguelite-Shooter. Mit dem Wächter und seiner Laterne ziehst du durch den Nebelwald: Wähle deinen Weg auf der Karte, sammle Perks und Ausrüstung und besiege die Bosse. Jeder Lauf ist anders.",
+   "Das Spiel funktioniert komplett offline – ohne Konto, ohne Werbung und ohne Käufe. Der Fortschritt wird nur auf dem Gerät gespeichert."
+  ],
+  "es": [
+   "Lumen – Guardián del farol es un shooter roguelite de acción. Con el Guardián y su farol recorres el Bosque Brumoso: elige tu camino en el mapa, reúne mejoras y equipo y derrota a los jefes. Cada partida es distinta.",
+   "El juego funciona totalmente sin conexión: sin cuenta, sin anuncios y sin compras. El progreso se guarda solo en el dispositivo."
+  ],
+  "pl": [
+   "Lumen – Strażnik latarni to zręcznościowa strzelanka roguelite. Ze Strażnikiem i jego latarnią przemierzasz Mglisty Las: wybierasz drogę na mapie, zbierasz perki i ekwipunek i pokonujesz bossów. Każdy bieg jest inny.",
+   "Gra działa całkowicie offline – bez konta, bez reklam i bez zakupów. Postęp zapisuje się tylko na urządzeniu."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Mapa ze semínka: lehká a těžká cesta, obchodník, svatyně, události a truhly",
+   "35 perků se synergiemi a legendárními kousky",
+   "Výbava se 7 sloty, raritami, sadami a slučováním",
+   "Strom dovedností, dva hrdinové a bossové s fázemi",
+   "Denní výzva, Hrdinská obtížnost a deník bestií"
+  ],
+  "en": [
+   "Seeded map: easy and hard paths, merchant, shrines, events and chests",
+   "35 perks with synergies and legendaries",
+   "Gear with 7 slots, rarities, sets and merging",
+   "Skill tree, two heroes and multi-phase bosses",
+   "Daily challenge, Heroic difficulty and a bestiary journal"
+  ],
+  "sk": [
+   "Mapa zo semienka: ľahká a ťažká cesta, obchodník, svätyne, udalosti a truhlice",
+   "35 perkov so synergiami a legendárnymi kúskami",
+   "Výbava so 7 slotmi, raritami, sadami a spájaním",
+   "Strom zručností, dvaja hrdinovia a bossovia s fázami",
+   "Denná výzva, Hrdinská obťažnosť a denník beštií"
+  ],
+  "de": [
+   "Karte aus einem Seed: leichte und schwere Wege, Händler, Schreine, Ereignisse und Truhen",
+   "35 Perks mit Synergien und Legendären",
+   "Ausrüstung mit 7 Slots, Seltenheiten, Sets und Verschmelzen",
+   "Fertigkeitsbaum, zwei Helden und Bosse mit Phasen",
+   "Tägliche Herausforderung, Heldenmodus und Bestiarium"
+  ],
+  "es": [
+   "Mapa generado por semilla: rutas fácil y difícil, mercader, santuarios, eventos y cofres",
+   "35 mejoras con sinergias y legendarias",
+   "Equipo con 7 ranuras, rarezas, conjuntos y fusión",
+   "Árbol de habilidades, dos héroes y jefes con fases",
+   "Desafío diario, dificultad Heroica y bestiario"
+  ],
+  "pl": [
+   "Mapa z ziarna: łatwa i trudna ścieżka, kupiec, kapliczki, wydarzenia i skrzynie",
+   "35 perków z synergiami i legendarnymi",
+   "Ekwipunek z 7 slotami, rzadkościami, zestawami i łączeniem",
+   "Drzewko umiejętności, dwóch bohaterów i bossowie z fazami",
+   "Wyzwanie dnia, poziom Heroiczny i bestiariusz"
+  ]
+ }
+}

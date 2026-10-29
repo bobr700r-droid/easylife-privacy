@@ -175,6 +175,17 @@ background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gra
 .start-card::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 85% 20%,color-mix(in oklab,var(--blue) 18%,transparent),transparent 55%),radial-gradient(circle at 10% 100%,color-mix(in oklab,var(--orange) 16%,transparent),transparent 50%)}
 .start-card h2{font:800 clamp(2.2rem,5vw,3.8rem)/1 var(--display);letter-spacing:-.04em;margin:0 0 14px}
 .start-card .lead{margin:0 0 18px;text-align:left}.start-card .kicker{margin-bottom:16px}
+.dl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;margin:0 0 8px}
+.dl-card{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.3,1.7,.5,1)}
+.dl-card:hover{transform:translateY(-4px)}.dl-card.soon{border-style:dashed;box-shadow:none;background:none}
+.dl-head{display:flex;align-items:center;gap:14px}.dl-head img{width:72px;height:72px;border-radius:22%;flex:none;filter:drop-shadow(0 8px 14px rgb(0 0 0/.18))}
+.dl-head h3{font:800 1.35rem/1.1 var(--display);letter-spacing:-.02em;margin:0}.dl-ver{margin:4px 0 0;font-weight:800;color:var(--muted);font-size:.9rem}
+.dl-desc{margin:0;line-height:1.5}.dl-req{margin:0;font-weight:700;font-size:.92rem}.dl-facts{margin:0;color:var(--muted);font-size:.86rem;font-weight:600}
+.dl-upd{display:flex;align-items:center;gap:6px;margin:0;font-size:.86rem;font-weight:700;color:var(--green)}.dl-upd .ico{width:16px;height:16px}
+.dl-count{white-space:nowrap}.legal ul{padding-left:1.2em;line-height:1.55}.legal p{line-height:1.6}
+.dl-act{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:auto 0 0;padding-top:6px}
+.dl-beta{margin:40px 0 20px;padding:28px;border-radius:32px;background:linear-gradient(120deg,color-mix(in oklab,var(--blue) 14%,var(--surface)),color-mix(in oklab,var(--purple) 12%,var(--surface)));border:1px solid var(--line)}
+.dl-beta h2{font:800 clamp(1.4rem,3vw,2rem)/1.1 var(--display);letter-spacing:-.03em;margin:0 0 10px}.dl-beta p{max-width:46rem;line-height:1.55}
 .ticks{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:8px}.ticks li{display:flex;gap:10px;align-items:center;font-weight:700}
 .ticks .ico{width:24px;height:24px;padding:4px;border-radius:50%;background:var(--green);color:#fff}
 .phone{justify-self:center;width:min(330px,100%);padding:12px;border-radius:44px;background:var(--ink);box-shadow:0 40px 80px -30px rgb(37 99 235/.45),var(--shadow);transform:rotate(3deg);animation:bob 7s ease-in-out infinite;--r:3deg}
