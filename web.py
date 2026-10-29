@@ -22,6 +22,8 @@ NEWS = HERE / "site" / "news.json"  # Co je nového – ručně doplňovat při 
 CZ, EU = "https://easyforlife.cz", "https://easyforlife.eu"
 FLY_IPV4 = "66.241.124.47"  # Fly app easyforlife-redirect
 DIST = HERE / "dist"
+DOWNLOADS = HERE / "site" / "downloads.json"  # Ke stažení: appky mimo App Store a TestFlight (soubory v GitHub Releases, viz _info)
+DL_ICONS = HERE / "site" / "downloads" / "icons"  # ikony appek ke stažení (256 px PNG) → /dl/<id>.png
 KOMANDER = HERE / "site" / "downloads" / "komander"  # Komandér pro Mac mimo App Store: .dmg, .zip a appcast.xml z Komander/tools/release.sh
 
 def _eu_live():
@@ -62,8 +64,12 @@ T = {
   "st_label": ["Ke stažení", "Download", "Na stiahnutie", "Download", "Descargar", "Pobierz"],
   "android_soon": ["Android – připravujeme", "Android – coming soon", "Android – pripravujeme", "Android – in Vorbereitung", "Android – en preparación", "Android – w przygotowaniu"],
   "testflight": ["Beta na TestFlightu", "Beta on TestFlight", "Beta na TestFlighte", "Beta über TestFlight", "Beta en TestFlight", "Beta w TestFlight"],
-  "tf_note": ["Aplikace je v beta testu přes TestFlight.", "The app is in beta testing on TestFlight.", "Aplikácia je v beta teste cez TestFlight.",
-              "Die App ist in der Beta-Phase über TestFlight.", "La app está en fase beta en TestFlight.", "Aplikacja jest w fazie beta w TestFlight."],
+  "tf_note": ["Aplikace je v beta testu přes TestFlight. Chceš ji vyzkoušet? Napiš nám e-mail se žádostí o testování – platí pro iPhone i Android.",
+              "The app is in beta testing on TestFlight. Want to try it? Email us to ask for a test invite – for iPhone and Android alike.",
+              "Aplikácia je v beta teste cez TestFlight. Chceš ju vyskúšať? Napíš nám e-mail so žiadosťou o testovanie – platí pre iPhone aj Android.",
+              "Die App ist in der Beta-Phase über TestFlight. Willst du sie testen? Schreib uns eine E-Mail mit der Bitte um eine Testeinladung – für iPhone und Android.",
+              "La app está en fase beta en TestFlight. ¿Quieres probarla? Escríbenos un correo pidiendo una invitación de prueba, para iPhone y Android.",
+              "Aplikacja jest w fazie beta w TestFlight. Chcesz ją przetestować? Napisz do nas e-mail z prośbą o zaproszenie – dotyczy iPhone’a i Androida."],
   "dev_note": ["Na aplikaci se pracuje, brzy ji vydáme.", "This app is in development and coming soon.", "Na aplikácii sa pracuje, čoskoro ju vydáme.",
                "An der App wird gearbeitet – sie kommt bald.", "Estamos trabajando en esta app; llegará pronto.", "Aplikacja jest w przygotowaniu i wkrótce się pojawi."],
   "more": ["Více", "Details", "Viac", "Mehr", "Más", "Więcej"],
@@ -170,31 +176,31 @@ T = {
      ("Kde jsou moje data?", "V tvém telefonu, a pokud appka synchronizuje, v tvém soukromém iCloudu. My k nim přístup nemáme. Podrobnosti najdeš v zásadách ochrany soukromí každé appky."),
      ("Jak přenesu data na nový telefon?", "Appky se synchronizací přes iCloud si data přenesou samy, když se na novém iPhonu přihlásíš stejným Apple ID. Ostatní data se přenesou se zálohou iPhonu."),
      ("Jak svá data smažu?", "Smazáním appky se smažou data v zařízení. Data v iCloudu smažeš v Nastavení → tvoje jméno → iCloud → Spravovat úložiště."),
-     ("Jak se dostanu do beta verze?", "Některé appky jsou zatím v beta testu přes TestFlight. Napiš nám e-mail a pošleme ti pozvánku."),
+     ("Jak se dostanu do beta verze?", "Napiš nám e-mail se žádostí o testování a uveď název appky. Pro iPhone, iPad a Mac pošleme pozvánku do TestFlightu (napiš e-mail svého Apple ID), pro Android pozvánku do testu na Google Play (e-mail Google účtu)."),
      ("Mám nápad na novou funkci", "Sem s ním! Napiš nám e-mail – nápady od uživatelů čteme všechny.")],
     [('Do I need an account?', 'Not for the small everyday apps. Only services with a web version and business tools need an account – each app shows an “Account” or “Account optional” label.'),
      ("Where is my data?", "On your phone and, if the app syncs, in your private iCloud. We have no access to it. Each app’s privacy policy has the details."),
      ("How do I move my data to a new phone?", "Apps that sync via iCloud move your data automatically when you sign in with the same Apple ID. Everything else comes over with your iPhone backup."),
      ("How do I delete my data?", "Deleting the app removes the data on your device. Data in iCloud can be deleted in Settings → your name → iCloud → Manage Storage."),
-     ("How do I join a beta?", "Some apps are still in beta testing on TestFlight. Send us an email and we’ll invite you."),
+     ("How do I join a beta?", "Email us to ask for a test invite and mention the app. For iPhone, iPad and Mac we’ll send a TestFlight invite (include your Apple ID email), for Android an invite to the Google Play test (your Google account email)."),
      ("I have an idea for a feature", "Great! Send us an email – we read every suggestion.")],
     [('Potrebujem účet alebo registráciu?', 'Malé appky na každý deň nie. Účet potrebujú len služby s webovou verziou a nástroje pre firmy – pri každej aplikácii to uvidíš na štítku „S účtom“ alebo „Účet voliteľný“.'),
      ("Kde sú moje dáta?", "V tvojom telefóne a ak aplikácia synchronizuje, v tvojom súkromnom iCloude. My k nim prístup nemáme. Podrobnosti nájdeš v zásadách ochrany súkromia každej aplikácie."),
      ("Ako prenesiem dáta do nového telefónu?", "Aplikácie so synchronizáciou cez iCloud si dáta prenesú samy, keď sa na novom iPhone prihlásiš rovnakým Apple ID. Ostatné dáta sa prenesú so zálohou iPhonu."),
      ("Ako svoje dáta zmažem?", "Zmazaním aplikácie sa zmažú dáta v zariadení. Dáta v iCloude zmažeš v Nastaveniach → tvoje meno → iCloud → Spravovať úložisko."),
-     ("Ako sa dostanem do beta verzie?", "Niektoré aplikácie sú zatiaľ v beta teste cez TestFlight. Napíš nám e-mail a pošleme ti pozvánku."),
+     ("Ako sa dostanem do beta verzie?", "Napíš nám e-mail so žiadosťou o testovanie a uveď názov aplikácie. Pre iPhone, iPad a Mac pošleme pozvánku do TestFlightu (napíš e-mail svojho Apple ID), pre Android pozvánku do testu na Google Play (e-mail Google účtu)."),
      ("Mám nápad na novú funkciu", "Sem s ním! Napíš nám e-mail – nápady od používateľov čítame všetky.")],
     [('Brauche ich ein Konto?', 'Für die kleinen Alltags-Apps nicht. Ein Konto brauchen nur Dienste mit Web-Version und Business-Tools – jede App zeigt das mit „Mit Konto“ oder „Konto optional“.'),
      ("Wo sind meine Daten?", "Auf deinem Smartphone und, wenn die App synchronisiert, in deiner privaten iCloud. Wir haben keinen Zugriff darauf. Details stehen in der Datenschutzerklärung jeder App."),
      ("Wie übertrage ich meine Daten auf ein neues Smartphone?", "Apps mit iCloud-Synchronisierung übernehmen deine Daten automatisch, wenn du dich mit derselben Apple-ID anmeldest. Alles andere kommt mit dem iPhone-Backup mit."),
      ("Wie lösche ich meine Daten?", "Wenn du die App löschst, werden die Daten auf dem Gerät gelöscht. Daten in iCloud löschst du unter Einstellungen → dein Name → iCloud → Speicher verwalten."),
-     ("Wie komme ich in eine Beta?", "Einige Apps sind noch in der Beta-Phase über TestFlight. Schreib uns eine E-Mail und wir laden dich ein."),
+     ("Wie komme ich in eine Beta?", "Schreib uns eine E-Mail mit der Bitte um eine Testeinladung und nenne die App. Für iPhone, iPad und Mac schicken wir eine TestFlight-Einladung (gib deine Apple-ID-E-Mail an), für Android eine Einladung zum Test bei Google Play (E-Mail des Google-Kontos)."),
      ("Ich habe eine Idee für eine Funktion", "Her damit! Schreib uns eine E-Mail – wir lesen jeden Vorschlag.")],
     [('¿Necesito una cuenta?', 'Para las apps pequeñas del día a día, no. Solo los servicios con versión web y las herramientas para empresas necesitan cuenta; cada app lo indica con «Con cuenta» o «Cuenta opcional».'),
      ("¿Dónde están mis datos?", "En tu móvil y, si la app sincroniza, en tu iCloud privado. Nosotros no tenemos acceso. La política de privacidad de cada app tiene los detalles."),
      ("¿Cómo paso mis datos a un móvil nuevo?", "Las apps que sincronizan por iCloud traen tus datos solas al iniciar sesión con el mismo Apple ID. El resto se transfiere con la copia de seguridad del iPhone."),
      ("¿Cómo borro mis datos?", "Al eliminar la app se borran los datos del dispositivo. Los datos de iCloud se borran en Ajustes → tu nombre → iCloud → Gestionar almacenamiento."),
-     ("¿Cómo me apunto a una beta?", "Algunas apps están aún en fase beta en TestFlight. Escríbenos un correo y te enviaremos una invitación."),
+     ("¿Cómo me apunto a una beta?", "Escríbenos un correo pidiendo una invitación de prueba e indica la app. Para iPhone, iPad y Mac enviamos una invitación de TestFlight (indica el correo de tu Apple ID); para Android, una invitación a la prueba en Google Play (correo de tu cuenta de Google)."),
      ("Tengo una idea para una función", "¡Cuéntanosla! Escríbenos un correo: leemos todas las sugerencias.")],
     [('Czy potrzebuję konta?', 'Do małych aplikacji na co dzień nie. Konta wymagają tylko usługi z wersją webową i narzędzia dla firm – każda aplikacja ma etykietę „Z kontem” lub „Konto opcjonalne”.'),
      ("Gdzie są moje dane?", "Na twoim iPhonie, a jeśli aplikacja synchronizuje, w twoim prywatnym iCloud. My nie mamy do nich dostępu. Szczegóły znajdziesz w polityce prywatności każdej aplikacji."),
@@ -223,7 +229,45 @@ T = {
   "acc_req": ['S účtem', 'Account', 'S účtom', 'Mit Konto', 'Con cuenta', 'Z kontem'],
   "acc_opt": ['Účet volitelný', 'Account optional', 'Účet voliteľný', 'Konto optional', 'Cuenta opcional', 'Konto opcjonalne'],
   "open_web": ['Otevřít web', 'Open web app', 'Otvoriť web', 'Web-App öffnen', 'Abrir la web', 'Otwórz w przeglądarce'],
-  "platforms": ['Platformy', 'Platforms', 'Platformy', 'Plattformen', 'Plataformas', 'Platformy']
+  "platforms": ['Platformy', 'Platforms', 'Platformy', 'Plattformen', 'Plataformas', 'Platformy'],
+  "dl_title": ["Ke stažení", "Download", "Na stiahnutie", "Download", "Descargas", "Do pobrania"],
+  "dl_lead": ["Aplikace pro Mac a Windows, které nejsou v App Storu ani v TestFlightu. Stáhneš je přímo odsud – podepsané, ověřené a s automatickými aktualizacemi.",
+              "Apps for Mac and Windows that aren’t on the App Store or TestFlight. Download them right here – signed, verified and with automatic updates.",
+              "Aplikácie pre Mac a Windows, ktoré nie sú v App Store ani v TestFlighte. Stiahneš ich priamo odtiaľto – podpísané, overené a s automatickými aktualizáciami.",
+              "Apps für Mac und Windows, die es nicht im App Store oder bei TestFlight gibt. Lade sie direkt hier – signiert, geprüft und mit automatischen Updates.",
+              "Apps para Mac y Windows que no están en la App Store ni en TestFlight. Descárgalas aquí mismo: firmadas, verificadas y con actualizaciones automáticas.",
+              "Aplikacje na Maca i Windows, których nie ma w App Store ani w TestFlight. Pobierzesz je tutaj – podpisane, sprawdzone i z automatycznymi aktualizacjami."],
+  "dl_btn": ["Stáhnout", "Download", "Stiahnuť", "Laden", "Descargar", "Pobierz"],
+  "dl_more": ["Více o appce", "About the app", "Viac o aplikácii", "Mehr zur App", "Más sobre la app", "Więcej o aplikacji"],
+  "dl_win_soon": ["Windows – připravujeme", "Windows – coming soon", "Windows – pripravujeme", "Windows – in Vorbereitung", "Windows – en preparación", "Windows – w przygotowaniu"],
+  "dl_win_lead": ["Herna pro Windows bude ke stažení tady.", "Herna for Windows will be available here.", "Herna pre Windows bude na stiahnutie tu.",
+                  "Herna für Windows gibt es bald hier.", "Herna para Windows estará disponible aquí.", "Herna na Windows będzie do pobrania tutaj."],
+  "dl_req": ["Potřebuje", "Requires", "Potrebuje", "Benötigt", "Requiere", "Wymaga"],
+  "dl_upd": ["Aktualizace přicházejí samy", "Updates arrive automatically", "Aktualizácie prichádzajú samy", "Updates kommen automatisch", "Las actualizaciones llegan solas", "Aktualizacje przychodzą same"],
+  "dl_arm": ["Apple Silicon (M1 a novější)", "Apple Silicon (M1 or later)", "Apple Silicon (M1 a novší)", "Apple Silicon (ab M1)", "Apple Silicon (M1 o posterior)", "Apple Silicon (M1 lub nowszy)"],
+  "dl_uni": ["Apple Silicon i Intel", "Apple Silicon and Intel", "Apple Silicon aj Intel", "Apple Silicon und Intel", "Apple Silicon e Intel", "Apple Silicon i Intel"],
+  "dl_sign": ["Všechny instalačky jsou podepsané certifikátem Developer ID a ověřené (notarizované) Applem, takže je macOS otevře bez varování. Soubory jsou na GitHubu.",
+              "Every installer is signed with a Developer ID certificate and notarised by Apple, so macOS opens it without warnings. Files are hosted on GitHub.",
+              "Všetky inštalačky sú podpísané certifikátom Developer ID a overené (notarizované) Applom, takže ich macOS otvorí bez varovania. Súbory sú na GitHube.",
+              "Alle Installer sind mit einem Developer-ID-Zertifikat signiert und von Apple notarisiert – macOS öffnet sie ohne Warnung. Die Dateien liegen auf GitHub.",
+              "Todos los instaladores están firmados con un certificado Developer ID y notarizados por Apple, así que macOS los abre sin avisos. Los archivos están en GitHub.",
+              "Wszystkie instalatory są podpisane certyfikatem Developer ID i notaryzowane przez Apple, więc macOS otworzy je bez ostrzeżeń. Pliki są na GitHubie."],
+  "dl_steps": [["Stáhni .dmg a otevři ho.", "Přetáhni appku do složky Aplikace.", "Nové verze si appka stáhne sama – nebo v menu appky zvol Zkontrolovat aktualizace…"],
+               ["Download the .dmg and open it.", "Drag the app into your Applications folder.", "The app downloads new versions itself – or choose Check for Updates… in its menu."],
+               ["Stiahni .dmg a otvor ho.", "Pretiahni aplikáciu do priečinka Aplikácie.", "Nové verzie si aplikácia stiahne sama – alebo v menu zvoľ Skontrolovať aktualizácie…"],
+               ["Lade die .dmg-Datei und öffne sie.", "Zieh die App in den Ordner „Programme“.", "Neue Versionen lädt die App selbst – oder wähle im App-Menü „Nach Updates suchen…“."],
+               ["Descarga el .dmg y ábrelo.", "Arrastra la app a la carpeta Aplicaciones.", "La app descarga sola las nuevas versiones, o elige Buscar actualizaciones… en su menú."],
+               ["Pobierz plik .dmg i otwórz go.", "Przeciągnij aplikację do folderu Aplikacje.", "Nowe wersje aplikacja pobierze sama – albo wybierz w jej menu Sprawdź aktualizacje…"]],
+  "dl_install": ["Instalace na Macu", "Installing on a Mac", "Inštalácia na Macu", "Installation auf dem Mac", "Instalación en Mac", "Instalacja na Macu"],
+  "dl_beta_t": ["Chceš testovat appky pro iPhone nebo Android?", "Want to test apps for iPhone or Android?", "Chceš testovať appky pre iPhone alebo Android?",
+                "Willst du Apps für iPhone oder Android testen?", "¿Quieres probar apps para iPhone o Android?", "Chcesz testować aplikacje na iPhone’a lub Androida?"],
+  "dl_beta": ["Appky v beta testu (TestFlight pro iPhone, iPad a Mac, Google Play pro Android) nejsou veřejné. Napiš nám e-mail se žádostí o testování – uveď název appky a e-mail svého Apple ID nebo Google účtu a pošleme ti pozvánku.",
+              "Beta apps (TestFlight for iPhone, iPad and Mac, Google Play for Android) aren’t public. Email us to ask for a test invite – mention the app and your Apple ID or Google account email and we’ll send you an invitation.",
+              "Appky v beta teste (TestFlight pre iPhone, iPad a Mac, Google Play pre Android) nie sú verejné. Napíš nám e-mail so žiadosťou o testovanie – uveď názov aplikácie a e-mail svojho Apple ID alebo Google účtu a pošleme ti pozvánku.",
+              "Beta-Apps (TestFlight für iPhone, iPad und Mac, Google Play für Android) sind nicht öffentlich. Schreib uns eine E-Mail mit der Bitte um eine Testeinladung – nenne die App und die E-Mail deiner Apple-ID oder deines Google-Kontos.",
+              "Las apps en beta (TestFlight para iPhone, iPad y Mac, Google Play para Android) no son públicas. Escríbenos pidiendo una invitación: indica la app y el correo de tu Apple ID o cuenta de Google.",
+              "Aplikacje w fazie beta (TestFlight na iPhone’a, iPada i Maca, Google Play na Androida) nie są publiczne. Napisz do nas e-mail z prośbą o zaproszenie – podaj nazwę aplikacji i e-mail swojego Apple ID lub konta Google."],
+  "dl_beta_btn": ["Požádat o testování", "Ask for a test invite", "Požiadať o testovanie", "Testeinladung anfragen", "Pedir una invitación", "Poproś o zaproszenie"]
 }
 
 def t(key, lang):
@@ -236,7 +280,7 @@ var tp=a&&a.checked?a.dataset.android:f.topic.value;if(tp)d.topic=tp;b.disabled=
 fetch(f.action,{method:"POST",credentials:"omit",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)}).then(function(r){return r.json().then(function(j){return r.ok&&j.ok})})
 .catch(function(){return false}).then(function(ok){m.hidden=false;m.textContent=ok?f.dataset.ok:f.dataset.err;if(ok)f.querySelector(".nl-row").hidden=true;else b.disabled=false})})})</script>"""
 COPYRIGHT = "© 2026 Lukáš Ochrana"
-VERSION = "1.7.1"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
+VERSION = "1.8.0"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
 # Podmínky užití – licence (13. 10. 2026), ve všech 6 jazycích (sk/de/es/pl a zdravotní sekce doplněny při auditu Lékárničky).
 TERMS = {
   "cs": ("Podmínky užití", "Souhlas, licence, odpovědnost a autorská práva k aplikacím EasyForLife.", [
@@ -395,6 +439,10 @@ for _l, _p in LIABILITY_TERMS.items():  # souhlas na začátek, zvláštní upoz
 def terms_slug(lang):
     """Adresa podmínek: /podminky/ (cs, sk), jinak /terms/ – odkaz z appek: https://easyforlife.cz/podminky/"""
     return "podminky" if lang in ("cs", "sk") else "terms"
+
+def dl_slug(lang):
+    """Ke stažení: /ke-stazeni/ (cs, sk), jinak /download/."""
+    return "ke-stazeni" if lang in ("cs", "sk") else "download"
 
 def news_slug(lang):
     """Novinky: /novinky/ (cs, sk), jinak /news/; RSS je v téže složce (rss.xml)."""
@@ -633,6 +681,16 @@ background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gra
 .start-card::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 85% 20%,color-mix(in oklab,var(--blue) 18%,transparent),transparent 55%),radial-gradient(circle at 10% 100%,color-mix(in oklab,var(--orange) 16%,transparent),transparent 50%)}
 .start-card h2{font:800 clamp(2.2rem,5vw,3.8rem)/1 var(--display);letter-spacing:-.04em;margin:0 0 14px}
 .start-card .lead{margin:0 0 18px;text-align:left}.start-card .kicker{margin-bottom:16px}
+.dl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;margin:0 0 8px}
+.dl-card{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.3,1.7,.5,1)}
+.dl-card:hover{transform:translateY(-4px)}.dl-card.soon{border-style:dashed;box-shadow:none;background:none}
+.dl-head{display:flex;align-items:center;gap:14px}.dl-head img{width:72px;height:72px;border-radius:22%;flex:none;filter:drop-shadow(0 8px 14px rgb(0 0 0/.18))}
+.dl-head h3{font:800 1.35rem/1.1 var(--display);letter-spacing:-.02em;margin:0}.dl-ver{margin:4px 0 0;font-weight:800;color:var(--muted);font-size:.9rem}
+.dl-desc{margin:0;line-height:1.5}.dl-req{margin:0;font-weight:700;font-size:.92rem}.dl-facts{margin:0;color:var(--muted);font-size:.86rem;font-weight:600}
+.dl-upd{display:flex;align-items:center;gap:6px;margin:0;font-size:.86rem;font-weight:700;color:var(--green)}.dl-upd .ico{width:16px;height:16px}
+.dl-act{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:auto 0 0;padding-top:6px}
+.dl-beta{margin:40px 0 20px;padding:28px;border-radius:32px;background:linear-gradient(120deg,color-mix(in oklab,var(--blue) 14%,var(--surface)),color-mix(in oklab,var(--purple) 12%,var(--surface)));border:1px solid var(--line)}
+.dl-beta h2{font:800 clamp(1.4rem,3vw,2rem)/1.1 var(--display);letter-spacing:-.03em;margin:0 0 10px}.dl-beta p{max-width:46rem;line-height:1.55}
 .ticks{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:8px}.ticks li{display:flex;gap:10px;align-items:center;font-weight:700}
 .ticks .ico{width:24px;height:24px;padding:4px;border-radius:50%;background:var(--green);color:#fff}
 .phone{justify-self:center;width:min(330px,100%);padding:12px;border-radius:44px;background:var(--ink);box-shadow:0 40px 80px -30px rgb(37 99 235/.45),var(--shadow);transform:rotate(3deg);animation:bob 7s ease-in-out infinite;--r:3deg}
@@ -761,12 +819,12 @@ def page(lang, slug, title, desc, body, operator, relative=True, langs=None):
 <link rel="stylesheet" href="/site.css?v={zlib.crc32(CSS.encode()):x}"></head>
 <body><a class="skip" href="#main">{t("skip", lang)}</a>
 <div class="wrap"><header class="top"><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a>
-<nav class="nav"><a href="{url(lang)}#apps">{t("apps", lang)}</a><a href="{url(lang, sup(lang))}">{t("support", lang)}</a>
+<nav class="nav"><a href="{url(lang)}#apps">{t("apps", lang)}</a><a href="{url(lang, dl_slug(lang))}">{t("dl_title", lang)}</a><a href="{url(lang, sup(lang))}">{t("support", lang)}</a>
 <span class="langs" aria-label="{t("lang", lang)}">{switch}</span></nav></header></div>
 <main id="main">{body}</main>
 <footer><div class="wrap row"><div><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a><p>{t("made", lang)}</p>
 <p>{t("operator", lang)}: {esc(operator[0 if lang in ("cs", "sk") else 1])}</p></div>
-<p><a href="{url(lang, sup(lang))}">{t("support", lang)}</a> · <a href="{url(lang, news_slug(lang))}">{t("news_title", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a> · <a href="{url(lang, terms_slug(lang))}">{TERMS[lang][0]}</a></p>
+<p><a href="{url(lang, sup(lang))}">{t("support", lang)}</a> · <a href="{url(lang, dl_slug(lang))}">{t("dl_title", lang)}</a> · <a href="{url(lang, news_slug(lang))}">{t("news_title", lang)}</a> · <a href="{pol}">{t("policy", lang)}</a> · <a href="{url(lang, terms_slug(lang))}">{TERMS[lang][0]}</a></p>
 <p>{COPYRIGHT}</p></div></footer>
 {FOOT_SCRIPT}</body></html>
 """
@@ -1207,6 +1265,52 @@ class Site:
                     "Dvoupanelový správce souborů pro Mac s F-klávesami, frontou kopírování a automatickými aktualizacemi.",
                     body, self.operator, langs=["cs"])
 
+    def downloads(self, lang):
+        """Ke stažení: appky mimo App Store a TestFlight ze site/downloads.json (Mac a Windows), Komandér z appcastu na webu."""
+        d = json.loads(DOWNLOADS.read_text(encoding="utf-8"))
+        tx = lambda m: m.get(lang) or m.get("cs" if lang == "sk" else "en") or m.get("en", "")
+        mb = lambda n: (f"{n / 1_000_000:.0f}" if n >= 20_000_000 else f"{n / 1_000_000:.1f}").replace(".", "," if lang in ("cs", "sk", "de", "es", "pl") else ".") + " MB"
+        def card(a, k):
+            ap = dict(a)
+            if a["id"] == "komander":  # verze a .dmg z appcastu Komandéru (Komander/tools/release.sh)
+                text = (KOMANDER / "appcast.xml").read_text(encoding="utf-8") if (KOMANDER / "appcast.xml").exists() else ""
+                ver = text.split("<sparkle:shortVersionString>")[1].split("<")[0] if "<sparkle:shortVersionString>" in text else ""
+                dmg = KOMANDER / f"Komander-{ver}.dmg"
+                if not (ver and dmg.exists()):
+                    return ""
+                ap.update(version=ver, size=dmg.stat().st_size, min="15.0", arch="universal", href=f"/komander/{dmg.name}", icon="/komander/icon.png")
+            else:
+                ap["href"] = f'https://github.com/bobr700r-droid/{a["repo"]}/releases/latest/download/{a["file"]}.{a.get("ext", "dmg")}'
+                ap["icon"] = f'/dl/{a["id"]}.png'
+            if a["platform"] == "windows":  # min např. "10" → Windows 10+, arch x64 / arm64
+                facts = [f'Windows {ap["min"]}+', ap.get("arch", "x64"), mb(ap["size"])]
+            else:
+                facts = [f'macOS {ap["min"].removesuffix(".0")}+', t("dl_uni" if ap.get("arch") == "universal" else "dl_arm", lang), mb(ap["size"])]
+            req = f'<p class="dl-req">{t("dl_req", lang)}: {esc(tx(a["req"]))}</p>' if a.get("req") else ""
+            upd = f'<p class="dl-upd">{icon("check")}<span>{t("dl_upd", lang)}</span></p>' if a.get("updates") else ""
+            more = f'<a class="ghost" href="{url(lang, a["page"].strip("/"))}">{t("dl_more", lang)}</a>' if a.get("page") else ""
+            return (f'<article class="dl-card rv" style="--rd:{k * 60}ms"><div class="dl-head"><img src="{ap["icon"]}" alt="" width="72" height="72" loading="lazy">'
+                    f'<div><h3>{esc(a["name"])}</h3><p class="dl-ver">{esc(ap["version"])}</p></div></div>'
+                    f'<p class="dl-desc">{esc(tx(a["desc"]))}</p>{req}<p class="dl-facts">{" · ".join(esc(x) for x in facts)}</p>{upd}'
+                    f'<p class="dl-act"><a class="btn" href="{esc(ap["href"])}" download>{t("dl_btn", lang)} <span>↓</span></a>{more}</p></article>')
+        mac = "".join(card(a, k) for k, a in enumerate(x for x in d["apps"] if x["platform"] == "mac"))
+        win = "".join(card(a, k) for k, a in enumerate(x for x in d["apps"] if x["platform"] == "windows"))
+        if not win:
+            win = (f'<article class="dl-card soon rv"><div class="dl-head"><div><h3>{t("dl_win_soon", lang)}</h3></div></div>'
+                   f'<p class="dl-desc">{t("dl_win_lead", lang)}</p></article>')
+        steps = "".join(f"<li>{esc(x)}</li>" for x in T["dl_steps"][LANGS.index(lang)])
+        mail = f"mailto:{CONTACT}?subject=EasyForLife%20%E2%80%93%20testov%C3%A1n%C3%AD"
+        body = (f'<section class="page-top"><div class="blobs"><i></i><i></i><i></i></div><div class="wrap"><div class="detail">'
+                f'<h1>{t("dl_title", lang)}</h1><p class="lead">{t("dl_lead", lang)}</p></div></div></section>'
+                f'<div class="wrap"><h2 class="sub rv">Mac</h2><div class="dl-grid">{mac}</div>'
+                f'<p class="note">{icon("shield")}<span>{t("dl_sign", lang)}</span></p>'
+                f'<div class="detail"><h2 class="sub rv">{t("dl_install", lang)}</h2><ol>{steps}</ol></div>'
+                f'<h2 class="sub rv">Windows</h2><div class="dl-grid">{win}</div>'
+                f'<div class="dl-beta rv"><h2>{t("dl_beta_t", lang)}</h2><p>{t("dl_beta", lang)}</p>'
+                f'<p class="actions"><a class="btn big" href="{mail}">{t("dl_beta_btn", lang)} <span>→</span></a><a class="ghost" href="{mail}">{CONTACT}</a></p></div></div>')
+        return page(lang, {l: dl_slug(l) for l in LANGS}, f'{t("dl_title", lang)} – Mac {"a" if lang in ("cs", "sk") else "&"} Windows | EasyForLife',
+                    t("dl_lead", lang), body, self.operator)
+
     def terms(self, lang):
         title, lead, parts = TERMS[lang]
         secs = "".join(f'<h2 class="sub">{esc(h)}</h2><p>{esc(x)}</p>' for h, x in parts)
@@ -1345,7 +1449,9 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
         if not a.get("separate"):
             body += self.newsletter(lang, a, android="iOS" in pl)
         if not a.get("store"):
-            body += f'<p class="note">{icon("check")}<span>{t("tf_note" if s.get("status") == "testflight" else "dev_note", lang)}</span></p>'
+            tf = s.get("status") == "testflight"
+            ask = f' <a href="mailto:{CONTACT}?subject={esc(a["name"])}%20%E2%80%93%20testov%C3%A1n%C3%AD">{CONTACT}</a>' if tf else ""
+            body += f'<p class="note">{icon("check")}<span>{t("tf_note" if tf else "dev_note", lang)}{ask}</span></p>'
         body += "</article></div>" + self.schema(a, lang)
         if others:
             body += (f'<section><div class="wrap"><div class="sec-head rv"><h2>{t("family_more", lang).format(f=esc(fam["name"][lang]))}</h2></div>'
@@ -1378,12 +1484,14 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
             self.write(f"{pre}{sup(lang)}/index.html", self.support(lang), root)
             self.write(f"{pre}{terms_slug(lang)}/index.html", self.terms(lang), root)
             self.write(f"{pre}{news_slug(lang)}/index.html", self.news(lang), root)
+            self.write(f"{pre}{dl_slug(lang)}/index.html", self.downloads(lang), root)
             self.write(f"{pre}{news_slug(lang)}/rss.xml", self.rss(lang), root)
             if lang == "cs":
                 self.write("komander/index.html", self.komander(), root)
                 urls[site_of(lang)].append((lang, "komander", ["cs"]))
             urls[site_of(lang)] += [(lang, None, LANGS), (lang, {l: sup(l) for l in LANGS}, LANGS),
-                                    (lang, {l: terms_slug(l) for l in LANGS}, LANGS), (lang, {l: news_slug(l) for l in LANGS}, LANGS)]
+                                    (lang, {l: terms_slug(l) for l in LANGS}, LANGS), (lang, {l: news_slug(l) for l in LANGS}, LANGS),
+                                    (lang, {l: dl_slug(l) for l in LANGS}, LANGS)]
             stubs[f"{old}index.html"] = full(lang)
             stubs[f"{old}podpora/index.html"] = full(lang, sup(lang))
             for a in self.apps:
@@ -1405,6 +1513,8 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
             for d in ("icons", "shots"):
                 if (self.out / d).exists():
                     shutil.copytree(self.out / d, root / d)
+            if DL_ICONS.exists():  # ikony appek ke stažení → /dl/<id>.png
+                shutil.copytree(DL_ICONS, root / "dl", dirs_exist_ok=True)
             if site == "cz" and KOMANDER.exists():  # .dmg, .zip, appcast.xml, ikona → easyforlife.cz/komander/
                 shutil.copytree(KOMANDER, root / "komander", dirs_exist_ok=True)
             # Živý katalog pro appky (stahují si ho, aby nová propojení fungovala bez nového buildu)

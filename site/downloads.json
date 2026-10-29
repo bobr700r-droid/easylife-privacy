@@ -1,0 +1,141 @@
+{
+ "_info": "Stránka Ke stažení (/ke-stazeni/, /en/download/): appky mimo App Store a TestFlight. Soubory jsou v GitHub Releases veřejných rep bobr700r-droid/<repo> (stálý odkaz releases/latest/download/<file>.dmg); version/size/min/arch zapisuje tools/mac-instalacka/sparkle-vydani.sh (repo easylife-vedeni). Komandér má vlastní stránku /komander/ a appcast na webu (Komander/tools/release.sh). platform: mac | windows; updates: sparkle | vlastni; ext: přípona souboru (výchozí dmg, pro Windows např. exe nebo zip); u Windows min = verze Windows (\"10\"), arch x64 | arm64.",
+ "apps": [
+  {
+   "id": "komander",
+   "name": "Komandér",
+   "platform": "mac",
+   "page": "/komander/",
+   "updates": "sparkle",
+   "desc": {
+    "cs": "Dvoupanelový správce souborů – rychlý jako Total Commander, s frontou kopírování, F-klávesami a rychlým mazáním přímo na NASu.",
+    "en": "A dual-pane file manager – as fast as Total Commander, with a copy queue, F-keys and fast deletes right on your NAS."
+   }
+  },
+  {
+   "id": "fotoarchiv",
+   "name": "FotoArchiv",
+   "platform": "mac",
+   "repo": "fotoarchiv-releases",
+   "file": "FotoArchiv",
+   "updates": "sparkle",
+   "version": "0.6.4",
+   "size": 8349715,
+   "min": "15.0",
+   "arch": "universal",
+   "desc": {
+    "cs": "Pořádek ve fotkách napříč iCloud Fotkami, Google Diskem, Google Fotkami a NASem – najde duplicity a kopie, aniž by stahoval originály.",
+    "en": "Tidy photos across iCloud Photos, Google Drive, Google Photos and your NAS – finds duplicates and copies without downloading originals."
+   }
+  },
+  {
+   "id": "fotovyber",
+   "name": "FotoVýběr",
+   "platform": "mac",
+   "repo": "fotovyber-releases",
+   "file": "FotoVyber",
+   "updates": "sparkle",
+   "version": "0.2.2",
+   "size": 4673468,
+   "min": "15.0",
+   "arch": "arm64",
+   "desc": {
+    "cs": "Výběr fotek s pomocí AI a srovnání vyvážení bílé a expozice přímo v Lightroom Classic. Vše běží lokálně v Macu.",
+    "en": "AI-assisted photo culling plus white balance and exposure matching right inside Lightroom Classic. Everything runs locally on your Mac."
+   },
+   "req": {
+    "cs": "Lightroom Classic",
+    "en": "Lightroom Classic"
+   }
+  },
+  {
+   "id": "navidesk",
+   "name": "NaviDesk",
+   "platform": "mac",
+   "repo": "navidesk-mac-releases",
+   "file": "NaviDesk",
+   "page": "/navidesk/",
+   "updates": "vlastni",
+   "version": "2026.10.21.6",
+   "size": 109568199,
+   "min": "13.0",
+   "arch": "arm64",
+   "desc": {
+    "cs": "Plánovač motorkářských tras na velký monitor – offline mapy, noclehy, roadbook a odeslání trasy do Navigace v iPhonu.",
+    "en": "A motorbike route planner for the big screen – offline maps, overnight stops, a roadbook and sending the route to Navigace on iPhone."
+   }
+  },
+  {
+   "id": "hudebnicek",
+   "name": "Hudebníček",
+   "platform": "mac",
+   "repo": "hudebnicek-releases",
+   "file": "Hudebnicek",
+   "updates": "sparkle",
+   "version": "0.1.18",
+   "size": 8907227,
+   "min": "15.0",
+   "arch": "universal",
+   "desc": {
+    "cs": "Přehrávač hudby z vlastního NASu – import alb, přehled „Co mi chybí“ a převod playlistů mezi hudebními službami.",
+    "en": "A music player for your own NAS – album import, a “What am I missing” list and playlist transfer between music services."
+   },
+   "req": {
+    "cs": "NAS se serverem Navidrome",
+    "en": "A NAS running Navidrome"
+   }
+  },
+  {
+   "id": "naskino",
+   "name": "NAS Kino",
+   "platform": "mac",
+   "repo": "nas-kino-releases",
+   "file": "NASKino",
+   "updates": "sparkle",
+   "version": "1.7.1",
+   "size": 50582341,
+   "min": "15.0",
+   "arch": "arm64",
+   "desc": {
+    "cs": "Knihovna filmů a seriálů na NASu – třídění do žánrů, plakáty a přehrávání; na Apple TV pak vše uvidíte jako v kině.",
+    "en": "A film and series library on your NAS – sort into genres, add posters and play; then watch it all on Apple TV like a cinema."
+   },
+   "req": {
+    "cs": "NAS se sdílenou složkou (SMB)",
+    "en": "A NAS with a shared folder (SMB)"
+   }
+  },
+  {
+   "id": "apppad",
+   "name": "AppPad",
+   "platform": "mac",
+   "repo": "apppad-releases",
+   "file": "AppPad",
+   "updates": "sparkle",
+   "version": "1.2.5",
+   "size": 4824476,
+   "min": "14.0",
+   "arch": "arm64",
+   "desc": {
+    "cs": "Mřížka všech aplikací na celou obrazovku jako dřívější Launchpad – složky, skrývání appek a instalačky na jednom místě.",
+    "en": "A full-screen grid of all your apps like the old Launchpad – folders, hidden apps and installers in one place."
+   }
+  },
+  {
+   "id": "kalendarhub",
+   "name": "Kalendář Hub",
+   "platform": "mac",
+   "repo": "kalendar-hub-releases",
+   "file": "KalendarHub",
+   "updates": "sparkle",
+   "version": "1.6.1",
+   "size": 4958948,
+   "min": "15.0",
+   "arch": "arm64",
+   "desc": {
+    "cs": "Kalendář, Připomínky a Poznámky propojené podle kategorií – kolize, plánování dovolené podle svátků a rychlé zadání větou.",
+    "en": "Calendar, Reminders and Notes linked by category – clashes, holiday planning around public holidays and quick entry in plain words."
+   }
+  }
+ ]
+}
