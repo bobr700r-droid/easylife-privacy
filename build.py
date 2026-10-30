@@ -861,8 +861,8 @@ APPS = [
   dict(slug="socialnik", name="Sociálník", mark="✺", color="#7C3AED",
     tagline=("Agent pro Instagram, Facebook a Threads: plán, texty, schvalování a publikace.",
              "An agent for Instagram, Facebook and Threads: plan, captions, approval and publishing."),
-    summary=("Sociálník je osobní nástroj autora pro vlastní účty na sociálních sítích. Data jsou na jeho vlastním serveru (domácí NAS), ne u třetích stran. K Instagramu, Facebooku a Threads se připojuje jen přes oficiální přihlášení Mety a Threads (OAuth) – heslo appka ani server nikdy nevidí. Bez schválení v appce se nic nepublikuje. Nemá reklamy ani analytiku.",
-             "Sociálník is the author's personal tool for his own social media accounts. Data lives on his own server (a home NAS), not with third parties. It connects to Instagram, Facebook and Threads only through the official Meta and Threads login (OAuth) – neither the app nor the server ever sees a password. Nothing is published without approval in the app. No ads or analytics."),
+    summary=("Sociálník je osobní nástroj autora pro vlastní účty na sociálních sítích. Data jsou na jeho vlastním serveru (domácí NAS), ne u třetích stran. K Instagramu, Facebooku a Threads se připojuje jen přes oficiální přihlášení Mety a Threads (OAuth) – heslo appka ani server nikdy nevidí. Bez tvého schválení se nic nepublikuje (výjimkou je autopilot, který zapneš jen výslovně v appce). Nemá reklamy ani analytiku.",
+             "Sociálník is the author's personal tool for his own social media accounts. Data lives on his own server (a home NAS), not with third parties. It connects to Instagram, Facebook and Threads only through the official Meta and Threads login (OAuth) – neither the app nor the server ever sees a password. Nothing is published without your approval (except autopilot, which you can only turn on explicitly in the app). No ads or analytics."),
     sections=[
       (("Přihlášení", "Sign-in"),
        ("Do appky se přihlašuješ přes Přihlásit se s Apple. Server dostane jen anonymní identifikátor tvého Apple ID (bez jména a e-mailu), aby pouštěl jen vlastníka. Relace je uložená v Klíčence zařízení.",
