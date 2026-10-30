@@ -1,9 +1,8 @@
-<h3>Komandér 0.14.0</h3>
+<h3>Komandér 0.14.1</h3>
 <ul>
-<li><b>Zamčené soubory:</b> fotky chráněné ve fotoaparátu (Chránit / Protect) mají atribut „jen pro čtení“ a přesun nebo smazání u nich končil chybou „Operation not permitted“. Komandér je teď pozná předem a jednou se zeptá: <i>Odemknout a pokračovat</i> (u cíle zámek zase vrátí), <i>Přeskočit</i>, nebo <i>Zrušit</i>. Platí pro přesun, Koš, trvalé mazání i přejmenování.</li>
-<li><b>Zámek v panelu:</b> zamčené soubory mají za názvem malý zámek, v Informacích (⌘I) je přepínač <i>Zamčeno</i>, ⌥⌘L zamkne nebo odemkne výběr i celé složky s obsahem (s průběhem, jde vrátit ⌘Z) a ⇧⌥⌘L najde všechny zamčené soubory ve složce.</li>
-<li><b>Srozumitelné chyby:</b> místo „Operation not permitted“ fronta řekne proč – zamčený soubor, chybí oprávnění na NASu, macOS nedovolil přístup (s tlačítkem do Nastavení), soubor je otevřený – a nabídne <i>Zkusit znovu</i>, u zamčených <i>Odemknout a zkusit znovu</i>.</li>
-<li><b>Kopie zamčených souborů</b> už nekončí chybou a nenechávají na disku skryté rozpracované soubory.</li>
-<li><b>Přesun mezi sdíleními přímo na NASu:</b> F5 / F6 z jedné sdílené složky NASu do jiné (např. usbshare1-2 → homes) neposílá data přes Mac, ale provede se na NASu přes SSH. Zapnout nebo vypnout jde v Nastavení → Obecné → Síťové disky.</li>
-<li><b>Plynulejší posun velkých složek na NASu:</b> štítky souborů se čtou na pozadí jen pro řádky, které jsou vidět – posun už nečeká na síť.</li>
+<li><b>Zamčené soubory a ⌘Z:</b> přesun zamčeného souboru (s volbou <i>Odemknout a pokračovat</i>) jde teď vrátit ⌘Z – soubor se vrátí na původní místo i se zámkem.</li>
+<li><b>Nepovedené přepsání:</b> když při přesunu zamčeného souboru nešlo přepsat stejnojmenný soubor v cíli, Komandér ho už omylem nezamkne – zámek dostane zpět jen originál.</li>
+<li><b>Přejmenování na NASu:</b> kontrola zámku před přejmenováním už nečeká na síť na hlavním vlákně (při neodpovídajícím NASu appka nezamrzne).</li>
+<li><b>Hromadné přejmenování</b> s volbou <i>Přeskočit zamčené</i> už na NASu nezamrzá a tlačítko <i>Zkusit znovu</i> ve frontě se nezasekne, když už není co opakovat.</li>
+<li>Tipy a funkce: větší písmo se nepřekrývá.</li>
 </ul>
