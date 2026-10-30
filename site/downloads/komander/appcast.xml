@@ -6,17 +6,17 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.15.3</title>
-      <pubDate>Fri, 30 Oct 2026 21:09:35 +0100</pubDate>
-      <sparkle:version>202610302106</sparkle:version>
-      <sparkle:shortVersionString>0.15.3</sparkle:shortVersionString>
+      <title>Komandér 0.15.4</title>
+      <pubDate>Fri, 30 Oct 2026 21:20:42 +0100</pubDate>
+      <sparkle:version>202610302116</sparkle:version>
+      <sparkle:shortVersionString>0.15.4</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.15.3</h3>
+      <description><![CDATA[<h3>Komandér 0.15.4</h3>
 <ul>
-<li><b>SSH k NASu bez klávesové zkratky:</b> rychlé mazání a přesuny přímo na NASu nastavíte v Nastavení → Obecné → <i>Nastavit SSH…</i> nebo pravým klikem na NAS v bočním panelu → <i>Nastavit SSH (rychlé mazání a přesuny)…</i> – už není potřeba ⇧F8 (na MacBooku s Fn).</li>
-<li>Složky celého NASu se připojují po jedné a připojení, které NAS nedokončí, se po chvíli samo zruší (z 0.15.2).</li>
+<li><b>Nastavení → Obecné → Síťové disky:</b> NAS se v seznamu ukáže vždy (dřív hlásilo „Žádný NAS není připojený“, i když připojený byl) a SSH se dá nastavit tlačítkem <i>Nastavit SSH…</i> i bez připojené složky.</li>
+<li>SSH nastavené doma platí i pro NAS připojený vzdáleně přes Tailscale (rychlé mazání a přesuny mimo domov).</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.15.3.zip" sparkle:edSignature="jPm49VR2c/NpQpD6rUhw1QpZc8Wjf1JKZ50JcGZsPFtl1bbsZWrDodu05u9xvMOgHoMTvNEBrbB7tjOB0EoBBg==" length="9278803" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.15.4.zip" sparkle:edSignature="PslnVdNpR+BNNwZiayXYKSAhuj2kTIf1j2ycmMntdWx5bHqB7I5FHI4C9YBveg7s56DVLHyFnTFZjQblvGFpDw==" length="9293462" type="application/zip"/>
     </item>
   </channel>
 </rss>
