@@ -1,8 +1,7 @@
-<h3>Komandér 0.15.0</h3>
+<h3>Komandér 0.15.1</h3>
 <ul>
-<li><b>NAS doma i mimo domov:</b> síťový disk má nově <i>Vzdálenou adresu</i> (Tailscale, např. rapo1.tail2b5289.ts.net). Komandér krátce zkusí domácí síť a když NAS neodpoví, připojí se vzdáleně.</li>
-<li><b>Samo se znovu připojí:</b> disky s <i>Připojit při spuštění</i> se po změně sítě (návrat domů, probuzení Macu, zapnutí Tailscale) připojí znovu – bez dotazů na heslo. Po návratu domů se z Tailscale přepnou na rychlejší domácí síť, pokud zrovna nic nekopírujete.</li>
-<li><b>Doma, nebo vzdáleně:</b> v bočním panelu Síť je u připojeného disku domeček (doma) nebo zeměkoule (vzdáleně přes Tailscale).</li>
-<li><b>SFTP se záložním serverem:</b> uložený server (třeba NAS RAPO1 přes SSH) může mít záložní adresu pro připojení mimo domov; platí i pro rychlé mazání a přesuny přímo na NASu.</li>
-<li>Srozumitelná chyba, když má NAS vypnuté SFTP: „Na NASu zapni SFTP: Ovládací panely → Souborové služby → FTP → SFTP“.</li>
+<li><b>Celý NAS jedním řádkem:</b> v okně Připojit síťový disk (⇧⌘K) je nové tlačítko <i>Přidat celý NAS</i>. Komandér načte všechny sdílené složky serveru (home, video, photo…), uloží je pod jeden řádek v bočním panelu a všechny připojí – už není potřeba zakládat každou složku zvlášť.</li>
+<li>Klik na řádek NASu složky rozbalí nebo sbalí, ⚡ připojí všechny, ⏏ všechny odpojí. U NASu je vidět, kolik složek je připojených a jestli doma, nebo přes Tailscale.</li>
+<li>Dřív jednotlivě uložené složky téhož NASu se do celého NASu samy sloučí, oblíbené složky na nich dál fungují.</li>
+<li>Načíst složky funguje i mimo domov (přes vzdálenou adresu Tailscale).</li>
 </ul>
