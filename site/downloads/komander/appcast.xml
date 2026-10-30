@@ -6,16 +6,16 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.15.6</title>
-      <pubDate>Fri, 30 Oct 2026 21:40:45 +0100</pubDate>
-      <sparkle:version>202610302138</sparkle:version>
-      <sparkle:shortVersionString>0.15.6</sparkle:shortVersionString>
+      <title>Komandér 0.15.7</title>
+      <pubDate>Fri, 30 Oct 2026 21:51:49 +0100</pubDate>
+      <sparkle:version>202610302148</sparkle:version>
+      <sparkle:shortVersionString>0.15.7</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.15.6</h3>
+      <description><![CDATA[<h3>Komandér 0.15.7</h3>
 <ul>
-<li><b>Smazat trvale (⌥⌘⌫):</b> nový příkaz v menu Soubory i v pravém kliku – smaže bez Koše (vždy s potvrzením). Na NASu nabídne <i>Smazat na NASu (rychle)</i> přes SSH, i když má NAS vlastní Koš. Funguje i na MacBooku bez F-kláves (dříve šlo jen přes F8, když NAS Koš neměl).</li>
+<li><b>Rychlé mazání na NASu:</b> smazaná složka z panelu zmizí hned (macOS si přes SMB pamatoval starý obsah složky a ukazoval ji ještě chvíli po smazání).</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.15.6.zip" sparkle:edSignature="APz46Ioxnty8/ZB5YRNTTozDZ9utQMqzgeAZVF+RGEibmqu0IyAJONlmnUMPMUOU299mrAJriBq9H3iroZa+Cw==" length="9294126" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.15.7.zip" sparkle:edSignature="jmRijkYfSSlAQSQaibcIRJTQTA/uBv/6e1jfB9vDSzZEE9bEb3d3o3se7zxbHLC4Ksvrqp52WL42J0srJJFVAA==" length="9294941" type="application/zip"/>
     </item>
   </channel>
 </rss>
