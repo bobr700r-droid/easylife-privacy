@@ -6,19 +6,17 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.15.1</title>
-      <pubDate>Fri, 30 Oct 2026 20:17:26 +0100</pubDate>
-      <sparkle:version>202610302007</sparkle:version>
-      <sparkle:shortVersionString>0.15.1</sparkle:shortVersionString>
+      <title>Komandér 0.15.3</title>
+      <pubDate>Fri, 30 Oct 2026 21:09:35 +0100</pubDate>
+      <sparkle:version>202610302106</sparkle:version>
+      <sparkle:shortVersionString>0.15.3</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.15.1</h3>
+      <description><![CDATA[<h3>Komandér 0.15.3</h3>
 <ul>
-<li><b>Celý NAS jedním řádkem:</b> v okně Připojit síťový disk (⇧⌘K) je nové tlačítko <i>Přidat celý NAS</i>. Komandér načte všechny sdílené složky serveru (home, video, photo…), uloží je pod jeden řádek v bočním panelu a všechny připojí – už není potřeba zakládat každou složku zvlášť.</li>
-<li>Klik na řádek NASu složky rozbalí nebo sbalí, ⚡ připojí všechny, ⏏ všechny odpojí. U NASu je vidět, kolik složek je připojených a jestli doma, nebo přes Tailscale.</li>
-<li>Dřív jednotlivě uložené složky téhož NASu se do celého NASu samy sloučí, oblíbené složky na nich dál fungují.</li>
-<li>Načíst složky funguje i mimo domov (přes vzdálenou adresu Tailscale).</li>
+<li><b>SSH k NASu bez klávesové zkratky:</b> rychlé mazání a přesuny přímo na NASu nastavíte v Nastavení → Obecné → <i>Nastavit SSH…</i> nebo pravým klikem na NAS v bočním panelu → <i>Nastavit SSH (rychlé mazání a přesuny)…</i> – už není potřeba ⇧F8 (na MacBooku s Fn).</li>
+<li>Složky celého NASu se připojují po jedné a připojení, které NAS nedokončí, se po chvíli samo zruší (z 0.15.2).</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.15.1.zip" sparkle:edSignature="gWK+6y58pgjduaSQ99Gi95a4uYhoKgJU95evH4DYSp/fu5t7z8KoKwopdTJFr7SEWXNzjKeb+/oxmYem36jqCg==" length="9262745" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.15.3.zip" sparkle:edSignature="jPm49VR2c/NpQpD6rUhw1QpZc8Wjf1JKZ50JcGZsPFtl1bbsZWrDodu05u9xvMOgHoMTvNEBrbB7tjOB0EoBBg==" length="9278803" type="application/zip"/>
     </item>
   </channel>
 </rss>
