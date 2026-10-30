@@ -6,20 +6,20 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.14.1</title>
-      <pubDate>Fri, 30 Oct 2026 10:24:37 +0100</pubDate>
-      <sparkle:version>202610301020</sparkle:version>
-      <sparkle:shortVersionString>0.14.1</sparkle:shortVersionString>
+      <title>Komandér 0.15.0</title>
+      <pubDate>Fri, 30 Oct 2026 19:34:50 +0100</pubDate>
+      <sparkle:version>202610301901</sparkle:version>
+      <sparkle:shortVersionString>0.15.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.14.1</h3>
+      <description><![CDATA[<h3>Komandér 0.15.0</h3>
 <ul>
-<li><b>Zamčené soubory a ⌘Z:</b> přesun zamčeného souboru (s volbou <i>Odemknout a pokračovat</i>) jde teď vrátit ⌘Z – soubor se vrátí na původní místo i se zámkem.</li>
-<li><b>Nepovedené přepsání:</b> když při přesunu zamčeného souboru nešlo přepsat stejnojmenný soubor v cíli, Komandér ho už omylem nezamkne – zámek dostane zpět jen originál.</li>
-<li><b>Přejmenování na NASu:</b> kontrola zámku před přejmenováním už nečeká na síť na hlavním vlákně (při neodpovídajícím NASu appka nezamrzne).</li>
-<li><b>Hromadné přejmenování</b> s volbou <i>Přeskočit zamčené</i> už na NASu nezamrzá a tlačítko <i>Zkusit znovu</i> ve frontě se nezasekne, když už není co opakovat.</li>
-<li>Tipy a funkce: větší písmo se nepřekrývá.</li>
+<li><b>NAS doma i mimo domov:</b> síťový disk má nově <i>Vzdálenou adresu</i> (Tailscale, např. rapo1.tail2b5289.ts.net). Komandér krátce zkusí domácí síť a když NAS neodpoví, připojí se vzdáleně.</li>
+<li><b>Samo se znovu připojí:</b> disky s <i>Připojit při spuštění</i> se po změně sítě (návrat domů, probuzení Macu, zapnutí Tailscale) připojí znovu – bez dotazů na heslo. Po návratu domů se z Tailscale přepnou na rychlejší domácí síť, pokud zrovna nic nekopírujete.</li>
+<li><b>Doma, nebo vzdáleně:</b> v bočním panelu Síť je u připojeného disku domeček (doma) nebo zeměkoule (vzdáleně přes Tailscale).</li>
+<li><b>SFTP se záložním serverem:</b> uložený server (třeba NAS RAPO1 přes SSH) může mít záložní adresu pro připojení mimo domov; platí i pro rychlé mazání a přesuny přímo na NASu.</li>
+<li>Srozumitelná chyba, když má NAS vypnuté SFTP: „Na NASu zapni SFTP: Ovládací panely → Souborové služby → FTP → SFTP“.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.14.1.zip" sparkle:edSignature="jvfdfnp01MJAgEwodoAqIkn9Oub3RnJhtTFlvs7qw5KbXuK6aHtwZIzXfT8Y/1iwhMaIO+PzWlW5+ax+oce3Bw==" length="9097119" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.15.0.zip" sparkle:edSignature="rYDBSy3y7VhStEvHWWPOGRvhPuVY+J+sWOfgBDGDBNvGJ4aedTO0jetT9P7WXCut0Vk3BalGTcJjf8yqKKrsDA==" length="9174150" type="application/zip"/>
     </item>
   </channel>
 </rss>
