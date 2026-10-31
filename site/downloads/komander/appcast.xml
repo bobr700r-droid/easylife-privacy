@@ -6,16 +6,17 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.15.7</title>
-      <pubDate>Fri, 30 Oct 2026 21:51:49 +0100</pubDate>
-      <sparkle:version>202610302148</sparkle:version>
-      <sparkle:shortVersionString>0.15.7</sparkle:shortVersionString>
+      <title>Komandér 0.15.8</title>
+      <pubDate>Sat, 31 Oct 2026 07:24:44 +0100</pubDate>
+      <sparkle:version>202610310720</sparkle:version>
+      <sparkle:shortVersionString>0.15.8</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.15.7</h3>
+      <description><![CDATA[<h3>Komandér 0.15.8</h3>
 <ul>
-<li><b>Rychlé mazání na NASu:</b> smazaná složka z panelu zmizí hned (macOS si přes SMB pamatoval starý obsah složky a ukazoval ji ještě chvíli po smazání).</li>
+<li><b>Malé okno:</b> okno nejde zmenšit tak, aby se obsah nevešel – nejmenší velikost roste podle toho, co je vidět (postranní panel, terminál, výstup příkazu).</li>
+<li><b>Trvalé mazání:</b> průběh hlásí skutečně smazané soubory a složky; skryté soubory (._*, .DS_Store, náhledy NASu) zvlášť, takže „prázdná“ složka už nehlásí stovky souborů.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.15.7.zip" sparkle:edSignature="jmRijkYfSSlAQSQaibcIRJTQTA/uBv/6e1jfB9vDSzZEE9bEb3d3o3se7zxbHLC4Ksvrqp52WL42J0srJJFVAA==" length="9294941" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.15.8.zip" sparkle:edSignature="Ada0EIp2lEioRfaKsOsB2WJHs/K1pCPkKjh+ENwpCrZjDA/ejJqXQ5DNp8DLH0+ZiRvS3HCXxrznX8HjqSwJCA==" length="9297227" type="application/zip"/>
     </item>
   </channel>
 </rss>
