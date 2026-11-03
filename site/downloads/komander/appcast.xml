@@ -6,17 +6,22 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.15.8</title>
-      <pubDate>Sat, 31 Oct 2026 07:24:44 +0100</pubDate>
-      <sparkle:version>202610310720</sparkle:version>
-      <sparkle:shortVersionString>0.15.8</sparkle:shortVersionString>
+      <title>Komandér 0.16.0</title>
+      <pubDate>Tue, 03 Nov 2026 08:03:40 +0100</pubDate>
+      <sparkle:version>202611030759</sparkle:version>
+      <sparkle:shortVersionString>0.16.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<h3>Komandér 0.15.8</h3>
+      <description><![CDATA[<h3>Komandér 0.16.0</h3>
 <ul>
-<li><b>Malé okno:</b> okno nejde zmenšit tak, aby se obsah nevešel – nejmenší velikost roste podle toho, co je vidět (postranní panel, terminál, výstup příkazu).</li>
-<li><b>Trvalé mazání:</b> průběh hlásí skutečně smazané soubory a složky; skryté soubory (._*, .DS_Store, náhledy NASu) zvlášť, takže „prázdná“ složka už nehlásí stovky souborů.</li>
+<li><b>Mazání bez leknutí:</b> kurzor při mazání neodskočí na jiný řádek – mazané položky jsou v panelu i v dotazu červeně zvýrazněné, po smazání kurzor přejde na nejbližší další položku.</li>
+<li><b>Mazání na NASu:</b> průběh už neukazuje skryté soubory (._*, .DS_Store) a složky, ve kterých NAS drží své skryté náhledy (@eaDir), už nekončí chybou – s SSH se dosmažou přímo na NASu.</li>
+<li><b>Rychlý přesun na NASu:</b> víc souborů v rámci jednoho disku NASu (i USB disku na NASu) a kopie na NASu jdou rovnou na serveru jedním příkazem – 200 souborů za sekundy místo 44 s. Bez SSH se přejmenovává souběžně.</li>
+<li><b>Google Disk s průběhem:</b> velké soubory „jen online“ se nejdřív stáhnou se skutečným průběhem (stažené bajty, rychlost, zbývá) – už žádných 0 %.</li>
+<li><b>„Už v cíli je“:</b> dotaz vysvětlí, proč soubor v cíli nevidíte (skrytý, jiný zápis jména, nedokončená kopie) a nabídne ukázat skryté; staré hlášení síťového disku se už za kolizi nepovažuje.</li>
+<li><b>Přetahování na složku:</b> puštění na řádek složky = do té složky (zvýrazní se jen ona), na volnou plochu = do aktuální složky panelu; pružné otevření složky po podržení.</li>
+<li><b>Vlastní F-lišta:</b> Nastavení → Klávesy → F-lišta dole: tlačítka, pořadí a F-klávesy.</li>
 </ul>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.15.8.zip" sparkle:edSignature="Ada0EIp2lEioRfaKsOsB2WJHs/K1pCPkKjh+ENwpCrZjDA/ejJqXQ5DNp8DLH0+ZiRvS3HCXxrznX8HjqSwJCA==" length="9297227" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.16.0.zip" sparkle:edSignature="5hXTBMinV0vQYGXx/ntrVTL/DcLJQFU6whVNR+oDGEbNOg9vGM/FIFSwbNulyb0EEcN+HeKrsqMOlLGaT1VdAw==" length="9438615" type="application/zip"/>
     </item>
   </channel>
 </rss>
