@@ -162,9 +162,13 @@
   },
   "cz.ochrana.kancl": {
    "appStoreId": "6830253782",
-   "build": "202611031825",
+   "build": "202611032323",
    "date": "2026-11-03",
-   "version": "0.2.0"
+   "notes": {
+    "cs": "190+ funkcí Excelu (LET/LAMBDA, datum, text), ODT/ODS, průvodce CSV, komentáře a zámek listu, obtékání obrázků, šablony faktura/životopis, tvary a tabulky ve snímcích, druhý displej, PDF heslo/vodoznak/čísla/razítka, AI režim a Claude Code (MCP) na Macu",
+    "en": "190+ Excel functions (LET/LAMBDA, dates, text), ODT/ODS, CSV import wizard, cell comments and sheet lock, image wrapping, invoice/CV templates, shapes and tables in slides, external display, PDF password/watermark/numbering/stamps, AI mode and Claude Code (MCP) on Mac"
+   },
+   "version": "0.3.0"
   },
   "cz.ochrana.kariera": {
    "appStoreId": "6822213735",
@@ -184,9 +188,13 @@
   },
   "cz.ochrana.kucharka": {
    "appStoreId": "6821606709",
-   "build": "202610301100",
+   "build": "202611032333",
    "date": "2026-11-03",
-   "version": "1.11.2"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.11.3"
   },
   "cz.ochrana.kulturnik": {
    "appStoreId": "6821297019",
@@ -240,9 +248,13 @@
   },
   "cz.ochrana.nakupy": {
    "appStoreId": "6821549871",
-   "build": "202611031054",
+   "build": "202611032322",
    "date": "2026-11-03",
-   "version": "1.8.0"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.8.1"
   },
   "cz.ochrana.obkreslovatko": {
    "appStoreId": "6825055594",
