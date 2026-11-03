@@ -54,6 +54,15 @@
    "date": "2026-11-03",
    "version": "1.1.0"
   },
+  "cz.ochrana.dosah": {
+   "build": "202611031950",
+   "date": "2026-11-03",
+   "notes": {
+    "cs": "Vzdálená plocha s AI asistentem: párování QR, šifrovaný přenos, učící režim",
+    "en": "Remote desktop with AI assistant: QR pairing, encrypted stream, learning mode"
+   },
+   "version": "0.1.0"
+  },
   "cz.ochrana.dumazahrada": {
    "appStoreId": "6821607906",
    "build": "202610301334",

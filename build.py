@@ -1230,6 +1230,22 @@ APPS = [
        ("Smazáním návrhu nebo appky se data odstraní; z iCloudu je smažeš v Nastavení systému → Apple ID → iCloud → Spravovat úložiště → Plakátník.",
         "Deleting a design or the app removes the data; remove iCloud data in system Settings → Apple ID → iCloud → Manage Storage → Plakátník.")),
     ]),
+  dict(slug="dosah", name="Dosah", mark="◎", color="#E84A00",
+    tagline=("Vzdálená plocha s AI asistentem pro tvoje vlastní počítače.",
+             "Remote desktop with an AI assistant for your own computers."),
+    summary=("Dosah (klient pro iPhone, iPad a Mac) a Dosah hostitel (Mac) posílají obraz a vstup přímo mezi tvými zařízeními. Nemají server, účty, reklamy ani analytiku.",
+             "Dosah (client for iPhone, iPad and Mac) and Dosah host (Mac) send screen and input directly between your own devices. No server, accounts, ads or analytics."),
+    sections=[
+      (("Co se kam posílá", "What is sent where"),
+       ("Obraz, vstup, schránka a soubory putují přímo mezi tvými zařízeními (v místní síti nebo přes tvoji síť Tailscale), nikdy přes server EasyForLife. Spojení je šifrované end-to-end (X25519, ChaCha20-Poly1305); klíče vznikají na zařízeních a neopouštějí je. Hostitel si pamatuje veřejný klíč a název spárovaného zařízení, klient adresu, port, veřejný klíč hostitele a volitelně MAC adresu pro probuzení; vše jen lokálně.",
+        "Screen, input, clipboard and files travel directly between your own devices (on the local network or over your Tailscale network), never through an EasyForLife server. The connection is end-to-end encrypted (X25519, ChaCha20-Poly1305); keys are created on the devices and never leave them. The host remembers the public key and name of a paired device, the client the address, port, host public key and optionally a MAC address for wake-up; all stored locally only.")),
+      (("AI asistent (volitelné)", "AI assistant (optional)"),
+       ("Jen když sám spustíš úkol a zadáš vlastní klíč Claude API (v Klíčence), klient odešle snímky vzdálené obrazovky a text úkolu společnosti Anthropic. Bez spuštěného úkolu se do AI nic neposílá. Nahrané postupy zůstávají v zařízení.",
+        "Only when you start a task yourself and enter your own Claude API key (in the Keychain) does the client send screenshots of the remote screen and the task text to Anthropic. Without a running task nothing is sent to AI. Recorded procedures stay on the device.")),
+      (("Oprávnění", "Permissions"),
+       ("Hostitel na Macu: Záznam obrazovky a Zpřístupnění (ovládání myší a klávesnicí); kdykoli je odebereš v Nastavení systému. Klient: místní síť (nalezení počítačů) a fotoaparát (jen naskenování párovacího QR). Při každém připojení hostitel ukáže panel „Dívá se: …“ s tlačítkem Odpojit; zkratka ⌃⌥⎋ odpojí všechny okamžitě.",
+        "Mac host: Screen Recording and Accessibility (mouse and keyboard control); you can remove them any time in System Settings. Client: local network (finding computers) and camera (only to scan the pairing QR). On every connection the host shows a \"Watching: …\" panel with a Disconnect button; the shortcut ⌃⌥⎋ disconnects everyone immediately.")),
+    ]),
 ]
 
 EXTERNAL = []
