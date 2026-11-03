@@ -291,6 +291,15 @@
    "date": "2026-11-03",
    "version": "0.3.0"
   },
+  "cz.ochrana.strizna": {
+   "build": "202611032023",
+   "date": "2026-11-03",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "0.2.0"
+  },
   "cz.ochrana.studium": {
    "appStoreId": "6822229751",
    "build": "202610301420",
