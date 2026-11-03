@@ -178,9 +178,13 @@
   },
   "cz.ochrana.kulturnik": {
    "appStoreId": "6821297019",
-   "build": "202610301746",
+   "build": "202611032220",
    "date": "2026-11-03",
-   "version": "0.10.3"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: nová verze a novinky.",
+    "en": "Settings → Updates: new version and what's new."
+   },
+   "version": "0.10.4"
   },
   "cz.ochrana.lekarnicka": {
    "appStoreId": "6821431697",
@@ -226,9 +230,13 @@
   },
   "cz.ochrana.obkreslovatko": {
    "appStoreId": "6825055594",
-   "build": "202610301044",
+   "build": "202611032117",
    "date": "2026-11-03",
-   "version": "1.1.1"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: nová verze a novinky.",
+    "en": "Settings → Updates: new version and what's new."
+   },
+   "version": "1.1.2"
   },
   "cz.ochrana.oblacno": {
    "appStoreId": "6830166530",
@@ -252,7 +260,7 @@
   },
   "cz.ochrana.plakatnik": {
    "appStoreId": "6830210279",
-   "build": "202611032219",
+   "build": "202611032223",
    "date": "2026-11-03",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
