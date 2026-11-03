@@ -22,8 +22,8 @@
    "repo": "fotoarchiv-releases",
    "file": "FotoArchiv",
    "updates": "sparkle",
-   "version": "0.6.4",
-   "size": 8349715,
+   "version": "0.9.4",
+   "size": 9640974,
    "min": "15.0",
    "arch": "universal",
    "desc": {
@@ -75,8 +75,8 @@
    "repo": "hudebnicek-releases",
    "file": "Hudebnicek",
    "updates": "sparkle",
-   "version": "0.2.1",
-   "size": 9416165,
+   "version": "0.2.6",
+   "size": 9554192,
    "min": "15.0",
    "arch": "universal",
    "desc": {
