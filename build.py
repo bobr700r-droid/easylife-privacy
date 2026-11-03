@@ -1167,6 +1167,25 @@ APPS = [
        ("Odpojením Home Assistantu v Nastavení se token smaže z Klíčenky. Smazáním aplikace zmizí z telefonu všechna nastavení; data v tvém Home Assistantu zůstávají u tebe.",
         "Disconnecting Home Assistant in Settings deletes the token from the Keychain. Deleting the app removes all settings from the phone; data in your Home Assistant stays with you.")),
     ]),
+  dict(slug="plakatnik", name="Plakátník", mark="▤", color="#F80BAB",
+    tagline=("Grafický editor plakátů, pozvánek a příspěvků do sítí.",
+             "A graphic editor for posters, invitations and social posts."),
+    summary=("Plakátník ukládá návrhy, fotky, logo a nastavení značky jen v tvém zařízení a soukromém iCloudu. Nemá vlastní server, účty, reklamy ani analytiku.",
+             "Plakátník keeps your designs, photos, logo and brand settings only on your device and in your private iCloud. It has no server of its own, no accounts, ads or analytics."),
+    sections=[
+      (("Fotky", "Photos"),
+       ("Appka čte jen fotky, které sám vybereš v systémovém výběru. Odstranění pozadí a filtry probíhají přímo v zařízení, nic se neodesílá.",
+        "The app reads only photos you pick in the system picker. Background removal and filters run on the device; nothing is sent.")),
+      (("AI návrhy (volitelné, ve výchozím stavu vypnuté)", "AI suggestions (optional, off by default)"),
+       ("Když funkci zapneš a vložíš vlastní klíč Claude API, odešle se při „Navrhni z textu“ přímo společnosti Anthropic jen tvoje zadání (text), zvolený formát a barvy/písma značky. Fotky se neodesílají nikdy. Klíč je uložen jen v Klíčence tohoto zařízení. Zpracování řídí podmínky Anthropic (anthropic.com/legal).",
+        "If you enable it and enter your own Claude API key, “Suggest from text” sends only your prompt (text), the chosen format and brand colours/fonts directly to Anthropic. Photos are never sent. The key is stored only in this device’s Keychain. Processing is governed by Anthropic’s terms (anthropic.com/legal).")),
+      (("iCloud, export a písma", "iCloud, export and fonts"),
+       ("Návrhy se synchronizují mezi tvými zařízeními přes tvůj soukromý iCloud (CloudKit); autor k nim nemá přístup. Soubory PNG/JPG/PDF vznikají v zařízení a sdílíš je sám přes systémové Sdílet. Přibalená písma jsou open-source (SIL Open Font License 1.1).",
+        "Designs sync between your devices via your private iCloud (CloudKit); the author has no access. PNG/JPG/PDF files are created on the device and you share them yourself via the system Share sheet. Bundled fonts are open source (SIL Open Font License 1.1).")),
+      (("Mazání dat", "Deleting data"),
+       ("Smazáním návrhu nebo appky se data odstraní; z iCloudu je smažeš v Nastavení systému → Apple ID → iCloud → Spravovat úložiště → Plakátník.",
+        "Deleting a design or the app removes the data; remove iCloud data in system Settings → Apple ID → iCloud → Manage Storage → Plakátník.")),
+    ]),
 ]
 
 EXTERNAL = []
