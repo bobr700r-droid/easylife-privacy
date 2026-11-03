@@ -1,1 +1,334 @@
-{"apps": {}}
+{
+ "apps": {
+  "cz.easylife.nasplayer.mobile": {
+   "appStoreId": "6827549066",
+   "build": "202611031228",
+   "date": "2026-11-03",
+   "version": "1.6.0"
+  },
+  "cz.lukasochrana.cestovnicek": {
+   "appStoreId": "6821299911",
+   "build": "202611031006",
+   "date": "2026-11-03",
+   "version": "1.22.0"
+  },
+  "cz.lukasochrana.fitko": {
+   "appStoreId": "6820175415",
+   "build": "202611031042",
+   "date": "2026-11-03",
+   "version": "1.18.0"
+  },
+  "cz.lukasochrana.navidesk": {
+   "appStoreId": "6821114920",
+   "build": "202611030907",
+   "date": "2026-11-03",
+   "version": "1.3.0"
+  },
+  "cz.lukasochrana.navigace": {
+   "appStoreId": "6820935391",
+   "build": "438",
+   "date": "2026-11-03",
+   "version": "2.13.4"
+  },
+  "cz.ochrana.adimacrm": {
+   "appStoreId": "6821430789",
+   "build": "202610221556",
+   "date": "2026-11-03",
+   "version": "1.3.9"
+  },
+  "cz.ochrana.crmdesk": {
+   "appStoreId": "6821431013",
+   "build": "202610302100",
+   "date": "2026-11-03",
+   "version": "1.9.1"
+  },
+  "cz.ochrana.darky": {
+   "appStoreId": "6821437094",
+   "build": "202611030832",
+   "date": "2026-11-03",
+   "version": "1.5.8"
+  },
+  "cz.ochrana.domov": {
+   "appStoreId": "6829034657",
+   "build": "202611031217",
+   "date": "2026-11-03",
+   "version": "1.1.0"
+  },
+  "cz.ochrana.dumazahrada": {
+   "appStoreId": "6821607906",
+   "build": "202610301334",
+   "date": "2026-11-03",
+   "version": "1.6.4"
+  },
+  "cz.ochrana.easyforlife": {
+   "appStoreId": "6821554539",
+   "build": "202611031557",
+   "date": "2026-11-03",
+   "version": "1.10.1"
+  },
+  "cz.ochrana.fakturant": {
+   "appStoreId": "6821429421",
+   "build": "202610302106",
+   "date": "2026-11-03",
+   "version": "1.19.2"
+  },
+  "cz.ochrana.fotodesk": {
+   "appStoreId": "6821438909",
+   "build": "202611031129",
+   "date": "2026-11-03",
+   "version": "1.26.0"
+  },
+  "cz.ochrana.fotoplan": {
+   "appStoreId": "6821300346",
+   "build": "202611031101",
+   "date": "2026-11-03",
+   "version": "0.6.0"
+  },
+  "cz.ochrana.fototip": {
+   "appStoreId": "6821384871",
+   "build": "202611031108",
+   "date": "2026-11-03",
+   "version": "1.7.0"
+  },
+  "cz.ochrana.fotouklid.ios": {
+   "appStoreId": "6825670634",
+   "build": "202610302227",
+   "date": "2026-11-03",
+   "version": "0.5.3"
+  },
+  "cz.ochrana.garaz": {
+   "appStoreId": "6821429519",
+   "build": "202610301006",
+   "date": "2026-11-03",
+   "version": "1.12.3"
+  },
+  "cz.ochrana.hudebnicek": {
+   "appStoreId": "6828006835",
+   "build": "202610310757",
+   "date": "2026-11-03",
+   "version": "0.2.5"
+  },
+  "cz.ochrana.jidelnik": {
+   "appStoreId": "6821346197",
+   "build": "202610301742",
+   "date": "2026-11-03",
+   "version": "1.5.2"
+  },
+  "cz.ochrana.jizdy": {
+   "appStoreId": "6830166369",
+   "build": "202611031814",
+   "date": "2026-11-03",
+   "version": "1.2.0"
+  },
+  "cz.ochrana.jmautodily": {
+   "appStoreId": "6822237417",
+   "build": "202610281511",
+   "date": "2026-11-03",
+   "version": "1.14.0"
+  },
+  "cz.ochrana.kancl": {
+   "appStoreId": "6830253782",
+   "build": "202611031825",
+   "date": "2026-11-03",
+   "version": "0.2.0"
+  },
+  "cz.ochrana.kariera": {
+   "appStoreId": "6822213735",
+   "build": "202611030859",
+   "date": "2026-11-03",
+   "version": "1.6.0"
+  },
+  "cz.ochrana.karticky": {
+   "appStoreId": "6821604077",
+   "build": "202611030926",
+   "date": "2026-11-03",
+   "version": "1.10.0"
+  },
+  "cz.ochrana.kucharka": {
+   "appStoreId": "6821606709",
+   "build": "202610301100",
+   "date": "2026-11-03",
+   "version": "1.11.2"
+  },
+  "cz.ochrana.kulturnik": {
+   "appStoreId": "6821297019",
+   "build": "202610301746",
+   "date": "2026-11-03",
+   "version": "0.10.3"
+  },
+  "cz.ochrana.lekarnicka": {
+   "appStoreId": "6821431697",
+   "build": "202610301131",
+   "date": "2026-11-03",
+   "version": "1.4.4"
+  },
+  "cz.ochrana.letopis": {
+   "appStoreId": "6830208056",
+   "build": "202611031541",
+   "date": "2026-11-03",
+   "version": "0.1.0"
+  },
+  "cz.ochrana.lumen": {
+   "appStoreId": "6828617296",
+   "build": "202611030747",
+   "date": "2026-11-03",
+   "version": "0.9.0"
+  },
+  "cz.ochrana.mailer": {
+   "appStoreId": "6821431755",
+   "build": "202611031136",
+   "date": "2026-11-03",
+   "version": "1.17.9"
+  },
+  "cz.ochrana.mazlicek": {
+   "appStoreId": "6821436878",
+   "build": "202610301357",
+   "date": "2026-11-03",
+   "version": "1.6.1"
+  },
+  "cz.ochrana.motobaterie": {
+   "appStoreId": "6822590550",
+   "build": "202610281245",
+   "date": "2026-11-03",
+   "version": "1.2.2"
+  },
+  "cz.ochrana.nakupy": {
+   "appStoreId": "6821549871",
+   "build": "202611031054",
+   "date": "2026-11-03",
+   "version": "1.8.0"
+  },
+  "cz.ochrana.obkreslovatko": {
+   "appStoreId": "6825055594",
+   "build": "202610301044",
+   "date": "2026-11-03",
+   "version": "1.1.1"
+  },
+  "cz.ochrana.oblacno": {
+   "appStoreId": "6830166530",
+   "build": "202611031738",
+   "date": "2026-11-03",
+   "version": "0.2.0"
+  },
+  "cz.ochrana.odecty": {
+   "appStoreId": "6821433429",
+   "build": "202610301347",
+   "date": "2026-11-03",
+   "version": "1.2.3"
+  },
+  "cz.ochrana.plakatnik": {
+   "appStoreId": "6830210279",
+   "build": "202611031640",
+   "date": "2026-11-03",
+   "version": "0.1.1"
+  },
+  "cz.ochrana.podkres": {
+   "appStoreId": "6830241754",
+   "build": "202611031806",
+   "date": "2026-11-03",
+   "version": "0.2.0"
+  },
+  "cz.ochrana.pohoda": {
+   "appStoreId": "6822215039",
+   "build": "202610301201",
+   "date": "2026-11-03",
+   "version": "1.6.1"
+  },
+  "cz.ochrana.postacek": {
+   "appStoreId": "6822732297",
+   "build": "202610302009",
+   "date": "2026-11-03",
+   "version": "0.8.1"
+  },
+  "cz.ochrana.predplatne": {
+   "appStoreId": "6821430897",
+   "build": "202610301148",
+   "date": "2026-11-03",
+   "version": "1.5.5"
+  },
+  "cz.ochrana.prehled": {
+   "appStoreId": "6825461912",
+   "build": "202610301621",
+   "date": "2026-11-03",
+   "version": "0.3.1"
+  },
+  "cz.ochrana.rodinka": {
+   "appStoreId": "6822158489",
+   "build": "202610302336",
+   "date": "2026-11-03",
+   "version": "1.6.6"
+  },
+  "cz.ochrana.rozpocet": {
+   "appStoreId": "6821604332",
+   "build": "202611030953",
+   "date": "2026-11-03",
+   "version": "1.7.0"
+  },
+  "cz.ochrana.salonky": {
+   "appStoreId": "6821289089",
+   "build": "202610301605",
+   "date": "2026-11-03",
+   "version": "1.7.3"
+  },
+  "cz.ochrana.smenarna": {
+   "appStoreId": "6821283336",
+   "build": "202610301923",
+   "date": "2026-11-03",
+   "version": "0.10.2"
+  },
+  "cz.ochrana.socialnik": {
+   "appStoreId": "6828887283",
+   "build": "202610301926",
+   "date": "2026-11-03",
+   "version": "0.3.0"
+  },
+  "cz.ochrana.studium": {
+   "appStoreId": "6822229751",
+   "build": "202610301420",
+   "date": "2026-11-03",
+   "version": "1.12.1"
+  },
+  "cz.ochrana.svatebnicek": {
+   "appStoreId": "6822193720",
+   "build": "202610302011",
+   "date": "2026-11-03",
+   "version": "1.8.4"
+  },
+  "cz.ochrana.tiskarnik": {
+   "appStoreId": "6830241594",
+   "build": "202611031745",
+   "date": "2026-11-03",
+   "version": "0.2.0"
+  },
+  "cz.ochrana.vizitkar": {
+   "appStoreId": "6828887001",
+   "build": "202610301947",
+   "date": "2026-11-03",
+   "version": "0.1.1"
+  },
+  "cz.ochrana.vyrovnano": {
+   "appStoreId": "6821300069",
+   "build": "202610301427",
+   "date": "2026-11-03",
+   "version": "1.6.1"
+  },
+  "cz.ochrana.zapisnik": {
+   "appStoreId": "6825419715",
+   "build": "202610301913",
+   "date": "2026-11-03",
+   "version": "0.2.2"
+  },
+  "cz.ochrana.zaruky": {
+   "appStoreId": "6821429264",
+   "build": "202611031050",
+   "date": "2026-11-03",
+   "version": "1.6.0"
+  },
+  "cz.ochrana.zkratkar": {
+   "appStoreId": "6830177139",
+   "build": "202611031712",
+   "date": "2026-11-03",
+   "version": "0.2.0"
+  }
+ }
+}
