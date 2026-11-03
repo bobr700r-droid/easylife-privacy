@@ -131,8 +131,8 @@
    "repo": "kalendar-hub-releases",
    "file": "KalendarHub",
    "updates": "sparkle",
-   "version": "1.6.1",
-   "size": 4958948,
+   "version": "1.7.0",
+   "size": 5201130,
    "min": "15.0",
    "arch": "arm64",
    "desc": {
