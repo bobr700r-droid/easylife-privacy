@@ -95,8 +95,8 @@
    "repo": "nas-kino-releases",
    "file": "NASKino",
    "updates": "sparkle",
-   "version": "1.7.1",
-   "size": 50582341,
+   "version": "1.7.2",
+   "size": 50586911,
    "min": "15.0",
    "arch": "arm64",
    "desc": {
