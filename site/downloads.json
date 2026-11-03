@@ -178,10 +178,10 @@
    "repo": "strizna-releases",
    "file": "Strizna",
    "updates": "sparkle",
-   "version": "0.2.0",
-   "size": 9521582,
+   "version": "0.3.0",
+   "size": 10831506,
    "min": "15.0",
-   "arch": "arm64",
+   "arch": "universal",
    "desc": {
     "cs": "Střih a barvení videa s AI: magnetická časová osa, střih na hudbu, barvy z log/RAW, záběry 360° a ovládání z Claude Code.",
     "en": "AI video editing and grading: magnetic timeline, cut to music, log/RAW color, 360° footage and Claude Code control."
