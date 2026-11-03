@@ -177,9 +177,13 @@
   },
   "cz.ochrana.kariera": {
    "appStoreId": "6822213735",
-   "build": "202611030859",
-   "date": "2026-11-03",
-   "version": "1.6.0"
+   "build": "202611040031",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.6.1"
   },
   "cz.ochrana.karticky": {
    "appStoreId": "6821604077",
@@ -413,9 +417,13 @@
   },
   "cz.ochrana.tiskarnik": {
    "appStoreId": "6830241594",
-   "build": "202611031745",
-   "date": "2026-11-03",
-   "version": "0.2.0"
+   "build": "202611040031",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "0.3.0"
   },
   "cz.ochrana.vizitkar": {
    "appStoreId": "6828887001",
