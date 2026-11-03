@@ -170,6 +170,38 @@
     "cs": "Pokud Windows zobrazí upozornění, klikni na Další informace → Přesto spustit.",
     "en": "If Windows shows a warning, click More info → Run anyway."
    }
+  },
+  {
+   "id": "strizna",
+   "name": "Střižna",
+   "platform": "mac",
+   "repo": "strizna-releases",
+   "file": "Strizna",
+   "updates": "sparkle",
+   "version": "0.2.0",
+   "size": 9521582,
+   "min": "15.0",
+   "arch": "arm64",
+   "desc": {
+    "cs": "Střih a barvení videa s AI: magnetická časová osa, střih na hudbu, barvy z log/RAW, záběry 360° a ovládání z Claude Code.",
+    "en": "AI video editing and grading: magnetic timeline, cut to music, log/RAW color, 360° footage and Claude Code control."
+   }
+  },
+  {
+   "id": "dosahhostitel",
+   "name": "Dosah hostitel",
+   "platform": "mac",
+   "repo": "dosah-releases",
+   "file": "DosahHostitel",
+   "updates": "sparkle",
+   "version": "0.1.0",
+   "size": 2823025,
+   "min": "15.0",
+   "arch": "arm64",
+   "desc": {
+    "cs": "Hostitel vzdálené plochy Dosah – bezpečné ovládání tohoto Macu z iPhonu, iPadu i jiného Macu.",
+    "en": "Dosah remote desktop host – securely control this Mac from iPhone, iPad or another Mac."
+   }
   }
  ]
 }
