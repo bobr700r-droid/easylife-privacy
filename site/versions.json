@@ -53,9 +53,13 @@
   },
   "cz.ochrana.darky": {
    "appStoreId": "6821437094",
-   "build": "202611030832",
+   "build": "202611032217",
    "date": "2026-11-03",
-   "version": "1.5.8"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: nová verze a novinky.",
+    "en": "Settings → Updates: new version and what's new."
+   },
+   "version": "1.5.9"
   },
   "cz.ochrana.domov": {
    "appStoreId": "6829034657",
@@ -98,9 +102,13 @@
   },
   "cz.ochrana.fotoplan": {
    "appStoreId": "6821300346",
-   "build": "202611031101",
+   "build": "202611032158",
    "date": "2026-11-03",
-   "version": "0.6.0"
+   "notes": {
+    "cs": "Novinky ve verzi 0.6.1",
+    "en": "What's new in 0.6.1"
+   },
+   "version": "0.6.1"
   },
   "cz.ochrana.fototip": {
    "appStoreId": "6821384871",
@@ -224,25 +232,33 @@
   },
   "cz.ochrana.oblacno": {
    "appStoreId": "6830166530",
-   "build": "202611031738",
+   "build": "202611032139",
    "date": "2026-11-03",
-   "version": "0.2.0"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "0.3.0"
   },
   "cz.ochrana.odecty": {
    "appStoreId": "6821433429",
-   "build": "202610301347",
+   "build": "202611032208",
    "date": "2026-11-03",
-   "version": "1.2.3"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.2.4"
   },
   "cz.ochrana.plakatnik": {
    "appStoreId": "6830210279",
-   "build": "202611032121",
+   "build": "202611032219",
    "date": "2026-11-03",
    "notes": {
-    "cs": "Tiskové PDF/X v CMYK (FOGRA39) se spadávkou a ořezovými značkami, pero a booleovské operace, odstavcové styly a text na oblouku, masky, mřížka, víc stran, animace MP4/GIF, hromadná výroba z CSV, značka luksafoto, NAS, Claude Code na Macu",
-    "en": "Print-ready CMYK PDF/X (FOGRA39) with bleed and crop marks, pen tool and boolean ops, paragraph styles and text on a curve, masks, grids, multi-page, MP4/GIF animation, CSV batch, luksafoto brand, NAS, Claude Code on Mac"
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
    },
-   "version": "0.2.0"
+   "version": "0.3.0"
   },
   "cz.ochrana.podkres": {
    "appStoreId": "6830241754",
@@ -264,9 +280,13 @@
   },
   "cz.ochrana.predplatne": {
    "appStoreId": "6821430897",
-   "build": "202610301148",
+   "build": "202611032151",
    "date": "2026-11-03",
-   "version": "1.5.5"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled verzí a novinek.",
+    "en": "Settings → Updates: version overview and release notes."
+   },
+   "version": "1.5.6"
   },
   "cz.ochrana.prehled": {
    "appStoreId": "6825461912",
@@ -288,9 +308,13 @@
   },
   "cz.ochrana.salonky": {
    "appStoreId": "6821289089",
-   "build": "202610301605",
+   "build": "202611032135",
    "date": "2026-11-03",
-   "version": "1.7.3"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled verzí a novinek",
+    "en": "Settings → Updates: version overview and release notes"
+   },
+   "version": "        CFBundleShortVersionString: $(MARKETING_VERSION)"
   },
   "cz.ochrana.smenarna": {
    "appStoreId": "6821283336",
@@ -364,9 +388,13 @@
   },
   "cz.ochrana.zaruky": {
    "appStoreId": "6821429264",
-   "build": "202611031050",
+   "build": "202611032145",
    "date": "2026-11-03",
-   "version": "1.6.0"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled verzí a novinek.",
+    "en": "Settings → Updates: version overview and release notes."
+   },
+   "version": "1.6.1"
   },
   "cz.ochrana.zkratkar": {
    "appStoreId": "6830177139",
