@@ -42,6 +42,15 @@
    "date": "2026-11-03",
    "version": "1.9.1"
   },
+  "cz.ochrana.dalkovac": {
+   "build": "202611032115",
+   "date": "2026-11-03",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "0.1.0"
+  },
   "cz.ochrana.darky": {
    "appStoreId": "6821437094",
    "build": "202611030832",
@@ -227,9 +236,13 @@
   },
   "cz.ochrana.plakatnik": {
    "appStoreId": "6830210279",
-   "build": "202611031640",
+   "build": "202611032121",
    "date": "2026-11-03",
-   "version": "0.1.1"
+   "notes": {
+    "cs": "Tiskové PDF/X v CMYK (FOGRA39) se spadávkou a ořezovými značkami, pero a booleovské operace, odstavcové styly a text na oblouku, masky, mřížka, víc stran, animace MP4/GIF, hromadná výroba z CSV, značka luksafoto, NAS, Claude Code na Macu",
+    "en": "Print-ready CMYK PDF/X (FOGRA39) with bleed and crop marks, pen tool and boolean ops, paragraph styles and text on a curve, masks, grids, multi-page, MP4/GIF animation, CSV batch, luksafoto brand, NAS, Claude Code on Mac"
+   },
+   "version": "0.2.0"
   },
   "cz.ochrana.podkres": {
    "appStoreId": "6830241754",
@@ -290,6 +303,15 @@
    "build": "202610301926",
    "date": "2026-11-03",
    "version": "0.3.0"
+  },
+  "cz.ochrana.spoust": {
+   "build": "202611032117",
+   "date": "2026-11-03",
+   "notes": {
+    "cs": "Dálkové ovládání a tethering Sony A7 IV, A7R V a FX3: spoušť, záznam, zoom, USB tethering, Apple Watch",
+    "en": "Remote control and tethering for Sony A7 IV, A7R V and FX3: shutter, recording, zoom, USB tethering, Apple Watch"
+   },
+   "version": "0.1.0"
   },
   "cz.ochrana.strizna": {
    "build": "202611032023",
