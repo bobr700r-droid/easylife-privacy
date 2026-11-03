@@ -78,9 +78,13 @@
   },
   "cz.ochrana.dumazahrada": {
    "appStoreId": "6821607906",
-   "build": "202610301334",
+   "build": "202611032250",
    "date": "2026-11-03",
-   "version": "1.6.4"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.6.5"
   },
   "cz.ochrana.easyforlife": {
    "appStoreId": "6821554539",
@@ -136,9 +140,13 @@
   },
   "cz.ochrana.jidelnik": {
    "appStoreId": "6821346197",
-   "build": "202610301742",
+   "build": "202611032259",
    "date": "2026-11-03",
-   "version": "1.5.2"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled verzí a novinek",
+    "en": "Settings → Updates: version overview and release notes"
+   },
+   "version": "        CFBundleShortVersionString: $(MARKETING_VERSION)"
   },
   "cz.ochrana.jizdy": {
    "appStoreId": "6830166369",
@@ -166,9 +174,13 @@
   },
   "cz.ochrana.karticky": {
    "appStoreId": "6821604077",
-   "build": "202611030926",
+   "build": "202611032240",
    "date": "2026-11-03",
-   "version": "1.10.0"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.10.1"
   },
   "cz.ochrana.kucharka": {
    "appStoreId": "6821606709",
@@ -200,9 +212,13 @@
   },
   "cz.ochrana.lumen": {
    "appStoreId": "6828617296",
-   "build": "202611030747",
+   "build": "202611032228",
    "date": "2026-11-03",
-   "version": "0.9.0"
+   "notes": {
+    "cs": "Novinky ve verzi 0.9.1",
+    "en": "What's new in 0.9.1"
+   },
+   "version": "0.9.1"
   },
   "cz.ochrana.mailer": {
    "appStoreId": "6821431755",
@@ -270,15 +286,23 @@
   },
   "cz.ochrana.podkres": {
    "appStoreId": "6830241754",
-   "build": "202611031806",
+   "build": "202611032313",
    "date": "2026-11-03",
-   "version": "0.2.0"
+   "notes": {
+    "cs": "Jednoduchý režim pro začátečníky (nálada, žánr, délka → hotová písnička, bloky, nástroje jako karty, Zkus jinak), bubeník, import a střih audia, master jedním klepnutím, Zpět/Znovu, AI režim a Claude Code",
+    "en": "Simple mode for beginners (mood, genre, length → finished song, blocks, instrument cards, Try again), drummer, audio import and editing, one-tap mastering, undo/redo, AI mode and Claude Code"
+   },
+   "version": "0.3.0"
   },
   "cz.ochrana.pohoda": {
    "appStoreId": "6822215039",
-   "build": "202610301201",
+   "build": "202611032236",
    "date": "2026-11-03",
-   "version": "1.6.1"
+   "notes": {
+    "cs": "Novinky ve verzi 1.6.2",
+    "en": "What's new in 1.6.2"
+   },
+   "version": "1.6.2"
   },
   "cz.ochrana.postacek": {
    "appStoreId": "6822732297",
@@ -304,15 +328,23 @@
   },
   "cz.ochrana.rodinka": {
    "appStoreId": "6822158489",
-   "build": "202610302336",
+   "build": "202611032247",
    "date": "2026-11-03",
-   "version": "1.6.6"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.6.7"
   },
   "cz.ochrana.rozpocet": {
    "appStoreId": "6821604332",
-   "build": "202611030953",
+   "build": "202611032314",
    "date": "2026-11-03",
-   "version": "1.7.0"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled verzí a novinek.",
+    "en": "Settings → Updates: version overview and release notes."
+   },
+   "version": "        CFBundleShortVersionString: $(MARKETING_VERSION)"
   },
   "cz.ochrana.salonky": {
    "appStoreId": "6821289089",
