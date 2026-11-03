@@ -43,7 +43,7 @@
    "version": "1.9.1"
   },
   "cz.ochrana.dalkovac": {
-   "build": "202611032124",
+   "build": "202611032128",
    "date": "2026-11-03",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
@@ -348,9 +348,13 @@
   },
   "cz.ochrana.vyrovnano": {
    "appStoreId": "6821300069",
-   "build": "202610301427",
+   "build": "202611032123",
    "date": "2026-11-03",
-   "version": "1.6.1"
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled verzí a novinek",
+    "en": "Settings → Updates: version overview and release notes"
+   },
+   "version": "1.6.2"
   },
   "cz.ochrana.zapisnik": {
    "appStoreId": "6825419715",

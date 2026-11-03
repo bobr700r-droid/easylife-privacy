@@ -1275,6 +1275,22 @@ APPS = [
        ("Na Macu může Spoušť ovládat fotoaparát z Claude Code přes lokálního pomocníka spoust-mcp; ten komunikuje jen s Claude Code na tvém počítači.",
         "On the Mac, Spoušť can control the camera from Claude Code through the local spoust-mcp helper; it talks only to Claude Code on your computer.")),
     ]),
+  dict(slug="dalkovac", name="Dálkovač", mark="◎", color="#00A8DC",
+    tagline=("Ovladače tvých zařízení v jedné appce, bez účtu a bez cloudu.",
+             "Remotes for your devices in one app, no account and no cloud."),
+    summary=("Dálkovač nesbírá žádná osobní data a nic neodesílá autorovi ani třetím stranám. Komunikuje jen se zařízeními v tvé domácí síti; nemá účet, reklamy ani analytiku.",
+             "Dálkovač collects no personal data and sends nothing to the author or third parties. It talks only to devices on your home network; no account, ads or analytics."),
+    sections=[
+      (("Zařízení v síti", "Devices on your network"),
+       ("Appka komunikuje přímo se světly Govee, tiskárnou Bambu Lab, kamerou GoPro (Bluetooth a Wi-Fi) a tvým Home Assistantem. Data jdou jen mezi tvým telefonem nebo Macem a těmito zařízeními. Přístupový kód tiskárny a token Home Assistantu jsou uložené v Klíčence zařízení.",
+        "The app talks directly to your Govee lights, Bambu Lab printer, GoPro camera (Bluetooth and Wi-Fi) and your Home Assistant. Data flows only between your phone or Mac and these devices. The printer access code and the Home Assistant token are stored in the device Keychain.")),
+      (("Fotky a tisk", "Photos and printing"),
+       ("Vybrané snímky se jen tisknou přes AirPrint; záběry stažené z kamery se ukládají do Fotek. Nic se neodesílá.",
+        "Selected photos are only printed via AirPrint; clips downloaded from the camera are saved to Photos. Nothing is uploaded.")),
+      (("Claude Code (volitelné, Mac)", "Claude Code (optional, Mac)"),
+       ("U verze mimo App Store může Mac pomocník dalkovac-mcp číst seznam zařízení z lokálního souboru a ovládat je z Claude Code na tvém počítači. Žádný síťový port se neotvírá.",
+        "In the non-App Store version, the Mac helper dalkovac-mcp can read the device list from a local file and control them from Claude Code on your computer. No network port is opened.")),
+    ]),
 ]
 
 EXTERNAL = []
