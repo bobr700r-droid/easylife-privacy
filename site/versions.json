@@ -30,6 +30,15 @@
    "date": "2026-11-03",
    "version": "2.13.4"
   },
+  "cz.ochrana.FotoVyber": {
+   "build": "13",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Lupa 1:1 a histogram, Auto po fotkách, synchronizace a virtuální kopie, štítky a IPTC, chytré kolekce, presety Lightroomu, HDR, panorama, Super Resolution, tisk",
+    "en": "1:1 loupe and histogram, per-photo Auto, sync and virtual copies, labels and IPTC, smart collections, Lightroom presets, HDR, panorama, Super Resolution, printing"
+   },
+   "version": "0.10.0"
+  },
   "cz.ochrana.adimacrm": {
    "appStoreId": "6821430789",
    "build": "202610221556",

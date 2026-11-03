@@ -38,8 +38,8 @@
    "repo": "fotovyber-releases",
    "file": "FotoVyber",
    "updates": "sparkle",
-   "version": "0.9.0",
-   "size": 11045078,
+   "version": "0.10.0",
+   "size": 12142824,
    "min": "15.0",
    "arch": "arm64",
    "desc": {
