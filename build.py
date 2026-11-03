@@ -1246,6 +1246,22 @@ APPS = [
        ("Hostitel na Macu: Záznam obrazovky a Zpřístupnění (ovládání myší a klávesnicí); kdykoli je odebereš v Nastavení systému. Klient: místní síť (nalezení počítačů) a fotoaparát (jen naskenování párovacího QR). Při každém připojení hostitel ukáže panel „Dívá se: …“ s tlačítkem Odpojit; zkratka ⌃⌥⎋ odpojí všechny okamžitě.",
         "Mac host: Screen Recording and Accessibility (mouse and keyboard control); you can remove them any time in System Settings. Client: local network (finding computers) and camera (only to scan the pairing QR). On every connection the host shows a \"Watching: …\" panel with a Disconnect button; the shortcut ⌃⌥⎋ disconnects everyone immediately.")),
     ]),
+  dict(slug="strizna", name="Střižna", mark="✂", color="#C0392B",
+    tagline=("Střih a barvení videa s AI, které zůstává ve tvém zařízení.",
+             "Video editing and colour grading with AI that stays on your device."),
+    summary=("Střižna nesbírá žádná osobní data a nic neodesílá autorovi ani třetím stranám. Videa, projekty i analýzy zůstávají v zařízení; nemá účet, reklamy ani analytiku.",
+             "Střižna collects no personal data and sends nothing to the author or third parties. Videos, projects and analyses stay on your device; no account, ads or analytics."),
+    sections=[
+      (("Videa a projekty", "Videos and projects"),
+       ("Videa, zvuk a projekty zůstávají v zařízení nebo tam, kam je sám uložíš (NAS, iCloud Drive). AI výběr záběrů, detekce dob, analýza řeči, hlasitosti i barev běží v zařízení (Vision, Core Image, Metal). Exportované FCPXML, EDL a skripty obsahují cesty k tvým médiím; nic se neodesílá.",
+        "Videos, audio and projects stay on the device or wherever you save them (NAS, iCloud Drive). AI shot selection, beat detection and speech, loudness and colour analysis run on the device (Vision, Core Image, Metal). Exported FCPXML, EDL and scripts contain paths to your media; nothing is sent anywhere.")),
+      (("Přepis řeči", "Speech transcription"),
+       ("Titulky používají systémové rozpoznávání řeči v zařízení, pokud ho systém pro daný jazyk nabízí. Jinak může systém zvuk zpracovat na serverech Apple podle zásad Apple.",
+        "Subtitles use the system's on-device speech recognition where the system offers it for the language. Otherwise the system may process the audio on Apple servers under Apple's policies.")),
+      (("NAS a Claude (volitelné)", "NAS and Claude (optional)"),
+       ("Přístup k NASu (WebDAV) se ukládá do Klíčenky a používá se jen pro spojení s tvým NASem. Jen když zadáš vlastní klíč Claude API, AI barvení podle textu odešle text zadání (ne video) společnosti Anthropic. Na Macu se Střižna může propojit s Claude Code přes lokální pomocník strizna-mcp; ten komunikuje jen s Claude Code na tvém počítači a pracuje s lokálními soubory.",
+        "NAS access (WebDAV) is stored in the Keychain and used only to connect to your NAS. Only if you enter your own Claude API key does text-based AI grading send the text prompt (not the video) to Anthropic. On the Mac, Střižna can connect to Claude Code through the local strizna-mcp helper; it talks only to Claude Code on your computer and works with local files.")),
+    ]),
 ]
 
 EXTERNAL = []
