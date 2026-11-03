@@ -116,9 +116,9 @@
   },
   "cz.ochrana.fototip": {
    "appStoreId": "6821384871",
-   "build": "202611031108",
+   "build": "202611032155",
    "date": "2026-11-03",
-   "version": "1.7.0"
+   "version": "1.7.1"
   },
   "cz.ochrana.fotouklid.ios": {
    "appStoreId": "6825670634",
@@ -128,9 +128,9 @@
   },
   "cz.ochrana.garaz": {
    "appStoreId": "6821429519",
-   "build": "202610301006",
+   "build": "202611032139",
    "date": "2026-11-03",
-   "version": "1.12.3"
+   "version": "1.12.4"
   },
   "cz.ochrana.hudebnicek": {
    "appStoreId": "6828006835",
@@ -140,13 +140,9 @@
   },
   "cz.ochrana.jidelnik": {
    "appStoreId": "6821346197",
-   "build": "202611032259",
+   "build": "202611032255",
    "date": "2026-11-03",
-   "notes": {
-    "cs": "Nastavení → Aktualizace: přehled verzí a novinek",
-    "en": "Settings → Updates: version overview and release notes"
-   },
-   "version": "        CFBundleShortVersionString: $(MARKETING_VERSION)"
+   "version": "1.5.3"
   },
   "cz.ochrana.jizdy": {
    "appStoreId": "6830166369",
@@ -208,9 +204,9 @@
   },
   "cz.ochrana.lekarnicka": {
    "appStoreId": "6821431697",
-   "build": "202610301131",
+   "build": "202611032204",
    "date": "2026-11-03",
-   "version": "1.4.4"
+   "version": "1.4.5"
   },
   "cz.ochrana.letopis": {
    "appStoreId": "6830208056",
@@ -236,9 +232,9 @@
   },
   "cz.ochrana.mazlicek": {
    "appStoreId": "6821436878",
-   "build": "202610301357",
+   "build": "202611032213",
    "date": "2026-11-03",
-   "version": "1.6.1"
+   "version": "1.6.2"
   },
   "cz.ochrana.motobaterie": {
    "appStoreId": "6822590550",
@@ -350,29 +346,21 @@
   },
   "cz.ochrana.rozpocet": {
    "appStoreId": "6821604332",
-   "build": "202611032314",
+   "build": "202611032307",
    "date": "2026-11-03",
-   "notes": {
-    "cs": "Nastavení → Aktualizace: přehled verzí a novinek.",
-    "en": "Settings → Updates: version overview and release notes."
-   },
-   "version": "        CFBundleShortVersionString: $(MARKETING_VERSION)"
+   "version": "1.7.1"
   },
   "cz.ochrana.salonky": {
    "appStoreId": "6821289089",
    "build": "202611032135",
    "date": "2026-11-03",
-   "notes": {
-    "cs": "Nastavení → Aktualizace: přehled verzí a novinek",
-    "en": "Settings → Updates: version overview and release notes"
-   },
-   "version": "        CFBundleShortVersionString: $(MARKETING_VERSION)"
+   "version": "1.7.4"
   },
   "cz.ochrana.smenarna": {
    "appStoreId": "6821283336",
-   "build": "202610301923",
+   "build": "202611032117",
    "date": "2026-11-03",
-   "version": "0.10.2"
+   "version": "0.10.3"
   },
   "cz.ochrana.socialnik": {
    "appStoreId": "6828887283",
@@ -390,19 +378,23 @@
    "version": "0.1.0"
   },
   "cz.ochrana.strizna": {
-   "build": "202611032023",
+   "build": "202611032346",
+   "date": "2026-11-03",
+   "notes": {
+    "cs": "AI přechody (morph, Auto přechody), titulky jako CapCut s překladem, šablony, beat sync, reframe 9:16, odstranění pozadí, efekty, rampy, stabilizace, hlas, text na řeč, složené klipy, J/L střih; oprava HDR exportu",
+    "en": "AI transitions (morph, auto), CapCut-style captions with translation, templates, beat sync, 9:16 reframe, background removal, effects, ramps, stabilization, voice, text to speech, compound clips, J/L cuts; HDR export fix"
+   },
+   "version": "0.3.0"
+  },
+  "cz.ochrana.studium": {
+   "appStoreId": "6822229751",
+   "build": "202611032344",
    "date": "2026-11-03",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
     "en": "Settings → Updates: new version overview and release notes"
    },
-   "version": "0.2.0"
-  },
-  "cz.ochrana.studium": {
-   "appStoreId": "6822229751",
-   "build": "202610301420",
-   "date": "2026-11-03",
-   "version": "1.12.1"
+   "version": "1.12.2"
   },
   "cz.ochrana.svatebnicek": {
    "appStoreId": "6822193720",
