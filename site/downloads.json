@@ -95,8 +95,8 @@
    "repo": "nas-kino-releases",
    "file": "NASKino",
    "updates": "sparkle",
-   "version": "1.8.0",
-   "size": 50695974,
+   "version": "1.8.1",
+   "size": 50754134,
    "min": "15.0",
    "arch": "arm64",
    "desc": {
@@ -131,8 +131,8 @@
    "repo": "kalendar-hub-releases",
    "file": "KalendarHub",
    "updates": "sparkle",
-   "version": "1.7.0",
-   "size": 5201130,
+   "version": "1.7.1",
+   "size": 5261674,
    "min": "15.0",
    "arch": "arm64",
    "desc": {
