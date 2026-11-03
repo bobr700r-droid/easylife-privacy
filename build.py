@@ -1262,6 +1262,19 @@ APPS = [
        ("Přístup k NASu (WebDAV) se ukládá do Klíčenky a používá se jen pro spojení s tvým NASem. Jen když zadáš vlastní klíč Claude API, AI barvení podle textu odešle text zadání (ne video) společnosti Anthropic. Na Macu se Střižna může propojit s Claude Code přes lokální pomocník strizna-mcp; ten komunikuje jen s Claude Code na tvém počítači a pracuje s lokálními soubory.",
         "NAS access (WebDAV) is stored in the Keychain and used only to connect to your NAS. Only if you enter your own Claude API key does text-based AI grading send the text prompt (not the video) to Anthropic. On the Mac, Střižna can connect to Claude Code through the local strizna-mcp helper; it talks only to Claude Code on your computer and works with local files.")),
     ]),
+  dict(slug="spoust", name="Spoušť", mark="◉", color="#C28A1E",
+    tagline=("Dálkové ovládání a tethering fotoaparátů Sony, bez účtu a bez cloudu.",
+             "Remote control and tethering for Sony cameras, no account and no cloud."),
+    summary=("Spoušť nesbírá žádná osobní data a nic neodesílá autorovi ani třetím stranám. Komunikuje jen s tvým fotoaparátem přes Bluetooth, Wi-Fi a USB; nemá účet, reklamy ani analytiku.",
+             "Spoušť collects no personal data and sends nothing to the author or third parties. It talks only to your camera over Bluetooth, Wi-Fi and USB; no account, ads or analytics."),
+    sections=[
+      (("Fotoaparát a fotky", "Camera and photos"),
+       ("Bluetooth se používá k dálkové spoušti, záznamu a zoomu. Fotky stažené při tethered focení se ukládají jen do složky, kterou zvolíš (na Macu Obrázky). Apple Watch jen přeposílá příkazy telefonu.",
+        "Bluetooth is used for the remote shutter, recording and zoom. Photos downloaded while tethered shooting are saved only to the folder you choose (Pictures on the Mac). Apple Watch only relays commands to the phone.")),
+      (("Claude Code (volitelné, Mac)", "Claude Code (optional, Mac)"),
+       ("Na Macu může Spoušť ovládat fotoaparát z Claude Code přes lokálního pomocníka spoust-mcp; ten komunikuje jen s Claude Code na tvém počítači.",
+        "On the Mac, Spoušť can control the camera from Claude Code through the local spoust-mcp helper; it talks only to Claude Code on your computer.")),
+    ]),
 ]
 
 EXTERNAL = []

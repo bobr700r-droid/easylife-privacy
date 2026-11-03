@@ -202,6 +202,22 @@
     "cs": "Hostitel vzdálené plochy Dosah – bezpečné ovládání tohoto Macu z iPhonu, iPadu i jiného Macu.",
     "en": "Dosah remote desktop host – securely control this Mac from iPhone, iPad or another Mac."
    }
+  },
+  {
+   "id": "spoust",
+   "name": "Spoušť",
+   "platform": "mac",
+   "repo": "spoust-releases",
+   "file": "Spoust",
+   "updates": "sparkle",
+   "version": "0.1.0",
+   "size": 4929615,
+   "min": "15.0",
+   "arch": "arm64",
+   "desc": {
+    "cs": "Dálkové ovládání a tethering Sony A7 IV, A7R V a FX3: spoušť, záznam, zoom, USB tethering a ovládání z Claude Code.",
+    "en": "Remote control and tethering for Sony A7 IV, A7R V and FX3: shutter, recording, zoom, USB tethering and Claude Code control."
+   }
   }
  ]
 }

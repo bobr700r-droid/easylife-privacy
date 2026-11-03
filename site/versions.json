@@ -43,7 +43,7 @@
    "version": "1.9.1"
   },
   "cz.ochrana.dalkovac": {
-   "build": "202611032115",
+   "build": "202611032124",
    "date": "2026-11-03",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
@@ -305,11 +305,11 @@
    "version": "0.3.0"
   },
   "cz.ochrana.spoust": {
-   "build": "202611032117",
+   "build": "202611032112",
    "date": "2026-11-03",
    "notes": {
-    "cs": "Dálkové ovládání a tethering Sony A7 IV, A7R V a FX3: spoušť, záznam, zoom, USB tethering, Apple Watch",
-    "en": "Remote control and tethering for Sony A7 IV, A7R V and FX3: shutter, recording, zoom, USB tethering, Apple Watch"
+    "cs": "Dálkové ovládání a tethering Sony A7 IV, A7R V a FX3",
+    "en": "Remote control and tethering for Sony A7 IV, A7R V and FX3"
    },
    "version": "0.1.0"
   },
