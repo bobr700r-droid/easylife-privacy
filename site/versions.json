@@ -403,13 +403,13 @@
    "version": "0.1.0"
   },
   "cz.ochrana.strizna": {
-   "build": "202611032346",
-   "date": "2026-11-03",
+   "build": "202611040745",
+   "date": "2026-11-04",
    "notes": {
-    "cs": "AI přechody (morph, Auto přechody), titulky jako CapCut s překladem, šablony, beat sync, reframe 9:16, odstranění pozadí, efekty, rampy, stabilizace, hlas, text na řeč, složené klipy, J/L střih; oprava HDR exportu",
-    "en": "AI transitions (morph, auto), CapCut-style captions with translation, templates, beat sync, 9:16 reframe, background removal, effects, ramps, stabilization, voice, text to speech, compound clips, J/L cuts; HDR export fix"
+    "cs": "Střih podle textu (mazání slov, vycpávky a pauzy), multicam s přepínáním 1–9 a podle mluvčího, klíčové snímky s křivkami, Ken Burns, sekundární příběhy, mixér stopy (EQ, kompresor, de-esser), fronta exportu, lepší 360°",
+    "en": "Text-based editing (delete words, fillers and pauses), multicam with 1–9 switching and by speaker, keyframes with curves, Ken Burns, secondary storylines, track mixer (EQ, compressor, de-esser), export queue, better 360°"
    },
-   "version": "0.3.0"
+   "version": "0.4.0"
   },
   "cz.ochrana.studium": {
    "appStoreId": "6822229751",
