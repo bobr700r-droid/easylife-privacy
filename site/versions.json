@@ -31,11 +31,11 @@
    "version": "2.13.4"
   },
   "cz.ochrana.FotoVyber": {
-   "build": "15",
+   "build": "16",
    "date": "2026-11-04",
    "notes": {
-    "cs": "Více katalogů jako v Lightroomu (nový, otevřít, část do nového, sloučení), přesun a kopie zakázek na NAS i s úpravami (XMP + sidecar, ověření součtem, chytré náhledy 2560 px), import rovnou na NAS, volné místo a Uvolnit místo, zálohy katalogu na NAS",
-    "en": "Multiple catalogs like Lightroom (new, open, part to new, merge), move and copy shoots to NAS with edits (XMP + sidecar, checksum verification, 2560 px smart previews), import straight to NAS, free space and Free up space, catalog backups to NAS"
+    "cs": "Svatba po momentech (příchod, obřad, prstýnky, polibek, gratulace, první tanec…) s vysvětlením proč/proč ne, věrnější vývoj podle nastavení Lightroomu, export v plném rozlišení z NASu, fronta nahrávání na NAS na pozadí, Upright s vodítky, MCP pro katalogy",
+    "en": "Wedding culling by moments (arrival, ceremony, rings, kiss, congratulations, first dance…) with why/why not, more faithful rendering of Lightroom settings, full-resolution export from NAS, background NAS upload queue, guided Upright, MCP for catalogs"
    },
    "version": "0.12.0"
   },
