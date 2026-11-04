@@ -155,9 +155,13 @@
   },
   "cz.ochrana.jizdy": {
    "appStoreId": "6830166369",
-   "build": "202611031814",
-   "date": "2026-11-03",
-   "version": "1.2.0"
+   "build": "202611040038",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.2.1"
   },
   "cz.ochrana.jmautodily": {
    "appStoreId": "6822237417",
@@ -327,9 +331,13 @@
   },
   "cz.ochrana.postacek": {
    "appStoreId": "6822732297",
-   "build": "202610302009",
-   "date": "2026-11-03",
-   "version": "0.8.1"
+   "build": "202611040047",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "0.8.2"
   },
   "cz.ochrana.predplatne": {
    "appStoreId": "6821430897",
@@ -344,8 +352,12 @@
   "cz.ochrana.prehled": {
    "appStoreId": "6825461912",
    "build": "202610301621",
-   "date": "2026-11-03",
-   "version": "0.3.1"
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "0.3.2"
   },
   "cz.ochrana.rodinka": {
    "appStoreId": "6822158489",
@@ -411,9 +423,13 @@
   },
   "cz.ochrana.svatebnicek": {
    "appStoreId": "6822193720",
-   "build": "202610302011",
-   "date": "2026-11-03",
-   "version": "1.8.4"
+   "build": "202611040035",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.8.5"
   },
   "cz.ochrana.tiskarnik": {
    "appStoreId": "6830241594",
@@ -444,8 +460,12 @@
   "cz.ochrana.zapisnik": {
    "appStoreId": "6825419715",
    "build": "202610301913",
-   "date": "2026-11-03",
-   "version": "0.2.2"
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "0.2.3"
   },
   "cz.ochrana.zaruky": {
    "appStoreId": "6821429264",
