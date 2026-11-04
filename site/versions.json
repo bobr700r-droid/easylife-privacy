@@ -403,13 +403,13 @@
    "version": "0.1.0"
   },
   "cz.ochrana.strizna": {
-   "build": "202611040930",
+   "build": "202611041100",
    "date": "2026-11-04",
    "notes": {
-    "cs": "Zálohy projektů na NAS Synology (verze, obnova, porovnání). Dříve: střih podle textu (mazání slov, vycpávky a pauzy), multicam s přepínáním 1–9 a podle mluvčího, klíčové snímky s křivkami, Ken Burns, sekundární příběhy, mixér stopy (EQ, kompresor, de-esser), fronta exportu, lepší 360°",
-    "en": "Project backups to Synology NAS (versions, restore, compare). Earlier: text-based editing (delete words, fillers and pauses), multicam with 1–9 switching and by speaker, keyframes with curves, Ken Burns, secondary storylines, track mixer (EQ, compressor, de-esser), export queue, better 360°"
+    "cs": "Stabilizace běžných videí jako Warp Stabilizer (Plynulý/Statív/Sledování, horizont, rolling shutter, chytrý ořez, gyro GoPro a Gyroflow), zpomalení optickým tokem, časové odšumění videa, 360° vzhled jako DJI Studio",
+    "en": "Stabilization of regular videos like Warp Stabilizer (Smooth/Tripod/Follow, horizon, rolling shutter, smart crop, GoPro and Gyroflow gyro), optical-flow slow motion, temporal video denoise, 360° DJI Studio look"
    },
-   "version": "0.4.1"
+   "version": "0.5.0"
   },
   "cz.ochrana.studium": {
    "appStoreId": "6822229751",

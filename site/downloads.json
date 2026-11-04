@@ -178,8 +178,8 @@
    "repo": "strizna-releases",
    "file": "Strizna",
    "updates": "sparkle",
-   "version": "0.4.1",
-   "size": 13070950,
+   "version": "0.5.0",
+   "size": 13818277,
    "min": "15.0",
    "arch": "universal",
    "desc": {
