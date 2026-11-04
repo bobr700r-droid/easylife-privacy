@@ -31,13 +31,13 @@
    "version": "2.13.4"
   },
   "cz.ochrana.FotoVyber": {
-   "build": "13",
+   "build": "14",
    "date": "2026-11-04",
    "notes": {
-    "cs": "Lupa 1:1 a histogram, Auto po fotkách, synchronizace a virtuální kopie, štítky a IPTC, chytré kolekce, presety Lightroomu, HDR, panorama, Super Resolution, tisk",
-    "en": "1:1 loupe and histogram, per-photo Auto, sync and virtual copies, labels and IPTC, smart collections, Lightroom presets, HDR, panorama, Super Resolution, printing"
+    "cs": "Profily objektivů podle EXIF, mapa a GPS (GPX, fotky z iPhonu), snímky úprav, měkký nátisk, perspektiva a deformace úchyty, HDR/panorama jako DNG bez duchů, Poslat do Sociálníku, stažení AI modelů",
+    "en": "Lens profiles from EXIF, map and GPS (GPX, iPhone photos), develop snapshots, soft proofing, perspective and warp handles, HDR/panorama as DNG with deghosting, Send to Sociálník, AI model download"
    },
-   "version": "0.10.0"
+   "version": "0.11.0"
   },
   "cz.ochrana.adimacrm": {
    "appStoreId": "6821430789",
