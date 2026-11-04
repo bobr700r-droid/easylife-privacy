@@ -403,13 +403,13 @@
    "version": "0.1.0"
   },
   "cz.ochrana.strizna": {
-   "build": "202611041100",
+   "build": "202611041200",
    "date": "2026-11-04",
    "notes": {
-    "cs": "Stabilizace běžných videí jako Warp Stabilizer (Plynulý/Statív/Sledování, horizont, rolling shutter, chytrý ořez, gyro GoPro a Gyroflow), zpomalení optickým tokem, časové odšumění videa, 360° vzhled jako DJI Studio",
-    "en": "Stabilization of regular videos like Warp Stabilizer (Smooth/Tripod/Follow, horizon, rolling shutter, smart crop, GoPro and Gyroflow gyro), optical-flow slow motion, temporal video denoise, 360° DJI Studio look"
+    "cs": "Gyro přímo z kamery Sony (i s IBIS) a DJI bez Gyroflow, FPV stabilizace s doplněním okrajů z okolních snímků, oprava stabilizace u 29,97p, nové klíčování green screenu, přesnější sledování masek, video rovnou do Sociálníku",
+    "en": "Gyro straight from Sony (incl. IBIS) and DJI cameras without Gyroflow, FPV stabilization with edges filled from neighbouring frames, 29.97p stabilization fix, new green-screen keyer, more accurate mask tracking, send video to Sociálník"
    },
-   "version": "0.5.0"
+   "version": "0.6.0"
   },
   "cz.ochrana.studium": {
    "appStoreId": "6822229751",
