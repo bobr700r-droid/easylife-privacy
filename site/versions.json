@@ -31,13 +31,13 @@
    "version": "2.13.4"
   },
   "cz.ochrana.FotoVyber": {
-   "build": "16",
+   "build": "17",
    "date": "2026-11-04",
    "notes": {
-    "cs": "Svatba po momentech (příchod, obřad, prstýnky, polibek, gratulace, první tanec…) s vysvětlením proč/proč ne, věrnější vývoj podle nastavení Lightroomu, export v plném rozlišení z NASu, fronta nahrávání na NAS na pozadí, Upright s vodítky, MCP pro katalogy",
-    "en": "Wedding culling by moments (arrival, ceremony, rings, kiss, congratulations, first dance…) with why/why not, more faithful rendering of Lightroom settings, full-resolution export from NAS, background NAS upload queue, guided Upright, MCP for catalogs"
+    "cs": "Profily vyvolání jako v Lightroomu (Barevný, Standardní, Portrét, Krajina, Neutrální, Živý, Monochrom, Styl z Lightroomu), úpravy z LR výrazně blíž exportu, oprava zrna, HSL a Auto vyladěné na párech z LR, kostry postav v momentech svatby",
+    "en": "Develop profiles like Lightroom (Color, Standard, Portrait, Landscape, Neutral, Vivid, Monochrome, Lightroom style), Lightroom edits much closer to LR exports, grain fix, HSL and Auto tuned on LR pairs, body poses in wedding moments"
    },
-   "version": "0.13.0"
+   "version": "0.14.0"
   },
   "cz.ochrana.adimacrm": {
    "appStoreId": "6821430789",
