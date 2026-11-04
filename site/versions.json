@@ -31,13 +31,13 @@
    "version": "2.13.4"
   },
   "cz.ochrana.FotoVyber": {
-   "build": "17",
+   "build": "18",
    "date": "2026-11-04",
    "notes": {
-    "cs": "Profily vyvolání jako v Lightroomu (Barevný, Standardní, Portrét, Krajina, Neutrální, Živý, Monochrom, Styl z Lightroomu), úpravy z LR výrazně blíž exportu, oprava zrna, HSL a Auto vyladěné na párech z LR, kostry postav v momentech svatby",
-    "en": "Develop profiles like Lightroom (Color, Standard, Portrait, Landscape, Neutral, Vivid, Monochrome, Lightroom style), Lightroom edits much closer to LR exports, grain fix, HSL and Auto tuned on LR pairs, body poses in wedding moments"
+    "cs": "Doostření jako v Lightroomu (Míra, Poloměr, Detail, Maskování, v náhledu i exportu), Auto vyvážení drží As Shot, Přeanalyzovat starší zakázky jedním tlačítkem, Načíst úpravy z Lightroomu, Přehled N fotek, opravená instalace AI modelů.",
+    "en": "Lightroom-like sharpening (Amount, Radius, Detail, Masking, in preview and export), Auto white balance keeps As Shot, re-analyse older jobs with one button, load edits from Lightroom, Survey of N photos, fixed AI model install."
    },
-   "version": "0.14.0"
+   "version": "0.15.0"
   },
   "cz.ochrana.adimacrm": {
    "appStoreId": "6821430789",
