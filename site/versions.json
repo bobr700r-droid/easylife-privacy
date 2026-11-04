@@ -403,13 +403,13 @@
    "version": "0.1.0"
   },
   "cz.ochrana.strizna": {
-   "build": "202611041200",
+   "build": "202611041900",
    "date": "2026-11-04",
    "notes": {
-    "cs": "Gyro přímo z kamery Sony (i s IBIS) a DJI bez Gyroflow, FPV stabilizace s doplněním okrajů z okolních snímků, oprava stabilizace u 29,97p, nové klíčování green screenu, přesnější sledování masek, video rovnou do Sociálníku",
-    "en": "Gyro straight from Sony (incl. IBIS) and DJI cameras without Gyroflow, FPV stabilization with edges filled from neighbouring frames, 29.97p stabilization fix, new green-screen keyer, more accurate mask tracking, send video to Sociálník"
+    "cs": "Svatební highlight jedním klepnutím (polibek, přípitek, tanec na doby hudby, 30 s až 3 min, 9:16 i 16:9), výrazně lepší zpomalení a mezisnímky, rampa optickým tokem, warp po oblastech, rolling shutter z gyra, mix a export na −14 LUFS, kapitoly, dráha 360° prstem, šablony vzhledu",
+    "en": "One-tap wedding highlight (kiss, toast, dance cut to the music, 30 s to 3 min, 9:16 and 16:9), much better slow motion and in-between frames, optical-flow speed ramps, local warp stabilization, gyro rolling-shutter fix, auto mix and −14 LUFS export, chapters, draw-your-own 360° camera path, look templates"
    },
-   "version": "0.6.0"
+   "version": "0.7.0"
   },
   "cz.ochrana.studium": {
    "appStoreId": "6822229751",
