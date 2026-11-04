@@ -31,13 +31,13 @@
    "version": "2.13.4"
   },
   "cz.ochrana.FotoVyber": {
-   "build": "14",
+   "build": "15",
    "date": "2026-11-04",
    "notes": {
-    "cs": "Profily objektivů podle EXIF, mapa a GPS (GPX, fotky z iPhonu), snímky úprav, měkký nátisk, perspektiva a deformace úchyty, HDR/panorama jako DNG bez duchů, Poslat do Sociálníku, stažení AI modelů",
-    "en": "Lens profiles from EXIF, map and GPS (GPX, iPhone photos), develop snapshots, soft proofing, perspective and warp handles, HDR/panorama as DNG with deghosting, Send to Sociálník, AI model download"
+    "cs": "Více katalogů jako v Lightroomu (nový, otevřít, část do nového, sloučení), přesun a kopie zakázek na NAS i s úpravami (XMP + sidecar, ověření součtem, chytré náhledy 2560 px), import rovnou na NAS, volné místo a Uvolnit místo, zálohy katalogu na NAS",
+    "en": "Multiple catalogs like Lightroom (new, open, part to new, merge), move and copy shoots to NAS with edits (XMP + sidecar, checksum verification, 2560 px smart previews), import straight to NAS, free space and Free up space, catalog backups to NAS"
    },
-   "version": "0.11.0"
+   "version": "0.12.0"
   },
   "cz.ochrana.adimacrm": {
    "appStoreId": "6821430789",
