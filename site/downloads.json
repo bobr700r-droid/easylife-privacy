@@ -1,5 +1,5 @@
 {
- "_info": "Stránka Ke stažení (/ke-stazeni/, /en/download/): appky mimo App Store a TestFlight. Soubory jsou v GitHub Releases veřejných rep bobr700r-droid/<repo> (stálý odkaz releases/latest/download/<file>.dmg); version/size/min/arch zapisuje tools/mac-instalacka/sparkle-vydani.sh (repo easylife-vedeni). Komandér má vlastní stránku /komander/ a appcast na webu (Komander/tools/release.sh). platform: mac | windows; updates: sparkle | vlastni; ext: přípona souboru (výchozí dmg, pro Windows např. exe nebo zip); u Windows min = verze Windows (\"10\"), arch x64 | arm64. Počítadlo stažení a aktuální verzi/velikost bere build z GitHub API (releases repa; installer = <file>.<ext>, aktualizace = updatePrefix nebo <file>.zip); pageLangs = jazyky, ve kterých existuje stránka page (jinak odkaz na českou).",
+ "_info": "Stránka Ke stažení (/ke-stazeni/, /en/download/): appky mimo App Store a TestFlight. Soubory jsou v GitHub Releases veřejných rep bobr700r-droid/<repo> (stálý odkaz releases/latest/download/<file>.dmg); version/size/min/arch zapisuje tools/mac-instalacka/sparkle-vydani.sh (repo easylife-vedeni). Komandér má vlastní stránku /komander/ a appcast na webu (Komander/tools/release.sh). platform: mac | windows; updates: sparkle | vlastni; ext: přípona souboru (výchozí dmg, pro Windows např. exe nebo zip); u Windows min = verze Windows (\"10\"), arch x64 | arm64. Počítadlo stažení a aktuální verzi/velikost bere build z GitHub API (releases repa; installer = <file>.<ext>, aktualizace = updatePrefix nebo <file>.zip); pageLangs = jazyky, ve kterých existuje stránka page (jinak odkaz na českou). waitRelease: true = appka se na webu ukáže, až bude <file>.<ext> v posledním vydání repa (scripts/vydat-mac-dmg.py). apple: veřejný odkaz na App Store nebo TestFlight (druhé tlačítko u Mac appky; bez něj se neukáže). privacy: slug zásad z build.py, když se liší od id. Mac appka bez page dostane stránku /ke-stazeni/<id>/.",
  "apps": [
   {
    "id": "komander",
@@ -29,7 +29,8 @@
    "desc": {
     "cs": "Pořádek ve fotkách napříč iCloud Fotkami, Google Diskem, Google Fotkami a NASem – najde duplicity a kopie, aniž by stahoval originály.",
     "en": "Tidy photos across iCloud Photos, Google Drive, Google Photos and your NAS – finds duplicates and copies without downloading originals."
-   }
+   },
+   "page": "/fotouklid/"
   },
   {
    "id": "fotovyber",
@@ -185,7 +186,8 @@
    "desc": {
     "cs": "Střih a barvení videa s AI: magnetická časová osa, střih na hudbu, barvy z log/RAW, záběry 360° a ovládání z Claude Code.",
     "en": "AI video editing and grading: magnetic timeline, cut to music, log/RAW color, 360° footage and Claude Code control."
-   }
+   },
+   "privacy": "strizna"
   },
   {
    "id": "dosahhostitel",
@@ -201,7 +203,8 @@
    "desc": {
     "cs": "Hostitel vzdálené plochy Dosah – bezpečné ovládání tohoto Macu z iPhonu, iPadu i jiného Macu.",
     "en": "Dosah remote desktop host – securely control this Mac from iPhone, iPad or another Mac."
-   }
+   },
+   "privacy": "dosah"
   },
   {
    "id": "spoust",
@@ -217,6 +220,127 @@
    "desc": {
     "cs": "Dálkové ovládání a tethering Sony A7 IV, A7R V a FX3: spoušť, záznam, zoom, USB tethering a ovládání z Claude Code.",
     "en": "Remote control and tethering for Sony A7 IV, A7R V and FX3: shutter, recording, zoom, USB tethering and Claude Code control."
+   }
+  },
+  {
+   "id": "animator",
+   "name": "Animátor",
+   "platform": "mac",
+   "repo": "animator-releases",
+   "file": "Animator",
+   "waitRelease": true,
+   "version": "0.2.2",
+   "size": 7820047,
+   "min": "15.0",
+   "arch": "universal",
+   "desc": {
+    "cs": "Pohybová grafika pro Mac: šablony, klíčové snímky a 3D. Projekty zůstávají ve tvém Macu.",
+    "en": "Motion graphics for Mac: templates, keyframes and 3D. Your projects stay on your Mac.",
+    "sk": "Pohybová grafika pre Mac: šablóny, kľúčové snímky a 3D. Projekty zostávajú v tvojom Macu.",
+    "de": "Motion Graphics für den Mac: Vorlagen, Keyframes und 3D. Deine Projekte bleiben auf deinem Mac.",
+    "es": "Gráficos en movimiento para Mac: plantillas, fotogramas clave y 3D. Tus proyectos se quedan en tu Mac.",
+    "pl": "Grafika ruchoma na Maca: szablony, klatki kluczowe i 3D. Projekty zostają na Twoim Macu."
+   }
+  },
+  {
+   "id": "podkres",
+   "name": "Podkres",
+   "platform": "mac",
+   "repo": "podkres-releases",
+   "file": "Podkres",
+   "waitRelease": true,
+   "version": "0.9.1",
+   "size": 42700378,
+   "min": "15.0",
+   "arch": "universal",
+   "desc": {
+    "cs": "Hudba pod videa podle zadání – skončí přesně s videem a ztiší se pod řečí. Skládá přímo v Macu.",
+    "en": "Background music for videos from a prompt – ends exactly with the video and ducks under speech. Composed right on your Mac.",
+    "sk": "Hudba pod videá podľa zadania – skončí presne s videom a stíši sa pod rečou. Skladá priamo v Macu.",
+    "de": "Hintergrundmusik für Videos nach deiner Vorgabe – endet genau mit dem Video und wird unter Sprache leiser. Komponiert direkt auf dem Mac.",
+    "es": "Música de fondo para vídeos a partir de una descripción: termina justo con el vídeo y baja bajo la voz. Se compone en tu Mac.",
+    "pl": "Muzyka do filmów na podstawie opisu – kończy się dokładnie z filmem i cichnie pod mową. Powstaje na Twoim Macu."
+   }
+  },
+  {
+   "id": "plakatnik",
+   "name": "Plakátník",
+   "platform": "mac",
+   "repo": "plakatnik-releases",
+   "file": "Plakatnik",
+   "waitRelease": true,
+   "version": "0.10.0",
+   "size": 16807455,
+   "min": "15.0",
+   "arch": "universal",
+   "desc": {
+    "cs": "Grafický editor plakátů, pozvánek a příspěvků do sítí. Návrhy zůstávají u tebe.",
+    "en": "A graphic editor for posters, invitations and social posts. Your designs stay with you.",
+    "sk": "Grafický editor plagátov, pozvánok a príspevkov na siete. Návrhy zostávajú u teba.",
+    "de": "Grafikeditor für Plakate, Einladungen und Social-Media-Beiträge. Deine Entwürfe bleiben bei dir.",
+    "es": "Editor gráfico de carteles, invitaciones y publicaciones para redes. Tus diseños se quedan contigo.",
+    "pl": "Edytor graficzny plakatów, zaproszeń i postów do mediów społecznościowych. Projekty zostają u Ciebie."
+   }
+  },
+  {
+   "id": "tiskarnik",
+   "name": "Tiskárník",
+   "platform": "mac",
+   "repo": "tiskarnik-releases",
+   "file": "Tiskarnik",
+   "waitRelease": true,
+   "version": "0.5.0",
+   "size": 8297166,
+   "min": "15.0",
+   "arch": "universal",
+   "desc": {
+    "cs": "3D modely pro tisk: Skadis, Gridfinity, krabičky a štítky – z parametrů, textu i obrázku.",
+    "en": "3D models for printing: Skadis, Gridfinity, boxes and labels – from parameters, text or an image.",
+    "sk": "3D modely na tlač: Skadis, Gridfinity, krabičky a štítky – z parametrov, textu aj obrázka.",
+    "de": "3D-Modelle für den Druck: Skadis, Gridfinity, Boxen und Etiketten – aus Parametern, Text oder Bild.",
+    "es": "Modelos 3D para imprimir: Skadis, Gridfinity, cajas y etiquetas, a partir de parámetros, texto o una imagen.",
+    "pl": "Modele 3D do druku: Skadis, Gridfinity, pudełka i etykiety – z parametrów, tekstu lub obrazu."
+   }
+  },
+  {
+   "id": "kanclik",
+   "name": "Kanclík",
+   "platform": "mac",
+   "repo": "kanclik-releases",
+   "file": "Kanclik",
+   "waitRelease": true,
+   "version": "0.8.5",
+   "size": 17550271,
+   "min": "15.0",
+   "arch": "universal",
+   "desc": {
+    "cs": "Dokumenty, tabulky, prezentace a PDF v jedné appce – s pomocí Claude.",
+    "en": "Documents, spreadsheets, presentations and PDF in one app – with help from Claude.",
+    "sk": "Dokumenty, tabuľky, prezentácie a PDF v jednej aplikácii – s pomocou Claude.",
+    "de": "Dokumente, Tabellen, Präsentationen und PDF in einer App – mit Hilfe von Claude.",
+    "es": "Documentos, hojas de cálculo, presentaciones y PDF en una sola app, con la ayuda de Claude.",
+    "pl": "Dokumenty, arkusze, prezentacje i PDF w jednej aplikacji – z pomocą Claude."
+   },
+   "privacy": "kancl"
+  },
+  {
+   "id": "dosah",
+   "name": "Dosah",
+   "platform": "mac",
+   "repo": "dosah-mac-releases",
+   "file": "Dosah",
+   "waitRelease": true,
+   "version": "0.7.1",
+   "size": 9009570,
+   "min": "14.0",
+   "arch": "arm64",
+   "desc": {
+    "cs": "Vzdálená plocha s AI asistentem pro tvoje vlastní počítače. Na ovládaném Macu spusť Dosah hostitel.",
+    "en": "Remote desktop with an AI assistant for your own computers. Run Dosah hostitel on the Mac you want to control.",
+    "sk": "Vzdialená plocha s AI asistentom pre tvoje vlastné počítače. Na ovládanom Macu spusti Dosah hostitel.",
+    "de": "Remote-Desktop mit KI-Assistent für deine eigenen Computer. Auf dem gesteuerten Mac läuft Dosah hostitel.",
+    "es": "Escritorio remoto con asistente de IA para tus propios ordenadores. En el Mac que quieras controlar, abre Dosah hostitel.",
+    "pl": "Pulpit zdalny z asystentem AI dla Twoich własnych komputerów. Na sterowanym Macu uruchom Dosah hostitel."
    }
   }
  ]

@@ -240,6 +240,11 @@ T = {
               "Apps para Mac y Windows que no están en la App Store ni en TestFlight. Descárgalas aquí mismo: firmadas, verificadas y con actualizaciones automáticas.",
               "Aplikacje na Maca i Windows, których nie ma w App Store ani w TestFlight. Pobierzesz je tutaj – podpisane, sprawdzone i z automatycznymi aktualizacjami."],
   "dl_count": ["Staženo {n}×", "Downloaded {n}×", "Stiahnuté {n}×", "{n}× heruntergeladen", "Descargada {n} veces", "Pobrano {n}×"],
+  "mac_get": ["Stáhnout pro Mac", "Download for Mac", "Stiahnuť pre Mac", "Für den Mac laden", "Descargar para Mac", "Pobierz na Maca"],
+  "mac_busy": ["Stahování začalo…", "Download started…", "Sťahovanie začalo…", "Download gestartet…", "Descarga iniciada…", "Pobieranie rozpoczęte…"],
+  "mac_full": ["Plná verze se všemi funkcemi, podepsaná a ověřená Applem", "Full version with every feature, signed and notarized by Apple",
+               "Plná verzia so všetkými funkciami, podpísaná a overená Applom", "Vollversion mit allen Funktionen, signiert und von Apple beglaubigt",
+               "Versión completa con todas las funciones, firmada y verificada por Apple", "Pełna wersja ze wszystkimi funkcjami, podpisana i poświadczona przez Apple"],
   "dl_btn": ["Stáhnout", "Download", "Stiahnuť", "Laden", "Descargar", "Pobierz"],
   "dl_more": ["Více o appce", "About the app", "Viac o aplikácii", "Mehr zur App", "Más sobre la app", "Więcej o aplikacji"],
   "dl_win_soon": ["Windows – připravujeme", "Windows – coming soon", "Windows – pripravujeme", "Windows – in Vorbereitung", "Windows – en preparación", "Windows – w przygotowaniu"],
@@ -283,7 +288,7 @@ var tp=a&&a.checked?a.dataset.android:f.topic.value;if(tp)d.topic=tp;b.disabled=
 fetch(f.action,{method:"POST",credentials:"omit",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)}).then(function(r){return r.json().then(function(j){return r.ok&&j.ok})})
 .catch(function(){return false}).then(function(ok){m.hidden=false;m.textContent=ok?f.dataset.ok:f.dataset.err;if(ok)f.querySelector(".nl-row").hidden=true;else b.disabled=false})})})</script>"""
 COPYRIGHT = "© 2026 Lukáš Ochrana"
-VERSION = "1.9.35"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
+VERSION = "1.9.36"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
 # Podmínky užití – licence (13. 10. 2026), ve všech 6 jazycích (sk/de/es/pl a zdravotní sekce doplněny při auditu Lékárničky).
 TERMS = {
   "cs": ("Podmínky užití", "Souhlas, licence, odpovědnost a autorská práva k aplikacím EasyForLife.", [
@@ -479,6 +484,11 @@ e.textContent=e.dataset.fmt.replace('{n}',n.toLocaleString(e.dataset.lang==='cs'
 if(c&&Date.now()-c.t<36e5)return use(c.d);
 fetch('https://api.github.com/repos/bobr700r-droid/'+r+'/releases?per_page=100').then(function(x){return x.ok?x.json():null}).then(function(d){if(!d)return;
 d=d.map(function(x){return{assets:x.assets.map(function(a){return{name:a.name,download_count:a.download_count}})}});try{localStorage.setItem(k,JSON.stringify({t:Date.now(),d:d}))}catch(e){}use(d)}).catch(function(){})})})();</script>"""
+
+# Odezva tlačítka stažení: po kliknutí hned „Stahování začalo…“ s kolečkem, za 4 s zpět (soubor stahuje prohlížeč sám, bez JS odkaz funguje dál)
+MAC_SCRIPT = """<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-busy]');if(!a||a.getAttribute('aria-busy'))return;
+var s=a.querySelector('small'),o=s.textContent;s.textContent=a.dataset.busy;a.setAttribute('aria-busy','true');
+setTimeout(function(){s.textContent=o;a.removeAttribute('aria-busy')},4000)});</script>"""
 
 def dl_slug(lang):
     """Ke stažení: /ke-stazeni/ (cs, sk), jinak /download/."""
@@ -776,6 +786,11 @@ background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gra
 .stores{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
 .store{display:inline-grid;min-width:150px;padding:8px 16px 9px;border-radius:14px;background:var(--ink);color:var(--bg);text-decoration:none;line-height:1.15;box-shadow:var(--shadow);transition:transform .15s}
 .store:hover{transform:translateY(-2px)}.store small{font-size:.72rem;font-weight:600;opacity:.8}.store b{font-size:1.05rem;font-weight:800}
+.store:active{transform:scale(.97)}.store.alt{background:none;color:var(--ink);border:1.5px solid var(--line)}
+.store[aria-busy]{opacity:.75;cursor:progress;grid-template-columns:1fr auto;column-gap:10px}.store[aria-busy] b{grid-column:1}
+.store[aria-busy]::after{content:"";grid-column:2;grid-row:1/3;align-self:center;width:16px;height:16px;border-radius:50%;border:2px solid currentColor;border-right-color:transparent;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.store[aria-busy]::after{animation:none}}
+.mac-get{display:grid;gap:8px;margin:18px 0 0}.mac-get .stores,.dl-act .stores{margin:0}.mac-get .dl-upd{color:var(--muted)}
 .store.off{background:none;color:var(--muted);border:1.5px dashed var(--line);box-shadow:none}.store.off em{font-style:normal;font-size:.72rem;font-weight:700}
 .plats span.soon{border-style:dashed}
 .plats{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}.plats span{font-size:.8rem;font-weight:800;letter-spacing:.02em;border:1.5px solid var(--line);border-radius:8px;padding:3px 9px;color:var(--muted)}
@@ -1282,10 +1297,7 @@ class Site:
             "Mezerník = rychlý náhled, záložky, oblíbené složky, příkazový řádek",
             "Aktualizace přicházejí samy přímo v appce"))
         if ver and dmg.exists():
-            mb = dmg.stat().st_size / 1_000_000
-            get = (f'<p class="actions"><a class="btn big" href="/komander/{dmg.name}" download>Stáhnout Komandér {esc(ver)} <span>↓</span></a>'
-                   f'<a class="ghost" href="#zmeny">Co je nového</a></p>'
-                   f'<p class="note">{icon("shield")}<span>Pro macOS 15 a novější · {f"{mb:.1f}".replace(".", ",")} MB · podepsáno a ověřeno Applem (Developer ID)</span></p>')
+            get = self.mac_block(next(x for x in self.dl_apps() if x["id"] == "komander"), lang) + '<p class="actions"><a class="ghost" href="#zmeny">Co je nového</a></p>'
         else:
             get = f'<p class="note">{icon("check")}<span>Ke stažení brzy – Komandér se právě podepisuje a ověřuje u Applu.</span></p>'
         steps = "".join(f"<li>{esc(x)}</li>" for x in (
@@ -1301,7 +1313,7 @@ class Site:
                 f'<h2 class="sub">Instalace</h2><ol>{steps}</ol>'
                 + (f'<h2 class="sub" id="zmeny">Co je nového</h2>{notes.read_text(encoding="utf-8")}' if notes.exists() else "")
                 + f'<p class="note">{icon("shield")}<span>Komandér je mimo App Store, protože správce souborů potřebuje přístup k celému disku. '
-                  f'<a href="/soukromi.html">{t("policy", lang)}</a></span></p></div></div>')
+                  f'<a href="/soukromi.html">{t("policy", lang)}</a></span></p></div></div>' + MAC_SCRIPT)
         return page(lang, "komander", "Komandér – správce souborů pro Mac | EasyForLife",
                     "Dvoupanelový správce souborů pro Mac s F-klávesami, frontou kopírování a automatickými aktualizacemi.",
                     body, self.operator, langs=["cs"])
@@ -1319,13 +1331,53 @@ class Site:
                     if a["ok"]:
                         a.update(version=ver, size=dmg.stat().st_size, min="15.0", arch="universal", href=f"/komander/{dmg.name}", icon="/komander/icon.png")
                     continue
-                a["ok"] = True
                 a["asset"] = f'{a["file"]}.{a.get("ext", "dmg")}'
                 a["href"] = f'https://github.com/bobr700r-droid/{a["repo"]}/releases/latest/download/{a["asset"]}'
                 a["icon"] = f'/dl/{a["id"]}.png'
-                a.update(gh_release(a["repo"], a["asset"], a.get("updatePrefix") or f'{a["file"]}.zip'))
+                live = gh_release(a["repo"], a["asset"], a.get("updatePrefix") or f'{a["file"]}.zip')
+                a.update(live)
+                a["ok"] = "size" in live or not a.get("waitRelease")  # waitRelease: bez souboru v posledním vydání se appka neukáže (žádný mrtvý odkaz)
             self._dl = d["apps"]
         return self._dl
+
+    def on_cz(self, path, lang):
+        """Soubory Komandéru leží jen na easyforlife.cz – na .eu musí odkaz vést tam."""
+        return CZ + path if path.startswith("/") and site_of(lang) != "cz" else path
+
+    def mac_btns(self, a, lang):
+        """Dvě možnosti u Mac appky: plná verze (.dmg) a App Store / TestFlight. Druhé tlačítko jen s veřejným odkazem `apple` v downloads.json
+        (interní skupiny TestFlightu veřejný odkaz nemají, takže tam není)."""
+        get = (f'<a class="store" href="{esc(self.on_cz(a["href"], lang))}" download data-busy="{esc(t("mac_busy", lang))}">'
+               f'<small>{t("mac_get", lang)}</small><b>{esc(a["name"])} {esc(a["version"])}</b></a>')
+        ap = a.get("apple") or ""
+        tf = "testflight.apple.com" in ap
+        other = (f'<a class="store alt" href="{esc(ap)}" rel="noopener"><small>{t("st_beta" if tf else "st_get", lang)}</small><b>{"TestFlight" if tf else "App Store"}</b></a>') if ap else ""
+        return f'<div class="stores" role="group" aria-label="{t("mac_get", lang)}">{get}{other}</div>'
+
+    def mac_block(self, a, lang):
+        """Blok na stránce appky: tlačítka, požadavky a co dostaneš."""
+        facts = " · ".join(esc(x) for x in self.dl_facts(a, lang))
+        return f'<div class="mac-get">{self.mac_btns(a, lang)}<p class="dl-facts">{facts}</p><p class="dl-upd">{icon("shield")}<span>{t("mac_full", lang)}</span></p></div>'
+
+    def mac_of(self, app_id):
+        """Mac instalačka k appce z katalogu (položka downloads.json s page = /<id>/), jinak None."""
+        return next((x for x in self.dl_apps() if x["ok"] and x["platform"] == "mac" and (x.get("page") or "").strip("/") == app_id), None)
+
+    def mac_slug(self, a):
+        return {l: f'{dl_slug(l)}/{a["id"]}' for l in LANGS}
+
+    def mac_page(self, a, lang):
+        """Vlastní stránka Mac appky, která nemá stránku v katalogu: /ke-stazeni/<id>/, /download/<id>/."""
+        tx = lambda m: m.get(lang) or m.get("cs" if lang == "sk" else "en") or m.get("en", "")
+        steps = T["dl_steps"][LANGS.index(lang)][:3 if a.get("updates") else 2]
+        priv = self.privacy.get(a.get("privacy") or a["id"], "/soukromi.html")
+        back = f'<a class="ghost" href="{url(lang, dl_slug(lang))}">← {t("dl_title", lang)}</a>'
+        body = (f'<section class="page-top"><div class="blobs"><i></i><i></i><i></i></div><div class="wrap"><div class="detail"><p>{back}</p>'
+                f'<p><img src="{self.on_cz(a["icon"], lang)}" alt="" width="112" height="112" style="border-radius:22%;filter:drop-shadow(0 12px 22px rgb(0 0 0/.25))"></p>'
+                f'<h1>{esc(a["name"])}</h1><p class="lead">{esc(tx(a["desc"]))}</p>{self.mac_block(a, lang)}</div></div></section>'
+                f'<div class="wrap"><div class="detail"><h2 class="sub">{t("dl_install", lang)}</h2><ol>{"".join(f"<li>{esc(x)}</li>" for x in steps)}</ol>'
+                f'<p class="note">{icon("shield")}<span>{t("dl_sign", lang)} <a href="{self.on_cz(priv, lang)}">{t("policy", lang)}</a></span></p></div></div>' + MAC_SCRIPT)
+        return page(lang, self.mac_slug(a), f'{esc(a["name"])} – {t("mac_get", lang)} | EasyForLife', esc(tx(a["desc"])), body, self.operator)
 
     def dl_count(self, a, lang, cls="dl-count"):
         """„Staženo 1 234×“ – instalačky ze všech vydání; v prohlížeči se číslo obnoví z GitHub API (DL_SCRIPT)."""
@@ -1357,10 +1409,13 @@ class Site:
                 pl = a.get("pageLangs") or LANGS
                 href = url(lang, a["page"].strip("/")) if lang in pl else full(pl[0], a["page"].strip("/"))
                 more = f'<a class="ghost" href="{href}">{t("dl_more", lang)}</a>'
-            return (f'<article class="dl-card rv" style="--rd:{k * 60}ms"><div class="dl-head"><img src="{a["icon"]}" alt="" width="72" height="72" loading="lazy">'
+            elif a["platform"] == "mac":
+                more = f'<a class="ghost" href="{url(lang, self.mac_slug(a)[lang])}">{t("dl_more", lang)}</a>'
+            get = self.mac_btns(a, lang) if a["platform"] == "mac" else f'<a class="btn" href="{esc(a["href"])}" download>{t("dl_btn", lang)} <span>↓</span></a>'
+            return (f'<article class="dl-card rv" style="--rd:{k * 60}ms"><div class="dl-head"><img src="{self.on_cz(a["icon"], lang)}" alt="" width="72" height="72" loading="lazy">'
                     f'<div><h3>{esc(a["name"])}</h3><p class="dl-ver">{esc(a["version"])}</p></div></div>'
                     f'<p class="dl-desc">{esc(tx(a["desc"]))}</p>{req}<p class="dl-facts">{facts}{" · " + cnt if cnt else ""}</p>{upd}{ss}'
-                    f'<p class="dl-act"><a class="btn" href="{esc(a["href"])}" download>{t("dl_btn", lang)} <span>↓</span></a>{more}</p></article>')
+                    f'<div class="dl-act">{get}{more}</div></article>')
         apps = self.dl_apps()
         mac = "".join(card(a, k) for k, a in enumerate(x for x in apps if x["platform"] == "mac"))
         win = "".join(card(a, k) for k, a in enumerate(x for x in apps if x["platform"] == "windows"))
@@ -1377,7 +1432,7 @@ class Site:
                 f'<div class="detail"><h2 class="sub rv">{t("dl_install", lang)}</h2><ol>{steps}</ol></div>'
                 f'<div class="dl-beta rv"><h2>{t("dl_beta_t", lang)}</h2><p>{t("dl_beta", lang)}</p>'
                 f'<p class="actions"><a class="btn big" href="{mail}">{t("dl_beta_btn", lang)} <span>→</span></a><a class="ghost" href="{mail}">{CONTACT}</a></p></div></div>'
-                + DL_SCRIPT)
+                + DL_SCRIPT + MAC_SCRIPT)
         return page(lang, {l: dl_slug(l) for l in LANGS}, f'{t("dl_title", lang)} – Mac {"a" if lang in ("cs", "sk") else "&"} Windows | EasyForLife',
                     t("dl_lead", lang), body, self.operator)
 
@@ -1549,11 +1604,13 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
         p = self.privacy_link(a, lang, "")
         note = (f'{icon("shield")}<span>{p.replace(">" + t("privacy", lang) + "<", ">" + t("policy", lang) + t("policy_lang", lang) + "<")}</span>'
                 if p else f'{icon("shield")}<span>{t("policy_soon", lang)}</span>')
+        mac_a = self.mac_of(a["id"])
+        mac = self.mac_block(mac_a, lang) + MAC_SCRIPT if mac_a else ""
         body = (f'<section class="app-top" style="--c:{c}" data-par><div class="blobs"><i></i><i></i><i></i></div>'
                 f'<div class="fly-layer small" aria-hidden="true">{fly}</div><div class="wrap">'
                 f'<a class="back" href="{url(lang)}#{anchor}">{icon("arrow-left")}{t("back", lang)}</a>'
                 f'<div class="app-head"><div><a class="fam-chip" style="--fc:{fc}" href="{url(lang)}#{anchor}">{icon(a["family"])}{fam_name}</a>'
-                f'<h1>{esc(a["name"])}</h1><p class="tag">{esc(a["tagline"][lang])}</p><div class="actions">{self.web_btn(a, lang)}{self.status(a, lang)}{self.sep_chip(a, lang)}{self.account(a, lang)}{web}</div>{self.stores(a, lang)}{plats}</div>'
+                f'<h1>{esc(a["name"])}</h1><p class="tag">{esc(a["tagline"][lang])}</p><div class="actions">{self.web_btn(a, lang)}{self.status(a, lang)}{self.sep_chip(a, lang)}{self.account(a, lang)}{web}</div>{self.stores(a, lang)}{mac}{plats}</div>'
                 f'<div class="hero-icon">{self.app_icon(a, 300).replace(" loading=\"lazy\"", "")}</div></div></div></section>')
         body += f'<div class="wrap" style="--c:{c}"><article class="detail"><div class="desc rv">{desc}</div>'
         if feats:
@@ -1609,6 +1666,10 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
             self.write(f"{pre}{news_slug(lang)}/index.html", self.news(lang), root)
             self.write(f"{pre}{dl_slug(lang)}/index.html", self.downloads(lang), root)
             self.write(f"{pre}{news_slug(lang)}/rss.xml", self.rss(lang), root)
+            for x in self.dl_apps():  # Mac appky bez stránky v katalogu
+                if x["ok"] and x["platform"] == "mac" and not x.get("page"):
+                    self.write(f'{pre}{dl_slug(lang)}/{x["id"]}/index.html', self.mac_page(x, lang), root)
+                    urls[site_of(lang)].append((lang, self.mac_slug(x), LANGS))
             if lang == "cs":
                 self.write("komander/index.html", self.komander(), root)
                 urls[site_of(lang)].append((lang, "komander", ["cs"]))
