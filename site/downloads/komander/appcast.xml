@@ -6,13 +6,13 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.16.1</title>
-      <pubDate>Wed, 04 Nov 2026 00:08:40 +0100</pubDate>
-      <sparkle:version>202611040006</sparkle:version>
-      <sparkle:shortVersionString>0.16.1</sparkle:shortVersionString>
+      <title>Komandér 0.16.3</title>
+      <pubDate>Thu, 05 Nov 2026 17:13:48 +0100</pubDate>
+      <sparkle:version>202611051652</sparkle:version>
+      <sparkle:shortVersionString>0.16.3</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <description><![CDATA[<p>Opravy a vylepšení.</p>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.16.1.zip" sparkle:edSignature="izZD3kYZIm3OrPJ0PXlGgdvFg4f4XB1nANWNJ1dCACgMswGH/6OKYYzQCjOcJkqPZFk3jt+hZf9tGpoG6y04Bw==" length="9513883" type="application/zip"/>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.16.3.zip" sparkle:edSignature="Ru5vtzAS17tQ659iLzJbyO7w3TbDvCa5clY6DkfFyAtGVQ4zNZ4h0Xmann9Nae2gNFhOLT1HD6pM1c54DK4+Bw==" length="9534485" type="application/zip"/>
     </item>
   </channel>
 </rss>

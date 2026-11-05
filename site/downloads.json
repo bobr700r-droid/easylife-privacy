@@ -22,8 +22,8 @@
    "repo": "fotoarchiv-releases",
    "file": "FotoArchiv",
    "updates": "sparkle",
-   "version": "0.9.4",
-   "size": 9640974,
+   "version": "0.9.6",
+   "size": 9704275,
    "min": "15.0",
    "arch": "universal",
    "desc": {
@@ -38,10 +38,10 @@
    "repo": "fotovyber-releases",
    "file": "FotoVyber",
    "updates": "sparkle",
-   "version": "0.15.0",
-   "size": 14874477,
+   "version": "0.20.2",
+   "size": 26946259,
    "min": "15.0",
-   "arch": "arm64",
+   "arch": "universal",
    "desc": {
     "cs": "Výběr fotek s pomocí AI a srovnání vyvážení bílé a expozice přímo v Lightroom Classic. Vše běží lokálně v Macu.",
     "en": "AI-assisted photo culling plus white balance and exposure matching right inside Lightroom Classic. Everything runs locally on your Mac."
@@ -75,8 +75,8 @@
    "repo": "hudebnicek-releases",
    "file": "Hudebnicek",
    "updates": "sparkle",
-   "version": "0.2.6",
-   "size": 9554192,
+   "version": "0.2.8",
+   "size": 9559195,
    "min": "15.0",
    "arch": "universal",
    "desc": {
@@ -95,8 +95,8 @@
    "repo": "nas-kino-releases",
    "file": "NASKino",
    "updates": "sparkle",
-   "version": "1.8.1",
-   "size": 50754134,
+   "version": "1.8.2",
+   "size": 50735899,
    "min": "15.0",
    "arch": "arm64",
    "desc": {
@@ -115,8 +115,8 @@
    "repo": "apppad-releases",
    "file": "AppPad",
    "updates": "sparkle",
-   "version": "1.2.5",
-   "size": 4824476,
+   "version": "1.2.8",
+   "size": 4972843,
    "min": "14.0",
    "arch": "arm64",
    "desc": {
@@ -131,8 +131,8 @@
    "repo": "kalendar-hub-releases",
    "file": "KalendarHub",
    "updates": "sparkle",
-   "version": "1.7.1",
-   "size": 5261674,
+   "version": "1.7.2",
+   "size": 5263791,
    "min": "15.0",
    "arch": "arm64",
    "desc": {
@@ -178,8 +178,8 @@
    "repo": "strizna-releases",
    "file": "Strizna",
    "updates": "sparkle",
-   "version": "0.8.0",
-   "size": 15061469,
+   "version": "0.9.9",
+   "size": 19902623,
    "min": "15.0",
    "arch": "universal",
    "desc": {
@@ -194,10 +194,10 @@
    "repo": "dosah-releases",
    "file": "DosahHostitel",
    "updates": "sparkle",
-   "version": "0.1.0",
-   "size": 2823025,
-   "min": "15.0",
-   "arch": "arm64",
+   "version": "0.7.1",
+   "size": 4496679,
+   "min": "14.0",
+   "arch": "universal",
    "desc": {
     "cs": "Hostitel vzdálené plochy Dosah – bezpečné ovládání tohoto Macu z iPhonu, iPadu i jiného Macu.",
     "en": "Dosah remote desktop host – securely control this Mac from iPhone, iPad or another Mac."
@@ -210,10 +210,10 @@
    "repo": "spoust-releases",
    "file": "Spoust",
    "updates": "sparkle",
-   "version": "0.1.0",
-   "size": 4929615,
+   "version": "0.1.1",
+   "size": 4935580,
    "min": "15.0",
-   "arch": "arm64",
+   "arch": "universal",
    "desc": {
     "cs": "Dálkové ovládání a tethering Sony A7 IV, A7R V a FX3: spoušť, záznam, zoom, USB tethering a ovládání z Claude Code.",
     "en": "Remote control and tethering for Sony A7 IV, A7R V and FX3: shutter, recording, zoom, USB tethering and Claude Code control."
