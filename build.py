@@ -1315,12 +1315,12 @@ COMMON = [
   (("Sdílení dat", "Data sharing"),
    ("Data neprodáváme ani nesdílíme pro reklamu nebo sledování. Obsah opustí aplikaci jinak jen tehdy, když ho sám odešleš tlačítkem Sdílet.",
     "We never sell data or share it for advertising or tracking. Content otherwise leaves the app only when you send it yourself with the Share button.")),
-  (("TestFlight", "TestFlight"),
-   ("Při testování přes TestFlight může Apple předat vývojáři zpětnou vazbu, kterou sám odešleš, a anonymní hlášení o pádech podle nastavení tvého zařízení.",
-    "During TestFlight testing, Apple may pass on feedback you choose to send and anonymous crash reports according to your device settings.")),
+  (("Hlášení o pádech", "Crash reports"),
+   ("Když aplikace spadne nebo zamrzne, pošle vývojáři anonymní technické hlášení (verze aplikace, model zařízení, verze systému a technický záznam chyby). Neobsahuje tvé jméno, e-mail, obsah aplikace ani žádný identifikátor, není propojené s tebou a slouží jen k opravě chyb. Apple navíc může podle nastavení tvého zařízení předat anonymní hlášení o pádech a při testování přes TestFlight i zpětnou vazbu, kterou sám odešleš.",
+    "When the app crashes or freezes, it sends the developer an anonymous technical report (app version, device model, system version and a technical error trace). It contains no name, email, app content or identifier, is not linked to you and is used only to fix bugs. Apple may also pass on anonymous crash reports according to your device settings and, during TestFlight testing, feedback you choose to send.")),
   (("Tvoje práva a kontakt", "Your rights and contact"),
-   ("Data uložená v zařízení smažeš smazáním aplikace. Provozovatel: {op}. Dotazy posílej přes zpětnou vazbu v TestFlightu nebo na kontakt uvedený u aplikace v App Storu.",
-    "Data stored on your device is deleted when you delete the app. Operator: {op}. Send questions via TestFlight feedback or the contact listed for the app in the App Store.")),
+   ("Data uložená v zařízení smažeš smazáním aplikace. Provozovatel: {op}. Dotazy posílej na kontakt uvedený u aplikace v App Storu nebo přes stránku podpory easyforlife.cz/podpora.",
+    "Data stored on your device is deleted when you delete the app. Operator: {op}. Send questions to the contact listed for the app in the App Store or via the support page easyforlife.eu/support.")),
 ]
 
 CSS = """
