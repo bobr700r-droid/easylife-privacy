@@ -1,0 +1,55 @@
+{
+ "status": "dev",
+ "description": {
+  "cs": [
+   "Obývák ovládá světla Govee a HDMI Sync Box v obýváku z jedné obrazovky – scény, jas a synchronizace s televizí."
+  ],
+  "en": [
+   "Obývák controls Govee lights and the HDMI Sync Box in the living room from one screen – scenes, brightness and TV sync."
+  ],
+  "sk": [
+   "Obývačka ovláda svetlá Govee a HDMI Sync Box v obývačke z jednej obrazovky – scény, jas a synchronizácia s televízorom."
+  ],
+  "de": [
+   "Obývák steuert Govee-Lampen und die HDMI Sync Box im Wohnzimmer von einem Bildschirm aus – Szenen, Helligkeit und TV-Sync."
+  ],
+  "es": [
+   "Obývák controla las luces Govee y el HDMI Sync Box del salón desde una pantalla: escenas, brillo y sincronización con la tele."
+  ],
+  "pl": [
+   "Obývák steruje światłami Govee i HDMI Sync Boxem w salonie z jednego ekranu – sceny, jasność i synchronizacja z telewizorem."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Světla Govee a lampičky",
+   "HDMI Sync Box",
+   "Scény jedním klepnutím"
+  ],
+  "en": [
+   "Govee lights and lamps",
+   "HDMI Sync Box",
+   "One-tap scenes"
+  ],
+  "sk": [
+   "Svetlá Govee a lampičky",
+   "HDMI Sync Box",
+   "Scény jedným ťuknutím"
+  ],
+  "de": [
+   "Govee-Lampen",
+   "HDMI Sync Box",
+   "Szenen mit einem Tippen"
+  ],
+  "es": [
+   "Luces y lámparas Govee",
+   "HDMI Sync Box",
+   "Escenas con un toque"
+  ],
+  "pl": [
+   "Światła i lampki Govee",
+   "HDMI Sync Box",
+   "Sceny jednym dotknięciem"
+  ]
+ }
+}

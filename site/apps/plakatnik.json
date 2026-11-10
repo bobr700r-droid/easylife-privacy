@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Plakátník je grafický editor na plakáty, příspěvky na sítě a pozvánky – se šablonami, vlastním brand kitem, animacemi a AI, která navrhne první verzi."
+  ],
+  "en": [
+   "Plakátník is a graphic editor for posters, social posts and invitations – with templates, your own brand kit, animations and AI that drafts the first version."
+  ],
+  "sk": [
+   "Plagátnik je grafický editor na plagáty, príspevky na siete a pozvánky – so šablónami, vlastným brand kitom, animáciami a AI, ktorá navrhne prvú verziu."
+  ],
+  "de": [
+   "Plakátník ist ein Grafikeditor für Plakate, Social-Media-Beiträge und Einladungen – mit Vorlagen, eigenem Brand-Kit, Animationen und KI, die einen ersten Entwurf liefert."
+  ],
+  "es": [
+   "Plakátník es un editor gráfico para carteles, publicaciones e invitaciones, con plantillas, tu propio kit de marca, animaciones e IA que propone una primera versión."
+  ],
+  "pl": [
+   "Plakátník to edytor grafiki do plakatów, postów i zaproszeń – z szablonami, własnym brand kitem, animacjami i AI, która przygotuje pierwszą wersję."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Šablony plakátů a příspěvků",
+   "Brand kit: barvy, písma, loga",
+   "Animace a export videa",
+   "AI návrh podle zadání",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "Poster and post templates",
+   "Brand kit: colours, fonts, logos",
+   "Animation and video export",
+   "AI draft from a brief",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Šablóny plagátov a príspevkov",
+   "Brand kit: farby, písma, logá",
+   "Animácie a export videa",
+   "AI návrh podľa zadania",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Vorlagen für Plakate und Beiträge",
+   "Brand-Kit: Farben, Schriften, Logos",
+   "Animation und Videoexport",
+   "KI-Entwurf nach Vorgabe",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Plantillas de carteles y publicaciones",
+   "Kit de marca: colores, fuentes, logos",
+   "Animación y exportación de vídeo",
+   "Propuesta con IA a partir de una idea",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Szablony plakatów i postów",
+   "Brand kit: kolory, czcionki, loga",
+   "Animacje i eksport wideo",
+   "Projekt AI według opisu",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

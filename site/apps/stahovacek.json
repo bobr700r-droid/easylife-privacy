@@ -1,0 +1,61 @@
+{
+ "status": "live",
+ "description": {
+  "cs": [
+   "Stahováček si pamatuje frontu odkazů na tvoje vlastní videa a postupně je stáhne přes yt-dlp. Odkazy vložíš i hromadně z tabulky."
+  ],
+  "en": [
+   "Stahováček keeps a queue of links to your own videos and downloads them one by one with yt-dlp. Paste links in bulk straight from a spreadsheet."
+  ],
+  "sk": [
+   "Sťahováčik si pamätá frontu odkazov na tvoje vlastné videá a postupne ich stiahne cez yt-dlp. Odkazy vložíš aj hromadne z tabuľky."
+  ],
+  "de": [
+   "Stahováček merkt sich eine Warteschlange mit Links zu deinen eigenen Videos und lädt sie nacheinander mit yt-dlp. Links fügst du auch gesammelt aus einer Tabelle ein."
+  ],
+  "es": [
+   "Stahováček guarda una cola de enlaces a tus propios vídeos y los descarga uno a uno con yt-dlp. Pega enlaces en bloque desde una hoja de cálculo."
+  ],
+  "pl": [
+   "Stahováček pamięta kolejkę linków do twoich własnych filmów i pobiera je po kolei przez yt-dlp. Linki wkleisz też hurtowo z arkusza."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Fronta odkazů s průběhem",
+   "Vložení z Excelu a import xlsx",
+   "Opakování chybných stažení",
+   "Ke stažení pro Mac"
+  ],
+  "en": [
+   "Link queue with progress",
+   "Paste from Excel and import xlsx",
+   "Retry failed downloads",
+   "Download for Mac"
+  ],
+  "sk": [
+   "Front odkazov s priebehom",
+   "Vloženie z Excelu a import xlsx",
+   "Opakovanie chybných stiahnutí",
+   "Na stiahnutie pre Mac"
+  ],
+  "de": [
+   "Link-Warteschlange mit Fortschritt",
+   "Aus Excel einfügen, xlsx importieren",
+   "Fehlgeschlagene Downloads wiederholen",
+   "Download für Mac"
+  ],
+  "es": [
+   "Cola de enlaces con progreso",
+   "Pegar desde Excel e importar xlsx",
+   "Reintentar descargas fallidas",
+   "Descarga para Mac"
+  ],
+  "pl": [
+   "Kolejka linków z postępem",
+   "Wklejanie z Excela i import xlsx",
+   "Ponawianie nieudanych pobrań",
+   "Do pobrania na Maca"
+  ]
+ }
+}

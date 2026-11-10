@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Kanclík otevře a upraví dokumenty, tabulky, prezentace i PDF v jedné appce. Soubory z Wordu, Excelu, PowerPointu i Acrobatu zůstávají ve svém formátu."
+  ],
+  "en": [
+   "Kanclík opens and edits documents, spreadsheets, presentations and PDFs in one app. Word, Excel, PowerPoint and Acrobat files keep their format."
+  ],
+  "sk": [
+   "Kanclík otvorí a upraví dokumenty, tabuľky, prezentácie aj PDF v jednej appke. Súbory z Wordu, Excelu, PowerPointu aj Acrobatu zostávajú vo svojom formáte."
+  ],
+  "de": [
+   "Kanclík öffnet und bearbeitet Dokumente, Tabellen, Präsentationen und PDFs in einer App. Word-, Excel-, PowerPoint- und Acrobat-Dateien behalten ihr Format."
+  ],
+  "es": [
+   "Kanclík abre y edita documentos, hojas de cálculo, presentaciones y PDF en una sola app. Los archivos de Word, Excel, PowerPoint y Acrobat conservan su formato."
+  ],
+  "pl": [
+   "Kanclík otwiera i edytuje dokumenty, arkusze, prezentacje i PDF w jednej aplikacji. Pliki Worda, Excela, PowerPointa i Acrobata zachowują swój format."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Dokumenty kompatibilní s Wordem",
+   "Tabulky kompatibilní s Excelem",
+   "Prezentace pro PowerPoint",
+   "Úpravy a podpisy PDF",
+   "Stálý pás nástrojů na iPhonu i Macu"
+  ],
+  "en": [
+   "Word-compatible documents",
+   "Excel-compatible spreadsheets",
+   "PowerPoint presentations",
+   "PDF editing and signing",
+   "Ribbon toolbar on iPhone and Mac"
+  ],
+  "sk": [
+   "Dokumenty kompatibilné s Wordom",
+   "Tabuľky kompatibilné s Excelom",
+   "Prezentácie pre PowerPoint",
+   "Úpravy a podpisy PDF",
+   "Stály pás nástrojov na iPhone aj Macu"
+  ],
+  "de": [
+   "Word-kompatible Dokumente",
+   "Excel-kompatible Tabellen",
+   "PowerPoint-Präsentationen",
+   "PDFs bearbeiten und signieren",
+   "Menüband auf iPhone und Mac"
+  ],
+  "es": [
+   "Documentos compatibles con Word",
+   "Hojas compatibles con Excel",
+   "Presentaciones de PowerPoint",
+   "Edición y firma de PDF",
+   "Cinta de herramientas en iPhone y Mac"
+  ],
+  "pl": [
+   "Dokumenty zgodne z Wordem",
+   "Arkusze zgodne z Excelem",
+   "Prezentacje PowerPoint",
+   "Edycja i podpisywanie PDF",
+   "Wstążka narzędzi na iPhonie i Macu"
+  ]
+ }
+}

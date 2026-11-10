@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Letopis poskládá z tvých fotek životní historii – události, lidi a místa na časové ose. Vše se počítá přímo v telefonu a nikam neodchází."
+  ],
+  "en": [
+   "Letopis builds your life story from your photos – events, people and places on a timeline. Everything is processed on your phone and never leaves it."
+  ],
+  "sk": [
+   "Letopis poskladá z tvojich fotiek životnú históriu – udalosti, ľudí a miesta na časovej osi. Všetko sa počíta priamo v telefóne a nikam neodchádza."
+  ],
+  "de": [
+   "Letopis macht aus deinen Fotos deine Lebensgeschichte – Ereignisse, Menschen und Orte auf einer Zeitleiste. Alles wird auf dem Gerät berechnet und verlässt es nie."
+  ],
+  "es": [
+   "Letopis construye la historia de tu vida a partir de tus fotos: eventos, personas y lugares en una línea de tiempo. Todo se procesa en el teléfono y no sale de él."
+  ],
+  "pl": [
+   "Letopis układa z twoich zdjęć historię życia – wydarzenia, ludzi i miejsca na osi czasu. Wszystko liczy się w telefonie i nigdzie nie wychodzi."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Časová osa života z fotek",
+   "Události, lidé a místa",
+   "Výročí a vzpomínky",
+   "Vše jen v zařízení",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "Life timeline from your photos",
+   "Events, people and places",
+   "Anniversaries and memories",
+   "Everything stays on device",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Časová os života z fotiek",
+   "Udalosti, ľudia a miesta",
+   "Výročia a spomienky",
+   "Všetko len v zariadení",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Lebenszeitleiste aus Fotos",
+   "Ereignisse, Menschen und Orte",
+   "Jahrestage und Erinnerungen",
+   "Alles bleibt auf dem Gerät",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Línea de vida a partir de tus fotos",
+   "Eventos, personas y lugares",
+   "Aniversarios y recuerdos",
+   "Todo se queda en el dispositivo",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Oś życia ze zdjęć",
+   "Wydarzenia, ludzie i miejsca",
+   "Rocznice i wspomnienia",
+   "Wszystko tylko na urządzeniu",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

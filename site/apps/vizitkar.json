@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Vizitkář naskenuje papírovou vizitku, rozpozná jméno, telefon i e-mail, doplní firmu z ARES a uloží kontakt do telefonu. Svou vlastní vizitku pak sdílíš přes QR kód."
+  ],
+  "en": [
+   "Vizitkář scans a paper business card, recognises the name, phone and email, fills in company details from the Czech ARES registry and saves the contact. Share your own card via QR code."
+  ],
+  "sk": [
+   "Vizitkár naskenuje papierovú vizitku, rozpozná meno, telefón aj e-mail, doplní firmu z ARES a uloží kontakt do telefónu. Svoju vlastnú vizitku zdieľaš cez QR kód."
+  ],
+  "de": [
+   "Vizitkář scannt eine Visitenkarte, erkennt Name, Telefon und E-Mail, ergänzt Firmendaten aus dem tschechischen ARES-Register und speichert den Kontakt. Deine eigene Karte teilst du per QR-Code."
+  ],
+  "es": [
+   "Vizitkář escanea una tarjeta de visita, reconoce nombre, teléfono y correo, completa los datos de la empresa desde el registro checo ARES y guarda el contacto. Comparte tu propia tarjeta con un código QR."
+  ],
+  "pl": [
+   "Vizitkář skanuje papierową wizytówkę, rozpoznaje imię, telefon i e-mail, uzupełnia dane firmy z czeskiego rejestru ARES i zapisuje kontakt. Własną wizytówkę udostępnisz kodem QR."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Skenování a rozpoznání textu",
+   "Firma a IČO z registru ARES",
+   "Uložení do Kontaktů",
+   "Vlastní vizitka s QR kódem",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "Scanning and text recognition",
+   "Company details from the ARES registry",
+   "Save to Contacts",
+   "Your own card with a QR code",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Skenovanie a rozpoznanie textu",
+   "Firma z registra ARES",
+   "Uloženie do Kontaktov",
+   "Vlastná vizitka s QR kódom",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Scannen und Texterkennung",
+   "Firmendaten aus dem ARES-Register",
+   "In Kontakten speichern",
+   "Eigene Visitenkarte mit QR-Code",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Escaneo y reconocimiento de texto",
+   "Datos de empresa del registro ARES",
+   "Guardar en Contactos",
+   "Tu propia tarjeta con código QR",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Skanowanie i rozpoznawanie tekstu",
+   "Dane firmy z rejestru ARES",
+   "Zapis do Kontaktów",
+   "Własna wizytówka z kodem QR",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Pošťáček je jednoduchý a rychlý poštovní klient pro tvoje schránky přes IMAP – na iPhonu, iPadu i Macu, bez reklam a bez cizích serverů mezi tebou a poštou."
+  ],
+  "en": [
+   "Pošťáček is a simple, fast mail client for your IMAP mailboxes – on iPhone, iPad and Mac, with no ads and no third-party servers between you and your mail."
+  ],
+  "sk": [
+   "Pošťáček je jednoduchý a rýchly poštový klient pre tvoje schránky cez IMAP – na iPhone, iPade aj Macu, bez reklám a bez cudzích serverov medzi tebou a poštou."
+  ],
+  "de": [
+   "Pošťáček ist ein schlanker, schneller Mail-Client für deine IMAP-Postfächer – auf iPhone, iPad und Mac, ohne Werbung und ohne fremde Server zwischen dir und deiner Post."
+  ],
+  "es": [
+   "Pošťáček es un cliente de correo sencillo y rápido para tus buzones IMAP, en iPhone, iPad y Mac, sin anuncios y sin servidores de terceros entre tú y tu correo."
+  ],
+  "pl": [
+   "Pošťáček to prosty i szybki klient poczty dla twoich skrzynek IMAP – na iPhonie, iPadzie i Macu, bez reklam i bez obcych serwerów między tobą a pocztą."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Více schránek přes IMAP",
+   "Okamžité doručení (IDLE)",
+   "Hledání ve složkách",
+   "Automatizace Zkontrolovat poštu",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "Multiple IMAP accounts",
+   "Instant delivery (IDLE)",
+   "Search within folders",
+   "Check Mail automation action",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Viac schránok cez IMAP",
+   "Okamžité doručenie (IDLE)",
+   "Hľadanie v priečinkoch",
+   "Automatizácia Skontrolovať poštu",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Mehrere IMAP-Postfächer",
+   "Sofortige Zustellung (IDLE)",
+   "Suche in Ordnern",
+   "Kurzbefehl „Mail abrufen“",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Varios buzones IMAP",
+   "Entrega inmediata (IDLE)",
+   "Búsqueda en carpetas",
+   "Atajo «Comprobar correo»",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Wiele skrzynek IMAP",
+   "Natychmiastowe dostarczanie (IDLE)",
+   "Wyszukiwanie w folderach",
+   "Skrót „Sprawdź pocztę”",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

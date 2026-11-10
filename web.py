@@ -10,13 +10,13 @@ tady se jen odkazují. Obsah detailů appek je v site/apps/<id>.json (popis, fun
 webu ve slovníku T. Ikony se kopírují z <App>/…/AppIcon.appiconset do docs/icons/ (sips + cwebp),
 favicon a OG obrázek kreslí site/art.swift (jen když chybí; vynutit: python3 build.py --art).
 """
-import datetime, email.utils, html, json, math, os, pathlib, shutil, socket, subprocess, sys, zlib
+import datetime, email.utils, html, urllib.parse, json, math, os, pathlib, shutil, socket, subprocess, sys, zlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent / "site"))
 import eco  # site/eco.py – jak spolu appky spolupracují
 
 HERE = pathlib.Path(__file__).parent
-ROOT = HERE.parent                      # EasyLife aplikace/
-CATALOG = ROOT / "EasyLife" / "catalog.json"
+ROOT = pathlib.Path(os.environ.get("EASYLIFE_ROOT") or HERE.parent)  # EasyLife aplikace/ (z worktree: EASYLIFE_ROOT=~/wt/vedeni-main)
+CATALOG = pathlib.Path(os.environ.get("EASYLIFE_CATALOG") or ROOT / "EasyLife" / "catalog.json")
 CONTENT = HERE / "site" / "apps"
 VERSIONS = HERE / "site" / "versions.json"  # {"apps": {bundleID: {version, build, date, notes, appStoreId}}} -> /versions.json
 NEWS = HERE / "site" / "news.json"  # Co je nového – ručně doplňovat při každé nové verzi appky
@@ -42,7 +42,9 @@ LANG_NAMES = {"cs": "Čeština", "en": "English", "sk": "Slovenčina", "de": "De
 # Appky, které na webu nemají být vůbec. Omezení na jazyky bere web z pole `locales` v katalogu (Kulturník jen cs).
 HIDDEN = set()
 # Složka appky, když se nejmenuje jako id v katalogu.
-FOLDERS = {"kulturnik": "Vyrazime", "easylife": "EasyForLifeHub", "cestovnicek": "Cestovnicek/apple"}
+FOLDERS = {"kulturnik": "Vyrazime", "easylife": "EasyForLifeHub", "cestovnicek": "Cestovnicek/apple", "prehled": "PrehledDne",
+           "govee": "GoveeOvladac", "naskino": str(pathlib.Path.home() / "Documents/NAS Kino/MobileSources"), "stahovacek": "Stahovacek/App", "apppad": str(pathlib.Path.home() / "Documents/AppPad"),
+           "kalendarhub": str(pathlib.Path.home() / "Documents/Kalendář Hub"), "adimacrm": str(pathlib.Path.home() / "Documents/Adima CRM")}
 CONTACT = "info@luksafoto.cz"  # kontakt podpory, dokud easyforlife.eu nemá vlastní e-mail
 FAMILY_COLORS = {"easylife": "#2563eb", "cestovani": "#2563eb", "foto": "#e8731c", "domacnost": "#0f9a62", "volny-cas": "#8b46d9",
                  "navigace": "#0e9aa7", "zdravi": "#e8457a", "kancelar": "#6366f1", "firmy": "#d9480f"}
@@ -62,6 +64,7 @@ T = {
   "soon": ["Brzy", "Coming soon", "Čoskoro", "Bald verfügbar", "Próximamente", "Wkrótce"],
   "st_get": ["Stáhnout v", "Download on", "Stiahnuť v", "Laden im", "Descárgala en", "Pobierz w"],
   "st_beta": ["Beta přes", "Beta via", "Beta cez", "Beta über", "Beta en", "Beta przez"],
+  "st_invite": ["Požádat o pozvánku", "Request an invite", "Požiadať o pozvánku", "Einladung anfordern", "Pedir invitación", "Poproś o zaproszenie"],
   "st_prep": ["Připravujeme", "Coming soon", "Pripravujeme", "In Vorbereitung", "En preparación", "W przygotowaniu"],
   "st_label": ["Ke stažení", "Download", "Na stiahnutie", "Download", "Descargar", "Pobierz"],
   "android_soon": ["Android – připravujeme", "Android – coming soon", "Android – pripravujeme", "Android – in Vorbereitung", "Android – en preparación", "Android – w przygotowaniu"],
@@ -288,7 +291,7 @@ var tp=a&&a.checked?a.dataset.android:f.topic.value;if(tp)d.topic=tp;b.disabled=
 fetch(f.action,{method:"POST",credentials:"omit",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)}).then(function(r){return r.json().then(function(j){return r.ok&&j.ok})})
 .catch(function(){return false}).then(function(ok){m.hidden=false;m.textContent=ok?f.dataset.ok:f.dataset.err;if(ok)f.querySelector(".nl-row").hidden=true;else b.disabled=false})})})</script>"""
 COPYRIGHT = "© 2026 Lukáš Ochrana"
-VERSION = "1.9.36"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
+VERSION = "1.9.37"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
 # Podmínky užití – licence (13. 10. 2026), ve všech 6 jazycích (sk/de/es/pl a zdravotní sekce doplněny při auditu Lékárničky).
 TERMS = {
   "cs": ("Podmínky užití", "Souhlas, licence, odpovědnost a autorská práva k aplikacím EasyForLife.", [
@@ -792,6 +795,7 @@ background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gra
 @keyframes spin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.store[aria-busy]::after{animation:none}}
 .mac-get{display:grid;gap:8px;margin:18px 0 0}.mac-get .stores,.dl-act .stores{margin:0}.mac-get .dl-upd{color:var(--muted)}
 .store.off{background:none;color:var(--muted);border:1.5px dashed var(--line);box-shadow:none}.store.off em{font-style:normal;font-size:.72rem;font-weight:700}
+.store em{font-style:normal;font-size:.72rem;font-weight:700;opacity:.8}
 .plats span.soon{border-style:dashed}
 .plats{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}.plats span{font-size:.8rem;font-weight:800;letter-spacing:.02em;border:1.5px solid var(--line);border-radius:8px;padding:3px 9px;color:var(--muted)}
 /* Pro práci: tmavý blok s mřížkou */
@@ -810,7 +814,7 @@ html{overflow-x:hidden}
 @media (max-width:560px){.bento{grid-auto-rows:minmax(180px,auto);gap:12px}.t-big{grid-row:span 1;padding:18px}.t-big .app-icon{width:72px;height:72px}.t-hero .app-icon{width:64px;height:64px}.t-big h3{font-size:1.6rem}.t-big p{-webkit-line-clamp:2;font-size:.95rem}
 .tile:not(.t-big) .chip .long{display:none}.tile:not(.t-big) .chip .short{display:inline}.tile{padding:16px;border-radius:24px}
 .tile .app-icon{width:52px;height:52px}.tile h3{font-size:1.1rem}.tile p{font-size:.86rem}
-.stickers{grid-template-columns:1fr}.nav>a{display:none}.marquee{margin-bottom:56px}.marquee.two{margin-top:-80px}}
+.stickers{grid-template-columns:1fr}.nav>a{padding:6px 8px;font-size:.84rem}.marquee{margin-bottom:56px}.marquee.two{margin-top:-80px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 """
 
@@ -935,13 +939,13 @@ class Site:
         if not folder or not folder.exists():
             return None
         skip = {"DerivedData", "build", "Watch", "node_modules", ".git", "Tests", "server", "Server"}
+        found = []  # největší světlé PNG ze všech AppIcon sad mimo Watch (Mac sady mají i 16px soubory, Watch jinou kresbu)
         for dirpath, dirs, files in os.walk(folder):
-            dirs[:] = [d for d in dirs if d not in skip]
+            dirs[:] = [d for d in dirs if d not in skip and "watch" not in d.lower() and not d.endswith(".noindex")]
             if dirpath.endswith("AppIcon.appiconset"):
-                pngs = sorted(f for f in files if f.endswith(".png") and "dark" not in f.lower() and "tint" not in f.lower())
-                if pngs:
-                    return pathlib.Path(dirpath) / pngs[0]
-        return None
+                found += [pathlib.Path(dirpath) / f for f in files
+                          if f.endswith(".png") and "dark" not in f.lower() and "tint" not in f.lower()]
+        return max(found, key=lambda f: f.stat().st_size, default=None)
 
     def copy_icons(self):
         d = self.out / "icons"
@@ -1032,7 +1036,12 @@ class Site:
             return f'<span class="store off" aria-disabled="true">{inner}<em>{off}</em></span>'
         st = a.get("store") or ""
         tf = "testflight.apple.com" in st
-        apple = btn(st, t("st_beta" if tf else "st_get", lang), "TestFlight" if tf else "App Store", t("soon", lang))
+        if not st and a["site"].get("status") == "testflight":  # bez veřejného odkazu: žádost o pozvánku e-mailem
+            subj = urllib.parse.quote(f'TestFlight – {a["name"]}')
+            apple = (f'<a class="store" href="mailto:{CONTACT}?subject={subj}" rel="noopener"><small>{t("st_beta", lang)}</small>'
+                     f'<b>TestFlight</b><em>{t("st_invite", lang)}</em></a>')
+        else:
+            apple = btn(st, t("st_beta" if tf else "st_get", lang), "TestFlight" if tf else "App Store", t("soon", lang))
         play = btn(a.get("play"), t("st_get", lang), "Google Play", t("st_prep", lang))
         return f'<div class="stores" role="group" aria-label="{t("st_label", lang)}">{apple}{play}</div>'
 

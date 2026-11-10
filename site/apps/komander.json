@@ -1,0 +1,67 @@
+{
+ "status": "live",
+ "description": {
+  "cs": [
+   "Komandér je dvoupanelový správce souborů pro Mac v duchu klasických commanderů – rychlé kopírování a přesuny z klávesnice, záložky, hledání a práce se sítí i NASem."
+  ],
+  "en": [
+   "Komandér is a dual-pane file manager for the Mac in the spirit of classic commanders – fast keyboard copying and moving, tabs, search and network/NAS support."
+  ],
+  "sk": [
+   "Komandér je dvojpanelový správca súborov pre Mac v duchu klasických commanderov – rýchle kopírovanie a presuny z klávesnice, záložky, hľadanie a práca so sieťou aj NASom."
+  ],
+  "de": [
+   "Komandér ist ein Zwei-Fenster-Dateimanager für den Mac im Stil klassischer Commander – schnelles Kopieren und Verschieben per Tastatur, Tabs, Suche, Netzwerk und NAS."
+  ],
+  "es": [
+   "Komandér es un gestor de archivos de doble panel para Mac al estilo de los commanders clásicos: copia y mueve rápido con el teclado, pestañas, búsqueda y soporte de red y NAS."
+  ],
+  "pl": [
+   "Komandér to dwupanelowy menedżer plików na Maca w duchu klasycznych commanderów – szybkie kopiowanie i przenoszenie z klawiatury, karty, wyszukiwanie oraz sieć i NAS."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Dva panely a ovládání z klávesnice",
+   "Záložky a historie složek",
+   "Hromadné přejmenování",
+   "Síťové disky a NAS",
+   "Ke stažení pro Mac"
+  ],
+  "en": [
+   "Two panes and keyboard control",
+   "Tabs and folder history",
+   "Batch rename",
+   "Network drives and NAS",
+   "Download for Mac"
+  ],
+  "sk": [
+   "Dva panely a ovládanie z klávesnice",
+   "Záložky a história priečinkov",
+   "Hromadné premenovanie",
+   "Sieťové disky a NAS",
+   "Na stiahnutie pre Mac"
+  ],
+  "de": [
+   "Zwei Fenster und Tastatursteuerung",
+   "Tabs und Ordnerverlauf",
+   "Stapel-Umbenennung",
+   "Netzlaufwerke und NAS",
+   "Download für Mac"
+  ],
+  "es": [
+   "Dos paneles y control por teclado",
+   "Pestañas e historial de carpetas",
+   "Renombrado por lotes",
+   "Unidades de red y NAS",
+   "Descarga para Mac"
+  ],
+  "pl": [
+   "Dwa panele i sterowanie klawiaturą",
+   "Karty i historia folderów",
+   "Zbiorowa zmiana nazw",
+   "Dyski sieciowe i NAS",
+   "Do pobrania na Maca"
+  ]
+ }
+}

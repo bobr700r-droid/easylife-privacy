@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Podkres složí hudbu na pozadí tvého videa podle jednoduchého zadání – nálada, tempo a délka. Skladatelský nástroj, kterému rozumí i laik."
+  ],
+  "en": [
+   "Podkres composes background music for your video from a simple brief – mood, tempo and length. A composing tool anyone can understand."
+  ],
+  "sk": [
+   "Podkres zloží hudbu na pozadie tvojho videa podľa jednoduchého zadania – nálada, tempo a dĺžka. Skladateľský nástroj, ktorému rozumie aj laik."
+  ],
+  "de": [
+   "Podkres komponiert Hintergrundmusik für dein Video nach einfacher Vorgabe – Stimmung, Tempo und Länge. Ein Kompositionswerkzeug, das auch Laien verstehen."
+  ],
+  "es": [
+   "Podkres compone la música de fondo de tu vídeo a partir de una indicación sencilla: ambiente, tempo y duración. Una herramienta de composición que entiende cualquiera."
+  ],
+  "pl": [
+   "Podkres skomponuje muzykę w tle twojego filmu według prostego opisu – nastrój, tempo i długość. Narzędzie kompozytorskie zrozumiałe dla każdego."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Hudba podle nálady a tempa",
+   "Délka přesně na video",
+   "Úpravy nástrojů a dynamiky",
+   "Export pro střih",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "Music by mood and tempo",
+   "Length matched to your video",
+   "Adjust instruments and dynamics",
+   "Export for editing",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Hudba podľa nálady a tempa",
+   "Dĺžka presne na video",
+   "Úpravy nástrojov a dynamiky",
+   "Export pre strih",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Musik nach Stimmung und Tempo",
+   "Länge passend zum Video",
+   "Instrumente und Dynamik anpassen",
+   "Export für den Schnitt",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Música según ambiente y tempo",
+   "Duración ajustada al vídeo",
+   "Ajuste de instrumentos y dinámica",
+   "Exportación para la edición",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Muzyka według nastroju i tempa",
+   "Długość dopasowana do filmu",
+   "Regulacja instrumentów i dynamiki",
+   "Eksport do montażu",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "CRM Adima přináší firemní CRM do iPhonu – kontakty, obchody a úkoly po ruce a při příchozím hovoru uvidíš, kdo volá a co s ním řešíš."
+  ],
+  "en": [
+   "CRM Adima brings the company CRM to your iPhone – contacts, deals and tasks at hand, and on an incoming call you see who's calling and what you're working on together."
+  ],
+  "sk": [
+   "CRM Adima prináša firemné CRM do iPhonu – kontakty, obchody a úlohy po ruke a pri prichádzajúcom hovore uvidíš, kto volá a čo s ním riešiš."
+  ],
+  "de": [
+   "CRM Adima bringt das Firmen-CRM aufs iPhone – Kontakte, Deals und Aufgaben griffbereit, und bei eingehenden Anrufen siehst du, wer anruft und worum es geht."
+  ],
+  "es": [
+   "CRM Adima lleva el CRM de la empresa al iPhone: contactos, oportunidades y tareas a mano, y en una llamada entrante ves quién llama y qué tenéis pendiente."
+  ],
+  "pl": [
+   "CRM Adima przenosi firmowy CRM do iPhone’a – kontakty, transakcje i zadania pod ręką, a przy połączeniu przychodzącym widzisz, kto dzwoni i co razem załatwiacie."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Kontakty a firmy",
+   "Obchody a úkoly",
+   "Identifikace volajícího",
+   "Pro firemní účty Adima"
+  ],
+  "en": [
+   "Contacts and companies",
+   "Deals and tasks",
+   "Caller identification",
+   "For Adima company accounts"
+  ],
+  "sk": [
+   "Kontakty a firmy",
+   "Obchody a úlohy",
+   "Identifikácia volajúceho",
+   "Pre firemné účty Adima"
+  ],
+  "de": [
+   "Kontakte und Firmen",
+   "Deals und Aufgaben",
+   "Anruferkennung",
+   "Für Adima-Firmenkonten"
+  ],
+  "es": [
+   "Contactos y empresas",
+   "Oportunidades y tareas",
+   "Identificación de llamadas",
+   "Para cuentas de empresa Adima"
+  ],
+  "pl": [
+   "Kontakty i firmy",
+   "Transakcje i zadania",
+   "Identyfikacja dzwoniącego",
+   "Dla kont firmowych Adima"
+  ]
+ }
+}

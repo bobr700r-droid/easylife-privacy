@@ -1,0 +1,61 @@
+{
+ "status": "live",
+ "description": {
+  "cs": [
+   "Kalendář Hub spojí všechny tvoje kalendáře do jednoho přehledu na Macu – pracovní, rodinné i sdílené, s rychlým přidáním události."
+  ],
+  "en": [
+   "Kalendář Hub combines all your calendars into one view on the Mac – work, family and shared, with quick event entry."
+  ],
+  "sk": [
+   "Kalendár Hub spojí všetky tvoje kalendáre do jedného prehľadu na Macu – pracovné, rodinné aj zdieľané, s rýchlym pridaním udalosti."
+  ],
+  "de": [
+   "Kalendář Hub vereint alle deine Kalender in einer Übersicht auf dem Mac – Arbeit, Familie und geteilte, mit schnellem Eintragen."
+  ],
+  "es": [
+   "Kalendář Hub reúne todos tus calendarios en una sola vista en el Mac: trabajo, familia y compartidos, con alta rápida de eventos."
+  ],
+  "pl": [
+   "Kalendář Hub łączy wszystkie twoje kalendarze w jeden widok na Macu – służbowe, rodzinne i udostępnione, z szybkim dodawaniem wydarzeń."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Všechny kalendáře v jednom přehledu",
+   "Den, týden a měsíc",
+   "Rychlé přidání události",
+   "Ke stažení pro Mac"
+  ],
+  "en": [
+   "All calendars in one view",
+   "Day, week and month",
+   "Quick event entry",
+   "Download for Mac"
+  ],
+  "sk": [
+   "Všetky kalendáre v jednom prehľade",
+   "Deň, týždeň a mesiac",
+   "Rýchle pridanie udalosti",
+   "Na stiahnutie pre Mac"
+  ],
+  "de": [
+   "Alle Kalender in einer Übersicht",
+   "Tag, Woche und Monat",
+   "Termine schnell eintragen",
+   "Download für Mac"
+  ],
+  "es": [
+   "Todos los calendarios en una vista",
+   "Día, semana y mes",
+   "Alta rápida de eventos",
+   "Descarga para Mac"
+  ],
+  "pl": [
+   "Wszystkie kalendarze w jednym widoku",
+   "Dzień, tydzień i miesiąc",
+   "Szybkie dodawanie wydarzeń",
+   "Do pobrania na Maca"
+  ]
+ }
+}

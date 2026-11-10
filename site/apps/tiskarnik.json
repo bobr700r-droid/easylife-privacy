@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Tiskárník zjednoduší tisk – uvidíš přesný náhled, vybereš rozsah stran, formát papíru i tiskárnu a vytiskneš bez překvapení."
+  ],
+  "en": [
+   "Tiskárník makes printing simple – see an exact preview, choose the page range, paper size and printer, and print without surprises."
+  ],
+  "sk": [
+   "Tlačiarnik zjednoduší tlač – uvidíš presný náhľad, vyberieš rozsah strán, formát papiera aj tlačiareň a vytlačíš bez prekvapení."
+  ],
+  "de": [
+   "Tiskárník macht Drucken einfach – genaue Vorschau, Seitenbereich, Papierformat und Drucker wählen und ohne Überraschungen drucken."
+  ],
+  "es": [
+   "Tiskárník simplifica la impresión: vista previa exacta, rango de páginas, tamaño de papel e impresora, y a imprimir sin sorpresas."
+  ],
+  "pl": [
+   "Tiskárník upraszcza drukowanie – zobaczysz dokładny podgląd, wybierzesz zakres stron, format papieru i drukarkę i wydrukujesz bez niespodzianek."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Přesný náhled tisku",
+   "Rozsah stran a kopie",
+   "Formáty papíru a oboustranný tisk",
+   "Oblíbené tiskárny a předvolby",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "Exact print preview",
+   "Page range and copies",
+   "Paper sizes and duplex",
+   "Favourite printers and presets",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Presný náhľad tlače",
+   "Rozsah strán a kópie",
+   "Formáty papiera a obojstranná tlač",
+   "Obľúbené tlačiarne a predvoľby",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Genaue Druckvorschau",
+   "Seitenbereich und Kopien",
+   "Papierformate und Duplex",
+   "Lieblingsdrucker und Vorgaben",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Vista previa exacta",
+   "Rango de páginas y copias",
+   "Tamaños de papel y doble cara",
+   "Impresoras favoritas y ajustes",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Dokładny podgląd wydruku",
+   "Zakres stron i kopie",
+   "Formaty papieru i druk dwustronny",
+   "Ulubione drukarki i ustawienia",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

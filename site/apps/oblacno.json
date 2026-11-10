@@ -1,0 +1,61 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Oblačno je pohodová logická hra s mraky a větrem. Spojuj kameny, skládej řetězy kombinací a postupuj levely – bez reklam a bez spěchu."
+  ],
+  "en": [
+   "Oblačno is a relaxing puzzle game with clouds and wind. Match stones, build combo chains and progress through levels – no ads, no rush."
+  ],
+  "sk": [
+   "Oblačno je pohodová logická hra s mrakmi a vetrom. Spájaj kamene, skladaj reťaze kombinácií a postupuj levelmi – bez reklám a bez zhonu."
+  ],
+  "de": [
+   "Oblačno ist ein entspanntes Logikspiel mit Wolken und Wind. Verbinde Steine, baue Kombo-Ketten und steige Level um Level auf – ohne Werbung, ohne Hektik."
+  ],
+  "es": [
+   "Oblačno es un juego de lógica tranquilo con nubes y viento. Une piedras, encadena combos y avanza por niveles, sin anuncios y sin prisas."
+  ],
+  "pl": [
+   "Oblačno to spokojna gra logiczna z chmurami i wiatrem. Łącz kamienie, buduj łańcuchy kombinacji i przechodź kolejne poziomy – bez reklam i bez pośpiechu."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Spojování kamenů a řetězy kombinací",
+   "Vítr mění hrací plochu",
+   "Postup po levelech",
+   "Bez reklam"
+  ],
+  "en": [
+   "Match stones and chain combos",
+   "Wind reshapes the board",
+   "Level progression",
+   "No ads"
+  ],
+  "sk": [
+   "Spájanie kameňov a reťaze kombinácií",
+   "Vietor mení hraciu plochu",
+   "Postup po leveloch",
+   "Bez reklám"
+  ],
+  "de": [
+   "Steine verbinden und Kombo-Ketten",
+   "Der Wind verändert das Spielfeld",
+   "Level-Fortschritt",
+   "Ohne Werbung"
+  ],
+  "es": [
+   "Une piedras y encadena combos",
+   "El viento cambia el tablero",
+   "Progreso por niveles",
+   "Sin anuncios"
+  ],
+  "pl": [
+   "Łączenie kamieni i łańcuchy kombinacji",
+   "Wiatr zmienia planszę",
+   "Kolejne poziomy",
+   "Bez reklam"
+  ]
+ }
+}

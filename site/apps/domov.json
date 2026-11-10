@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Domeček ovládá chytrou domácnost přes tvůj Home Assistant – světla, topení, kamery a zámek v jedné přehledné appce. Na iPadu z ní uděláš nástěnku na zeď."
+  ],
+  "en": [
+   "Domeček controls your smart home through your Home Assistant – lights, heating, cameras and the lock in one clear app. Turn an iPad into a wall dashboard."
+  ],
+  "sk": [
+   "Domček ovláda inteligentnú domácnosť cez tvoj Home Assistant – svetlá, kúrenie, kamery a zámok v jednej prehľadnej appke. Z iPadu urobíš nástenku na stenu."
+  ],
+  "de": [
+   "Domeček steuert dein Smart Home über deinen Home Assistant – Licht, Heizung, Kameras und Schloss in einer übersichtlichen App. Das iPad wird zum Wand-Dashboard."
+  ],
+  "es": [
+   "Domeček controla tu casa inteligente a través de tu Home Assistant: luces, calefacción, cámaras y cerradura en una app clara. Convierte el iPad en un panel de pared."
+  ],
+  "pl": [
+   "Domeček steruje inteligentnym domem przez twój Home Assistant – światła, ogrzewanie, kamery i zamek w jednej przejrzystej aplikacji. Z iPada zrobisz panel na ścianę."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Světla, topení a zásuvky",
+   "Kamery a upozornění čidel",
+   "Zámek a automatizace",
+   "Nástěnka na iPadu a hodinky",
+   "Data jen ve tvém Home Assistantu"
+  ],
+  "en": [
+   "Lights, heating and plugs",
+   "Cameras and sensor alerts",
+   "Lock and automations",
+   "iPad wall dashboard and Watch",
+   "Data stays in your Home Assistant"
+  ],
+  "sk": [
+   "Svetlá, kúrenie a zásuvky",
+   "Kamery a upozornenia senzorov",
+   "Zámok a automatizácie",
+   "Nástenka na iPade a hodinky",
+   "Dáta len v tvojom Home Assistante"
+  ],
+  "de": [
+   "Licht, Heizung und Steckdosen",
+   "Kameras und Sensor-Hinweise",
+   "Schloss und Automationen",
+   "iPad-Wanddisplay und Watch",
+   "Daten bleiben in deinem Home Assistant"
+  ],
+  "es": [
+   "Luces, calefacción y enchufes",
+   "Cámaras y avisos de sensores",
+   "Cerradura y automatizaciones",
+   "Panel de pared en iPad y Watch",
+   "Los datos se quedan en tu Home Assistant"
+  ],
+  "pl": [
+   "Światła, ogrzewanie i gniazdka",
+   "Kamery i alerty czujników",
+   "Zamek i automatyzacje",
+   "Panel na iPadzie i zegarek",
+   "Dane tylko w twoim Home Assistancie"
+  ]
+ }
+}

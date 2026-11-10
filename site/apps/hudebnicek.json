@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Hudebníček přehrává tvoji hudbu z vlastního NASu – doma i na cestách, offline, s ekvalizérem a v autě přes CarPlay. Playlisty si převedeš ze Spotify a dalších služeb."
+  ],
+  "en": [
+   "Hudebníček plays your music from your own NAS – at home and on the go, offline, with an equaliser and in the car via CarPlay. Bring your playlists over from Spotify and other services."
+  ],
+  "sk": [
+   "Hudebníček prehráva tvoju hudbu z vlastného NASu – doma aj na cestách, offline, s ekvalizérom a v aute cez CarPlay. Playlisty si prevedieš zo Spotify a ďalších služieb."
+  ],
+  "de": [
+   "Hudebníček spielt deine Musik vom eigenen NAS – zu Hause und unterwegs, offline, mit Equalizer und im Auto über CarPlay. Playlists holst du von Spotify und anderen Diensten."
+  ],
+  "es": [
+   "Hudebníček reproduce tu música desde tu propio NAS, en casa y fuera, sin conexión, con ecualizador y en el coche con CarPlay. Trae tus listas desde Spotify y otros servicios."
+  ],
+  "pl": [
+   "Hudebníček odtwarza twoją muzykę z własnego NAS-a – w domu i w drodze, offline, z korektorem i w aucie przez CarPlay. Playlisty przeniesiesz ze Spotify i innych serwisów."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Hudba z vlastního NASu",
+   "Offline poslech",
+   "Ekvalizér a CarPlay",
+   "Převod playlistů ze Spotify a dalších",
+   "Co mi chybí – co doplnit do sbírky"
+  ],
+  "en": [
+   "Music from your own NAS",
+   "Offline listening",
+   "Equaliser and CarPlay",
+   "Playlist transfer from Spotify and others",
+   "See what's missing from your collection"
+  ],
+  "sk": [
+   "Hudba z vlastného NASu",
+   "Offline počúvanie",
+   "Ekvalizér a CarPlay",
+   "Prevod playlistov zo Spotify a ďalších",
+   "Čo mi chýba – čo doplniť do zbierky"
+  ],
+  "de": [
+   "Musik vom eigenen NAS",
+   "Offline hören",
+   "Equalizer und CarPlay",
+   "Playlists von Spotify & Co. übernehmen",
+   "Was in deiner Sammlung fehlt"
+  ],
+  "es": [
+   "Música desde tu propio NAS",
+   "Escucha sin conexión",
+   "Ecualizador y CarPlay",
+   "Traspaso de listas desde Spotify y otros",
+   "Qué le falta a tu colección"
+  ],
+  "pl": [
+   "Muzyka z własnego NAS-a",
+   "Słuchanie offline",
+   "Korektor i CarPlay",
+   "Przenoszenie playlist ze Spotify i innych",
+   "Czego brakuje w kolekcji"
+  ]
+ }
+}

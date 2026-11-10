@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Jízdy vedou knihu jízd za tebe – soukromé i služební cesty zapíše appka sama a na konci měsíce ti připraví podklady pro účetní."
+  ],
+  "en": [
+   "Jízdy keeps your mileage log for you – the app records private and business trips on its own and prepares a monthly report for your accountant."
+  ],
+  "sk": [
+   "Jízdy vedú knihu jázd za teba – súkromné aj služobné cesty zapíše appka sama a na konci mesiaca pripraví podklady pre účtovníka."
+  ],
+  "de": [
+   "Jízdy führt dein Fahrtenbuch – private und dienstliche Fahrten zeichnet die App selbst auf und bereitet am Monatsende die Unterlagen für die Buchhaltung vor."
+  ],
+  "es": [
+   "Jízdy lleva tu libro de trayectos: registra sola los viajes privados y de trabajo y al final del mes prepara el informe para tu gestor."
+  ],
+  "pl": [
+   "Jízdy prowadzi za ciebie ewidencję przebiegu – sama zapisuje przejazdy prywatne i służbowe, a na koniec miesiąca przygotuje zestawienie dla księgowej."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Automatický záznam jízd",
+   "Import tras z Navigace",
+   "Náhrady podle aktuální vyhlášky",
+   "Export pro účetní (PDF a CSV)",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "Automatic trip recording",
+   "Import routes from Navigace",
+   "Allowances under current Czech rules",
+   "Export for your accountant (PDF and CSV)",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Automatický záznam jázd",
+   "Import trás z Navigace",
+   "Náhrady podľa aktuálnej vyhlášky",
+   "Export pre účtovníka (PDF a CSV)",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Automatische Fahrtaufzeichnung",
+   "Routen aus Navigace importieren",
+   "Erstattungen nach aktuellen Sätzen",
+   "Export für die Buchhaltung (PDF und CSV)",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Registro automático de trayectos",
+   "Importación de rutas desde Navigace",
+   "Compensaciones según la normativa vigente",
+   "Exportación para el gestor (PDF y CSV)",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Automatyczny zapis przejazdów",
+   "Import tras z Navigace",
+   "Zwroty według aktualnych stawek",
+   "Eksport dla księgowej (PDF i CSV)",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

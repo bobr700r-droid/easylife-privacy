@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Animátor je nástroj na pohybovou grafiku pro iPad a Mac – šablony, klíčové snímky s křivkami, 3D vrstvy a export videa i s průhledností pro další střih."
+  ],
+  "en": [
+   "Animátor is a motion graphics tool for iPad and Mac – templates, keyframes with curves, 3D layers and video export with transparency for further editing."
+  ],
+  "sk": [
+   "Animátor je nástroj na pohybovú grafiku pre iPad a Mac – šablóny, kľúčové snímky s krivkami, 3D vrstvy a export videa aj s priehľadnosťou pre ďalší strih."
+  ],
+  "de": [
+   "Animátor ist ein Motion-Graphics-Werkzeug für iPad und Mac – Vorlagen, Keyframes mit Kurven, 3D-Ebenen und Videoexport mit Transparenz für den weiteren Schnitt."
+  ],
+  "es": [
+   "Animátor es una herramienta de motion graphics para iPad y Mac: plantillas, fotogramas clave con curvas, capas 3D y exportación de vídeo con transparencia para seguir editando."
+  ],
+  "pl": [
+   "Animátor to narzędzie do grafiki ruchomej na iPada i Maca – szablony, klatki kluczowe z krzywymi, warstwy 3D i eksport wideo z przezroczystością do dalszego montażu."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Šablony titulků a přechodů",
+   "Klíčové snímky a křivky",
+   "3D vrstvy a kamera",
+   "Export s průhledností (alfa)",
+   "iPad i Mac"
+  ],
+  "en": [
+   "Title and transition templates",
+   "Keyframes and curves",
+   "3D layers and camera",
+   "Export with transparency (alpha)",
+   "iPad and Mac"
+  ],
+  "sk": [
+   "Šablóny titulkov a prechodov",
+   "Kľúčové snímky a krivky",
+   "3D vrstvy a kamera",
+   "Export s priehľadnosťou (alfa)",
+   "iPad aj Mac"
+  ],
+  "de": [
+   "Vorlagen für Titel und Übergänge",
+   "Keyframes und Kurven",
+   "3D-Ebenen und Kamera",
+   "Export mit Transparenz (Alpha)",
+   "iPad und Mac"
+  ],
+  "es": [
+   "Plantillas de títulos y transiciones",
+   "Fotogramas clave y curvas",
+   "Capas 3D y cámara",
+   "Exportación con transparencia (alfa)",
+   "iPad y Mac"
+  ],
+  "pl": [
+   "Szablony napisów i przejść",
+   "Klatki kluczowe i krzywe",
+   "Warstwy 3D i kamera",
+   "Eksport z przezroczystością (alfa)",
+   "iPad i Mac"
+  ]
+ }
+}

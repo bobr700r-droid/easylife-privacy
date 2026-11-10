@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Spoušť je dálkové ovládání fotoaparátů Sony z iPhonu, Macu i hodinek – spoušť, záznam videa, zoom a tethering přes USB s okamžitým náhledem fotek."
+  ],
+  "en": [
+   "Spoušť is a remote control for Sony cameras from iPhone, Mac and Watch – shutter, video recording, zoom and USB tethering with instant photo preview."
+  ],
+  "sk": [
+   "Spúšť je diaľkové ovládanie fotoaparátov Sony z iPhonu, Macu aj hodiniek – spúšť, záznam videa, zoom a tethering cez USB s okamžitým náhľadom fotiek."
+  ],
+  "de": [
+   "Spoušť ist die Fernbedienung für Sony-Kameras vom iPhone, Mac und der Watch – Auslöser, Videoaufnahme, Zoom und USB-Tethering mit sofortiger Vorschau."
+  ],
+  "es": [
+   "Spoušť es un mando a distancia para cámaras Sony desde iPhone, Mac y Watch: disparo, grabación de vídeo, zoom y conexión USB con vista previa inmediata."
+  ],
+  "pl": [
+   "Spoušť to pilot do aparatów Sony z iPhone’a, Maca i zegarka – spust, nagrywanie wideo, zoom i tethering przez USB z natychmiastowym podglądem zdjęć."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Spoušť a nastavení expozice",
+   "Záznam videa a zoom",
+   "Tethering přes USB na Macu",
+   "Ovládání z Apple Watch",
+   "Živý náhled ze snímače"
+  ],
+  "en": [
+   "Shutter and exposure settings",
+   "Video recording and zoom",
+   "USB tethering on Mac",
+   "Control from Apple Watch",
+   "Live view from the sensor"
+  ],
+  "sk": [
+   "Spúšť a nastavenie expozície",
+   "Záznam videa a zoom",
+   "Tethering cez USB na Macu",
+   "Ovládanie z Apple Watch",
+   "Živý náhľad zo snímača"
+  ],
+  "de": [
+   "Auslöser und Belichtung",
+   "Videoaufnahme und Zoom",
+   "USB-Tethering am Mac",
+   "Steuerung per Apple Watch",
+   "Live-Bild vom Sensor"
+  ],
+  "es": [
+   "Disparo y ajustes de exposición",
+   "Grabación de vídeo y zoom",
+   "Conexión USB en el Mac",
+   "Control desde el Apple Watch",
+   "Visión en directo del sensor"
+  ],
+  "pl": [
+   "Spust i ustawienia ekspozycji",
+   "Nagrywanie wideo i zoom",
+   "Tethering USB na Macu",
+   "Sterowanie z Apple Watch",
+   "Podgląd na żywo z matrycy"
+  ]
+ }
+}

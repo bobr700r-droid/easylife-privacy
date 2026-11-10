@@ -1,0 +1,67 @@
+{
+ "status": "live",
+ "description": {
+  "cs": [
+   "FotoVýběr pomáhá fotografům s výběrem a úpravou fotek na Macu – AI vybere ty nejlepší snímky, katalogy fungují jako v Lightroomu a hotovou zakázku přesuneš na NAS i s úpravami."
+  ],
+  "en": [
+   "FotoVýběr helps photographers cull and edit photos on the Mac – AI picks the best shots, catalogues work like in Lightroom and finished jobs move to your NAS with all edits."
+  ],
+  "sk": [
+   "FotoVýber pomáha fotografom s výberom a úpravou fotiek na Macu – AI vyberie najlepšie zábery, katalógy fungujú ako v Lightroome a hotovú zákazku presunieš na NAS aj s úpravami."
+  ],
+  "de": [
+   "FotoVýběr hilft Fotografen beim Aussortieren und Bearbeiten auf dem Mac – die KI wählt die besten Bilder, Kataloge funktionieren wie in Lightroom und fertige Aufträge wandern samt Bearbeitung aufs NAS."
+  ],
+  "es": [
+   "FotoVýběr ayuda a los fotógrafos a seleccionar y editar fotos en el Mac: la IA elige las mejores tomas, los catálogos funcionan como en Lightroom y los trabajos terminados pasan al NAS con sus ajustes."
+  ],
+  "pl": [
+   "FotoVýběr pomaga fotografom w selekcji i edycji zdjęć na Macu – AI wybiera najlepsze ujęcia, katalogi działają jak w Lightroomie, a gotowe zlecenie przeniesiesz na NAS razem z edycją."
+  ]
+ },
+ "features": {
+  "cs": [
+   "AI výběr nejlepších fotek",
+   "Katalogy a úpravy jako v Lightroomu",
+   "Masky, retuš a předvolby",
+   "Přesun zakázek na NAS i s úpravami",
+   "Ke stažení pro Mac"
+  ],
+  "en": [
+   "AI culling of the best shots",
+   "Lightroom-style catalogues and editing",
+   "Masks, retouching and presets",
+   "Move jobs to your NAS with edits",
+   "Download for Mac"
+  ],
+  "sk": [
+   "AI výber najlepších fotiek",
+   "Katalógy a úpravy ako v Lightroome",
+   "Masky, retuš a predvoľby",
+   "Presun zákaziek na NAS aj s úpravami",
+   "Na stiahnutie pre Mac"
+  ],
+  "de": [
+   "KI-Auswahl der besten Bilder",
+   "Kataloge und Bearbeitung wie in Lightroom",
+   "Masken, Retusche und Presets",
+   "Aufträge samt Bearbeitung aufs NAS",
+   "Download für Mac"
+  ],
+  "es": [
+   "Selección de las mejores fotos con IA",
+   "Catálogos y edición como en Lightroom",
+   "Máscaras, retoque y ajustes preestablecidos",
+   "Trabajos al NAS con sus ajustes",
+   "Descarga para Mac"
+  ],
+  "pl": [
+   "Selekcja najlepszych zdjęć przez AI",
+   "Katalogi i edycja jak w Lightroomie",
+   "Maski, retusz i presety",
+   "Przenoszenie zleceń na NAS z edycją",
+   "Do pobrania na Maca"
+  ]
+ }
+}

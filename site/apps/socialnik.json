@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Sociálník je tvůj pomocník pro Instagram a Facebook – naplánuje příspěvky, navrhne texty, nechá tě je schválit a ve správný čas je sám zveřejní."
+  ],
+  "en": [
+   "Sociálník is your Instagram and Facebook assistant – it plans posts, drafts captions, lets you approve them and publishes them at the right time."
+  ],
+  "sk": [
+   "Sociálnik je tvoj pomocník pre Instagram a Facebook – naplánuje príspevky, navrhne texty, nechá ťa ich schváliť a v správny čas ich sám zverejní."
+  ],
+  "de": [
+   "Sociálník ist dein Helfer für Instagram und Facebook – plant Beiträge, schlägt Texte vor, lässt dich freigeben und veröffentlicht zur richtigen Zeit."
+  ],
+  "es": [
+   "Sociálník es tu asistente para Instagram y Facebook: planifica publicaciones, propone textos, te deja aprobarlos y los publica en el momento justo."
+  ],
+  "pl": [
+   "Sociálník to twój pomocnik do Instagrama i Facebooka – planuje posty, proponuje teksty, daje ci je zatwierdzić i publikuje o właściwej porze."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Plán příspěvků v kalendáři",
+   "Návrhy textů a hashtagů",
+   "Schválení před zveřejněním",
+   "Publikace na Instagram i Facebook",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "Post calendar",
+   "Caption and hashtag suggestions",
+   "Approval before publishing",
+   "Publishing to Instagram and Facebook",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Plán príspevkov v kalendári",
+   "Návrhy textov a hashtagov",
+   "Schválenie pred zverejnením",
+   "Publikácia na Instagram aj Facebook",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Redaktionskalender",
+   "Text- und Hashtag-Vorschläge",
+   "Freigabe vor dem Posten",
+   "Veröffentlichen auf Instagram und Facebook",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Calendario de publicaciones",
+   "Propuestas de textos y hashtags",
+   "Aprobación antes de publicar",
+   "Publicación en Instagram y Facebook",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Kalendarz postów",
+   "Propozycje tekstów i hashtagów",
+   "Zatwierdzanie przed publikacją",
+   "Publikacja na Instagramie i Facebooku",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

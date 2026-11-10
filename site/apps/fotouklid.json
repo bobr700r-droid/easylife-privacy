@@ -1,0 +1,61 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "FotoArchiv udělá pořádek v knihovně fotek – roztřídí je do složek a štítků, najde duplicity a rozmazané snímky a fotky automaticky zálohuje na tvůj vlastní NAS."
+  ],
+  "en": [
+   "FotoArchiv tidies up your photo library – it sorts photos into folders and tags, finds duplicates and blurry shots and automatically backs everything up to your own NAS."
+  ],
+  "sk": [
+   "FotoArchiv urobí poriadok v knižnici fotiek – roztriedi ich do priečinkov a štítkov, nájde duplicity a rozmazané zábery a fotky automaticky zálohuje na tvoj vlastný NAS."
+  ],
+  "de": [
+   "FotoArchiv bringt Ordnung in deine Fotomediathek – sortiert Fotos in Ordner und Tags, findet Duplikate und unscharfe Bilder und sichert alles automatisch auf dein eigenes NAS."
+  ],
+  "es": [
+   "FotoArchiv pone orden en tu fototeca: clasifica las fotos en carpetas y etiquetas, encuentra duplicados y fotos movidas y lo copia todo automáticamente a tu propio NAS."
+  ],
+  "pl": [
+   "FotoArchiv porządkuje bibliotekę zdjęć – sortuje je w foldery i tagi, znajduje duplikaty i poruszone zdjęcia i automatycznie robi kopię na twój własny NAS."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Galerie, složky a štítky",
+   "Úklid duplicit a rozmazaných fotek",
+   "Automatická záloha na vlastní NAS",
+   "Fotky zůstávají jen u tebe"
+  ],
+  "en": [
+   "Gallery, folders and tags",
+   "Clean up duplicates and blurry shots",
+   "Automatic backup to your own NAS",
+   "Your photos stay with you"
+  ],
+  "sk": [
+   "Galéria, priečinky a štítky",
+   "Upratanie duplicít a rozmazaných fotiek",
+   "Automatická záloha na vlastný NAS",
+   "Fotky zostávajú len u teba"
+  ],
+  "de": [
+   "Galerie, Ordner und Tags",
+   "Duplikate und unscharfe Fotos aufräumen",
+   "Automatisches Backup aufs eigene NAS",
+   "Deine Fotos bleiben bei dir"
+  ],
+  "es": [
+   "Galería, carpetas y etiquetas",
+   "Limpieza de duplicados y fotos movidas",
+   "Copia automática a tu propio NAS",
+   "Tus fotos se quedan contigo"
+  ],
+  "pl": [
+   "Galeria, foldery i tagi",
+   "Sprzątanie duplikatów i nieostrych zdjęć",
+   "Automatyczna kopia na własny NAS",
+   "Zdjęcia zostają u ciebie"
+  ]
+ }
+}

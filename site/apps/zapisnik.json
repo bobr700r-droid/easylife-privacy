@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Zápisník nahraje schůzku nebo hovor, přepíše ho přímo v telefonu a připraví z něj přehledný zápis s úkoly a návrhem e-mailu účastníkům."
+  ],
+  "en": [
+   "Zápisník records a meeting or call, transcribes it right on your device and turns it into clear minutes with action items and a draft follow-up email."
+  ],
+  "sk": [
+   "Zápisník nahrá stretnutie alebo hovor, prepíše ho priamo v telefóne a pripraví z neho prehľadný zápis s úlohami a návrhom e-mailu účastníkom."
+  ],
+  "de": [
+   "Zápisník nimmt ein Meeting oder Telefonat auf, transkribiert es direkt auf dem Gerät und macht daraus ein übersichtliches Protokoll mit Aufgaben und einem E-Mail-Entwurf."
+  ],
+  "es": [
+   "Zápisník graba una reunión o llamada, la transcribe en el propio dispositivo y la convierte en un acta clara con tareas y un borrador de correo."
+  ],
+  "pl": [
+   "Zápisník nagra spotkanie lub rozmowę, przepisze je na urządzeniu i przygotuje przejrzystą notatkę z zadaniami i szkicem e-maila do uczestników."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Nahrávání s výběrem mikrofonu",
+   "Přepis přímo v zařízení",
+   "AI zápis s úkoly",
+   "Návrh e-mailu po schůzce",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "Recording with microphone choice",
+   "On-device transcription",
+   "AI minutes with action items",
+   "Draft follow-up email",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Nahrávanie s výberom mikrofónu",
+   "Prepis priamo v zariadení",
+   "AI zápis s úlohami",
+   "Návrh e-mailu po stretnutí",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Aufnahme mit Mikrofonwahl",
+   "Transkription auf dem Gerät",
+   "KI-Protokoll mit Aufgaben",
+   "E-Mail-Entwurf nach dem Meeting",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Grabación con elección de micrófono",
+   "Transcripción en el dispositivo",
+   "Acta con IA y tareas",
+   "Borrador de correo tras la reunión",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Nagrywanie z wyborem mikrofonu",
+   "Transkrypcja na urządzeniu",
+   "Notatka AI z zadaniami",
+   "Szkic e-maila po spotkaniu",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

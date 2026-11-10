@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Zkratkář ukáže všechny tvoje zkratky přehledně na jednom místě – roztříděné do skupin, s hledáním a spuštěním jedním klepnutím."
+  ],
+  "en": [
+   "Zkratkář shows all your shortcuts neatly in one place – sorted into groups, searchable and launchable with a single tap."
+  ],
+  "sk": [
+   "Skratkár ukáže všetky tvoje skratky prehľadne na jednom mieste – roztriedené do skupín, s hľadaním a spustením jedným ťuknutím."
+  ],
+  "de": [
+   "Zkratkář zeigt alle deine Kurzbefehle übersichtlich an einem Ort – in Gruppen sortiert, durchsuchbar und mit einem Tippen gestartet."
+  ],
+  "es": [
+   "Zkratkář muestra todos tus atajos ordenados en un solo lugar: agrupados, con búsqueda y ejecución con un toque."
+  ],
+  "pl": [
+   "Zkratkář pokazuje wszystkie twoje skróty przejrzyście w jednym miejscu – w grupach, z wyszukiwaniem i uruchamianiem jednym dotknięciem."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Všechny zkratky na jednom místě",
+   "Skupiny a hledání",
+   "Spuštění jedním klepnutím",
+   "Widget s oblíbenými",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "All shortcuts in one place",
+   "Groups and search",
+   "Run with a single tap",
+   "Favourites widget",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Všetky skratky na jednom mieste",
+   "Skupiny a hľadanie",
+   "Spustenie jedným ťuknutím",
+   "Widget s obľúbenými",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Alle Kurzbefehle an einem Ort",
+   "Gruppen und Suche",
+   "Start mit einem Tippen",
+   "Favoriten-Widget",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Todos los atajos en un lugar",
+   "Grupos y búsqueda",
+   "Ejecución con un toque",
+   "Widget de favoritos",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Wszystkie skróty w jednym miejscu",
+   "Grupy i wyszukiwanie",
+   "Uruchamianie jednym dotknięciem",
+   "Widżet z ulubionymi",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

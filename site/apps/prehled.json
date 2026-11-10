@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Přehled dne ti ráno ukáže celý den na jednom místě – schůzky, připomínky, důležité maily a kdy musíš vyrazit, aby ses nikam nezpozdil."
+  ],
+  "en": [
+   "Přehled dne shows your whole day in one place each morning – meetings, reminders, important emails and when to leave so you're never late."
+  ],
+  "sk": [
+   "Prehľad dňa ti ráno ukáže celý deň na jednom mieste – stretnutia, pripomienky, dôležité maily a kedy vyraziť, aby si nikam nemeškal."
+  ],
+  "de": [
+   "Přehled dne zeigt dir morgens den ganzen Tag an einem Ort – Termine, Erinnerungen, wichtige Mails und wann du losmusst, um pünktlich zu sein."
+  ],
+  "es": [
+   "Přehled dne te muestra cada mañana todo el día en un solo lugar: reuniones, recordatorios, correos importantes y cuándo salir para llegar a tiempo."
+  ],
+  "pl": [
+   "Přehled dne rano pokaże cały dzień w jednym miejscu – spotkania, przypomnienia, ważne maile i kiedy wyjść, żeby się nie spóźnić."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Schůzky a připomínky pohromadě",
+   "Důležité e-maily dne",
+   "Kdy vyrazit podle dopravy",
+   "Widget a ranní souhrn",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "Meetings and reminders together",
+   "Today's important emails",
+   "When to leave, based on traffic",
+   "Widget and morning summary",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Stretnutia a pripomienky spolu",
+   "Dôležité e-maily dňa",
+   "Kedy vyraziť podľa dopravy",
+   "Widget a ranný súhrn",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Termine und Erinnerungen zusammen",
+   "Wichtige E-Mails des Tages",
+   "Wann losfahren – je nach Verkehr",
+   "Widget und Morgenübersicht",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Reuniones y recordatorios juntos",
+   "Correos importantes del día",
+   "Cuándo salir según el tráfico",
+   "Widget y resumen matutino",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Spotkania i przypomnienia razem",
+   "Ważne e-maile dnia",
+   "Kiedy wyjść według ruchu",
+   "Widżet i poranne podsumowanie",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "NAS Kino přehrává filmy a seriály z tvého domácího NASu na iPhonu, iPadu, Macu i Apple TV – s plakáty, pokračováním ve sledování a stažením na cesty."
+  ],
+  "en": [
+   "NAS Kino plays films and series from your home NAS on iPhone, iPad, Mac and Apple TV – with posters, continue watching and downloads for the road."
+  ],
+  "sk": [
+   "NAS Kino prehráva filmy a seriály z tvojho domáceho NASu na iPhone, iPade, Macu aj Apple TV – s plagátmi, pokračovaním v sledovaní a stiahnutím na cesty."
+  ],
+  "de": [
+   "NAS Kino spielt Filme und Serien von deinem NAS auf iPhone, iPad, Mac und Apple TV – mit Postern, Weiterschauen und Downloads für unterwegs."
+  ],
+  "es": [
+   "NAS Kino reproduce películas y series de tu NAS en iPhone, iPad, Mac y Apple TV, con carátulas, seguir viendo y descargas para el viaje."
+  ],
+  "pl": [
+   "NAS Kino odtwarza filmy i seriale z domowego NAS-a na iPhonie, iPadzie, Macu i Apple TV – z plakatami, kontynuacją oglądania i pobieraniem na drogę."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Knihovna filmů a seriálů z NASu",
+   "Pokračovat ve sledování",
+   "Stažení na cesty",
+   "AirPlay a obraz v obraze",
+   "iPhone, iPad, Mac i Apple TV"
+  ],
+  "en": [
+   "Film and series library from your NAS",
+   "Continue watching",
+   "Downloads for travel",
+   "AirPlay and picture in picture",
+   "iPhone, iPad, Mac and Apple TV"
+  ],
+  "sk": [
+   "Knižnica filmov a seriálov z NASu",
+   "Pokračovať v sledovaní",
+   "Stiahnutie na cesty",
+   "AirPlay a obraz v obraze",
+   "iPhone, iPad, Mac aj Apple TV"
+  ],
+  "de": [
+   "Film- und Serienbibliothek vom NAS",
+   "Weiterschauen",
+   "Downloads für unterwegs",
+   "AirPlay und Bild-in-Bild",
+   "iPhone, iPad, Mac und Apple TV"
+  ],
+  "es": [
+   "Biblioteca de películas y series del NAS",
+   "Seguir viendo",
+   "Descargas para el viaje",
+   "AirPlay e imagen en imagen",
+   "iPhone, iPad, Mac y Apple TV"
+  ],
+  "pl": [
+   "Biblioteka filmów i seriali z NAS-a",
+   "Kontynuuj oglądanie",
+   "Pobieranie na drogę",
+   "AirPlay i obraz w obrazie",
+   "iPhone, iPad, Mac i Apple TV"
+  ]
+ }
+}

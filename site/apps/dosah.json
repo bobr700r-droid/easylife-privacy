@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Dosah je vzdálená plocha s AI asistentem – z iPhonu, iPadu nebo jiného Macu ovládáš svůj Mac nebo počítač s Windows, kdekoli jsi."
+  ],
+  "en": [
+   "Dosah is a remote desktop with an AI assistant – control your Mac or Windows PC from an iPhone, iPad or another Mac, wherever you are."
+  ],
+  "sk": [
+   "Dosah je vzdialená plocha s AI asistentom – z iPhonu, iPadu alebo iného Macu ovládaš svoj Mac alebo počítač s Windows, nech si kdekoľvek."
+  ],
+  "de": [
+   "Dosah ist ein Remote-Desktop mit KI-Assistent – steuere deinen Mac oder Windows-PC vom iPhone, iPad oder einem anderen Mac aus, wo immer du bist."
+  ],
+  "es": [
+   "Dosah es un escritorio remoto con asistente de IA: controla tu Mac o PC con Windows desde un iPhone, iPad u otro Mac, estés donde estés."
+  ],
+  "pl": [
+   "Dosah to pulpit zdalny z asystentem AI – sterujesz swoim Makiem lub komputerem z Windows z iPhone’a, iPada lub innego Maca, gdziekolwiek jesteś."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Vzdálená plocha Macu i Windows",
+   "AI asistent, který úkol udělá za tebe",
+   "Ovládání dotykem, myší i klávesnicí",
+   "Přenos souborů",
+   "Šifrované spojení"
+  ],
+  "en": [
+   "Remote desktop for Mac and Windows",
+   "AI assistant that does the task for you",
+   "Touch, mouse and keyboard control",
+   "File transfer",
+   "Encrypted connection"
+  ],
+  "sk": [
+   "Vzdialená plocha Macu aj Windows",
+   "AI asistent, ktorý úlohu urobí za teba",
+   "Ovládanie dotykom, myšou aj klávesnicou",
+   "Prenos súborov",
+   "Šifrované spojenie"
+  ],
+  "de": [
+   "Remote-Desktop für Mac und Windows",
+   "KI-Assistent erledigt Aufgaben für dich",
+   "Steuerung per Touch, Maus und Tastatur",
+   "Dateiübertragung",
+   "Verschlüsselte Verbindung"
+  ],
+  "es": [
+   "Escritorio remoto para Mac y Windows",
+   "Asistente de IA que hace la tarea por ti",
+   "Control táctil, con ratón y teclado",
+   "Transferencia de archivos",
+   "Conexión cifrada"
+  ],
+  "pl": [
+   "Pulpit zdalny Maca i Windows",
+   "Asystent AI, który wykona zadanie za ciebie",
+   "Sterowanie dotykiem, myszą i klawiaturą",
+   "Przesyłanie plików",
+   "Szyfrowane połączenie"
+  ]
+ }
+}

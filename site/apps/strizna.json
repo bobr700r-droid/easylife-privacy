@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Střižna je střihový program s AI pro Mac a iPad – časová osa, barvení log záznamů, titulky, stabilizace a automatický hrubý střih. Spolupracuje i s Final Cut a DaVinci Resolve."
+  ],
+  "en": [
+   "Střižna is an AI-powered video editor for Mac and iPad – timeline, log footage grading, captions, stabilisation and automatic rough cuts. It also works with Final Cut and DaVinci Resolve."
+  ],
+  "sk": [
+   "Strižňa je strihový program s AI pre Mac a iPad – časová os, farbenie log záznamov, titulky, stabilizácia a automatický hrubý strih. Spolupracuje aj s Final Cut a DaVinci Resolve."
+  ],
+  "de": [
+   "Střižna ist ein KI-Videoschnittprogramm für Mac und iPad – Timeline, Grading von Log-Material, Untertitel, Stabilisierung und automatischer Rohschnitt. Arbeitet auch mit Final Cut und DaVinci Resolve."
+  ],
+  "es": [
+   "Střižna es un editor de vídeo con IA para Mac y iPad: línea de tiempo, etalonaje de material log, subtítulos, estabilización y montaje automático. También trabaja con Final Cut y DaVinci Resolve."
+  ],
+  "pl": [
+   "Střižna to edytor wideo z AI na Maca i iPada – oś czasu, gradacja materiału log, napisy, stabilizacja i automatyczny wstępny montaż. Współpracuje też z Final Cut i DaVinci Resolve."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Časová osa a střih podle textu",
+   "Barvení a log profily",
+   "Automatické titulky a hrubý střih",
+   "Stabilizace a zpomalení",
+   "Export do Final Cut a DaVinci Resolve"
+  ],
+  "en": [
+   "Timeline and text-based editing",
+   "Colour grading and log profiles",
+   "Automatic captions and rough cut",
+   "Stabilisation and slow motion",
+   "Export to Final Cut and DaVinci Resolve"
+  ],
+  "sk": [
+   "Časová os a strih podľa textu",
+   "Farbenie a log profily",
+   "Automatické titulky a hrubý strih",
+   "Stabilizácia a spomalenie",
+   "Export do Final Cut a DaVinci Resolve"
+  ],
+  "de": [
+   "Timeline und textbasierter Schnitt",
+   "Farbkorrektur und Log-Profile",
+   "Automatische Untertitel und Rohschnitt",
+   "Stabilisierung und Zeitlupe",
+   "Export nach Final Cut und DaVinci Resolve"
+  ],
+  "es": [
+   "Línea de tiempo y edición por texto",
+   "Etalonaje y perfiles log",
+   "Subtítulos y montaje automáticos",
+   "Estabilización y cámara lenta",
+   "Exportación a Final Cut y DaVinci Resolve"
+  ],
+  "pl": [
+   "Oś czasu i montaż według tekstu",
+   "Gradacja kolorów i profile log",
+   "Automatyczne napisy i wstępny montaż",
+   "Stabilizacja i zwolnienie",
+   "Eksport do Final Cut i DaVinci Resolve"
+  ]
+ }
+}

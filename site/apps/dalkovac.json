@@ -1,0 +1,67 @@
+{
+ "status": "testflight",
+ "description": {
+  "cs": [
+   "Dálkovač dá ovladače tvých zařízení do jedné appky – kamery GoPro, 3D tiskárny Bambu Lab, světla Govee, Home Assistant i tiskárny AirPrint."
+  ],
+  "en": [
+   "Dálkovač puts the controls for your devices in one app – GoPro cameras, Bambu Lab 3D printers, Govee lights, Home Assistant and AirPrint printers."
+  ],
+  "sk": [
+   "Diaľkovač dá ovládače tvojich zariadení do jednej appky – kamery GoPro, 3D tlačiarne Bambu Lab, svetlá Govee, Home Assistant aj tlačiarne AirPrint."
+  ],
+  "de": [
+   "Dálkovač bündelt die Steuerung deiner Geräte in einer App – GoPro-Kameras, Bambu-Lab-3D-Drucker, Govee-Lampen, Home Assistant und AirPrint-Drucker."
+  ],
+  "es": [
+   "Dálkovač reúne los mandos de tus dispositivos en una app: cámaras GoPro, impresoras 3D Bambu Lab, luces Govee, Home Assistant e impresoras AirPrint."
+  ],
+  "pl": [
+   "Dálkovač zbiera piloty twoich urządzeń w jednej aplikacji – kamery GoPro, drukarki 3D Bambu Lab, światła Govee, Home Assistant i drukarki AirPrint."
+  ]
+ },
+ "features": {
+  "cs": [
+   "GoPro: záznam a náhled",
+   "Bambu Lab: stav tisku",
+   "Světla Govee",
+   "Home Assistant a AirPrint",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "GoPro: recording and preview",
+   "Bambu Lab: print status",
+   "Govee lights",
+   "Home Assistant and AirPrint",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "GoPro: záznam a náhľad",
+   "Bambu Lab: stav tlače",
+   "Svetlá Govee",
+   "Home Assistant a AirPrint",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "GoPro: Aufnahme und Vorschau",
+   "Bambu Lab: Druckstatus",
+   "Govee-Lampen",
+   "Home Assistant und AirPrint",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "GoPro: grabación y vista previa",
+   "Bambu Lab: estado de impresión",
+   "Luces Govee",
+   "Home Assistant y AirPrint",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "GoPro: nagrywanie i podgląd",
+   "Bambu Lab: stan wydruku",
+   "Światła Govee",
+   "Home Assistant i AirPrint",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "status": "live",
+ "description": {
+  "cs": [
+   "AppPad vrací na Mac přehledný Launchpad – všechny aplikace na mřížce, vlastní složky, přetahování a rychlé hledání."
+  ],
+  "en": [
+   "AppPad brings a clean Launchpad back to the Mac – all your apps in a grid, custom folders, drag and drop and quick search."
+  ],
+  "sk": [
+   "AppPad vracia na Mac prehľadný Launchpad – všetky aplikácie na mriežke, vlastné priečinky, preťahovanie a rýchle hľadanie."
+  ],
+  "de": [
+   "AppPad bringt ein übersichtliches Launchpad zurück auf den Mac – alle Apps im Raster, eigene Ordner, Drag & Drop und schnelle Suche."
+  ],
+  "es": [
+   "AppPad devuelve al Mac un Launchpad claro: todas las apps en cuadrícula, carpetas propias, arrastrar y soltar y búsqueda rápida."
+  ],
+  "pl": [
+   "AppPad przywraca na Maca przejrzysty Launchpad – wszystkie aplikacje w siatce, własne foldery, przeciąganie i szybkie wyszukiwanie."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Mřížka všech aplikací",
+   "Vlastní složky a řazení přetažením",
+   "Rychlé hledání",
+   "Ke stažení pro Mac"
+  ],
+  "en": [
+   "Grid of all your apps",
+   "Custom folders and drag-to-sort",
+   "Quick search",
+   "Download for Mac"
+  ],
+  "sk": [
+   "Mriežka všetkých aplikácií",
+   "Vlastné priečinky a radenie preťahovaním",
+   "Rýchle hľadanie",
+   "Na stiahnutie pre Mac"
+  ],
+  "de": [
+   "Raster mit allen Apps",
+   "Eigene Ordner, Sortieren per Ziehen",
+   "Schnelle Suche",
+   "Download für Mac"
+  ],
+  "es": [
+   "Cuadrícula con todas las apps",
+   "Carpetas propias y orden arrastrando",
+   "Búsqueda rápida",
+   "Descarga para Mac"
+  ],
+  "pl": [
+   "Siatka wszystkich aplikacji",
+   "Własne foldery i sortowanie przeciąganiem",
+   "Szybkie wyszukiwanie",
+   "Do pobrania na Maca"
+  ]
+ }
+}
