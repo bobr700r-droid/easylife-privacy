@@ -2,33 +2,53 @@
  "apps": {
   "cz.easylife.nasplayer.mobile": {
    "appStoreId": "6827549066",
-   "build": "202611031228",
-   "date": "2026-11-03",
-   "version": "1.6.0"
+   "build": "202611112104",
+   "date": "2026-11-11",
+   "notes": {
+    "cs": "Novinky ve verzi         CFBundleShortVersionString: $(MARKETING_VERSION)",
+    "en": "What's new in         CFBundleShortVersionString: $(MARKETING_VERSION)"
+   },
+   "version": "1.7.0"
   },
   "cz.lukasochrana.cestovnicek": {
    "appStoreId": "6821299911",
-   "build": "202611031006",
-   "date": "2026-11-03",
-   "version": "1.22.0"
+   "build": "202611121447",
+   "date": "2026-11-12",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.36.0"
   },
   "cz.lukasochrana.fitko": {
    "appStoreId": "6820175415",
-   "build": "202611031042",
-   "date": "2026-11-03",
-   "version": "1.18.0"
+   "build": "202611121414",
+   "date": "2026-11-12",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.20.2"
   },
   "cz.lukasochrana.navidesk": {
    "appStoreId": "6821114920",
-   "build": "202611030907",
-   "date": "2026-11-03",
-   "version": "1.3.0"
+   "build": "202611041912",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.3.1"
   },
   "cz.lukasochrana.navigace": {
    "appStoreId": "6820935391",
-   "build": "438",
-   "date": "2026-11-03",
-   "version": "2.13.4"
+   "build": "202611121336",
+   "date": "2026-11-12",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "2.14.1"
   },
   "cz.ochrana.FotoVyber": {
    "build": "18",
@@ -41,15 +61,32 @@
   },
   "cz.ochrana.adimacrm": {
    "appStoreId": "6821430789",
-   "build": "202610221556",
-   "date": "2026-11-03",
-   "version": "1.3.9"
+   "build": "202611041914",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.3.12"
+  },
+  "cz.ochrana.animator": {
+   "build": "202611112055",
+   "date": "2026-11-11",
+   "notes": {
+    "cs": "Verze z TestFlightu",
+    "en": "TestFlight build"
+   },
+   "version": "0.3.0"
   },
   "cz.ochrana.crmdesk": {
    "appStoreId": "6821431013",
-   "build": "202610302100",
-   "date": "2026-11-03",
-   "version": "1.9.1"
+   "build": "202611041904",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.9.2"
   },
   "cz.ochrana.dalkovac": {
    "build": "202611032128",
@@ -62,28 +99,32 @@
   },
   "cz.ochrana.darky": {
    "appStoreId": "6821437094",
-   "build": "202611032217",
-   "date": "2026-11-03",
+   "build": "202611121352",
+   "date": "2026-11-12",
    "notes": {
     "cs": "Nastavení → Aktualizace: nová verze a novinky.",
     "en": "Settings → Updates: new version and what's new."
    },
-   "version": "1.5.9"
+   "version": "1.6.0"
   },
   "cz.ochrana.domov": {
    "appStoreId": "6829034657",
-   "build": "202611031217",
-   "date": "2026-11-03",
-   "version": "1.1.0"
+   "build": "202611120157",
+   "date": "2026-11-12",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.4.1"
   },
   "cz.ochrana.dosah": {
-   "build": "202611031950",
-   "date": "2026-11-03",
+   "build": "202611121351",
+   "date": "2026-11-12",
    "notes": {
-    "cs": "Vzdálená plocha s AI asistentem: párování QR, šifrovaný přenos, učící režim",
-    "en": "Remote desktop with AI assistant: QR pairing, encrypted stream, learning mode"
+    "cs": "Obrázky a soubory přes schránku, mikrofon a zvuk na iPhonu a iPadu, okno na každý monitor, suchý běh a oprava receptů, začernění citlivých údajů, ukazatel příčiny špatného obrazu, angličtina, Zkratky",
+    "en": "Images and files through the clipboard, microphone and sound on iPhone and iPad, a window per monitor, recipe dry run and repair, sensitive data blackout, picture quality diagnosis, English, Shortcuts"
    },
-   "version": "0.1.0"
+   "version": "0.7.3"
   },
   "cz.ochrana.dumazahrada": {
    "appStoreId": "6821607906",
@@ -97,31 +138,43 @@
   },
   "cz.ochrana.easyforlife": {
    "appStoreId": "6821554539",
-   "build": "202611031557",
-   "date": "2026-11-03",
-   "version": "1.10.1"
+   "build": "202611041814",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.11.0"
   },
   "cz.ochrana.fakturant": {
    "appStoreId": "6821429421",
-   "build": "202610302106",
-   "date": "2026-11-03",
-   "version": "1.19.2"
+   "build": "202611112050",
+   "date": "2026-11-11",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.20.0"
   },
   "cz.ochrana.fotodesk": {
    "appStoreId": "6821438909",
-   "build": "202611031129",
-   "date": "2026-11-03",
-   "version": "1.26.0"
+   "build": "202611121411",
+   "date": "2026-11-12",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.29.0"
   },
   "cz.ochrana.fotoplan": {
    "appStoreId": "6821300346",
-   "build": "202611032158",
-   "date": "2026-11-03",
+   "build": "202611121409",
+   "date": "2026-11-12",
    "notes": {
-    "cs": "Novinky ve verzi 0.6.1",
-    "en": "What's new in 0.6.1"
+    "cs": "Novinky ve verzi 0.6.3",
+    "en": "What's new in 0.6.3"
    },
-   "version": "0.6.1"
+   "version": "0.6.3"
   },
   "cz.ochrana.fototip": {
    "appStoreId": "6821384871",
@@ -129,11 +182,29 @@
    "date": "2026-11-03",
    "version": "1.7.1"
   },
+  "cz.ochrana.fotouklid": {
+   "build": "202611051801",
+   "date": "2026-11-05",
+   "notes": {
+    "cs": "Verze z TestFlightu",
+    "en": "TestFlight build"
+   },
+   "version": "0.9.6"
+  },
   "cz.ochrana.fotouklid.ios": {
    "appStoreId": "6825670634",
    "build": "202610302227",
    "date": "2026-11-03",
    "version": "0.5.3"
+  },
+  "cz.ochrana.fotovyber.ios": {
+   "build": "202611120411",
+   "date": "2026-11-12",
+   "notes": {
+    "cs": "Verze z TestFlightu",
+    "en": "TestFlight build"
+   },
+   "version": "0.21.0"
   },
   "cz.ochrana.garaz": {
    "appStoreId": "6821429519",
@@ -143,15 +214,23 @@
   },
   "cz.ochrana.hudebnicek": {
    "appStoreId": "6828006835",
-   "build": "202610310757",
-   "date": "2026-11-03",
-   "version": "0.2.5"
+   "build": "202611042007",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace",
+    "en": "Settings → Updates"
+   },
+   "version": "0.2.7"
   },
   "cz.ochrana.jidelnik": {
    "appStoreId": "6821346197",
-   "build": "202611032255",
-   "date": "2026-11-03",
-   "version": "1.5.3"
+   "build": "202611121349",
+   "date": "2026-11-12",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled verzí a novinek",
+    "en": "Settings → Updates: version overview and release notes"
+   },
+   "version": "1.7.0"
   },
   "cz.ochrana.jizdy": {
    "appStoreId": "6830166369",
@@ -165,19 +244,23 @@
   },
   "cz.ochrana.jmautodily": {
    "appStoreId": "6822237417",
-   "build": "202610281511",
-   "date": "2026-11-03",
-   "version": "1.14.0"
+   "build": "202611051537",
+   "date": "2026-11-05",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.17.0"
   },
   "cz.ochrana.kancl": {
    "appStoreId": "6830253782",
-   "build": "202611032323",
-   "date": "2026-11-03",
+   "build": "202611051506",
+   "date": "2026-11-05",
    "notes": {
     "cs": "190+ funkcí Excelu (LET/LAMBDA, datum, text), ODT/ODS, průvodce CSV, komentáře a zámek listu, obtékání obrázků, šablony faktura/životopis, tvary a tabulky ve snímcích, druhý displej, PDF heslo/vodoznak/čísla/razítka, AI režim a Claude Code (MCP) na Macu",
     "en": "190+ Excel functions (LET/LAMBDA, dates, text), ODT/ODS, CSV import wizard, cell comments and sheet lock, image wrapping, invoice/CV templates, shapes and tables in slides, external display, PDF password/watermark/numbering/stamps, AI mode and Claude Code (MCP) on Mac"
    },
-   "version": "0.3.0"
+   "version": "0.8.5"
   },
   "cz.ochrana.kariera": {
    "appStoreId": "6822213735",
@@ -191,33 +274,42 @@
   },
   "cz.ochrana.karticky": {
    "appStoreId": "6821604077",
-   "build": "202611032240",
-   "date": "2026-11-03",
+   "build": "202611121342",
+   "date": "2026-11-12",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
     "en": "Settings → Updates: new version overview and release notes"
    },
-   "version": "1.10.1"
+   "version": "1.11.0"
+  },
+  "cz.ochrana.komander": {
+   "build": "202611051840",
+   "date": "2026-11-05",
+   "notes": {
+    "cs": "Verze z TestFlightu",
+    "en": "TestFlight build"
+   },
+   "version": "0.16.4"
   },
   "cz.ochrana.kucharka": {
    "appStoreId": "6821606709",
-   "build": "202611032333",
-   "date": "2026-11-03",
+   "build": "202611121403",
+   "date": "2026-11-12",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
     "en": "Settings → Updates: new version overview and release notes"
    },
-   "version": "1.11.3"
+   "version": "1.11.5"
   },
   "cz.ochrana.kulturnik": {
    "appStoreId": "6821297019",
-   "build": "202611032220",
-   "date": "2026-11-03",
+   "build": "202611121327",
+   "date": "2026-11-12",
    "notes": {
     "cs": "Nastavení → Aktualizace: nová verze a novinky.",
     "en": "Settings → Updates: new version and what's new."
    },
-   "version": "0.10.4"
+   "version": "0.10.7"
   },
   "cz.ochrana.lekarnicka": {
    "appStoreId": "6821431697",
@@ -227,25 +319,33 @@
   },
   "cz.ochrana.letopis": {
    "appStoreId": "6830208056",
-   "build": "202611031541",
-   "date": "2026-11-03",
-   "version": "0.1.0"
+   "build": "202611112100",
+   "date": "2026-11-11",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "0.2.0"
   },
   "cz.ochrana.lumen": {
    "appStoreId": "6828617296",
-   "build": "202611032228",
-   "date": "2026-11-03",
+   "build": "202611121241",
+   "date": "2026-11-12",
    "notes": {
-    "cs": "Novinky ve verzi 0.9.1",
-    "en": "What's new in 0.9.1"
+    "cs": "Novinky ve verzi 1.2.0",
+    "en": "What's new in 1.2.0"
    },
-   "version": "0.9.1"
+   "version": "1.2.0"
   },
   "cz.ochrana.mailer": {
    "appStoreId": "6821431755",
-   "build": "202611031136",
-   "date": "2026-11-03",
-   "version": "1.17.9"
+   "build": "202611112149",
+   "date": "2026-11-11",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.19.0"
   },
   "cz.ochrana.mazlicek": {
    "appStoreId": "6821436878",
@@ -256,28 +356,32 @@
   "cz.ochrana.motobaterie": {
    "appStoreId": "6822590550",
    "build": "202610281245",
-   "date": "2026-11-03",
-   "version": "1.2.2"
-  },
-  "cz.ochrana.nakupy": {
-   "appStoreId": "6821549871",
-   "build": "202611032322",
-   "date": "2026-11-03",
+   "date": "2026-11-04",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
     "en": "Settings → Updates: new version overview and release notes"
    },
-   "version": "1.8.1"
+   "version": "1.2.3"
+  },
+  "cz.ochrana.nakupy": {
+   "appStoreId": "6821549871",
+   "build": "202611121346",
+   "date": "2026-11-12",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "1.9.0"
   },
   "cz.ochrana.obkreslovatko": {
    "appStoreId": "6825055594",
    "build": "202611032117",
-   "date": "2026-11-03",
+   "date": "2026-11-12",
    "notes": {
     "cs": "Nastavení → Aktualizace: nová verze a novinky.",
     "en": "Settings → Updates: new version and what's new."
    },
-   "version": "1.1.2"
+   "version": "1.1.4"
   },
   "cz.ochrana.oblacno": {
    "appStoreId": "6830166530",
@@ -301,23 +405,23 @@
   },
   "cz.ochrana.plakatnik": {
    "appStoreId": "6830210279",
-   "build": "202611032223",
-   "date": "2026-11-03",
+   "build": "202611051541",
+   "date": "2026-11-05",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
     "en": "Settings → Updates: new version overview and release notes"
    },
-   "version": "0.3.0"
+   "version": "0.10.0"
   },
   "cz.ochrana.podkres": {
    "appStoreId": "6830241754",
-   "build": "202611032313",
-   "date": "2026-11-03",
+   "build": "202611051513",
+   "date": "2026-11-05",
    "notes": {
-    "cs": "Jednoduchý režim pro začátečníky (nálada, žánr, délka → hotová písnička, bloky, nástroje jako karty, Zkus jinak), bubeník, import a střih audia, master jedním klepnutím, Zpět/Znovu, AI režim a Claude Code",
-    "en": "Simple mode for beginners (mood, genre, length → finished song, blocks, instrument cards, Try again), drummer, audio import and editing, one-tap mastering, undo/redo, AI mode and Claude Code"
+    "cs": "Jednoduchý režim, bubeník, import audia, master jedním klepnutím",
+    "en": "Simple mode, drummer, audio import, one-tap mastering"
    },
-   "version": "0.3.0"
+   "version": "0.9.1"
   },
   "cz.ochrana.pohoda": {
    "appStoreId": "6822215039",
@@ -331,13 +435,13 @@
   },
   "cz.ochrana.postacek": {
    "appStoreId": "6822732297",
-   "build": "202611040047",
-   "date": "2026-11-04",
+   "build": "202611112130",
+   "date": "2026-11-11",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
     "en": "Settings → Updates: new version overview and release notes"
    },
-   "version": "0.8.2"
+   "version": "0.9.0"
   },
   "cz.ochrana.predplatne": {
    "appStoreId": "6821430897",
@@ -361,13 +465,13 @@
   },
   "cz.ochrana.rodinka": {
    "appStoreId": "6822158489",
-   "build": "202611032247",
-   "date": "2026-11-03",
+   "build": "202611121358",
+   "date": "2026-11-12",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
     "en": "Settings → Updates: new version overview and release notes"
    },
-   "version": "1.6.7"
+   "version": "1.7.0"
   },
   "cz.ochrana.rozpocet": {
    "appStoreId": "6821604332",
@@ -377,9 +481,13 @@
   },
   "cz.ochrana.salonky": {
    "appStoreId": "6821289089",
-   "build": "202611032135",
-   "date": "2026-11-03",
-   "version": "1.7.4"
+   "build": "202611131300",
+   "date": "2026-11-12",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled verzí a novinek",
+    "en": "Settings → Updates: version overview and release notes"
+   },
+   "version": "1.7.8"
   },
   "cz.ochrana.smenarna": {
    "appStoreId": "6821283336",
@@ -389,9 +497,13 @@
   },
   "cz.ochrana.socialnik": {
    "appStoreId": "6828887283",
-   "build": "202610301926",
-   "date": "2026-11-03",
-   "version": "0.3.0"
+   "build": "202611041812",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "0.3.4"
   },
   "cz.ochrana.spoust": {
    "build": "202611032112",
@@ -403,59 +515,63 @@
    "version": "0.1.0"
   },
   "cz.ochrana.strizna": {
-   "build": "202611042000",
-   "date": "2026-11-04",
+   "build": "202611121222",
+   "date": "2026-11-12",
    "notes": {
-    "cs": "Kapitoly ve videu teď uvidí i QuickTime a přehrávače Apple, v MP4 i MOV a bez překódování. Zápis kapitol už nepoškodí metadata souboru.",
-    "en": "Video chapters now show up in QuickTime and Apple players too, in MP4 and MOV, without re-encoding. Writing chapters no longer damages file metadata."
+    "cs": "AI přechody (morph, Auto přechody), titulky jako CapCut s překladem, šablony, beat sync, reframe 9:16, odstranění pozadí, efekty, rampy, stabilizace, hlas, text na řeč, složené klipy, J/L střih; oprava HDR exportu",
+    "en": "AI transitions (morph, auto), CapCut-style captions with translation, templates, beat sync, 9:16 reframe, background removal, effects, ramps, stabilization, voice, text to speech, compound clips, J/L cuts; HDR export fix"
    },
-   "version": "0.8.0"
+   "version": "0.10.0"
   },
   "cz.ochrana.studium": {
    "appStoreId": "6822229751",
-   "build": "202611032344",
-   "date": "2026-11-03",
+   "build": "202611121405",
+   "date": "2026-11-12",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
     "en": "Settings → Updates: new version overview and release notes"
    },
-   "version": "1.12.2"
+   "version": "1.12.4"
   },
   "cz.ochrana.svatebnicek": {
    "appStoreId": "6822193720",
-   "build": "202611040035",
-   "date": "2026-11-04",
+   "build": "202611121323",
+   "date": "2026-11-12",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
     "en": "Settings → Updates: new version overview and release notes"
    },
-   "version": "1.8.5"
+   "version": "1.9.0"
   },
   "cz.ochrana.tiskarnik": {
    "appStoreId": "6830241594",
-   "build": "202611040031",
+   "build": "202611051531",
+   "date": "2026-11-05",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "0.5.0"
+  },
+  "cz.ochrana.vizitkar": {
+   "appStoreId": "6828887001",
+   "build": "202611041826",
    "date": "2026-11-04",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
     "en": "Settings → Updates: new version overview and release notes"
    },
-   "version": "0.3.0"
-  },
-  "cz.ochrana.vizitkar": {
-   "appStoreId": "6828887001",
-   "build": "202610301947",
-   "date": "2026-11-03",
-   "version": "0.1.1"
+   "version": "0.1.2"
   },
   "cz.ochrana.vyrovnano": {
    "appStoreId": "6821300069",
-   "build": "202611032123",
-   "date": "2026-11-03",
+   "build": "202611120112",
+   "date": "2026-11-12",
    "notes": {
     "cs": "Nastavení → Aktualizace: přehled verzí a novinek",
     "en": "Settings → Updates: version overview and release notes"
    },
-   "version": "1.6.2"
+   "version": "1.7.6"
   },
   "cz.ochrana.zapisnik": {
    "appStoreId": "6825419715",
@@ -479,9 +595,13 @@
   },
   "cz.ochrana.zkratkar": {
    "appStoreId": "6830177139",
-   "build": "202611031712",
-   "date": "2026-11-03",
-   "version": "0.2.0"
+   "build": "202611041845",
+   "date": "2026-11-04",
+   "notes": {
+    "cs": "Nastavení → Aktualizace: přehled nové verze a novinek",
+    "en": "Settings → Updates: new version overview and release notes"
+   },
+   "version": "0.2.1"
   }
  }
 }
