@@ -93,6 +93,8 @@ http.createServer((req, res) => {
   const url = new URL(req.url, "http://x");
   if (url.pathname === "/healthz") { res.writeHead(200, { "content-type": "application/json" }); return res.end(JSON.stringify({ ok: true, version: VERSION })); }
   if (url.pathname === "/api/feedback" && req.method === "POST") return feedback(req, res);
+  // motokoutek.cz: dočasná stránka „Připravujeme“ (rozhodnutí z revize 12. 11. 2026), dokud e-shop neběží
+  if (host === "motokoutek.cz" || host === "www.motokoutek.cz") return send(req, res, path.join(__dirname, "motokoutek.html"));
   if (host.startsWith("www.")) return redirect(res, `https://${host.slice(4)}${req.url}`);
   for (const [prefix, upstream] of Object.entries(UPSTREAMS)) {
     if (url.pathname === prefix || url.pathname.startsWith(prefix + "/")) return proxy(req, res, upstream);
