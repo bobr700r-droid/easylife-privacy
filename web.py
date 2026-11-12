@@ -291,7 +291,7 @@ var tp=a&&a.checked?a.dataset.android:f.topic.value;if(tp)d.topic=tp;b.disabled=
 fetch(f.action,{method:"POST",credentials:"omit",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)}).then(function(r){return r.json().then(function(j){return r.ok&&j.ok})})
 .catch(function(){return false}).then(function(ok){m.hidden=false;m.textContent=ok?f.dataset.ok:f.dataset.err;if(ok)f.querySelector(".nl-row").hidden=true;else b.disabled=false})})})</script>"""
 COPYRIGHT = "© 2026 Lukáš Ochrana"
-VERSION = "1.9.37"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
+VERSION = "1.9.38"  # verze webu – zvýšit při každém nasazení (TOKENY.md, Verze)
 # Podmínky užití – licence (13. 10. 2026), ve všech 6 jazycích (sk/de/es/pl a zdravotní sekce doplněny při auditu Lékárničky).
 TERMS = {
   "cs": ("Podmínky užití", "Souhlas, licence, odpovědnost a autorská práva k aplikacím EasyForLife.", [
@@ -1739,6 +1739,7 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
         else:  # .eu zatím bez vlastního webu → anglická verze na .cz
             routes["redirects"].append({"host": "easyforlife.eu", "prefix": "/", "to": CZ + "/en/", "files_to": CZ + "/"})
         (DIST / "routes.json").write_text(json.dumps(routes, indent=1) + "\n", encoding="utf-8")
+        (DIST / "version.json").write_text(json.dumps({"version": VERSION}) + "\n", encoding="utf-8")  # /healthz serveru
         # docs/ (GitHub Pages): jen zásady soukromí a obrázky, ostatní stránky přesměrují na novou adresu
         for d in list(self.out.iterdir()):
             if d.is_dir() and d.name not in ("icons", "shots"):
