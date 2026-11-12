@@ -11,7 +11,9 @@ const TYPES = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=
 const COMPRESS = new Set([".html", ".css", ".js", ".json", ".xml", ".txt", ".svg"]);
 
 // Soubory s vlastní politikou: živý katalog appek (CORS, hodina cache).
-const SPECIAL = { "catalog.json": { "access-control-allow-origin": "*", "cache-control": "public, max-age=3600" } };
+// travel-facts.json: ověřená cestovní fakta pro appky (CORS, hodina cache, ETag → 304).
+const SPECIAL = { "catalog.json": { "access-control-allow-origin": "*", "cache-control": "public, max-age=3600" },
+  "travel-facts.json": { "access-control-allow-origin": "*", "cache-control": "public, max-age=3600, stale-while-revalidate=86400" } };
 
 // Bezpečnostní hlavičky (revize 12. 11. 2026): CSP bez 'unsafe-inline' pro skripty – vložené skripty stránky (generuje
 // web.py/build.py) se povolí otiskem SHA-256 spočítaným tady ze souboru, takže nic jiného (podvržený skript) neproběhne.

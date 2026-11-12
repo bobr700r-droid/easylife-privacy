@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-11-12",
+  "about": "Ověřená fakta pro cestovní appky EasyForLife (Směnárna, Cestovníček). Každá sekce má zdroj (source), datum zdroje (sourceDate), datum ověření (verifiedAt) a jistotu (confidence: high = oficiální zdroj, medium = aktuální průvodce citující tarify, low = jen zprávy cestovatelů, unverified = neověřeno – nezobrazovat jako jistotu). Hodnota null = nezjištěno.",
+  "countries": {
+    "TH": {
+      "name": "Thajsko",
+      "atm": {
+        "currency": "THB",
+        "byScheme": { "visa": 250, "mastercard": 350, "unionpay": 250 },
+        "range": { "min": 150, "max": 350 },
+        "banks": [
+          { "bank": "Krungsri", "visa": 250, "mastercard": 350, "unionpay": 250, "counter": 200, "effective": "2026-03-11" },
+          { "bank": "Kasikornbank", "visa": 250, "mastercard": 350, "unionpay": 250 },
+          { "bank": "SCB", "visa": 250, "mastercard": 350, "unionpay": 250 },
+          { "bank": "GSB", "visa": 250, "mastercard": 350, "unionpay": 250, "effective": "2026-03-25" },
+          { "bank": "UOB", "visa": 250, "mastercard": 250, "unionpay": 250, "counter": 200, "effective": "2025-10-01" },
+          { "bank": "Krungthai", "visa": 220, "mastercard": 220, "unionpay": 220, "note": "starší sazebník" },
+          { "bank": "ttb", "visa": 220, "mastercard": 220, "unionpay": 150, "effective": "2024-01-17", "note": "starší sazebník" },
+          { "bank": "Bangkok Bank", "visa": null, "mastercard": null, "note": "nezveřejněno – čti obrazovku bankomatu" },
+          { "bank": "Aeon", "visa": null, "mastercard": null, "note": "nezveřejněno – čti obrazovku bankomatu" }
+        ],
+        "cheapest": "Krungthai nebo ttb 220 THB; ttb s kartou UnionPay 150 THB; výběr na pultu pobočky (Krungsri, UOB) 200 THB.",
+        "note": "Poplatek účtuje bankomat navíc k poplatku tvé banky. Odmítni přepočet do korun (DCC) a vybírej v THB.",
+        "source": "https://chiangmaijao.com/money/thailand-atm-fees-foreign-cards/",
+        "sourceDate": "2026-10-13",
+        "verifiedAt": "2026-11-12",
+        "confidence": "medium"
+      },
+      "alcohol": {
+        "saleHours": [["11:00", "24:00"]],
+        "minAge": 20,
+        "exemptions": ["letiště", "hotely", "licencované podniky"],
+        "note": "Od 29. 5. 2026 bez odpolední pauzy. Data svátků bez prodeje alkoholu neověřena.",
+        "effective": "2026-05-29",
+        "source": "https://www.tatnews.org/2026/05/alcohol-sales-and-consumption-rules-updated-in-thailand-what-tourists-need-to-know/",
+        "source2": "https://www.mzv.gov.cz/jnp/cz/encyklopedie_statu/asie/thajsko/cestovani/other.html",
+        "sourceDate": "2026-05-29",
+        "verifiedAt": "2026-11-12",
+        "confidence": "high"
+      },
+      "entry": {
+        "visaFreeDays": 30,
+        "extendDays": 30,
+        "extendFee": 1900,
+        "extendFeeCurrency": "THB",
+        "effective": "2026-09-15",
+        "arrivalCard": "TDAC",
+        "arrivalCardNote": "Vyplnit online nejdřív 3 dny před příjezdem.",
+        "passportMonths": null,
+        "passportNote": "Platnost pasu 6 měsíců uvádějí jen neoficiální zdroje – neověřeno.",
+        "source": "https://www.tatnews.org/2026/09/thailand-introduces-new-30-day-and-15-day-visa-exemption-rules-from-15-september/",
+        "source2": "https://www.thai-visa-services.com/embassy-consulates/thai-embassy-prague",
+        "sourceDate": "2026-09-01",
+        "verifiedAt": "2026-11-12",
+        "confidence": "high"
+      },
+      "vat": {
+        "percent": 7,
+        "validUntil": "2027-09-30",
+        "note": "Snížená sazba 7 % prodloužena královským dekretem č. 807 (1. 10. 2026 – 30. 9. 2027).",
+        "source": "https://nationthailand.com/news/policy/40069105",
+        "source2": "https://www.austchamthailand.com/resources/news/hlb-cabinet-approves-1-year-extension-7-vat-rate-until-30-september-2027-hlb",
+        "sourceDate": "2026-08-20",
+        "verifiedAt": "2026-11-12",
+        "confidence": "high"
+      },
+      "tipping": {
+        "serviceChargePercent": 10,
+        "lowPercent": 0,
+        "highPercent": 10,
+        "note": "Spropitné nepovinné; v restauraci často 10 % servis na účtu („++“), jinak zaokrouhlit nebo 20–50 THB.",
+        "source": null,
+        "verifiedAt": "2026-11-12",
+        "confidence": "unverified"
+      },
+      "emergency": {
+        "czEmbassyHotline": "+420 222 420 222",
+        "note": "Nouzová linka MZV ČR. Místní čísla (policie, záchranka) zatím bez ověřeného zdroje.",
+        "source": "https://www.mzv.gov.cz/jnp/cz/encyklopedie_statu/asie/thajsko/cestovani/other.html",
+        "verifiedAt": "2026-11-12",
+        "confidence": "high"
+      }
+    },
+    "VN": {
+      "name": "Vietnam",
+      "atm": {
+        "currency": "VND",
+        "byScheme": null,
+        "range": { "min": 0, "max": 66000 },
+        "banks": [
+          { "bank": "VPBank", "visa": 0, "mastercard": 0, "note": "podle průvodců 2026 bez poplatku" },
+          { "bank": "Vietcombank", "visa": 50000, "mastercard": 50000, "note": "nejčastěji uváděno ~50 000" },
+          { "bank": "ACB", "visa": null, "mastercard": null, "note": "zdroje se rozcházejí (0 až 55 000)" },
+          { "bank": "TPBank", "visa": null, "mastercard": null, "percent": 3.3, "note": "~3,3 % z částky – vyhnout se" }
+        ],
+        "cheapest": "VPBank (podle průvodců bez poplatku).",
+        "note": "Banky sazby pro zahraniční karty nezveřejňují – vždy čti obrazovku bankomatu.",
+        "source": "https://www.vietnamtourism.com/en/using-atms-in-vietnam-fees-withdrawal-limits-and-the-banks",
+        "sourceDate": "2026",
+        "verifiedAt": "2026-11-12",
+        "confidence": "low"
+      }
+    },
+    "ID": {
+      "name": "Indonésie",
+      "atm": {
+        "currency": "IDR",
+        "byScheme": null,
+        "range": { "min": 0, "max": 100000 },
+        "banks": [
+          { "bank": "Mandiri", "visa": 100000, "mastercard": 100000, "unionpay": 0, "effective": null, "note": "oficiálně: 50 000 od 22. 2. 2026, 100 000 od 6. 11. (rok na stránce neuveden); JCB a UnionPay bez poplatku" },
+          { "bank": "BCA", "visa": 0, "mastercard": 0, "note": "jen průvodci, ne banka" },
+          { "bank": "BNI", "visa": 0, "mastercard": 0, "note": "jen průvodci, ne banka" }
+        ],
+        "cheapest": "BCA nebo BNI (podle průvodců bez poplatku); u Mandiri karta UnionPay/JCB.",
+        "note": "Mandiri ověřeno na webu banky, ostatní banky jen z průvodců.",
+        "source": "https://www.bankmandiri.co.id/en/pemberitahuan-nasabah-fitur-access-fee",
+        "source2": "https://www.you.co/sg/blog/indonesia-atm-withdrawal-guide/",
+        "sourceDate": "2026",
+        "verifiedAt": "2026-11-12",
+        "confidence": "medium"
+      }
+    },
+    "MY": {
+      "name": "Malajsie",
+      "atm": {
+        "currency": "MYR",
+        "byScheme": null,
+        "range": null,
+        "banks": [
+          { "bank": "Maybank", "visa": null, "mastercard": null, "note": "cestovatelé hlásí bez poplatku – neověřeno" },
+          { "bank": "CIMB", "visa": null, "mastercard": null, "note": "cestovatelé hlásí bez poplatku – neověřeno" }
+        ],
+        "cheapest": "Bankomaty velkých bank (ne samostatné bankomaty v turistických zónách).",
+        "note": "Banky sazbu pro zahraniční karty nezveřejňují; poplatek RM1 mezi bankami zrušen od 1. 7. 2026 (týká se místních karet). Neověřeno.",
+        "source": "https://malaysiajourneys.com/using-atms-in-malaysia-fees-locations-best-banks-for-tourists/",
+        "sourceDate": "2026",
+        "verifiedAt": "2026-11-12",
+        "confidence": "unverified"
+      }
+    },
+    "LK": {
+      "name": "Srí Lanka",
+      "atm": {
+        "currency": "LKR",
+        "byScheme": null,
+        "range": { "min": 0, "max": 1000 },
+        "banks": [],
+        "cheapest": null,
+        "note": "Sazebníky bank pro zahraniční karty nenalezeny; průvodci uvádějí 0 až 1 000 LKR podle banky. Neověřeno.",
+        "source": "https://atmfeesaver.com/cash-atms-in-sri-lanka/",
+        "sourceDate": "2026",
+        "verifiedAt": "2026-11-12",
+        "confidence": "unverified"
+      }
+    },
+    "PH": {
+      "name": "Filipíny",
+      "atm": {
+        "currency": "PHP",
+        "byScheme": null,
+        "range": { "min": 0, "max": 300 },
+        "banks": [
+          { "bank": "BDO", "visa": 250, "mastercard": 250, "note": "více průvodců 2026, ne banka" },
+          { "bank": "BPI", "visa": null, "mastercard": null, "note": "3,5 USD nebo 1,75 % – zdroje nejasné" },
+          { "bank": "HSBC", "visa": 0, "mastercard": 0, "note": "jen několik bankomatů v Manile a Cebu" }
+        ],
+        "cheapest": "HSBC (bez poplatku, málo bankomatů).",
+        "note": "Jen z průvodců a zpráv cestovatelů – čti obrazovku bankomatu.",
+        "source": "https://www.you.co/sg/blog/philippines-atm-withdrawal-guide/",
+        "source2": "https://wise.com/gb/blog/atms-in-the-philippines",
+        "sourceDate": "2026",
+        "verifiedAt": "2026-11-12",
+        "confidence": "low"
+      }
+    }
+  }
+}

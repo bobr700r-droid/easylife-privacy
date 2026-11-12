@@ -19,6 +19,7 @@ ROOT = pathlib.Path(os.environ.get("EASYLIFE_ROOT") or HERE.parent)  # EasyLife 
 CATALOG = pathlib.Path(os.environ.get("EASYLIFE_CATALOG") or ROOT / "EasyLife" / "catalog.json")
 CONTENT = HERE / "site" / "apps"
 VERSIONS = HERE / "site" / "versions.json"  # {"apps": {bundleID: {version, build, date, notes, appStoreId}}} -> /versions.json
+TRAVEL_FACTS = HERE / "site" / "travel-facts.json"  # ověřená cestovní fakta (poplatky bankomatů, vstup, alkohol…) pro Směnárnu a Cestovníček
 NEWS = HERE / "site" / "news.json"  # Co je nového – ručně doplňovat při každé nové verzi appky
 CZ, EU = "https://easyforlife.cz", "https://easyforlife.eu"
 FLY_IPV4 = "66.241.124.47"  # Fly app easyforlife-redirect
@@ -1718,6 +1719,8 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
             # Aktuální verze appek pro Nastavení → Aktualizace (tools/updates/zapsat-verzi.sh je zapisuje při vydání)
             if VERSIONS.exists():
                 shutil.copy2(VERSIONS, root / "versions.json")
+            if TRAVEL_FACTS.exists():  # /travel-facts.json – appky cachují, offline poslední známé + vestavěná záloha
+                shutil.copy2(TRAVEL_FACTS, root / "travel-facts.json")
             urls[site] += [base + p for p in self.privacy.values()]
             def entry(u):
                 if isinstance(u, str):
