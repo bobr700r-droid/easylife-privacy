@@ -96,8 +96,8 @@
    "repo": "nas-kino-releases",
    "file": "NASKino",
    "updates": "sparkle",
-   "version": "1.8.2",
-   "size": 50735899,
+   "version": "1.10.0",
+   "size": 51398676,
    "min": "15.0",
    "arch": "arm64",
    "desc": {
@@ -341,6 +341,22 @@
     "de": "Remote-Desktop mit KI-Assistent für deine eigenen Computer. Auf dem gesteuerten Mac läuft Dosah hostitel.",
     "es": "Escritorio remoto con asistente de IA para tus propios ordenadores. En el Mac que quieras controlar, abre Dosah hostitel.",
     "pl": "Pulpit zdalny z asystentem AI dla Twoich własnych komputerów. Na sterowanym Macu uruchom Dosah hostitel."
+   }
+  },
+  {
+   "id": "stahovacek",
+   "name": "Stahováček",
+   "platform": "mac",
+   "repo": "stahovacek-releases",
+   "file": "Stahovacek",
+   "updates": "sparkle",
+   "version": "1.1.0",
+   "size": 4383344,
+   "min": "15.0",
+   "arch": "arm64",
+   "desc": {
+    "cs": "Fronta odkazů na videa ke stažení – vlastní videa z více účtů, libovolné weby přes yt-dlp, titulky, výběr kvality a odběry kanálů.",
+    "en": "A download queue for video links – your own videos from several accounts, any site via yt-dlp, subtitles, quality choice and channel subscriptions."
    }
   }
  ]
