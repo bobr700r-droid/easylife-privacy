@@ -1,0 +1,67 @@
+{
+ "status": "dev",
+ "description": {
+  "cs": [
+   "Albumník navrhne svatební album nebo fotoknihu z vybraných fotek za minutu – podle příběhu dne, bez ořezaných tváří a fotek přes hřbet – a vyexportuje ho přesně podle specifikace libovolné laboratoře."
+  ],
+  "en": [
+   "Albumník designs a wedding album or photo book from your selected photos in a minute – following the story of the day, with no cropped faces or photos across the gutter – and exports it exactly to the specification of any print lab."
+  ],
+  "sk": [
+   "Albumník navrhne svadobný album alebo fotoknihu z vybraných fotiek za minútu – podľa príbehu dňa, bez orezaných tvárí a fotiek cez chrbát – a vyexportuje ho presne podľa špecifikácie ľubovoľného laboratória."
+  ],
+  "de": [
+   "Albumník gestaltet aus deinen ausgewählten Fotos in einer Minute ein Hochzeitsalbum oder Fotobuch – nach der Geschichte des Tages, ohne angeschnittene Gesichter oder Fotos über den Falz – und exportiert es exakt nach der Spezifikation jedes Labors."
+  ],
+  "es": [
+   "Albumník diseña un álbum de boda o fotolibro a partir de tus fotos seleccionadas en un minuto, siguiendo la historia del día, sin caras recortadas ni fotos sobre el pliegue, y lo exporta exactamente según la especificación de cualquier laboratorio."
+  ],
+  "pl": [
+   "Albumník w minutę zaprojektuje album ślubny lub fotoksiążkę z wybranych zdjęć – zgodnie z historią dnia, bez przyciętych twarzy i zdjęć na grzbiecie – i wyeksportuje go dokładnie według specyfikacji dowolnego laboratorium."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Automatický návrh podle momentů dne",
+   "12 variant rozložení, výměna tažením",
+   "Profil libovolné laboratoře (mm, palce, DPI, ICC)",
+   "Export JPG, TIFF a PDF se spadávkou",
+   "Schválení klientem přes FotoDesk"
+  ],
+  "en": [
+   "Automatic layout following the day's moments",
+   "12 layout variants, drag to swap",
+   "Any lab profile (mm, inches, DPI, ICC)",
+   "JPG, TIFF and PDF export with bleed",
+   "Client approval via FotoDesk"
+  ],
+  "sk": [
+   "Automatický návrh podľa momentov dňa",
+   "12 variantov rozloženia, výmena ťahaním",
+   "Profil ľubovoľného laboratória (mm, palce, DPI, ICC)",
+   "Export JPG, TIFF a PDF so spadávkou",
+   "Schválenie klientom cez FotoDesk"
+  ],
+  "de": [
+   "Automatisches Layout nach den Momenten des Tages",
+   "12 Layoutvarianten, Tauschen per Ziehen",
+   "Profil für jedes Labor (mm, Zoll, DPI, ICC)",
+   "Export als JPG, TIFF und PDF mit Beschnitt",
+   "Kundenfreigabe über FotoDesk"
+  ],
+  "es": [
+   "Maquetación automática según los momentos del día",
+   "12 variantes de diseño, intercambio arrastrando",
+   "Perfil de cualquier laboratorio (mm, pulgadas, DPI, ICC)",
+   "Exportación JPG, TIFF y PDF con sangrado",
+   "Aprobación del cliente con FotoDesk"
+  ],
+  "pl": [
+   "Automatyczny projekt według momentów dnia",
+   "12 wariantów układu, zamiana przeciąganiem",
+   "Profil dowolnego laboratorium (mm, cale, DPI, ICC)",
+   "Eksport JPG, TIFF i PDF ze spadem",
+   "Akceptacja klienta przez FotoDesk"
+  ]
+ }
+}
