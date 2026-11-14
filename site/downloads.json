@@ -358,6 +358,22 @@
     "cs": "Fronta odkazů na videa ke stažení – vlastní videa z více účtů, libovolné weby přes yt-dlp, titulky, výběr kvality a odběry kanálů.",
     "en": "A download queue for video links – your own videos from several accounts, any site via yt-dlp, subtitles, quality choice and channel subscriptions."
    }
+  },
+  {
+   "id": "navodnik",
+   "name": "Návodník",
+   "platform": "mac",
+   "repo": "navodnik-releases",
+   "file": "Navodnik",
+   "updates": "sparkle",
+   "version": "0.2.0",
+   "size": 6310702,
+   "min": "15.0",
+   "arch": "universal",
+   "desc": {
+    "cs": "Nahraje postup na obrazovce a sám z něj udělá návod s kroky, zvýrazněnými kliky a skrytými citlivými údaji – export do PDF, HTML, Wordu i videa.",
+    "en": "Records what you do on screen and turns it into a step-by-step guide with highlighted clicks and hidden sensitive data – export to PDF, HTML, Word or video."
+   }
   }
  ]
 }
