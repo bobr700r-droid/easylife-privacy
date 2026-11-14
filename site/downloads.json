@@ -374,6 +374,22 @@
     "cs": "Nahraje postup na obrazovce a sám z něj udělá návod s kroky, zvýrazněnými kliky a skrytými citlivými údaji – export do PDF, HTML, Wordu i videa.",
     "en": "Records what you do on screen and turns it into a step-by-step guide with highlighted clicks and hidden sensitive data – export to PDF, HTML, Word or video."
    }
+  },
+  {
+   "id": "casomira",
+   "name": "Časomíra",
+   "platform": "mac",
+   "repo": "casomira-releases",
+   "file": "Casomira",
+   "updates": "sparkle",
+   "version": "1.0.0",
+   "size": 7245617,
+   "min": "15.0",
+   "arch": "universal",
+   "desc": {
+    "cs": "Měření času na zakázkách – start a stop jedním klikem, záznamy a přehled odpracovaných hodin.",
+    "en": "Time tracking for jobs – start and stop with one click, entries and a summary of hours worked."
+   }
   }
  ]
 }
