@@ -382,8 +382,8 @@
    "repo": "casomira-releases",
    "file": "Casomira",
    "updates": "sparkle",
-   "version": "1.0.0",
-   "size": 7245617,
+   "version": "1.0.1",
+   "size": 7267482,
    "min": "15.0",
    "arch": "universal",
    "desc": {
