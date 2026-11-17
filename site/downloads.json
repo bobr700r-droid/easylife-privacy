@@ -116,8 +116,8 @@
    "repo": "apppad-releases",
    "file": "AppPad",
    "updates": "sparkle",
-   "version": "1.2.8",
-   "size": 4972843,
+   "version": "1.4.1",
+   "size": 5056193,
    "min": "14.0",
    "arch": "arm64",
    "desc": {
