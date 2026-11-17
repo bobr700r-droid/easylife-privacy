@@ -366,8 +366,8 @@
    "repo": "navodnik-releases",
    "file": "Navodnik",
    "updates": "sparkle",
-   "version": "0.3.0",
-   "size": 6781613,
+   "version": "0.3.2",
+   "size": 6793781,
    "min": "15.0",
    "arch": "universal",
    "desc": {
@@ -382,8 +382,8 @@
    "repo": "casomira-releases",
    "file": "Casomira",
    "updates": "sparkle",
-   "version": "1.0.1",
-   "size": 7267482,
+   "version": "1.0.2",
+   "size": 7284845,
    "min": "15.0",
    "arch": "universal",
    "desc": {
