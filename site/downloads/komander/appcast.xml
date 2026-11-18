@@ -6,13 +6,18 @@
     <description>Aktualizace Komandéru</description>
     <language>cs</language>
     <item>
-      <title>Komandér 0.16.3</title>
-      <pubDate>Thu, 05 Nov 2026 17:13:48 +0100</pubDate>
-      <sparkle:version>202611051652</sparkle:version>
-      <sparkle:shortVersionString>0.16.3</sparkle:shortVersionString>
+      <title>Komandér 0.19.0</title>
+      <pubDate>Thu, 19 Nov 2026 01:32:43 +0700</pubDate>
+      <sparkle:version>202611190103</sparkle:version>
+      <sparkle:shortVersionString>0.19.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<p>Opravy a vylepšení.</p>]]></description>
-      <enclosure url="https://easyforlife.cz/komander/Komander-0.16.3.zip" sparkle:edSignature="Ru5vtzAS17tQ659iLzJbyO7w3TbDvCa5clY6DkfFyAtGVQ4zNZ4h0Xmann9Nae2gNFhOLT1HD6pM1c54DK4+Bw==" length="9534485" type="application/zip"/>
+      <description><![CDATA[<h3>Komandér 0.19.0</h3>
+<ul>
+<li><b>Hodinky, telefon, navigace a fotoaparát jako úložiště:</b> zařízení připojená kabelem se objeví v bočním panelu v sekci Zařízení – hodinky Garmin, telefony Android a navigace přes MTP, fotoaparáty a iPhone přes PTP. Procházení, kopírování oběma směry (F5, přetažení), mazání, nová složka, průběh a ⏏ Odpojit. Bez připojeného zařízení v panelu nic navíc není. OpenMTP ani Android File Transfer už nepotřebujete.</li>
+<li><b>Oblíbené a nedávné (⌃D, hvězdička) už nezamrzne:</b> dřív Komandér u každé navštívené složky ověřoval, jestli existuje – na síťovém disku, který zrovna neodpovídá (NAS mimo domov), to trvalo desítky sekund. Teď se síťové cesty neověřují a otevření oblíbené složky na nedostupném NASu řekne, že disk neodpovídá.</li>
+<li><b>Analýza disku sedí s obsazeným místem:</b> výchozí pohled je celý Macintosh HD a graf ukáže vše – Domů, Aplikace, simulátory Xcode, ostatní mimo Domů, systémové svazky macOS, virtuální paměť, uvolnitelné místo i to, co bez povolení nejde přečíst. Součet = obsazeno. Pohled Domů řekne, jakou část disku tvoří. Ve verzi z TestFlightu stačí jednou povolit Macintosh HD.</li>
+</ul>]]></description>
+      <enclosure url="https://easyforlife.cz/komander/Komander-0.19.0.zip" sparkle:edSignature="PToXROS7wzL2nPzahbKaFrUPUxcQtNFaIypUujbmefg3d+rvYUSO8mJdihgRX8qb4AttOfPT3rBF6N1mbqYsDw==" length="10355618" type="application/zip"/>
     </item>
   </channel>
 </rss>

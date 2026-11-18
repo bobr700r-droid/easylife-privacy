@@ -283,13 +283,13 @@
    "version": "1.11.0"
   },
   "cz.ochrana.komander": {
-   "build": "202611051840",
-   "date": "2026-11-05",
+   "build": "202611190040",
+   "date": "2026-11-19",
    "notes": {
     "cs": "Verze z TestFlightu",
     "en": "TestFlight build"
    },
-   "version": "0.16.4"
+   "version": "0.19.0"
   },
   "cz.ochrana.kucharka": {
    "appStoreId": "6821606709",

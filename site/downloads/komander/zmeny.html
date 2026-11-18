@@ -1,10 +1,6 @@
-<h3>Komandér 0.16.0</h3>
+<h3>Komandér 0.19.0</h3>
 <ul>
-<li><b>Mazání bez leknutí:</b> kurzor při mazání neodskočí na jiný řádek – mazané položky jsou v panelu i v dotazu červeně zvýrazněné, po smazání kurzor přejde na nejbližší další položku.</li>
-<li><b>Mazání na NASu:</b> průběh už neukazuje skryté soubory (._*, .DS_Store) a složky, ve kterých NAS drží své skryté náhledy (@eaDir), už nekončí chybou – s SSH se dosmažou přímo na NASu.</li>
-<li><b>Rychlý přesun na NASu:</b> víc souborů v rámci jednoho disku NASu (i USB disku na NASu) a kopie na NASu jdou rovnou na serveru jedním příkazem – 200 souborů za sekundy místo 44 s. Bez SSH se přejmenovává souběžně.</li>
-<li><b>Google Disk s průběhem:</b> velké soubory „jen online“ se nejdřív stáhnou se skutečným průběhem (stažené bajty, rychlost, zbývá) – už žádných 0 %.</li>
-<li><b>„Už v cíli je“:</b> dotaz vysvětlí, proč soubor v cíli nevidíte (skrytý, jiný zápis jména, nedokončená kopie) a nabídne ukázat skryté; staré hlášení síťového disku se už za kolizi nepovažuje.</li>
-<li><b>Přetahování na složku:</b> puštění na řádek složky = do té složky (zvýrazní se jen ona), na volnou plochu = do aktuální složky panelu; pružné otevření složky po podržení.</li>
-<li><b>Vlastní F-lišta:</b> Nastavení → Klávesy → F-lišta dole: tlačítka, pořadí a F-klávesy.</li>
+<li><b>Hodinky, telefon, navigace a fotoaparát jako úložiště:</b> zařízení připojená kabelem se objeví v bočním panelu v sekci Zařízení – hodinky Garmin, telefony Android a navigace přes MTP, fotoaparáty a iPhone přes PTP. Procházení, kopírování oběma směry (F5, přetažení), mazání, nová složka, průběh a ⏏ Odpojit. Bez připojeného zařízení v panelu nic navíc není. OpenMTP ani Android File Transfer už nepotřebujete.</li>
+<li><b>Oblíbené a nedávné (⌃D, hvězdička) už nezamrzne:</b> dřív Komandér u každé navštívené složky ověřoval, jestli existuje – na síťovém disku, který zrovna neodpovídá (NAS mimo domov), to trvalo desítky sekund. Teď se síťové cesty neověřují a otevření oblíbené složky na nedostupném NASu řekne, že disk neodpovídá.</li>
+<li><b>Analýza disku sedí s obsazeným místem:</b> výchozí pohled je celý Macintosh HD a graf ukáže vše – Domů, Aplikace, simulátory Xcode, ostatní mimo Domů, systémové svazky macOS, virtuální paměť, uvolnitelné místo i to, co bez povolení nejde přečíst. Součet = obsazeno. Pohled Domů řekne, jakou část disku tvoří. Ve verzi z TestFlightu stačí jednou povolit Macintosh HD.</li>
 </ul>
