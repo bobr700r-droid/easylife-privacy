@@ -366,8 +366,8 @@
    "repo": "navodnik-releases",
    "file": "Navodnik",
    "updates": "sparkle",
-   "version": "0.3.2",
-   "size": 6793781,
+   "version": "0.4.0",
+   "size": 7661143,
    "min": "15.0",
    "arch": "universal",
    "desc": {
