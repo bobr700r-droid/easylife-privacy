@@ -1,0 +1,67 @@
+{
+ "status": "dev",
+ "description": {
+  "cs": [
+   "Plocha udělá z plochy telefonu jeden panel. Poskládáš hodiny, počasí, kalendář, události a vlastní tlačítka, appka návrh rozřeže na widgety, které na sebe přesně navazují, a vyrobí k nim tapetu."
+  ],
+  "en": [
+   "Plocha turns your Home Screen into a single panel. Arrange a clock, weather, calendar, events and your own buttons; the app slices the design into widgets that line up exactly and generates a matching wallpaper."
+  ],
+  "sk": [
+   "Plocha urobí z plochy telefónu jeden panel. Poskladáš hodiny, počasie, kalendár, udalosti a vlastné tlačidlá, appka návrh rozreže na widgety, ktoré na seba presne nadväzujú, a vyrobí k nim tapetu."
+  ],
+  "de": [
+   "Plocha macht aus deinem Home-Bildschirm ein einziges Panel. Ordne Uhr, Wetter, Kalender, Termine und eigene Tasten an; die App teilt den Entwurf in Widgets, die exakt aneinander anschließen, und erzeugt das passende Hintergrundbild."
+  ],
+  "es": [
+   "Plocha convierte tu pantalla de inicio en un solo panel. Coloca reloj, tiempo, calendario, eventos y tus propios botones; la app divide el diseño en widgets que encajan con exactitud y genera el fondo a juego."
+  ],
+  "pl": [
+   "Plocha zamienia ekran początkowy w jeden panel. Ułóż zegar, pogodę, kalendarz, wydarzenia i własne przyciski, a aplikacja potnie projekt na widżety, które dokładnie do siebie pasują, i przygotuje do nich tapetę."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Návrhář s mřížkou a vodítky",
+   "Widgety všech velikostí i na zamčenou obrazovku",
+   "Generátor tapet přesně pro tvé zařízení",
+   "Tlačítka pro zkratky, appky a skenování",
+   "iPhone, iPad i Mac"
+  ],
+  "en": [
+   "Designer with grid and guides",
+   "Widgets in every size, Lock Screen included",
+   "Wallpaper generator made for your device",
+   "Buttons for shortcuts, apps and scanning",
+   "iPhone, iPad and Mac"
+  ],
+  "sk": [
+   "Návrhár s mriežkou a vodidlami",
+   "Widgety všetkých veľkostí aj na zamknutú obrazovku",
+   "Generátor tapiet presne pre tvoje zariadenie",
+   "Tlačidlá pre skratky, appky a skenovanie",
+   "iPhone, iPad aj Mac"
+  ],
+  "de": [
+   "Designer mit Raster und Hilfslinien",
+   "Widgets in allen Größen, auch für den Sperrbildschirm",
+   "Hintergrundgenerator passend für dein Gerät",
+   "Tasten für Kurzbefehle, Apps und Scannen",
+   "iPhone, iPad und Mac"
+  ],
+  "es": [
+   "Diseñador con cuadrícula y guías",
+   "Widgets de todos los tamaños, también en la pantalla bloqueada",
+   "Generador de fondos a medida de tu dispositivo",
+   "Botones para atajos, apps y escaneo",
+   "iPhone, iPad y Mac"
+  ],
+  "pl": [
+   "Projektant z siatką i prowadnicami",
+   "Widżety w każdym rozmiarze, także na ekran blokady",
+   "Generator tapet dokładnie pod twoje urządzenie",
+   "Przyciski do skrótów, aplikacji i skanowania",
+   "iPhone, iPad i Mac"
+  ]
+ }
+}
