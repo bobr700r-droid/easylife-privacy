@@ -1,0 +1,67 @@
+{
+ "status": "dev",
+ "description": {
+  "cs": [
+   "Hledáček je profesionální fotoaparát s ručním ovládáním, vzhledy a asistentem focení. Radí s kompozicí, pomáhá se zaostřením a snímky posílá rovnou do FotoVýběru."
+  ],
+  "en": [
+   "Hledáček is a professional camera with manual controls, looks and a shooting assistant. It advises on composition, helps with focus and sends photos straight to FotoVýběr."
+  ],
+  "sk": [
+   "Hledáček je profesionálny fotoaparát s ručným ovládaním, vzhľadmi a asistentom fotenia. Radí s kompozíciou, pomáha so zaostrením a snímky posiela rovno do FotoVýberu."
+  ],
+  "de": [
+   "Hledáček ist eine professionelle Kamera mit manueller Steuerung, Looks und Foto-Assistent. Er gibt Tipps zur Komposition, hilft beim Fokus und sendet Fotos direkt an FotoVýběr."
+  ],
+  "es": [
+   "Hledáček es una cámara profesional con control manual, estilos y asistente de fotografía. Aconseja sobre composición, ayuda a enfocar y envía las fotos directamente a FotoVýběr."
+  ],
+  "pl": [
+   "Hledáček to profesjonalny aparat z ręczną obsługą, stylami i asystentem fotografowania. Doradza w kompozycji, pomaga w ostrzeniu i wysyła zdjęcia prosto do FotoVýběru."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Ruční ovládání a živý náhled",
+   "Vzhledy a vlastní předvolby přes iCloud",
+   "Rady ke kompozici a spoušť hlasem",
+   "Vzdálená spoušť na hodinkách",
+   "Propojení s FotoVýběrem, FotoPlánem a FotoTipem"
+  ],
+  "en": [
+   "Manual controls and live preview",
+   "Looks and your own presets via iCloud",
+   "Composition tips and voice shutter",
+   "Remote shutter on the watch",
+   "Links with FotoVýběr, FotoPlán and FotoTip"
+  ],
+  "sk": [
+   "Ručné ovládanie a živý náhľad",
+   "Vzhľady a vlastné predvoľby cez iCloud",
+   "Rady ku kompozícii a spúšť hlasom",
+   "Diaľková spúšť na hodinkách",
+   "Prepojenie s FotoVýberom, FotoPlánom a FotoTipom"
+  ],
+  "de": [
+   "Manuelle Steuerung und Live-Vorschau",
+   "Looks und eigene Voreinstellungen über iCloud",
+   "Kompositionstipps und Sprachauslöser",
+   "Fernauslöser auf der Watch",
+   "Verbindung mit FotoVýběr, FotoPlán und FotoTip"
+  ],
+  "es": [
+   "Control manual y vista previa en vivo",
+   "Estilos y ajustes propios vía iCloud",
+   "Consejos de composición y disparo por voz",
+   "Disparador remoto en el reloj",
+   "Conexión con FotoVýběr, FotoPlán y FotoTip"
+  ],
+  "pl": [
+   "Ręczna obsługa i podgląd na żywo",
+   "Style i własne ustawienia przez iCloud",
+   "Porady kompozycji i spust głosem",
+   "Zdalna migawka na zegarku",
+   "Połączenie z FotoVýběr, FotoPlán i FotoTip"
+  ]
+ }
+}

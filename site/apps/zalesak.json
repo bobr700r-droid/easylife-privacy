@@ -1,0 +1,67 @@
+{
+ "status": "dev",
+ "description": {
+  "cs": [
+   "Zálesák je offline průvodce přírodou: uzly, oheň, přístřešky a první pomoc. Vše máš po ruce i bez signálu."
+  ],
+  "en": [
+   "Zálesák is an offline guide to the outdoors: knots, fire, shelters and first aid. Everything is at hand even without a signal."
+  ],
+  "sk": [
+   "Zálesák je offline sprievodca prírodou: uzly, oheň, prístrešky a prvá pomoc. Všetko máš po ruke aj bez signálu."
+  ],
+  "de": [
+   "Zálesák ist ein Offline-Begleiter für die Natur: Knoten, Feuer, Unterkünfte und Erste Hilfe. Alles ist auch ohne Empfang griffbereit."
+  ],
+  "es": [
+   "Zálesák es una guía offline de la naturaleza: nudos, fuego, refugios y primeros auxilios. Todo a mano, incluso sin cobertura."
+  ],
+  "pl": [
+   "Zálesák to offline'owy przewodnik po naturze: węzły, ogień, schronienia i pierwsza pomoc. Wszystko pod ręką, nawet bez zasięgu."
+  ]
+ },
+ "features": {
+  "cs": [
+   "Uzly krok za krokem",
+   "Oheň, přístřešky a orientace",
+   "První pomoc a kontrolní seznamy",
+   "Uzel dne ve widgetu a na hodinkách",
+   "Funguje celý offline"
+  ],
+  "en": [
+   "Knots step by step",
+   "Fire, shelters and navigation",
+   "First aid and checklists",
+   "Knot of the day in a widget and on the watch",
+   "Works fully offline"
+  ],
+  "sk": [
+   "Uzly krok za krokom",
+   "Oheň, prístrešky a orientácia",
+   "Prvá pomoc a kontrolné zoznamy",
+   "Uzol dňa vo widgete a na hodinkách",
+   "Funguje celý offline"
+  ],
+  "de": [
+   "Knoten Schritt für Schritt",
+   "Feuer, Unterkünfte und Orientierung",
+   "Erste Hilfe und Checklisten",
+   "Knoten des Tages im Widget und auf der Watch",
+   "Funktioniert komplett offline"
+  ],
+  "es": [
+   "Nudos paso a paso",
+   "Fuego, refugios y orientación",
+   "Primeros auxilios y listas de control",
+   "Nudo del día en el widget y en el reloj",
+   "Funciona totalmente offline"
+  ],
+  "pl": [
+   "Węzły krok po kroku",
+   "Ogień, schronienia i orientacja",
+   "Pierwsza pomoc i listy kontrolne",
+   "Węzeł dnia w widżecie i na zegarku",
+   "Działa w pełni offline"
+  ]
+ }
+}
