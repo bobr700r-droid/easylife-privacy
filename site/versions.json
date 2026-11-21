@@ -198,13 +198,22 @@
    "version": "0.5.3"
   },
   "cz.ochrana.fotovyber.ios": {
-   "build": "202611120411",
-   "date": "2026-11-12",
+   "build": "202611211723",
+   "date": "2026-11-21",
    "notes": {
     "cs": "Verze z TestFlightu",
     "en": "TestFlight build"
    },
-   "version": "0.21.0"
+   "version": "0.15.1"
+  },
+  "cz.ochrana.fotovyber.ios@mac": {
+   "build": "202611211728",
+   "date": "2026-11-21",
+   "notes": {
+    "cs": "Verze z TestFlightu",
+    "en": "TestFlight build"
+   },
+   "version": "0.37.1"
   },
   "cz.ochrana.garaz": {
    "appStoreId": "6821429519",
