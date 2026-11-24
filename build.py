@@ -48,29 +48,30 @@ APPS = [
         "In Settings → Advanced the hub can be connected to a personal Mainhub server run by the user themselves. The connection is off by default and <b>nothing is sent unless you turn it on</b>. Once connected (address and token, or a QR code from your own server) the hub sends only to that server's address the summaries EasyForLife apps left for it (deadlines, payments, reminders, the shopping list, monthly costs) – and only those that changed. The address and access token are stored in the device Keychain. You can turn sending off or disconnect at any time; you manage the data on your own server.")),
     ]),
   dict(slug="smenarna", name="Směnárna", mark="Kč", color="#1993f6",
+    updated=("25. listopadu 2026", "November 25, 2026"),
     tagline=("Převodník měn podle kurzů ČNB s kalkulačkou, mincovníkem a výdaji z cest.",
              "Currency converter with Czech National Bank rates, calculator, cash counter and trip expenses."),
-    summary=("Směnárna nesbírá žádné osobní údaje. Nemá účty, reklamy ani analytiku. Vše, co zapíšeš, zůstává v tvém zařízení a ve tvém iCloudu – my k tomu přístup nemáme.",
-             "Směnárna collects no personal data. There are no accounts, ads or analytics. Everything you enter stays on your device and in your iCloud – we have no access to it."),
+    summary=("Směnárna nesbírá žádné osobní údaje. Nemá účty, reklamy, analytiku ani sledování. Vše, co zapíšeš, zůstává v tvém zařízení a ve tvém iCloudu – my k tomu přístup nemáme.",
+             "Směnárna collects no personal data. There are no accounts, ads, analytics or tracking. Everything you enter stays on your device and in your iCloud – we have no access to it."),
+    common_crash=(("Hlášení o pádech", "Crash reports"),
+      ("Aplikace sama žádná hlášení o pádech neodesílá. Pokud to máš povolené v nastavení zařízení (Sdílet analytiku s vývojáři), může nám Apple předat anonymní hlášení o pádu podle svých zásad.",
+       "The app itself sends no crash reports. If you allow it in your device settings (Share With App Developers), Apple may pass on an anonymous crash report under its own policy.")),
     sections=[
       (("Co aplikace ukládá", "What the app stores"),
-       ("Oblíbené měny, výpočty, pokladny v mincovníku, cesty a výdaje, upozornění na kurz a poslední stažené kurzy. Data jsou v iPhonu (a v Apple Watch, pokud aplikaci používáš i tam). Když je v Nastavení zapnutá synchronizace přes iCloud (výchozí), ukládají se oblíbené měny, poplatek, historie výpočtů, pokladny, upozornění a cesty také do tvého iCloudu (Apple), aby se přenesly na tvoje další zařízení; synchronizaci můžeš vypnout. Rozepsaná částka a odemčení pokladen zůstávají jen v zařízení.",
-        "Favourite currencies, calculations, cash-counter wallets, trips and expenses, rate alerts and the latest downloaded rates. Data stays on your iPhone (and Apple Watch if you use the app there). With iCloud sync turned on in Settings (the default), favourite currencies, the fee, calculation history, wallets, alerts and trips are also stored in your iCloud (Apple) so they reach your other devices; you can turn sync off. The amount being typed and unlocked wallets stay on the device only.")),
-      (("Odkazy do jiných aplikací", "Links to other apps"),
-       ("Tlačítka „Rozdělit ve Vyrovnáno“, „Poslat do Rozpočtu“, „Poslat do Fakturantu“ a „Plán cesty v Cestovníčku“ předají druhé aplikaci jen částku, měnu, kategorii, popis a datum výdaje (u Cestovníčku název a začátek cesty) – a jen když na ně sám klepneš. Druhá aplikace nic neuloží bez tvého potvrzení.",
-        "The “Split in Vyrovnáno”, “Send to Rozpočet”, “Send to Fakturant” and “Trip plan in Cestovníček” buttons pass only the amount, currency, category, description and date of the expense (for Cestovníček the trip name and start date) to the other app – and only when you tap them. The other app saves nothing without your confirmation.")),
-      (("Přehled pro EasyForLife Hub", "Overview for EasyForLife Hub"),
-       ("Pokud je zapnutý vypínač „Sdílet přehled s EasyForLife Hub“ (výchozí), aplikace ukládá do sdíleného úložiště aplikací EasyForLife v tomto zařízení jen název aktivní cesty se zbývajícím rozpočtem a seznam hlídaných kurzů. Jednotlivé výdaje se nesdílí a nic se neodesílá mimo zařízení.",
-        "If “Share overview with EasyForLife Hub” is on (default), the app saves only the name of the active trip with its remaining budget and the list of watched rates to the shared EasyForLife app storage on this device. Individual expenses are not shared and nothing leaves the device.")),
-      (("Cenovka a Živá aktivita", "Price tag and Live Activity"),
-       ("Cenovka používá fotoaparát k rozpoznání ceny na cenovce. Rozpoznávání textu běží přímo v zařízení (Apple VisionKit), obraz se neukládá ani neodesílá. Živá aktivita cesty na zamčené obrazovce ukazuje zbývající rozpočet a útratu a běží jen v zařízení.",
-        "The price tag feature uses the camera to recognise a price on a tag. Text recognition runs on-device (Apple VisionKit); the image is neither saved nor sent. The trip Live Activity on the Lock Screen shows the remaining budget and spending and runs on the device only.")),
+       ("Oblíbené měny, výpočty, pokladny v mincovníku, cesty a výdaje, upozornění na kurz, tvoje karty pro porovnání poplatků (jen název a poplatky, nikdy číslo karty) a poslední stažené kurzy. Data jsou v iPhonu nebo iPadu (a v Apple Watch, pokud aplikaci používáš i tam). Když je v Nastavení zapnutá synchronizace přes iCloud (výchozí), ukládají se také do tvého iCloudu (Apple), aby se přenesly na tvoje další zařízení; synchronizaci můžeš vypnout. Rozepsaná částka a odemčení pokladen zůstávají jen v zařízení.",
+        "Favourite currencies, calculations, cash-counter wallets, trips and expenses, rate alerts, your cards for fee comparison (name and fees only, never a card number) and the latest downloaded rates. Data stays on your iPhone or iPad (and Apple Watch if you use the app there). With iCloud sync turned on in Settings (the default), it is also stored in your iCloud (Apple) so it reaches your other devices; you can turn sync off. The amount being typed and unlocked wallets stay on the device only.")),
       (("Síť", "Network"),
-       ("Aplikace stahuje veřejné kurzy z rozhraní České národní banky (<code>api.cnb.cz</code>). Požadavky neobsahují žádné údaje o tobě. Občas (nejvýš jednou za 6 hodin) stahuje veřejný seznam aplikací EasyForLife z <code>easyforlife.cz</code>, aby znala nové aplikace a jejich propojení; nic se při tom neodesílá.",
-        "The app downloads public exchange rates from the Czech National Bank API (<code>api.cnb.cz</code>). Requests contain no information about you. Occasionally (at most once every 6 hours) it downloads the public EasyForLife app list from <code>easyforlife.cz</code> so it knows about new apps and their links; nothing is sent.")),
+       ("Aplikace stahuje veřejné kurzy z rozhraní České národní banky (<code>api.cnb.cz</code>) a veřejný přehled cestovních údajů (např. poplatky bankomatů) z <code>easyforlife.cz</code>. Požadavky neobsahují žádné údaje o tobě ani o tom, co v aplikaci máš.",
+        "The app downloads public exchange rates from the Czech National Bank API (<code>api.cnb.cz</code>) and a public file of travel facts (such as ATM fees) from <code>easyforlife.cz</code>. Requests contain no information about you or your data.")),
       (("Oprávnění", "Permissions"),
-       ("<b>Oznámení</b> jen pro upozornění na kurz, který sis nastavil. <b>Face ID</b> odemyká zamčené pokladny; ověření provádí iOS a aplikace k biometrickým údajům nemá přístup. <b>Siri a Zkratky</b> zpracovává Apple podle svých zásad. <b>Fotoaparát</b> jen pro Cenovku, rozpoznávání běží v zařízení.",
-        "<b>Notifications</b> only for rate alerts you set. <b>Face ID</b> unlocks locked wallets; iOS performs the check and the app never sees biometric data. <b>Siri and Shortcuts</b> are processed by Apple under its own policy. <b>Camera</b> only for the price tag; recognition runs on-device.")),
+       ("Na každé se aplikace zeptá až ve chvíli, kdy funkci použiješ, a funguje i bez nich. <b>Oznámení</b> jen pro upozornění na kurz, který sis nastavil. <b>Fotoaparát</b> jen pro Cenovku – rozpoznání ceny běží přímo v zařízení (Apple VisionKit), obraz se neukládá ani neodesílá. <b>Face ID</b> odemyká zamčené pokladny; ověření provádí systém a aplikace k biometrickým údajům nemá přístup. <b>Siri a Zkratky</b> zpracovává Apple podle svých zásad.",
+        "The app asks for each one only when you use the feature, and works without them. <b>Notifications</b> only for rate alerts you set. <b>Camera</b> only for the price tag scanner – recognition runs on-device (Apple VisionKit); the image is neither saved nor sent. <b>Face ID</b> unlocks locked wallets; the system performs the check and the app never sees biometric data. <b>Siri and Shortcuts</b> are processed by Apple under its own policy.")),
+      (("Widgety a Živá aktivita", "Widgets and Live Activity"),
+       ("Widgety, komplikace hodinek a Živá aktivita cesty na zamčené obrazovce čtou údaje ze sdíleného úložiště v zařízení. Nic se neodesílá.",
+        "Widgets, watch complications and the trip Live Activity on the Lock Screen read data from shared storage on the device. Nothing is sent.")),
+      (("Další aplikace EasyForLife", "Other EasyForLife apps"),
+       ("Jen pokud máš v zařízení nainstalované i naše aplikace Vyrovnáno, Cestovníček, Rozpočet, Fakturant nebo Strojovna, nabídne Směnárna propojení s nimi. Výdaj jim předá jen tlačítkem, na které sám klepneš (částka, měna, kategorie, popis a datum), a druhá aplikace nic neuloží bez tvého potvrzení. Propojené cesty si aplikace vyměňují přes sdílené úložiště v zařízení (útraty, itinerář, tvůj podíl), nic nejde na server. Propojení jde kdykoli vypnout v Nastavení.",
+        "Only if our apps Vyrovnáno, Cestovníček, Rozpočet, Fakturant or Strojovna are also installed on the device does Směnárna offer to link with them. It passes an expense only with a button you tap (amount, currency, category, description and date), and the other app saves nothing without your confirmation. Linked trips are exchanged through shared storage on the device (expenses, itinerary, your share); nothing goes to a server. Linking can be turned off in Settings at any time.")),
     ]),
   dict(slug="fotoplan", name="FotoPlán", mark="☀", color="#c2671a",
     tagline=("Plánovač fotografování: slunce, měsíc, zlatá a modrá hodinka, oblačnost.",
@@ -1504,9 +1505,11 @@ def app_page(app):
     parts = []
     for i, lang in enumerate(("cs", "en")):
         h1 = ("Zásady ochrany soukromí", "Privacy Policy")[i]
-        upd = ("Platné od ", "Effective ")[i] + UPDATED[i]
+        upd = ("Platné od ", "Effective ")[i] + app.get("updated", UPDATED)[i]
         body = "".join(f"<h2>{t[i]}</h2><p>{x[i]}</p>" for t, x in app["sections"])
         common = [app["common_rights"] if t[0] == "Tvoje práva a kontakt" and "common_rights" in app else (t, x) for t, x in COMMON]
+        if "common_crash" in app:
+            common = [app["common_crash"] if t[0] == "Hlášení o pádech" else (t, x) for t, x in common]
         body += "".join(f"<h2>{t[i]}</h2><p>{x[i].format(op=OPERATOR[i])}</p>" for t, x in common)
         parts.append(f'<article data-lang="{lang}"{" hidden" if lang=="en" else ""}><h1>{h1}</h1><p class="meta">{app["name"]} · {upd}</p>'
                      f'<div class="summary">{app["summary"][i]}</div>{body}</article>')
