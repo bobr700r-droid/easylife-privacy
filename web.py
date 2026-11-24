@@ -14,6 +14,7 @@ import datetime, email.utils, html, urllib.parse, json, math, os, pathlib, shuti
 sys.path.insert(0, str(pathlib.Path(__file__).parent / "site"))
 import eco  # site/eco.py – jak spolu appky spolupracují
 
+import firmy  # sekce Pro firmy (/firmy/…)
 HERE = pathlib.Path(__file__).parent
 ROOT = pathlib.Path(os.environ.get("EASYLIFE_ROOT") or HERE.parent)  # EasyLife aplikace/ (z worktree: EASYLIFE_ROOT=~/wt/vedeni-main)
 CATALOG = pathlib.Path(os.environ.get("EASYLIFE_CATALOG") or ROOT / "EasyLife" / "catalog.json")
@@ -818,6 +819,7 @@ html{overflow-x:hidden}
 .stickers{grid-template-columns:1fr}.nav>a{padding:6px 8px;font-size:.84rem}.marquee{margin-bottom:56px}.marquee.two{margin-top:-80px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 """
+CSS += firmy.CSS
 
 def head_script(lang, targets=None):
     """Výběr jazyka: uložená volba, jinak jazyk prohlížeče. Přesměrovává jen z české verze (targets: jazyk → adresa)."""
@@ -880,7 +882,7 @@ def page(lang, slug, title, desc, body, operator, relative=True, langs=None):
 <link rel="stylesheet" href="/site.css?v={zlib.crc32(CSS.encode()):x}"></head>
 <body><a class="skip" href="#main">{t("skip", lang)}</a>
 <div class="wrap"><header class="top"><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a>
-<nav class="nav"><a href="{url(lang)}#apps">{t("apps", lang)}</a><a href="{url(lang, dl_slug(lang))}">{t("dl_title", lang)}</a><a href="{url(lang, sup(lang))}">{t("support", lang)}</a>
+<nav class="nav"><a href="{url(lang)}#apps">{t("apps", lang)}</a>{f'<a href="{url(lang, firmy.SLUGS["index"][lang])}">{firmy.UI["nav"][lang]}</a>' if lang in firmy.LANGS_FIRMY else ""}<a href="{url(lang, dl_slug(lang))}">{t("dl_title", lang)}</a><a href="{url(lang, sup(lang))}">{t("support", lang)}</a>
 <span class="langs" aria-label="{t("lang", lang)}">{switch}</span></nav></header></div>
 <main id="main">{body}</main>
 <footer><div class="wrap row"><div><a class="brand" href="{url(lang)}">{LOGO}EasyForLife</a><p>{t("made", lang)}</p>
@@ -1680,6 +1682,10 @@ var w=decodeURIComponent(location.pathname).split("/").filter(Boolean).pop()||""
                 if x["ok"] and x["platform"] == "mac" and not x.get("page"):
                     self.write(f'{pre}{dl_slug(lang)}/{x["id"]}/index.html', self.mac_page(x, lang), root)
                     urls[site_of(lang)].append((lang, self.mac_slug(x), LANGS))
+            if lang in firmy.LANGS_FIRMY:
+                for pid, slugs, title, desc, body in firmy.Pages(url, CONTACT).all(lang):
+                    self.write(f"{pre}{slugs[lang]}/index.html", page(lang, slugs, title, desc, body, self.operator, langs=firmy.LANGS_FIRMY), root)
+                    urls[site_of(lang)].append((lang, slugs, firmy.LANGS_FIRMY))
             if lang == "cs":
                 self.write("komander/index.html", self.komander(), root)
                 urls[site_of(lang)].append((lang, "komander", ["cs"]))
